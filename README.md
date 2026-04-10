@@ -1,6 +1,6 @@
 # Multimodal Corruptions
 
-Code for the work: **Evaluating the Robustness of Vision-Language Models Under Simultaneous Multimodal Perturbations**
+Code for the work: **Testing Modality Reliance in Vision-Language Models via Multimodal Perturbations**
 
 ## Overview
 
