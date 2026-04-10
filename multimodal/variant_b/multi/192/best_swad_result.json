@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/192",
+        "folder_id": "192",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00002075.JPEG"
+    },
+    "pareto_index": 4,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.038624,
+            "defocus_blur": 0.069537,
+            "motion_blur": 0.017097,
+            "fog_filter": 0.024464,
+            "pixelate": 0.049047,
+            "jpeg_filter": 0.18179
+        },
+        "text_corruptions": {
+            "homophone": 0.068435,
+            "synonym": 0.057722,
+            "ata_saliency": 0.385248,
+            "fragmentation": 0.000247,
+            "character_noise": 0.207811
+        },
+        "img_budget_used": 0.380559,
+        "txt_budget_used": 0.719463,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.07894,
+        "txt_dist": 0.32339,
+        "txt_sim": 0.67661
+    },
+    "swad_metrics": {
+        "iou_0": 0.72493,
+        "delta_m_plus": 1.0,
+        "phi": 0.6232,
+        "swad": 0.6232
+    },
+    "l2_distance": 0.33289,
+    "original_prompt": "Identify the objects \"diaper, table\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "diaper": {
+            "xmin": 184,
+            "ymin": 195,
+            "xmax": 254,
+            "ymax": 261
+        },
+        "table": {
+            "xmin": 0,
+            "ymin": 154,
+            "xmax": 127,
+            "ymax": 209
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"diapre\u200d, t\u200dab\u200bfe\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [262, 528, 762, 848], \"label\": \"diapre\u200d, t\u200dab\u200bfe\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    262,
+                    528,
+                    762,
+                    848
+                ],
+                "label": "diapre\u200d, t\u200dab\u200bfe"
+            }
+        ],
+        "token_count": 50,
+        "raw_token_count": 99,
+        "runtime_seconds": 0.344
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.03862382547998895,
+        "defocus_blur": 0.06953677143990109,
+        "motion_blur": 0.017097126722360845,
+        "fog_filter": 0.024464329788887126,
+        "pixelate": 0.04904744725249667,
+        "jpeg_filter": 0.18178984728475273
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.06843495566549224,
+        "synonym": 0.05772180843997715,
+        "ata_saliency": 0.3852478701690244,
+        "fragmentation": 0.00024685080262841876,
+        "character_noise": 0.20781126186728938
+    }
+}

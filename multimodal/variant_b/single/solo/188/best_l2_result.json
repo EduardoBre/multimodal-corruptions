@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/188",
+        "folder_id": "188",
+        "category": "single/solo",
+        "filename": "ILSVRC2013_val_00000071.JPEG"
+    },
+    "pareto_index": 20,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 6,
+    "total_evaluations": 180,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.168034,
+            "defocus_blur": 0.052887,
+            "motion_blur": 0.057856,
+            "fog_filter": 0.082722,
+            "pixelate": 0.038647,
+            "jpeg_filter": 0.003143
+        },
+        "text_corruptions": {
+            "homophone": 0.033228,
+            "synonym": 0.044226,
+            "ata_saliency": 0.062706,
+            "fragmentation": 0.006778,
+            "character_noise": 0.001092
+        },
+        "img_budget_used": 0.403289,
+        "txt_budget_used": 0.14803,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.06829,
+        "img_dist": 0.0942,
+        "txt_dist": 0.06241,
+        "txt_sim": 0.93759
+    },
+    "swad_metrics": {
+        "iou_0": 0.92647,
+        "delta_m_plus": 0.92629,
+        "phi": 0.84927,
+        "swad": 0.78667
+    },
+    "l2_distance": 0.13203,
+    "original_prompt": "Identify the objects \"tape player\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "tape player": {
+            "xmin": 127,
+            "ymin": 26,
+            "xmax": 262,
+            "ymax": 205
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"tape pla\u200dyer\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [308, 507, 438, 600], \"label\": \"tape pla\u200dyer\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    308,
+                    507,
+                    438,
+                    600
+                ],
+                "label": "tape pla\u200dyer"
+            }
+        ],
+        "token_count": 43,
+        "raw_token_count": 52,
+        "runtime_seconds": 0.1554
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.16803426956532014,
+        "defocus_blur": 0.05288652262638553,
+        "motion_blur": 0.05785611461233109,
+        "fog_filter": 0.08272155328385696,
+        "pixelate": 0.03864734405858496,
+        "jpeg_filter": 0.003142788542314704
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.03322783422488041,
+        "synonym": 0.04422593167134108,
+        "ata_saliency": 0.06270595908916905,
+        "fragmentation": 0.006777974206655685,
+        "character_noise": 0.0010920165701889155
+    }
+}

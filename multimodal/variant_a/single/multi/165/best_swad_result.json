@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/165",
+        "folder_id": "165",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00008014.JPEG"
+    },
+    "pareto_index": 26,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 10,
+    "total_evaluations": 285,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.13455093218538572,
+        "txt_attack": "homophone",
+        "txt_scale": 0.7584294831183419
+    },
+    "objectives": {
+        "iou": 0.03388,
+        "img_dist": 0.02982,
+        "txt_dist": 0.19887,
+        "txt_sim": 0.80113
+    },
+    "swad_metrics": {
+        "iou_0": 0.89346,
+        "delta_m_plus": 0.96208,
+        "phi": 0.77724,
+        "swad": 0.74777
+    },
+    "l2_distance": 0.20393,
+    "original_prompt": "Identify the objects \"monkey\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "monkey": {
+            "xmin": 62,
+            "ymin": 352,
+            "xmax": 420,
+            "ymax": 798
+        },
+        "monkey_1": {
+            "xmin": 130,
+            "ymin": 24,
+            "xmax": 588,
+            "ymax": 788
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"donkey\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 740, 198, 1000], \"label\": \"donkey\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    740,
+                    198,
+                    1000
+                ],
+                "label": "donkey"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 78,
+        "runtime_seconds": 0.2773
+    }
+}

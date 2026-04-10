@@ -1,0 +1,112 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/150",
+        "folder_id": "150",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00041626.JPEG"
+    },
+    "pareto_index": 0,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.005265,
+            "defocus_blur": 0.068534,
+            "motion_blur": 0.020634,
+            "fog_filter": 0.001126,
+            "pixelate": 0.079622,
+            "jpeg_filter": 0.32242
+        },
+        "text_corruptions": {
+            "homophone": 0.088644,
+            "synonym": 0.089628,
+            "ata_saliency": 0.072312,
+            "fragmentation": 0.031107,
+            "character_noise": 0.069364
+        },
+        "img_budget_used": 0.497601,
+        "txt_budget_used": 0.351055,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.09589,
+        "txt_dist": 0.20215,
+        "txt_sim": 0.79785
+    },
+    "swad_metrics": {
+        "iou_0": 0.70806,
+        "delta_m_plus": 1.0,
+        "phi": 0.72134,
+        "swad": 0.72134
+    },
+    "l2_distance": 0.22374,
+    "original_prompt": "Identify the objects \"car, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 180,
+            "ymin": 69,
+            "xmax": 245,
+            "ymax": 122
+        },
+        "car": {
+            "xmin": 101,
+            "ymin": 110,
+            "xmax": 498,
+            "ymax": 271
+        },
+        "car_1": {
+            "xmin": 10,
+            "ymin": 69,
+            "xmax": 398,
+            "ymax": 206
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"au\u200btamobile, \u0440e\u200brso n\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [20, 250, 670, 540], \"label\": \"au\u200btamobile, \u0440e\u200brso n\"},\n\t{\"bbox_2d\": [206, 290, 998, 760], \"label\": \"au\u200btamobile, \u0440e\u200brso n\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    20,
+                    250,
+                    670,
+                    540
+                ],
+                "label": "au\u200btamobile, \u0440e\u200brso n"
+            },
+            {
+                "bbox_2d": [
+                    206,
+                    290,
+                    998,
+                    760
+                ],
+                "label": "au\u200btamobile, \u0440e\u200brso n"
+            }
+        ],
+        "token_count": 91,
+        "raw_token_count": 132,
+        "runtime_seconds": 0.42
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.005265336522048874,
+        "defocus_blur": 0.06853441669571991,
+        "motion_blur": 0.02063420733674368,
+        "fog_filter": 0.001125998582334862,
+        "pixelate": 0.07962188708533736,
+        "jpeg_filter": 0.32241954150251867
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.0886442736110325,
+        "synonym": 0.08962757539892202,
+        "ata_saliency": 0.07231156993353195,
+        "fragmentation": 0.0311074902296603,
+        "character_noise": 0.06936431907190388
+    }
+}

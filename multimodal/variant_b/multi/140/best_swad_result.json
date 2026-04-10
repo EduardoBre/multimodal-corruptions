@@ -1,0 +1,121 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/140",
+        "folder_id": "140",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00049063.JPEG"
+    },
+    "pareto_index": 25,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 9,
+    "total_evaluations": 255,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.017115,
+            "defocus_blur": 0.011775,
+            "motion_blur": 0.120707,
+            "fog_filter": 0.006858,
+            "pixelate": 0.01805,
+            "jpeg_filter": 0.00535
+        },
+        "text_corruptions": {
+            "homophone": 0.054969,
+            "synonym": 0.088935,
+            "ata_saliency": 0.019756,
+            "fragmentation": 0.001896,
+            "character_noise": 0.055582
+        },
+        "img_budget_used": 0.179856,
+        "txt_budget_used": 0.221138,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.08594,
+        "txt_dist": 0.2677,
+        "txt_sim": 0.7323
+    },
+    "swad_metrics": {
+        "iou_0": 0.91613,
+        "delta_m_plus": 1.0,
+        "phi": 0.66937,
+        "swad": 0.66937
+    },
+    "l2_distance": 0.28116,
+    "original_prompt": "Identify the objects \"dog, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 402,
+            "ymin": 2,
+            "xmax": 499,
+            "ymax": 305
+        },
+        "person_1": {
+            "xmin": 66,
+            "ymin": 0,
+            "xmax": 165,
+            "ymax": 209
+        },
+        "person_2": {
+            "xmin": 0,
+            "ymin": 1,
+            "xmax": 55,
+            "ymax": 339
+        },
+        "dog": {
+            "xmin": 11,
+            "ymin": 150,
+            "xmax": 112,
+            "ymax": 336
+        },
+        "dog_1": {
+            "xmin": 90,
+            "ymin": 52,
+            "xmax": 465,
+            "ymax": 320
+        },
+        "person_3": {
+            "xmin": 233,
+            "ymin": 0,
+            "xmax": 306,
+            "ymax": 68
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"dawg, per s\u0456n\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [153, 127, 955, 943], \"label\": \"dawg, per s\u0456n\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    153,
+                    127,
+                    955,
+                    943
+                ],
+                "label": "dawg, per s\u0456n"
+            }
+        ],
+        "token_count": 46,
+        "raw_token_count": 228,
+        "runtime_seconds": 0.6955
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.017115253851446362,
+        "defocus_blur": 0.011774656497287886,
+        "motion_blur": 0.12070737966489313,
+        "fog_filter": 0.006858414264033938,
+        "pixelate": 0.01805035670133028,
+        "jpeg_filter": 0.0053501460159707595
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.05496859316929797,
+        "synonym": 0.0889349044103468,
+        "ata_saliency": 0.019756479186293613,
+        "fragmentation": 0.001895889794615508,
+        "character_noise": 0.05558191208782589
+    }
+}

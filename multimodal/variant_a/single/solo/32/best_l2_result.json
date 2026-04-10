@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/32",
+        "folder_id": "32",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00018134.JPEG"
+    },
+    "pareto_index": 9,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.307337327911573,
+        "txt_attack": "homophone",
+        "txt_scale": 0.4186211600401869
+    },
+    "objectives": {
+        "iou": 0.01593,
+        "img_dist": 0.02913,
+        "txt_dist": 0.34158,
+        "txt_sim": 0.65842
+    },
+    "swad_metrics": {
+        "iou_0": 0.96461,
+        "delta_m_plus": 0.98349,
+        "phi": 0.63924,
+        "swad": 0.62868
+    },
+    "l2_distance": 0.34319,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 165,
+            "ymin": 40,
+            "xmax": 384,
+            "ymax": 372
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"berd\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [343, 107, 430, 178], \"label\": \"berd\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    343,
+                    107,
+                    430,
+                    178
+                ],
+                "label": "berd"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 42,
+        "runtime_seconds": 0.1596
+    }
+}

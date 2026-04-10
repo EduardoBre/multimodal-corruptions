@@ -1,0 +1,73 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/137",
+        "folder_id": "137",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00017631.JPEG"
+    },
+    "pareto_index": 0,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 10,
+    "total_evaluations": 285,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.8640485090339926,
+        "txt_attack": "synonym",
+        "txt_scale": 0.7360316129566705
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.20034,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.75512,
+        "delta_m_plus": 1.0,
+        "phi": 0.79966,
+        "swad": 0.79966
+    },
+    "l2_distance": 0.20034,
+    "original_prompt": "Identify the objects \"chair\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "chair": {
+            "xmin": 281,
+            "ymin": 120,
+            "xmax": 399,
+            "ymax": 254
+        },
+        "chair_1": {
+            "xmin": 440,
+            "ymin": 97,
+            "xmax": 491,
+            "ymax": 178
+        },
+        "chair_2": {
+            "xmin": 327,
+            "ymin": 116,
+            "xmax": 427,
+            "ymax": 217
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"chair\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [10, 400, 150, 880], \"label\": \"chair\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    10,
+                    400,
+                    150,
+                    880
+                ],
+                "label": "chair"
+            }
+        ],
+        "token_count": 38,
+        "raw_token_count": 124,
+        "runtime_seconds": 0.4027
+    }
+}

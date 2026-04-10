@@ -1,0 +1,79 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/21",
+        "folder_id": "21",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00030001.JPEG"
+    },
+    "pareto_index": 0,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.8181617493544074,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.41721849968957336
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.04084,
+        "txt_dist": 0.24775,
+        "txt_sim": 0.75225
+    },
+    "swad_metrics": {
+        "iou_0": 0.81762,
+        "delta_m_plus": 1.0,
+        "phi": 0.72153,
+        "swad": 0.72153
+    },
+    "l2_distance": 0.25109,
+    "original_prompt": "Identify the objects \"hat with a wide brim, person, watercraft\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "hat with a wide brim": {
+            "xmin": 300,
+            "ymin": 171,
+            "xmax": 343,
+            "ymax": 205
+        },
+        "watercraft": {
+            "xmin": 123,
+            "ymin": 247,
+            "xmax": 227,
+            "ymax": 304
+        },
+        "person": {
+            "xmin": 285,
+            "ymin": 179,
+            "xmax": 357,
+            "ymax": 399
+        },
+        "person_1": {
+            "xmin": 155,
+            "ymin": 222,
+            "xmax": 198,
+            "ymax": 284
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"hat witi a wide brim, perskn, wamercraft\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [599, 438, 684, 548], \"label\": \"hat witi a wide brim, perskn, wamercraft\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    599,
+                    438,
+                    684,
+                    548
+                ],
+                "label": "hat witi a wide brim, perskn, wamercraft"
+            }
+        ],
+        "token_count": 53,
+        "raw_token_count": 169,
+        "runtime_seconds": 0.6786
+    }
+}

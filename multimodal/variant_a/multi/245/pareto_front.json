@@ -1,0 +1,428 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/245",
+        "folder_id": "245",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00002289.JPEG"
+    },
+    "original_prompt": "Identify the objects \"helmet, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 101,
+            "ymin": 53,
+            "xmax": 343,
+            "ymax": 383
+        },
+        "person_1": {
+            "xmin": 227,
+            "ymin": 9,
+            "xmax": 453,
+            "ymax": 391
+        },
+        "helmet": {
+            "xmin": 328,
+            "ymin": 40,
+            "xmax": 389,
+            "ymax": 92
+        }
+    },
+    "baseline_iou": 0.91595,
+    "swad_star": 0.53223,
+    "swad_star_index": 4,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 7,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8181617493544074,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.41721849968957336
+            },
+            "objectives": {
+                "iou": 0.65059,
+                "img_dist": 0.06037,
+                "txt_dist": 0.16418,
+                "txt_sim": 0.83582
+            },
+            "swad_metrics": {
+                "iou_0": 0.91595,
+                "delta_m_plus": 0.28971,
+                "phi": 0.78536,
+                "swad": 0.22753
+            },
+            "l2_distance": 0.6737,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hedmet, preson\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [468, 22, 898, 984], \"label\": \"hedmet\"},\n\t{\"bbox_2d\": [198, 138, 680, 972], \"label\": \"preson\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            468,
+                            22,
+                            898,
+                            984
+                        ],
+                        "label": "hedmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            198,
+                            138,
+                            680,
+                            972
+                        ],
+                        "label": "preson"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 142,
+                "runtime_seconds": 0.473
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.92442,
+                "img_dist": 0.03761,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.91595,
+                "delta_m_plus": 0.0,
+                "phi": 0.96239,
+                "swad": 0.0
+            },
+            "l2_distance": 0.92518,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"helmet, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [655, 102, 775, 244], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [309, 144, 412, 244], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [480, 32, 895, 984], \"label\": \"person\"},\n\t{\"bbox_2d\": [205, 144, 683, 972], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            655,
+                            102,
+                            775,
+                            244
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            309,
+                            144,
+                            412,
+                            244
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            480,
+                            32,
+                            895,
+                            984
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            205,
+                            144,
+                            683,
+                            972
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 139,
+                "raw_token_count": 142,
+                "runtime_seconds": 0.473
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.90799,
+                "img_dist": 0.03944,
+                "txt_dist": 0.07063,
+                "txt_sim": 0.92937
+            },
+            "swad_metrics": {
+                "iou_0": 0.91595,
+                "delta_m_plus": 0.00869,
+                "phi": 0.89272,
+                "swad": 0.00776
+            },
+            "l2_distance": 0.91159,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"helmet, persom\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [672, 100, 778, 228], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [478, 22, 898, 984], \"label\": \"persom\"},\n\t{\"bbox_2d\": [202, 140, 684, 972], \"label\": \"persom\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            672,
+                            100,
+                            778,
+                            228
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            478,
+                            22,
+                            898,
+                            984
+                        ],
+                        "label": "persom"
+                    },
+                    {
+                        "bbox_2d": [
+                            202,
+                            140,
+                            684,
+                            972
+                        ],
+                        "label": "persom"
+                    }
+                ],
+                "token_count": 107,
+                "raw_token_count": 142,
+                "runtime_seconds": 0.473
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.6126883641923373,
+                "txt_attack": "homophone",
+                "txt_scale": 0.10684452896191199
+            },
+            "objectives": {
+                "iou": 0.88722,
+                "img_dist": 0.05177,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.91595,
+                "delta_m_plus": 0.03137,
+                "phi": 0.94823,
+                "swad": 0.02974
+            },
+            "l2_distance": 0.88873,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"helmet, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [655, 98, 775, 208], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [470, 20, 894, 983], \"label\": \"person\"},\n\t{\"bbox_2d\": [202, 138, 680, 972], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            655,
+                            98,
+                            775,
+                            208
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            470,
+                            20,
+                            894,
+                            983
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            202,
+                            138,
+                            680,
+                            972
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 104,
+                "raw_token_count": 142,
+                "runtime_seconds": 0.473
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.307337327911573,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.27522,
+                "img_dist": 0.04648,
+                "txt_dist": 0.20207,
+                "txt_sim": 0.79793
+            },
+            "swad_metrics": {
+                "iou_0": 0.91595,
+                "delta_m_plus": 0.69953,
+                "phi": 0.76084,
+                "swad": 0.53223
+            },
+            "l2_distance": 0.34458,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"helmet, purse on\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [655, 98, 778, 207], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [305, 138, 415, 238], \"label\": \"purse on\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            655,
+                            98,
+                            778,
+                            207
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            305,
+                            138,
+                            415,
+                            238
+                        ],
+                        "label": "purse on"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 142,
+                "runtime_seconds": 0.473
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.64237,
+                "img_dist": 0.08032,
+                "txt_dist": 0.14668,
+                "txt_sim": 0.85332
+            },
+            "swad_metrics": {
+                "iou_0": 0.91595,
+                "delta_m_plus": 0.29868,
+                "phi": 0.78478,
+                "swad": 0.2344
+            },
+            "l2_distance": 0.66378,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hell met, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [476, 20, 896, 980], \"label\": \"hell met\"},\n\t{\"bbox_2d\": [200, 135, 676, 975], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            476,
+                            20,
+                            896,
+                            980
+                        ],
+                        "label": "hell met"
+                    },
+                    {
+                        "bbox_2d": [
+                            200,
+                            135,
+                            676,
+                            975
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 72,
+                "raw_token_count": 142,
+                "runtime_seconds": 0.473
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.91919,
+                "img_dist": 0.03895,
+                "txt_dist": 0.1199,
+                "txt_sim": 0.8801
+            },
+            "swad_metrics": {
+                "iou_0": 0.91595,
+                "delta_m_plus": 0.0,
+                "phi": 0.84582,
+                "swad": 0.0
+            },
+            "l2_distance": 0.92779,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"helmet, per son\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [655, 102, 776, 250], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [478, 27, 895, 984], \"label\": \"per son\"},\n\t{\"bbox_2d\": [204, 142, 683, 972], \"label\": \"per son\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            655,
+                            102,
+                            776,
+                            250
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            478,
+                            27,
+                            895,
+                            984
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            204,
+                            142,
+                            683,
+                            972
+                        ],
+                        "label": "per son"
+                    }
+                ],
+                "token_count": 107,
+                "raw_token_count": 142,
+                "runtime_seconds": 0.473
+            }
+        }
+    ]
+}

@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/201",
+        "folder_id": "201",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00000644.JPEG"
+    },
+    "pareto_index": 19,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.005687,
+            "defocus_blur": 0.04699,
+            "motion_blur": 0.007788,
+            "fog_filter": 0.005102,
+            "pixelate": 0.039729,
+            "jpeg_filter": 0.004277
+        },
+        "text_corruptions": {
+            "homophone": 0.081336,
+            "synonym": 0.516209,
+            "ata_saliency": 0.013128,
+            "fragmentation": 0.228103,
+            "character_noise": 0.004077
+        },
+        "img_budget_used": 0.109573,
+        "txt_budget_used": 0.842853,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.10135,
+        "txt_dist": 0.19969,
+        "txt_sim": 0.80031
+    },
+    "swad_metrics": {
+        "iou_0": 0.80537,
+        "delta_m_plus": 1.0,
+        "phi": 0.7192,
+        "swad": 0.7192
+    },
+    "l2_distance": 0.22394,
+    "original_prompt": "Identify the objects \"guitar, microphone\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "guitar": {
+            "xmin": 205,
+            "ymin": 186,
+            "xmax": 460,
+            "ymax": 318
+        },
+        "microphone": {
+            "xmin": 95,
+            "ymin": 235,
+            "xmax": 158,
+            "ymax": 261
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"six-string, r\u200decor\u200bding de\u200bvice\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [398, 547, 912, 987], \"label\": \"six-string, r\u200decor\u200bding de\u200bvice\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    398,
+                    547,
+                    912,
+                    987
+                ],
+                "label": "six-string, r\u200decor\u200bding de\u200bvice"
+            }
+        ],
+        "token_count": 51,
+        "raw_token_count": 89,
+        "runtime_seconds": 0.2923
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.005686794943443628,
+        "defocus_blur": 0.046990017102987586,
+        "motion_blur": 0.0077884189966314936,
+        "fog_filter": 0.005102492191577495,
+        "pixelate": 0.03972859410031131,
+        "jpeg_filter": 0.004276911868382455
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.08133626303142927,
+        "synonym": 0.5162085371136276,
+        "ata_saliency": 0.013128274492251886,
+        "fragmentation": 0.2281028084314997,
+        "character_noise": 0.00407688405176844
+    }
+}

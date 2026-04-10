@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/121",
+        "folder_id": "121",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00043920.JPEG"
+    },
+    "pareto_index": 3,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.021518,
+            "defocus_blur": 0.015501,
+            "motion_blur": 0.003574,
+            "fog_filter": 0.005207,
+            "pixelate": 0.142097,
+            "jpeg_filter": 0.206361
+        },
+        "text_corruptions": {
+            "homophone": 0.244994,
+            "synonym": 0.052914,
+            "ata_saliency": 0.357279,
+            "fragmentation": 0.054049,
+            "character_noise": 0.000654
+        },
+        "img_budget_used": 0.394258,
+        "txt_budget_used": 0.70989,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.11901,
+        "img_dist": 0.07455,
+        "txt_dist": 0.33017,
+        "txt_sim": 0.66983
+    },
+    "swad_metrics": {
+        "iou_0": 0.96565,
+        "delta_m_plus": 0.87676,
+        "phi": 0.61989,
+        "swad": 0.5435
+    },
+    "l2_distance": 0.35879,
+    "original_prompt": "Identify the objects \"strawberry\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "strawberry": {
+            "xmin": 280,
+            "ymin": 195,
+            "xmax": 439,
+            "ymax": 345
+        },
+        "strawberry_1": {
+            "xmin": 378,
+            "ymin": 140,
+            "xmax": 499,
+            "ymax": 311
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"berby\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 999, 999], \"label\": \"berby\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    999,
+                    999
+                ],
+                "label": "berby"
+            }
+        ],
+        "token_count": 36,
+        "raw_token_count": 92,
+        "runtime_seconds": 0.2964
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.021517866307981866,
+        "defocus_blur": 0.015500773118210406,
+        "motion_blur": 0.0035741483762117554,
+        "fog_filter": 0.005206840325565499,
+        "pixelate": 0.14209735090657563,
+        "jpeg_filter": 0.2063608308609385
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.24499445226579802,
+        "synonym": 0.052913510933343205,
+        "ata_saliency": 0.35727913110536685,
+        "fragmentation": 0.05404869252906738,
+        "character_noise": 0.0006540037395508652
+    }
+}

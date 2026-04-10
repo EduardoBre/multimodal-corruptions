@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/81",
+        "folder_id": "81",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00008747.JPEG"
+    },
+    "pareto_index": 13,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 12,
+    "total_evaluations": 360,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.003599,
+            "defocus_blur": 0.001527,
+            "motion_blur": 0.058688,
+            "fog_filter": 0.0004,
+            "pixelate": 0.119251,
+            "jpeg_filter": 0.010346
+        },
+        "text_corruptions": {
+            "homophone": 0.036016,
+            "synonym": 0.243438,
+            "ata_saliency": 0.072678,
+            "fragmentation": 0.00027,
+            "character_noise": 0.013398
+        },
+        "img_budget_used": 0.193811,
+        "txt_budget_used": 0.365799,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.05237,
+        "img_dist": 0.08864,
+        "txt_dist": 0.25627,
+        "txt_sim": 0.74373
+    },
+    "swad_metrics": {
+        "iou_0": 0.90595,
+        "delta_m_plus": 0.94219,
+        "phi": 0.67781,
+        "swad": 0.63862
+    },
+    "l2_distance": 0.27618,
+    "original_prompt": "Identify the objects \"snail\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "snail": {
+            "xmin": 74,
+            "ymin": 0,
+            "xmax": 378,
+            "ymax": 296
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"stail\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [148, 572, 270, 778], \"label\": \"stail\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    148,
+                    572,
+                    270,
+                    778
+                ],
+                "label": "stail"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 47,
+        "runtime_seconds": 0.1659
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.003599223168251748,
+        "defocus_blur": 0.0015271768840729658,
+        "motion_blur": 0.058688081316763646,
+        "fog_filter": 0.00039973846395391496,
+        "pixelate": 0.11925051260078079,
+        "jpeg_filter": 0.010346182215712697
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.036015678325785096,
+        "synonym": 0.24343780025520356,
+        "ata_saliency": 0.07267750078051673,
+        "fragmentation": 0.00027012193440843334,
+        "character_noise": 0.01339817528726863
+    }
+}

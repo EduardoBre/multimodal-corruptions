@@ -1,0 +1,94 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/43",
+        "folder_id": "43",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00003692.JPEG"
+    },
+    "pareto_index": 5,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.307337327911573,
+        "txt_attack": "homophone",
+        "txt_scale": 0.4186211600401869
+    },
+    "objectives": {
+        "iou": 0.13595,
+        "img_dist": 0.06956,
+        "txt_dist": 0.20207,
+        "txt_sim": 0.79793
+    },
+    "swad_metrics": {
+        "iou_0": 0.71554,
+        "delta_m_plus": 0.81,
+        "phi": 0.74243,
+        "swad": 0.60137
+    },
+    "l2_distance": 0.25328,
+    "original_prompt": "Identify the objects \"backpack, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 275,
+            "ymin": 166,
+            "xmax": 374,
+            "ymax": 468
+        },
+        "person_1": {
+            "xmin": 82,
+            "ymin": 312,
+            "xmax": 149,
+            "ymax": 480
+        },
+        "person_2": {
+            "xmin": 12,
+            "ymin": 208,
+            "xmax": 144,
+            "ymax": 480
+        },
+        "person_3": {
+            "xmin": 10,
+            "ymin": 327,
+            "xmax": 46,
+            "ymax": 375
+        },
+        "backpack": {
+            "xmin": 11,
+            "ymin": 223,
+            "xmax": 105,
+            "ymax": 303
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"backpack, purse on\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [30, 458, 180, 595], \"label\": \"backpack\"},\n\t{\"bbox_2d\": [692, 550, 788, 612], \"label\": \"purse on\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    30,
+                    458,
+                    180,
+                    595
+                ],
+                "label": "backpack"
+            },
+            {
+                "bbox_2d": [
+                    692,
+                    550,
+                    788,
+                    612
+                ],
+                "label": "purse on"
+            }
+        ],
+        "token_count": 74,
+        "raw_token_count": 201,
+        "runtime_seconds": 0.6901
+    }
+}

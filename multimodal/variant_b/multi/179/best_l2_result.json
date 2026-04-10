@@ -1,0 +1,127 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/179",
+        "folder_id": "179",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00001325.JPEG"
+    },
+    "pareto_index": 7,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.001095,
+            "defocus_blur": 0.021521,
+            "motion_blur": 0.133824,
+            "fog_filter": 0.001299,
+            "pixelate": 0.000348,
+            "jpeg_filter": 0.005306
+        },
+        "text_corruptions": {
+            "homophone": 0.033978,
+            "synonym": 0.063647,
+            "ata_saliency": 0.003602,
+            "fragmentation": 0.024935,
+            "character_noise": 0.05252
+        },
+        "img_budget_used": 0.163394,
+        "txt_budget_used": 0.178681,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.14404,
+        "txt_dist": 0.17403,
+        "txt_sim": 0.82597
+    },
+    "swad_metrics": {
+        "iou_0": 0.61184,
+        "delta_m_plus": 1.0,
+        "phi": 0.707,
+        "swad": 0.707
+    },
+    "l2_distance": 0.22591,
+    "original_prompt": "Identify the objects \"cup or mug, table\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "table": {
+            "xmin": 12,
+            "ymin": 85,
+            "xmax": 478,
+            "ymax": 334
+        },
+        "cup or mug": {
+            "xmin": 375,
+            "ymin": 199,
+            "xmax": 419,
+            "ymax": 251
+        },
+        "cup or mug_1": {
+            "xmin": 138,
+            "ymin": 101,
+            "xmax": 164,
+            "ymax": 136
+        },
+        "cup or mug_2": {
+            "xmin": 192,
+            "ymin": 191,
+            "xmax": 238,
+            "ymax": 238
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"cui or mug, tabbl\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [123, 510, 173, 600], \"label\": \"cui or mug, tabbl\"},\n\t{\"bbox_2d\": [388, 572, 470, 680], \"label\": \"cui or mug, tabbl\"},\n\t{\"bbox_2d\": [782, 600, 833, 690], \"label\": \"cui or mug, tabbl\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    123,
+                    510,
+                    173,
+                    600
+                ],
+                "label": "cui or mug, tabbl"
+            },
+            {
+                "bbox_2d": [
+                    388,
+                    572,
+                    470,
+                    680
+                ],
+                "label": "cui or mug, tabbl"
+            },
+            {
+                "bbox_2d": [
+                    782,
+                    600,
+                    833,
+                    690
+                ],
+                "label": "cui or mug, tabbl"
+            }
+        ],
+        "token_count": 123,
+        "raw_token_count": 166,
+        "runtime_seconds": 0.5308
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0010952959434950412,
+        "defocus_blur": 0.021521419761601462,
+        "motion_blur": 0.13382377078031837,
+        "fog_filter": 0.0012989848526377343,
+        "pixelate": 0.0003482758624742399,
+        "jpeg_filter": 0.005306113638767956
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.033977665798214436,
+        "synonym": 0.0636465758354178,
+        "ata_saliency": 0.0036021533431752403,
+        "fragmentation": 0.024935069073736833,
+        "character_noise": 0.05251978975907512
+    }
+}

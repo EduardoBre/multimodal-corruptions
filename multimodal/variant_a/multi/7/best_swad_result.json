@@ -1,0 +1,88 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/7",
+        "folder_id": "7",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00001646.JPEG"
+    },
+    "pareto_index": 3,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.9316177058680379,
+        "txt_attack": "homophone",
+        "txt_scale": 0.9948250792623392
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.06452,
+        "txt_dist": 0.29102,
+        "txt_sim": 0.70898
+    },
+    "swad_metrics": {
+        "iou_0": 0.94241,
+        "delta_m_plus": 1.0,
+        "phi": 0.66324,
+        "swad": 0.66324
+    },
+    "l2_distance": 0.29809,
+    "original_prompt": "Identify the objects \"chair, dog\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 281,
+            "ymin": 129,
+            "xmax": 381,
+            "ymax": 321
+        },
+        "dog_1": {
+            "xmin": 12,
+            "ymin": 25,
+            "xmax": 194,
+            "ymax": 235
+        },
+        "dog_2": {
+            "xmin": 196,
+            "ymin": 232,
+            "xmax": 311,
+            "ymax": 360
+        },
+        "chair": {
+            "xmin": 128,
+            "ymin": 85,
+            "xmax": 428,
+            "ymax": 397
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"cheer, doug\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [567, 320, 762, 800], \"label\": \"cheer, doug\"},\n\t{\"bbox_2d\": [394, 600, 622, 892], \"label\": \"cheer, doug\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    567,
+                    320,
+                    762,
+                    800
+                ],
+                "label": "cheer, doug"
+            },
+            {
+                "bbox_2d": [
+                    394,
+                    600,
+                    622,
+                    892
+                ],
+                "label": "cheer, doug"
+            }
+        ],
+        "token_count": 80,
+        "raw_token_count": 173,
+        "runtime_seconds": 0.7036
+    }
+}

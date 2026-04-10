@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/1",
+        "folder_id": "1",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00035419.JPEG"
+    },
+    "pareto_index": 20,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.193049,
+            "defocus_blur": 0.466894,
+            "motion_blur": 0.003092,
+            "fog_filter": 0.07854,
+            "pixelate": 0.001709,
+            "jpeg_filter": 0.004365
+        },
+        "text_corruptions": {
+            "homophone": 0.015944,
+            "synonym": 0.033383,
+            "ata_saliency": 0.012476,
+            "fragmentation": 0.063017,
+            "character_noise": 0.036562
+        },
+        "img_budget_used": 0.74765,
+        "txt_budget_used": 0.161381,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.91831,
+        "img_dist": 0.11488,
+        "txt_dist": 0.07503,
+        "txt_sim": 0.92497
+    },
+    "swad_metrics": {
+        "iou_0": 0.95515,
+        "delta_m_plus": 0.03857,
+        "phi": 0.81871,
+        "swad": 0.03158
+    },
+    "l2_distance": 0.9285,
+    "original_prompt": "Identify the objects \"golf ball\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "golf ball": {
+            "xmin": 120,
+            "ymin": 147,
+            "xmax": 225,
+            "ymax": 249
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"g\u200b\u043elf ball\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [244, 370, 458, 630], \"label\": \"g\u200b\u043elf ball\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    244,
+                    370,
+                    458,
+                    630
+                ],
+                "label": "g\u200b\u043elf ball"
+            }
+        ],
+        "token_count": 43,
+        "raw_token_count": 50,
+        "runtime_seconds": 0.1552
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.19304856300064574,
+        "defocus_blur": 0.46689424799362406,
+        "motion_blur": 0.0030921249961332687,
+        "fog_filter": 0.07854018699236033,
+        "pixelate": 0.001709239277779058,
+        "jpeg_filter": 0.004365359874790198
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.015943641430100776,
+        "synonym": 0.03338257554879786,
+        "ata_saliency": 0.012476126502370424,
+        "fragmentation": 0.06301661129607333,
+        "character_noise": 0.03656158455050387
+    }
+}

@@ -1,0 +1,112 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/89",
+        "folder_id": "89",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00016217.JPEG"
+    },
+    "pareto_index": 8,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 45,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.007065,
+            "defocus_blur": 0.00333,
+            "motion_blur": 0.002685,
+            "fog_filter": 0.061283,
+            "pixelate": 0.003773,
+            "jpeg_filter": 0.000878
+        },
+        "text_corruptions": {
+            "homophone": 0.054297,
+            "synonym": 0.179101,
+            "ata_saliency": 0.295881,
+            "fragmentation": 0.04997,
+            "character_noise": 0.212905
+        },
+        "img_budget_used": 0.079014,
+        "txt_budget_used": 0.792153,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.09003,
+        "txt_dist": 0.19425,
+        "txt_sim": 0.80575
+    },
+    "swad_metrics": {
+        "iou_0": 0.79284,
+        "delta_m_plus": 1.0,
+        "phi": 0.73321,
+        "swad": 0.73321
+    },
+    "l2_distance": 0.2141,
+    "original_prompt": "Identify the objects \"car, golfcart\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "car": {
+            "xmin": 20,
+            "ymin": 150,
+            "xmax": 102,
+            "ymax": 241
+        },
+        "golfcart": {
+            "xmin": 204,
+            "ymin": 72,
+            "xmax": 449,
+            "ymax": 334
+        },
+        "golfcart_1": {
+            "xmin": 44,
+            "ymin": 95,
+            "xmax": 264,
+            "ymax": 313
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"\u0430u\u200btm\u043e\u200dobil\u0435, golf c\u200b\u0430rt\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [85, 260, 450, 830], \"label\": \"\u0430u\u200btm\u043e\u200dobil\u0435, golf c\u200b\u0430rt\"},\n\t{\"bbox_2d\": [408, 192, 895, 888], \"label\": \"\u0430u\u200btm\u043e\u200dobil\u0435, golf c\u200b\u0430rt\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    85,
+                    260,
+                    450,
+                    830
+                ],
+                "label": "\u0430u\u200btm\u043e\u200dobil\u0435, golf c\u200b\u0430rt"
+            },
+            {
+                "bbox_2d": [
+                    408,
+                    192,
+                    895,
+                    888
+                ],
+                "label": "\u0430u\u200btm\u043e\u200dobil\u0435, golf c\u200b\u0430rt"
+            }
+        ],
+        "token_count": 99,
+        "raw_token_count": 124,
+        "runtime_seconds": 0.3911
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.00706523707968574,
+        "defocus_blur": 0.003330404559122993,
+        "motion_blur": 0.002684514139082467,
+        "fog_filter": 0.06128308853155949,
+        "pixelate": 0.003772854643648583,
+        "jpeg_filter": 0.0008779060189454588
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.05429704190227074,
+        "synonym": 0.1791008038562984,
+        "ata_saliency": 0.2958808448178053,
+        "fragmentation": 0.0499696642052431,
+        "character_noise": 0.2129050698070098
+    }
+}

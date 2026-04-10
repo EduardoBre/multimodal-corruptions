@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/234",
+        "folder_id": "234",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00011158.JPEG"
+    },
+    "pareto_index": 3,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.105485,
+            "defocus_blur": 0.115615,
+            "motion_blur": 0.011556,
+            "fog_filter": 0.202295,
+            "pixelate": 0.019482,
+            "jpeg_filter": 0.168988
+        },
+        "text_corruptions": {
+            "homophone": 0.03847,
+            "synonym": 0.09088,
+            "ata_saliency": 0.070125,
+            "fragmentation": 0.000261,
+            "character_noise": 0.030534
+        },
+        "img_budget_used": 0.623422,
+        "txt_budget_used": 0.230272,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.8844,
+        "img_dist": 0.12643,
+        "txt_dist": 0.0286,
+        "txt_sim": 0.9714
+    },
+    "swad_metrics": {
+        "iou_0": 0.99025,
+        "delta_m_plus": 0.10689,
+        "phi": 0.84859,
+        "swad": 0.0907
+    },
+    "l2_distance": 0.89385,
+    "original_prompt": "Identify the objects \"lizard\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "lizard": {
+            "xmin": 44,
+            "ymin": 100,
+            "xmax": 477,
+            "ymax": 274
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"l\u0456zard\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [80, 248, 960, 700], \"label\": \"l\u0456zard\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    80,
+                    248,
+                    960,
+                    700
+                ],
+                "label": "l\u0456zard"
+            }
+        ],
+        "token_count": 41,
+        "raw_token_count": 49,
+        "runtime_seconds": 0.1683
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.10548494406667601,
+        "defocus_blur": 0.11561541761336007,
+        "motion_blur": 0.011556234083117132,
+        "fog_filter": 0.20229505758863195,
+        "pixelate": 0.019482100062440846,
+        "jpeg_filter": 0.1689881120546987
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.038470021384880655,
+        "synonym": 0.09088044805726898,
+        "ata_saliency": 0.07012534659255311,
+        "fragmentation": 0.0002614723598643316,
+        "character_noise": 0.030534309408996475
+    }
+}

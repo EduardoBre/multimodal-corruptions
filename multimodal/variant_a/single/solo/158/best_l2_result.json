@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/158",
+        "folder_id": "158",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00027721.JPEG"
+    },
+    "pareto_index": 6,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "motion_blur",
+        "img_scale": 0.018595721213425453,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.6130568625347235
+    },
+    "objectives": {
+        "iou": 0.10456,
+        "img_dist": 0.02791,
+        "txt_dist": 0.14623,
+        "txt_sim": 0.85377
+    },
+    "swad_metrics": {
+        "iou_0": 0.57955,
+        "delta_m_plus": 0.81958,
+        "phi": 0.82994,
+        "swad": 0.68021
+    },
+    "l2_distance": 0.18192,
+    "original_prompt": "Identify the objects \"corkscrew\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "corkscrew": {
+            "xmin": 97,
+            "ymin": 175,
+            "xmax": 313,
+            "ymax": 342
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"corksorew\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [442, 688, 608, 830], \"label\": \"corksorew\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    442,
+                    688,
+                    608,
+                    830
+                ],
+                "label": "corksorew"
+            }
+        ],
+        "token_count": 42,
+        "raw_token_count": 46,
+        "runtime_seconds": 0.1875
+    }
+}

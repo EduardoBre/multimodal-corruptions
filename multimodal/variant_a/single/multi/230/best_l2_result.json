@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/230",
+        "folder_id": "230",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00036052.JPEG"
+    },
+    "pareto_index": 6,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.03455540405041985,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.2198188129044512
+    },
+    "objectives": {
+        "iou": 0.11607,
+        "img_dist": 0.04411,
+        "txt_dist": 0.37483,
+        "txt_sim": 0.62517
+    },
+    "swad_metrics": {
+        "iou_0": 0.76753,
+        "delta_m_plus": 0.84877,
+        "phi": 0.59759,
+        "swad": 0.50722
+    },
+    "l2_distance": 0.39486,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 110,
+            "ymin": 101,
+            "xmax": 256,
+            "ymax": 288
+        },
+        "bird_1": {
+            "xmin": 204,
+            "ymin": 105,
+            "xmax": 337,
+            "ymax": 227
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bgrd\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 1000, 1000], \"label\": \"bgrd\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    1000,
+                    1000
+                ],
+                "label": "bgrd"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 106,
+        "runtime_seconds": 0.3583
+    }
+}

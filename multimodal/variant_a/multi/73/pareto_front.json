@@ -1,0 +1,1517 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/73",
+        "folder_id": "73",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00003054.JPEG"
+    },
+    "original_prompt": "Identify the objects \"helmet, motorcycle, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 303,
+            "ymin": 37,
+            "xmax": 456,
+            "ymax": 163
+        },
+        "person_1": {
+            "xmin": 163,
+            "ymin": 31,
+            "xmax": 283,
+            "ymax": 165
+        },
+        "person_2": {
+            "xmin": 299,
+            "ymin": 34,
+            "xmax": 424,
+            "ymax": 161
+        },
+        "motorcycle": {
+            "xmin": 344,
+            "ymin": 34,
+            "xmax": 474,
+            "ymax": 153
+        },
+        "motorcycle_1": {
+            "xmin": 187,
+            "ymin": 52,
+            "xmax": 329,
+            "ymax": 155
+        },
+        "motorcycle_2": {
+            "xmin": 103,
+            "ymin": 67,
+            "xmax": 195,
+            "ymax": 150
+        },
+        "motorcycle_3": {
+            "xmin": 0,
+            "ymin": 53,
+            "xmax": 72,
+            "ymax": 167
+        },
+        "helmet": {
+            "xmin": 303,
+            "ymin": 34,
+            "xmax": 342,
+            "ymax": 87
+        },
+        "helmet_1": {
+            "xmin": 169,
+            "ymin": 37,
+            "xmax": 207,
+            "ymax": 83
+        }
+    },
+    "baseline_iou": 0.76252,
+    "swad_star": 0.63343,
+    "swad_star_index": 0,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "n_solutions": 13,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.8632061743184387,
+                "txt_attack": "synonym",
+                "txt_scale": 0.7724979474714236
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.18259,
+                "txt_dist": 0.22508,
+                "txt_sim": 0.77492
+            },
+            "swad_metrics": {
+                "iou_0": 0.76252,
+                "delta_m_plus": 1.0,
+                "phi": 0.63343,
+                "swad": 0.63343
+            },
+            "l2_distance": 0.28983,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hard hat, chopper, woman\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "There are no objects that match the descriptions \"hard hat\", \"chopper\", or \"woman\" in the image. The image shows motorcycle racers wearing helmets, not hard hats, and the motorcycles are not choppers. There are no women visible.\n\n```json\n[\n  {\n    \"object\": \"hard hat\",\n    \"bbox\": []\n  },\n  {\n    \"object\": \"chopper\",\n    \"bbox\": []\n  },\n  {\n    \"object\": \"woman\",\n    \"bbox\": []\n  }\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "object": "hard hat",
+                        "bbox": []
+                    },
+                    {
+                        "object": "chopper",
+                        "bbox": []
+                    },
+                    {
+                        "object": "woman",
+                        "bbox": []
+                    }
+                ],
+                "token_count": 107,
+                "raw_token_count": 451,
+                "runtime_seconds": 1.3953
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8181617493544074,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.41721849968957336
+            },
+            "objectives": {
+                "iou": 0.70173,
+                "img_dist": 0.0709,
+                "txt_dist": 0.11954,
+                "txt_sim": 0.88046
+            },
+            "swad_metrics": {
+                "iou_0": 0.76252,
+                "delta_m_plus": 0.07972,
+                "phi": 0.81804,
+                "swad": 0.06522
+            },
+            "l2_distance": 0.71536,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"helmet, omtorcycle, persok\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [602, 117, 680, 300], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [334, 133, 397, 250], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [250, 270, 328, 360], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [620, 117, 940, 560], \"label\": \"omtorcycle\"},\n\t{\"bbox_2d\": [397, 183, 650, 570], \"label\": \"omtorcycle\"},\n\t{\"bbox_2d\": [180, 200, 400, 550], \"label\": \"omtorcycle\"},\n\t{\"bbox_2d\": [0, 183, 200, 560], \"label\": \"omtorcycle\"},\n\t{\"bbox_2d\": [602, 117, 940, 560], \"label\": \"persok\"},\n\t{\"bbox_2d\": [334, 133, 397, 250], \"label\": \"persok\"},\n\t{\"bbox_2d\": [250, 270, 328, 360], \"label\": \"persok\"},\n\t{\"bbox_2d\": [180, 200, 400, 550], \"label\": \"persok\"},\n\t{\"bbox_2d\": [0, 183, 200, 560], \"label\": \"persok\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            602,
+                            117,
+                            680,
+                            300
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            334,
+                            133,
+                            397,
+                            250
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            250,
+                            270,
+                            328,
+                            360
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            620,
+                            117,
+                            940,
+                            560
+                        ],
+                        "label": "omtorcycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            397,
+                            183,
+                            650,
+                            570
+                        ],
+                        "label": "omtorcycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            180,
+                            200,
+                            400,
+                            550
+                        ],
+                        "label": "omtorcycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            183,
+                            200,
+                            560
+                        ],
+                        "label": "omtorcycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            602,
+                            117,
+                            940,
+                            560
+                        ],
+                        "label": "persok"
+                    },
+                    {
+                        "bbox_2d": [
+                            334,
+                            133,
+                            397,
+                            250
+                        ],
+                        "label": "persok"
+                    },
+                    {
+                        "bbox_2d": [
+                            250,
+                            270,
+                            328,
+                            360
+                        ],
+                        "label": "persok"
+                    },
+                    {
+                        "bbox_2d": [
+                            180,
+                            200,
+                            400,
+                            550
+                        ],
+                        "label": "persok"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            183,
+                            200,
+                            560
+                        ],
+                        "label": "persok"
+                    }
+                ],
+                "token_count": 414,
+                "raw_token_count": 451,
+                "runtime_seconds": 1.3953
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.018153363333776373,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.24927259019092207
+            },
+            "objectives": {
+                "iou": 0.73056,
+                "img_dist": 0.04964,
+                "txt_dist": 0.11128,
+                "txt_sim": 0.88872
+            },
+            "swad_metrics": {
+                "iou_0": 0.76252,
+                "delta_m_plus": 0.04191,
+                "phi": 0.8446,
+                "swad": 0.0354
+            },
+            "l2_distance": 0.74065,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"h\u0435\u200bl\u200bmet, motorc\u200d\u0443\u0441le, pe\u200brson\u200b\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [602, 120, 688, 317], \"label\": \"h\u0435\u200bl\u200bmet\"},\n\t{\"bbox_2d\": [332, 137, 398, 260], \"label\": \"h\u0435\u200bl\u200bmet\"},\n\t{\"bbox_2d\": [125, 197, 198, 317], \"label\": \"h\u0435\u200bl\u200bmet\"},\n\t{\"bbox_2d\": [602, 120, 938, 570], \"label\": \"motorc\u200d\u0443\u0441le\"},\n\t{\"bbox_2d\": [372, 197, 648, 570], \"label\": \"motorc\u200d\u0443\u0441le\"},\n\t{\"bbox_2d\": [150, 220, 398, 540], \"label\": \"motorc\u200d\u0443\u0441le\"},\n\t{\"bbox_2d\": [0, 200, 150, 540], \"label\": \"motorc\u200d\u0443\u0441le\"},\n\t{\"bbox_2d\": [602, 120, 938, 570], \"label\": \"pe\u200brson\"},\n\t{\"bbox_2d\": [332, 137, 398, 260], \"label\": \"pe\u200brson\"},\n\t{\"bbox_2d\": [125, 197, 198, 317], \"label\": \"pe\u200brson\"},\n\t{\"bbox_2d\": [0, 200, 150, 540], \"label\": \"pe\u200brson\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            602,
+                            120,
+                            688,
+                            317
+                        ],
+                        "label": "h\u0435\u200bl\u200bmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            332,
+                            137,
+                            398,
+                            260
+                        ],
+                        "label": "h\u0435\u200bl\u200bmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            125,
+                            197,
+                            198,
+                            317
+                        ],
+                        "label": "h\u0435\u200bl\u200bmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            602,
+                            120,
+                            938,
+                            570
+                        ],
+                        "label": "motorc\u200d\u0443\u0441le"
+                    },
+                    {
+                        "bbox_2d": [
+                            372,
+                            197,
+                            648,
+                            570
+                        ],
+                        "label": "motorc\u200d\u0443\u0441le"
+                    },
+                    {
+                        "bbox_2d": [
+                            150,
+                            220,
+                            398,
+                            540
+                        ],
+                        "label": "motorc\u200d\u0443\u0441le"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            200,
+                            150,
+                            540
+                        ],
+                        "label": "motorc\u200d\u0443\u0441le"
+                    },
+                    {
+                        "bbox_2d": [
+                            602,
+                            120,
+                            938,
+                            570
+                        ],
+                        "label": "pe\u200brson"
+                    },
+                    {
+                        "bbox_2d": [
+                            332,
+                            137,
+                            398,
+                            260
+                        ],
+                        "label": "pe\u200brson"
+                    },
+                    {
+                        "bbox_2d": [
+                            125,
+                            197,
+                            198,
+                            317
+                        ],
+                        "label": "pe\u200brson"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            200,
+                            150,
+                            540
+                        ],
+                        "label": "pe\u200brson"
+                    }
+                ],
+                "token_count": 412,
+                "raw_token_count": 451,
+                "runtime_seconds": 1.3953
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6124377601560459,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.69138,
+                "img_dist": 0.10652,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.76252,
+                "delta_m_plus": 0.0933,
+                "phi": 0.89348,
+                "swad": 0.08336
+            },
+            "l2_distance": 0.69954,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"helmet, motorcycle, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [333, 125, 400, 250], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [600, 105, 675, 250], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [365, 185, 645, 550], \"label\": \"motorcycle\"},\n\t{\"bbox_2d\": [600, 275, 935, 565], \"label\": \"motorcycle\"},\n\t{\"bbox_2d\": [135, 185, 365, 535], \"label\": \"motorcycle\"},\n\t{\"bbox_2d\": [0, 185, 135, 550], \"label\": \"motorcycle\"},\n\t{\"bbox_2d\": [600, 105, 935, 565], \"label\": \"person\"},\n\t{\"bbox_2d\": [333, 125, 645, 550], \"label\": \"person\"},\n\t{\"bbox_2d\": [135, 185, 365, 535], \"label\": \"person\"},\n\t{\"bbox_2d\": [0, 185, 135, 550], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            333,
+                            125,
+                            400,
+                            250
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            600,
+                            105,
+                            675,
+                            250
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            365,
+                            185,
+                            645,
+                            550
+                        ],
+                        "label": "motorcycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            600,
+                            275,
+                            935,
+                            565
+                        ],
+                        "label": "motorcycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            135,
+                            185,
+                            365,
+                            535
+                        ],
+                        "label": "motorcycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            185,
+                            135,
+                            550
+                        ],
+                        "label": "motorcycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            600,
+                            105,
+                            935,
+                            565
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            333,
+                            125,
+                            645,
+                            550
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            135,
+                            185,
+                            365,
+                            535
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            185,
+                            135,
+                            550
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 338,
+                "raw_token_count": 451,
+                "runtime_seconds": 1.3953
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.5656671100314771,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.039875089079669634
+            },
+            "objectives": {
+                "iou": 0.69182,
+                "img_dist": 0.10158,
+                "txt_dist": 0.1131,
+                "txt_sim": 0.8869
+            },
+            "swad_metrics": {
+                "iou_0": 0.76252,
+                "delta_m_plus": 0.09272,
+                "phi": 0.79681,
+                "swad": 0.07388
+            },
+            "l2_distance": 0.70833,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"h\u0435lm\u200det, mot\u043e\u200brcycl\u200be, pers\u043en\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [335, 130, 400, 250], \"label\": \"h\u0435lm\u200det\"},\n\t{\"bbox_2d\": [600, 110, 675, 250], \"label\": \"h\u0435lm\u200det\"},\n\t{\"bbox_2d\": [600, 110, 675, 250], \"label\": \"h\u0435lm\u200det\"},\n\t{\"bbox_2d\": [335, 130, 400, 250], \"label\": \"h\u0435lm\u200det\"},\n\t{\"bbox_2d\": [640, 250, 935, 560], \"label\": \"mot\u043e\u200brcycl\u200be\"},\n\t{\"bbox_2d\": [375, 200, 645, 560], \"label\": \"mot\u043e\u200brcycl\u200be\"},\n\t{\"bbox_2d\": [130, 190, 375, 540], \"label\": \"mot\u043e\u200brcycl\u200be\"},\n\t{\"bbox_2d\": [0, 180, 130, 550], \"label\": \"mot\u043e\u200brcycl\u200be\"},\n\t{\"bbox_2d\": [600, 110, 935, 560], \"label\": \"pers\u043en\"},\n\t{\"bbox_2d\": [335, 130, 645, 560], \"label\": \"pers\u043en\"},\n\t{\"bbox_2d\": [130, 190, 375, 540], \"label\": \"pers\u043en\"},\n\t{\"bbox_2d\": [0, 180, 130, 550], \"label\": \"pers\u043en\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            335,
+                            130,
+                            400,
+                            250
+                        ],
+                        "label": "h\u0435lm\u200det"
+                    },
+                    {
+                        "bbox_2d": [
+                            600,
+                            110,
+                            675,
+                            250
+                        ],
+                        "label": "h\u0435lm\u200det"
+                    },
+                    {
+                        "bbox_2d": [
+                            600,
+                            110,
+                            675,
+                            250
+                        ],
+                        "label": "h\u0435lm\u200det"
+                    },
+                    {
+                        "bbox_2d": [
+                            335,
+                            130,
+                            400,
+                            250
+                        ],
+                        "label": "h\u0435lm\u200det"
+                    },
+                    {
+                        "bbox_2d": [
+                            640,
+                            250,
+                            935,
+                            560
+                        ],
+                        "label": "mot\u043e\u200brcycl\u200be"
+                    },
+                    {
+                        "bbox_2d": [
+                            375,
+                            200,
+                            645,
+                            560
+                        ],
+                        "label": "mot\u043e\u200brcycl\u200be"
+                    },
+                    {
+                        "bbox_2d": [
+                            130,
+                            190,
+                            375,
+                            540
+                        ],
+                        "label": "mot\u043e\u200brcycl\u200be"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            180,
+                            130,
+                            550
+                        ],
+                        "label": "mot\u043e\u200brcycl\u200be"
+                    },
+                    {
+                        "bbox_2d": [
+                            600,
+                            110,
+                            935,
+                            560
+                        ],
+                        "label": "pers\u043en"
+                    },
+                    {
+                        "bbox_2d": [
+                            335,
+                            130,
+                            645,
+                            560
+                        ],
+                        "label": "pers\u043en"
+                    },
+                    {
+                        "bbox_2d": [
+                            130,
+                            190,
+                            375,
+                            540
+                        ],
+                        "label": "pers\u043en"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            180,
+                            130,
+                            550
+                        ],
+                        "label": "pers\u043en"
+                    }
+                ],
+                "token_count": 450,
+                "raw_token_count": 451,
+                "runtime_seconds": 1.3953
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.307337327911573,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.72668,
+                "img_dist": 0.0573,
+                "txt_dist": 0.20853,
+                "txt_sim": 0.79147
+            },
+            "swad_metrics": {
+                "iou_0": 0.76252,
+                "delta_m_plus": 0.047,
+                "phi": 0.74612,
+                "swad": 0.03507
+            },
+            "l2_distance": 0.75818,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"helmit, motor cycle, purse on\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [602, 117, 682, 290], \"label\": \"helmit\"},\n\t{\"bbox_2d\": [328, 137, 397, 250], \"label\": \"helmit\"},\n\t{\"bbox_2d\": [127, 190, 190, 300], \"label\": \"helmit\"},\n\t{\"bbox_2d\": [388, 190, 648, 567], \"label\": \"motor cycle\"},\n\t{\"bbox_2d\": [648, 124, 940, 567], \"label\": \"motor cycle\"},\n\t{\"bbox_2d\": [200, 250, 400, 540], \"label\": \"motor cycle\"},\n\t{\"bbox_2d\": [140, 200, 328, 540], \"label\": \"motor cycle\"},\n\t{\"bbox_2d\": [0, 190, 140, 567], \"label\": \"motor cycle\"},\n\t{\"bbox_2d\": [682, 124, 830, 250], \"label\": \"purse on\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            602,
+                            117,
+                            682,
+                            290
+                        ],
+                        "label": "helmit"
+                    },
+                    {
+                        "bbox_2d": [
+                            328,
+                            137,
+                            397,
+                            250
+                        ],
+                        "label": "helmit"
+                    },
+                    {
+                        "bbox_2d": [
+                            127,
+                            190,
+                            190,
+                            300
+                        ],
+                        "label": "helmit"
+                    },
+                    {
+                        "bbox_2d": [
+                            388,
+                            190,
+                            648,
+                            567
+                        ],
+                        "label": "motor cycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            648,
+                            124,
+                            940,
+                            567
+                        ],
+                        "label": "motor cycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            200,
+                            250,
+                            400,
+                            540
+                        ],
+                        "label": "motor cycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            140,
+                            200,
+                            328,
+                            540
+                        ],
+                        "label": "motor cycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            190,
+                            140,
+                            567
+                        ],
+                        "label": "motor cycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            682,
+                            124,
+                            830,
+                            250
+                        ],
+                        "label": "purse on"
+                    }
+                ],
+                "token_count": 311,
+                "raw_token_count": 451,
+                "runtime_seconds": 1.3953
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.74026,
+                "img_dist": 0.03915,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.76252,
+                "delta_m_plus": 0.02919,
+                "phi": 0.96085,
+                "swad": 0.02805
+            },
+            "l2_distance": 0.74129,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"helmet, motorcycle, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [605, 125, 680, 317], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [335, 140, 400, 270], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [130, 200, 190, 317], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [0, 200, 100, 317], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [680, 125, 935, 565], \"label\": \"motorcycle\"},\n\t{\"bbox_2d\": [385, 180, 640, 570], \"label\": \"motorcycle\"},\n\t{\"bbox_2d\": [125, 200, 400, 550], \"label\": \"motorcycle\"},\n\t{\"bbox_2d\": [0, 200, 130, 550], \"label\": \"motorcycle\"},\n\t{\"bbox_2d\": [605, 125, 935, 565], \"label\": \"person\"},\n\t{\"bbox_2d\": [335, 140, 400, 270], \"label\": \"person\"},\n\t{\"bbox_2d\": [130, 200, 190, 317], \"label\": \"person\"},\n\t{\"bbox_2d\": [0, 200, 100, 317], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            605,
+                            125,
+                            680,
+                            317
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            335,
+                            140,
+                            400,
+                            270
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            130,
+                            200,
+                            190,
+                            317
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            200,
+                            100,
+                            317
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            680,
+                            125,
+                            935,
+                            565
+                        ],
+                        "label": "motorcycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            385,
+                            180,
+                            640,
+                            570
+                        ],
+                        "label": "motorcycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            125,
+                            200,
+                            400,
+                            550
+                        ],
+                        "label": "motorcycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            200,
+                            130,
+                            550
+                        ],
+                        "label": "motorcycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            605,
+                            125,
+                            935,
+                            565
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            335,
+                            140,
+                            400,
+                            270
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            130,
+                            200,
+                            190,
+                            317
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            200,
+                            100,
+                            317
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 404,
+                "raw_token_count": 451,
+                "runtime_seconds": 1.3953
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.486062019522153,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.8971524375333463
+            },
+            "objectives": {
+                "iou": 0.72456,
+                "img_dist": 0.07219,
+                "txt_dist": 0.06527,
+                "txt_sim": 0.93473
+            },
+            "swad_metrics": {
+                "iou_0": 0.76252,
+                "delta_m_plus": 0.04978,
+                "phi": 0.86725,
+                "swad": 0.04317
+            },
+            "l2_distance": 0.73107,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"helmet, motocrycle, peroon\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [608, 120, 678, 270], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [334, 135, 398, 240], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [678, 135, 934, 565], \"label\": \"motocrycle\"},\n\t{\"bbox_2d\": [378, 185, 648, 565], \"label\": \"motocrycle\"},\n\t{\"bbox_2d\": [134, 190, 398, 550], \"label\": \"motocrycle\"},\n\t{\"bbox_2d\": [0, 190, 134, 550], \"label\": \"motocrycle\"},\n\t{\"bbox_2d\": [608, 120, 878, 565], \"label\": \"peroon\"},\n\t{\"bbox_2d\": [334, 135, 478, 435], \"label\": \"peroon\"},\n\t{\"bbox_2d\": [134, 190, 398, 550], \"label\": \"peroon\"},\n\t{\"bbox_2d\": [0, 190, 134, 550], \"label\": \"peroon\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            608,
+                            120,
+                            678,
+                            270
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            334,
+                            135,
+                            398,
+                            240
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            678,
+                            135,
+                            934,
+                            565
+                        ],
+                        "label": "motocrycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            378,
+                            185,
+                            648,
+                            565
+                        ],
+                        "label": "motocrycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            134,
+                            190,
+                            398,
+                            550
+                        ],
+                        "label": "motocrycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            190,
+                            134,
+                            550
+                        ],
+                        "label": "motocrycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            608,
+                            120,
+                            878,
+                            565
+                        ],
+                        "label": "peroon"
+                    },
+                    {
+                        "bbox_2d": [
+                            334,
+                            135,
+                            478,
+                            435
+                        ],
+                        "label": "peroon"
+                    },
+                    {
+                        "bbox_2d": [
+                            134,
+                            190,
+                            398,
+                            550
+                        ],
+                        "label": "peroon"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            190,
+                            134,
+                            550
+                        ],
+                        "label": "peroon"
+                    }
+                ],
+                "token_count": 350,
+                "raw_token_count": 458,
+                "runtime_seconds": 1.5175
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "img_attack": "fog_filter",
+                "img_scale": 0.8251013098699641,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.20427072300820825
+            },
+            "objectives": {
+                "iou": 0.6448,
+                "img_dist": 0.22416,
+                "txt_dist": 0.09104,
+                "txt_sim": 0.90896
+            },
+            "swad_metrics": {
+                "iou_0": 0.76252,
+                "delta_m_plus": 0.15438,
+                "phi": 0.70521,
+                "swad": 0.10887
+            },
+            "l2_distance": 0.6887,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"he\u200blme\u200dt, motorcy\u200bc\u200ble, pe\u200br\u200dson\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [607, 125, 680, 310], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [335, 140, 399, 250], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [335, 187, 647, 570], \"label\": \"motorcycle\"},\n\t{\"bbox_2d\": [635, 125, 938, 570], \"label\": \"motorcycle\"},\n\t{\"bbox_2d\": [130, 200, 385, 550], \"label\": \"motorcycle\"},\n\t{\"bbox_2d\": [607, 125, 938, 570], \"label\": \"person\"},\n\t{\"bbox_2d\": [335, 140, 450, 370], \"label\": \"person\"},\n\t{\"bbox_2d\": [130, 200, 385, 550], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            607,
+                            125,
+                            680,
+                            310
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            335,
+                            140,
+                            399,
+                            250
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            335,
+                            187,
+                            647,
+                            570
+                        ],
+                        "label": "motorcycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            635,
+                            125,
+                            938,
+                            570
+                        ],
+                        "label": "motorcycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            130,
+                            200,
+                            385,
+                            550
+                        ],
+                        "label": "motorcycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            607,
+                            125,
+                            938,
+                            570
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            335,
+                            140,
+                            450,
+                            370
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            130,
+                            200,
+                            385,
+                            550
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 275,
+                "raw_token_count": 458,
+                "runtime_seconds": 1.5175
+            }
+        },
+        {
+            "index": 9,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.03732619454213726,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.33647038540361596
+            },
+            "objectives": {
+                "iou": 0.73696,
+                "img_dist": 0.04218,
+                "txt_dist": 0.15027,
+                "txt_sim": 0.84973
+            },
+            "swad_metrics": {
+                "iou_0": 0.76252,
+                "delta_m_plus": 0.03352,
+                "phi": 0.81389,
+                "swad": 0.02728
+            },
+            "l2_distance": 0.75331,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"helmea, omtorcycle, eprson\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [602, 128, 680, 312], \"label\": \"helmea\"},\n\t{\"bbox_2d\": [330, 143, 398, 270], \"label\": \"helmea\"},\n\t{\"bbox_2d\": [748, 137, 812, 250], \"label\": \"helmea\"},\n\t{\"bbox_2d\": [378, 193, 648, 570], \"label\": \"omtorcycle\"},\n\t{\"bbox_2d\": [620, 137, 938, 570], \"label\": \"omtorcycle\"},\n\t{\"bbox_2d\": [128, 200, 400, 550], \"label\": \"omtorcycle\"},\n\t{\"bbox_2d\": [0, 200, 130, 550], \"label\": \"omtorcycle\"},\n\t{\"bbox_2d\": [602, 128, 938, 570], \"label\": \"eprson\"},\n\t{\"bbox_2d\": [330, 143, 648, 570], \"label\": \"eprson\"},\n\t{\"bbox_2d\": [128, 200, 400, 550], \"label\": \"eprson\"},\n\t{\"bbox_2d\": [0, 200, 130, 550], \"label\": \"eprson\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            602,
+                            128,
+                            680,
+                            312
+                        ],
+                        "label": "helmea"
+                    },
+                    {
+                        "bbox_2d": [
+                            330,
+                            143,
+                            398,
+                            270
+                        ],
+                        "label": "helmea"
+                    },
+                    {
+                        "bbox_2d": [
+                            748,
+                            137,
+                            812,
+                            250
+                        ],
+                        "label": "helmea"
+                    },
+                    {
+                        "bbox_2d": [
+                            378,
+                            193,
+                            648,
+                            570
+                        ],
+                        "label": "omtorcycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            620,
+                            137,
+                            938,
+                            570
+                        ],
+                        "label": "omtorcycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            128,
+                            200,
+                            400,
+                            550
+                        ],
+                        "label": "omtorcycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            200,
+                            130,
+                            550
+                        ],
+                        "label": "omtorcycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            602,
+                            128,
+                            938,
+                            570
+                        ],
+                        "label": "eprson"
+                    },
+                    {
+                        "bbox_2d": [
+                            330,
+                            143,
+                            648,
+                            570
+                        ],
+                        "label": "eprson"
+                    },
+                    {
+                        "bbox_2d": [
+                            128,
+                            200,
+                            400,
+                            550
+                        ],
+                        "label": "eprson"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            200,
+                            130,
+                            550
+                        ],
+                        "label": "eprson"
+                    }
+                ],
+                "token_count": 387,
+                "raw_token_count": 458,
+                "runtime_seconds": 1.5175
+            }
+        },
+        {
+            "index": 10,
+            "genome": {
+                "img_attack": "fog_filter",
+                "img_scale": 0.02226035255626979,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4303904312548027
+            },
+            "objectives": {
+                "iou": 0.27307,
+                "img_dist": 0.06025,
+                "txt_dist": 0.2325,
+                "txt_sim": 0.7675
+            },
+            "swad_metrics": {
+                "iou_0": 0.76252,
+                "delta_m_plus": 0.64188,
+                "phi": 0.72126,
+                "swad": 0.46296
+            },
+            "l2_distance": 0.36367,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hell met, motorcycle, purse on\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "There are no objects matching the descriptions \"hell met\", \"purse on\" in the image. The only identifiable object is a motorcycle, which is present in the image. The bounding box for the motorcycle is as follows:\n\n```json\n[\n\t{\"bbox_2d\": [605, 128, 937, 570], \"label\": \"motorcycle\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            605,
+                            128,
+                            937,
+                            570
+                        ],
+                        "label": "motorcycle"
+                    }
+                ],
+                "token_count": 85,
+                "raw_token_count": 458,
+                "runtime_seconds": 1.5175
+            }
+        },
+        {
+            "index": 11,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.7585322514200842,
+                "txt_attack": "synonym",
+                "txt_scale": 0.8286080825406955
+            },
+            "objectives": {
+                "iou": 0.57432,
+                "img_dist": 0.09714,
+                "txt_dist": 0.13363,
+                "txt_sim": 0.86637
+            },
+            "swad_metrics": {
+                "iou_0": 0.76252,
+                "delta_m_plus": 0.24681,
+                "phi": 0.78221,
+                "swad": 0.19306
+            },
+            "l2_distance": 0.59761,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"helmet, cycle, man\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [603, 120, 683, 310], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [338, 136, 403, 270], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [708, 120, 942, 550], \"label\": \"cycle\"},\n\t{\"bbox_2d\": [350, 170, 650, 570], \"label\": \"cycle\"},\n\t{\"bbox_2d\": [603, 120, 738, 560], \"label\": \"man\"},\n\t{\"bbox_2d\": [338, 136, 500, 550], \"label\": \"man\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            603,
+                            120,
+                            683,
+                            310
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            338,
+                            136,
+                            403,
+                            270
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            708,
+                            120,
+                            942,
+                            550
+                        ],
+                        "label": "cycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            350,
+                            170,
+                            650,
+                            570
+                        ],
+                        "label": "cycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            603,
+                            120,
+                            738,
+                            560
+                        ],
+                        "label": "man"
+                    },
+                    {
+                        "bbox_2d": [
+                            338,
+                            136,
+                            500,
+                            550
+                        ],
+                        "label": "man"
+                    }
+                ],
+                "token_count": 206,
+                "raw_token_count": 458,
+                "runtime_seconds": 1.5175
+            }
+        },
+        {
+            "index": 12,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.08646227720474076,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6881327596781619
+            },
+            "objectives": {
+                "iou": 0.69276,
+                "img_dist": 0.07812,
+                "txt_dist": 0.00646,
+                "txt_sim": 0.99354
+            },
+            "swad_metrics": {
+                "iou_0": 0.76252,
+                "delta_m_plus": 0.09149,
+                "phi": 0.91592,
+                "swad": 0.08379
+            },
+            "l2_distance": 0.69718,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"helmet, motor cycle, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [604, 120, 677, 270], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [337, 135, 400, 250], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [130, 180, 197, 270], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [0, 180, 100, 270], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [700, 240, 937, 550], \"label\": \"motor cycle\"},\n\t{\"bbox_2d\": [387, 200, 637, 570], \"label\": \"motor cycle\"},\n\t{\"bbox_2d\": [130, 220, 350, 550], \"label\": \"motor cycle\"},\n\t{\"bbox_2d\": [0, 200, 130, 550], \"label\": \"motor cycle\"},\n\t{\"bbox_2d\": [604, 120, 877, 550], \"label\": \"person\"},\n\t{\"bbox_2d\": [337, 135, 500, 550], \"label\": \"person\"},\n\t{\"bbox_2d\": [130, 180, 350, 550], \"label\": \"person\"},\n\t{\"bbox_2d\": [0, 180, 100, 550], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            604,
+                            120,
+                            677,
+                            270
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            337,
+                            135,
+                            400,
+                            250
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            130,
+                            180,
+                            197,
+                            270
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            180,
+                            100,
+                            270
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            700,
+                            240,
+                            937,
+                            550
+                        ],
+                        "label": "motor cycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            387,
+                            200,
+                            637,
+                            570
+                        ],
+                        "label": "motor cycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            130,
+                            220,
+                            350,
+                            550
+                        ],
+                        "label": "motor cycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            200,
+                            130,
+                            550
+                        ],
+                        "label": "motor cycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            604,
+                            120,
+                            877,
+                            550
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            337,
+                            135,
+                            500,
+                            550
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            130,
+                            180,
+                            350,
+                            550
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            180,
+                            100,
+                            550
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 404,
+                "raw_token_count": 458,
+                "runtime_seconds": 1.5175
+            }
+        }
+    ]
+}

@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/219",
+        "folder_id": "219",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00042156.JPEG"
+    },
+    "pareto_index": 5,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.003895,
+            "defocus_blur": 0.03007,
+            "motion_blur": 0.127425,
+            "fog_filter": 0.002265,
+            "pixelate": 0.00145,
+            "jpeg_filter": 0.011471
+        },
+        "text_corruptions": {
+            "homophone": 0.232837,
+            "synonym": 0.085662,
+            "ata_saliency": 0.106554,
+            "fragmentation": 0.180378,
+            "character_noise": 0.167819
+        },
+        "img_budget_used": 0.176576,
+        "txt_budget_used": 0.77325,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.05337,
+        "img_dist": 0.09334,
+        "txt_dist": 0.37127,
+        "txt_sim": 0.62873
+    },
+    "swad_metrics": {
+        "iou_0": 0.93027,
+        "delta_m_plus": 0.94263,
+        "phi": 0.57004,
+        "swad": 0.53734
+    },
+    "l2_distance": 0.38653,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 105,
+            "ymin": 165,
+            "xmax": 324,
+            "ymax": 387
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bur\u200dr\u200bed\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 727, 1000, 1000], \"label\": \"bur\u200dr\u200bed\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    727,
+                    1000,
+                    1000
+                ],
+                "label": "bur\u200dr\u200bed"
+            }
+        ],
+        "token_count": 44,
+        "raw_token_count": 52,
+        "runtime_seconds": 0.1671
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.00389514689348003,
+        "defocus_blur": 0.030069555318214647,
+        "motion_blur": 0.12742479742909113,
+        "fog_filter": 0.0022652451240454613,
+        "pixelate": 0.0014497419781441916,
+        "jpeg_filter": 0.01147108696027277
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.23283721368999727,
+        "synonym": 0.0856619664870362,
+        "ata_saliency": 0.10655364002008921,
+        "fragmentation": 0.18037807960956015,
+        "character_noise": 0.1678189541641999
+    }
+}

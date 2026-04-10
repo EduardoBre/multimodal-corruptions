@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/50",
+        "folder_id": "50",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00037021.JPEG"
+    },
+    "pareto_index": 12,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 4,
+    "total_evaluations": 105,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "gaussian_noise",
+        "img_scale": 0.018595721213425453,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.6130568625347235
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.02964,
+        "txt_dist": 0.15074,
+        "txt_sim": 0.84926
+    },
+    "swad_metrics": {
+        "iou_0": 0.8876,
+        "delta_m_plus": 1.0,
+        "phi": 0.82409,
+        "swad": 0.82409
+    },
+    "l2_distance": 0.15363,
+    "original_prompt": "Identify the objects \"cream\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "cream": {
+            "xmin": 142,
+            "ymin": 186,
+            "xmax": 272,
+            "ymax": 450
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"c\u200br\u0435a\u200dm\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [386, 349, 724, 889], \"label\": \"c\u200br\u058ae\u0430\u200dm\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    386,
+                    349,
+                    724,
+                    889
+                ],
+                "label": "c\u200br\u058ae\u0430\u200dm"
+            }
+        ],
+        "token_count": 48,
+        "raw_token_count": 49,
+        "runtime_seconds": 0.1791
+    }
+}

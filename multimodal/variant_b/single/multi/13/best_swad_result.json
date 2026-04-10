@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/13",
+        "folder_id": "13",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00005812.JPEG"
+    },
+    "pareto_index": 4,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.01753,
+            "defocus_blur": 0.26146,
+            "motion_blur": 0.056149,
+            "fog_filter": 0.100465,
+            "pixelate": 0.02228,
+            "jpeg_filter": 0.045016
+        },
+        "text_corruptions": {
+            "homophone": 0.576458,
+            "synonym": 0.01508,
+            "ata_saliency": 0.08452,
+            "fragmentation": 0.020684,
+            "character_noise": 0.086592
+        },
+        "img_budget_used": 0.502901,
+        "txt_budget_used": 0.783335,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.03297,
+        "img_dist": 0.11896,
+        "txt_dist": 0.13466,
+        "txt_sim": 0.86534
+    },
+    "swad_metrics": {
+        "iou_0": 0.62114,
+        "delta_m_plus": 0.94692,
+        "phi": 0.7624,
+        "swad": 0.72193
+    },
+    "l2_distance": 0.18268,
+    "original_prompt": "Identify the objects \"cocktail shaker\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "cocktail shaker": {
+            "xmin": 138,
+            "ymin": 252,
+            "xmax": 212,
+            "ymax": 426
+        },
+        "cocktail shaker_1": {
+            "xmin": 11,
+            "ymin": 231,
+            "xmax": 142,
+            "ymax": 435
+        },
+        "cocktail shaker_2": {
+            "xmin": 31,
+            "ymin": 2,
+            "xmax": 235,
+            "ymax": 315
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"c\u043eck\u200d t\u0430il shaker\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [725, 335, 917, 857], \"label\": \"c\u043eck\u200d t\u0430il shaker\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    725,
+                    335,
+                    917,
+                    857
+                ],
+                "label": "c\u043eck\u200d t\u0430il shaker"
+            }
+        ],
+        "token_count": 48,
+        "raw_token_count": 106,
+        "runtime_seconds": 0.3565
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0175301646656576,
+        "defocus_blur": 0.26146023831923754,
+        "motion_blur": 0.05614941664298948,
+        "fog_filter": 0.10046524553705538,
+        "pixelate": 0.022279511393489333,
+        "jpeg_filter": 0.04501626810130691
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.5764580597268839,
+        "synonym": 0.015080307297031813,
+        "ata_saliency": 0.08451969837759482,
+        "fragmentation": 0.020684482617191028,
+        "character_noise": 0.08659223974453173
+    }
+}

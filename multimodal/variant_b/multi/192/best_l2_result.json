@@ -1,0 +1,106 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/192",
+        "folder_id": "192",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00002075.JPEG"
+    },
+    "pareto_index": 1,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.045784,
+            "defocus_blur": 0.037505,
+            "motion_blur": 0.005899,
+            "fog_filter": 0.006053,
+            "pixelate": 0.014237,
+            "jpeg_filter": 0.019577
+        },
+        "text_corruptions": {
+            "homophone": 0.072059,
+            "synonym": 0.10258,
+            "ata_saliency": 0.099066,
+            "fragmentation": 0.031812,
+            "character_noise": 0.006933
+        },
+        "img_budget_used": 0.129056,
+        "txt_budget_used": 0.31245,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.15078,
+        "img_dist": 0.07506,
+        "txt_dist": 0.16639,
+        "txt_sim": 0.83361
+    },
+    "swad_metrics": {
+        "iou_0": 0.58297,
+        "delta_m_plus": 0.74136,
+        "phi": 0.77104,
+        "swad": 0.57162
+    },
+    "l2_distance": 0.23676,
+    "original_prompt": "Identify the objects \"diaper, table\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "diaper": {
+            "xmin": 184,
+            "ymin": 195,
+            "xmax": 254,
+            "ymax": 261
+        },
+        "table": {
+            "xmin": 0,
+            "ymin": 154,
+            "xmax": 127,
+            "ymax": 209
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"dia\u200dper, table\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [74, 394, 192, 440], \"label\": \"dia\u200dper\"},\n\t{\"bbox_2d\": [0, 372, 250, 856], \"label\": \"table\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    74,
+                    394,
+                    192,
+                    440
+                ],
+                "label": "dia\u200dper"
+            },
+            {
+                "bbox_2d": [
+                    0,
+                    372,
+                    250,
+                    856
+                ],
+                "label": "table"
+            }
+        ],
+        "token_count": 72,
+        "raw_token_count": 99,
+        "runtime_seconds": 0.344
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.04578449947419849,
+        "defocus_blur": 0.0375046020902169,
+        "motion_blur": 0.0058993521877184546,
+        "fog_filter": 0.006053052517799065,
+        "pixelate": 0.0142369328402124,
+        "jpeg_filter": 0.019577271267967163
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.07205923104650332,
+        "synonym": 0.10258025061890552,
+        "ata_saliency": 0.09906614841527041,
+        "fragmentation": 0.0318116129171999,
+        "character_noise": 0.006932874364180929
+    }
+}

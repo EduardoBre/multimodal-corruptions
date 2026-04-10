@@ -1,0 +1,136 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/88",
+        "folder_id": "88",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00019375.JPEG"
+    },
+    "pareto_index": 3,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.068782,
+            "defocus_blur": 0.110726,
+            "motion_blur": 0.059426,
+            "fog_filter": 0.00162,
+            "pixelate": 0.031539,
+            "jpeg_filter": 0.182667
+        },
+        "text_corruptions": {
+            "homophone": 0.073314,
+            "synonym": 0.099484,
+            "ata_saliency": 0.10726,
+            "fragmentation": 0.042187,
+            "character_noise": 0.141946
+        },
+        "img_budget_used": 0.45476,
+        "txt_budget_used": 0.464191,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.09951,
+        "txt_dist": 0.19907,
+        "txt_sim": 0.80093
+    },
+    "swad_metrics": {
+        "iou_0": 0.67375,
+        "delta_m_plus": 1.0,
+        "phi": 0.72123,
+        "swad": 0.72123
+    },
+    "l2_distance": 0.22256,
+    "original_prompt": "Identify the objects \"flute, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 0,
+            "ymin": 80,
+            "xmax": 169,
+            "ymax": 498
+        },
+        "person_1": {
+            "xmin": 177,
+            "ymin": 83,
+            "xmax": 331,
+            "ymax": 498
+        },
+        "flute": {
+            "xmin": 0,
+            "ymin": 161,
+            "xmax": 78,
+            "ymax": 213
+        },
+        "person_2": {
+            "xmin": 86,
+            "ymin": 33,
+            "xmax": 119,
+            "ymax": 82
+        },
+        "person_3": {
+            "xmin": 113,
+            "ymin": 40,
+            "xmax": 137,
+            "ymax": 112
+        },
+        "person_4": {
+            "xmin": 164,
+            "ymin": 27,
+            "xmax": 189,
+            "ymax": 116
+        },
+        "person_5": {
+            "xmin": 272,
+            "ymin": 40,
+            "xmax": 306,
+            "ymax": 115
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"f\u200bu\u200blte, p\u200b\u0435rson\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 157, 509, 1000], \"label\": \"f\u200bu\u200blte, p\u200b\u0435rson\"},\n\t{\"bbox_2d\": [357, 188, 1000, 1000], \"label\": \"f\u200bu\u200blte, p\u200b\u0435rson\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    157,
+                    509,
+                    1000
+                ],
+                "label": "f\u200bu\u200blte, p\u200b\u0435rson"
+            },
+            {
+                "bbox_2d": [
+                    357,
+                    188,
+                    1000,
+                    1000
+                ],
+                "label": "f\u200bu\u200blte, p\u200b\u0435rson"
+            }
+        ],
+        "token_count": 93,
+        "raw_token_count": 295,
+        "runtime_seconds": 0.9272
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.06878151626793849,
+        "defocus_blur": 0.11072580562600506,
+        "motion_blur": 0.05942635101939897,
+        "fog_filter": 0.0016202780857158636,
+        "pixelate": 0.03153906174998632,
+        "jpeg_filter": 0.18266713717147884
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.0733137384421856,
+        "synonym": 0.0994840977867992,
+        "ata_saliency": 0.10726042489215629,
+        "fragmentation": 0.04218710964570051,
+        "character_noise": 0.14194567001613378
+    }
+}

@@ -1,0 +1,436 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/146",
+        "folder_id": "146",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00001534.JPEG"
+    },
+    "original_prompt": "Identify the objects \"binder, plastic bag\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "plastic bag": {
+            "xmin": 16,
+            "ymin": 185,
+            "xmax": 258,
+            "ymax": 483
+        },
+        "plastic bag_1": {
+            "xmin": 227,
+            "ymin": 280,
+            "xmax": 478,
+            "ymax": 481
+        },
+        "plastic bag_2": {
+            "xmin": 27,
+            "ymin": 12,
+            "xmax": 227,
+            "ymax": 195
+        },
+        "binder": {
+            "xmin": 226,
+            "ymin": 36,
+            "xmax": 436,
+            "ymax": 288
+        },
+        "binder_1": {
+            "xmin": 386,
+            "ymin": 8,
+            "xmax": 485,
+            "ymax": 251
+        }
+    },
+    "baseline_iou": 0.76629,
+    "swad_star": 0.87913,
+    "swad_star_index": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 6,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.77032,
+                "img_dist": 0.02273,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.76629,
+                "delta_m_plus": 0.0,
+                "phi": 0.97727,
+                "swad": 0.0
+            },
+            "l2_distance": 0.77066,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"binder, plastic bag\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [450, 74, 962, 583], \"label\": \"binder\"},\n\t{\"bbox_2d\": [34, 377, 512, 968], \"label\": \"plastic bag\"},\n\t{\"bbox_2d\": [450, 561, 962, 970], \"label\": \"plastic bag\"},\n\t{\"bbox_2d\": [34, 37, 450, 438], \"label\": \"plastic bag\"},\n\t{\"bbox_2d\": [450, 37, 962, 583], \"label\": \"plastic bag\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            450,
+                            74,
+                            962,
+                            583
+                        ],
+                        "label": "binder"
+                    },
+                    {
+                        "bbox_2d": [
+                            34,
+                            377,
+                            512,
+                            968
+                        ],
+                        "label": "plastic bag"
+                    },
+                    {
+                        "bbox_2d": [
+                            450,
+                            561,
+                            962,
+                            970
+                        ],
+                        "label": "plastic bag"
+                    },
+                    {
+                        "bbox_2d": [
+                            34,
+                            37,
+                            450,
+                            438
+                        ],
+                        "label": "plastic bag"
+                    },
+                    {
+                        "bbox_2d": [
+                            450,
+                            37,
+                            962,
+                            583
+                        ],
+                        "label": "plastic bag"
+                    }
+                ],
+                "token_count": 175,
+                "raw_token_count": 176,
+                "runtime_seconds": 0.576
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.02513,
+                "txt_dist": 0.09821,
+                "txt_sim": 0.90179
+            },
+            "swad_metrics": {
+                "iou_0": 0.76629,
+                "delta_m_plus": 1.0,
+                "phi": 0.87913,
+                "swad": 0.87913
+            },
+            "l2_distance": 0.10137,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"binker, plasitc bag\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [33, 377, 515, 967], \"label\": \"binker, plasitc bag\"},\n\t{\"bbox_2d\": [43, 37, 408, 427], \"label\": \"binker, plasitc bag\"},\n\t{\"bbox_2d\": [438, 577, 965, 967], \"label\": \"binker, plasitc bag\"},\n\t{\"bbox_2d\": [333, 37, 965, 627], \"label\": \"binker, plasitc bag\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            33,
+                            377,
+                            515,
+                            967
+                        ],
+                        "label": "binker, plasitc bag"
+                    },
+                    {
+                        "bbox_2d": [
+                            43,
+                            37,
+                            408,
+                            427
+                        ],
+                        "label": "binker, plasitc bag"
+                    },
+                    {
+                        "bbox_2d": [
+                            438,
+                            577,
+                            965,
+                            967
+                        ],
+                        "label": "binker, plasitc bag"
+                    },
+                    {
+                        "bbox_2d": [
+                            333,
+                            37,
+                            965,
+                            627
+                        ],
+                        "label": "binker, plasitc bag"
+                    }
+                ],
+                "token_count": 162,
+                "raw_token_count": 176,
+                "runtime_seconds": 0.576
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6124377601560459,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.35698,
+                "img_dist": 0.06499,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.76629,
+                "delta_m_plus": 0.53415,
+                "phi": 0.93501,
+                "swad": 0.49943
+            },
+            "l2_distance": 0.36285,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"binder, plastic bag\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [442, 62, 964, 592], \"label\": \"binder\"},\n\t{\"bbox_2d\": [30, 37, 964, 964], \"label\": \"plastic bag\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            442,
+                            62,
+                            964,
+                            592
+                        ],
+                        "label": "binder"
+                    },
+                    {
+                        "bbox_2d": [
+                            30,
+                            37,
+                            964,
+                            964
+                        ],
+                        "label": "plastic bag"
+                    }
+                ],
+                "token_count": 72,
+                "raw_token_count": 176,
+                "runtime_seconds": 0.576
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.307337327911573,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.75121,
+                "img_dist": 0.03182,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.76629,
+                "delta_m_plus": 0.01968,
+                "phi": 0.96818,
+                "swad": 0.01905
+            },
+            "l2_distance": 0.75188,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"binder, plastic bag\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [448, 38, 958, 595], \"label\": \"binder\"},\n\t{\"bbox_2d\": [38, 377, 512, 966], \"label\": \"plastic bag\"},\n\t{\"bbox_2d\": [44, 38, 458, 438], \"label\": \"plastic bag\"},\n\t{\"bbox_2d\": [448, 577, 962, 966], \"label\": \"plastic bag\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            448,
+                            38,
+                            958,
+                            595
+                        ],
+                        "label": "binder"
+                    },
+                    {
+                        "bbox_2d": [
+                            38,
+                            377,
+                            512,
+                            966
+                        ],
+                        "label": "plastic bag"
+                    },
+                    {
+                        "bbox_2d": [
+                            44,
+                            38,
+                            458,
+                            438
+                        ],
+                        "label": "plastic bag"
+                    },
+                    {
+                        "bbox_2d": [
+                            448,
+                            577,
+                            962,
+                            966
+                        ],
+                        "label": "plastic bag"
+                    }
+                ],
+                "token_count": 141,
+                "raw_token_count": 176,
+                "runtime_seconds": 0.576
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.21300761893764208,
+                "txt_attack": "synonym",
+                "txt_scale": 0.11490566325799068
+            },
+            "objectives": {
+                "iou": 0.74402,
+                "img_dist": 0.0546,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.76629,
+                "delta_m_plus": 0.02906,
+                "phi": 0.9454,
+                "swad": 0.02748
+            },
+            "l2_distance": 0.74602,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"binder, plastic bag\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [448, 72, 958, 585], \"label\": \"binder\"},\n\t{\"bbox_2d\": [32, 375, 516, 971], \"label\": \"plastic bag\"},\n\t{\"bbox_2d\": [458, 500, 962, 971], \"label\": \"plastic bag\"},\n\t{\"bbox_2d\": [32, 37, 458, 438], \"label\": \"plastic bag\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            448,
+                            72,
+                            958,
+                            585
+                        ],
+                        "label": "binder"
+                    },
+                    {
+                        "bbox_2d": [
+                            32,
+                            375,
+                            516,
+                            971
+                        ],
+                        "label": "plastic bag"
+                    },
+                    {
+                        "bbox_2d": [
+                            458,
+                            500,
+                            962,
+                            971
+                        ],
+                        "label": "plastic bag"
+                    },
+                    {
+                        "bbox_2d": [
+                            32,
+                            37,
+                            458,
+                            438
+                        ],
+                        "label": "plastic bag"
+                    }
+                ],
+                "token_count": 141,
+                "raw_token_count": 176,
+                "runtime_seconds": 0.576
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.03926,
+                "txt_dist": 0.09361,
+                "txt_sim": 0.90639
+            },
+            "swad_metrics": {
+                "iou_0": 0.76629,
+                "delta_m_plus": 1.0,
+                "phi": 0.87081,
+                "swad": 0.87081
+            },
+            "l2_distance": 0.10151,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bind her, plastic bag\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [448, 575, 962, 970], \"label\": \"bind her, plastic bag\"},\n\t{\"bbox_2d\": [35, 375, 512, 970], \"label\": \"bind her, plastic bag\"},\n\t{\"bbox_2d\": [35, 37, 448, 425], \"label\": \"bind her, plastic bag\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            448,
+                            575,
+                            962,
+                            970
+                        ],
+                        "label": "bind her, plastic bag"
+                    },
+                    {
+                        "bbox_2d": [
+                            35,
+                            375,
+                            512,
+                            970
+                        ],
+                        "label": "bind her, plastic bag"
+                    },
+                    {
+                        "bbox_2d": [
+                            35,
+                            37,
+                            448,
+                            425
+                        ],
+                        "label": "bind her, plastic bag"
+                    }
+                ],
+                "token_count": 114,
+                "raw_token_count": 176,
+                "runtime_seconds": 0.576
+            }
+        }
+    ]
+}

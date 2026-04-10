@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/20",
+        "folder_id": "20",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00002098.JPEG"
+    },
+    "pareto_index": 7,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "motion_blur",
+        "img_scale": 0.018595721213425453,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.6130568625347235
+    },
+    "objectives": {
+        "iou": 0.14006,
+        "img_dist": 0.07845,
+        "txt_dist": 0.25887,
+        "txt_sim": 0.74113
+    },
+    "swad_metrics": {
+        "iou_0": 0.5517,
+        "delta_m_plus": 0.74613,
+        "phi": 0.68299,
+        "swad": 0.5096
+    },
+    "l2_distance": 0.30461,
+    "original_prompt": "Identify the objects \"chair, flower pot, table\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "table": {
+            "xmin": 70,
+            "ymin": 248,
+            "xmax": 279,
+            "ymax": 433
+        },
+        "flower pot": {
+            "xmin": 155,
+            "ymin": 272,
+            "xmax": 182,
+            "ymax": 301
+        },
+        "chair": {
+            "xmin": 166,
+            "ymin": 284,
+            "xmax": 306,
+            "ymax": 464
+        },
+        "chair_1": {
+            "xmin": 20,
+            "ymin": 288,
+            "xmax": 153,
+            "ymax": 462
+        },
+        "chair_2": {
+            "xmin": 223,
+            "ymin": 242,
+            "xmax": 282,
+            "ymax": 292
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"chaik, flowed por, tablp\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [288, 0, 688, 333], \"label\": \"chaik\"},\n\t{\"bbox_2d\": [440, 518, 552, 575], \"label\": \"flowed por\"},\n\t{\"bbox_2d\": [216, 575, 712, 655], \"label\": \"tablp\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    288,
+                    0,
+                    688,
+                    333
+                ],
+                "label": "chaik"
+            },
+            {
+                "bbox_2d": [
+                    440,
+                    518,
+                    552,
+                    575
+                ],
+                "label": "flowed por"
+            },
+            {
+                "bbox_2d": [
+                    216,
+                    575,
+                    712,
+                    655
+                ],
+                "label": "tablp"
+            }
+        ],
+        "token_count": 107,
+        "raw_token_count": 272,
+        "runtime_seconds": 1.0322
+    }
+}

@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/217",
+        "folder_id": "217",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00003760.JPEG"
+    },
+    "pareto_index": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.08667271273014118,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.21749812629233126
+    },
+    "objectives": {
+        "iou": 0.86286,
+        "img_dist": 0.03948,
+        "txt_dist": 0.03485,
+        "txt_sim": 0.96515
+    },
+    "swad_metrics": {
+        "iou_0": 0.94749,
+        "delta_m_plus": 0.08932,
+        "phi": 0.92705,
+        "swad": 0.08281
+    },
+    "l2_distance": 0.86447,
+    "original_prompt": "Identify the objects \"hat with a wide brim\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "hat with a wide brim": {
+            "xmin": 122,
+            "ymin": 53,
+            "xmax": 408,
+            "ymax": 314
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"hta with a wide brim\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [248, 148, 748, 840], \"label\": \"hta with a wide brim\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    248,
+                    148,
+                    748,
+                    840
+                ],
+                "label": "hta with a wide brim"
+            }
+        ],
+        "token_count": 44,
+        "raw_token_count": 59,
+        "runtime_seconds": 0.2593
+    }
+}

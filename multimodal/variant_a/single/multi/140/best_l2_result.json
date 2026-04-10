@@ -1,0 +1,76 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/140",
+        "folder_id": "140",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00002388.JPEG"
+    },
+    "pareto_index": 19,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.01432888930335724,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.3273709769105356
+    },
+    "objectives": {
+        "iou": 0.03832,
+        "img_dist": 0.02026,
+        "txt_dist": 0.38158,
+        "txt_sim": 0.61842
+    },
+    "swad_metrics": {
+        "iou_0": 0.85105,
+        "delta_m_plus": 0.95497,
+        "phi": 0.60589,
+        "swad": 0.57861
+    },
+    "l2_distance": 0.38403,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 266,
+            "ymin": 149,
+            "xmax": 456,
+            "ymax": 488
+        },
+        "bird_1": {
+            "xmin": 95,
+            "ymin": 43,
+            "xmax": 300,
+            "ymax": 471
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bind\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [220, 448, 392, 550], \"label\": \"bind\"},\n\t{\"bbox_2d\": [658, 648, 792, 708], \"label\": \"bind\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    220,
+                    448,
+                    392,
+                    550
+                ],
+                "label": "bind"
+            },
+            {
+                "bbox_2d": [
+                    658,
+                    648,
+                    792,
+                    708
+                ],
+                "label": "bind"
+            }
+        ],
+        "token_count": 72,
+        "raw_token_count": 84,
+        "runtime_seconds": 0.2893
+    }
+}

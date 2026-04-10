@@ -1,0 +1,82 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/2",
+        "folder_id": "2",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00021825.JPEG"
+    },
+    "pareto_index": 16,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 3,
+    "total_evaluations": 75,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.05942704176579572,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.25079130550658185
+    },
+    "objectives": {
+        "iou": 0.31117,
+        "img_dist": 0.02894,
+        "txt_dist": 0.20586,
+        "txt_sim": 0.79414
+    },
+    "swad_metrics": {
+        "iou_0": 0.94973,
+        "delta_m_plus": 0.67236,
+        "phi": 0.77116,
+        "swad": 0.5185
+    },
+    "l2_distance": 0.37422,
+    "original_prompt": "Identify the objects \"person, volleyball\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 254,
+            "ymin": 155,
+            "xmax": 384,
+            "ymax": 427
+        },
+        "person_1": {
+            "xmin": 75,
+            "ymin": 181,
+            "xmax": 236,
+            "ymax": 427
+        },
+        "volleyball": {
+            "xmin": 141,
+            "ymin": 77,
+            "xmax": 225,
+            "ymax": 168
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"perlon, volleyball\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [352, 157, 572, 333], \"label\": \"volleyball\"},\n\t{\"bbox_2d\": [352, 157, 572, 333], \"label\": \"perlon\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    352,
+                    157,
+                    572,
+                    333
+                ],
+                "label": "volleyball"
+            },
+            {
+                "bbox_2d": [
+                    352,
+                    157,
+                    572,
+                    333
+                ],
+                "label": "perlon"
+            }
+        ],
+        "token_count": 75,
+        "raw_token_count": 131,
+        "runtime_seconds": 0.6122
+    }
+}

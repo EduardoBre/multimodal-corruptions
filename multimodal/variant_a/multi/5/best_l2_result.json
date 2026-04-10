@@ -1,0 +1,76 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/5",
+        "folder_id": "5",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00045126.JPEG"
+    },
+    "pareto_index": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.8181617493544074,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.41721849968957336
+    },
+    "objectives": {
+        "iou": 0.30749,
+        "img_dist": 0.09262,
+        "txt_dist": 0.14286,
+        "txt_sim": 0.85714
+    },
+    "swad_metrics": {
+        "iou_0": 0.78872,
+        "delta_m_plus": 0.61014,
+        "phi": 0.77775,
+        "swad": 0.47454
+    },
+    "l2_distance": 0.35148,
+    "original_prompt": "Identify the objects \"person, pineapple\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 221,
+            "ymin": 45,
+            "xmax": 365,
+            "ymax": 405
+        },
+        "pineapple": {
+            "xmin": 67,
+            "ymin": 127,
+            "xmax": 123,
+            "ymax": 228
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"pereon, pineapple\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [188, 178, 338, 472], \"label\": \"pineapple\"},\n\t{\"bbox_2d\": [208, 472, 408, 700], \"label\": \"pineapple\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    188,
+                    178,
+                    338,
+                    472
+                ],
+                "label": "pineapple"
+            },
+            {
+                "bbox_2d": [
+                    208,
+                    472,
+                    408,
+                    700
+                ],
+                "label": "pineapple"
+            }
+        ],
+        "token_count": 74,
+        "raw_token_count": 82,
+        "runtime_seconds": 0.3392
+    }
+}

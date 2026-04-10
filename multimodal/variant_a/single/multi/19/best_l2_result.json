@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/19",
+        "folder_id": "19",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00002006.JPEG"
+    },
+    "pareto_index": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "motion_blur",
+        "img_scale": 0.3997956906557353,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.647636093318414
+    },
+    "objectives": {
+        "iou": 0.06181,
+        "img_dist": 0.0394,
+        "txt_dist": 0.27869,
+        "txt_sim": 0.72131
+    },
+    "swad_metrics": {
+        "iou_0": 0.97521,
+        "delta_m_plus": 0.93662,
+        "phi": 0.69289,
+        "swad": 0.64897
+    },
+    "l2_distance": 0.28817,
+    "original_prompt": "Identify the objects \"swine\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "swine": {
+            "xmin": 151,
+            "ymin": 149,
+            "xmax": 219,
+            "ymax": 297
+        },
+        "swine_1": {
+            "xmin": 254,
+            "ymin": 147,
+            "xmax": 337,
+            "ymax": 273
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"swnie\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 1000, 997], \"label\": \"swnie\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    1000,
+                    997
+                ],
+                "label": "swnie"
+            }
+        ],
+        "token_count": 38,
+        "raw_token_count": 81,
+        "runtime_seconds": 0.2867
+    }
+}

@@ -1,0 +1,218 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/single/solo/228",
+        "folder_id": "228",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00025775.JPEG"
+    },
+    "original_prompt": "Identify the objects \"cattle\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "cattle": {
+            "xmin": 261,
+            "ymin": 16,
+            "xmax": 498,
+            "ymax": 253
+        }
+    },
+    "baseline_iou": 0.95923,
+    "swad_star": 0.64919,
+    "swad_star_index": 3,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "n_solutions": 5,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.93837,
+                "img_dist": 0.05327,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.95923,
+                "delta_m_plus": 0.02175,
+                "phi": 0.94673,
+                "swad": 0.02059
+            },
+            "l2_distance": 0.93988,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cattle\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [518, 62, 1000, 777], \"label\": \"cattle\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            518,
+                            62,
+                            1000,
+                            777
+                        ],
+                        "label": "cattle"
+                    }
+                ],
+                "token_count": 40,
+                "raw_token_count": 47,
+                "runtime_seconds": 0.1782
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.5656671100314771,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.039875089079669634
+            },
+            "objectives": {
+                "iou": 0.93676,
+                "img_dist": 0.0873,
+                "txt_dist": 0.03008,
+                "txt_sim": 0.96992
+            },
+            "swad_metrics": {
+                "iou_0": 0.95923,
+                "delta_m_plus": 0.02343,
+                "phi": 0.88525,
+                "swad": 0.02074
+            },
+            "l2_distance": 0.9413,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cattle\u200d\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [522, 50, 1000, 720], \"label\": \"cattle\u200d\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            522,
+                            50,
+                            1000,
+                            720
+                        ],
+                        "label": "cattle\u200d"
+                    }
+                ],
+                "token_count": 42,
+                "raw_token_count": 47,
+                "runtime_seconds": 0.1782
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.95531,
+                "img_dist": 0.03899,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.95923,
+                "delta_m_plus": 0.00409,
+                "phi": 0.96101,
+                "swad": 0.00393
+            },
+            "l2_distance": 0.95611,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cattle\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [520, 62, 1000, 767], \"label\": \"cattle\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            520,
+                            62,
+                            1000,
+                            767
+                        ],
+                        "label": "cattle"
+                    }
+                ],
+                "token_count": 40,
+                "raw_token_count": 47,
+                "runtime_seconds": 0.1782
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.9316177058680379,
+                "txt_attack": "homophone",
+                "txt_scale": 0.9948250792623392
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.0827,
+                "txt_dist": 0.29228,
+                "txt_sim": 0.70772
+            },
+            "swad_metrics": {
+                "iou_0": 0.95923,
+                "delta_m_plus": 1.0,
+                "phi": 0.64919,
+                "swad": 0.64919
+            },
+            "l2_distance": 0.30375,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cat'll\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "There is no object matching the query \"cat'll\" in the image.",
+                "parsed_predictions": [],
+                "token_count": 15,
+                "raw_token_count": 52,
+                "runtime_seconds": 0.1666
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.03732619454213726,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.33647038540361596
+            },
+            "objectives": {
+                "iou": 0.95015,
+                "img_dist": 0.05052,
+                "txt_dist": 0.36912,
+                "txt_sim": 0.63088
+            },
+            "swad_metrics": {
+                "iou_0": 0.95923,
+                "delta_m_plus": 0.00947,
+                "phi": 0.59901,
+                "swad": 0.00567
+            },
+            "l2_distance": 1.02058,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"ctatle\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [518, 60, 1000, 770], \"label\": \"ctatle\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            518,
+                            60,
+                            1000,
+                            770
+                        ],
+                        "label": "ctatle"
+                    }
+                ],
+                "token_count": 41,
+                "raw_token_count": 52,
+                "runtime_seconds": 0.1666
+            }
+        }
+    ]
+}

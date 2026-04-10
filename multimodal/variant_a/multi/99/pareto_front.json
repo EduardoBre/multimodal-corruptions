@@ -1,0 +1,1355 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/99",
+        "folder_id": "99",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00001093.JPEG"
+    },
+    "original_prompt": "Identify the objects \"car, person, traffic light\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 136,
+            "ymin": 140,
+            "xmax": 172,
+            "ymax": 186
+        },
+        "car": {
+            "xmin": 352,
+            "ymin": 123,
+            "xmax": 498,
+            "ymax": 248
+        },
+        "car_1": {
+            "xmin": 0,
+            "ymin": 10,
+            "xmax": 355,
+            "ymax": 498
+        },
+        "car_2": {
+            "xmin": 37,
+            "ymin": 108,
+            "xmax": 287,
+            "ymax": 321
+        },
+        "traffic light": {
+            "xmin": 382,
+            "ymin": 72,
+            "xmax": 441,
+            "ymax": 126
+        }
+    },
+    "baseline_iou": 0.73744,
+    "swad_star": 0.51583,
+    "swad_star_index": 2,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 13,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8181617493544074,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.41721849968957336
+            },
+            "objectives": {
+                "iou": 0.59163,
+                "img_dist": 0.06646,
+                "txt_dist": 0.24415,
+                "txt_sim": 0.75585
+            },
+            "swad_metrics": {
+                "iou_0": 0.73744,
+                "delta_m_plus": 0.19772,
+                "phi": 0.70562,
+                "swad": 0.13952
+            },
+            "l2_distance": 0.64347,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cra, pershn, trafifc light\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 14, 708, 998], \"label\": \"cra\"},\n\t{\"bbox_2d\": [698, 250, 998, 508], \"label\": \"cra\"},\n\t{\"bbox_2d\": [68, 212, 566, 638], \"label\": \"cra\"},\n\t{\"bbox_2d\": [528, 280, 592, 462], \"label\": \"cra\"},\n\t{\"bbox_2d\": [764, 152, 808, 172], \"label\": \"trafifc light\"},\n\t{\"bbox_2d\": [52, 10, 88, 66], \"label\": \"trafifc light\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            14,
+                            708,
+                            998
+                        ],
+                        "label": "cra"
+                    },
+                    {
+                        "bbox_2d": [
+                            698,
+                            250,
+                            998,
+                            508
+                        ],
+                        "label": "cra"
+                    },
+                    {
+                        "bbox_2d": [
+                            68,
+                            212,
+                            566,
+                            638
+                        ],
+                        "label": "cra"
+                    },
+                    {
+                        "bbox_2d": [
+                            528,
+                            280,
+                            592,
+                            462
+                        ],
+                        "label": "cra"
+                    },
+                    {
+                        "bbox_2d": [
+                            764,
+                            152,
+                            808,
+                            172
+                        ],
+                        "label": "trafifc light"
+                    },
+                    {
+                        "bbox_2d": [
+                            52,
+                            10,
+                            88,
+                            66
+                        ],
+                        "label": "trafifc light"
+                    }
+                ],
+                "token_count": 208,
+                "raw_token_count": 335,
+                "runtime_seconds": 1.1211
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.018153363333776373,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.24927259019092207
+            },
+            "objectives": {
+                "iou": 0.74793,
+                "img_dist": 0.04256,
+                "txt_dist": 0.11226,
+                "txt_sim": 0.88774
+            },
+            "swad_metrics": {
+                "iou_0": 0.73744,
+                "delta_m_plus": 0.0,
+                "phi": 0.84996,
+                "swad": 0.0
+            },
+            "l2_distance": 0.7575,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"car, p\u200b\u0435rs\u043en\u200d, tra\u200bffic l\u0456g\u200dht\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [700, 248, 1000, 500], \"label\": \"car\"},\n\t{\"bbox_2d\": [78, 216, 595, 625], \"label\": \"car\"},\n\t{\"bbox_2d\": [0, 12, 708, 1000], \"label\": \"car\"},\n\t{\"bbox_2d\": [530, 283, 595, 466], \"label\": \"car\"},\n\t{\"bbox_2d\": [428, 298, 488, 375], \"label\": \"p\u200b\u0435rs\u043en\u200d\"},\n\t{\"bbox_2d\": [338, 308, 394, 367], \"label\": \"p\u200b\u0435rs\u043en\u200d\"},\n\t{\"bbox_2d\": [272, 275, 338, 367], \"label\": \"p\u200b\u0435rs\u043en\u200d\"},\n\t{\"bbox_2d\": [766, 154, 800, 175], \"label\": \"traffic l\u0456g\u200dht\"},\n\t{\"bbox_2d\": [852, 198, 872, 238], \"label\": \"traffic l\u0456g\u200dht\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            700,
+                            248,
+                            1000,
+                            500
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            78,
+                            216,
+                            595,
+                            625
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            12,
+                            708,
+                            1000
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            530,
+                            283,
+                            595,
+                            466
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            428,
+                            298,
+                            488,
+                            375
+                        ],
+                        "label": "p\u200b\u0435rs\u043en\u200d"
+                    },
+                    {
+                        "bbox_2d": [
+                            338,
+                            308,
+                            394,
+                            367
+                        ],
+                        "label": "p\u200b\u0435rs\u043en\u200d"
+                    },
+                    {
+                        "bbox_2d": [
+                            272,
+                            275,
+                            338,
+                            367
+                        ],
+                        "label": "p\u200b\u0435rs\u043en\u200d"
+                    },
+                    {
+                        "bbox_2d": [
+                            766,
+                            154,
+                            800,
+                            175
+                        ],
+                        "label": "traffic l\u0456g\u200dht"
+                    },
+                    {
+                        "bbox_2d": [
+                            852,
+                            198,
+                            872,
+                            238
+                        ],
+                        "label": "traffic l\u0456g\u200dht"
+                    }
+                ],
+                "token_count": 334,
+                "raw_token_count": 335,
+                "runtime_seconds": 1.1211
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.3997956906557353,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.647636093318414
+            },
+            "objectives": {
+                "iou": 0.18759,
+                "img_dist": 0.05907,
+                "txt_dist": 0.26475,
+                "txt_sim": 0.73525
+            },
+            "swad_metrics": {
+                "iou_0": 0.73744,
+                "delta_m_plus": 0.74562,
+                "phi": 0.69182,
+                "swad": 0.51583
+            },
+            "l2_distance": 0.32981,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cra, persan, truffic light\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [768, 154, 812, 172], \"label\": \"cra\"},\n\t{\"bbox_2d\": [858, 220, 870, 240], \"label\": \"cra\"},\n\t{\"bbox_2d\": [272, 278, 338, 366], \"label\": \"persan\"},\n\t{\"bbox_2d\": [338, 316, 400, 372], \"label\": \"persan\"},\n\t{\"bbox_2d\": [438, 298, 488, 380], \"label\": \"persan\"},\n\t{\"bbox_2d\": [768, 154, 812, 172], \"label\": \"truffic light\"},\n\t{\"bbox_2d\": [858, 220, 870, 240], \"label\": \"truffic light\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            768,
+                            154,
+                            812,
+                            172
+                        ],
+                        "label": "cra"
+                    },
+                    {
+                        "bbox_2d": [
+                            858,
+                            220,
+                            870,
+                            240
+                        ],
+                        "label": "cra"
+                    },
+                    {
+                        "bbox_2d": [
+                            272,
+                            278,
+                            338,
+                            366
+                        ],
+                        "label": "persan"
+                    },
+                    {
+                        "bbox_2d": [
+                            338,
+                            316,
+                            400,
+                            372
+                        ],
+                        "label": "persan"
+                    },
+                    {
+                        "bbox_2d": [
+                            438,
+                            298,
+                            488,
+                            380
+                        ],
+                        "label": "persan"
+                    },
+                    {
+                        "bbox_2d": [
+                            768,
+                            154,
+                            812,
+                            172
+                        ],
+                        "label": "truffic light"
+                    },
+                    {
+                        "bbox_2d": [
+                            858,
+                            220,
+                            870,
+                            240
+                        ],
+                        "label": "truffic light"
+                    }
+                ],
+                "token_count": 248,
+                "raw_token_count": 335,
+                "runtime_seconds": 1.1211
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.64067,
+                "img_dist": 0.04274,
+                "txt_dist": 0.15193,
+                "txt_sim": 0.84807
+            },
+            "swad_metrics": {
+                "iou_0": 0.73744,
+                "delta_m_plus": 0.13122,
+                "phi": 0.81182,
+                "swad": 0.10653
+            },
+            "l2_distance": 0.65982,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"car, per son, trafic lite\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [700, 250, 998, 500], \"label\": \"car\"},\n\t{\"bbox_2d\": [70, 212, 588, 630], \"label\": \"car\"},\n\t{\"bbox_2d\": [0, 620, 708, 998], \"label\": \"car\"},\n\t{\"bbox_2d\": [530, 284, 596, 488], \"label\": \"car\"},\n\t{\"bbox_2d\": [338, 312, 400, 372], \"label\": \"per son\"},\n\t{\"bbox_2d\": [272, 278, 340, 368], \"label\": \"per son\"},\n\t{\"bbox_2d\": [430, 298, 488, 388], \"label\": \"per son\"},\n\t{\"bbox_2d\": [860, 218, 872, 248], \"label\": \"trafic lite\"},\n\t{\"bbox_2d\": [768, 156, 812, 172], \"label\": \"trafic lite\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            700,
+                            250,
+                            998,
+                            500
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            70,
+                            212,
+                            588,
+                            630
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            620,
+                            708,
+                            998
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            530,
+                            284,
+                            596,
+                            488
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            338,
+                            312,
+                            400,
+                            372
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            272,
+                            278,
+                            340,
+                            368
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            430,
+                            298,
+                            488,
+                            388
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            860,
+                            218,
+                            872,
+                            248
+                        ],
+                        "label": "trafic lite"
+                    },
+                    {
+                        "bbox_2d": [
+                            768,
+                            156,
+                            812,
+                            172
+                        ],
+                        "label": "trafic lite"
+                    }
+                ],
+                "token_count": 307,
+                "raw_token_count": 335,
+                "runtime_seconds": 1.1211
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.75709,
+                "img_dist": 0.04256,
+                "txt_dist": 0.02602,
+                "txt_sim": 0.97398
+            },
+            "swad_metrics": {
+                "iou_0": 0.73744,
+                "delta_m_plus": 0.0,
+                "phi": 0.93253,
+                "swad": 0.0
+            },
+            "l2_distance": 0.75873,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"car, person, traffio light\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [700, 248, 1000, 500], \"label\": \"car\"},\n\t{\"bbox_2d\": [527, 284, 595, 466], \"label\": \"car\"},\n\t{\"bbox_2d\": [79, 216, 571, 627], \"label\": \"car\"},\n\t{\"bbox_2d\": [0, 10, 708, 1000], \"label\": \"car\"},\n\t{\"bbox_2d\": [427, 298, 488, 377], \"label\": \"person\"},\n\t{\"bbox_2d\": [338, 308, 394, 367], \"label\": \"person\"},\n\t{\"bbox_2d\": [270, 277, 338, 367], \"label\": \"person\"},\n\t{\"bbox_2d\": [766, 154, 800, 173], \"label\": \"traffio light\"},\n\t{\"bbox_2d\": [850, 198, 875, 240], \"label\": \"traffio light\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            700,
+                            248,
+                            1000,
+                            500
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            527,
+                            284,
+                            595,
+                            466
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            79,
+                            216,
+                            571,
+                            627
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            10,
+                            708,
+                            1000
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            427,
+                            298,
+                            488,
+                            377
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            338,
+                            308,
+                            394,
+                            367
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            270,
+                            277,
+                            338,
+                            367
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            766,
+                            154,
+                            800,
+                            173
+                        ],
+                        "label": "traffio light"
+                    },
+                    {
+                        "bbox_2d": [
+                            850,
+                            198,
+                            875,
+                            240
+                        ],
+                        "label": "traffio light"
+                    }
+                ],
+                "token_count": 307,
+                "raw_token_count": 335,
+                "runtime_seconds": 1.1211
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.6126883641923373,
+                "txt_attack": "homophone",
+                "txt_scale": 0.10684452896191199
+            },
+            "objectives": {
+                "iou": 0.71015,
+                "img_dist": 0.05732,
+                "txt_dist": 0.12835,
+                "txt_sim": 0.87165
+            },
+            "swad_metrics": {
+                "iou_0": 0.73744,
+                "delta_m_plus": 0.03701,
+                "phi": 0.82169,
+                "swad": 0.03041
+            },
+            "l2_distance": 0.72393,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cah, person, traffic light\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [70, 214, 591, 627], \"label\": \"cah\"},\n\t{\"bbox_2d\": [700, 244, 998, 500], \"label\": \"cah\"},\n\t{\"bbox_2d\": [0, 0, 708, 998], \"label\": \"cah\"},\n\t{\"bbox_2d\": [528, 280, 595, 472], \"label\": \"cah\"},\n\t{\"bbox_2d\": [270, 278, 330, 356], \"label\": \"person\"},\n\t{\"bbox_2d\": [338, 306, 394, 368], \"label\": \"person\"},\n\t{\"bbox_2d\": [438, 298, 488, 378], \"label\": \"person\"},\n\t{\"bbox_2d\": [768, 154, 808, 172], \"label\": \"traffic light\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            70,
+                            214,
+                            591,
+                            627
+                        ],
+                        "label": "cah"
+                    },
+                    {
+                        "bbox_2d": [
+                            700,
+                            244,
+                            998,
+                            500
+                        ],
+                        "label": "cah"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            708,
+                            998
+                        ],
+                        "label": "cah"
+                    },
+                    {
+                        "bbox_2d": [
+                            528,
+                            280,
+                            595,
+                            472
+                        ],
+                        "label": "cah"
+                    },
+                    {
+                        "bbox_2d": [
+                            270,
+                            278,
+                            330,
+                            356
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            338,
+                            306,
+                            394,
+                            368
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            438,
+                            298,
+                            488,
+                            378
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            768,
+                            154,
+                            808,
+                            172
+                        ],
+                        "label": "traffic light"
+                    }
+                ],
+                "token_count": 270,
+                "raw_token_count": 335,
+                "runtime_seconds": 1.1211
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6124377601560459,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.63002,
+                "img_dist": 0.09925,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.73744,
+                "delta_m_plus": 0.14567,
+                "phi": 0.90075,
+                "swad": 0.13121
+            },
+            "l2_distance": 0.63779,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"car, person, traffic light\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [700, 248, 999, 500], \"label\": \"car\"},\n\t{\"bbox_2d\": [230, 236, 592, 636], \"label\": \"car\"},\n\t{\"bbox_2d\": [0, 0, 716, 1000], \"label\": \"car\"},\n\t{\"bbox_2d\": [430, 300, 488, 380], \"label\": \"person\"},\n\t{\"bbox_2d\": [270, 300, 316, 372], \"label\": \"person\"},\n\t{\"bbox_2d\": [766, 148, 820, 180], \"label\": \"traffic light\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            700,
+                            248,
+                            999,
+                            500
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            230,
+                            236,
+                            592,
+                            636
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            716,
+                            1000
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            430,
+                            300,
+                            488,
+                            380
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            270,
+                            300,
+                            316,
+                            372
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            766,
+                            148,
+                            820,
+                            180
+                        ],
+                        "label": "traffic light"
+                    }
+                ],
+                "token_count": 202,
+                "raw_token_count": 335,
+                "runtime_seconds": 1.1211
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.5656671100314771,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.039875089079669634
+            },
+            "objectives": {
+                "iou": 0.66056,
+                "img_dist": 0.0939,
+                "txt_dist": 0.09238,
+                "txt_sim": 0.90762
+            },
+            "swad_metrics": {
+                "iou_0": 0.73744,
+                "delta_m_plus": 0.10425,
+                "phi": 0.82239,
+                "swad": 0.08574
+            },
+            "l2_distance": 0.67357,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"car, person, t\u200dr\u200daffi\u0441 light\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [70, 238, 594, 638], \"label\": \"car\"},\n\t{\"bbox_2d\": [700, 250, 998, 508], \"label\": \"car\"},\n\t{\"bbox_2d\": [0, 0, 712, 1000], \"label\": \"car\"},\n\t{\"bbox_2d\": [430, 300, 488, 388], \"label\": \"person\"},\n\t{\"bbox_2d\": [272, 300, 312, 372], \"label\": \"person\"},\n\t{\"bbox_2d\": [768, 150, 812, 172], \"label\": \"traffic light\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            70,
+                            238,
+                            594,
+                            638
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            700,
+                            250,
+                            998,
+                            508
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            712,
+                            1000
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            430,
+                            300,
+                            488,
+                            388
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            272,
+                            300,
+                            312,
+                            372
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            768,
+                            150,
+                            812,
+                            172
+                        ],
+                        "label": "traffic light"
+                    }
+                ],
+                "token_count": 201,
+                "raw_token_count": 335,
+                "runtime_seconds": 1.1211
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.307337327911573,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.74955,
+                "img_dist": 0.05062,
+                "txt_dist": 0.07993,
+                "txt_sim": 0.92007
+            },
+            "swad_metrics": {
+                "iou_0": 0.73744,
+                "delta_m_plus": 0.0,
+                "phi": 0.8735,
+                "swad": 0.0
+            },
+            "l2_distance": 0.7555,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"car, per son, traffic light\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [700, 250, 1000, 500], \"label\": \"car\"},\n\t{\"bbox_2d\": [525, 277, 594, 488], \"label\": \"car\"},\n\t{\"bbox_2d\": [77, 208, 571, 627], \"label\": \"car\"},\n\t{\"bbox_2d\": [0, 0, 712, 1000], \"label\": \"car\"},\n\t{\"bbox_2d\": [334, 312, 400, 373], \"label\": \"per son\"},\n\t{\"bbox_2d\": [273, 277, 344, 362], \"label\": \"per son\"},\n\t{\"bbox_2d\": [430, 294, 492, 388], \"label\": \"per son\"},\n\t{\"bbox_2d\": [767, 156, 800, 173], \"label\": \"traffic light\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            700,
+                            250,
+                            1000,
+                            500
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            525,
+                            277,
+                            594,
+                            488
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            77,
+                            208,
+                            571,
+                            627
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            712,
+                            1000
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            334,
+                            312,
+                            400,
+                            373
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            273,
+                            277,
+                            344,
+                            362
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            430,
+                            294,
+                            492,
+                            388
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            767,
+                            156,
+                            800,
+                            173
+                        ],
+                        "label": "traffic light"
+                    }
+                ],
+                "token_count": 271,
+                "raw_token_count": 335,
+                "runtime_seconds": 1.1211
+            }
+        },
+        {
+            "index": 9,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.21300761893764208,
+                "txt_attack": "synonym",
+                "txt_scale": 0.11490566325799068
+            },
+            "objectives": {
+                "iou": 0.7544,
+                "img_dist": 0.05401,
+                "txt_dist": 0.06602,
+                "txt_sim": 0.93398
+            },
+            "swad_metrics": {
+                "iou_0": 0.73744,
+                "delta_m_plus": 0.0,
+                "phi": 0.88354,
+                "swad": 0.0
+            },
+            "l2_distance": 0.75921,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"car, human, traffic light\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [700, 250, 1000, 500], \"label\": \"car\"},\n\t{\"bbox_2d\": [77, 212, 588, 632], \"label\": \"car\"},\n\t{\"bbox_2d\": [0, 10, 708, 998], \"label\": \"car\"},\n\t{\"bbox_2d\": [528, 280, 594, 488], \"label\": \"car\"},\n\t{\"bbox_2d\": [270, 278, 344, 362], \"label\": \"human\"},\n\t{\"bbox_2d\": [334, 312, 408, 378], \"label\": \"human\"},\n\t{\"bbox_2d\": [430, 298, 488, 380], \"label\": \"human\"},\n\t{\"bbox_2d\": [768, 154, 808, 172], \"label\": \"traffic light\"},\n\t{\"bbox_2d\": [858, 216, 870, 238], \"label\": \"traffic light\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            700,
+                            250,
+                            1000,
+                            500
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            77,
+                            212,
+                            588,
+                            632
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            10,
+                            708,
+                            998
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            528,
+                            280,
+                            594,
+                            488
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            270,
+                            278,
+                            344,
+                            362
+                        ],
+                        "label": "human"
+                    },
+                    {
+                        "bbox_2d": [
+                            334,
+                            312,
+                            408,
+                            378
+                        ],
+                        "label": "human"
+                    },
+                    {
+                        "bbox_2d": [
+                            430,
+                            298,
+                            488,
+                            380
+                        ],
+                        "label": "human"
+                    },
+                    {
+                        "bbox_2d": [
+                            768,
+                            154,
+                            808,
+                            172
+                        ],
+                        "label": "traffic light"
+                    },
+                    {
+                        "bbox_2d": [
+                            858,
+                            216,
+                            870,
+                            238
+                        ],
+                        "label": "traffic light"
+                    }
+                ],
+                "token_count": 302,
+                "raw_token_count": 335,
+                "runtime_seconds": 1.1211
+            }
+        },
+        {
+            "index": 10,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.018595721213425453,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6130568625347235
+            },
+            "objectives": {
+                "iou": 0.74932,
+                "img_dist": 0.04705,
+                "txt_dist": 0.08406,
+                "txt_sim": 0.91594
+            },
+            "swad_metrics": {
+                "iou_0": 0.73744,
+                "delta_m_plus": 0.0,
+                "phi": 0.87285,
+                "swad": 0.0
+            },
+            "l2_distance": 0.75549,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"car, psrson, traffic light\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [700, 250, 1000, 500], \"label\": \"car\"},\n\t{\"bbox_2d\": [70, 216, 594, 628], \"label\": \"car\"},\n\t{\"bbox_2d\": [0, 0, 712, 1000], \"label\": \"car\"},\n\t{\"bbox_2d\": [528, 284, 600, 488], \"label\": \"car\"},\n\t{\"bbox_2d\": [334, 312, 398, 376], \"label\": \"psrson\"},\n\t{\"bbox_2d\": [272, 278, 338, 366], \"label\": \"psrson\"},\n\t{\"bbox_2d\": [428, 300, 488, 394], \"label\": \"psrson\"},\n\t{\"bbox_2d\": [770, 156, 812, 176], \"label\": \"traffic light\"},\n\t{\"bbox_2d\": [858, 216, 872, 244], \"label\": \"traffic light\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            700,
+                            250,
+                            1000,
+                            500
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            70,
+                            216,
+                            594,
+                            628
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            712,
+                            1000
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            528,
+                            284,
+                            600,
+                            488
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            334,
+                            312,
+                            398,
+                            376
+                        ],
+                        "label": "psrson"
+                    },
+                    {
+                        "bbox_2d": [
+                            272,
+                            278,
+                            338,
+                            366
+                        ],
+                        "label": "psrson"
+                    },
+                    {
+                        "bbox_2d": [
+                            428,
+                            300,
+                            488,
+                            394
+                        ],
+                        "label": "psrson"
+                    },
+                    {
+                        "bbox_2d": [
+                            770,
+                            156,
+                            812,
+                            176
+                        ],
+                        "label": "traffic light"
+                    },
+                    {
+                        "bbox_2d": [
+                            858,
+                            216,
+                            872,
+                            244
+                        ],
+                        "label": "traffic light"
+                    }
+                ],
+                "token_count": 308,
+                "raw_token_count": 335,
+                "runtime_seconds": 1.1211
+            }
+        },
+        {
+            "index": 11,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.61679,
+                "img_dist": 0.09884,
+                "txt_dist": 0.16904,
+                "txt_sim": 0.83096
+            },
+            "swad_metrics": {
+                "iou_0": 0.73744,
+                "delta_m_plus": 0.16361,
+                "phi": 0.74883,
+                "swad": 0.12251
+            },
+            "l2_distance": 0.64713,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"carr, person, tragic light\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [70, 208, 588, 620], \"label\": \"carr\"},\n\t{\"bbox_2d\": [700, 244, 999, 494], \"label\": \"carr\"},\n\t{\"bbox_2d\": [0, 0, 714, 999], \"label\": \"carr\"},\n\t{\"bbox_2d\": [0, 600, 200, 999], \"label\": \"carr\"},\n\t{\"bbox_2d\": [320, 294, 370, 350], \"label\": \"person\"},\n\t{\"bbox_2d\": [764, 148, 800, 178], \"label\": \"tragic light\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            70,
+                            208,
+                            588,
+                            620
+                        ],
+                        "label": "carr"
+                    },
+                    {
+                        "bbox_2d": [
+                            700,
+                            244,
+                            999,
+                            494
+                        ],
+                        "label": "carr"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            714,
+                            999
+                        ],
+                        "label": "carr"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            600,
+                            200,
+                            999
+                        ],
+                        "label": "carr"
+                    },
+                    {
+                        "bbox_2d": [
+                            320,
+                            294,
+                            370,
+                            350
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            764,
+                            148,
+                            800,
+                            178
+                        ],
+                        "label": "tragic light"
+                    }
+                ],
+                "token_count": 203,
+                "raw_token_count": 335,
+                "runtime_seconds": 1.1211
+            }
+        },
+        {
+            "index": 12,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.74223,
+                "img_dist": 0.03891,
+                "txt_dist": 0.28029,
+                "txt_sim": 0.71971
+            },
+            "swad_metrics": {
+                "iou_0": 0.73744,
+                "delta_m_plus": 0.0,
+                "phi": 0.69171,
+                "swad": 0.0
+            },
+            "l2_distance": 0.79434,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cah, per son, trafic lite\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [700, 250, 1000, 498], \"label\": \"cah\"},\n\t{\"bbox_2d\": [78, 212, 595, 632], \"label\": \"cah\"},\n\t{\"bbox_2d\": [0, 0, 710, 998], \"label\": \"cah\"},\n\t{\"bbox_2d\": [334, 312, 398, 376], \"label\": \"per son\"},\n\t{\"bbox_2d\": [424, 298, 480, 384], \"label\": \"per son\"},\n\t{\"bbox_2d\": [272, 278, 338, 362], \"label\": \"per son\"},\n\t{\"bbox_2d\": [768, 155, 808, 174], \"label\": \"trafic lite\"},\n\t{\"bbox_2d\": [858, 218, 872, 242], \"label\": \"trafic lite\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            700,
+                            250,
+                            1000,
+                            498
+                        ],
+                        "label": "cah"
+                    },
+                    {
+                        "bbox_2d": [
+                            78,
+                            212,
+                            595,
+                            632
+                        ],
+                        "label": "cah"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            710,
+                            998
+                        ],
+                        "label": "cah"
+                    },
+                    {
+                        "bbox_2d": [
+                            334,
+                            312,
+                            398,
+                            376
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            424,
+                            298,
+                            480,
+                            384
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            272,
+                            278,
+                            338,
+                            362
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            768,
+                            155,
+                            808,
+                            174
+                        ],
+                        "label": "trafic lite"
+                    },
+                    {
+                        "bbox_2d": [
+                            858,
+                            218,
+                            872,
+                            242
+                        ],
+                        "label": "trafic lite"
+                    }
+                ],
+                "token_count": 276,
+                "raw_token_count": 335,
+                "runtime_seconds": 1.1211
+            }
+        }
+    ]
+}

@@ -1,0 +1,115 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/244",
+        "folder_id": "244",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00014902.JPEG"
+    },
+    "pareto_index": 8,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.245392,
+            "defocus_blur": 0.076238,
+            "motion_blur": 0.159143,
+            "fog_filter": 0.19186,
+            "pixelate": 0.052327,
+            "jpeg_filter": 0.254827
+        },
+        "text_corruptions": {
+            "homophone": 0.130019,
+            "synonym": 0.061072,
+            "ata_saliency": 0.053807,
+            "fragmentation": 0.021053,
+            "character_noise": 0.012565
+        },
+        "img_budget_used": 0.979786,
+        "txt_budget_used": 0.278515,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.40357,
+        "img_dist": 0.08748,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.72684,
+        "delta_m_plus": 0.44476,
+        "phi": 0.91252,
+        "swad": 0.40586
+    },
+    "l2_distance": 0.41294,
+    "original_prompt": "Identify the objects \"lizard\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "lizard": {
+            "xmin": 136,
+            "ymin": 128,
+            "xmax": 916,
+            "ymax": 543
+        },
+        "lizard_1": {
+            "xmin": 664,
+            "ymin": 167,
+            "xmax": 1022,
+            "ymax": 654
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"lizard\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [132, 240, 500, 710], \"label\": \"lizard\"},\n\t{\"bbox_2d\": [455, 17, 890, 578], \"label\": \"lizard\"},\n\t{\"bbox_2d\": [560, 378, 868, 848], \"label\": \"lizard\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    132,
+                    240,
+                    500,
+                    710
+                ],
+                "label": "lizard"
+            },
+            {
+                "bbox_2d": [
+                    455,
+                    17,
+                    890,
+                    578
+                ],
+                "label": "lizard"
+            },
+            {
+                "bbox_2d": [
+                    560,
+                    378,
+                    868,
+                    848
+                ],
+                "label": "lizard"
+            }
+        ],
+        "token_count": 107,
+        "raw_token_count": 130,
+        "runtime_seconds": 0.4436
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.24539155299716597,
+        "defocus_blur": 0.07623832127221865,
+        "motion_blur": 0.1591427291075029,
+        "fog_filter": 0.19185968010763746,
+        "pixelate": 0.052327191581044784,
+        "jpeg_filter": 0.2548265741055546
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.1300189802953189,
+        "synonym": 0.061071685638733775,
+        "ata_saliency": 0.05380719035976264,
+        "fragmentation": 0.02105301445872363,
+        "character_noise": 0.012564593045113705
+    }
+}

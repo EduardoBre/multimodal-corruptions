@@ -1,0 +1,76 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/141",
+        "folder_id": "141",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00016587.JPEG"
+    },
+    "pareto_index": 0,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.934834278043325,
+        "txt_attack": "homophone",
+        "txt_scale": 0.3354347158653176
+    },
+    "objectives": {
+        "iou": 0.7333,
+        "img_dist": 0.10214,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.94389,
+        "delta_m_plus": 0.22311,
+        "phi": 0.89786,
+        "swad": 0.20032
+    },
+    "l2_distance": 0.74038,
+    "original_prompt": "Identify the objects \"tiger\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "tiger": {
+            "xmin": 301,
+            "ymin": 262,
+            "xmax": 987,
+            "ymax": 702
+        },
+        "tiger_1": {
+            "xmin": 1,
+            "ymin": 306,
+            "xmax": 834,
+            "ymax": 700
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"tiger\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 440, 858, 1000], \"label\": \"tiger\"},\n\t{\"bbox_2d\": [635, 370, 945, 999], \"label\": \"tiger\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    440,
+                    858,
+                    1000
+                ],
+                "label": "tiger"
+            },
+            {
+                "bbox_2d": [
+                    635,
+                    370,
+                    945,
+                    999
+                ],
+                "label": "tiger"
+            }
+        ],
+        "token_count": 73,
+        "raw_token_count": 95,
+        "runtime_seconds": 0.3413
+    }
+}

@@ -1,0 +1,94 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/137",
+        "folder_id": "137",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00000842.JPEG"
+    },
+    "pareto_index": 4,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.863144940280058,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6678992108124702
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.06528,
+        "txt_dist": 0.20724,
+        "txt_sim": 0.79276
+    },
+    "swad_metrics": {
+        "iou_0": 0.65853,
+        "delta_m_plus": 1.0,
+        "phi": 0.74101,
+        "swad": 0.74101
+    },
+    "l2_distance": 0.21728,
+    "original_prompt": "Identify the objects \"binder, purse\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "purse": {
+            "xmin": 232,
+            "ymin": 109,
+            "xmax": 498,
+            "ymax": 284
+        },
+        "binder": {
+            "xmin": 147,
+            "ymin": 17,
+            "xmax": 426,
+            "ymax": 132
+        },
+        "binder_1": {
+            "xmin": 43,
+            "ymin": 21,
+            "xmax": 233,
+            "ymax": 207
+        },
+        "binder_2": {
+            "xmin": 126,
+            "ymin": 256,
+            "xmax": 486,
+            "ymax": 486
+        },
+        "binder_3": {
+            "xmin": 187,
+            "ymin": 307,
+            "xmax": 498,
+            "ymax": 498
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bind her, purs\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [164, 248, 632, 632], \"label\": \"bind her, purs\"},\n\t{\"bbox_2d\": [464, 216, 990, 572], \"label\": \"bind her, purs\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    164,
+                    248,
+                    632,
+                    632
+                ],
+                "label": "bind her, purs"
+            },
+            {
+                "bbox_2d": [
+                    464,
+                    216,
+                    990,
+                    572
+                ],
+                "label": "bind her, purs"
+            }
+        ],
+        "token_count": 78,
+        "raw_token_count": 142,
+        "runtime_seconds": 0.4429
+    }
+}

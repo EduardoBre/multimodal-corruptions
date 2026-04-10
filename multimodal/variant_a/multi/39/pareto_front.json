@@ -1,0 +1,558 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/39",
+        "folder_id": "39",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00015680.JPEG"
+    },
+    "original_prompt": "Identify the objects \"balance beam, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 94,
+            "ymin": 12,
+            "xmax": 301,
+            "ymax": 504
+        },
+        "balance beam": {
+            "xmin": 1,
+            "ymin": 477,
+            "xmax": 347,
+            "ymax": 539
+        },
+        "balance beam_1": {
+            "xmin": 25,
+            "ymin": 373,
+            "xmax": 348,
+            "ymax": 401
+        },
+        "person_1": {
+            "xmin": 0,
+            "ymin": 291,
+            "xmax": 31,
+            "ymax": 358
+        },
+        "person_2": {
+            "xmin": 28,
+            "ymin": 276,
+            "xmax": 78,
+            "ymax": 371
+        },
+        "person_3": {
+            "xmin": 105,
+            "ymin": 241,
+            "xmax": 159,
+            "ymax": 332
+        }
+    },
+    "baseline_iou": 0.58128,
+    "swad_star": 0.47373,
+    "swad_star_index": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 8,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.018153363333776373,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.24927259019092207
+            },
+            "objectives": {
+                "iou": 0.58185,
+                "img_dist": 0.03145,
+                "txt_dist": 0.19998,
+                "txt_sim": 0.80002
+            },
+            "swad_metrics": {
+                "iou_0": 0.58128,
+                "delta_m_plus": 0.0,
+                "phi": 0.77486,
+                "swad": 0.0
+            },
+            "l2_distance": 0.61606,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bal\u200dance b\u200de\u0430\u200dm\u200b, p\u0435r\u200ds\u043en\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 687, 999, 970], \"label\": \"balance beam\"},\n\t{\"bbox_2d\": [270, 20, 855, 933], \"label\": \"person\"},\n\t{\"bbox_2d\": [0, 530, 100, 745], \"label\": \"person\"},\n\t{\"bbox_2d\": [100, 510, 230, 670], \"label\": \"person\"},\n\t{\"bbox_2d\": [280, 447, 445, 607], \"label\": \"person\"},\n\t{\"bbox_2d\": [710, 607, 820, 687], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            687,
+                            999,
+                            970
+                        ],
+                        "label": "balance beam"
+                    },
+                    {
+                        "bbox_2d": [
+                            270,
+                            20,
+                            855,
+                            933
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            530,
+                            100,
+                            745
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            100,
+                            510,
+                            230,
+                            670
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            280,
+                            447,
+                            445,
+                            607
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            710,
+                            607,
+                            820,
+                            687
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 200,
+                "raw_token_count": 268,
+                "runtime_seconds": 0.9106
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.3997956906557353,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.647636093318414
+            },
+            "objectives": {
+                "iou": 0.11113,
+                "img_dist": 0.05099,
+                "txt_dist": 0.38283,
+                "txt_sim": 0.61717
+            },
+            "swad_metrics": {
+                "iou_0": 0.58128,
+                "delta_m_plus": 0.80882,
+                "phi": 0.5857,
+                "swad": 0.47373
+            },
+            "l2_distance": 0.40188,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"baxance beam, persvn\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 689, 1000, 970], \"label\": \"baxance beam\"},\n\t{\"bbox_2d\": [0, 689, 1000, 970], \"label\": \"persvn\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            689,
+                            1000,
+                            970
+                        ],
+                        "label": "baxance beam"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            689,
+                            1000,
+                            970
+                        ],
+                        "label": "persvn"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 268,
+                "runtime_seconds": 0.9106
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.5439,
+                "img_dist": 0.0373,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.58128,
+                "delta_m_plus": 0.06431,
+                "phi": 0.9627,
+                "swad": 0.06191
+            },
+            "l2_distance": 0.54518,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"balance beam, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 687, 1000, 970], \"label\": \"balance beam\"},\n\t{\"bbox_2d\": [270, 22, 856, 935], \"label\": \"person\"},\n\t{\"bbox_2d\": [0, 530, 80, 740], \"label\": \"person\"},\n\t{\"bbox_2d\": [110, 508, 230, 640], \"label\": \"person\"},\n\t{\"bbox_2d\": [290, 458, 430, 620], \"label\": \"person\"},\n\t{\"bbox_2d\": [710, 500, 820, 687], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            687,
+                            1000,
+                            970
+                        ],
+                        "label": "balance beam"
+                    },
+                    {
+                        "bbox_2d": [
+                            270,
+                            22,
+                            856,
+                            935
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            530,
+                            80,
+                            740
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            110,
+                            508,
+                            230,
+                            640
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            290,
+                            458,
+                            430,
+                            620
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            710,
+                            500,
+                            820,
+                            687
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 200,
+                "raw_token_count": 268,
+                "runtime_seconds": 0.9106
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.59409,
+                "img_dist": 0.03145,
+                "txt_dist": 0.14632,
+                "txt_sim": 0.85368
+            },
+            "swad_metrics": {
+                "iou_0": 0.58128,
+                "delta_m_plus": 0.0,
+                "phi": 0.82683,
+                "swad": 0.0
+            },
+            "l2_distance": 0.61265,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"balance ebam, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 687, 1000, 972], \"label\": \"balance ebam\"},\n\t{\"bbox_2d\": [268, 20, 856, 933], \"label\": \"person\"},\n\t{\"bbox_2d\": [0, 530, 100, 748], \"label\": \"person\"},\n\t{\"bbox_2d\": [100, 510, 230, 672], \"label\": \"person\"},\n\t{\"bbox_2d\": [288, 448, 448, 610], \"label\": \"person\"},\n\t{\"bbox_2d\": [718, 600, 820, 687], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            687,
+                            1000,
+                            972
+                        ],
+                        "label": "balance ebam"
+                    },
+                    {
+                        "bbox_2d": [
+                            268,
+                            20,
+                            856,
+                            933
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            530,
+                            100,
+                            748
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            100,
+                            510,
+                            230,
+                            672
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            288,
+                            448,
+                            448,
+                            610
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            718,
+                            600,
+                            820,
+                            687
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 202,
+                "raw_token_count": 268,
+                "runtime_seconds": 0.9106
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6124377601560459,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.33093,
+                "img_dist": 0.0912,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.58128,
+                "delta_m_plus": 0.43069,
+                "phi": 0.9088,
+                "swad": 0.39141
+            },
+            "l2_distance": 0.34327,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"balance beam, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 875, 999, 999], \"label\": \"balance beam\"},\n\t{\"bbox_2d\": [280, 17, 856, 930], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            875,
+                            999,
+                            999
+                        ],
+                        "label": "balance beam"
+                    },
+                    {
+                        "bbox_2d": [
+                            280,
+                            17,
+                            856,
+                            930
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 70,
+                "raw_token_count": 268,
+                "runtime_seconds": 0.9106
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.5656671100314771,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.039875089079669634
+            },
+            "objectives": {
+                "iou": 0.32977,
+                "img_dist": 0.08635,
+                "txt_dist": 0.04143,
+                "txt_sim": 0.95857
+            },
+            "swad_metrics": {
+                "iou_0": 0.58128,
+                "delta_m_plus": 0.43268,
+                "phi": 0.8758,
+                "swad": 0.37894
+            },
+            "l2_distance": 0.3434,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"b\u0430lance\u200b beam\u200b, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 872, 999, 999], \"label\": \"b\u0430lance\u200b beam\u200b\"},\n\t{\"bbox_2d\": [270, 18, 856, 935], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            872,
+                            999,
+                            999
+                        ],
+                        "label": "b\u0430lance\u200b beam\u200b"
+                    },
+                    {
+                        "bbox_2d": [
+                            270,
+                            18,
+                            856,
+                            935
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 75,
+                "raw_token_count": 268,
+                "runtime_seconds": 0.9106
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.018595721213425453,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6130568625347235
+            },
+            "objectives": {
+                "iou": 0.24981,
+                "img_dist": 0.04627,
+                "txt_dist": 0.24706,
+                "txt_sim": 0.75294
+            },
+            "swad_metrics": {
+                "iou_0": 0.58128,
+                "delta_m_plus": 0.57024,
+                "phi": 0.7181,
+                "swad": 0.40949
+            },
+            "l2_distance": 0.35438,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"baalnce beam, persox\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 687, 1000, 974], \"label\": \"baalnce beam\"},\n\t{\"bbox_2d\": [270, 26, 858, 933], \"label\": \"persox\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            687,
+                            1000,
+                            974
+                        ],
+                        "label": "baalnce beam"
+                    },
+                    {
+                        "bbox_2d": [
+                            270,
+                            26,
+                            858,
+                            933
+                        ],
+                        "label": "persox"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 268,
+                "runtime_seconds": 0.9106
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.27957,
+                "img_dist": 0.09261,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.58128,
+                "delta_m_plus": 0.51904,
+                "phi": 0.90739,
+                "swad": 0.47098
+            },
+            "l2_distance": 0.29451,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"balance beam, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 850, 999, 999], \"label\": \"balance beam\"},\n\t{\"bbox_2d\": [357, 17, 849, 933], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            850,
+                            999,
+                            999
+                        ],
+                        "label": "balance beam"
+                    },
+                    {
+                        "bbox_2d": [
+                            357,
+                            17,
+                            849,
+                            933
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 70,
+                "raw_token_count": 268,
+                "runtime_seconds": 0.9106
+            }
+        }
+    ]
+}

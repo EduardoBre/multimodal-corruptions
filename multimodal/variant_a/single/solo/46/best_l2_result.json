@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/46",
+        "folder_id": "46",
+        "category": "single/solo",
+        "filename": "ILSVRC2013_val_00000447.JPEG"
+    },
+    "pareto_index": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.307337327911573,
+        "txt_attack": "homophone",
+        "txt_scale": 0.4186211600401869
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.04673,
+        "txt_dist": 0.07038,
+        "txt_sim": 0.92962
+    },
+    "swad_metrics": {
+        "iou_0": 0.63441,
+        "delta_m_plus": 1.0,
+        "phi": 0.88618,
+        "swad": 0.88618
+    },
+    "l2_distance": 0.08448,
+    "original_prompt": "Identify the objects \"soap dispenser\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "soap dispenser": {
+            "xmin": 173,
+            "ymin": 247,
+            "xmax": 195,
+            "ymax": 286
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"soap dis penser\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [655, 588, 712, 758], \"label\": \"soap dis penser\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    655,
+                    588,
+                    712,
+                    758
+                ],
+                "label": "soap dis penser"
+            }
+        ],
+        "token_count": 42,
+        "raw_token_count": 53,
+        "runtime_seconds": 0.19
+    }
+}

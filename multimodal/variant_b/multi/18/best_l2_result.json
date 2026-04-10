@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/18",
+        "folder_id": "18",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00005059.JPEG"
+    },
+    "pareto_index": 3,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.001346,
+            "defocus_blur": 0.065878,
+            "motion_blur": 0.087622,
+            "fog_filter": 0.109471,
+            "pixelate": 0.084251,
+            "jpeg_filter": 0.284975
+        },
+        "text_corruptions": {
+            "homophone": 0.012838,
+            "synonym": 0.0026,
+            "ata_saliency": 0.000365,
+            "fragmentation": 0.042769,
+            "character_noise": 0.02007
+        },
+        "img_budget_used": 0.633543,
+        "txt_budget_used": 0.078642,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.11812,
+        "txt_dist": 0.19823,
+        "txt_sim": 0.80177
+    },
+    "swad_metrics": {
+        "iou_0": 0.93615,
+        "delta_m_plus": 1.0,
+        "phi": 0.70706,
+        "swad": 0.70706
+    },
+    "l2_distance": 0.23075,
+    "original_prompt": "Identify the objects \"chair, dog\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 147,
+            "ymin": 69,
+            "xmax": 266,
+            "ymax": 311
+        },
+        "chair": {
+            "xmin": 388,
+            "ymin": 175,
+            "xmax": 488,
+            "ymax": 223
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"chi\u200bar\u200b, d\u200dog\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [312, 178, 534, 838], \"label\": \"chi\u200bar\u200b, d\u200dog\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    312,
+                    178,
+                    534,
+                    838
+                ],
+                "label": "chi\u200bar\u200b, d\u200dog"
+            }
+        ],
+        "token_count": 47,
+        "raw_token_count": 83,
+        "runtime_seconds": 0.3281
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0013460566833748578,
+        "defocus_blur": 0.06587779436020588,
+        "motion_blur": 0.08762245489806965,
+        "fog_filter": 0.10947068417523996,
+        "pixelate": 0.08425089387105393,
+        "jpeg_filter": 0.284975486663179
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.01283814403322885,
+        "synonym": 0.0026001449213481844,
+        "ata_saliency": 0.0003654363202921621,
+        "fragmentation": 0.04276901412303609,
+        "character_noise": 0.020069584777332353
+    }
+}

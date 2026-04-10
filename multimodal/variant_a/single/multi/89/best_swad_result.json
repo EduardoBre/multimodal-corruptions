@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/89",
+        "folder_id": "89",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00015417.JPEG"
+    },
+    "pareto_index": 4,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 7,
+    "total_evaluations": 195,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "gaussian_noise",
+        "img_scale": 0.10245740697411182,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.7852629939978981
+    },
+    "objectives": {
+        "iou": 0.13082,
+        "img_dist": 0.04094,
+        "txt_dist": 0.28245,
+        "txt_sim": 0.71755
+    },
+    "swad_metrics": {
+        "iou_0": 0.87269,
+        "delta_m_plus": 0.8501,
+        "phi": 0.68817,
+        "swad": 0.58501
+    },
+    "l2_distance": 0.31396,
+    "original_prompt": "Identify the objects \"train\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "train": {
+            "xmin": 0,
+            "ymin": 130,
+            "xmax": 288,
+            "ymax": 331
+        },
+        "train_1": {
+            "xmin": 106,
+            "ymin": 58,
+            "xmax": 499,
+            "ymax": 321
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"traip\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 747, 321, 1000], \"label\": \"traip\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    747,
+                    321,
+                    1000
+                ],
+                "label": "traip"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 72,
+        "runtime_seconds": 0.2475
+    }
+}

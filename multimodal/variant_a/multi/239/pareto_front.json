@@ -1,0 +1,440 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/239",
+        "folder_id": "239",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00031852.JPEG"
+    },
+    "original_prompt": "Identify the objects \"lamp, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 70,
+            "ymin": 157,
+            "xmax": 181,
+            "ymax": 481
+        },
+        "lamp": {
+            "xmin": 100,
+            "ymin": 100,
+            "xmax": 138,
+            "ymax": 153
+        }
+    },
+    "baseline_iou": 0.51859,
+    "swad_star": 0.38955,
+    "swad_star_index": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 7,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8181617493544074,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.41721849968957336
+            },
+            "objectives": {
+                "iou": 0.43229,
+                "img_dist": 0.03962,
+                "txt_dist": 0.16674,
+                "txt_sim": 0.83326
+            },
+            "swad_metrics": {
+                "iou_0": 0.51859,
+                "delta_m_plus": 0.16641,
+                "phi": 0.80025,
+                "swad": 0.13317
+            },
+            "l2_distance": 0.46502,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"almp, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [336, 214, 472, 308], \"label\": \"almp\"},\n\t{\"bbox_2d\": [0, 308, 672, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [372, 308, 624, 530], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            336,
+                            214,
+                            472,
+                            308
+                        ],
+                        "label": "almp"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            308,
+                            672,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            372,
+                            308,
+                            624,
+                            530
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 104,
+                "raw_token_count": 120,
+                "runtime_seconds": 0.4164
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.3997956906557353,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.647636093318414
+            },
+            "objectives": {
+                "iou": 0.24938,
+                "img_dist": 0.02675,
+                "txt_dist": 0.22897,
+                "txt_sim": 0.77103
+            },
+            "swad_metrics": {
+                "iou_0": 0.51859,
+                "delta_m_plus": 0.51912,
+                "phi": 0.7504,
+                "swad": 0.38955
+            },
+            "l2_distance": 0.33961,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"ljmp, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 315, 632, 998], \"label\": \"ljmp\"},\n\t{\"bbox_2d\": [0, 315, 632, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [396, 302, 632, 538], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            315,
+                            632,
+                            998
+                        ],
+                        "label": "ljmp"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            315,
+                            632,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            396,
+                            302,
+                            632,
+                            538
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 102,
+                "raw_token_count": 120,
+                "runtime_seconds": 0.4164
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.51609,
+                "img_dist": 0.0201,
+                "txt_dist": 0.09478,
+                "txt_sim": 0.90522
+            },
+            "swad_metrics": {
+                "iou_0": 0.51859,
+                "delta_m_plus": 0.00482,
+                "phi": 0.88703,
+                "swad": 0.00428
+            },
+            "l2_distance": 0.52511,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"lahmp, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [328, 220, 408, 315], \"label\": \"lahmp\"},\n\t{\"bbox_2d\": [0, 308, 632, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [192, 315, 392, 448], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            328,
+                            220,
+                            408,
+                            315
+                        ],
+                        "label": "lahmp"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            308,
+                            632,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            192,
+                            315,
+                            392,
+                            448
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 104,
+                "raw_token_count": 120,
+                "runtime_seconds": 0.4164
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.46087,
+                "img_dist": 0.02449,
+                "txt_dist": 0.16674,
+                "txt_sim": 0.83326
+            },
+            "swad_metrics": {
+                "iou_0": 0.51859,
+                "delta_m_plus": 0.1113,
+                "phi": 0.81285,
+                "swad": 0.09047
+            },
+            "l2_distance": 0.49072,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"almp, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [336, 210, 468, 308], \"label\": \"almp\"},\n\t{\"bbox_2d\": [0, 316, 628, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [340, 308, 628, 540], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            336,
+                            210,
+                            468,
+                            308
+                        ],
+                        "label": "almp"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            316,
+                            628,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            340,
+                            308,
+                            628,
+                            540
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 104,
+                "raw_token_count": 120,
+                "runtime_seconds": 0.4164
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.307337327911573,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.45367,
+                "img_dist": 0.02924,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.51859,
+                "delta_m_plus": 0.12519,
+                "phi": 0.97076,
+                "swad": 0.12153
+            },
+            "l2_distance": 0.45461,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"lamp, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [330, 216, 456, 325], \"label\": \"lamp\"},\n\t{\"bbox_2d\": [0, 317, 630, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [0, 317, 630, 998], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            330,
+                            216,
+                            456,
+                            325
+                        ],
+                        "label": "lamp"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            317,
+                            630,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            317,
+                            630,
+                            998
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 101,
+                "raw_token_count": 120,
+                "runtime_seconds": 0.4164
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.21300761893764208,
+                "txt_attack": "synonym",
+                "txt_scale": 0.11490566325799068
+            },
+            "objectives": {
+                "iou": 0.39815,
+                "img_dist": 0.05289,
+                "txt_dist": 0.07939,
+                "txt_sim": 0.92061
+            },
+            "swad_metrics": {
+                "iou_0": 0.51859,
+                "delta_m_plus": 0.23225,
+                "phi": 0.87192,
+                "swad": 0.2025
+            },
+            "l2_distance": 0.40942,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"light, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [332, 220, 384, 288], \"label\": \"light\"},\n\t{\"bbox_2d\": [0, 312, 624, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [376, 302, 624, 538], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            332,
+                            220,
+                            384,
+                            288
+                        ],
+                        "label": "light"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            312,
+                            624,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            376,
+                            302,
+                            624,
+                            538
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 103,
+                "raw_token_count": 120,
+                "runtime_seconds": 0.4164
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.018595721213425453,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6130568625347235
+            },
+            "objectives": {
+                "iou": 0.50811,
+                "img_dist": 0.02434,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.51859,
+                "delta_m_plus": 0.02021,
+                "phi": 0.97566,
+                "swad": 0.01972
+            },
+            "l2_distance": 0.50869,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"lamp, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [328, 222, 408, 317], \"label\": \"lamp\"},\n\t{\"bbox_2d\": [0, 317, 632, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [192, 317, 632, 540], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            328,
+                            222,
+                            408,
+                            317
+                        ],
+                        "label": "lamp"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            317,
+                            632,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            192,
+                            317,
+                            632,
+                            540
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 103,
+                "raw_token_count": 120,
+                "runtime_seconds": 0.4164
+            }
+        }
+    ]
+}

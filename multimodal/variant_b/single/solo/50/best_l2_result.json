@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/50",
+        "folder_id": "50",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00037021.JPEG"
+    },
+    "pareto_index": 13,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 5,
+    "total_evaluations": 135,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.115456,
+            "defocus_blur": 0.053734,
+            "motion_blur": 0.07691,
+            "fog_filter": 0.002647,
+            "pixelate": 0.141733,
+            "jpeg_filter": 0.026021
+        },
+        "text_corruptions": {
+            "homophone": 0.082569,
+            "synonym": 0.037194,
+            "ata_saliency": 0.051897,
+            "fragmentation": 0.116291,
+            "character_noise": 0.209566
+        },
+        "img_budget_used": 0.416502,
+        "txt_budget_used": 0.497517,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.07477,
+        "txt_dist": 0.11533,
+        "txt_sim": 0.88467
+    },
+    "swad_metrics": {
+        "iou_0": 0.87893,
+        "delta_m_plus": 1.0,
+        "phi": 0.81852,
+        "swad": 0.81852
+    },
+    "l2_distance": 0.13745,
+    "original_prompt": "Identify the objects \"cream\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "cream": {
+            "xmin": 142,
+            "ymin": 186,
+            "xmax": 272,
+            "ymax": 450
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"cr\u200d\u0435m\u200ba\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [384, 357, 720, 893], \"label\": \"cr\u200de\u00adm\u200ba\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    384,
+                    357,
+                    720,
+                    893
+                ],
+                "label": "cr\u200de\u00adm\u200ba"
+            }
+        ],
+        "token_count": 46,
+        "raw_token_count": 47,
+        "runtime_seconds": 0.1546
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.11545629230487865,
+        "defocus_blur": 0.05373420856077967,
+        "motion_blur": 0.07691049247152508,
+        "fog_filter": 0.0026471807045038986,
+        "pixelate": 0.14173283535201728,
+        "jpeg_filter": 0.026021066412384265
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.08256923798203814,
+        "synonym": 0.03719436412184954,
+        "ata_saliency": 0.051897054623222784,
+        "fragmentation": 0.11629090310737511,
+        "character_noise": 0.20956588882880992
+    }
+}

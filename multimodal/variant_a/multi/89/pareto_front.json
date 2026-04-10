@@ -1,0 +1,1505 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/89",
+        "folder_id": "89",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00016217.JPEG"
+    },
+    "original_prompt": "Identify the objects \"car, golfcart\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "car": {
+            "xmin": 20,
+            "ymin": 150,
+            "xmax": 102,
+            "ymax": 241
+        },
+        "golfcart": {
+            "xmin": 204,
+            "ymin": 72,
+            "xmax": 449,
+            "ymax": 334
+        },
+        "golfcart_1": {
+            "xmin": 44,
+            "ymin": 95,
+            "xmax": 264,
+            "ymax": 313
+        }
+    },
+    "baseline_iou": 0.79284,
+    "swad_star": 0.59837,
+    "swad_star_index": 7,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "n_solutions": 29,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.0015679743042289473,
+                "txt_attack": "synonym",
+                "txt_scale": 0.08477742266685301
+            },
+            "objectives": {
+                "iou": 0.7917,
+                "img_dist": 0.02108,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.79284,
+                "delta_m_plus": 0.00144,
+                "phi": 0.97892,
+                "swad": 0.00141
+            },
+            "l2_distance": 0.79198,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"car, golfcart\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [40, 380, 288, 630], \"label\": \"car\"},\n\t{\"bbox_2d\": [408, 198, 894, 888], \"label\": \"golfcart\"},\n\t{\"bbox_2d\": [85, 256, 450, 830], \"label\": \"golfcart\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            40,
+                            380,
+                            288,
+                            630
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            408,
+                            198,
+                            894,
+                            888
+                        ],
+                        "label": "golfcart"
+                    },
+                    {
+                        "bbox_2d": [
+                            85,
+                            256,
+                            450,
+                            830
+                        ],
+                        "label": "golfcart"
+                    }
+                ],
+                "token_count": 107,
+                "raw_token_count": 116,
+                "runtime_seconds": 0.48
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.20923119615362057,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.30222909628300215
+            },
+            "objectives": {
+                "iou": 0.63575,
+                "img_dist": 0.02994,
+                "txt_dist": 0.38449,
+                "txt_sim": 0.61551
+            },
+            "swad_metrics": {
+                "iou_0": 0.79284,
+                "delta_m_plus": 0.19814,
+                "phi": 0.59708,
+                "swad": 0.1183
+            },
+            "l2_distance": 0.74358,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cgr, gllfcart\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [85, 256, 444, 832], \"label\": \"cgr\"},\n\t{\"bbox_2d\": [410, 196, 894, 888], \"label\": \"gllfcart\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            85,
+                            256,
+                            444,
+                            832
+                        ],
+                        "label": "cgr"
+                    },
+                    {
+                        "bbox_2d": [
+                            410,
+                            196,
+                            894,
+                            888
+                        ],
+                        "label": "gllfcart"
+                    }
+                ],
+                "token_count": 75,
+                "raw_token_count": 133,
+                "runtime_seconds": 0.4851
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.9034372814783611,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.6482806000476753
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.18254,
+                "txt_dist": 0.34778,
+                "txt_sim": 0.65222
+            },
+            "swad_metrics": {
+                "iou_0": 0.79284,
+                "delta_m_plus": 1.0,
+                "phi": 0.53316,
+                "swad": 0.53316
+            },
+            "l2_distance": 0.39277,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"\u0441\u200d\u0430\u200br, gol\u200bf\u0441\u200d\u0430\u200br\u200dt\u200b\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [89, 256, 458, 832], \"label\": \"\u0441\u200d\u0430\u200b\u0440, gol\u200bf\u0441\u200d\u0430\u200b\u0440\u200d\u0442\u200b\"},\n\t{\"bbox_2d\": [408, 198, 889, 884], \"label\": \"\u0441\u200d\u0430\u200b\u0440, gol\u200bf\u0441\u200d\u0430\u200b\u0440\u200d\u0442\u200b\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            89,
+                            256,
+                            458,
+                            832
+                        ],
+                        "label": "\u0441\u200d\u0430\u200b\u0440, gol\u200bf\u0441\u200d\u0430\u200b\u0440\u200d\u0442\u200b"
+                    },
+                    {
+                        "bbox_2d": [
+                            408,
+                            198,
+                            889,
+                            884
+                        ],
+                        "label": "\u0441\u200d\u0430\u200b\u0440, gol\u200bf\u0441\u200d\u0430\u200b\u0440\u200d\u0442\u200b"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 118,
+                "runtime_seconds": 0.4298
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.9997603515792876,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.392918992156483
+            },
+            "objectives": {
+                "iou": 0.48313,
+                "img_dist": 0.09934,
+                "txt_dist": 0.14372,
+                "txt_sim": 0.85628
+            },
+            "swad_metrics": {
+                "iou_0": 0.79284,
+                "delta_m_plus": 0.39063,
+                "phi": 0.77122,
+                "swad": 0.30126
+            },
+            "l2_distance": 0.51375,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"car, golfacrt\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [78, 550, 438, 838], \"label\": \"car\"},\n\t{\"bbox_2d\": [408, 180, 896, 892], \"label\": \"golfacrt\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            78,
+                            550,
+                            438,
+                            838
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            408,
+                            180,
+                            896,
+                            892
+                        ],
+                        "label": "golfacrt"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 134,
+                "runtime_seconds": 0.5031
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.9796484008897928,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.9054583419344215
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.08832,
+                "txt_dist": 0.34796,
+                "txt_sim": 0.65204
+            },
+            "swad_metrics": {
+                "iou_0": 0.79284,
+                "delta_m_plus": 1.0,
+                "phi": 0.59445,
+                "swad": 0.59445
+            },
+            "l2_distance": 0.35899,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"\u0441\u200b\u0430\u200dr\u200b, g\u200d\u043e\u200bl\u200df\u0441\u200d\u0430\u200dr\u200bt\u200d\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [405, 188, 905, 888], \"label\": \"\u0441\u200b\u0430\u200d\u0440\u200b, g\u200d\u043e\u200bl\u200df\u0441\u200d\u0430\u200d\u0440\u200b\u0442\u200d\"},\n\t{\"bbox_2d\": [78, 250, 490, 832], \"label\": \"\u0441\u200b\u0430\u200d\u0440\u200b, g\u200d\u043e\u200bl\u200df\u0441\u200d\u0430\u200d\u0440\u200b\u0442\u200d\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            405,
+                            188,
+                            905,
+                            888
+                        ],
+                        "label": "\u0441\u200b\u0430\u200d\u0440\u200b, g\u200d\u043e\u200bl\u200df\u0441\u200d\u0430\u200d\u0440\u200b\u0442\u200d"
+                    },
+                    {
+                        "bbox_2d": [
+                            78,
+                            250,
+                            490,
+                            832
+                        ],
+                        "label": "\u0441\u200b\u0430\u200d\u0440\u200b, g\u200d\u043e\u200bl\u200df\u0441\u200d\u0430\u200d\u0440\u200b\u0442\u200d"
+                    }
+                ],
+                "token_count": 125,
+                "raw_token_count": 141,
+                "runtime_seconds": 0.5545
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.9832368160403682,
+                "txt_attack": "synonym",
+                "txt_scale": 0.030264365441876218
+            },
+            "objectives": {
+                "iou": 0.60738,
+                "img_dist": 0.10219,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.79284,
+                "delta_m_plus": 0.23392,
+                "phi": 0.89781,
+                "swad": 0.21001
+            },
+            "l2_distance": 0.61592,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"car, golfcart\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [392, 180, 892, 880], \"label\": \"golfcart\"},\n\t{\"bbox_2d\": [72, 230, 448, 830], \"label\": \"golfcart\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            392,
+                            180,
+                            892,
+                            880
+                        ],
+                        "label": "golfcart"
+                    },
+                    {
+                        "bbox_2d": [
+                            72,
+                            230,
+                            448,
+                            830
+                        ],
+                        "label": "golfcart"
+                    }
+                ],
+                "token_count": 75,
+                "raw_token_count": 131,
+                "runtime_seconds": 0.4802
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.41258636251296266,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.39642101262888907
+            },
+            "objectives": {
+                "iou": 0.63734,
+                "img_dist": 0.03448,
+                "txt_dist": 0.26969,
+                "txt_sim": 0.73031
+            },
+            "swad_metrics": {
+                "iou_0": 0.79284,
+                "delta_m_plus": 0.19613,
+                "phi": 0.70513,
+                "swad": 0.1383
+            },
+            "l2_distance": 0.69291,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cvr, goefcart\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [85, 264, 450, 832], \"label\": \"cvr\"},\n\t{\"bbox_2d\": [410, 196, 894, 890], \"label\": \"goefcart\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            85,
+                            264,
+                            450,
+                            832
+                        ],
+                        "label": "cvr"
+                    },
+                    {
+                        "bbox_2d": [
+                            410,
+                            196,
+                            894,
+                            890
+                        ],
+                        "label": "goefcart"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 109,
+                "runtime_seconds": 0.3992
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.23375494621231402,
+                "txt_attack": "homophone",
+                "txt_scale": 0.8138822524204681
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.05715,
+                "txt_dist": 0.36536,
+                "txt_sim": 0.63464
+            },
+            "swad_metrics": {
+                "iou_0": 0.79284,
+                "delta_m_plus": 1.0,
+                "phi": 0.59837,
+                "swad": 0.59837
+            },
+            "l2_distance": 0.3698,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"czar, golf card\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "There is no object matching the query in the image.",
+                "parsed_predictions": [],
+                "token_count": 11,
+                "raw_token_count": 128,
+                "runtime_seconds": 0.5302
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.9796484008897928,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.5794145123068924
+            },
+            "objectives": {
+                "iou": 0.574,
+                "img_dist": 0.09293,
+                "txt_dist": 0.25161,
+                "txt_sim": 0.74839
+            },
+            "swad_metrics": {
+                "iou_0": 0.79284,
+                "delta_m_plus": 0.27602,
+                "phi": 0.67884,
+                "swad": 0.18737
+            },
+            "l2_distance": 0.63358,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"c\u200b\u0430r, g\u043e\u200blf\u0441\u0430\u200br\u200bt\u200b\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [78, 240, 438, 838], \"label\": \"golfcart\"},\n\t{\"bbox_2d\": [398, 190, 892, 888], \"label\": \"golfcart\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            78,
+                            240,
+                            438,
+                            838
+                        ],
+                        "label": "golfcart"
+                    },
+                    {
+                        "bbox_2d": [
+                            398,
+                            190,
+                            892,
+                            888
+                        ],
+                        "label": "golfcart"
+                    }
+                ],
+                "token_count": 75,
+                "raw_token_count": 134,
+                "runtime_seconds": 0.5031
+            }
+        },
+        {
+            "index": 9,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.72422,
+                "img_dist": 0.03902,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.79284,
+                "delta_m_plus": 0.08655,
+                "phi": 0.96098,
+                "swad": 0.08317
+            },
+            "l2_distance": 0.72527,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"car, golfcart\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [41, 372, 405, 624], \"label\": \"car\"},\n\t{\"bbox_2d\": [412, 196, 894, 888], \"label\": \"golfcart\"},\n\t{\"bbox_2d\": [85, 252, 450, 836], \"label\": \"golfcart\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            41,
+                            372,
+                            405,
+                            624
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            412,
+                            196,
+                            894,
+                            888
+                        ],
+                        "label": "golfcart"
+                    },
+                    {
+                        "bbox_2d": [
+                            85,
+                            252,
+                            450,
+                            836
+                        ],
+                        "label": "golfcart"
+                    }
+                ],
+                "token_count": 107,
+                "raw_token_count": 121,
+                "runtime_seconds": 0.4464
+            }
+        },
+        {
+            "index": 10,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.9589415177895185,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.9177707157228634
+            },
+            "objectives": {
+                "iou": 0.56525,
+                "img_dist": 0.08998,
+                "txt_dist": 0.26464,
+                "txt_sim": 0.73536
+            },
+            "swad_metrics": {
+                "iou_0": 0.79284,
+                "delta_m_plus": 0.28706,
+                "phi": 0.66919,
+                "swad": 0.1921
+            },
+            "l2_distance": 0.63059,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"c\u200b\u0430\u200br\u200d, g\u200d\u043e\u200dl\u200df\u200b\u0441\u200b\u0430\u200dr\u200dt\u200d\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [398, 184, 892, 884], \"label\": \"golf cart\"},\n\t{\"bbox_2d\": [78, 240, 432, 832], \"label\": \"golf cart\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            398,
+                            184,
+                            892,
+                            884
+                        ],
+                        "label": "golf cart"
+                    },
+                    {
+                        "bbox_2d": [
+                            78,
+                            240,
+                            432,
+                            832
+                        ],
+                        "label": "golf cart"
+                    }
+                ],
+                "token_count": 75,
+                "raw_token_count": 131,
+                "runtime_seconds": 0.4802
+            }
+        },
+        {
+            "index": 11,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.8236754180461118,
+                "txt_attack": "homophone",
+                "txt_scale": 0.33647038540361596
+            },
+            "objectives": {
+                "iou": 0.62416,
+                "img_dist": 0.07333,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.79284,
+                "delta_m_plus": 0.21275,
+                "phi": 0.92667,
+                "swad": 0.19715
+            },
+            "l2_distance": 0.62845,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"car, golfcart\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [80, 250, 440, 830], \"label\": \"golfcart\"},\n\t{\"bbox_2d\": [400, 188, 890, 888], \"label\": \"golfcart\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            80,
+                            250,
+                            440,
+                            830
+                        ],
+                        "label": "golfcart"
+                    },
+                    {
+                        "bbox_2d": [
+                            400,
+                            188,
+                            890,
+                            888
+                        ],
+                        "label": "golfcart"
+                    }
+                ],
+                "token_count": 75,
+                "raw_token_count": 116,
+                "runtime_seconds": 0.4152
+            }
+        },
+        {
+            "index": 12,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.01479019220480604,
+                "txt_attack": "homophone",
+                "txt_scale": 0.34234124229229934
+            },
+            "objectives": {
+                "iou": 0.64263,
+                "img_dist": 0.02192,
+                "txt_dist": 0.15484,
+                "txt_sim": 0.84516
+            },
+            "swad_metrics": {
+                "iou_0": 0.79284,
+                "delta_m_plus": 0.18946,
+                "phi": 0.82663,
+                "swad": 0.15661
+            },
+            "l2_distance": 0.66138,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"kar, golfcart\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [83, 256, 458, 832], \"label\": \"kar\"},\n\t{\"bbox_2d\": [412, 196, 894, 888], \"label\": \"golfcart\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            83,
+                            256,
+                            458,
+                            832
+                        ],
+                        "label": "kar"
+                    },
+                    {
+                        "bbox_2d": [
+                            412,
+                            196,
+                            894,
+                            888
+                        ],
+                        "label": "golfcart"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 133,
+                "runtime_seconds": 0.4851
+            }
+        },
+        {
+            "index": 13,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.9034372814783611,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.6321040119354138
+            },
+            "objectives": {
+                "iou": 0.56855,
+                "img_dist": 0.09785,
+                "txt_dist": 0.23136,
+                "txt_sim": 0.76864
+            },
+            "swad_metrics": {
+                "iou_0": 0.79284,
+                "delta_m_plus": 0.28289,
+                "phi": 0.69343,
+                "swad": 0.19617
+            },
+            "l2_distance": 0.62157,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"c\u0430r\u200b, g\u043elf\u200b\u0441\u200d\u0430\u200dr\u200dt\u200d\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [392, 180, 892, 880], \"label\": \"golf cart\"},\n\t{\"bbox_2d\": [78, 240, 448, 830], \"label\": \"golf cart\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            392,
+                            180,
+                            892,
+                            880
+                        ],
+                        "label": "golf cart"
+                    },
+                    {
+                        "bbox_2d": [
+                            78,
+                            240,
+                            448,
+                            830
+                        ],
+                        "label": "golf cart"
+                    }
+                ],
+                "token_count": 75,
+                "raw_token_count": 170,
+                "runtime_seconds": 0.6268
+            }
+        },
+        {
+            "index": 14,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.008310722822170602,
+                "txt_attack": "homophone",
+                "txt_scale": 0.8181588552667899
+            },
+            "objectives": {
+                "iou": 0.72517,
+                "img_dist": 0.03564,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.79284,
+                "delta_m_plus": 0.08535,
+                "phi": 0.96436,
+                "swad": 0.08231
+            },
+            "l2_distance": 0.72605,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"car, golfcart\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [40, 372, 408, 638], \"label\": \"car\"},\n\t{\"bbox_2d\": [408, 194, 890, 888], \"label\": \"golfcart\"},\n\t{\"bbox_2d\": [84, 248, 450, 830], \"label\": \"golfcart\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            40,
+                            372,
+                            408,
+                            638
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            408,
+                            194,
+                            890,
+                            888
+                        ],
+                        "label": "golfcart"
+                    },
+                    {
+                        "bbox_2d": [
+                            84,
+                            248,
+                            450,
+                            830
+                        ],
+                        "label": "golfcart"
+                    }
+                ],
+                "token_count": 107,
+                "raw_token_count": 133,
+                "runtime_seconds": 0.4851
+            }
+        },
+        {
+            "index": 15,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.9589548457842539,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6500158254073455
+            },
+            "objectives": {
+                "iou": 0.60566,
+                "img_dist": 0.08998,
+                "txt_dist": 0.19786,
+                "txt_sim": 0.80214
+            },
+            "swad_metrics": {
+                "iou_0": 0.79284,
+                "delta_m_plus": 0.23609,
+                "phi": 0.72996,
+                "swad": 0.17234
+            },
+            "l2_distance": 0.64348,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chr, golfcart\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [400, 180, 890, 880], \"label\": \"chr\"},\n\t{\"bbox_2d\": [75, 240, 430, 830], \"label\": \"golfcart\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            400,
+                            180,
+                            890,
+                            880
+                        ],
+                        "label": "chr"
+                    },
+                    {
+                        "bbox_2d": [
+                            75,
+                            240,
+                            430,
+                            830
+                        ],
+                        "label": "golfcart"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 122,
+                "runtime_seconds": 0.4615
+            }
+        },
+        {
+            "index": 16,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.5622117297154323,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.11689705833907177
+            },
+            "objectives": {
+                "iou": 0.63488,
+                "img_dist": 0.04876,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.79284,
+                "delta_m_plus": 0.19923,
+                "phi": 0.95124,
+                "swad": 0.18952
+            },
+            "l2_distance": 0.63675,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"car, golfcart\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [80, 247, 448, 833], \"label\": \"golfcart\"},\n\t{\"bbox_2d\": [408, 197, 892, 888], \"label\": \"golfcart\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            80,
+                            247,
+                            448,
+                            833
+                        ],
+                        "label": "golfcart"
+                    },
+                    {
+                        "bbox_2d": [
+                            408,
+                            197,
+                            892,
+                            888
+                        ],
+                        "label": "golfcart"
+                    }
+                ],
+                "token_count": 75,
+                "raw_token_count": 122,
+                "runtime_seconds": 0.4615
+            }
+        },
+        {
+            "index": 17,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6150582977836168,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.61819,
+                "img_dist": 0.07892,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.79284,
+                "delta_m_plus": 0.22028,
+                "phi": 0.92108,
+                "swad": 0.2029
+            },
+            "l2_distance": 0.62321,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"car, golfcart\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [412, 180, 892, 880], \"label\": \"golfcart\"},\n\t{\"bbox_2d\": [78, 240, 450, 820], \"label\": \"golfcart\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            412,
+                            180,
+                            892,
+                            880
+                        ],
+                        "label": "golfcart"
+                    },
+                    {
+                        "bbox_2d": [
+                            78,
+                            240,
+                            450,
+                            820
+                        ],
+                        "label": "golfcart"
+                    }
+                ],
+                "token_count": 75,
+                "raw_token_count": 116,
+                "runtime_seconds": 0.4152
+            }
+        },
+        {
+            "index": 18,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.5534103668413053,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.0548877376796843
+            },
+            "objectives": {
+                "iou": 0.64007,
+                "img_dist": 0.0471,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.79284,
+                "delta_m_plus": 0.19269,
+                "phi": 0.9529,
+                "swad": 0.18361
+            },
+            "l2_distance": 0.6418,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"car, golfcart\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [80, 250, 450, 832], \"label\": \"car\"},\n\t{\"bbox_2d\": [408, 192, 892, 892], \"label\": \"golfcart\"},\n\t{\"bbox_2d\": [80, 250, 450, 832], \"label\": \"golfcart\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            80,
+                            250,
+                            450,
+                            832
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            408,
+                            192,
+                            892,
+                            892
+                        ],
+                        "label": "golfcart"
+                    },
+                    {
+                        "bbox_2d": [
+                            80,
+                            250,
+                            450,
+                            832
+                        ],
+                        "label": "golfcart"
+                    }
+                ],
+                "token_count": 107,
+                "raw_token_count": 140,
+                "runtime_seconds": 0.527
+            }
+        },
+        {
+            "index": 19,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.03719800897544734,
+                "txt_attack": "homophone",
+                "txt_scale": 0.595880584330398
+            },
+            "objectives": {
+                "iou": 0.63571,
+                "img_dist": 0.03564,
+                "txt_dist": 0.15484,
+                "txt_sim": 0.84516
+            },
+            "swad_metrics": {
+                "iou_0": 0.79284,
+                "delta_m_plus": 0.19819,
+                "phi": 0.81504,
+                "swad": 0.16153
+            },
+            "l2_distance": 0.65527,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"kar, golfcart\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [83, 248, 450, 836], \"label\": \"kar\"},\n\t{\"bbox_2d\": [408, 198, 890, 888], \"label\": \"golfcart\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            83,
+                            248,
+                            450,
+                            836
+                        ],
+                        "label": "kar"
+                    },
+                    {
+                        "bbox_2d": [
+                            408,
+                            198,
+                            890,
+                            888
+                        ],
+                        "label": "golfcart"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 158,
+                "runtime_seconds": 0.6306
+            }
+        },
+        {
+            "index": 20,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.01479019220480604,
+                "txt_attack": "homophone",
+                "txt_scale": 0.00928866007956615
+            },
+            "objectives": {
+                "iou": 0.73784,
+                "img_dist": 0.02192,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.79284,
+                "delta_m_plus": 0.06937,
+                "phi": 0.97808,
+                "swad": 0.06785
+            },
+            "l2_distance": 0.73817,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"car, golfcart\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [41, 378, 398, 638], \"label\": \"car\"},\n\t{\"bbox_2d\": [412, 196, 894, 888], \"label\": \"golfcart\"},\n\t{\"bbox_2d\": [84, 256, 458, 832], \"label\": \"golfcart\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            41,
+                            378,
+                            398,
+                            638
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            412,
+                            196,
+                            894,
+                            888
+                        ],
+                        "label": "golfcart"
+                    },
+                    {
+                        "bbox_2d": [
+                            84,
+                            256,
+                            458,
+                            832
+                        ],
+                        "label": "golfcart"
+                    }
+                ],
+                "token_count": 107,
+                "raw_token_count": 122,
+                "runtime_seconds": 0.4615
+            }
+        },
+        {
+            "index": 21,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.9832368160403682,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.030264365441876218
+            },
+            "objectives": {
+                "iou": 0.60738,
+                "img_dist": 0.10219,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.79284,
+                "delta_m_plus": 0.23392,
+                "phi": 0.89781,
+                "swad": 0.21001
+            },
+            "l2_distance": 0.61592,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"car, golfcart\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [392, 180, 892, 880], \"label\": \"golfcart\"},\n\t{\"bbox_2d\": [72, 230, 448, 830], \"label\": \"golfcart\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            392,
+                            180,
+                            892,
+                            880
+                        ],
+                        "label": "golfcart"
+                    },
+                    {
+                        "bbox_2d": [
+                            72,
+                            230,
+                            448,
+                            830
+                        ],
+                        "label": "golfcart"
+                    }
+                ],
+                "token_count": 75,
+                "raw_token_count": 149,
+                "runtime_seconds": 0.5922
+            }
+        },
+        {
+            "index": 22,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.8346298044320138,
+                "txt_attack": "homophone",
+                "txt_scale": 0.34274213308975393
+            },
+            "objectives": {
+                "iou": 0.61298,
+                "img_dist": 0.07145,
+                "txt_dist": 0.16273,
+                "txt_sim": 0.83727
+            },
+            "swad_metrics": {
+                "iou_0": 0.79284,
+                "delta_m_plus": 0.22686,
+                "phi": 0.77745,
+                "swad": 0.17637
+            },
+            "l2_distance": 0.63822,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"kar, golf cart\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [380, 187, 892, 887], \"label\": \"golf cart\"},\n\t{\"bbox_2d\": [80, 250, 440, 837], \"label\": \"golf cart\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            380,
+                            187,
+                            892,
+                            887
+                        ],
+                        "label": "golf cart"
+                    },
+                    {
+                        "bbox_2d": [
+                            80,
+                            250,
+                            440,
+                            837
+                        ],
+                        "label": "golf cart"
+                    }
+                ],
+                "token_count": 75,
+                "raw_token_count": 127,
+                "runtime_seconds": 0.4613
+            }
+        },
+        {
+            "index": 23,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.002523075408110493,
+                "txt_attack": "synonym",
+                "txt_scale": 0.4469588182784614
+            },
+            "objectives": {
+                "iou": 0.6442,
+                "img_dist": 0.02107,
+                "txt_dist": 0.0266,
+                "txt_sim": 0.9734
+            },
+            "swad_metrics": {
+                "iou_0": 0.79284,
+                "delta_m_plus": 0.18748,
+                "phi": 0.95289,
+                "swad": 0.17865
+            },
+            "l2_distance": 0.64509,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"vehicle, golfcart\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [412, 194, 894, 888], \"label\": \"vehicle\"},\n\t{\"bbox_2d\": [85, 256, 458, 832], \"label\": \"golfcart\"},\n\t{\"bbox_2d\": [412, 194, 894, 888], \"label\": \"golfcart\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            412,
+                            194,
+                            894,
+                            888
+                        ],
+                        "label": "vehicle"
+                    },
+                    {
+                        "bbox_2d": [
+                            85,
+                            256,
+                            458,
+                            832
+                        ],
+                        "label": "golfcart"
+                    },
+                    {
+                        "bbox_2d": [
+                            412,
+                            194,
+                            894,
+                            888
+                        ],
+                        "label": "golfcart"
+                    }
+                ],
+                "token_count": 108,
+                "raw_token_count": 127,
+                "runtime_seconds": 0.4613
+            }
+        },
+        {
+            "index": 24,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.9571436500035073,
+                "txt_attack": "homophone",
+                "txt_scale": 0.5794145123068924
+            },
+            "objectives": {
+                "iou": 0.61235,
+                "img_dist": 0.08998,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.79284,
+                "delta_m_plus": 0.22765,
+                "phi": 0.91002,
+                "swad": 0.20717
+            },
+            "l2_distance": 0.61893,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"car, golfcart\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [400, 180, 892, 880], \"label\": \"golfcart\"},\n\t{\"bbox_2d\": [78, 240, 438, 830], \"label\": \"golfcart\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            400,
+                            180,
+                            892,
+                            880
+                        ],
+                        "label": "golfcart"
+                    },
+                    {
+                        "bbox_2d": [
+                            78,
+                            240,
+                            438,
+                            830
+                        ],
+                        "label": "golfcart"
+                    }
+                ],
+                "token_count": 75,
+                "raw_token_count": 127,
+                "runtime_seconds": 0.4613
+            }
+        },
+        {
+            "index": 25,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.9572743961175356,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.392918992156483
+            },
+            "objectives": {
+                "iou": 0.61235,
+                "img_dist": 0.08998,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.79284,
+                "delta_m_plus": 0.22765,
+                "phi": 0.91002,
+                "swad": 0.20717
+            },
+            "l2_distance": 0.61893,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"car, golfcart\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [400, 180, 892, 880], \"label\": \"golfcart\"},\n\t{\"bbox_2d\": [78, 240, 438, 830], \"label\": \"golfcart\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            400,
+                            180,
+                            892,
+                            880
+                        ],
+                        "label": "golfcart"
+                    },
+                    {
+                        "bbox_2d": [
+                            78,
+                            240,
+                            438,
+                            830
+                        ],
+                        "label": "golfcart"
+                    }
+                ],
+                "token_count": 75,
+                "raw_token_count": 127,
+                "runtime_seconds": 0.4613
+            }
+        },
+        {
+            "index": 26,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.5622117297154323,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.11921814109986173
+            },
+            "objectives": {
+                "iou": 0.63488,
+                "img_dist": 0.04876,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.79284,
+                "delta_m_plus": 0.19923,
+                "phi": 0.95124,
+                "swad": 0.18952
+            },
+            "l2_distance": 0.63675,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"car, golfcart\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [80, 247, 448, 833], \"label\": \"golfcart\"},\n\t{\"bbox_2d\": [408, 197, 892, 888], \"label\": \"golfcart\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            80,
+                            247,
+                            448,
+                            833
+                        ],
+                        "label": "golfcart"
+                    },
+                    {
+                        "bbox_2d": [
+                            408,
+                            197,
+                            892,
+                            888
+                        ],
+                        "label": "golfcart"
+                    }
+                ],
+                "token_count": 75,
+                "raw_token_count": 138,
+                "runtime_seconds": 0.4677
+            }
+        },
+        {
+            "index": 27,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.022941672755428202,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.09780946956692088
+            },
+            "objectives": {
+                "iou": 0.73803,
+                "img_dist": 0.02185,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.79284,
+                "delta_m_plus": 0.06913,
+                "phi": 0.97815,
+                "swad": 0.06762
+            },
+            "l2_distance": 0.73835,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"car, golfcart\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [40, 372, 398, 638], \"label\": \"car\"},\n\t{\"bbox_2d\": [408, 198, 894, 888], \"label\": \"golfcart\"},\n\t{\"bbox_2d\": [84, 256, 458, 836], \"label\": \"golfcart\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            40,
+                            372,
+                            398,
+                            638
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            408,
+                            198,
+                            894,
+                            888
+                        ],
+                        "label": "golfcart"
+                    },
+                    {
+                        "bbox_2d": [
+                            84,
+                            256,
+                            458,
+                            836
+                        ],
+                        "label": "golfcart"
+                    }
+                ],
+                "token_count": 107,
+                "raw_token_count": 138,
+                "runtime_seconds": 0.4677
+            }
+        },
+        {
+            "index": 28,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.9585657873721637,
+                "txt_attack": "synonym",
+                "txt_scale": 0.7921977487728997
+            },
+            "objectives": {
+                "iou": 0.61117,
+                "img_dist": 0.08998,
+                "txt_dist": 0.07867,
+                "txt_sim": 0.92133
+            },
+            "swad_metrics": {
+                "iou_0": 0.79284,
+                "delta_m_plus": 0.22914,
+                "phi": 0.83843,
+                "swad": 0.19212
+            },
+            "l2_distance": 0.62275,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"auto, golf buggy\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [392, 184, 892, 884], \"label\": \"auto\"},\n\t{\"bbox_2d\": [78, 240, 436, 834], \"label\": \"golf buggy\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            392,
+                            184,
+                            892,
+                            884
+                        ],
+                        "label": "auto"
+                    },
+                    {
+                        "bbox_2d": [
+                            78,
+                            240,
+                            436,
+                            834
+                        ],
+                        "label": "golf buggy"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 138,
+                "runtime_seconds": 0.4677
+            }
+        }
+    ]
+}

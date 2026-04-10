@@ -1,0 +1,70 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/64",
+        "folder_id": "64",
+        "category": "single/solo",
+        "filename": "ILSVRC2013_val_00003066.JPEG"
+    },
+    "pareto_index": 5,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "gaussian_noise",
+        "img_scale": 9.116543907236943e-06,
+        "txt_attack": "homophone",
+        "txt_scale": 0.37754761015826066
+    },
+    "objectives": {
+        "iou": 0.02735,
+        "img_dist": 0.02985,
+        "txt_dist": 0.38506,
+        "txt_sim": 0.61494
+    },
+    "swad_metrics": {
+        "iou_0": 0.9508,
+        "delta_m_plus": 0.97123,
+        "phi": 0.59658,
+        "swad": 0.57942
+    },
+    "l2_distance": 0.38718,
+    "original_prompt": "Identify the objects \"car\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "car": {
+            "xmin": 154,
+            "ymin": 179,
+            "xmax": 356,
+            "ymax": 281
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"cah\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [488, 700, 538, 777], \"label\": \"cah\"},\n\t{\"bbox_2d\": [587, 688, 635, 745], \"label\": \"cah\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    488,
+                    700,
+                    538,
+                    777
+                ],
+                "label": "cah"
+            },
+            {
+                "bbox_2d": [
+                    587,
+                    688,
+                    635,
+                    745
+                ],
+                "label": "cah"
+            }
+        ],
+        "token_count": 74,
+        "raw_token_count": 75,
+        "runtime_seconds": 0.251
+    }
+}

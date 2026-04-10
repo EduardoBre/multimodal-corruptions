@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/206",
+        "folder_id": "206",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00004777.JPEG"
+    },
+    "pareto_index": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "motion_blur",
+        "img_scale": 0.9577224682398405,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.9095706119630201
+    },
+    "objectives": {
+        "iou": 0.85963,
+        "img_dist": 0.07873,
+        "txt_dist": 0.08887,
+        "txt_sim": 0.91113
+    },
+    "swad_metrics": {
+        "iou_0": 0.91489,
+        "delta_m_plus": 0.0604,
+        "phi": 0.8394,
+        "swad": 0.0507
+    },
+    "l2_distance": 0.86779,
+    "original_prompt": "Identify the objects \"dog\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 67,
+            "ymin": 13,
+            "xmax": 190,
+            "ymax": 244
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"dog\u200d\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [135, 48, 395, 780], \"label\": \"dog\u200d\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    135,
+                    48,
+                    395,
+                    780
+                ],
+                "label": "dog\u200d"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 41,
+        "runtime_seconds": 0.1654
+    }
+}

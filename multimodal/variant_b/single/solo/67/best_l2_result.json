@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/67",
+        "folder_id": "67",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00018722.JPEG"
+    },
+    "pareto_index": 14,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 8,
+    "total_evaluations": 240,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.217744,
+            "defocus_blur": 0.067716,
+            "motion_blur": 0.079224,
+            "fog_filter": 0.010194,
+            "pixelate": 0.005934,
+            "jpeg_filter": 0.249976
+        },
+        "text_corruptions": {
+            "homophone": 0.09015,
+            "synonym": 0.0105,
+            "ata_saliency": 0.082068,
+            "fragmentation": 0.01213,
+            "character_noise": 0.024267
+        },
+        "img_budget_used": 0.630789,
+        "txt_budget_used": 0.219114,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.18135,
+        "img_dist": 0.08919,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.86848,
+        "delta_m_plus": 0.79119,
+        "phi": 0.91081,
+        "swad": 0.72062
+    },
+    "l2_distance": 0.2021,
+    "original_prompt": "Identify the objects \"dog\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 169,
+            "ymin": 86,
+            "xmax": 376,
+            "ymax": 233
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"dog\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [180, 430, 572, 760], \"label\": \"dog\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    180,
+                    430,
+                    572,
+                    760
+                ],
+                "label": "dog"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 44,
+        "runtime_seconds": 0.145
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.21774422933645948,
+        "defocus_blur": 0.06771643689618244,
+        "motion_blur": 0.07922443173846239,
+        "fog_filter": 0.010193724476570326,
+        "pixelate": 0.005934273209955383,
+        "jpeg_filter": 0.24997592156351434
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.09014988140192817,
+        "synonym": 0.010499744105702152,
+        "ata_saliency": 0.08206757693630706,
+        "fragmentation": 0.012129805751591297,
+        "character_noise": 0.024267374938113123
+    }
+}

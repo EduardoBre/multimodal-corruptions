@@ -1,0 +1,76 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/116",
+        "folder_id": "116",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00009638.JPEG"
+    },
+    "pareto_index": 8,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 60,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.8632061743184387,
+        "txt_attack": "synonym",
+        "txt_scale": 0.7724979474714236
+    },
+    "objectives": {
+        "iou": 0.01298,
+        "img_dist": 0.06116,
+        "txt_dist": 0.20941,
+        "txt_sim": 0.79059
+    },
+    "swad_metrics": {
+        "iou_0": 0.98239,
+        "delta_m_plus": 0.98679,
+        "phi": 0.74224,
+        "swad": 0.73243
+    },
+    "l2_distance": 0.21854,
+    "original_prompt": "Identify the objects \"elephant\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "elephant": {
+            "xmin": 198,
+            "ymin": 72,
+            "xmax": 499,
+            "ymax": 332
+        },
+        "elephant_1": {
+            "xmin": 0,
+            "ymin": 39,
+            "xmax": 263,
+            "ymax": 332
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"tusker\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [358, 300, 448, 372], \"label\": \"tusker\"},\n\t{\"bbox_2d\": [458, 412, 532, 488], \"label\": \"tusker\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    358,
+                    300,
+                    448,
+                    372
+                ],
+                "label": "tusker"
+            },
+            {
+                "bbox_2d": [
+                    458,
+                    412,
+                    532,
+                    488
+                ],
+                "label": "tusker"
+            }
+        ],
+        "token_count": 76,
+        "raw_token_count": 77,
+        "runtime_seconds": 0.2457
+    }
+}

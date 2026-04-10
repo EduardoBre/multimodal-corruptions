@@ -1,0 +1,1724 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/185",
+        "folder_id": "185",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00000909.JPEG"
+    },
+    "original_prompt": "Identify the objects \"dog, person, plastic bag\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 19,
+            "ymin": 0,
+            "xmax": 299,
+            "ymax": 355
+        },
+        "dog": {
+            "xmin": 186,
+            "ymin": 114,
+            "xmax": 368,
+            "ymax": 374
+        },
+        "plastic bag": {
+            "xmin": 127,
+            "ymin": 190,
+            "xmax": 222,
+            "ymax": 337
+        }
+    },
+    "baseline_iou": 0.88735,
+    "swad_star": 0.71473,
+    "swad_star_index": 4,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 9,
+    "total_evaluations": 255,
+    "skipped_evaluations": 45,
+    "n_solutions": 30,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.015144316335986036,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.47782711614732853
+            },
+            "objectives": {
+                "iou": 0.85754,
+                "img_dist": 0.03055,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.88735,
+                "delta_m_plus": 0.03359,
+                "phi": 0.96945,
+                "swad": 0.03257
+            },
+            "l2_distance": 0.85808,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, person, plastic bag\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [370, 312, 738, 1000], \"label\": \"dog\"},\n\t{\"bbox_2d\": [15, 0, 738, 950], \"label\": \"person\"},\n\t{\"bbox_2d\": [258, 500, 472, 892], \"label\": \"plastic bag\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            370,
+                            312,
+                            738,
+                            1000
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            15,
+                            0,
+                            738,
+                            950
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            258,
+                            500,
+                            472,
+                            892
+                        ],
+                        "label": "plastic bag"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 135,
+                "runtime_seconds": 0.4695
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.0007131511486678788,
+                "txt_attack": "homophone",
+                "txt_scale": 0.3623590234260977
+            },
+            "objectives": {
+                "iou": 0.88512,
+                "img_dist": 0.01706,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.88735,
+                "delta_m_plus": 0.00251,
+                "phi": 0.98294,
+                "swad": 0.00247
+            },
+            "l2_distance": 0.88528,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, person, plastic bag\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [367, 312, 736, 1000], \"label\": \"dog\"},\n\t{\"bbox_2d\": [0, 0, 736, 952], \"label\": \"person\"},\n\t{\"bbox_2d\": [258, 500, 450, 896], \"label\": \"plastic bag\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            367,
+                            312,
+                            736,
+                            1000
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            736,
+                            952
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            258,
+                            500,
+                            450,
+                            896
+                        ],
+                        "label": "plastic bag"
+                    }
+                ],
+                "token_count": 104,
+                "raw_token_count": 111,
+                "runtime_seconds": 0.3663
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.037851161931644256,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6545878327887844
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.01778,
+                "txt_dist": 0.32209,
+                "txt_sim": 0.67791
+            },
+            "swad_metrics": {
+                "iou_0": 0.88735,
+                "delta_m_plus": 1.0,
+                "phi": 0.66586,
+                "swad": 0.66586
+            },
+            "l2_distance": 0.32258,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dgo, pejson, plastic bpg\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "There are no objects that match the descriptions \"dgo, pejson, plastic bpg\" in the image.",
+                "parsed_predictions": [],
+                "token_count": 23,
+                "raw_token_count": 112,
+                "runtime_seconds": 0.3725
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.956810286327587,
+                "txt_attack": "homophone",
+                "txt_scale": 0.5379670665563692
+            },
+            "objectives": {
+                "iou": 0.43158,
+                "img_dist": 0.05601,
+                "txt_dist": 0.15286,
+                "txt_sim": 0.84714
+            },
+            "swad_metrics": {
+                "iou_0": 0.88735,
+                "delta_m_plus": 0.51363,
+                "phi": 0.79969,
+                "swad": 0.41075
+            },
+            "l2_distance": 0.46126,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, pursun, plastig bag\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [356, 312, 734, 1000], \"label\": \"dog\"},\n\t{\"bbox_2d\": [156, 812, 272, 956], \"label\": \"pursun\"},\n\t{\"bbox_2d\": [156, 812, 272, 956], \"label\": \"plastig bag\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            356,
+                            312,
+                            734,
+                            1000
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            156,
+                            812,
+                            272,
+                            956
+                        ],
+                        "label": "pursun"
+                    },
+                    {
+                        "bbox_2d": [
+                            156,
+                            812,
+                            272,
+                            956
+                        ],
+                        "label": "plastig bag"
+                    }
+                ],
+                "token_count": 111,
+                "raw_token_count": 112,
+                "runtime_seconds": 0.3725
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.04342428848710439,
+                "txt_attack": "homophone",
+                "txt_scale": 0.8181495663505174
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.01789,
+                "txt_dist": 0.27225,
+                "txt_sim": 0.72775
+            },
+            "swad_metrics": {
+                "iou_0": 0.88735,
+                "delta_m_plus": 1.0,
+                "phi": 0.71473,
+                "swad": 0.71473
+            },
+            "l2_distance": 0.27284,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"doug, pearson, plastic blag\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "There are no objects matching the descriptions \"doug, pearson, plastic blag\" in the image.",
+                "parsed_predictions": [],
+                "token_count": 22,
+                "raw_token_count": 112,
+                "runtime_seconds": 0.3725
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.005943303183718968,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.47251980856406905
+            },
+            "objectives": {
+                "iou": 0.85231,
+                "img_dist": 0.03055,
+                "txt_dist": 0.0538,
+                "txt_sim": 0.9462
+            },
+            "swad_metrics": {
+                "iou_0": 0.88735,
+                "delta_m_plus": 0.03949,
+                "phi": 0.91729,
+                "swad": 0.03622
+            },
+            "l2_distance": 0.85455,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, persbn, plastic bag\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [370, 312, 738, 1000], \"label\": \"dog\"},\n\t{\"bbox_2d\": [0, 0, 738, 950], \"label\": \"persbn\"},\n\t{\"bbox_2d\": [258, 500, 472, 892], \"label\": \"plastic bag\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            370,
+                            312,
+                            738,
+                            1000
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            738,
+                            950
+                        ],
+                        "label": "persbn"
+                    },
+                    {
+                        "bbox_2d": [
+                            258,
+                            500,
+                            472,
+                            892
+                        ],
+                        "label": "plastic bag"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 111,
+                "runtime_seconds": 0.3663
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.9096327469194239,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.33475,
+                "img_dist": 0.04803,
+                "txt_dist": 0.22631,
+                "txt_sim": 0.77369
+            },
+            "swad_metrics": {
+                "iou_0": 0.88735,
+                "delta_m_plus": 0.62275,
+                "phi": 0.73653,
+                "swad": 0.45868
+            },
+            "l2_distance": 0.40692,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dag, purse on, plastic bag\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [158, 812, 270, 950], \"label\": \"dag\"},\n\t{\"bbox_2d\": [268, 540, 440, 890], \"label\": \"purse on\"},\n\t{\"bbox_2d\": [268, 540, 440, 890], \"label\": \"plastic bag\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            158,
+                            812,
+                            270,
+                            950
+                        ],
+                        "label": "dag"
+                    },
+                    {
+                        "bbox_2d": [
+                            268,
+                            540,
+                            440,
+                            890
+                        ],
+                        "label": "purse on"
+                    },
+                    {
+                        "bbox_2d": [
+                            268,
+                            540,
+                            440,
+                            890
+                        ],
+                        "label": "plastic bag"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 112,
+                "runtime_seconds": 0.3725
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.890178430588748,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.3762673824015067
+            },
+            "objectives": {
+                "iou": 0.75291,
+                "img_dist": 0.04449,
+                "txt_dist": 0.00745,
+                "txt_sim": 0.99255
+            },
+            "swad_metrics": {
+                "iou_0": 0.88735,
+                "delta_m_plus": 0.15151,
+                "phi": 0.94839,
+                "swad": 0.14369
+            },
+            "l2_distance": 0.75426,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, person, plsatic bag\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [375, 312, 625, 998], \"label\": \"dog\"},\n\t{\"bbox_2d\": [0, 0, 638, 952], \"label\": \"person\"},\n\t{\"bbox_2d\": [268, 550, 475, 892], \"label\": \"plsatic bag\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            375,
+                            312,
+                            625,
+                            998
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            638,
+                            952
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            268,
+                            550,
+                            475,
+                            892
+                        ],
+                        "label": "plsatic bag"
+                    }
+                ],
+                "token_count": 103,
+                "raw_token_count": 113,
+                "runtime_seconds": 0.4066
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8864700301778382,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6667629770921569
+            },
+            "objectives": {
+                "iou": 0.61396,
+                "img_dist": 0.04449,
+                "txt_dist": 0.01809,
+                "txt_sim": 0.98191
+            },
+            "swad_metrics": {
+                "iou_0": 0.88735,
+                "delta_m_plus": 0.3081,
+                "phi": 0.93822,
+                "swad": 0.28906
+            },
+            "l2_distance": 0.61584,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, person, lpastic bag\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [372, 312, 628, 998], \"label\": \"dog\"},\n\t{\"bbox_2d\": [0, 0, 638, 952], \"label\": \"person\"},\n\t{\"bbox_2d\": [268, 550, 738, 998], \"label\": \"lpastic bag\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            372,
+                            312,
+                            628,
+                            998
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            638,
+                            952
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            268,
+                            550,
+                            738,
+                            998
+                        ],
+                        "label": "lpastic bag"
+                    }
+                ],
+                "token_count": 103,
+                "raw_token_count": 112,
+                "runtime_seconds": 0.3725
+            }
+        },
+        {
+            "index": 9,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.956810286327587,
+                "txt_attack": "fragmentation",
+                "txt_scale": 0.9787487477821122
+            },
+            "objectives": {
+                "iou": 0.38635,
+                "img_dist": 0.05601,
+                "txt_dist": 0.18917,
+                "txt_sim": 0.81083
+            },
+            "swad_metrics": {
+                "iou_0": 0.88735,
+                "delta_m_plus": 0.5646,
+                "phi": 0.76542,
+                "swad": 0.43216
+            },
+            "l2_distance": 0.43381,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"do g, perso n, p lastic bag\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [356, 307, 600, 625], \"label\": \"do g\"},\n\t{\"bbox_2d\": [100, 0, 730, 888], \"label\": \"perso n\"},\n\t{\"bbox_2d\": [150, 800, 270, 950], \"label\": \"p lastic bag\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            356,
+                            307,
+                            600,
+                            625
+                        ],
+                        "label": "do g"
+                    },
+                    {
+                        "bbox_2d": [
+                            100,
+                            0,
+                            730,
+                            888
+                        ],
+                        "label": "perso n"
+                    },
+                    {
+                        "bbox_2d": [
+                            150,
+                            800,
+                            270,
+                            950
+                        ],
+                        "label": "p lastic bag"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 134,
+                "runtime_seconds": 0.4553
+            }
+        },
+        {
+            "index": 10,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.8681935630310197,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6670703564295488
+            },
+            "objectives": {
+                "iou": 0.58235,
+                "img_dist": 0.05404,
+                "txt_dist": 0.09755,
+                "txt_sim": 0.90245
+            },
+            "swad_metrics": {
+                "iou_0": 0.88735,
+                "delta_m_plus": 0.34372,
+                "phi": 0.85368,
+                "swad": 0.29343
+            },
+            "l2_distance": 0.59293,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dawg, person, plastig bag\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [356, 306, 734, 1000], \"label\": \"dawg\"},\n\t{\"bbox_2d\": [106, 0, 734, 888], \"label\": \"person\"},\n\t{\"bbox_2d\": [156, 800, 272, 956], \"label\": \"plastig bag\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            356,
+                            306,
+                            734,
+                            1000
+                        ],
+                        "label": "dawg"
+                    },
+                    {
+                        "bbox_2d": [
+                            106,
+                            0,
+                            734,
+                            888
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            156,
+                            800,
+                            272,
+                            956
+                        ],
+                        "label": "plastig bag"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 111,
+                "runtime_seconds": 0.4013
+            }
+        },
+        {
+            "index": 11,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.811709547982725,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6881327596781619
+            },
+            "objectives": {
+                "iou": 0.56471,
+                "img_dist": 0.05149,
+                "txt_dist": 0.12154,
+                "txt_sim": 0.87846
+            },
+            "swad_metrics": {
+                "iou_0": 0.88735,
+                "delta_m_plus": 0.3636,
+                "phi": 0.83323,
+                "swad": 0.30296
+            },
+            "l2_distance": 0.57993,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, pursun, plastic bag\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [364, 307, 732, 1000], \"label\": \"dog\"},\n\t{\"bbox_2d\": [156, 807, 276, 957], \"label\": \"pursun\"},\n\t{\"bbox_2d\": [256, 677, 432, 888], \"label\": \"plastic bag\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            364,
+                            307,
+                            732,
+                            1000
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            156,
+                            807,
+                            276,
+                            957
+                        ],
+                        "label": "pursun"
+                    },
+                    {
+                        "bbox_2d": [
+                            256,
+                            677,
+                            432,
+                            888
+                        ],
+                        "label": "plastic bag"
+                    }
+                ],
+                "token_count": 110,
+                "raw_token_count": 113,
+                "runtime_seconds": 0.4066
+            }
+        },
+        {
+            "index": 12,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.9316177058680379,
+                "txt_attack": "homophone",
+                "txt_scale": 0.9607530821359501
+            },
+            "objectives": {
+                "iou": 0.49731,
+                "img_dist": 0.04744,
+                "txt_dist": 0.20667,
+                "txt_sim": 0.79333
+            },
+            "swad_metrics": {
+                "iou_0": 0.88735,
+                "delta_m_plus": 0.43956,
+                "phi": 0.75569,
+                "swad": 0.33217
+            },
+            "l2_distance": 0.54063,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, pursun, plastic badge\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [380, 328, 738, 1000], \"label\": \"dog\"},\n\t{\"bbox_2d\": [270, 544, 738, 896], \"label\": \"pursun\"},\n\t{\"bbox_2d\": [166, 812, 278, 948], \"label\": \"plastic badge\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            380,
+                            328,
+                            738,
+                            1000
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            270,
+                            544,
+                            738,
+                            896
+                        ],
+                        "label": "pursun"
+                    },
+                    {
+                        "bbox_2d": [
+                            166,
+                            812,
+                            278,
+                            948
+                        ],
+                        "label": "plastic badge"
+                    }
+                ],
+                "token_count": 110,
+                "raw_token_count": 111,
+                "runtime_seconds": 0.4013
+            }
+        },
+        {
+            "index": 13,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.54497,
+                "img_dist": 0.04449,
+                "txt_dist": 0.24446,
+                "txt_sim": 0.75554
+            },
+            "swad_metrics": {
+                "iou_0": 0.88735,
+                "delta_m_plus": 0.38585,
+                "phi": 0.72193,
+                "swad": 0.27855
+            },
+            "l2_distance": 0.59894,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dag, pursun, plastig bag\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [378, 308, 628, 998], \"label\": \"dag\"},\n\t{\"bbox_2d\": [268, 548, 478, 892], \"label\": \"pursun\"},\n\t{\"bbox_2d\": [268, 548, 478, 892], \"label\": \"plastig bag\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            378,
+                            308,
+                            628,
+                            998
+                        ],
+                        "label": "dag"
+                    },
+                    {
+                        "bbox_2d": [
+                            268,
+                            548,
+                            478,
+                            892
+                        ],
+                        "label": "pursun"
+                    },
+                    {
+                        "bbox_2d": [
+                            268,
+                            548,
+                            478,
+                            892
+                        ],
+                        "label": "plastig bag"
+                    }
+                ],
+                "token_count": 110,
+                "raw_token_count": 135,
+                "runtime_seconds": 0.4695
+            }
+        },
+        {
+            "index": 14,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.025101251311043626,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.26461220377160605
+            },
+            "objectives": {
+                "iou": 0.71169,
+                "img_dist": 0.01757,
+                "txt_dist": 0.13391,
+                "txt_sim": 0.86609
+            },
+            "swad_metrics": {
+                "iou_0": 0.88735,
+                "delta_m_plus": 0.19796,
+                "phi": 0.85087,
+                "swad": 0.16844
+            },
+            "l2_distance": 0.72439,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, pekson, plasqic bag\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [368, 312, 734, 1000], \"label\": \"dog\"},\n\t{\"bbox_2d\": [368, 312, 734, 1000], \"label\": \"pekson\"},\n\t{\"bbox_2d\": [258, 500, 448, 896], \"label\": \"plasqic bag\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            368,
+                            312,
+                            734,
+                            1000
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            368,
+                            312,
+                            734,
+                            1000
+                        ],
+                        "label": "pekson"
+                    },
+                    {
+                        "bbox_2d": [
+                            258,
+                            500,
+                            448,
+                            896
+                        ],
+                        "label": "plasqic bag"
+                    }
+                ],
+                "token_count": 112,
+                "raw_token_count": 113,
+                "runtime_seconds": 0.4066
+            }
+        },
+        {
+            "index": 15,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.037851161931644256,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4640497056951493
+            },
+            "objectives": {
+                "iou": 0.61146,
+                "img_dist": 0.01778,
+                "txt_dist": 0.06662,
+                "txt_sim": 0.93338
+            },
+            "swad_metrics": {
+                "iou_0": 0.88735,
+                "delta_m_plus": 0.31091,
+                "phi": 0.91678,
+                "swad": 0.28504
+            },
+            "l2_distance": 0.61534,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, person, plastic ban\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [367, 312, 736, 1000], \"label\": \"dog\"},\n\t{\"bbox_2d\": [0, 0, 736, 952], \"label\": \"person\"},\n\t{\"bbox_2d\": [0, 0, 100, 712], \"label\": \"plastic ban\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            367,
+                            312,
+                            736,
+                            1000
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            736,
+                            952
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            100,
+                            712
+                        ],
+                        "label": "plastic ban"
+                    }
+                ],
+                "token_count": 100,
+                "raw_token_count": 111,
+                "runtime_seconds": 0.3663
+            }
+        },
+        {
+            "index": 16,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8860898083427502,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.5291192730746763
+            },
+            "objectives": {
+                "iou": 0.60882,
+                "img_dist": 0.04449,
+                "txt_dist": 0.155,
+                "txt_sim": 0.845
+            },
+            "swad_metrics": {
+                "iou_0": 0.88735,
+                "delta_m_plus": 0.31389,
+                "phi": 0.80741,
+                "swad": 0.25344
+            },
+            "l2_distance": 0.62981,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, person, playtic abg\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [375, 312, 625, 998], \"label\": \"dog\"},\n\t{\"bbox_2d\": [0, 0, 638, 952], \"label\": \"person\"},\n\t{\"bbox_2d\": [268, 548, 738, 998], \"label\": \"playtic abg\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            375,
+                            312,
+                            625,
+                            998
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            638,
+                            952
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            268,
+                            548,
+                            738,
+                            998
+                        ],
+                        "label": "playtic abg"
+                    }
+                ],
+                "token_count": 104,
+                "raw_token_count": 134,
+                "runtime_seconds": 0.4553
+            }
+        },
+        {
+            "index": 17,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.9214733962452295,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.29431807869011506
+            },
+            "objectives": {
+                "iou": 0.64028,
+                "img_dist": 0.04884,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.88735,
+                "delta_m_plus": 0.27844,
+                "phi": 0.95116,
+                "swad": 0.26484
+            },
+            "l2_distance": 0.64214,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, person, plastic bag\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [357, 300, 733, 999], \"label\": \"dog\"},\n\t{\"bbox_2d\": [0, 0, 625, 888], \"label\": \"person\"},\n\t{\"bbox_2d\": [162, 800, 275, 950], \"label\": \"plastic bag\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            357,
+                            300,
+                            733,
+                            999
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            625,
+                            888
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            162,
+                            800,
+                            275,
+                            950
+                        ],
+                        "label": "plastic bag"
+                    }
+                ],
+                "token_count": 103,
+                "raw_token_count": 112,
+                "runtime_seconds": 0.3847
+            }
+        },
+        {
+            "index": 18,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.9893185271058202,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4613552305065488
+            },
+            "objectives": {
+                "iou": 0.44255,
+                "img_dist": 0.05451,
+                "txt_dist": 0.11723,
+                "txt_sim": 0.88277
+            },
+            "swad_metrics": {
+                "iou_0": 0.88735,
+                "delta_m_plus": 0.50127,
+                "phi": 0.83465,
+                "swad": 0.41838
+            },
+            "l2_distance": 0.46105,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dag, person, plast ick bag\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [158, 812, 268, 950], \"label\": \"dag\"},\n\t{\"bbox_2d\": [158, 270, 728, 999], \"label\": \"person\"},\n\t{\"bbox_2d\": [258, 750, 408, 890], \"label\": \"plast ick bag\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            158,
+                            812,
+                            268,
+                            950
+                        ],
+                        "label": "dag"
+                    },
+                    {
+                        "bbox_2d": [
+                            158,
+                            270,
+                            728,
+                            999
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            258,
+                            750,
+                            408,
+                            890
+                        ],
+                        "label": "plast ick bag"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 112,
+                "runtime_seconds": 0.379
+            }
+        },
+        {
+            "index": 19,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.956810286327587,
+                "txt_attack": "homophone",
+                "txt_scale": 0.5719856231779543
+            },
+            "objectives": {
+                "iou": 0.43158,
+                "img_dist": 0.05601,
+                "txt_dist": 0.15286,
+                "txt_sim": 0.84714
+            },
+            "swad_metrics": {
+                "iou_0": 0.88735,
+                "delta_m_plus": 0.51363,
+                "phi": 0.79969,
+                "swad": 0.41075
+            },
+            "l2_distance": 0.46126,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, pursun, plastig bag\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [356, 312, 734, 1000], \"label\": \"dog\"},\n\t{\"bbox_2d\": [156, 812, 272, 956], \"label\": \"pursun\"},\n\t{\"bbox_2d\": [156, 812, 272, 956], \"label\": \"plastig bag\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            356,
+                            312,
+                            734,
+                            1000
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            156,
+                            812,
+                            272,
+                            956
+                        ],
+                        "label": "pursun"
+                    },
+                    {
+                        "bbox_2d": [
+                            156,
+                            812,
+                            272,
+                            956
+                        ],
+                        "label": "plastig bag"
+                    }
+                ],
+                "token_count": 111,
+                "raw_token_count": 113,
+                "runtime_seconds": 0.4066
+            }
+        },
+        {
+            "index": 20,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.9152770281339244,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2802045572066833
+            },
+            "objectives": {
+                "iou": 0.73747,
+                "img_dist": 0.04744,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.88735,
+                "delta_m_plus": 0.16891,
+                "phi": 0.95256,
+                "swad": 0.16089
+            },
+            "l2_distance": 0.73899,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, person, plastic bag\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [388, 328, 738, 1000], \"label\": \"dog\"},\n\t{\"bbox_2d\": [0, 0, 588, 950], \"label\": \"person\"},\n\t{\"bbox_2d\": [268, 550, 688, 892], \"label\": \"plastic bag\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            388,
+                            328,
+                            738,
+                            1000
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            588,
+                            950
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            268,
+                            550,
+                            688,
+                            892
+                        ],
+                        "label": "plastic bag"
+                    }
+                ],
+                "token_count": 104,
+                "raw_token_count": 114,
+                "runtime_seconds": 0.3861
+            }
+        },
+        {
+            "index": 21,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.890178430588748,
+                "txt_attack": "homophone",
+                "txt_scale": 0.3762673824015067
+            },
+            "objectives": {
+                "iou": 0.7585,
+                "img_dist": 0.04449,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.88735,
+                "delta_m_plus": 0.14521,
+                "phi": 0.95551,
+                "swad": 0.13875
+            },
+            "l2_distance": 0.7598,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, person, plastic bag\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [372, 312, 625, 998], \"label\": \"dog\"},\n\t{\"bbox_2d\": [0, 0, 638, 952], \"label\": \"person\"},\n\t{\"bbox_2d\": [268, 550, 472, 892], \"label\": \"plastic bag\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            372,
+                            312,
+                            625,
+                            998
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            638,
+                            952
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            268,
+                            550,
+                            472,
+                            892
+                        ],
+                        "label": "plastic bag"
+                    }
+                ],
+                "token_count": 103,
+                "raw_token_count": 112,
+                "runtime_seconds": 0.3847
+            }
+        },
+        {
+            "index": 22,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.9986307263349637,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4613552305065488
+            },
+            "objectives": {
+                "iou": 0.52186,
+                "img_dist": 0.05538,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.88735,
+                "delta_m_plus": 0.41189,
+                "phi": 0.94462,
+                "swad": 0.38908
+            },
+            "l2_distance": 0.52479,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, person, plastic bag\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [419, 275, 733, 999], \"label\": \"dog\"},\n\t{\"bbox_2d\": [156, 0, 433, 888], \"label\": \"person\"},\n\t{\"bbox_2d\": [156, 800, 266, 950], \"label\": \"plastic bag\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            419,
+                            275,
+                            733,
+                            999
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            156,
+                            0,
+                            433,
+                            888
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            156,
+                            800,
+                            266,
+                            950
+                        ],
+                        "label": "plastic bag"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 112,
+                "runtime_seconds": 0.3847
+            }
+        },
+        {
+            "index": 23,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.9316177058680379,
+                "txt_attack": "homophone",
+                "txt_scale": 0.5814985355661022
+            },
+            "objectives": {
+                "iou": 0.585,
+                "img_dist": 0.04963,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.88735,
+                "delta_m_plus": 0.34073,
+                "phi": 0.95037,
+                "swad": 0.32382
+            },
+            "l2_distance": 0.5871,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, person, plastic bag\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [420, 300, 730, 999], \"label\": \"dog\"},\n\t{\"bbox_2d\": [100, 0, 500, 949], \"label\": \"person\"},\n\t{\"bbox_2d\": [167, 800, 270, 950], \"label\": \"plastic bag\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            420,
+                            300,
+                            730,
+                            999
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            100,
+                            0,
+                            500,
+                            949
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            167,
+                            800,
+                            270,
+                            950
+                        ],
+                        "label": "plastic bag"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 112,
+                "runtime_seconds": 0.4059
+            }
+        },
+        {
+            "index": 24,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.0049277757712756776,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.2528238303879642
+            },
+            "objectives": {
+                "iou": 0.88291,
+                "img_dist": 0.01711,
+                "txt_dist": 0.10508,
+                "txt_sim": 0.89492
+            },
+            "swad_metrics": {
+                "iou_0": 0.88735,
+                "delta_m_plus": 0.005,
+                "phi": 0.87961,
+                "swad": 0.0044
+            },
+            "l2_distance": 0.88931,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, perbon, plasitc bag\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [368, 312, 736, 1000], \"label\": \"dog\"},\n\t{\"bbox_2d\": [0, 0, 736, 952], \"label\": \"perbon\"},\n\t{\"bbox_2d\": [258, 500, 450, 892], \"label\": \"plasitc bag\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            368,
+                            312,
+                            736,
+                            1000
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            736,
+                            952
+                        ],
+                        "label": "perbon"
+                    },
+                    {
+                        "bbox_2d": [
+                            258,
+                            500,
+                            450,
+                            892
+                        ],
+                        "label": "plasitc bag"
+                    }
+                ],
+                "token_count": 107,
+                "raw_token_count": 111,
+                "runtime_seconds": 0.4013
+            }
+        },
+        {
+            "index": 25,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.855929537130895,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.55511,
+                "img_dist": 0.04449,
+                "txt_dist": 0.20083,
+                "txt_sim": 0.79917
+            },
+            "swad_metrics": {
+                "iou_0": 0.88735,
+                "delta_m_plus": 0.37442,
+                "phi": 0.76361,
+                "swad": 0.28591
+            },
+            "l2_distance": 0.592,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, persxn, plasaic bcg\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [375, 312, 625, 998], \"label\": \"dog\"},\n\t{\"bbox_2d\": [0, 0, 645, 952], \"label\": \"persxn\"},\n\t{\"bbox_2d\": [0, 0, 100, 712], \"label\": \"plasaic bcg\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            375,
+                            312,
+                            625,
+                            998
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            645,
+                            952
+                        ],
+                        "label": "persxn"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            100,
+                            712
+                        ],
+                        "label": "plasaic bcg"
+                    }
+                ],
+                "token_count": 102,
+                "raw_token_count": 111,
+                "runtime_seconds": 0.4013
+            }
+        },
+        {
+            "index": 26,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.956810286327587,
+                "txt_attack": "homophone",
+                "txt_scale": 0.5752547145938254
+            },
+            "objectives": {
+                "iou": 0.43407,
+                "img_dist": 0.05601,
+                "txt_dist": 0.13471,
+                "txt_sim": 0.86529
+            },
+            "swad_metrics": {
+                "iou_0": 0.88735,
+                "delta_m_plus": 0.51082,
+                "phi": 0.81683,
+                "swad": 0.41725
+            },
+            "l2_distance": 0.45793,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, purse on, plastic bag\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [356, 307, 734, 1000], \"label\": \"dog\"},\n\t{\"bbox_2d\": [156, 807, 272, 957], \"label\": \"purse on\"},\n\t{\"bbox_2d\": [156, 807, 272, 957], \"label\": \"plastic bag\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            356,
+                            307,
+                            734,
+                            1000
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            156,
+                            807,
+                            272,
+                            957
+                        ],
+                        "label": "purse on"
+                    },
+                    {
+                        "bbox_2d": [
+                            156,
+                            807,
+                            272,
+                            957
+                        ],
+                        "label": "plastic bag"
+                    }
+                ],
+                "token_count": 110,
+                "raw_token_count": 111,
+                "runtime_seconds": 0.3663
+            }
+        },
+        {
+            "index": 27,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.9879674734231437,
+                "txt_attack": "homophone",
+                "txt_scale": 0.356321187014375
+            },
+            "objectives": {
+                "iou": 0.54732,
+                "img_dist": 0.05451,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.88735,
+                "delta_m_plus": 0.3832,
+                "phi": 0.94549,
+                "swad": 0.36231
+            },
+            "l2_distance": 0.55003,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, person, plastic bag\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [420, 300, 720, 999], \"label\": \"dog\"},\n\t{\"bbox_2d\": [150, 0, 680, 899], \"label\": \"person\"},\n\t{\"bbox_2d\": [160, 800, 270, 950], \"label\": \"plastic bag\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            420,
+                            300,
+                            720,
+                            999
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            150,
+                            0,
+                            680,
+                            899
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            160,
+                            800,
+                            270,
+                            950
+                        ],
+                        "label": "plastic bag"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 112,
+                "runtime_seconds": 0.3847
+            }
+        },
+        {
+            "index": 28,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.03622132166197702,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.3388618816991625
+            },
+            "objectives": {
+                "iou": 0.87322,
+                "img_dist": 0.01773,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.88735,
+                "delta_m_plus": 0.01592,
+                "phi": 0.98227,
+                "swad": 0.01564
+            },
+            "l2_distance": 0.8734,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, person, plastic bag\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [370, 312, 734, 1000], \"label\": \"dog\"},\n\t{\"bbox_2d\": [0, 0, 738, 952], \"label\": \"person\"},\n\t{\"bbox_2d\": [258, 500, 458, 896], \"label\": \"plastic bag\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            370,
+                            312,
+                            734,
+                            1000
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            738,
+                            952
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            258,
+                            500,
+                            458,
+                            896
+                        ],
+                        "label": "plastic bag"
+                    }
+                ],
+                "token_count": 104,
+                "raw_token_count": 134,
+                "runtime_seconds": 0.4553
+            }
+        },
+        {
+            "index": 29,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.9238629258235012,
+                "txt_attack": "homophone",
+                "txt_scale": 0.5914527137231436
+            },
+            "objectives": {
+                "iou": 0.43725,
+                "img_dist": 0.04915,
+                "txt_dist": 0.13471,
+                "txt_sim": 0.86529
+            },
+            "swad_metrics": {
+                "iou_0": 0.88735,
+                "delta_m_plus": 0.50724,
+                "phi": 0.82276,
+                "swad": 0.41734
+            },
+            "l2_distance": 0.46016,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, purse on, plastic bag\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [362, 306, 736, 999], \"label\": \"dog\"},\n\t{\"bbox_2d\": [158, 806, 272, 956], \"label\": \"purse on\"},\n\t{\"bbox_2d\": [158, 806, 272, 956], \"label\": \"plastic bag\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            362,
+                            306,
+                            736,
+                            999
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            158,
+                            806,
+                            272,
+                            956
+                        ],
+                        "label": "purse on"
+                    },
+                    {
+                        "bbox_2d": [
+                            158,
+                            806,
+                            272,
+                            956
+                        ],
+                        "label": "plastic bag"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 113,
+                "runtime_seconds": 0.4066
+            }
+        }
+    ]
+}

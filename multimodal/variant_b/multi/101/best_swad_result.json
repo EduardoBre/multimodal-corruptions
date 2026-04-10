@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/101",
+        "folder_id": "101",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00003089.JPEG"
+    },
+    "pareto_index": 7,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.096702,
+            "defocus_blur": 0.137381,
+            "motion_blur": 0.017615,
+            "fog_filter": 0.022424,
+            "pixelate": 0.054784,
+            "jpeg_filter": 0.062629
+        },
+        "text_corruptions": {
+            "homophone": 0.022185,
+            "synonym": 0.033527,
+            "ata_saliency": 0.042501,
+            "fragmentation": 0.158565,
+            "character_noise": 0.037853
+        },
+        "img_budget_used": 0.391534,
+        "txt_budget_used": 0.294632,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.05807,
+        "txt_dist": 0.27056,
+        "txt_sim": 0.72944
+    },
+    "swad_metrics": {
+        "iou_0": 0.94326,
+        "delta_m_plus": 1.0,
+        "phi": 0.68708,
+        "swad": 0.68708
+    },
+    "l2_distance": 0.27672,
+    "original_prompt": "Identify the objects \"maillot, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 125,
+            "ymin": 10,
+            "xmax": 269,
+            "ymax": 488
+        },
+        "maillot": {
+            "xmin": 136,
+            "ymin": 96,
+            "xmax": 247,
+            "ymax": 261
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"my \u043eh, per\u200bson\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [384, 28, 820, 970], \"label\": \"my \u043eh, per\u200bson\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    384,
+                    28,
+                    820,
+                    970
+                ],
+                "label": "my \u043eh, per\u200bson"
+            }
+        ],
+        "token_count": 44,
+        "raw_token_count": 119,
+        "runtime_seconds": 0.3473
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.09670211205112568,
+        "defocus_blur": 0.13738076412862715,
+        "motion_blur": 0.01761502897774002,
+        "fog_filter": 0.02242357877475852,
+        "pixelate": 0.05478381644079294,
+        "jpeg_filter": 0.0626289287436403
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.02218539046788088,
+        "synonym": 0.03352745954505251,
+        "ata_saliency": 0.04250126822752527,
+        "fragmentation": 0.15856502439956646,
+        "character_noise": 0.03785309088906275
+    }
+}

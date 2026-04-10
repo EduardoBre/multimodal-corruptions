@@ -1,0 +1,773 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/98",
+        "folder_id": "98",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00045855.JPEG"
+    },
+    "original_prompt": "Identify the objects \"frying pan, stove\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "stove": {
+            "xmin": 45,
+            "ymin": 82,
+            "xmax": 498,
+            "ymax": 312
+        },
+        "frying pan": {
+            "xmin": 74,
+            "ymin": 78,
+            "xmax": 308,
+            "ymax": 207
+        }
+    },
+    "baseline_iou": 0.80481,
+    "swad_star": 0.78158,
+    "swad_star_index": 15,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "n_solutions": 16,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.8632061743184387,
+                "txt_attack": "synonym",
+                "txt_scale": 0.7724979474714236
+            },
+            "objectives": {
+                "iou": 0.55528,
+                "img_dist": 0.16739,
+                "txt_dist": 0.05431,
+                "txt_sim": 0.94569
+            },
+            "swad_metrics": {
+                "iou_0": 0.80481,
+                "delta_m_plus": 0.31005,
+                "phi": 0.78739,
+                "swad": 0.24413
+            },
+            "l2_distance": 0.5825,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"saut\u00e9 pan, stove\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [100, 286, 888, 938], \"label\": \"saut\u00e9 pan\"},\n\t{\"bbox_2d\": [100, 286, 888, 938], \"label\": \"stove\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            100,
+                            286,
+                            888,
+                            938
+                        ],
+                        "label": "saut\u00e9 pan"
+                    },
+                    {
+                        "bbox_2d": [
+                            100,
+                            286,
+                            888,
+                            938
+                        ],
+                        "label": "stove"
+                    }
+                ],
+                "token_count": 75,
+                "raw_token_count": 77,
+                "runtime_seconds": 0.2852
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8181617493544074,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.41721849968957336
+            },
+            "objectives": {
+                "iou": 0.7418,
+                "img_dist": 0.05595,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.80481,
+                "delta_m_plus": 0.07829,
+                "phi": 0.94405,
+                "swad": 0.07391
+            },
+            "l2_distance": 0.74391,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"frying pan, stove\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [168, 220, 612, 577], \"label\": \"frying pan\"},\n\t{\"bbox_2d\": [95, 420, 978, 997], \"label\": \"stove\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            168,
+                            220,
+                            612,
+                            577
+                        ],
+                        "label": "frying pan"
+                    },
+                    {
+                        "bbox_2d": [
+                            95,
+                            420,
+                            978,
+                            997
+                        ],
+                        "label": "stove"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 77,
+                "runtime_seconds": 0.2852
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.018153363333776373,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.24927259019092207
+            },
+            "objectives": {
+                "iou": 0.51,
+                "img_dist": 0.03868,
+                "txt_dist": 0.33192,
+                "txt_sim": 0.66808
+            },
+            "swad_metrics": {
+                "iou_0": 0.80481,
+                "delta_m_plus": 0.36631,
+                "phi": 0.64224,
+                "swad": 0.23526
+            },
+            "l2_distance": 0.60973,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fr\u200dyi\u200dng \u0440a\u200bn, s\u200dt\u200b\u043eve\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 236, 617, 607], \"label\": \"fr\u200dyi\u200dng \u0440a\u200bn, s\u200dt\u200b\u043eve\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            236,
+                            617,
+                            607
+                        ],
+                        "label": "fr\u200dyi\u200dng \u0440a\u200bn, s\u200dt\u200b\u043eve"
+                    }
+                ],
+                "token_count": 55,
+                "raw_token_count": 77,
+                "runtime_seconds": 0.2852
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.5896,
+                "img_dist": 0.04492,
+                "txt_dist": 0.1355,
+                "txt_sim": 0.8645
+            },
+            "swad_metrics": {
+                "iou_0": 0.80481,
+                "delta_m_plus": 0.2674,
+                "phi": 0.82567,
+                "swad": 0.22079
+            },
+            "l2_distance": 0.60664,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"frying panne, stoave\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 238, 645, 607], \"label\": \"frying panne\"},\n\t{\"bbox_2d\": [308, 280, 863, 820], \"label\": \"stoave\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            238,
+                            645,
+                            607
+                        ],
+                        "label": "frying panne"
+                    },
+                    {
+                        "bbox_2d": [
+                            308,
+                            280,
+                            863,
+                            820
+                        ],
+                        "label": "stoave"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 77,
+                "runtime_seconds": 0.2852
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.79393,
+                "img_dist": 0.03868,
+                "txt_dist": 0.09285,
+                "txt_sim": 0.90715
+            },
+            "swad_metrics": {
+                "iou_0": 0.80481,
+                "delta_m_plus": 0.01352,
+                "phi": 0.87206,
+                "swad": 0.01179
+            },
+            "l2_distance": 0.80028,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"frying paf, stove\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 230, 619, 600], \"label\": \"frying paf\"},\n\t{\"bbox_2d\": [100, 250, 960, 997], \"label\": \"stove\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            230,
+                            619,
+                            600
+                        ],
+                        "label": "frying paf"
+                    },
+                    {
+                        "bbox_2d": [
+                            100,
+                            250,
+                            960,
+                            997
+                        ],
+                        "label": "stove"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 77,
+                "runtime_seconds": 0.2852
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.6126883641923373,
+                "txt_attack": "homophone",
+                "txt_scale": 0.10684452896191199
+            },
+            "objectives": {
+                "iou": 0.78692,
+                "img_dist": 0.05002,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.80481,
+                "delta_m_plus": 0.02223,
+                "phi": 0.94998,
+                "swad": 0.02112
+            },
+            "l2_distance": 0.78851,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"frying pan, stove\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 220, 615, 607], \"label\": \"frying pan\"},\n\t{\"bbox_2d\": [95, 270, 974, 997], \"label\": \"stove\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            220,
+                            615,
+                            607
+                        ],
+                        "label": "frying pan"
+                    },
+                    {
+                        "bbox_2d": [
+                            95,
+                            270,
+                            974,
+                            997
+                        ],
+                        "label": "stove"
+                    }
+                ],
+                "token_count": 72,
+                "raw_token_count": 77,
+                "runtime_seconds": 0.2852
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6124377601560459,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.59215,
+                "img_dist": 0.08142,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.80481,
+                "delta_m_plus": 0.26424,
+                "phi": 0.91858,
+                "swad": 0.24272
+            },
+            "l2_distance": 0.59772,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"frying pan, stove\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [100, 270, 978, 912], \"label\": \"frying pan\"},\n\t{\"bbox_2d\": [100, 270, 978, 912], \"label\": \"stove\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            100,
+                            270,
+                            978,
+                            912
+                        ],
+                        "label": "frying pan"
+                    },
+                    {
+                        "bbox_2d": [
+                            100,
+                            270,
+                            978,
+                            912
+                        ],
+                        "label": "stove"
+                    }
+                ],
+                "token_count": 75,
+                "raw_token_count": 77,
+                "runtime_seconds": 0.2852
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.5656671100314771,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.039875089079669634
+            },
+            "objectives": {
+                "iou": 0.56813,
+                "img_dist": 0.08111,
+                "txt_dist": 0.04085,
+                "txt_sim": 0.95915
+            },
+            "swad_metrics": {
+                "iou_0": 0.80481,
+                "delta_m_plus": 0.29408,
+                "phi": 0.88135,
+                "swad": 0.25919
+            },
+            "l2_distance": 0.57534,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fry\u0456ng pan, st\u200bove\u200b\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [100, 288, 978, 900], \"label\": \"fry\u0456ng pan, st\u200bove\u200b\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            100,
+                            288,
+                            978,
+                            900
+                        ],
+                        "label": "fry\u0456ng pan, st\u200bove\u200b"
+                    }
+                ],
+                "token_count": 48,
+                "raw_token_count": 77,
+                "runtime_seconds": 0.2852
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.307337327911573,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.7482,
+                "img_dist": 0.04544,
+                "txt_dist": 0.07257,
+                "txt_sim": 0.92743
+            },
+            "swad_metrics": {
+                "iou_0": 0.80481,
+                "delta_m_plus": 0.07034,
+                "phi": 0.88529,
+                "swad": 0.06227
+            },
+            "l2_distance": 0.75308,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"frine pan, stove\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 220, 620, 557], \"label\": \"frine pan\"},\n\t{\"bbox_2d\": [98, 270, 978, 997], \"label\": \"stove\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            220,
+                            620,
+                            557
+                        ],
+                        "label": "frine pan"
+                    },
+                    {
+                        "bbox_2d": [
+                            98,
+                            270,
+                            978,
+                            997
+                        ],
+                        "label": "stove"
+                    }
+                ],
+                "token_count": 72,
+                "raw_token_count": 77,
+                "runtime_seconds": 0.2852
+            }
+        },
+        {
+            "index": 9,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.018595721213425453,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6130568625347235
+            },
+            "objectives": {
+                "iou": 0.49937,
+                "img_dist": 0.0461,
+                "txt_dist": 0.29084,
+                "txt_sim": 0.70916
+            },
+            "swad_metrics": {
+                "iou_0": 0.80481,
+                "delta_m_plus": 0.37952,
+                "phi": 0.67647,
+                "swad": 0.25673
+            },
+            "l2_distance": 0.57973,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"frying apn, sotve\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 227, 655, 613], \"label\": \"frying apn, sotve\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            227,
+                            655,
+                            613
+                        ],
+                        "label": "frying apn, sotve"
+                    }
+                ],
+                "token_count": 44,
+                "raw_token_count": 77,
+                "runtime_seconds": 0.2852
+            }
+        },
+        {
+            "index": 10,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.56723,
+                "img_dist": 0.08805,
+                "txt_dist": 0.12597,
+                "txt_sim": 0.87403
+            },
+            "swad_metrics": {
+                "iou_0": 0.80481,
+                "delta_m_plus": 0.2952,
+                "phi": 0.79707,
+                "swad": 0.2353
+            },
+            "l2_distance": 0.58768,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"frying pan, stobe\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [100, 225, 978, 999], \"label\": \"frying pan\"},\n\t{\"bbox_2d\": [0, 0, 1000, 999], \"label\": \"stobe\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            100,
+                            225,
+                            978,
+                            999
+                        ],
+                        "label": "frying pan"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            999
+                        ],
+                        "label": "stobe"
+                    }
+                ],
+                "token_count": 72,
+                "raw_token_count": 77,
+                "runtime_seconds": 0.2852
+            }
+        },
+        {
+            "index": 11,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.80875,
+                "img_dist": 0.03812,
+                "txt_dist": 0.02516,
+                "txt_sim": 0.97484
+            },
+            "swad_metrics": {
+                "iou_0": 0.80481,
+                "delta_m_plus": 0.0,
+                "phi": 0.93768,
+                "swad": 0.0
+            },
+            "l2_distance": 0.81004,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"frying panne, stove\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 220, 645, 610], \"label\": \"frying panne\"},\n\t{\"bbox_2d\": [95, 280, 984, 937], \"label\": \"stove\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            220,
+                            645,
+                            610
+                        ],
+                        "label": "frying panne"
+                    },
+                    {
+                        "bbox_2d": [
+                            95,
+                            280,
+                            984,
+                            937
+                        ],
+                        "label": "stove"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 77,
+                "runtime_seconds": 0.2852
+            }
+        },
+        {
+            "index": 12,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.486062019522153,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.8971524375333463
+            },
+            "objectives": {
+                "iou": 0.51907,
+                "img_dist": 0.06015,
+                "txt_dist": 0.28749,
+                "txt_sim": 0.71251
+            },
+            "swad_metrics": {
+                "iou_0": 0.80481,
+                "delta_m_plus": 0.35504,
+                "phi": 0.66965,
+                "swad": 0.23775
+            },
+            "l2_distance": 0.59641,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"frying paz, tsove\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [158, 218, 612, 570], \"label\": \"frying paz, tsove\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            158,
+                            218,
+                            612,
+                            570
+                        ],
+                        "label": "frying paz, tsove"
+                    }
+                ],
+                "token_count": 45,
+                "raw_token_count": 91,
+                "runtime_seconds": 0.335
+            }
+        },
+        {
+            "index": 13,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.9316177058680379,
+                "txt_attack": "homophone",
+                "txt_scale": 0.9948250792623392
+            },
+            "objectives": {
+                "iou": 0.47346,
+                "img_dist": 0.06097,
+                "txt_dist": 0.14111,
+                "txt_sim": 0.85889
+            },
+            "swad_metrics": {
+                "iou_0": 0.80481,
+                "delta_m_plus": 0.41171,
+                "phi": 0.80652,
+                "swad": 0.33206
+            },
+            "l2_distance": 0.49779,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"frying panne, stuve\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [168, 217, 609, 550], \"label\": \"frying panne\"},\n\t{\"bbox_2d\": [168, 217, 609, 550], \"label\": \"stuve\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            168,
+                            217,
+                            609,
+                            550
+                        ],
+                        "label": "frying panne"
+                    },
+                    {
+                        "bbox_2d": [
+                            168,
+                            217,
+                            609,
+                            550
+                        ],
+                        "label": "stuve"
+                    }
+                ],
+                "token_count": 76,
+                "raw_token_count": 91,
+                "runtime_seconds": 0.335
+            }
+        },
+        {
+            "index": 14,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.03732619454213726,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.33647038540361596
+            },
+            "objectives": {
+                "iou": 0.59501,
+                "img_dist": 0.03191,
+                "txt_dist": 0.12482,
+                "txt_sim": 0.87518
+            },
+            "swad_metrics": {
+                "iou_0": 0.80481,
+                "delta_m_plus": 0.26068,
+                "phi": 0.84725,
+                "swad": 0.22086
+            },
+            "l2_distance": 0.6088,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"frying pan, stose\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 236, 650, 610], \"label\": \"frying pan\"},\n\t{\"bbox_2d\": [288, 286, 860, 820], \"label\": \"stose\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            236,
+                            650,
+                            610
+                        ],
+                        "label": "frying pan"
+                    },
+                    {
+                        "bbox_2d": [
+                            288,
+                            286,
+                            860,
+                            820
+                        ],
+                        "label": "stose"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 91,
+                "runtime_seconds": 0.335
+            }
+        },
+        {
+            "index": 15,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.08646227720474076,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6881327596781619
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.06334,
+                "txt_dist": 0.16557,
+                "txt_sim": 0.83443
+            },
+            "swad_metrics": {
+                "iou_0": 0.80481,
+                "delta_m_plus": 1.0,
+                "phi": 0.78158,
+                "swad": 0.78158
+            },
+            "l2_distance": 0.17727,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fry in pan, stoave\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [168, 220, 617, 608], \"label\": \"fry in pan, stoave\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            168,
+                            220,
+                            617,
+                            608
+                        ],
+                        "label": "fry in pan, stoave"
+                    }
+                ],
+                "token_count": 45,
+                "raw_token_count": 91,
+                "runtime_seconds": 0.335
+            }
+        }
+    ]
+}

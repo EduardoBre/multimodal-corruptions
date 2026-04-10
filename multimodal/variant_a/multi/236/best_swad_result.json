@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/236",
+        "folder_id": "236",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00043811.JPEG"
+    },
+    "pareto_index": 10,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "gaussian_noise",
+        "img_scale": 0.08142031165696761,
+        "txt_attack": "homophone",
+        "txt_scale": 0.2228478256331735
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.0395,
+        "txt_dist": 0.25664,
+        "txt_sim": 0.74336
+    },
+    "swad_metrics": {
+        "iou_0": 0.65879,
+        "delta_m_plus": 1.0,
+        "phi": 0.714,
+        "swad": 0.714
+    },
+    "l2_distance": 0.25966,
+    "original_prompt": "Identify the objects \"bow, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 183,
+            "ymin": 318,
+            "xmax": 421,
+            "ymax": 756
+        },
+        "bow": {
+            "xmin": 145,
+            "ymin": 315,
+            "xmax": 293,
+            "ymax": 575
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"beau, per son\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [302, 403, 712, 957], \"label\": \"beau, per son\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    302,
+                    403,
+                    712,
+                    957
+                ],
+                "label": "beau, per son"
+            }
+        ],
+        "token_count": 43,
+        "raw_token_count": 80,
+        "runtime_seconds": 0.2897
+    }
+}

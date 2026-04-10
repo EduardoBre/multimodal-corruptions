@@ -1,0 +1,109 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/201",
+        "folder_id": "201",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00009296.JPEG"
+    },
+    "pareto_index": 4,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 14,
+    "total_evaluations": 420,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.020284,
+            "defocus_blur": 0.071474,
+            "motion_blur": 0.174672,
+            "fog_filter": 0.301599,
+            "pixelate": 0.064882,
+            "jpeg_filter": 0.184951
+        },
+        "text_corruptions": {
+            "homophone": 0.011752,
+            "synonym": 0.115404,
+            "ata_saliency": 0.0471,
+            "fragmentation": 0.169838,
+            "character_noise": 0.38157
+        },
+        "img_budget_used": 0.817862,
+        "txt_budget_used": 0.725663,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.10859,
+        "img_dist": 0.11629,
+        "txt_dist": 0.24138,
+        "txt_sim": 0.75862
+    },
+    "swad_metrics": {
+        "iou_0": 0.79565,
+        "delta_m_plus": 0.86352,
+        "phi": 0.6704,
+        "swad": 0.5789
+    },
+    "l2_distance": 0.2891,
+    "original_prompt": "Identify the objects \"microphone\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "microphone": {
+            "xmin": 11,
+            "ymin": 3,
+            "xmax": 130,
+            "ymax": 121
+        },
+        "microphone_1": {
+            "xmin": 263,
+            "ymin": 304,
+            "xmax": 350,
+            "ymax": 473
+        },
+        "microphone_2": {
+            "xmin": 191,
+            "ymin": 230,
+            "xmax": 261,
+            "ymax": 337
+        },
+        "microphone_3": {
+            "xmin": 75,
+            "ymin": 99,
+            "xmax": 198,
+            "ymax": 320
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"m\u0456cr\u200bo\u200dp h\u043en\u200de\u200b\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [32, 12, 472, 984], \"label\": \"m\u0456cr\u200bo\u200dp h\u043en\u200de\u200b\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    32,
+                    12,
+                    472,
+                    984
+                ],
+                "label": "m\u0456cr\u200bo\u200dp h\u043en\u200de\u200b"
+            }
+        ],
+        "token_count": 51,
+        "raw_token_count": 210,
+        "runtime_seconds": 0.7404
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.02028378455616347,
+        "defocus_blur": 0.0714742381122494,
+        "motion_blur": 0.17467201621188996,
+        "fog_filter": 0.30159869036516485,
+        "pixelate": 0.06488213973006236,
+        "jpeg_filter": 0.18495143826953953
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.011751604512377237,
+        "synonym": 0.11540377834669924,
+        "ata_saliency": 0.04709973688978966,
+        "fragmentation": 0.1698381578678006,
+        "character_noise": 0.3815696599252143
+    }
+}

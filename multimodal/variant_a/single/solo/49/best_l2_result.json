@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/49",
+        "folder_id": "49",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00040371.JPEG"
+    },
+    "pareto_index": 9,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 10,
+    "total_evaluations": 285,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.7657019500005791,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.3474149936505314
+    },
+    "objectives": {
+        "iou": 0.00597,
+        "img_dist": 0.03156,
+        "txt_dist": 0.26636,
+        "txt_sim": 0.73364
+    },
+    "swad_metrics": {
+        "iou_0": 0.96986,
+        "delta_m_plus": 0.99384,
+        "phi": 0.71049,
+        "swad": 0.70611
+    },
+    "l2_distance": 0.26829,
+    "original_prompt": "Identify the objects \"car\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "car": {
+            "xmin": 59,
+            "ymin": 169,
+            "xmax": 962,
+            "ymax": 510
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"cav\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [570, 342, 602, 415], \"label\": \"cav\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    570,
+                    342,
+                    602,
+                    415
+                ],
+                "label": "cav"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 44,
+        "runtime_seconds": 0.199
+    }
+}

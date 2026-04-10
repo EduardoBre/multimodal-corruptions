@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/64",
+        "folder_id": "64",
+        "category": "single/solo",
+        "filename": "ILSVRC2013_val_00003066.JPEG"
+    },
+    "pareto_index": 9,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.000786,
+            "defocus_blur": 0.001242,
+            "motion_blur": 0.000256,
+            "fog_filter": 0.03155,
+            "pixelate": 0.18722,
+            "jpeg_filter": 0.129233
+        },
+        "text_corruptions": {
+            "homophone": 0.012218,
+            "synonym": 0.020648,
+            "ata_saliency": 0.095699,
+            "fragmentation": 0.094569,
+            "character_noise": 0.075221
+        },
+        "img_budget_used": 0.350287,
+        "txt_budget_used": 0.298354,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.01343,
+        "img_dist": 0.08771,
+        "txt_dist": 0.36969,
+        "txt_sim": 0.63031
+    },
+    "swad_metrics": {
+        "iou_0": 0.93323,
+        "delta_m_plus": 0.98561,
+        "phi": 0.57503,
+        "swad": 0.56675
+    },
+    "l2_distance": 0.38019,
+    "original_prompt": "Identify the objects \"car\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "car": {
+            "xmin": 154,
+            "ymin": 179,
+            "xmax": 356,
+            "ymax": 281
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"cap\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [520, 520, 550, 570], \"label\": \"cap\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    520,
+                    520,
+                    550,
+                    570
+                ],
+                "label": "cap"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 46,
+        "runtime_seconds": 0.1482
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0007860895152009291,
+        "defocus_blur": 0.0012417034034938393,
+        "motion_blur": 0.0002563612309870794,
+        "fog_filter": 0.03154958288233372,
+        "pixelate": 0.18722006287978826,
+        "jpeg_filter": 0.1292329703782228
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.012218153552719352,
+        "synonym": 0.020647533469212914,
+        "ata_saliency": 0.0956985436678216,
+        "fragmentation": 0.09456903848953759,
+        "character_noise": 0.0752208424895012
+    }
+}

@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/190",
+        "folder_id": "190",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00002547.JPEG"
+    },
+    "pareto_index": 13,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 60,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.8087298670564232,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6604152987243458
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.07163,
+        "txt_dist": 0.25065,
+        "txt_sim": 0.74935
+    },
+    "swad_metrics": {
+        "iou_0": 0.91804,
+        "delta_m_plus": 1.0,
+        "phi": 0.69567,
+        "swad": 0.69567
+    },
+    "l2_distance": 0.26068,
+    "original_prompt": "Identify the objects \"person, trumpet\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 13,
+            "ymin": 69,
+            "xmax": 217,
+            "ymax": 332
+        },
+        "trumpet": {
+            "xmin": 127,
+            "ymin": 174,
+            "xmax": 275,
+            "ymax": 294
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"per son, trumpit\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 214, 552, 1000], \"label\": \"per son, trumpit\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    214,
+                    552,
+                    1000
+                ],
+                "label": "per son, trumpit"
+            }
+        ],
+        "token_count": 42,
+        "raw_token_count": 90,
+        "runtime_seconds": 0.3198
+    }
+}

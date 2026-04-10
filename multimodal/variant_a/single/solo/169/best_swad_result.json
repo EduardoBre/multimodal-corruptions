@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/169",
+        "folder_id": "169",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00042832.JPEG"
+    },
+    "pareto_index": 14,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 4,
+    "total_evaluations": 120,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "gaussian_noise",
+        "img_scale": 0.048078377218281704,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.4014451883233168
+    },
+    "objectives": {
+        "iou": 0.28338,
+        "img_dist": 0.03119,
+        "txt_dist": 0.28491,
+        "txt_sim": 0.71509
+    },
+    "swad_metrics": {
+        "iou_0": 0.92284,
+        "delta_m_plus": 0.69293,
+        "phi": 0.69279,
+        "swad": 0.48005
+    },
+    "l2_distance": 0.40305,
+    "original_prompt": "Identify the objects \"frog\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "frog": {
+            "xmin": 98,
+            "ymin": 89,
+            "xmax": 413,
+            "ymax": 306
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"frfg\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [444, 470, 1000, 997], \"label\": \"frfg\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    444,
+                    470,
+                    1000,
+                    997
+                ],
+                "label": "frfg"
+            }
+        ],
+        "token_count": 41,
+        "raw_token_count": 46,
+        "runtime_seconds": 0.1698
+    }
+}

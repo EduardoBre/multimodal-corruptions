@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/57",
+        "folder_id": "57",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00045450.JPEG"
+    },
+    "pareto_index": 10,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 3,
+    "total_evaluations": 75,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.004798,
+            "defocus_blur": 0.028487,
+            "motion_blur": 0.0077,
+            "fog_filter": 0.043265,
+            "pixelate": 0.032313,
+            "jpeg_filter": 0.095297
+        },
+        "text_corruptions": {
+            "homophone": 0.054692,
+            "synonym": 0.07471,
+            "ata_saliency": 0.155292,
+            "fragmentation": 0.018909,
+            "character_noise": 0.026774
+        },
+        "img_budget_used": 0.211861,
+        "txt_budget_used": 0.330377,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.33239,
+        "img_dist": 0.08708,
+        "txt_dist": 0.14523,
+        "txt_sim": 0.85477
+    },
+    "swad_metrics": {
+        "iou_0": 0.94861,
+        "delta_m_plus": 0.6496,
+        "phi": 0.78034,
+        "swad": 0.50691
+    },
+    "l2_distance": 0.37304,
+    "original_prompt": "Identify the objects \"spatula\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "spatula": {
+            "xmin": 214,
+            "ymin": 10,
+            "xmax": 300,
+            "ymax": 293
+        },
+        "spatula_1": {
+            "xmin": 8,
+            "ymin": 6,
+            "xmax": 227,
+            "ymax": 261
+        },
+        "spatula_2": {
+            "xmin": 280,
+            "ymin": 39,
+            "xmax": 490,
+            "ymax": 271
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"spatul a\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [12, 27, 448, 863], \"label\": \"spatul a\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    12,
+                    27,
+                    448,
+                    863
+                ],
+                "label": "spatul a"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 127,
+        "runtime_seconds": 0.394
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.00479789815198027,
+        "defocus_blur": 0.02848719454796936,
+        "motion_blur": 0.007700282623904653,
+        "fog_filter": 0.04326503009105615,
+        "pixelate": 0.03231302352181909,
+        "jpeg_filter": 0.09529727337981575
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.05469169393523095,
+        "synonym": 0.07471045910423864,
+        "ata_saliency": 0.15529178370387098,
+        "fragmentation": 0.018909186694812053,
+        "character_noise": 0.026774150915315757
+    }
+}

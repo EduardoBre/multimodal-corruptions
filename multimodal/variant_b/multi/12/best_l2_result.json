@@ -1,0 +1,109 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/12",
+        "folder_id": "12",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00026732.JPEG"
+    },
+    "pareto_index": 8,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.098102,
+            "defocus_blur": 0.009927,
+            "motion_blur": 0.109217,
+            "fog_filter": 0.00715,
+            "pixelate": 0.010243,
+            "jpeg_filter": 0.090384
+        },
+        "text_corruptions": {
+            "homophone": 0.045886,
+            "synonym": 0.038613,
+            "ata_saliency": 0.090755,
+            "fragmentation": 0.07523,
+            "character_noise": 0.012214
+        },
+        "img_budget_used": 0.325022,
+        "txt_budget_used": 0.262698,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.0892,
+        "txt_dist": 0.23009,
+        "txt_sim": 0.76991
+    },
+    "swad_metrics": {
+        "iou_0": 0.64246,
+        "delta_m_plus": 1.0,
+        "phi": 0.70123,
+        "swad": 0.70123
+    },
+    "l2_distance": 0.24678,
+    "original_prompt": "Identify the objects \"cart, hat with a wide brim, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 503,
+            "ymin": 112,
+            "xmax": 550,
+            "ymax": 161
+        },
+        "person_1": {
+            "xmin": 502,
+            "ymin": 112,
+            "xmax": 546,
+            "ymax": 176
+        },
+        "hat with a wide brim": {
+            "xmin": 505,
+            "ymin": 116,
+            "xmax": 547,
+            "ymax": 143
+        },
+        "cart": {
+            "xmin": 232,
+            "ymin": 141,
+            "xmax": 607,
+            "ymax": 376
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"cant\u200b, h\u200dat w\u200bitp a w\u0443de brmi, person\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [678, 242, 725, 309], \"label\": \"cant\u200b, h\u200dat w\u200bitp a w\u0443de brmi, person\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    678,
+                    242,
+                    725,
+                    309
+                ],
+                "label": "cant\u200b, h\u200dat w\u200bitp a w\u0443de brmi, person"
+            }
+        ],
+        "token_count": 57,
+        "raw_token_count": 151,
+        "runtime_seconds": 0.5513
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.09810203740566097,
+        "defocus_blur": 0.009926801521832392,
+        "motion_blur": 0.10921713652863926,
+        "fog_filter": 0.0071495726713332736,
+        "pixelate": 0.010242674560877716,
+        "jpeg_filter": 0.09038358996511225
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.04588635236223587,
+        "synonym": 0.03861257317493488,
+        "ata_saliency": 0.09075482012636457,
+        "fragmentation": 0.07523014526329384,
+        "character_noise": 0.012214467090999074
+    }
+}

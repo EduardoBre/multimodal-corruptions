@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/103",
+        "folder_id": "103",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00003673.JPEG"
+    },
+    "pareto_index": 2,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.029129,
+            "defocus_blur": 0.140459,
+            "motion_blur": 0.230251,
+            "fog_filter": 0.014052,
+            "pixelate": 0.008197,
+            "jpeg_filter": 0.060336
+        },
+        "text_corruptions": {
+            "homophone": 0.164008,
+            "synonym": 0.01216,
+            "ata_saliency": 0.012661,
+            "fragmentation": 0.044086,
+            "character_noise": 0.003451
+        },
+        "img_budget_used": 0.482424,
+        "txt_budget_used": 0.236366,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.08664,
+        "txt_dist": 0.17992,
+        "txt_sim": 0.82008
+    },
+    "swad_metrics": {
+        "iou_0": 0.87792,
+        "delta_m_plus": 1.0,
+        "phi": 0.74903,
+        "swad": 0.74903
+    },
+    "l2_distance": 0.19969,
+    "original_prompt": "Identify the objects \"iPod, purse\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "purse": {
+            "xmin": 104,
+            "ymin": 69,
+            "xmax": 408,
+            "ymax": 297
+        },
+        "iPod": {
+            "xmin": 223,
+            "ymin": 128,
+            "xmax": 402,
+            "ymax": 284
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"iPod\u200d, pur s\u200de\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [442, 338, 800, 740], \"label\": \"iPod\u200d, pur s\u200de\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    442,
+                    338,
+                    800,
+                    740
+                ],
+                "label": "iPod\u200d, pur s\u200de"
+            }
+        ],
+        "token_count": 48,
+        "raw_token_count": 95,
+        "runtime_seconds": 0.3085
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.029129289629679582,
+        "defocus_blur": 0.14045900364937355,
+        "motion_blur": 0.2302509106721251,
+        "fog_filter": 0.014052042252507084,
+        "pixelate": 0.008196815844324554,
+        "jpeg_filter": 0.060335920132150306
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.16400828743075485,
+        "synonym": 0.012160471036170158,
+        "ata_saliency": 0.012660678163911684,
+        "fragmentation": 0.044085638373967916,
+        "character_noise": 0.003451391722588746
+    }
+}

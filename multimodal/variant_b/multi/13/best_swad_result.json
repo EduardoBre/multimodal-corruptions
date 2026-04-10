@@ -1,0 +1,115 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/13",
+        "folder_id": "13",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00044999.JPEG"
+    },
+    "pareto_index": 3,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 60,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.047614,
+            "defocus_blur": 0.149035,
+            "motion_blur": 0.006326,
+            "fog_filter": 0.071181,
+            "pixelate": 0.011217,
+            "jpeg_filter": 0.162513
+        },
+        "text_corruptions": {
+            "homophone": 0.015877,
+            "synonym": 0.025375,
+            "ata_saliency": 0.017012,
+            "fragmentation": 0.170634,
+            "character_noise": 0.17436
+        },
+        "img_budget_used": 0.447887,
+        "txt_budget_used": 0.403258,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.00246,
+        "img_dist": 0.10275,
+        "txt_dist": 0.33728,
+        "txt_sim": 0.66272
+    },
+    "swad_metrics": {
+        "iou_0": 0.63501,
+        "delta_m_plus": 0.99613,
+        "phi": 0.59463,
+        "swad": 0.59232
+    },
+    "l2_distance": 0.35259,
+    "original_prompt": "Identify the objects \"antelope, bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 58,
+            "ymin": 88,
+            "xmax": 129,
+            "ymax": 202
+        },
+        "bird_1": {
+            "xmin": 302,
+            "ymin": 157,
+            "xmax": 346,
+            "ymax": 287
+        },
+        "bird_2": {
+            "xmin": 354,
+            "ymin": 179,
+            "xmax": 445,
+            "ymax": 276
+        },
+        "antelope": {
+            "xmin": 167,
+            "ymin": 121,
+            "xmax": 216,
+            "ymax": 167
+        },
+        "antelope_1": {
+            "xmin": 177,
+            "ymin": 146,
+            "xmax": 337,
+            "ymax": 205
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"\u0430nt\u0435l\u200bo\u200dpe\u200d, b\u0456 rd\u200b\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [300, 458, 362, 548], \"label\": \"\u0430nt\u0435l\u200bo\u200dpe\u200d, b\u0456 rd\u200b\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    300,
+                    458,
+                    362,
+                    548
+                ],
+                "label": "\u0430nt\u0435l\u200bo\u200dpe\u200d, b\u0456 rd\u200b"
+            }
+        ],
+        "token_count": 54,
+        "raw_token_count": 183,
+        "runtime_seconds": 0.6714
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.047614198932427416,
+        "defocus_blur": 0.1490354112786389,
+        "motion_blur": 0.006326247769008437,
+        "fog_filter": 0.07118083898427793,
+        "pixelate": 0.011217412658030376,
+        "jpeg_filter": 0.16251298507160133
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.015877211766711335,
+        "synonym": 0.025374945069032446,
+        "ata_saliency": 0.017011507957170068,
+        "fragmentation": 0.17063402015428608,
+        "character_noise": 0.17436029912258566
+    }
+}

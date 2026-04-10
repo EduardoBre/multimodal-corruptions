@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/68",
+        "folder_id": "68",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00036218.JPEG"
+    },
+    "pareto_index": 25,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 4,
+    "total_evaluations": 120,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.0006227240542299173,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6128264542146515
+    },
+    "objectives": {
+        "iou": 0.25167,
+        "img_dist": 0.08701,
+        "txt_dist": 0.22951,
+        "txt_sim": 0.77049
+    },
+    "swad_metrics": {
+        "iou_0": 0.87429,
+        "delta_m_plus": 0.71214,
+        "phi": 0.70345,
+        "swad": 0.50096
+    },
+    "l2_distance": 0.35154,
+    "original_prompt": "Identify the objects \"backpack, bench, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bench": {
+            "xmin": 52,
+            "ymin": 163,
+            "xmax": 375,
+            "ymax": 367
+        },
+        "person": {
+            "xmin": 143,
+            "ymin": 86,
+            "xmax": 326,
+            "ymax": 363
+        },
+        "backpack": {
+            "xmin": 177,
+            "ymin": 184,
+            "xmax": 250,
+            "ymax": 228
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"backpak, bunch, purse on\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [365, 514, 500, 624], \"label\": \"backpak\"},\n\t{\"bbox_2d\": [365, 514, 500, 624], \"label\": \"bunch\"},\n\t{\"bbox_2d\": [365, 514, 500, 624], \"label\": \"purse on\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    365,
+                    514,
+                    500,
+                    624
+                ],
+                "label": "backpak"
+            },
+            {
+                "bbox_2d": [
+                    365,
+                    514,
+                    500,
+                    624
+                ],
+                "label": "bunch"
+            },
+            {
+                "bbox_2d": [
+                    365,
+                    514,
+                    500,
+                    624
+                ],
+                "label": "purse on"
+            }
+        ],
+        "token_count": 109,
+        "raw_token_count": 146,
+        "runtime_seconds": 0.495
+    }
+}

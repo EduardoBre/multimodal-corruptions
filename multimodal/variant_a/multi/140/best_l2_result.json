@@ -1,0 +1,127 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/140",
+        "folder_id": "140",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00049063.JPEG"
+    },
+    "pareto_index": 4,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.9316177058680379,
+        "txt_attack": "homophone",
+        "txt_scale": 0.9948250792623392
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.0629,
+        "txt_dist": 0.26447,
+        "txt_sim": 0.73553
+    },
+    "swad_metrics": {
+        "iou_0": 0.90517,
+        "delta_m_plus": 1.0,
+        "phi": 0.68927,
+        "swad": 0.68927
+    },
+    "l2_distance": 0.27185,
+    "original_prompt": "Identify the objects \"dog, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 402,
+            "ymin": 2,
+            "xmax": 499,
+            "ymax": 305
+        },
+        "person_1": {
+            "xmin": 66,
+            "ymin": 0,
+            "xmax": 165,
+            "ymax": 209
+        },
+        "person_2": {
+            "xmin": 0,
+            "ymin": 1,
+            "xmax": 55,
+            "ymax": 339
+        },
+        "dog": {
+            "xmin": 11,
+            "ymin": 150,
+            "xmax": 112,
+            "ymax": 336
+        },
+        "dog_1": {
+            "xmin": 90,
+            "ymin": 52,
+            "xmax": 465,
+            "ymax": 320
+        },
+        "person_3": {
+            "xmin": 233,
+            "ymin": 0,
+            "xmax": 306,
+            "ymax": 68
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"doug, per son\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [148, 130, 950, 943], \"label\": \"doug, per son\"},\n\t{\"bbox_2d\": [0, 0, 90, 997], \"label\": \"doug, per son\"},\n\t{\"bbox_2d\": [800, 0, 1000, 875], \"label\": \"doug, per son\"},\n\t{\"bbox_2d\": [198, 0, 312, 597], \"label\": \"doug, per son\"},\n\t{\"bbox_2d\": [458, 0, 620, 180], \"label\": \"doug, per son\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    148,
+                    130,
+                    950,
+                    943
+                ],
+                "label": "doug, per son"
+            },
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    90,
+                    997
+                ],
+                "label": "doug, per son"
+            },
+            {
+                "bbox_2d": [
+                    800,
+                    0,
+                    1000,
+                    875
+                ],
+                "label": "doug, per son"
+            },
+            {
+                "bbox_2d": [
+                    198,
+                    0,
+                    312,
+                    597
+                ],
+                "label": "doug, per son"
+            },
+            {
+                "bbox_2d": [
+                    458,
+                    0,
+                    620,
+                    180
+                ],
+                "label": "doug, per son"
+            }
+        ],
+        "token_count": 181,
+        "raw_token_count": 215,
+        "runtime_seconds": 0.7186
+    }
+}

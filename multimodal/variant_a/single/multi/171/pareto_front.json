@@ -1,0 +1,413 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/single/multi/171",
+        "folder_id": "171",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00045626.JPEG"
+    },
+    "original_prompt": "Identify the objects \"monkey\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "monkey": {
+            "xmin": 46,
+            "ymin": 67,
+            "xmax": 191,
+            "ymax": 309
+        },
+        "monkey_1": {
+            "xmin": 193,
+            "ymin": 59,
+            "xmax": 406,
+            "ymax": 224
+        },
+        "monkey_2": {
+            "xmin": 422,
+            "ymin": 115,
+            "xmax": 499,
+            "ymax": 236
+        }
+    },
+    "baseline_iou": 0.53477,
+    "swad_star": 0.77936,
+    "swad_star_index": 6,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 60,
+    "skipped_evaluations": 30,
+    "n_solutions": 8,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.8632061743184387,
+                "txt_attack": "synonym",
+                "txt_scale": 0.7724979474714236
+            },
+            "objectives": {
+                "iou": 0.45766,
+                "img_dist": 0.17594,
+                "txt_dist": 0.074,
+                "txt_sim": 0.926
+            },
+            "swad_metrics": {
+                "iou_0": 0.53477,
+                "delta_m_plus": 0.14419,
+                "phi": 0.76308,
+                "swad": 0.11003
+            },
+            "l2_distance": 0.49587,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"macaque\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [355, 163, 857, 677], \"label\": \"macaque\"},\n\t{\"bbox_2d\": [87, 256, 355, 707], \"label\": \"macaque\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            355,
+                            163,
+                            857,
+                            677
+                        ],
+                        "label": "macaque"
+                    },
+                    {
+                        "bbox_2d": [
+                            87,
+                            256,
+                            355,
+                            707
+                        ],
+                        "label": "macaque"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 78,
+                "runtime_seconds": 0.2644
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.018153363333776373,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.24927259019092207
+            },
+            "objectives": {
+                "iou": 0.50148,
+                "img_dist": 0.02717,
+                "txt_dist": 0.16263,
+                "txt_sim": 0.83737
+            },
+            "swad_metrics": {
+                "iou_0": 0.53477,
+                "delta_m_plus": 0.06225,
+                "phi": 0.81462,
+                "swad": 0.05071
+            },
+            "l2_distance": 0.52789,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"monke\u0443\u200b\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [349, 164, 830, 708], \"label\": \"monke\u0443\u200b\"},\n\t{\"bbox_2d\": [89, 258, 367, 800], \"label\": \"monke\u0443\u200b\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            349,
+                            164,
+                            830,
+                            708
+                        ],
+                        "label": "monke\u0443\u200b"
+                    },
+                    {
+                        "bbox_2d": [
+                            89,
+                            258,
+                            367,
+                            800
+                        ],
+                        "label": "monke\u0443\u200b"
+                    }
+                ],
+                "token_count": 77,
+                "raw_token_count": 78,
+                "runtime_seconds": 0.2644
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.50415,
+                "img_dist": 0.02717,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.53477,
+                "delta_m_plus": 0.05726,
+                "phi": 0.97283,
+                "swad": 0.0557
+            },
+            "l2_distance": 0.50488,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"monkey\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [348, 164, 830, 708], \"label\": \"monkey\"},\n\t{\"bbox_2d\": [87, 258, 368, 808], \"label\": \"monkey\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            348,
+                            164,
+                            830,
+                            708
+                        ],
+                        "label": "monkey"
+                    },
+                    {
+                        "bbox_2d": [
+                            87,
+                            258,
+                            368,
+                            808
+                        ],
+                        "label": "monkey"
+                    }
+                ],
+                "token_count": 71,
+                "raw_token_count": 78,
+                "runtime_seconds": 0.2644
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.03732619454213726,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.33647038540361596
+            },
+            "objectives": {
+                "iou": 0.5256,
+                "img_dist": 0.01823,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.53477,
+                "delta_m_plus": 0.01715,
+                "phi": 0.98177,
+                "swad": 0.01683
+            },
+            "l2_distance": 0.52592,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"monkey\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [85, 257, 365, 830], \"label\": \"monkey\"},\n\t{\"bbox_2d\": [350, 160, 825, 680], \"label\": \"monkey\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            85,
+                            257,
+                            365,
+                            830
+                        ],
+                        "label": "monkey"
+                    },
+                    {
+                        "bbox_2d": [
+                            350,
+                            160,
+                            825,
+                            680
+                        ],
+                        "label": "monkey"
+                    }
+                ],
+                "token_count": 71,
+                "raw_token_count": 96,
+                "runtime_seconds": 0.3643
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.6213450499591809,
+                "txt_attack": "synonym",
+                "txt_scale": 0.7933036501430749
+            },
+            "objectives": {
+                "iou": 0.49042,
+                "img_dist": 0.13685,
+                "txt_dist": 0.074,
+                "txt_sim": 0.926
+            },
+            "swad_metrics": {
+                "iou_0": 0.53477,
+                "delta_m_plus": 0.08293,
+                "phi": 0.79928,
+                "swad": 0.06629
+            },
+            "l2_distance": 0.51451,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"macaque\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [357, 167, 825, 680], \"label\": \"macaque\"},\n\t{\"bbox_2d\": [90, 259, 375, 720], \"label\": \"macaque\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            357,
+                            167,
+                            825,
+                            680
+                        ],
+                        "label": "macaque"
+                    },
+                    {
+                        "bbox_2d": [
+                            90,
+                            259,
+                            375,
+                            720
+                        ],
+                        "label": "macaque"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 96,
+                "runtime_seconds": 0.3643
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.6378466618245258,
+                "txt_attack": "synonym",
+                "txt_scale": 0.7933036501430749
+            },
+            "objectives": {
+                "iou": 0.47548,
+                "img_dist": 0.14013,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.53477,
+                "delta_m_plus": 0.11087,
+                "phi": 0.85987,
+                "swad": 0.09533
+            },
+            "l2_distance": 0.4957,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"monkey\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [357, 158, 833, 677], \"label\": \"monkey\"},\n\t{\"bbox_2d\": [89, 256, 373, 700], \"label\": \"monkey\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            357,
+                            158,
+                            833,
+                            677
+                        ],
+                        "label": "monkey"
+                    },
+                    {
+                        "bbox_2d": [
+                            89,
+                            256,
+                            373,
+                            700
+                        ],
+                        "label": "monkey"
+                    }
+                ],
+                "token_count": 71,
+                "raw_token_count": 76,
+                "runtime_seconds": 0.2613
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.0009231312313034423,
+                "txt_attack": "homophone",
+                "txt_scale": 0.9948250792623392
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.02717,
+                "txt_dist": 0.19887,
+                "txt_sim": 0.80113
+            },
+            "swad_metrics": {
+                "iou_0": 0.53477,
+                "delta_m_plus": 1.0,
+                "phi": 0.77936,
+                "swad": 0.77936
+            },
+            "l2_distance": 0.20072,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"donkey\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "There is no object matching the query \"donkey\" in the image.",
+                "parsed_predictions": [],
+                "token_count": 15,
+                "raw_token_count": 76,
+                "runtime_seconds": 0.268
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8588402587860329,
+                "txt_attack": "homophone",
+                "txt_scale": 0.11866645270063259
+            },
+            "objectives": {
+                "iou": 0.49877,
+                "img_dist": 0.04825,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.53477,
+                "delta_m_plus": 0.06732,
+                "phi": 0.95175,
+                "swad": 0.06407
+            },
+            "l2_distance": 0.5011,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"monkey\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [352, 158, 835, 670], \"label\": \"monkey\"},\n\t{\"bbox_2d\": [85, 250, 367, 760], \"label\": \"monkey\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            352,
+                            158,
+                            835,
+                            670
+                        ],
+                        "label": "monkey"
+                    },
+                    {
+                        "bbox_2d": [
+                            85,
+                            250,
+                            367,
+                            760
+                        ],
+                        "label": "monkey"
+                    }
+                ],
+                "token_count": 71,
+                "raw_token_count": 76,
+                "runtime_seconds": 0.268
+            }
+        }
+    ]
+}

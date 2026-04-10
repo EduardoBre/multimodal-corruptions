@@ -1,0 +1,349 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/single/multi/19",
+        "folder_id": "19",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00002006.JPEG"
+    },
+    "original_prompt": "Identify the objects \"swine\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "swine": {
+            "xmin": 151,
+            "ymin": 149,
+            "xmax": 219,
+            "ymax": 297
+        },
+        "swine_1": {
+            "xmin": 254,
+            "ymin": 147,
+            "xmax": 337,
+            "ymax": 273
+        }
+    },
+    "baseline_iou": 0.97975,
+    "swad_star": 0.64918,
+    "swad_star_index": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 7,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.018153363333776373,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.24927259019092207
+            },
+            "objectives": {
+                "iou": 0.9739,
+                "img_dist": 0.02849,
+                "txt_dist": 0.06461,
+                "txt_sim": 0.93539
+            },
+            "swad_metrics": {
+                "iou_0": 0.97975,
+                "delta_m_plus": 0.00597,
+                "phi": 0.90874,
+                "swad": 0.00543
+            },
+            "l2_distance": 0.97646,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"sw\u0456ne\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [300, 447, 438, 897], \"label\": \"sw\u0456ne\"},\n\t{\"bbox_2d\": [508, 437, 673, 823], \"label\": \"sw\u0456ne\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            300,
+                            447,
+                            438,
+                            897
+                        ],
+                        "label": "sw\u0456ne"
+                    },
+                    {
+                        "bbox_2d": [
+                            508,
+                            437,
+                            673,
+                            823
+                        ],
+                        "label": "sw\u0456ne"
+                    }
+                ],
+                "token_count": 76,
+                "raw_token_count": 81,
+                "runtime_seconds": 0.2867
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.3997956906557353,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.647636093318414
+            },
+            "objectives": {
+                "iou": 0.06181,
+                "img_dist": 0.0394,
+                "txt_dist": 0.27869,
+                "txt_sim": 0.72131
+            },
+            "swad_metrics": {
+                "iou_0": 0.97975,
+                "delta_m_plus": 0.93691,
+                "phi": 0.69289,
+                "swad": 0.64918
+            },
+            "l2_distance": 0.28817,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"swnie\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 1000, 997], \"label\": \"swnie\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            997
+                        ],
+                        "label": "swnie"
+                    }
+                ],
+                "token_count": 38,
+                "raw_token_count": 81,
+                "runtime_seconds": 0.2867
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.9777,
+                "img_dist": 0.02849,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.97975,
+                "delta_m_plus": 0.00209,
+                "phi": 0.97151,
+                "swad": 0.00203
+            },
+            "l2_distance": 0.97812,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"swine\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [300, 447, 438, 897], \"label\": \"swine\"},\n\t{\"bbox_2d\": [508, 437, 673, 820], \"label\": \"swine\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            300,
+                            447,
+                            438,
+                            897
+                        ],
+                        "label": "swine"
+                    },
+                    {
+                        "bbox_2d": [
+                            508,
+                            437,
+                            673,
+                            820
+                        ],
+                        "label": "swine"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 81,
+                "runtime_seconds": 0.2867
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6124377601560459,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.90588,
+                "img_dist": 0.06872,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.97975,
+                "delta_m_plus": 0.0754,
+                "phi": 0.93128,
+                "swad": 0.07022
+            },
+            "l2_distance": 0.90848,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"swine\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [298, 438, 442, 896], \"label\": \"swine\"},\n\t{\"bbox_2d\": [498, 426, 672, 820], \"label\": \"swine\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            298,
+                            438,
+                            442,
+                            896
+                        ],
+                        "label": "swine"
+                    },
+                    {
+                        "bbox_2d": [
+                            498,
+                            426,
+                            672,
+                            820
+                        ],
+                        "label": "swine"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 81,
+                "runtime_seconds": 0.2867
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.307337327911573,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.95082,
+                "img_dist": 0.03389,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.97975,
+                "delta_m_plus": 0.02953,
+                "phi": 0.96611,
+                "swad": 0.02853
+            },
+            "l2_distance": 0.95142,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"swine\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [298, 447, 436, 893], \"label\": \"swine\"},\n\t{\"bbox_2d\": [502, 437, 673, 820], \"label\": \"swine\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            298,
+                            447,
+                            436,
+                            893
+                        ],
+                        "label": "swine"
+                    },
+                    {
+                        "bbox_2d": [
+                            502,
+                            437,
+                            673,
+                            820
+                        ],
+                        "label": "swine"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 81,
+                "runtime_seconds": 0.2867
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.018595721213425453,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6130568625347235
+            },
+            "objectives": {
+                "iou": 0.96365,
+                "img_dist": 0.03293,
+                "txt_dist": 0.19383,
+                "txt_sim": 0.80617
+            },
+            "swad_metrics": {
+                "iou_0": 0.97975,
+                "delta_m_plus": 0.01643,
+                "phi": 0.77962,
+                "swad": 0.01281
+            },
+            "l2_distance": 0.9835,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"swini\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [302, 453, 440, 896], \"label\": \"swini\"},\n\t{\"bbox_2d\": [506, 437, 675, 823], \"label\": \"swini\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            302,
+                            453,
+                            440,
+                            896
+                        ],
+                        "label": "swini"
+                    },
+                    {
+                        "bbox_2d": [
+                            506,
+                            437,
+                            675,
+                            823
+                        ],
+                        "label": "swini"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 81,
+                "runtime_seconds": 0.2867
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.06688,
+                "txt_dist": 0.37297,
+                "txt_sim": 0.62703
+            },
+            "swad_metrics": {
+                "iou_0": 0.97975,
+                "delta_m_plus": 1.0,
+                "phi": 0.58509,
+                "swad": 0.58509
+            },
+            "l2_distance": 0.37892,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"s wine\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "There is no object matching the query \"s wine\" in the image. The image shows two animals, likely wolves, walking in a snowy landscape. No wine or related objects are present. Therefore, the bounding boxes cannot be provided.",
+                "parsed_predictions": [],
+                "token_count": 47,
+                "raw_token_count": 81,
+                "runtime_seconds": 0.2867
+            }
+        }
+    ]
+}

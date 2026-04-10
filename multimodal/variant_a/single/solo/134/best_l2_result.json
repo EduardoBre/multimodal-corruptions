@@ -1,0 +1,70 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/134",
+        "folder_id": "134",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00048104.JPEG"
+    },
+    "pareto_index": 0,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.8181617493544074,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.41721849968957336
+    },
+    "objectives": {
+        "iou": 0.25131,
+        "img_dist": 0.08149,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.9684,
+        "delta_m_plus": 0.74049,
+        "phi": 0.91851,
+        "swad": 0.68015
+    },
+    "l2_distance": 0.26419,
+    "original_prompt": "Identify the objects \"lizard\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "lizard": {
+            "xmin": 119,
+            "ymin": 95,
+            "xmax": 499,
+            "ymax": 242
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"lizard\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [494, 420, 816, 650], \"label\": \"lizard\"},\n\t{\"bbox_2d\": [220, 378, 542, 628], \"label\": \"lizard\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    494,
+                    420,
+                    816,
+                    650
+                ],
+                "label": "lizard"
+            },
+            {
+                "bbox_2d": [
+                    220,
+                    378,
+                    542,
+                    628
+                ],
+                "label": "lizard"
+            }
+        ],
+        "token_count": 74,
+        "raw_token_count": 75,
+        "runtime_seconds": 0.2371
+    }
+}

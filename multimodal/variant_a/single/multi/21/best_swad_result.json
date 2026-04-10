@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/21",
+        "folder_id": "21",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00043092.JPEG"
+    },
+    "pareto_index": 2,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.8238088616141359,
+        "txt_attack": "homophone",
+        "txt_scale": 0.7277231855677722
+    },
+    "objectives": {
+        "iou": 0.42668,
+        "img_dist": 0.09945,
+        "txt_dist": 0.09608,
+        "txt_sim": 0.90392
+    },
+    "swad_metrics": {
+        "iou_0": 0.92233,
+        "delta_m_plus": 0.53739,
+        "phi": 0.81403,
+        "swad": 0.43745
+    },
+    "l2_distance": 0.44853,
+    "original_prompt": "Identify the objects \"salt or pepper shaker\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "salt or pepper shaker": {
+            "xmin": 211,
+            "ymin": 106,
+            "xmax": 329,
+            "ymax": 320
+        },
+        "salt or pepper shaker_1": {
+            "xmin": 357,
+            "ymin": 99,
+            "xmax": 487,
+            "ymax": 326
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"salter pepper shaker\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [690, 267, 980, 900], \"label\": \"salter pepper shaker\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    690,
+                    267,
+                    980,
+                    900
+                ],
+                "label": "salter pepper shaker"
+            }
+        ],
+        "token_count": 43,
+        "raw_token_count": 135,
+        "runtime_seconds": 0.5466
+    }
+}

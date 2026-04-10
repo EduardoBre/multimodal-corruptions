@@ -1,0 +1,100 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/40",
+        "folder_id": "40",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00023347.JPEG"
+    },
+    "pareto_index": 12,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.00447,
+            "defocus_blur": 0.020059,
+            "motion_blur": 0.011207,
+            "fog_filter": 0.002894,
+            "pixelate": 0.048329,
+            "jpeg_filter": 0.323678
+        },
+        "text_corruptions": {
+            "homophone": 0.076354,
+            "synonym": 0.01355,
+            "ata_saliency": 0.266251,
+            "fragmentation": 0.018871,
+            "character_noise": 0.06222
+        },
+        "img_budget_used": 0.410638,
+        "txt_budget_used": 0.437246,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.07674,
+        "txt_dist": 0.3034,
+        "txt_sim": 0.6966
+    },
+    "swad_metrics": {
+        "iou_0": 0.9875,
+        "delta_m_plus": 1.0,
+        "phi": 0.64314,
+        "swad": 0.64314
+    },
+    "l2_distance": 0.31295,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 129,
+            "ymin": 3,
+            "xmax": 369,
+            "ymax": 398
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"birn\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [848, 174, 958, 274], \"label\": \"birn\"},\n\t{\"bbox_2d\": [68, 274, 178, 358], \"label\": \"birn\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    848,
+                    174,
+                    958,
+                    274
+                ],
+                "label": "birn"
+            },
+            {
+                "bbox_2d": [
+                    68,
+                    274,
+                    178,
+                    358
+                ],
+                "label": "birn"
+            }
+        ],
+        "token_count": 73,
+        "raw_token_count": 86,
+        "runtime_seconds": 0.2787
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.004469704457417032,
+        "defocus_blur": 0.02005937824412182,
+        "motion_blur": 0.011207163501951223,
+        "fog_filter": 0.002894484279600553,
+        "pixelate": 0.04832894267145252,
+        "jpeg_filter": 0.3236783688864917
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.07635354788424652,
+        "synonym": 0.013550299013817161,
+        "ata_saliency": 0.2662506791458446,
+        "fragmentation": 0.018870787067118974,
+        "character_noise": 0.062220311884317335
+    }
+}

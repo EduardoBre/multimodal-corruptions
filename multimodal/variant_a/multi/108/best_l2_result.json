@@ -1,0 +1,73 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/108",
+        "folder_id": "108",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00046459.JPEG"
+    },
+    "pareto_index": 13,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 45,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.7993761246703271,
+        "txt_attack": "homophone",
+        "txt_scale": 0.3273709769105356
+    },
+    "objectives": {
+        "iou": 0.25319,
+        "img_dist": 0.08198,
+        "txt_dist": 0.11836,
+        "txt_sim": 0.88164
+    },
+    "swad_metrics": {
+        "iou_0": 0.67168,
+        "delta_m_plus": 0.62305,
+        "phi": 0.80936,
+        "swad": 0.50428
+    },
+    "l2_distance": 0.29126,
+    "original_prompt": "Identify the objects \"bicycle, tie, water bottle\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "tie": {
+            "xmin": 212,
+            "ymin": 151,
+            "xmax": 249,
+            "ymax": 261
+        },
+        "bicycle": {
+            "xmin": 371,
+            "ymin": 92,
+            "xmax": 489,
+            "ymax": 363
+        },
+        "water bottle": {
+            "xmin": 241,
+            "ymin": 188,
+            "xmax": 324,
+            "ymax": 314
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bi sickle, tie, water bottle\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [500, 499, 630, 829], \"label\": \"water bottle\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    500,
+                    499,
+                    630,
+                    829
+                ],
+                "label": "water bottle"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 157,
+        "runtime_seconds": 0.5722
+    }
+}

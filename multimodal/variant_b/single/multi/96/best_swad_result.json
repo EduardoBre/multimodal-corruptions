@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/96",
+        "folder_id": "96",
+        "category": "single/multi",
+        "filename": "ILSVRC2013_val_00001017.JPEG"
+    },
+    "pareto_index": 2,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 7,
+    "total_evaluations": 195,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.009534,
+            "defocus_blur": 0.097552,
+            "motion_blur": 0.111456,
+            "fog_filter": 0.000982,
+            "pixelate": 0.053592,
+            "jpeg_filter": 0.004341
+        },
+        "text_corruptions": {
+            "homophone": 0.070969,
+            "synonym": 0.091376,
+            "ata_saliency": 0.061808,
+            "fragmentation": 0.129059,
+            "character_noise": 0.045197
+        },
+        "img_budget_used": 0.277457,
+        "txt_budget_used": 0.398409,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.00716,
+        "img_dist": 0.10101,
+        "txt_dist": 0.41843,
+        "txt_sim": 0.58157
+    },
+    "swad_metrics": {
+        "iou_0": 0.90679,
+        "delta_m_plus": 0.9921,
+        "phi": 0.52283,
+        "swad": 0.5187
+    },
+    "l2_distance": 0.43051,
+    "original_prompt": "Identify the objects \"person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 365,
+            "ymin": 145,
+            "xmax": 480,
+            "ymax": 441
+        },
+        "person_1": {
+            "xmin": 12,
+            "ymin": 13,
+            "xmax": 431,
+            "ymax": 487
+        },
+        "person_2": {
+            "xmin": 15,
+            "ymin": 112,
+            "xmax": 67,
+            "ymax": 358
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"hu\u200dmax\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [916, 422, 950, 508], \"label\": \"hu\u200dmax\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    916,
+                    422,
+                    950,
+                    508
+                ],
+                "label": "hu\u200dmax"
+            }
+        ],
+        "token_count": 42,
+        "raw_token_count": 136,
+        "runtime_seconds": 0.4463
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.009534086151831735,
+        "defocus_blur": 0.09755194420969644,
+        "motion_blur": 0.11145557469383666,
+        "fog_filter": 0.0009821895472223873,
+        "pixelate": 0.05359222241362266,
+        "jpeg_filter": 0.004340758653238984
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.07096866540394134,
+        "synonym": 0.09137552510406834,
+        "ata_saliency": 0.061807788469221935,
+        "fragmentation": 0.12905922559606386,
+        "character_noise": 0.04519741212622239
+    }
+}

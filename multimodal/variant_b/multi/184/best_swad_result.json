@@ -1,0 +1,106 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/184",
+        "folder_id": "184",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00012279.JPEG"
+    },
+    "pareto_index": 1,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.023291,
+            "defocus_blur": 0.026756,
+            "motion_blur": 0.217978,
+            "fog_filter": 0.115279,
+            "pixelate": 0.145692,
+            "jpeg_filter": 0.070926
+        },
+        "text_corruptions": {
+            "homophone": 0.338612,
+            "synonym": 0.164054,
+            "ata_saliency": 0.327664,
+            "fragmentation": 0.025174,
+            "character_noise": 0.136328
+        },
+        "img_budget_used": 0.599921,
+        "txt_budget_used": 0.991832,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.09383,
+        "txt_dist": 0.14635,
+        "txt_sim": 0.85365
+    },
+    "swad_metrics": {
+        "iou_0": 0.97016,
+        "delta_m_plus": 1.0,
+        "phi": 0.77355,
+        "swad": 0.77355
+    },
+    "l2_distance": 0.17385,
+    "original_prompt": "Identify the objects \"apple, spatula\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "apple": {
+            "xmin": 228,
+            "ymin": 31,
+            "xmax": 460,
+            "ymax": 264
+        },
+        "spatula": {
+            "xmin": 49,
+            "ymin": 51,
+            "xmax": 444,
+            "ymax": 306
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"apl\u0435\u200b, spat\u200bul\u200da\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [452, 90, 917, 786], \"label\": \"apl\u0435\u200b, spat\u200bul\u200da\"},\n\t{\"bbox_2d\": [97, 148, 887, 936], \"label\": \"apl\u0435\u200b, spat\u200bul\u200da\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    452,
+                    90,
+                    917,
+                    786
+                ],
+                "label": "apl\u0435\u200b, spat\u200bul\u200da"
+            },
+            {
+                "bbox_2d": [
+                    97,
+                    148,
+                    887,
+                    936
+                ],
+                "label": "apl\u0435\u200b, spat\u200bul\u200da"
+            }
+        ],
+        "token_count": 88,
+        "raw_token_count": 107,
+        "runtime_seconds": 0.3577
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.023290567784002795,
+        "defocus_blur": 0.026755940509513847,
+        "motion_blur": 0.217978214904677,
+        "fog_filter": 0.11527866172135011,
+        "pixelate": 0.14569164720179098,
+        "jpeg_filter": 0.07092630114147032
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.33861236565774405,
+        "synonym": 0.16405361035742702,
+        "ata_saliency": 0.32766431163243304,
+        "fragmentation": 0.025173802992206475,
+        "character_noise": 0.1363282374838521
+    }
+}

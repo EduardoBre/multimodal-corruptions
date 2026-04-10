@@ -1,0 +1,933 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/176",
+        "folder_id": "176",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00029200.JPEG"
+    },
+    "original_prompt": "Identify the objects \"banana, orange\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "banana": {
+            "xmin": 3,
+            "ymin": 6,
+            "xmax": 190,
+            "ymax": 168
+        },
+        "banana_1": {
+            "xmin": 195,
+            "ymin": 3,
+            "xmax": 387,
+            "ymax": 170
+        },
+        "orange": {
+            "xmin": 202,
+            "ymin": 160,
+            "xmax": 296,
+            "ymax": 255
+        },
+        "orange_1": {
+            "xmin": 103,
+            "ymin": 158,
+            "xmax": 201,
+            "ymax": 248
+        },
+        "orange_2": {
+            "xmin": 202,
+            "ymin": 453,
+            "xmax": 255,
+            "ymax": 490
+        },
+        "orange_3": {
+            "xmin": 145,
+            "ymin": 451,
+            "xmax": 198,
+            "ymax": 493
+        }
+    },
+    "baseline_iou": 0.62131,
+    "swad_star": 0.77901,
+    "swad_star_index": 13,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 45,
+    "skipped_evaluations": 45,
+    "n_solutions": 14,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.8632061743184387,
+                "txt_attack": "synonym",
+                "txt_scale": 0.7724979474714236
+            },
+            "objectives": {
+                "iou": 0.32021,
+                "img_dist": 0.17052,
+                "txt_dist": 0.10207,
+                "txt_sim": 0.89793
+            },
+            "swad_metrics": {
+                "iou_0": 0.62131,
+                "delta_m_plus": 0.48462,
+                "phi": 0.74481,
+                "swad": 0.36095
+            },
+            "l2_distance": 0.37687,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"yellow fruit, orange\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [24, 12, 478, 355], \"label\": \"yellow fruit, orange\"},\n\t{\"bbox_2d\": [492, 12, 984, 355], \"label\": \"yellow fruit, orange\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            24,
+                            12,
+                            478,
+                            355
+                        ],
+                        "label": "yellow fruit, orange"
+                    },
+                    {
+                        "bbox_2d": [
+                            492,
+                            12,
+                            984,
+                            355
+                        ],
+                        "label": "yellow fruit, orange"
+                    }
+                ],
+                "token_count": 75,
+                "raw_token_count": 148,
+                "runtime_seconds": 0.5101
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.61629,
+                "img_dist": 0.03199,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.62131,
+                "delta_m_plus": 0.00808,
+                "phi": 0.96801,
+                "swad": 0.00782
+            },
+            "l2_distance": 0.61712,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"banana, orange\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [20, 10, 488, 353], \"label\": \"banana\"},\n\t{\"bbox_2d\": [500, 10, 988, 353], \"label\": \"banana\"},\n\t{\"bbox_2d\": [262, 315, 508, 500], \"label\": \"orange\"},\n\t{\"bbox_2d\": [508, 315, 752, 500], \"label\": \"orange\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            20,
+                            10,
+                            488,
+                            353
+                        ],
+                        "label": "banana"
+                    },
+                    {
+                        "bbox_2d": [
+                            500,
+                            10,
+                            988,
+                            353
+                        ],
+                        "label": "banana"
+                    },
+                    {
+                        "bbox_2d": [
+                            262,
+                            315,
+                            508,
+                            500
+                        ],
+                        "label": "orange"
+                    },
+                    {
+                        "bbox_2d": [
+                            508,
+                            315,
+                            752,
+                            500
+                        ],
+                        "label": "orange"
+                    }
+                ],
+                "token_count": 135,
+                "raw_token_count": 148,
+                "runtime_seconds": 0.5101
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6124377601560459,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.59611,
+                "img_dist": 0.06705,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.62131,
+                "delta_m_plus": 0.04056,
+                "phi": 0.93295,
+                "swad": 0.03784
+            },
+            "l2_distance": 0.59987,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"banana, orange\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 480, 350], \"label\": \"banana\"},\n\t{\"bbox_2d\": [492, 0, 990, 350], \"label\": \"banana\"},\n\t{\"bbox_2d\": [250, 310, 500, 500], \"label\": \"orange\"},\n\t{\"bbox_2d\": [500, 310, 750, 500], \"label\": \"orange\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            480,
+                            350
+                        ],
+                        "label": "banana"
+                    },
+                    {
+                        "bbox_2d": [
+                            492,
+                            0,
+                            990,
+                            350
+                        ],
+                        "label": "banana"
+                    },
+                    {
+                        "bbox_2d": [
+                            250,
+                            310,
+                            500,
+                            500
+                        ],
+                        "label": "orange"
+                    },
+                    {
+                        "bbox_2d": [
+                            500,
+                            310,
+                            750,
+                            500
+                        ],
+                        "label": "orange"
+                    }
+                ],
+                "token_count": 132,
+                "raw_token_count": 148,
+                "runtime_seconds": 0.5101
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.9662109336868401,
+                "txt_attack": "synonym",
+                "txt_scale": 0.43519445464759643
+            },
+            "objectives": {
+                "iou": 0.31805,
+                "img_dist": 0.18263,
+                "txt_dist": 0.1505,
+                "txt_sim": 0.8495
+            },
+            "swad_metrics": {
+                "iou_0": 0.62131,
+                "delta_m_plus": 0.4881,
+                "phi": 0.69436,
+                "swad": 0.33891
+            },
+            "l2_distance": 0.39643,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fruit, sweet orange\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [264, 317, 512, 500], \"label\": \"fruit, sweet orange\"},\n\t{\"bbox_2d\": [508, 317, 752, 500], \"label\": \"fruit, sweet orange\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            264,
+                            317,
+                            512,
+                            500
+                        ],
+                        "label": "fruit, sweet orange"
+                    },
+                    {
+                        "bbox_2d": [
+                            508,
+                            317,
+                            752,
+                            500
+                        ],
+                        "label": "fruit, sweet orange"
+                    }
+                ],
+                "token_count": 78,
+                "raw_token_count": 179,
+                "runtime_seconds": 0.7391
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.03732619454213726,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.33647038540361596
+            },
+            "objectives": {
+                "iou": 0.60964,
+                "img_dist": 0.02434,
+                "txt_dist": 0.10157,
+                "txt_sim": 0.89843
+            },
+            "swad_metrics": {
+                "iou_0": 0.62131,
+                "delta_m_plus": 0.01878,
+                "phi": 0.87656,
+                "swad": 0.01646
+            },
+            "l2_distance": 0.61852,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bnaana, orange\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [16, 10, 484, 355], \"label\": \"bnaana\"},\n\t{\"bbox_2d\": [498, 10, 984, 355], \"label\": \"bnaana\"},\n\t{\"bbox_2d\": [260, 312, 504, 500], \"label\": \"orange\"},\n\t{\"bbox_2d\": [504, 312, 752, 500], \"label\": \"orange\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            16,
+                            10,
+                            484,
+                            355
+                        ],
+                        "label": "bnaana"
+                    },
+                    {
+                        "bbox_2d": [
+                            498,
+                            10,
+                            984,
+                            355
+                        ],
+                        "label": "bnaana"
+                    },
+                    {
+                        "bbox_2d": [
+                            260,
+                            312,
+                            504,
+                            500
+                        ],
+                        "label": "orange"
+                    },
+                    {
+                        "bbox_2d": [
+                            504,
+                            312,
+                            752,
+                            500
+                        ],
+                        "label": "orange"
+                    }
+                ],
+                "token_count": 139,
+                "raw_token_count": 179,
+                "runtime_seconds": 0.7391
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.8004900574692112,
+                "txt_attack": "homophone",
+                "txt_scale": 0.3273709769105356
+            },
+            "objectives": {
+                "iou": 0.57773,
+                "img_dist": 0.07567,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.62131,
+                "delta_m_plus": 0.07014,
+                "phi": 0.92433,
+                "swad": 0.06483
+            },
+            "l2_distance": 0.58266,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"banana, orange\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 480, 330], \"label\": \"banana\"},\n\t{\"bbox_2d\": [492, 0, 999, 330], \"label\": \"banana\"},\n\t{\"bbox_2d\": [249, 300, 492, 492], \"label\": \"orange\"},\n\t{\"bbox_2d\": [500, 300, 750, 500], \"label\": \"orange\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            480,
+                            330
+                        ],
+                        "label": "banana"
+                    },
+                    {
+                        "bbox_2d": [
+                            492,
+                            0,
+                            999,
+                            330
+                        ],
+                        "label": "banana"
+                    },
+                    {
+                        "bbox_2d": [
+                            249,
+                            300,
+                            492,
+                            492
+                        ],
+                        "label": "orange"
+                    },
+                    {
+                        "bbox_2d": [
+                            500,
+                            300,
+                            750,
+                            500
+                        ],
+                        "label": "orange"
+                    }
+                ],
+                "token_count": 132,
+                "raw_token_count": 179,
+                "runtime_seconds": 0.7391
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.8714249440824764,
+                "txt_attack": "synonym",
+                "txt_scale": 0.208196069087493
+            },
+            "objectives": {
+                "iou": 0.3519,
+                "img_dist": 0.06447,
+                "txt_dist": 0.07464,
+                "txt_sim": 0.92536
+            },
+            "swad_metrics": {
+                "iou_0": 0.62131,
+                "delta_m_plus": 0.43362,
+                "phi": 0.8657,
+                "swad": 0.37538
+            },
+            "l2_distance": 0.36546,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fruit, orange\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [2, 0, 998, 998], \"label\": \"fruit\"},\n\t{\"bbox_2d\": [260, 308, 512, 508], \"label\": \"orange\"},\n\t{\"bbox_2d\": [508, 308, 758, 508], \"label\": \"orange\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            2,
+                            0,
+                            998,
+                            998
+                        ],
+                        "label": "fruit"
+                    },
+                    {
+                        "bbox_2d": [
+                            260,
+                            308,
+                            512,
+                            508
+                        ],
+                        "label": "orange"
+                    },
+                    {
+                        "bbox_2d": [
+                            508,
+                            308,
+                            758,
+                            508
+                        ],
+                        "label": "orange"
+                    }
+                ],
+                "token_count": 101,
+                "raw_token_count": 179,
+                "runtime_seconds": 0.7391
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.6213450499591809,
+                "txt_attack": "synonym",
+                "txt_scale": 0.7933036501430749
+            },
+            "objectives": {
+                "iou": 0.31315,
+                "img_dist": 0.13216,
+                "txt_dist": 0.15946,
+                "txt_sim": 0.84054
+            },
+            "swad_metrics": {
+                "iou_0": 0.62131,
+                "delta_m_plus": 0.49598,
+                "phi": 0.72945,
+                "swad": 0.3618
+            },
+            "l2_distance": 0.37544,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fruit, navel orange\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [260, 310, 506, 500], \"label\": \"fruit, navel orange\"},\n\t{\"bbox_2d\": [506, 310, 750, 500], \"label\": \"fruit, navel orange\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            260,
+                            310,
+                            506,
+                            500
+                        ],
+                        "label": "fruit, navel orange"
+                    },
+                    {
+                        "bbox_2d": [
+                            506,
+                            310,
+                            750,
+                            500
+                        ],
+                        "label": "fruit, navel orange"
+                    }
+                ],
+                "token_count": 80,
+                "raw_token_count": 179,
+                "runtime_seconds": 0.7391
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.9733925048897796,
+                "txt_attack": "homophone",
+                "txt_scale": 0.1970843399707084
+            },
+            "objectives": {
+                "iou": 0.57397,
+                "img_dist": 0.08269,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.62131,
+                "delta_m_plus": 0.07619,
+                "phi": 0.91731,
+                "swad": 0.06989
+            },
+            "l2_distance": 0.5799,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"banana, orange\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 480, 330], \"label\": \"banana\"},\n\t{\"bbox_2d\": [500, 0, 990, 330], \"label\": \"banana\"},\n\t{\"bbox_2d\": [240, 300, 480, 500], \"label\": \"orange\"},\n\t{\"bbox_2d\": [510, 300, 750, 500], \"label\": \"orange\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            480,
+                            330
+                        ],
+                        "label": "banana"
+                    },
+                    {
+                        "bbox_2d": [
+                            500,
+                            0,
+                            990,
+                            330
+                        ],
+                        "label": "banana"
+                    },
+                    {
+                        "bbox_2d": [
+                            240,
+                            300,
+                            480,
+                            500
+                        ],
+                        "label": "orange"
+                    },
+                    {
+                        "bbox_2d": [
+                            510,
+                            300,
+                            750,
+                            500
+                        ],
+                        "label": "orange"
+                    }
+                ],
+                "token_count": 132,
+                "raw_token_count": 170,
+                "runtime_seconds": 0.5644
+            }
+        },
+        {
+            "index": 9,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.047934062890074514,
+                "txt_attack": "synonym",
+                "txt_scale": 0.24927259019092207
+            },
+            "objectives": {
+                "iou": 0.60657,
+                "img_dist": 0.03981,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.62131,
+                "delta_m_plus": 0.02372,
+                "phi": 0.96019,
+                "swad": 0.02278
+            },
+            "l2_distance": 0.60787,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"banana, orange\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [12, 10, 484, 355], \"label\": \"banana\"},\n\t{\"bbox_2d\": [498, 10, 984, 355], \"label\": \"banana\"},\n\t{\"bbox_2d\": [258, 310, 504, 500], \"label\": \"orange\"},\n\t{\"bbox_2d\": [504, 310, 752, 500], \"label\": \"orange\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            12,
+                            10,
+                            484,
+                            355
+                        ],
+                        "label": "banana"
+                    },
+                    {
+                        "bbox_2d": [
+                            498,
+                            10,
+                            984,
+                            355
+                        ],
+                        "label": "banana"
+                    },
+                    {
+                        "bbox_2d": [
+                            258,
+                            310,
+                            504,
+                            500
+                        ],
+                        "label": "orange"
+                    },
+                    {
+                        "bbox_2d": [
+                            504,
+                            310,
+                            752,
+                            500
+                        ],
+                        "label": "orange"
+                    }
+                ],
+                "token_count": 135,
+                "raw_token_count": 170,
+                "runtime_seconds": 0.5644
+            }
+        },
+        {
+            "index": 10,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.018595721213425453,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6165049922224483
+            },
+            "objectives": {
+                "iou": 0.60022,
+                "img_dist": 0.03926,
+                "txt_dist": 0.03456,
+                "txt_sim": 0.96544
+            },
+            "swad_metrics": {
+                "iou_0": 0.62131,
+                "delta_m_plus": 0.03394,
+                "phi": 0.92754,
+                "swad": 0.03148
+            },
+            "l2_distance": 0.60249,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"banana, oarnge\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [12, 10, 484, 355], \"label\": \"banana\"},\n\t{\"bbox_2d\": [500, 10, 984, 355], \"label\": \"banana\"},\n\t{\"bbox_2d\": [256, 310, 500, 498], \"label\": \"oarnge\"},\n\t{\"bbox_2d\": [500, 310, 752, 498], \"label\": \"oarnge\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            12,
+                            10,
+                            484,
+                            355
+                        ],
+                        "label": "banana"
+                    },
+                    {
+                        "bbox_2d": [
+                            500,
+                            10,
+                            984,
+                            355
+                        ],
+                        "label": "banana"
+                    },
+                    {
+                        "bbox_2d": [
+                            256,
+                            310,
+                            500,
+                            498
+                        ],
+                        "label": "oarnge"
+                    },
+                    {
+                        "bbox_2d": [
+                            500,
+                            310,
+                            752,
+                            498
+                        ],
+                        "label": "oarnge"
+                    }
+                ],
+                "token_count": 139,
+                "raw_token_count": 170,
+                "runtime_seconds": 0.5644
+            }
+        },
+        {
+            "index": 11,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6212857572803344,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.59611,
+                "img_dist": 0.06705,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.62131,
+                "delta_m_plus": 0.04056,
+                "phi": 0.93295,
+                "swad": 0.03784
+            },
+            "l2_distance": 0.59987,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"banana, orange\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 480, 350], \"label\": \"banana\"},\n\t{\"bbox_2d\": [492, 0, 990, 350], \"label\": \"banana\"},\n\t{\"bbox_2d\": [250, 310, 500, 500], \"label\": \"orange\"},\n\t{\"bbox_2d\": [500, 310, 750, 500], \"label\": \"orange\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            480,
+                            350
+                        ],
+                        "label": "banana"
+                    },
+                    {
+                        "bbox_2d": [
+                            492,
+                            0,
+                            990,
+                            350
+                        ],
+                        "label": "banana"
+                    },
+                    {
+                        "bbox_2d": [
+                            250,
+                            310,
+                            500,
+                            500
+                        ],
+                        "label": "orange"
+                    },
+                    {
+                        "bbox_2d": [
+                            500,
+                            310,
+                            750,
+                            500
+                        ],
+                        "label": "orange"
+                    }
+                ],
+                "token_count": 132,
+                "raw_token_count": 170,
+                "runtime_seconds": 0.5644
+            }
+        },
+        {
+            "index": 12,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.022308256380206285,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.6119,
+                "img_dist": 0.0395,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.62131,
+                "delta_m_plus": 0.01515,
+                "phi": 0.9605,
+                "swad": 0.01455
+            },
+            "l2_distance": 0.61317,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"banana, orange\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [12, 10, 484, 345], \"label\": \"banana\"},\n\t{\"bbox_2d\": [500, 10, 980, 357], \"label\": \"banana\"},\n\t{\"bbox_2d\": [258, 310, 500, 500], \"label\": \"orange\"},\n\t{\"bbox_2d\": [508, 310, 750, 500], \"label\": \"orange\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            12,
+                            10,
+                            484,
+                            345
+                        ],
+                        "label": "banana"
+                    },
+                    {
+                        "bbox_2d": [
+                            500,
+                            10,
+                            980,
+                            357
+                        ],
+                        "label": "banana"
+                    },
+                    {
+                        "bbox_2d": [
+                            258,
+                            310,
+                            500,
+                            500
+                        ],
+                        "label": "orange"
+                    },
+                    {
+                        "bbox_2d": [
+                            508,
+                            310,
+                            750,
+                            500
+                        ],
+                        "label": "orange"
+                    }
+                ],
+                "token_count": 135,
+                "raw_token_count": 170,
+                "runtime_seconds": 0.5644
+            }
+        },
+        {
+            "index": 13,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.2072843807512489,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.6103028455001167
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.03199,
+                "txt_dist": 0.19525,
+                "txt_sim": 0.80475
+            },
+            "swad_metrics": {
+                "iou_0": 0.62131,
+                "delta_m_plus": 1.0,
+                "phi": 0.77901,
+                "swad": 0.77901
+            },
+            "l2_distance": 0.19785,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"b\u200b\u0430\u200dna\u200dn\u0430\u200b, \u043er\u200dan\u200bge\u200b\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [24, 10, 488, 353], \"label\": \"b\u200b\u0430\u200d\u043d\u0430\u200d\u043d\u200b\u0430\u200b\"},\n\t{\"bbox_2d\": [500, 10, 988, 353], \"label\": \"b\u200b\u0430\u200d\u043d\u0430\u200d\u043d\u200b\u0430\u200b\"},\n\t{\"bbox_2d\": [262, 315, 508, 500], \"label\": \"\u043er\u200b\u0430\u043d\u200b\u0433\u0435\u200b\"},\n\t{\"bbox_2d\": [508, 315, 752, 500], \"label\": \"\u043er\u200b\u0430\u043d\u200b\u0433\u0435\u200b\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            24,
+                            10,
+                            488,
+                            353
+                        ],
+                        "label": "b\u200b\u0430\u200d\u043d\u0430\u200d\u043d\u200b\u0430\u200b"
+                    },
+                    {
+                        "bbox_2d": [
+                            500,
+                            10,
+                            988,
+                            353
+                        ],
+                        "label": "b\u200b\u0430\u200d\u043d\u0430\u200d\u043d\u200b\u0430\u200b"
+                    },
+                    {
+                        "bbox_2d": [
+                            262,
+                            315,
+                            508,
+                            500
+                        ],
+                        "label": "\u043er\u200b\u0430\u043d\u200b\u0433\u0435\u200b"
+                    },
+                    {
+                        "bbox_2d": [
+                            508,
+                            315,
+                            752,
+                            500
+                        ],
+                        "label": "\u043er\u200b\u0430\u043d\u200b\u0433\u0435\u200b"
+                    }
+                ],
+                "token_count": 169,
+                "raw_token_count": 170,
+                "runtime_seconds": 0.5644
+            }
+        }
+    ]
+}

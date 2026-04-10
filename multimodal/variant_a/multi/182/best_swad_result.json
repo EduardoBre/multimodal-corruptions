@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/182",
+        "folder_id": "182",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00002797.JPEG"
+    },
+    "pareto_index": 8,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.9316177058680379,
+        "txt_attack": "homophone",
+        "txt_scale": 0.9948250792623392
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.07134,
+        "txt_dist": 0.27062,
+        "txt_sim": 0.72938
+    },
+    "swad_metrics": {
+        "iou_0": 0.76359,
+        "delta_m_plus": 1.0,
+        "phi": 0.67735,
+        "swad": 0.67735
+    },
+    "l2_distance": 0.27987,
+    "original_prompt": "Identify the objects \"person, soccer ball\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "soccer ball": {
+            "xmin": 255,
+            "ymin": 267,
+            "xmax": 286,
+            "ymax": 298
+        },
+        "person": {
+            "xmin": 170,
+            "ymin": 0,
+            "xmax": 217,
+            "ymax": 41
+        },
+        "person_1": {
+            "xmin": 152,
+            "ymin": 52,
+            "xmax": 287,
+            "ymax": 264
+        },
+        "person_2": {
+            "xmin": 326,
+            "ymin": 26,
+            "xmax": 411,
+            "ymax": 252
+        },
+        "person_3": {
+            "xmin": 30,
+            "ymin": 20,
+            "xmax": 189,
+            "ymax": 220
+        },
+        "person_4": {
+            "xmin": 95,
+            "ymin": 59,
+            "xmax": 287,
+            "ymax": 295
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"pearson, sock her ball\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [188, 170, 538, 897], \"label\": \"pearson, sock her ball\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    188,
+                    170,
+                    538,
+                    897
+                ],
+                "label": "pearson, sock her ball"
+            }
+        ],
+        "token_count": 44,
+        "raw_token_count": 226,
+        "runtime_seconds": 0.8708
+    }
+}

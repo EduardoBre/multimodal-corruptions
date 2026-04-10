@@ -1,0 +1,127 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/170",
+        "folder_id": "170",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00045152.JPEG"
+    },
+    "pareto_index": 27,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 6,
+    "total_evaluations": 165,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.237729,
+            "defocus_blur": 0.026981,
+            "motion_blur": 0.011986,
+            "fog_filter": 0.006134,
+            "pixelate": 0.045186,
+            "jpeg_filter": 0.087981
+        },
+        "text_corruptions": {
+            "homophone": 0.105909,
+            "synonym": 0.013612,
+            "ata_saliency": 0.019414,
+            "fragmentation": 0.007162,
+            "character_noise": 0.004841
+        },
+        "img_budget_used": 0.415997,
+        "txt_budget_used": 0.150938,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.07652,
+        "img_dist": 0.0908,
+        "txt_dist": 0.29659,
+        "txt_sim": 0.70341
+    },
+    "swad_metrics": {
+        "iou_0": 0.68895,
+        "delta_m_plus": 0.88893,
+        "phi": 0.63954,
+        "swad": 0.56851
+    },
+    "l2_distance": 0.31948,
+    "original_prompt": "Identify the objects \"bicycle, helmet, person, sunglasses\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 106,
+            "ymin": 90,
+            "xmax": 373,
+            "ymax": 490
+        },
+        "sunglasses": {
+            "xmin": 153,
+            "ymin": 135,
+            "xmax": 230,
+            "ymax": 176
+        },
+        "bicycle": {
+            "xmin": 28,
+            "ymin": 287,
+            "xmax": 373,
+            "ymax": 498
+        },
+        "helmet": {
+            "xmin": 143,
+            "ymin": 91,
+            "xmax": 225,
+            "ymax": 201
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"b\u200bk\u0456e, hell met, \u0440er s\u043en, sun gla\u200bts\u0435s\u200d\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [384, 185, 588, 345], \"label\": \"b\u200bk\u0456e, hell met\"},\n\t{\"bbox_2d\": [438, 315, 538, 355], \"label\": \"\u0440er s\u043en\"},\n\t{\"bbox_2d\": [438, 315, 538, 355], \"label\": \"sun gla\u200bts\u0435s\u200d\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    384,
+                    185,
+                    588,
+                    345
+                ],
+                "label": "b\u200bk\u0456e, hell met"
+            },
+            {
+                "bbox_2d": [
+                    438,
+                    315,
+                    538,
+                    355
+                ],
+                "label": "\u0440er s\u043en"
+            },
+            {
+                "bbox_2d": [
+                    438,
+                    315,
+                    538,
+                    355
+                ],
+                "label": "sun gla\u200bts\u0435s\u200d"
+            }
+        ],
+        "token_count": 124,
+        "raw_token_count": 178,
+        "runtime_seconds": 0.5325
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.2377294286644953,
+        "defocus_blur": 0.026980801760914136,
+        "motion_blur": 0.011986042891985058,
+        "fog_filter": 0.006133501337246155,
+        "pixelate": 0.045185751117767355,
+        "jpeg_filter": 0.08798112521191877
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.10590894574134714,
+        "synonym": 0.013612498489001184,
+        "ata_saliency": 0.019413768577486654,
+        "fragmentation": 0.007161714230992947,
+        "character_noise": 0.004841145613596043
+    }
+}

@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/98",
+        "folder_id": "98",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00045855.JPEG"
+    },
+    "pareto_index": 3,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 13,
+    "total_evaluations": 390,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.001385,
+            "defocus_blur": 0.002082,
+            "motion_blur": 0.01935,
+            "fog_filter": 0.013605,
+            "pixelate": 0.168635,
+            "jpeg_filter": 0.012294
+        },
+        "text_corruptions": {
+            "homophone": 0.309326,
+            "synonym": 0.10176,
+            "ata_saliency": 0.002282,
+            "fragmentation": 0.10239,
+            "character_noise": 0.067135
+        },
+        "img_budget_used": 0.217351,
+        "txt_budget_used": 0.582893,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.10266,
+        "txt_dist": 0.21176,
+        "txt_sim": 0.78824
+    },
+    "swad_metrics": {
+        "iou_0": 0.79246,
+        "delta_m_plus": 1.0,
+        "phi": 0.70732,
+        "swad": 0.70732
+    },
+    "l2_distance": 0.23533,
+    "original_prompt": "Identify the objects \"frying pan, stove\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "stove": {
+            "xmin": 45,
+            "ymin": 82,
+            "xmax": 498,
+            "ymax": 312
+        },
+        "frying pan": {
+            "xmin": 74,
+            "ymin": 78,
+            "xmax": 308,
+            "ymax": 207
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"f\u200brp\u200dn e pa\u200dn, st\u200bove\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [100, 286, 980, 997], \"label\": \"f\u200brp\u200dn e pa\u200dn, st\u200bove\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    100,
+                    286,
+                    980,
+                    997
+                ],
+                "label": "f\u200brp\u200dn e pa\u200dn, st\u200bove"
+            }
+        ],
+        "token_count": 53,
+        "raw_token_count": 84,
+        "runtime_seconds": 0.2787
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0013845440551185782,
+        "defocus_blur": 0.002082263298615456,
+        "motion_blur": 0.019349624617112683,
+        "fog_filter": 0.013604680389547277,
+        "pixelate": 0.16863521628991962,
+        "jpeg_filter": 0.012294331582544128
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.3093256700796747,
+        "synonym": 0.10175968410773772,
+        "ata_saliency": 0.0022818215289991395,
+        "fragmentation": 0.10239031025114198,
+        "character_noise": 0.06713521691976121
+    }
+}

@@ -1,0 +1,109 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/176",
+        "folder_id": "176",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00031019.JPEG"
+    },
+    "pareto_index": 4,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.008039,
+            "defocus_blur": 0.005862,
+            "motion_blur": 0.023173,
+            "fog_filter": 0.016042,
+            "pixelate": 0.002465,
+            "jpeg_filter": 0.064227
+        },
+        "text_corruptions": {
+            "homophone": 0.059975,
+            "synonym": 0.027472,
+            "ata_saliency": 0.089685,
+            "fragmentation": 0.004482,
+            "character_noise": 0.038789
+        },
+        "img_budget_used": 0.119808,
+        "txt_budget_used": 0.220402,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.0765,
+        "txt_dist": 0.44744,
+        "txt_sim": 0.55256
+    },
+    "swad_metrics": {
+        "iou_0": 0.56806,
+        "delta_m_plus": 1.0,
+        "phi": 0.51029,
+        "swad": 0.51029
+    },
+    "l2_distance": 0.45393,
+    "original_prompt": "Identify the objects \"apple\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "apple": {
+            "xmin": 30,
+            "ymin": 337,
+            "xmax": 150,
+            "ymax": 422
+        },
+        "apple_1": {
+            "xmin": 13,
+            "ymin": 53,
+            "xmax": 137,
+            "ymax": 168
+        },
+        "apple_2": {
+            "xmin": 65,
+            "ymin": 340,
+            "xmax": 146,
+            "ymax": 415
+        },
+        "apple_3": {
+            "xmin": 18,
+            "ymin": 422,
+            "xmax": 149,
+            "ymax": 498
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"a\u200dppkl\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [827, 1, 1000, 998], \"label\": \"a\u200dppkl\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    827,
+                    1,
+                    1000,
+                    998
+                ],
+                "label": "a\u200dppkl"
+            }
+        ],
+        "token_count": 42,
+        "raw_token_count": 89,
+        "runtime_seconds": 0.2635
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.008039140118755369,
+        "defocus_blur": 0.005862413019331248,
+        "motion_blur": 0.023173105380541518,
+        "fog_filter": 0.01604191800327944,
+        "pixelate": 0.002464778624242457,
+        "jpeg_filter": 0.06422676343875089
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.05997486014426082,
+        "synonym": 0.02747192738483067,
+        "ata_saliency": 0.08968501200606259,
+        "fragmentation": 0.004481553761501031,
+        "character_noise": 0.03878881637275871
+    }
+}

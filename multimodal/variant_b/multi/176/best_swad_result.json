@@ -1,0 +1,130 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/176",
+        "folder_id": "176",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00029200.JPEG"
+    },
+    "pareto_index": 2,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.015048,
+            "defocus_blur": 0.007801,
+            "motion_blur": 0.068742,
+            "fog_filter": 0.010493,
+            "pixelate": 0.011175,
+            "jpeg_filter": 0.115504
+        },
+        "text_corruptions": {
+            "homophone": 0.009075,
+            "synonym": 0.022159,
+            "ata_saliency": 0.061984,
+            "fragmentation": 0.015516,
+            "character_noise": 0.024711
+        },
+        "img_budget_used": 0.228763,
+        "txt_budget_used": 0.133444,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.08772,
+        "txt_dist": 0.21748,
+        "txt_sim": 0.78252
+    },
+    "swad_metrics": {
+        "iou_0": 0.62131,
+        "delta_m_plus": 1.0,
+        "phi": 0.71388,
+        "swad": 0.71388
+    },
+    "l2_distance": 0.2345,
+    "original_prompt": "Identify the objects \"banana, orange\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "banana": {
+            "xmin": 3,
+            "ymin": 6,
+            "xmax": 190,
+            "ymax": 168
+        },
+        "banana_1": {
+            "xmin": 195,
+            "ymin": 3,
+            "xmax": 387,
+            "ymax": 170
+        },
+        "orange": {
+            "xmin": 202,
+            "ymin": 160,
+            "xmax": 296,
+            "ymax": 255
+        },
+        "orange_1": {
+            "xmin": 103,
+            "ymin": 158,
+            "xmax": 201,
+            "ymax": 248
+        },
+        "orange_2": {
+            "xmin": 202,
+            "ymin": 453,
+            "xmax": 255,
+            "ymax": 490
+        },
+        "orange_3": {
+            "xmin": 145,
+            "ymin": 451,
+            "xmax": 198,
+            "ymax": 493
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"b\u200banan\u200da, o r\u0430nge\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [12, 10, 484, 347], \"label\": \"b\u200banan\u200da, o r\u0430nge\"},\n\t{\"bbox_2d\": [496, 10, 984, 347], \"label\": \"b\u200banan\u200da, o r\u0430nge\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    12,
+                    10,
+                    484,
+                    347
+                ],
+                "label": "b\u200banan\u200da, o r\u0430nge"
+            },
+            {
+                "bbox_2d": [
+                    496,
+                    10,
+                    984,
+                    347
+                ],
+                "label": "b\u200banan\u200da, o r\u0430nge"
+            }
+        ],
+        "token_count": 89,
+        "raw_token_count": 166,
+        "runtime_seconds": 0.5229
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.015048431305920098,
+        "defocus_blur": 0.0078007584631979605,
+        "motion_blur": 0.06874186249528583,
+        "fog_filter": 0.01049267655193703,
+        "pixelate": 0.011175406304607768,
+        "jpeg_filter": 0.11550411567599005
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.009074692466741712,
+        "synonym": 0.022159000587550312,
+        "ata_saliency": 0.061983884410570365,
+        "fragmentation": 0.015515696319839768,
+        "character_noise": 0.024711094578738036
+    }
+}

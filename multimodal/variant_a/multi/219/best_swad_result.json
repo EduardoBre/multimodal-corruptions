@@ -1,0 +1,82 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/219",
+        "folder_id": "219",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00026610.JPEG"
+    },
+    "pareto_index": 24,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 4,
+    "total_evaluations": 105,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.8282774167461574,
+        "txt_attack": "homophone",
+        "txt_scale": 0.5784597801428414
+    },
+    "objectives": {
+        "iou": 0.05508,
+        "img_dist": 0.08669,
+        "txt_dist": 0.20207,
+        "txt_sim": 0.79793
+    },
+    "swad_metrics": {
+        "iou_0": 0.95112,
+        "delta_m_plus": 0.94209,
+        "phi": 0.72876,
+        "swad": 0.68655
+    },
+    "l2_distance": 0.22667,
+    "original_prompt": "Identify the objects \"bow, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 9,
+            "ymin": 240,
+            "xmax": 401,
+            "ymax": 654
+        },
+        "person_1": {
+            "xmin": 584,
+            "ymin": 184,
+            "xmax": 870,
+            "ymax": 766
+        },
+        "bow": {
+            "xmin": 357,
+            "ymin": 140,
+            "xmax": 958,
+            "ymax": 408
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bow, purse on\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [488, 206, 730, 306], \"label\": \"bow\"},\n\t{\"bbox_2d\": [648, 578, 688, 688], \"label\": \"purse on\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    488,
+                    206,
+                    730,
+                    306
+                ],
+                "label": "bow"
+            },
+            {
+                "bbox_2d": [
+                    648,
+                    578,
+                    688,
+                    688
+                ],
+                "label": "purse on"
+            }
+        ],
+        "token_count": 74,
+        "raw_token_count": 138,
+        "runtime_seconds": 0.574
+    }
+}

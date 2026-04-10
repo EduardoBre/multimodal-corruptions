@@ -1,0 +1,112 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/108",
+        "folder_id": "108",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00046459.JPEG"
+    },
+    "pareto_index": 4,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.015013,
+            "defocus_blur": 0.021251,
+            "motion_blur": 0.036672,
+            "fog_filter": 0.037664,
+            "pixelate": 0.013697,
+            "jpeg_filter": 0.167848
+        },
+        "text_corruptions": {
+            "homophone": 0.05578,
+            "synonym": 0.026663,
+            "ata_saliency": 0.153803,
+            "fragmentation": 0.279922,
+            "character_noise": 0.012997
+        },
+        "img_budget_used": 0.292144,
+        "txt_budget_used": 0.529165,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.07969,
+        "txt_dist": 0.21181,
+        "txt_sim": 0.78819
+    },
+    "swad_metrics": {
+        "iou_0": 0.57355,
+        "delta_m_plus": 1.0,
+        "phi": 0.72538,
+        "swad": 0.72538
+    },
+    "l2_distance": 0.22631,
+    "original_prompt": "Identify the objects \"bicycle, tie, water bottle\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "tie": {
+            "xmin": 212,
+            "ymin": 151,
+            "xmax": 249,
+            "ymax": 261
+        },
+        "bicycle": {
+            "xmin": 371,
+            "ymin": 92,
+            "xmax": 489,
+            "ymax": 363
+        },
+        "water bottle": {
+            "xmin": 241,
+            "ymin": 188,
+            "xmax": 324,
+            "ymax": 314
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"by cycl \u0435, nec\u200dktie, a wter b\u043ettle\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [738, 278, 970, 984], \"label\": \"by cycl \u0435, nec\u200dktie, a wter b\u043ettle\"},\n\t{\"bbox_2d\": [488, 500, 644, 832], \"label\": \"by cycl \u0435, nec\u200dktie, a wter b\u043ettle\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    738,
+                    278,
+                    970,
+                    984
+                ],
+                "label": "by cycl \u0435, nec\u200dktie, a wter b\u043ettle"
+            },
+            {
+                "bbox_2d": [
+                    488,
+                    500,
+                    644,
+                    832
+                ],
+                "label": "by cycl \u0435, nec\u200dktie, a wter b\u043ettle"
+            }
+        ],
+        "token_count": 104,
+        "raw_token_count": 131,
+        "runtime_seconds": 0.4216
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.015013356185378607,
+        "defocus_blur": 0.021250507706939228,
+        "motion_blur": 0.036672199674510804,
+        "fog_filter": 0.0376637741747331,
+        "pixelate": 0.013696540369128969,
+        "jpeg_filter": 0.1678476682551208
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.05577998773949777,
+        "synonym": 0.02666295513357738,
+        "ata_saliency": 0.15380319033226936,
+        "fragmentation": 0.2799219428621136,
+        "character_noise": 0.012996848949600629
+    }
+}

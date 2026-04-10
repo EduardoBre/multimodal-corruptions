@@ -1,0 +1,79 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/29",
+        "folder_id": "29",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00034223.JPEG"
+    },
+    "pareto_index": 8,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.09726408665279773,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.40010599508099354
+    },
+    "objectives": {
+        "iou": 0.0108,
+        "img_dist": 0.06117,
+        "txt_dist": 0.34529,
+        "txt_sim": 0.65471
+    },
+    "swad_metrics": {
+        "iou_0": 0.77318,
+        "delta_m_plus": 0.98603,
+        "phi": 0.61466,
+        "swad": 0.60608
+    },
+    "l2_distance": 0.35083,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 180,
+            "ymin": 60,
+            "xmax": 320,
+            "ymax": 180
+        },
+        "bird_1": {
+            "xmin": 11,
+            "ymin": 221,
+            "xmax": 178,
+            "ymax": 342
+        },
+        "bird_2": {
+            "xmin": 307,
+            "ymin": 97,
+            "xmax": 421,
+            "ymax": 169
+        },
+        "bird_3": {
+            "xmin": 231,
+            "ymin": 141,
+            "xmax": 312,
+            "ymax": 309
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bord\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [367, 790, 655, 1000], \"label\": \"bord\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    367,
+                    790,
+                    655,
+                    1000
+                ],
+                "label": "bord"
+            }
+        ],
+        "token_count": 41,
+        "raw_token_count": 162,
+        "runtime_seconds": 0.6213
+    }
+}

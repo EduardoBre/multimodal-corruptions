@@ -1,0 +1,79 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/176",
+        "folder_id": "176",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00031019.JPEG"
+    },
+    "pareto_index": 5,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.6124377601560459,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.05557257533910853
+    },
+    "objectives": {
+        "iou": 0.35043,
+        "img_dist": 0.09798,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.56806,
+        "delta_m_plus": 0.38311,
+        "phi": 0.90202,
+        "swad": 0.34557
+    },
+    "l2_distance": 0.36387,
+    "original_prompt": "Identify the objects \"apple\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "apple": {
+            "xmin": 30,
+            "ymin": 337,
+            "xmax": 150,
+            "ymax": 422
+        },
+        "apple_1": {
+            "xmin": 13,
+            "ymin": 53,
+            "xmax": 137,
+            "ymax": 168
+        },
+        "apple_2": {
+            "xmin": 65,
+            "ymin": 340,
+            "xmax": 146,
+            "ymax": 415
+        },
+        "apple_3": {
+            "xmin": 18,
+            "ymin": 422,
+            "xmax": 149,
+            "ymax": 498
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"apple\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [52, 678, 444, 850], \"label\": \"apple\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    52,
+                    678,
+                    444,
+                    850
+                ],
+                "label": "apple"
+            }
+        ],
+        "token_count": 38,
+        "raw_token_count": 73,
+        "runtime_seconds": 0.26
+    }
+}

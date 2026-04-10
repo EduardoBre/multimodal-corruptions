@@ -1,0 +1,469 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/single/multi/143",
+        "folder_id": "143",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00005470.JPEG"
+    },
+    "original_prompt": "Identify the objects \"bear\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bear": {
+            "xmin": 150,
+            "ymin": 33,
+            "xmax": 327,
+            "ymax": 228
+        },
+        "bear_1": {
+            "xmin": 24,
+            "ymin": 119,
+            "xmax": 188,
+            "ymax": 236
+        }
+    },
+    "baseline_iou": 0.9152,
+    "swad_star": 0.72728,
+    "swad_star_index": 0,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 10,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.8632061743184387,
+                "txt_attack": "synonym",
+                "txt_scale": 0.7724979474714236
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.1828,
+                "txt_dist": 0.11004,
+                "txt_sim": 0.88996
+            },
+            "swad_metrics": {
+                "iou_0": 0.9152,
+                "delta_m_plus": 1.0,
+                "phi": 0.72728,
+                "swad": 0.72728
+            },
+            "l2_distance": 0.21337,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"black bear\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "There is no object matching the description \"black bear\" in the image. The image shows two polar bears in a snowy environment. Therefore, the bounding boxes for \"black bear\" are:\n\n```json\n[]\n```",
+                "parsed_predictions": [],
+                "token_count": 43,
+                "raw_token_count": 78,
+                "runtime_seconds": 0.2472
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8181617493544074,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.41721849968957336
+            },
+            "objectives": {
+                "iou": 0.83492,
+                "img_dist": 0.03836,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.9152,
+                "delta_m_plus": 0.08772,
+                "phi": 0.96164,
+                "swad": 0.08435
+            },
+            "l2_distance": 0.8358,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bear\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [378, 120, 848, 880], \"label\": \"bear\"},\n\t{\"bbox_2d\": [80, 476, 588, 900], \"label\": \"bear\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            378,
+                            120,
+                            848,
+                            880
+                        ],
+                        "label": "bear"
+                    },
+                    {
+                        "bbox_2d": [
+                            80,
+                            476,
+                            588,
+                            900
+                        ],
+                        "label": "bear"
+                    }
+                ],
+                "token_count": 71,
+                "raw_token_count": 78,
+                "runtime_seconds": 0.2472
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.3997956906557353,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.647636093318414
+            },
+            "objectives": {
+                "iou": 0.52634,
+                "img_dist": 0.02729,
+                "txt_dist": 0.30665,
+                "txt_sim": 0.69335
+            },
+            "swad_metrics": {
+                "iou_0": 0.9152,
+                "delta_m_plus": 0.42489,
+                "phi": 0.67443,
+                "swad": 0.28656
+            },
+            "l2_distance": 0.60976,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"ebar\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [398, 128, 855, 897], \"label\": \"ebar\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            398,
+                            128,
+                            855,
+                            897
+                        ],
+                        "label": "ebar"
+                    }
+                ],
+                "token_count": 40,
+                "raw_token_count": 78,
+                "runtime_seconds": 0.2472
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.89178,
+                "img_dist": 0.02043,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.9152,
+                "delta_m_plus": 0.02559,
+                "phi": 0.97957,
+                "swad": 0.02507
+            },
+            "l2_distance": 0.89201,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bear\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [398, 127, 852, 897], \"label\": \"bear\"},\n\t{\"bbox_2d\": [78, 477, 458, 900], \"label\": \"bear\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            398,
+                            127,
+                            852,
+                            897
+                        ],
+                        "label": "bear"
+                    },
+                    {
+                        "bbox_2d": [
+                            78,
+                            477,
+                            458,
+                            900
+                        ],
+                        "label": "bear"
+                    }
+                ],
+                "token_count": 71,
+                "raw_token_count": 78,
+                "runtime_seconds": 0.2472
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.89824,
+                "img_dist": 0.01989,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.9152,
+                "delta_m_plus": 0.01853,
+                "phi": 0.98011,
+                "swad": 0.01816
+            },
+            "l2_distance": 0.89846,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bear\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [72, 450, 538, 896], \"label\": \"bear\"},\n\t{\"bbox_2d\": [398, 128, 855, 896], \"label\": \"bear\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            72,
+                            450,
+                            538,
+                            896
+                        ],
+                        "label": "bear"
+                    },
+                    {
+                        "bbox_2d": [
+                            398,
+                            128,
+                            855,
+                            896
+                        ],
+                        "label": "bear"
+                    }
+                ],
+                "token_count": 71,
+                "raw_token_count": 78,
+                "runtime_seconds": 0.2472
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.6126883641923373,
+                "txt_attack": "homophone",
+                "txt_scale": 0.10684452896191199
+            },
+            "objectives": {
+                "iou": 0.5198,
+                "img_dist": 0.03008,
+                "txt_dist": 0.18031,
+                "txt_sim": 0.81969
+            },
+            "swad_metrics": {
+                "iou_0": 0.9152,
+                "delta_m_plus": 0.43204,
+                "phi": 0.79503,
+                "swad": 0.34348
+            },
+            "l2_distance": 0.55101,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bare\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [388, 124, 848, 880], \"label\": \"bare\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            388,
+                            124,
+                            848,
+                            880
+                        ],
+                        "label": "bare"
+                    }
+                ],
+                "token_count": 39,
+                "raw_token_count": 78,
+                "runtime_seconds": 0.2472
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6124377601560459,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.27478,
+                "img_dist": 0.04499,
+                "txt_dist": 0.22694,
+                "txt_sim": 0.77306
+            },
+            "swad_metrics": {
+                "iou_0": 0.9152,
+                "delta_m_plus": 0.69976,
+                "phi": 0.73828,
+                "swad": 0.51662
+            },
+            "l2_distance": 0.35921,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"beam\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 999, 999], \"label\": \"beam\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            999,
+                            999
+                        ],
+                        "label": "beam"
+                    }
+                ],
+                "token_count": 35,
+                "raw_token_count": 78,
+                "runtime_seconds": 0.2472
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.307337327911573,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.87881,
+                "img_dist": 0.02528,
+                "txt_dist": 0.21365,
+                "txt_sim": 0.78635
+            },
+            "swad_metrics": {
+                "iou_0": 0.9152,
+                "delta_m_plus": 0.03976,
+                "phi": 0.76647,
+                "swad": 0.03048
+            },
+            "l2_distance": 0.90476,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bair\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [382, 127, 852, 887], \"label\": \"bair\"},\n\t{\"bbox_2d\": [78, 477, 450, 897], \"label\": \"bair\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            382,
+                            127,
+                            852,
+                            887
+                        ],
+                        "label": "bair"
+                    },
+                    {
+                        "bbox_2d": [
+                            78,
+                            477,
+                            450,
+                            897
+                        ],
+                        "label": "bair"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 78,
+                "runtime_seconds": 0.2472
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.018595721213425453,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6130568625347235
+            },
+            "objectives": {
+                "iou": 0.88654,
+                "img_dist": 0.02343,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.9152,
+                "delta_m_plus": 0.03132,
+                "phi": 0.97657,
+                "swad": 0.03058
+            },
+            "l2_distance": 0.88685,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bear\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [398, 130, 852, 888], \"label\": \"bear\"},\n\t{\"bbox_2d\": [78, 488, 458, 900], \"label\": \"bear\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            398,
+                            130,
+                            852,
+                            888
+                        ],
+                        "label": "bear"
+                    },
+                    {
+                        "bbox_2d": [
+                            78,
+                            488,
+                            458,
+                            900
+                        ],
+                        "label": "bear"
+                    }
+                ],
+                "token_count": 71,
+                "raw_token_count": 78,
+                "runtime_seconds": 0.2472
+            }
+        },
+        {
+            "index": 9,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.48068,
+                "img_dist": 0.0452,
+                "txt_dist": 0.21365,
+                "txt_sim": 0.78635
+            },
+            "swad_metrics": {
+                "iou_0": 0.9152,
+                "delta_m_plus": 0.47478,
+                "phi": 0.75081,
+                "swad": 0.35647
+            },
+            "l2_distance": 0.52796,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bair\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [368, 117, 892, 897], \"label\": \"bair\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            368,
+                            117,
+                            892,
+                            897
+                        ],
+                        "label": "bair"
+                    }
+                ],
+                "token_count": 40,
+                "raw_token_count": 78,
+                "runtime_seconds": 0.2472
+            }
+        }
+    ]
+}

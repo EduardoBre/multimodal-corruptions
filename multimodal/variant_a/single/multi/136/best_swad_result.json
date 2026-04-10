@@ -1,0 +1,79 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/136",
+        "folder_id": "136",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00021630.JPEG"
+    },
+    "pareto_index": 5,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 5,
+    "total_evaluations": 150,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.8430475022380112,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.5322174097322081
+    },
+    "objectives": {
+        "iou": 0.17385,
+        "img_dist": 0.12045,
+        "txt_dist": 0.19158,
+        "txt_sim": 0.80842
+    },
+    "swad_metrics": {
+        "iou_0": 0.56492,
+        "delta_m_plus": 0.69226,
+        "phi": 0.71105,
+        "swad": 0.49223
+    },
+    "l2_distance": 0.28537,
+    "original_prompt": "Identify the objects \"traffic light\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "traffic light": {
+            "xmin": 195,
+            "ymin": 273,
+            "xmax": 217,
+            "ymax": 374
+        },
+        "traffic light_1": {
+            "xmin": 273,
+            "ymin": 139,
+            "xmax": 327,
+            "ymax": 243
+        },
+        "traffic light_2": {
+            "xmin": 195,
+            "ymin": 139,
+            "xmax": 225,
+            "ymax": 235
+        },
+        "traffic light_3": {
+            "xmin": 280,
+            "ymin": 151,
+            "xmax": 318,
+            "ymax": 189
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"t\u200bra\u200bf\u200bf\u200b\u0456\u0441 ligh\u200bt\u200d\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [468, 375, 648, 640], \"label\": \"t\u200bra\u200bf\u200bf\u200b\u0456\u0441 ligh\u200bt\u200d\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    468,
+                    375,
+                    648,
+                    640
+                ],
+                "label": "t\u200bra\u200bf\u200bf\u200b\u0456\u0441 ligh\u200bt\u200d"
+            }
+        ],
+        "token_count": 54,
+        "raw_token_count": 115,
+        "runtime_seconds": 0.4244
+    }
+}

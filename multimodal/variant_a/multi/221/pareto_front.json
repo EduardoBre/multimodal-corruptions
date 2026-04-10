@@ -1,0 +1,294 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/221",
+        "folder_id": "221",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00018591.JPEG"
+    },
+    "original_prompt": "Identify the objects \"person, stethoscope\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 1,
+            "ymin": 76,
+            "xmax": 221,
+            "ymax": 497
+        },
+        "person_1": {
+            "xmin": 201,
+            "ymin": 172,
+            "xmax": 380,
+            "ymax": 498
+        },
+        "stethoscope": {
+            "xmin": 33,
+            "ymin": 273,
+            "xmax": 172,
+            "ymax": 498
+        }
+    },
+    "baseline_iou": 0.84308,
+    "swad_star": 0.67452,
+    "swad_star_index": 2,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "n_solutions": 5,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.8632061743184387,
+                "txt_attack": "synonym",
+                "txt_scale": 0.7724979474714236
+            },
+            "objectives": {
+                "iou": 0.5995,
+                "img_dist": 0.16351,
+                "txt_dist": 0.11538,
+                "txt_sim": 0.88462
+            },
+            "swad_metrics": {
+                "iou_0": 0.84308,
+                "delta_m_plus": 0.28892,
+                "phi": 0.73998,
+                "swad": 0.21379
+            },
+            "l2_distance": 0.63202,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"man, stethoscope\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 183, 648, 998], \"label\": \"man\"},\n\t{\"bbox_2d\": [98, 538, 498, 998], \"label\": \"stethoscope\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            183,
+                            648,
+                            998
+                        ],
+                        "label": "man"
+                    },
+                    {
+                        "bbox_2d": [
+                            98,
+                            538,
+                            498,
+                            998
+                        ],
+                        "label": "stethoscope"
+                    }
+                ],
+                "token_count": 71,
+                "raw_token_count": 126,
+                "runtime_seconds": 0.4374
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.3997956906557353,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.647636093318414
+            },
+            "objectives": {
+                "iou": 0.63411,
+                "img_dist": 0.04446,
+                "txt_dist": 0.13475,
+                "txt_sim": 0.86525
+            },
+            "swad_metrics": {
+                "iou_0": 0.84308,
+                "delta_m_plus": 0.24786,
+                "phi": 0.82678,
+                "swad": 0.20493
+            },
+            "l2_distance": 0.64979,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"parson, stethoscope\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 177, 640, 1000], \"label\": \"parson\"},\n\t{\"bbox_2d\": [92, 528, 452, 1000], \"label\": \"stethoscope\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            177,
+                            640,
+                            1000
+                        ],
+                        "label": "parson"
+                    },
+                    {
+                        "bbox_2d": [
+                            92,
+                            528,
+                            452,
+                            1000
+                        ],
+                        "label": "stethoscope"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 126,
+                "runtime_seconds": 0.4374
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.9316177058680379,
+                "txt_attack": "homophone",
+                "txt_scale": 0.9948250792623392
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.06227,
+                "txt_dist": 0.28069,
+                "txt_sim": 0.71931
+            },
+            "swad_metrics": {
+                "iou_0": 0.84308,
+                "delta_m_plus": 1.0,
+                "phi": 0.67452,
+                "swad": 0.67452
+            },
+            "l2_distance": 0.28751,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"purse on, steth a scope\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [100, 538, 568, 1000], \"label\": \"purse on, steth a scope\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            100,
+                            538,
+                            568,
+                            1000
+                        ],
+                        "label": "purse on, steth a scope"
+                    }
+                ],
+                "token_count": 47,
+                "raw_token_count": 141,
+                "runtime_seconds": 0.4847
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.03732619454213726,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.33647038540361596
+            },
+            "objectives": {
+                "iou": 0.80158,
+                "img_dist": 0.03124,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.84308,
+                "delta_m_plus": 0.04922,
+                "phi": 0.96876,
+                "swad": 0.04769
+            },
+            "l2_distance": 0.80219,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"person, stethoscope\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 175, 638, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [458, 308, 1000, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [100, 500, 528, 1000], \"label\": \"stethoscope\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            175,
+                            638,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            458,
+                            308,
+                            1000,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            100,
+                            500,
+                            528,
+                            1000
+                        ],
+                        "label": "stethoscope"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 141,
+                "runtime_seconds": 0.4847
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.8714249440824764,
+                "txt_attack": "synonym",
+                "txt_scale": 0.208196069087493
+            },
+            "objectives": {
+                "iou": 0.79183,
+                "img_dist": 0.06317,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.84308,
+                "delta_m_plus": 0.06079,
+                "phi": 0.93683,
+                "swad": 0.05695
+            },
+            "l2_distance": 0.79435,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"person, stethoscope\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 187, 648, 989], \"label\": \"person\"},\n\t{\"bbox_2d\": [500, 307, 1000, 989], \"label\": \"person\"},\n\t{\"bbox_2d\": [104, 500, 572, 998], \"label\": \"stethoscope\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            187,
+                            648,
+                            989
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            500,
+                            307,
+                            1000,
+                            989
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            104,
+                            500,
+                            572,
+                            998
+                        ],
+                        "label": "stethoscope"
+                    }
+                ],
+                "token_count": 106,
+                "raw_token_count": 141,
+                "runtime_seconds": 0.4847
+            }
+        }
+    ]
+}

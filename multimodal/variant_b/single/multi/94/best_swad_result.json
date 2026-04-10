@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/94",
+        "folder_id": "94",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00016905.JPEG"
+    },
+    "pareto_index": 17,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 7,
+    "total_evaluations": 210,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.04423,
+            "defocus_blur": 0.009691,
+            "motion_blur": 0.053998,
+            "fog_filter": 0.050163,
+            "pixelate": 0.098398,
+            "jpeg_filter": 0.275429
+        },
+        "text_corruptions": {
+            "homophone": 0.024348,
+            "synonym": 0.009942,
+            "ata_saliency": 0.019815,
+            "fragmentation": 0.053556,
+            "character_noise": 0.290495
+        },
+        "img_budget_used": 0.531909,
+        "txt_budget_used": 0.398156,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.09716,
+        "txt_dist": 0.10201,
+        "txt_sim": 0.89799
+    },
+    "swad_metrics": {
+        "iou_0": 0.62452,
+        "delta_m_plus": 1.0,
+        "phi": 0.81074,
+        "swad": 0.81074
+    },
+    "l2_distance": 0.14088,
+    "original_prompt": "Identify the objects \"snake\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "snake": {
+            "xmin": 61,
+            "ymin": 118,
+            "xmax": 431,
+            "ymax": 374
+        },
+        "snake_1": {
+            "xmin": 235,
+            "ymin": 274,
+            "xmax": 418,
+            "ymax": 374
+        },
+        "snake_2": {
+            "xmin": 109,
+            "ymin": 93,
+            "xmax": 364,
+            "ymax": 262
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"sn\u0430k\u0435\u200b\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [130, 250, 848, 998], \"label\": \"sn\u0101k\u0113\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    130,
+                    250,
+                    848,
+                    998
+                ],
+                "label": "sn\u0101k\u0113"
+            }
+        ],
+        "token_count": 42,
+        "raw_token_count": 50,
+        "runtime_seconds": 0.1544
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.04423011510646011,
+        "defocus_blur": 0.009691027771704018,
+        "motion_blur": 0.0539975613514046,
+        "fog_filter": 0.05016300758307231,
+        "pixelate": 0.09839822584020595,
+        "jpeg_filter": 0.2754292120533412
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.024347530624753897,
+        "synonym": 0.009941644695576114,
+        "ata_saliency": 0.019815108212792806,
+        "fragmentation": 0.053556476932724494,
+        "character_noise": 0.2904952046586057
+    }
+}

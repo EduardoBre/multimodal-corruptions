@@ -1,0 +1,79 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/196",
+        "folder_id": "196",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00045637.JPEG"
+    },
+    "pareto_index": 20,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 6,
+    "total_evaluations": 165,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.9695362079618021,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.31132403927700053
+    },
+    "objectives": {
+        "iou": 0.22145,
+        "img_dist": 0.04809,
+        "txt_dist": 0.20056,
+        "txt_sim": 0.79944
+    },
+    "swad_metrics": {
+        "iou_0": 0.88482,
+        "delta_m_plus": 0.74972,
+        "phi": 0.76099,
+        "swad": 0.57054
+    },
+    "l2_distance": 0.30262,
+    "original_prompt": "Identify the objects \"pencil sharpener\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "pencil sharpener": {
+            "xmin": 202,
+            "ymin": 186,
+            "xmax": 314,
+            "ymax": 323
+        },
+        "pencil sharpener_1": {
+            "xmin": 163,
+            "ymin": 34,
+            "xmax": 285,
+            "ymax": 169
+        },
+        "pencil sharpener_2": {
+            "xmin": 264,
+            "ymin": 99,
+            "xmax": 411,
+            "ymax": 231
+        },
+        "pencil sharpener_3": {
+            "xmin": 93,
+            "ymin": 126,
+            "xmax": 227,
+            "ymax": 235
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"pencil\u200b sha\u200br\u0440\u200be\u200dne\u200br\u200d\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [340, 88, 820, 588], \"label\": \"pencil\u200b sha\u200br\u0440\u200be\u200bn\u200be\u200br\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    340,
+                    88,
+                    820,
+                    588
+                ],
+                "label": "pencil\u200b sha\u200br\u0440\u200be\u200bn\u200be\u200br"
+            }
+        ],
+        "token_count": 52,
+        "raw_token_count": 258,
+        "runtime_seconds": 0.8761
+    }
+}

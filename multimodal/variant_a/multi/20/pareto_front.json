@@ -1,0 +1,754 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/20",
+        "folder_id": "20",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00002098.JPEG"
+    },
+    "original_prompt": "Identify the objects \"chair, flower pot, table\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "table": {
+            "xmin": 70,
+            "ymin": 248,
+            "xmax": 279,
+            "ymax": 433
+        },
+        "flower pot": {
+            "xmin": 155,
+            "ymin": 272,
+            "xmax": 182,
+            "ymax": 301
+        },
+        "chair": {
+            "xmin": 166,
+            "ymin": 284,
+            "xmax": 306,
+            "ymax": 464
+        },
+        "chair_1": {
+            "xmin": 20,
+            "ymin": 288,
+            "xmax": 153,
+            "ymax": 462
+        },
+        "chair_2": {
+            "xmin": 223,
+            "ymin": 242,
+            "xmax": 282,
+            "ymax": 292
+        }
+    },
+    "baseline_iou": 0.5517,
+    "swad_star": 0.5096,
+    "swad_star_index": 7,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 9,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.8632061743184387,
+                "txt_attack": "synonym",
+                "txt_scale": 0.7724979474714236
+            },
+            "objectives": {
+                "iou": 0.54227,
+                "img_dist": 0.17704,
+                "txt_dist": 0.13212,
+                "txt_sim": 0.86788
+            },
+            "swad_metrics": {
+                "iou_0": 0.5517,
+                "delta_m_plus": 0.01709,
+                "phi": 0.71423,
+                "swad": 0.01221
+            },
+            "l2_distance": 0.58554,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"seating, flower pot, tabletop\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [53, 571, 352, 800], \"label\": \"seating\"},\n\t{\"bbox_2d\": [152, 490, 352, 625], \"label\": \"seating\"},\n\t{\"bbox_2d\": [638, 490, 800, 625], \"label\": \"seating\"},\n\t{\"bbox_2d\": [530, 567, 872, 917], \"label\": \"seating\"},\n\t{\"bbox_2d\": [112, 625, 428, 917], \"label\": \"seating\"},\n\t{\"bbox_2d\": [436, 525, 552, 571], \"label\": \"flower pot\"},\n\t{\"bbox_2d\": [228, 538, 708, 645], \"label\": \"tabletop\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            53,
+                            571,
+                            352,
+                            800
+                        ],
+                        "label": "seating"
+                    },
+                    {
+                        "bbox_2d": [
+                            152,
+                            490,
+                            352,
+                            625
+                        ],
+                        "label": "seating"
+                    },
+                    {
+                        "bbox_2d": [
+                            638,
+                            490,
+                            800,
+                            625
+                        ],
+                        "label": "seating"
+                    },
+                    {
+                        "bbox_2d": [
+                            530,
+                            567,
+                            872,
+                            917
+                        ],
+                        "label": "seating"
+                    },
+                    {
+                        "bbox_2d": [
+                            112,
+                            625,
+                            428,
+                            917
+                        ],
+                        "label": "seating"
+                    },
+                    {
+                        "bbox_2d": [
+                            436,
+                            525,
+                            552,
+                            571
+                        ],
+                        "label": "flower pot"
+                    },
+                    {
+                        "bbox_2d": [
+                            228,
+                            538,
+                            708,
+                            645
+                        ],
+                        "label": "tabletop"
+                    }
+                ],
+                "token_count": 243,
+                "raw_token_count": 272,
+                "runtime_seconds": 1.0322
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8181617493544074,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.41721849968957336
+            },
+            "objectives": {
+                "iou": 0.30095,
+                "img_dist": 0.08996,
+                "txt_dist": 0.23123,
+                "txt_sim": 0.76877
+            },
+            "swad_metrics": {
+                "iou_0": 0.5517,
+                "delta_m_plus": 0.4545,
+                "phi": 0.69961,
+                "swad": 0.31798
+            },
+            "l2_distance": 0.39004,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chaij, flover opt, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [442, 516, 542, 568], \"label\": \"chaij\"},\n\t{\"bbox_2d\": [442, 608, 542, 648], \"label\": \"flover opt\"},\n\t{\"bbox_2d\": [220, 530, 700, 858], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            442,
+                            516,
+                            542,
+                            568
+                        ],
+                        "label": "chaij"
+                    },
+                    {
+                        "bbox_2d": [
+                            442,
+                            608,
+                            542,
+                            648
+                        ],
+                        "label": "flover opt"
+                    },
+                    {
+                        "bbox_2d": [
+                            220,
+                            530,
+                            700,
+                            858
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 108,
+                "raw_token_count": 272,
+                "runtime_seconds": 1.0322
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.018153363333776373,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.24927259019092207
+            },
+            "objectives": {
+                "iou": 0.627,
+                "img_dist": 0.06354,
+                "txt_dist": 0.19449,
+                "txt_sim": 0.80551
+            },
+            "swad_metrics": {
+                "iou_0": 0.5517,
+                "delta_m_plus": 0.0,
+                "phi": 0.75433,
+                "swad": 0.0
+            },
+            "l2_distance": 0.65954,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"ch\u0430\u200bir, fl\u200dower\u200b \u0440\u200dot\u200b, tabl\u0435\u200b\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [500, 565, 872, 925], \"label\": \"ch\u0430\u200bir\"},\n\t{\"bbox_2d\": [158, 494, 340, 700], \"label\": \"ch\u0430\u200bir\"},\n\t{\"bbox_2d\": [63, 565, 408, 925], \"label\": \"ch\u0430\u200bir\"},\n\t{\"bbox_2d\": [638, 494, 808, 700], \"label\": \"ch\u0430\u200bir\"},\n\t{\"bbox_2d\": [436, 515, 540, 635], \"label\": \"fl\u200dower\u200b \u0440\u200dot\u200b\"},\n\t{\"bbox_2d\": [220, 575, 700, 850], \"label\": \"tabl\u0435\u200b\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            500,
+                            565,
+                            872,
+                            925
+                        ],
+                        "label": "ch\u0430\u200bir"
+                    },
+                    {
+                        "bbox_2d": [
+                            158,
+                            494,
+                            340,
+                            700
+                        ],
+                        "label": "ch\u0430\u200bir"
+                    },
+                    {
+                        "bbox_2d": [
+                            63,
+                            565,
+                            408,
+                            925
+                        ],
+                        "label": "ch\u0430\u200bir"
+                    },
+                    {
+                        "bbox_2d": [
+                            638,
+                            494,
+                            808,
+                            700
+                        ],
+                        "label": "ch\u0430\u200bir"
+                    },
+                    {
+                        "bbox_2d": [
+                            436,
+                            515,
+                            540,
+                            635
+                        ],
+                        "label": "fl\u200dower\u200b \u0440\u200dot\u200b"
+                    },
+                    {
+                        "bbox_2d": [
+                            220,
+                            575,
+                            700,
+                            850
+                        ],
+                        "label": "tabl\u0435\u200b"
+                    }
+                ],
+                "token_count": 226,
+                "raw_token_count": 272,
+                "runtime_seconds": 1.0322
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.30385,
+                "img_dist": 0.06833,
+                "txt_dist": 0.15357,
+                "txt_sim": 0.84643
+            },
+            "swad_metrics": {
+                "iou_0": 0.5517,
+                "delta_m_plus": 0.44925,
+                "phi": 0.78859,
+                "swad": 0.35427
+            },
+            "l2_distance": 0.34724,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cher, flower pod, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [444, 518, 552, 570], \"label\": \"cher\"},\n\t{\"bbox_2d\": [472, 518, 552, 570], \"label\": \"flower pod\"},\n\t{\"bbox_2d\": [212, 548, 720, 847], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            444,
+                            518,
+                            552,
+                            570
+                        ],
+                        "label": "cher"
+                    },
+                    {
+                        "bbox_2d": [
+                            472,
+                            518,
+                            552,
+                            570
+                        ],
+                        "label": "flower pod"
+                    },
+                    {
+                        "bbox_2d": [
+                            212,
+                            548,
+                            720,
+                            847
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 106,
+                "raw_token_count": 272,
+                "runtime_seconds": 1.0322
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.55056,
+                "img_dist": 0.06354,
+                "txt_dist": 0.24673,
+                "txt_sim": 0.75327
+            },
+            "swad_metrics": {
+                "iou_0": 0.5517,
+                "delta_m_plus": 0.00207,
+                "phi": 0.70541,
+                "swad": 0.00146
+            },
+            "l2_distance": 0.60665,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chsir, folwer pkt, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [158, 494, 320, 658], \"label\": \"chsir\"},\n\t{\"bbox_2d\": [640, 494, 808, 658], \"label\": \"chsir\"},\n\t{\"bbox_2d\": [508, 562, 872, 920], \"label\": \"chsir\"},\n\t{\"bbox_2d\": [128, 562, 472, 920], \"label\": \"chsir\"},\n\t{\"bbox_2d\": [64, 562, 272, 750], \"label\": \"chsir\"},\n\t{\"bbox_2d\": [228, 562, 472, 750], \"label\": \"chsir\"},\n\t{\"bbox_2d\": [228, 562, 708, 858], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            158,
+                            494,
+                            320,
+                            658
+                        ],
+                        "label": "chsir"
+                    },
+                    {
+                        "bbox_2d": [
+                            640,
+                            494,
+                            808,
+                            658
+                        ],
+                        "label": "chsir"
+                    },
+                    {
+                        "bbox_2d": [
+                            508,
+                            562,
+                            872,
+                            920
+                        ],
+                        "label": "chsir"
+                    },
+                    {
+                        "bbox_2d": [
+                            128,
+                            562,
+                            472,
+                            920
+                        ],
+                        "label": "chsir"
+                    },
+                    {
+                        "bbox_2d": [
+                            64,
+                            562,
+                            272,
+                            750
+                        ],
+                        "label": "chsir"
+                    },
+                    {
+                        "bbox_2d": [
+                            228,
+                            562,
+                            472,
+                            750
+                        ],
+                        "label": "chsir"
+                    },
+                    {
+                        "bbox_2d": [
+                            228,
+                            562,
+                            708,
+                            858
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 242,
+                "raw_token_count": 272,
+                "runtime_seconds": 1.0322
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.6126883641923373,
+                "txt_attack": "homophone",
+                "txt_scale": 0.10684452896191199
+            },
+            "objectives": {
+                "iou": 0.62475,
+                "img_dist": 0.08074,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.5517,
+                "delta_m_plus": 0.0,
+                "phi": 0.91926,
+                "swad": 0.0
+            },
+            "l2_distance": 0.62995,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chair, flower pot, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [488, 573, 864, 921], \"label\": \"chair\"},\n\t{\"bbox_2d\": [100, 573, 472, 921], \"label\": \"chair\"},\n\t{\"bbox_2d\": [158, 492, 338, 667], \"label\": \"chair\"},\n\t{\"bbox_2d\": [638, 496, 800, 667], \"label\": \"chair\"},\n\t{\"bbox_2d\": [440, 523, 550, 573], \"label\": \"flower pot\"},\n\t{\"bbox_2d\": [222, 535, 688, 857], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            488,
+                            573,
+                            864,
+                            921
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            100,
+                            573,
+                            472,
+                            921
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            158,
+                            492,
+                            338,
+                            667
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            638,
+                            496,
+                            800,
+                            667
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            440,
+                            523,
+                            550,
+                            573
+                        ],
+                        "label": "flower pot"
+                    },
+                    {
+                        "bbox_2d": [
+                            222,
+                            535,
+                            688,
+                            857
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 205,
+                "raw_token_count": 272,
+                "runtime_seconds": 1.0322
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.307337327911573,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.57731,
+                "img_dist": 0.07321,
+                "txt_dist": 0.07529,
+                "txt_sim": 0.92471
+            },
+            "swad_metrics": {
+                "iou_0": 0.5517,
+                "delta_m_plus": 0.0,
+                "phi": 0.85701,
+                "swad": 0.0
+            },
+            "l2_distance": 0.58678,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chair, flour pot, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [520, 567, 872, 917], \"label\": \"chair\"},\n\t{\"bbox_2d\": [64, 567, 372, 917], \"label\": \"chair\"},\n\t{\"bbox_2d\": [158, 492, 330, 700], \"label\": \"chair\"},\n\t{\"bbox_2d\": [638, 492, 800, 630], \"label\": \"chair\"},\n\t{\"bbox_2d\": [220, 550, 712, 850], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            520,
+                            567,
+                            872,
+                            917
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            64,
+                            567,
+                            372,
+                            917
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            158,
+                            492,
+                            330,
+                            700
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            638,
+                            492,
+                            800,
+                            630
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            220,
+                            550,
+                            712,
+                            850
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 170,
+                "raw_token_count": 272,
+                "runtime_seconds": 1.0322
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.018595721213425453,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6130568625347235
+            },
+            "objectives": {
+                "iou": 0.14006,
+                "img_dist": 0.07845,
+                "txt_dist": 0.25887,
+                "txt_sim": 0.74113
+            },
+            "swad_metrics": {
+                "iou_0": 0.5517,
+                "delta_m_plus": 0.74613,
+                "phi": 0.68299,
+                "swad": 0.5096
+            },
+            "l2_distance": 0.30461,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chaik, flowed por, tablp\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [288, 0, 688, 333], \"label\": \"chaik\"},\n\t{\"bbox_2d\": [440, 518, 552, 575], \"label\": \"flowed por\"},\n\t{\"bbox_2d\": [216, 575, 712, 655], \"label\": \"tablp\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            288,
+                            0,
+                            688,
+                            333
+                        ],
+                        "label": "chaik"
+                    },
+                    {
+                        "bbox_2d": [
+                            440,
+                            518,
+                            552,
+                            575
+                        ],
+                        "label": "flowed por"
+                    },
+                    {
+                        "bbox_2d": [
+                            216,
+                            575,
+                            712,
+                            655
+                        ],
+                        "label": "tablp"
+                    }
+                ],
+                "token_count": 107,
+                "raw_token_count": 272,
+                "runtime_seconds": 1.0322
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.67157,
+                "img_dist": 0.03895,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.5517,
+                "delta_m_plus": 0.0,
+                "phi": 0.96105,
+                "swad": 0.0
+            },
+            "l2_distance": 0.6727,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chair, flower pot, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [488, 565, 872, 925], \"label\": \"chair\"},\n\t{\"bbox_2d\": [104, 575, 448, 917], \"label\": \"chair\"},\n\t{\"bbox_2d\": [63, 565, 288, 775], \"label\": \"chair\"},\n\t{\"bbox_2d\": [158, 494, 328, 675], \"label\": \"chair\"},\n\t{\"bbox_2d\": [638, 494, 808, 675], \"label\": \"chair\"},\n\t{\"bbox_2d\": [452, 550, 512, 635], \"label\": \"flower pot\"},\n\t{\"bbox_2d\": [216, 565, 720, 850], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            488,
+                            565,
+                            872,
+                            925
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            104,
+                            575,
+                            448,
+                            917
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            63,
+                            565,
+                            288,
+                            775
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            158,
+                            494,
+                            328,
+                            675
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            638,
+                            494,
+                            808,
+                            675
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            452,
+                            550,
+                            512,
+                            635
+                        ],
+                        "label": "flower pot"
+                    },
+                    {
+                        "bbox_2d": [
+                            216,
+                            565,
+                            720,
+                            850
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 237,
+                "raw_token_count": 272,
+                "runtime_seconds": 1.0322
+            }
+        }
+    ]
+}

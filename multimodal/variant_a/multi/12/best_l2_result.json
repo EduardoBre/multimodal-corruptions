@@ -1,0 +1,88 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/12",
+        "folder_id": "12",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00026732.JPEG"
+    },
+    "pareto_index": 9,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 60,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "gaussian_noise",
+        "img_scale": 0.9067879230628799,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.6482806000476753
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.18502,
+        "txt_dist": 0.22107,
+        "txt_sim": 0.77893
+    },
+    "swad_metrics": {
+        "iou_0": 0.64246,
+        "delta_m_plus": 1.0,
+        "phi": 0.63481,
+        "swad": 0.63481
+    },
+    "l2_distance": 0.28828,
+    "original_prompt": "Identify the objects \"cart, hat with a wide brim, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 503,
+            "ymin": 112,
+            "xmax": 550,
+            "ymax": 161
+        },
+        "person_1": {
+            "xmin": 502,
+            "ymin": 112,
+            "xmax": 546,
+            "ymax": 176
+        },
+        "hat with a wide brim": {
+            "xmin": 505,
+            "ymin": 116,
+            "xmax": 547,
+            "ymax": 143
+        },
+        "cart": {
+            "xmin": 232,
+            "ymin": 141,
+            "xmax": 607,
+            "ymax": 376
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"\u0441ar\u200dt\u200b, h\u0430t\u200b w\u200bith\u200b a\u200b w\u200di\u200dd\u200de\u200d b\u200br\u200bi\u200bm\u200d, \u0440\u200b\u0435\u200br\u200dson\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [370, 300, 812, 700], \"label\": \"\u0441ar\u200dt\u200b, h\u0430t\u200b w\u200bith\u200b a\u200b w\u200di\u200dd\u200de\u200d b\u200br\u200bi\u200bm\u200d, \u0440\u200b\u0435\u200br\u200dson\"},\n\t{\"bbox_2d\": [677, 242, 720, 300], \"label\": \"\u0441ar\u200dt\u200b, h\u0430t\u200b w\u200bith\u200b a\u200b w\u200di\u200dd\u200de\u200d b\u200br\u200bi\u200bm\u200d, \u0440\u200b\u0435\u200br\u200dson\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    370,
+                    300,
+                    812,
+                    700
+                ],
+                "label": "\u0441ar\u200dt\u200b, h\u0430t\u200b w\u200bith\u200b a\u200b w\u200di\u200dd\u200de\u200d b\u200br\u200bi\u200bm\u200d, \u0440\u200b\u0435\u200br\u200dson"
+            },
+            {
+                "bbox_2d": [
+                    677,
+                    242,
+                    720,
+                    300
+                ],
+                "label": "\u0441ar\u200dt\u200b, h\u0430t\u200b w\u200bith\u200b a\u200b w\u200di\u200dd\u200de\u200d b\u200br\u200bi\u200bm\u200d, \u0440\u200b\u0435\u200br\u200dson"
+            }
+        ],
+        "token_count": 164,
+        "raw_token_count": 165,
+        "runtime_seconds": 0.7424
+    }
+}

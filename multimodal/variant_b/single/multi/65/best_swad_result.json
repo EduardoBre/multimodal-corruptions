@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/65",
+        "folder_id": "65",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00026123.JPEG"
+    },
+    "pareto_index": 0,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.00362,
+            "defocus_blur": 0.022085,
+            "motion_blur": 0.049609,
+            "fog_filter": 0.010895,
+            "pixelate": 0.023858,
+            "jpeg_filter": 0.345338
+        },
+        "text_corruptions": {
+            "homophone": 0.328793,
+            "synonym": 0.113619,
+            "ata_saliency": 0.006591,
+            "fragmentation": 0.128896,
+            "character_noise": 0.051499
+        },
+        "img_budget_used": 0.455405,
+        "txt_budget_used": 0.629398,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.30953,
+        "img_dist": 0.06849,
+        "txt_dist": 0.34158,
+        "txt_sim": 0.65842
+    },
+    "swad_metrics": {
+        "iou_0": 0.95599,
+        "delta_m_plus": 0.67622,
+        "phi": 0.61332,
+        "swad": 0.41474
+    },
+    "l2_distance": 0.46602,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 8,
+            "ymin": 59,
+            "xmax": 461,
+            "ymax": 394
+        },
+        "bird_1": {
+            "xmin": 22,
+            "ymin": 0,
+            "xmax": 313,
+            "ymax": 267
+        },
+        "bird_2": {
+            "xmin": 400,
+            "ymin": 339,
+            "xmax": 498,
+            "ymax": 400
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"berd\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [305, 150, 925, 988], \"label\": \"berd\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    305,
+                    150,
+                    925,
+                    988
+                ],
+                "label": "berd"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 109,
+        "runtime_seconds": 0.3511
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0036197242659931354,
+        "defocus_blur": 0.022084759525379357,
+        "motion_blur": 0.04960904223687655,
+        "fog_filter": 0.010895085618262058,
+        "pixelate": 0.0238581627886812,
+        "jpeg_filter": 0.3453383139248227
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.3287928546708231,
+        "synonym": 0.11361931594048727,
+        "ata_saliency": 0.006590566536087125,
+        "fragmentation": 0.12889575458223532,
+        "character_noise": 0.05149938932747318
+    }
+}

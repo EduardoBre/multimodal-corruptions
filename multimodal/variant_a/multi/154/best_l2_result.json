@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/154",
+        "folder_id": "154",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00005687.JPEG"
+    },
+    "pareto_index": 6,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.5656671100314771,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.039875089079669634
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.06078,
+        "txt_dist": 0.17838,
+        "txt_sim": 0.82162
+    },
+    "swad_metrics": {
+        "iou_0": 0.79467,
+        "delta_m_plus": 1.0,
+        "phi": 0.77168,
+        "swad": 0.77168
+    },
+    "l2_distance": 0.18845,
+    "original_prompt": "Identify the objects \"chair, dog\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 121,
+            "ymin": 60,
+            "xmax": 410,
+            "ymax": 465
+        },
+        "chair": {
+            "xmin": 23,
+            "ymin": 26,
+            "xmax": 128,
+            "ymax": 355
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"\u0441hair, dog\u200d\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [244, 124, 812, 924], \"label\": \"\u0441hair, dog\u200d\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    244,
+                    124,
+                    812,
+                    924
+                ],
+                "label": "\u0441hair, dog\u200d"
+            }
+        ],
+        "token_count": 44,
+        "raw_token_count": 80,
+        "runtime_seconds": 0.2669
+    }
+}

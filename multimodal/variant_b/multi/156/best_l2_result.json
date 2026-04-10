@@ -1,0 +1,112 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/156",
+        "folder_id": "156",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00019216.JPEG"
+    },
+    "pareto_index": 7,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.008768,
+            "defocus_blur": 0.016659,
+            "motion_blur": 0.016528,
+            "fog_filter": 0.074573,
+            "pixelate": 0.002525,
+            "jpeg_filter": 0.010125
+        },
+        "text_corruptions": {
+            "homophone": 0.050971,
+            "synonym": 0.121487,
+            "ata_saliency": 0.021066,
+            "fragmentation": 0.126331,
+            "character_noise": 0.001978
+        },
+        "img_budget_used": 0.129179,
+        "txt_budget_used": 0.321832,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.08238,
+        "txt_dist": 0.29194,
+        "txt_sim": 0.70806
+    },
+    "swad_metrics": {
+        "iou_0": 0.93424,
+        "delta_m_plus": 1.0,
+        "phi": 0.64973,
+        "swad": 0.64973
+    },
+    "l2_distance": 0.30334,
+    "original_prompt": "Identify the objects \"dog, sofa\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 157,
+            "ymin": 86,
+            "xmax": 499,
+            "ymax": 316
+        },
+        "dog_1": {
+            "xmin": 15,
+            "ymin": 17,
+            "xmax": 272,
+            "ymax": 246
+        },
+        "sofa": {
+            "xmin": 70,
+            "ymin": 212,
+            "xmax": 498,
+            "ymax": 373
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"do g\u200d, so fah\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [29, 40, 458, 598], \"label\": \"do g\u200d, so fah\"},\n\t{\"bbox_2d\": [292, 232, 948, 838], \"label\": \"do g\u200d, so fah\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    29,
+                    40,
+                    458,
+                    598
+                ],
+                "label": "do g\u200d, so fah"
+            },
+            {
+                "bbox_2d": [
+                    292,
+                    232,
+                    948,
+                    838
+                ],
+                "label": "do g\u200d, so fah"
+            }
+        ],
+        "token_count": 84,
+        "raw_token_count": 113,
+        "runtime_seconds": 0.3403
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.008768295926567806,
+        "defocus_blur": 0.01665938903069816,
+        "motion_blur": 0.01652838939652213,
+        "fog_filter": 0.07457324031955603,
+        "pixelate": 0.002524578110687946,
+        "jpeg_filter": 0.010125007984229904
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.050971175937587127,
+        "synonym": 0.12148657600568741,
+        "ata_saliency": 0.02106569846969785,
+        "fragmentation": 0.12633124167310744,
+        "character_noise": 0.0019776716964945286
+    }
+}

@@ -1,0 +1,605 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/60",
+        "folder_id": "60",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00017141.JPEG"
+    },
+    "original_prompt": "Identify the objects \"iPod, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 39,
+            "ymin": 100,
+            "xmax": 200,
+            "ymax": 281
+        },
+        "iPod": {
+            "xmin": 17,
+            "ymin": 3,
+            "xmax": 216,
+            "ymax": 357
+        },
+        "iPod_1": {
+            "xmin": 241,
+            "ymin": 1,
+            "xmax": 444,
+            "ymax": 356
+        }
+    },
+    "baseline_iou": 0.96078,
+    "swad_star": 0.761,
+    "swad_star_index": 3,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 7,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.013803,
+                    "defocus_blur": 0.165873,
+                    "motion_blur": 0.066023,
+                    "fog_filter": 0.069791,
+                    "pixelate": 0.081248,
+                    "jpeg_filter": 0.0775
+                },
+                "text_corruptions": {
+                    "homophone": 0.020424,
+                    "synonym": 0.01297,
+                    "ata_saliency": 0.125335,
+                    "fragmentation": 0.126349,
+                    "character_noise": 0.069442
+                },
+                "img_budget_used": 0.474238,
+                "txt_budget_used": 0.354521,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.77786,
+                "img_dist": 0.08873,
+                "txt_dist": 0.14062,
+                "txt_sim": 0.85938
+            },
+            "swad_metrics": {
+                "iou_0": 0.96078,
+                "delta_m_plus": 0.19039,
+                "phi": 0.78313,
+                "swad": 0.1491
+            },
+            "l2_distance": 0.79543,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"iPo\u200bd, per son\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [512, 10, 958, 718], \"label\": \"iPo\u200bd\"},\n\t{\"bbox_2d\": [38, 10, 458, 718], \"label\": \"per son\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            512,
+                            10,
+                            958,
+                            718
+                        ],
+                        "label": "iPo\u200bd"
+                    },
+                    {
+                        "bbox_2d": [
+                            38,
+                            10,
+                            458,
+                            718
+                        ],
+                        "label": "per son"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 136,
+                "runtime_seconds": 0.443
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.013802758724205508,
+                "defocus_blur": 0.16587279099696345,
+                "motion_blur": 0.06602300853109067,
+                "fog_filter": 0.06979092571972449,
+                "pixelate": 0.08124809210039853,
+                "jpeg_filter": 0.07750001438280198
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.02042438812183944,
+                "synonym": 0.012970480586044596,
+                "ata_saliency": 0.12533503255752165,
+                "fragmentation": 0.12634907882687818,
+                "character_noise": 0.06944192882830388
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.02357,
+                    "defocus_blur": 0.005887,
+                    "motion_blur": 0.003742,
+                    "fog_filter": 0.051848,
+                    "pixelate": 0.051734,
+                    "jpeg_filter": 0.003799
+                },
+                "text_corruptions": {
+                    "homophone": 0.197963,
+                    "synonym": 0.015341,
+                    "ata_saliency": 0.009759,
+                    "fragmentation": 0.369246,
+                    "character_noise": 0.035864
+                },
+                "img_budget_used": 0.140581,
+                "txt_budget_used": 0.628174,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.07927,
+                "txt_dist": 0.23304,
+                "txt_sim": 0.76696
+            },
+            "swad_metrics": {
+                "iou_0": 0.96078,
+                "delta_m_plus": 1.0,
+                "phi": 0.70616,
+                "swad": 0.70616
+            },
+            "l2_distance": 0.24615,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"iP\u200d\u043ed, p\u200ber son\u200d\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [38, 12, 470, 712], \"label\": \"iP\u200d\u043ed, p\u200ber son\u200d\"},\n\t{\"bbox_2d\": [520, 12, 960, 712], \"label\": \"iP\u200d\u043ed, p\u200ber son\u200d\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            38,
+                            12,
+                            470,
+                            712
+                        ],
+                        "label": "iP\u200d\u043ed, p\u200ber son\u200d"
+                    },
+                    {
+                        "bbox_2d": [
+                            520,
+                            12,
+                            960,
+                            712
+                        ],
+                        "label": "iP\u200d\u043ed, p\u200ber son\u200d"
+                    }
+                ],
+                "token_count": 93,
+                "raw_token_count": 136,
+                "runtime_seconds": 0.443
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.023570141716105882,
+                "defocus_blur": 0.005887308441326747,
+                "motion_blur": 0.003742310732158213,
+                "fog_filter": 0.05184838658402507,
+                "pixelate": 0.051734257178642086,
+                "jpeg_filter": 0.0037988672945862296
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.19796339242953798,
+                "synonym": 0.0153412822183582,
+                "ata_saliency": 0.009759275009635925,
+                "fragmentation": 0.36924569486355824,
+                "character_noise": 0.035864134913763245
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.004022,
+                    "defocus_blur": 0.051366,
+                    "motion_blur": 0.003338,
+                    "fog_filter": 0.022864,
+                    "pixelate": 0.189563,
+                    "jpeg_filter": 0.123916
+                },
+                "text_corruptions": {
+                    "homophone": 0.0967,
+                    "synonym": 0.076282,
+                    "ata_saliency": 0.241245,
+                    "fragmentation": 0.090643,
+                    "character_noise": 0.033977
+                },
+                "img_budget_used": 0.395068,
+                "txt_budget_used": 0.538847,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.95207,
+                "img_dist": 0.07849,
+                "txt_dist": 0.01527,
+                "txt_sim": 0.98473
+            },
+            "swad_metrics": {
+                "iou_0": 0.96078,
+                "delta_m_plus": 0.00907,
+                "phi": 0.90744,
+                "swad": 0.00823
+            },
+            "l2_distance": 0.95542,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"iPod\u200b, person\u200b\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [38, 12, 462, 712], \"label\": \"iPod\"},\n\t{\"bbox_2d\": [512, 12, 962, 712], \"label\": \"iPod\"},\n\t{\"bbox_2d\": [78, 200, 428, 578], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            38,
+                            12,
+                            462,
+                            712
+                        ],
+                        "label": "iPod"
+                    },
+                    {
+                        "bbox_2d": [
+                            512,
+                            12,
+                            962,
+                            712
+                        ],
+                        "label": "iPod"
+                    },
+                    {
+                        "bbox_2d": [
+                            78,
+                            200,
+                            428,
+                            578
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 103,
+                "raw_token_count": 136,
+                "runtime_seconds": 0.443
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.004021957177926824,
+                "defocus_blur": 0.05136582355091819,
+                "motion_blur": 0.0033379449577906023,
+                "fog_filter": 0.022864257201845463,
+                "pixelate": 0.18956251697439236,
+                "jpeg_filter": 0.12391578433363588
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.09670029542618926,
+                "synonym": 0.07628205910441346,
+                "ata_saliency": 0.24124492260670596,
+                "fragmentation": 0.09064289917069146,
+                "character_noise": 0.03397670203712206
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.026064,
+                    "defocus_blur": 0.093683,
+                    "motion_blur": 0.169929,
+                    "fog_filter": 0.093665,
+                    "pixelate": 0.063488,
+                    "jpeg_filter": 0.009549
+                },
+                "text_corruptions": {
+                    "homophone": 0.047963,
+                    "synonym": 0.013722,
+                    "ata_saliency": 0.16646,
+                    "fragmentation": 0.0562,
+                    "character_noise": 0.121472
+                },
+                "img_budget_used": 0.456378,
+                "txt_budget_used": 0.405816,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.08867,
+                "txt_dist": 0.16496,
+                "txt_sim": 0.83504
+            },
+            "swad_metrics": {
+                "iou_0": 0.96078,
+                "delta_m_plus": 1.0,
+                "phi": 0.761,
+                "swad": 0.761
+            },
+            "l2_distance": 0.18728,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"iP\u200bod, pe\u200dr son\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [34, 12, 466, 712], \"label\": \"iP\u200bod, pe\u200dr son\"},\n\t{\"bbox_2d\": [516, 12, 956, 712], \"label\": \"iP\u200bod, pe\u200dr son\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            34,
+                            12,
+                            466,
+                            712
+                        ],
+                        "label": "iP\u200bod, pe\u200dr son"
+                    },
+                    {
+                        "bbox_2d": [
+                            516,
+                            12,
+                            956,
+                            712
+                        ],
+                        "label": "iP\u200bod, pe\u200dr son"
+                    }
+                ],
+                "token_count": 87,
+                "raw_token_count": 136,
+                "runtime_seconds": 0.443
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.02606394075183041,
+                "defocus_blur": 0.09368252682445885,
+                "motion_blur": 0.1699291062357954,
+                "fog_filter": 0.0936647450182925,
+                "pixelate": 0.06348845442155716,
+                "jpeg_filter": 0.009549400858399285
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.047962682238099366,
+                "synonym": 0.013721812463370855,
+                "ata_saliency": 0.16646002620725847,
+                "fragmentation": 0.05619960131225836,
+                "character_noise": 0.1214722172899212
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.004043,
+                    "defocus_blur": 0.091193,
+                    "motion_blur": 0.155076,
+                    "fog_filter": 0.033266,
+                    "pixelate": 0.251105,
+                    "jpeg_filter": 0.088665
+                },
+                "text_corruptions": {
+                    "homophone": 0.05991,
+                    "synonym": 0.112757,
+                    "ata_saliency": 0.025163,
+                    "fragmentation": 0.104739,
+                    "character_noise": 0.004589
+                },
+                "img_budget_used": 0.623349,
+                "txt_budget_used": 0.307158,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.7787,
+                "img_dist": 0.08596,
+                "txt_dist": 0.16906,
+                "txt_sim": 0.83094
+            },
+            "swad_metrics": {
+                "iou_0": 0.96078,
+                "delta_m_plus": 0.18951,
+                "phi": 0.75951,
+                "swad": 0.14394
+            },
+            "l2_distance": 0.80146,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"iPod, \u0440\u0435r son\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [512, 10, 958, 718], \"label\": \"iPod\"},\n\t{\"bbox_2d\": [38, 10, 460, 718], \"label\": \"iPod\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            512,
+                            10,
+                            958,
+                            718
+                        ],
+                        "label": "iPod"
+                    },
+                    {
+                        "bbox_2d": [
+                            38,
+                            10,
+                            460,
+                            718
+                        ],
+                        "label": "iPod"
+                    }
+                ],
+                "token_count": 71,
+                "raw_token_count": 136,
+                "runtime_seconds": 0.443
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.0040428484427044485,
+                "defocus_blur": 0.0911934100604413,
+                "motion_blur": 0.15507625535097516,
+                "fog_filter": 0.033266243018264814,
+                "pixelate": 0.25110500320320817,
+                "jpeg_filter": 0.08866541750569715
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.05990973295756759,
+                "synonym": 0.11275736104094301,
+                "ata_saliency": 0.025162517831108098,
+                "fragmentation": 0.10473923875471103,
+                "character_noise": 0.004588929311399588
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.003545,
+                    "defocus_blur": 0.083451,
+                    "motion_blur": 0.243337,
+                    "fog_filter": 0.05856,
+                    "pixelate": 0.036791,
+                    "jpeg_filter": 0.239464
+                },
+                "text_corruptions": {
+                    "homophone": 0.020633,
+                    "synonym": 0.029703,
+                    "ata_saliency": 0.033162,
+                    "fragmentation": 0.025873,
+                    "character_noise": 0.013391
+                },
+                "img_budget_used": 0.665148,
+                "txt_budget_used": 0.122762,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.08744,
+                "txt_dist": 0.18457,
+                "txt_sim": 0.81543
+            },
+            "swad_metrics": {
+                "iou_0": 0.96078,
+                "delta_m_plus": 1.0,
+                "phi": 0.74413,
+                "swad": 0.74413
+            },
+            "l2_distance": 0.20423,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"iPod, pre s\u200don\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [518, 0, 960, 718], \"label\": \"iPod, pre s\u200don\"},\n\t{\"bbox_2d\": [38, 0, 460, 718], \"label\": \"iPod, pre s\u200don\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            518,
+                            0,
+                            960,
+                            718
+                        ],
+                        "label": "iPod, pre s\u200don"
+                    },
+                    {
+                        "bbox_2d": [
+                            38,
+                            0,
+                            460,
+                            718
+                        ],
+                        "label": "iPod, pre s\u200don"
+                    }
+                ],
+                "token_count": 81,
+                "raw_token_count": 136,
+                "runtime_seconds": 0.443
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.003545348448752804,
+                "defocus_blur": 0.08345148401603714,
+                "motion_blur": 0.24333655638988522,
+                "fog_filter": 0.05856029934992197,
+                "pixelate": 0.036790593027089674,
+                "jpeg_filter": 0.2394639333853131
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.020633156205233875,
+                "synonym": 0.029702955596140713,
+                "ata_saliency": 0.03316200910114668,
+                "fragmentation": 0.025872621595485527,
+                "character_noise": 0.01339126381364889
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.023443,
+                    "defocus_blur": 0.048064,
+                    "motion_blur": 0.242597,
+                    "fog_filter": 0.015968,
+                    "pixelate": 0.054636,
+                    "jpeg_filter": 0.043948
+                },
+                "text_corruptions": {
+                    "homophone": 0.010592,
+                    "synonym": 0.021447,
+                    "ata_saliency": 0.125507,
+                    "fragmentation": 0.216793,
+                    "character_noise": 0.184387
+                },
+                "img_budget_used": 0.428656,
+                "txt_budget_used": 0.558726,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.9632,
+                "img_dist": 0.07533,
+                "txt_dist": 0.10697,
+                "txt_sim": 0.89303
+            },
+            "swad_metrics": {
+                "iou_0": 0.96078,
+                "delta_m_plus": 0.0,
+                "phi": 0.82576,
+                "swad": 0.0
+            },
+            "l2_distance": 0.97204,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"iP\u200dod, p\u200b\u0435rs\u200d\u043e\u200bn\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [38, 12, 468, 712], \"label\": \"iP\u200dod\"},\n\t{\"bbox_2d\": [518, 12, 972, 712], \"label\": \"iP\u200dod\"},\n\t{\"bbox_2d\": [88, 200, 428, 572], \"label\": \"p\u200b\u0435rs\u200d\u043e\u200bn\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            38,
+                            12,
+                            468,
+                            712
+                        ],
+                        "label": "iP\u200dod"
+                    },
+                    {
+                        "bbox_2d": [
+                            518,
+                            12,
+                            972,
+                            712
+                        ],
+                        "label": "iP\u200dod"
+                    },
+                    {
+                        "bbox_2d": [
+                            88,
+                            200,
+                            428,
+                            572
+                        ],
+                        "label": "p\u200b\u0435rs\u200d\u043e\u200bn"
+                    }
+                ],
+                "token_count": 117,
+                "raw_token_count": 136,
+                "runtime_seconds": 0.443
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.023443329006522472,
+                "defocus_blur": 0.04806387526631227,
+                "motion_blur": 0.2425966830848583,
+                "fog_filter": 0.01596842044270966,
+                "pixelate": 0.05463582053414253,
+                "jpeg_filter": 0.04394751647025642
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.010591673333766202,
+                "synonym": 0.02144730967213268,
+                "ata_saliency": 0.12550706260152558,
+                "fragmentation": 0.21679276742958672,
+                "character_noise": 0.18438677204777632
+            }
+        }
+    ]
+}

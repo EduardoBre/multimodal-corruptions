@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/162",
+        "folder_id": "162",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00004116.JPEG"
+    },
+    "pareto_index": 21,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 6,
+    "total_evaluations": 165,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.011254,
+            "defocus_blur": 0.197117,
+            "motion_blur": 0.000524,
+            "fog_filter": 0.041623,
+            "pixelate": 0.129491,
+            "jpeg_filter": 0.009704
+        },
+        "text_corruptions": {
+            "homophone": 0.016326,
+            "synonym": 0.0048,
+            "ata_saliency": 0.006532,
+            "fragmentation": 0.173597,
+            "character_noise": 0.018243
+        },
+        "img_budget_used": 0.389713,
+        "txt_budget_used": 0.219498,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.30472,
+        "img_dist": 0.08677,
+        "txt_dist": 0.14463,
+        "txt_sim": 0.85537
+    },
+    "swad_metrics": {
+        "iou_0": 0.75712,
+        "delta_m_plus": 0.59753,
+        "phi": 0.78115,
+        "swad": 0.46676
+    },
+    "l2_distance": 0.34828,
+    "original_prompt": "Identify the objects \"domestic cat, horse\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "domestic cat": {
+            "xmin": 90,
+            "ymin": 248,
+            "xmax": 234,
+            "ymax": 353
+        },
+        "domestic cat_1": {
+            "xmin": 85,
+            "ymin": 247,
+            "xmax": 265,
+            "ymax": 391
+        },
+        "horse": {
+            "xmin": 0,
+            "ymin": 326,
+            "xmax": 331,
+            "ymax": 498
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"domesti\u0441 c at, h\u043erse\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 710, 999, 1000], \"label\": \"domesti\u0441 c at, h\u043erse\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    710,
+                    999,
+                    1000
+                ],
+                "label": "domesti\u0441 c at, h\u043erse"
+            }
+        ],
+        "token_count": 47,
+        "raw_token_count": 102,
+        "runtime_seconds": 0.3174
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.011253577441845963,
+        "defocus_blur": 0.19711744930778483,
+        "motion_blur": 0.0005242915235916306,
+        "fog_filter": 0.04162342223849973,
+        "pixelate": 0.12949072770181583,
+        "jpeg_filter": 0.009703540418150192
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.01632601121618349,
+        "synonym": 0.004799793587007176,
+        "ata_saliency": 0.006532293222810234,
+        "fragmentation": 0.17359700800455968,
+        "character_noise": 0.018242920195340375
+    }
+}

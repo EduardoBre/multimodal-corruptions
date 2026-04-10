@@ -1,0 +1,1788 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/95",
+        "folder_id": "95",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00015937.JPEG"
+    },
+    "original_prompt": "Identify the objects \"bowl, cup or mug, frying pan, spatula, stove\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "spatula": {
+            "xmin": 193,
+            "ymin": 89,
+            "xmax": 325,
+            "ymax": 135
+        },
+        "frying pan": {
+            "xmin": 9,
+            "ymin": 96,
+            "xmax": 179,
+            "ymax": 226
+        },
+        "frying pan_1": {
+            "xmin": 329,
+            "ymin": 94,
+            "xmax": 488,
+            "ymax": 188
+        },
+        "frying pan_2": {
+            "xmin": 77,
+            "ymin": 196,
+            "xmax": 326,
+            "ymax": 332
+        },
+        "bowl": {
+            "xmin": 190,
+            "ymin": 95,
+            "xmax": 271,
+            "ymax": 154
+        },
+        "cup or mug": {
+            "xmin": 250,
+            "ymin": 148,
+            "xmax": 324,
+            "ymax": 223
+        },
+        "stove": {
+            "xmin": 0,
+            "ymin": 2,
+            "xmax": 498,
+            "ymax": 374
+        }
+    },
+    "baseline_iou": 0.87402,
+    "swad_star": 0.70686,
+    "swad_star_index": 2,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 60,
+    "skipped_evaluations": 30,
+    "n_solutions": 16,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.02832,
+                    "defocus_blur": 0.012576,
+                    "motion_blur": 0.00165,
+                    "fog_filter": 0.082031,
+                    "pixelate": 0.142222,
+                    "jpeg_filter": 0.002529
+                },
+                "text_corruptions": {
+                    "homophone": 0.041675,
+                    "synonym": 0.277109,
+                    "ata_saliency": 0.042376,
+                    "fragmentation": 0.039846,
+                    "character_noise": 0.01675
+                },
+                "img_budget_used": 0.269327,
+                "txt_budget_used": 0.417756,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.42004,
+                "img_dist": 0.10052,
+                "txt_dist": 0.25437,
+                "txt_sim": 0.74563
+            },
+            "swad_metrics": {
+                "iou_0": 0.87402,
+                "delta_m_plus": 0.51942,
+                "phi": 0.67068,
+                "swad": 0.34836
+            },
+            "l2_distance": 0.50124,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"b\u0430s in, cu\u0440 or mu\u200bg, skillet, flipper, sto\u200dve\u200d\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [498, 394, 644, 594], \"label\": \"b\u0430s in, cu\u0440 or mu\u200bg\"},\n\t{\"bbox_2d\": [380, 272, 538, 416], \"label\": \"b\u0430s in, cu\u0440 or mu\u200bg\"},\n\t{\"bbox_2d\": [658, 250, 972, 530], \"label\": \"skillet\"},\n\t{\"bbox_2d\": [15, 352, 302, 630], \"label\": \"skillet\"},\n\t{\"bbox_2d\": [152, 536, 434, 872], \"label\": \"skillet\"},\n\t{\"bbox_2d\": [0, 128, 1000, 998], \"label\": \"sto\u200dve\u200d\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            498,
+                            394,
+                            644,
+                            594
+                        ],
+                        "label": "b\u0430s in, cu\u0440 or mu\u200bg"
+                    },
+                    {
+                        "bbox_2d": [
+                            380,
+                            272,
+                            538,
+                            416
+                        ],
+                        "label": "b\u0430s in, cu\u0440 or mu\u200bg"
+                    },
+                    {
+                        "bbox_2d": [
+                            658,
+                            250,
+                            972,
+                            530
+                        ],
+                        "label": "skillet"
+                    },
+                    {
+                        "bbox_2d": [
+                            15,
+                            352,
+                            302,
+                            630
+                        ],
+                        "label": "skillet"
+                    },
+                    {
+                        "bbox_2d": [
+                            152,
+                            536,
+                            434,
+                            872
+                        ],
+                        "label": "skillet"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            128,
+                            1000,
+                            998
+                        ],
+                        "label": "sto\u200dve\u200d"
+                    }
+                ],
+                "token_count": 230,
+                "raw_token_count": 273,
+                "runtime_seconds": 0.8391
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.028319549769134252,
+                "defocus_blur": 0.0125755939160305,
+                "motion_blur": 0.0016495215643041192,
+                "fog_filter": 0.08203115139290504,
+                "pixelate": 0.14222209138271052,
+                "jpeg_filter": 0.0025291256896780357
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.04167501393004565,
+                "synonym": 0.277109150071473,
+                "ata_saliency": 0.042376163657567044,
+                "fragmentation": 0.03984574227665824,
+                "character_noise": 0.01674956667188594
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.084226,
+                    "defocus_blur": 0.03715,
+                    "motion_blur": 0.093509,
+                    "fog_filter": 0.087504,
+                    "pixelate": 0.194058,
+                    "jpeg_filter": 0.005115
+                },
+                "text_corruptions": {
+                    "homophone": 0.025485,
+                    "synonym": 0.004356,
+                    "ata_saliency": 0.00252,
+                    "fragmentation": 0.006849,
+                    "character_noise": 0.016488
+                },
+                "img_budget_used": 0.501562,
+                "txt_budget_used": 0.055699,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.74113,
+                "img_dist": 0.10177,
+                "txt_dist": 0.08201,
+                "txt_sim": 0.91799
+            },
+            "swad_metrics": {
+                "iou_0": 0.87402,
+                "delta_m_plus": 0.15204,
+                "phi": 0.82457,
+                "swad": 0.12537
+            },
+            "l2_distance": 0.75257,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bo\u200dl\u200de, \u0441up oar mug, fry\u200bing pan, spatula, st\u200bove\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [15, 352, 304, 648], \"label\": \"bo\u200dl\u200de\"},\n\t{\"bbox_2d\": [152, 536, 438, 876], \"label\": \"bo\u200dl\u200de\"},\n\t{\"bbox_2d\": [500, 398, 650, 586], \"label\": \"\u0441up oar mug\"},\n\t{\"bbox_2d\": [658, 252, 972, 522], \"label\": \"frying pan\"},\n\t{\"bbox_2d\": [378, 236, 658, 372], \"label\": \"spatula\"},\n\t{\"bbox_2d\": [0, 12, 998, 998], \"label\": \"st\u200bove\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            15,
+                            352,
+                            304,
+                            648
+                        ],
+                        "label": "bo\u200dl\u200de"
+                    },
+                    {
+                        "bbox_2d": [
+                            152,
+                            536,
+                            438,
+                            876
+                        ],
+                        "label": "bo\u200dl\u200de"
+                    },
+                    {
+                        "bbox_2d": [
+                            500,
+                            398,
+                            650,
+                            586
+                        ],
+                        "label": "\u0441up oar mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            658,
+                            252,
+                            972,
+                            522
+                        ],
+                        "label": "frying pan"
+                    },
+                    {
+                        "bbox_2d": [
+                            378,
+                            236,
+                            658,
+                            372
+                        ],
+                        "label": "spatula"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            12,
+                            998,
+                            998
+                        ],
+                        "label": "st\u200bove"
+                    }
+                ],
+                "token_count": 222,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.4696
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.08422617889374638,
+                "defocus_blur": 0.037149910134443756,
+                "motion_blur": 0.0935089439724854,
+                "fog_filter": 0.08750398297263202,
+                "pixelate": 0.19405753754823887,
+                "jpeg_filter": 0.005115165829268542
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.025484735700924285,
+                "synonym": 0.004356348389821097,
+                "ata_saliency": 0.0025203872295447294,
+                "fragmentation": 0.0068493622001917515,
+                "character_noise": 0.01648791890806385
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.348363,
+                    "defocus_blur": 0.289722,
+                    "motion_blur": 0.072969,
+                    "fog_filter": 0.135824,
+                    "pixelate": 0.0306,
+                    "jpeg_filter": 0.11667
+                },
+                "text_corruptions": {
+                    "homophone": 0.008203,
+                    "synonym": 0.020947,
+                    "ata_saliency": 0.162816,
+                    "fragmentation": 0.393441,
+                    "character_noise": 0.073689
+                },
+                "img_budget_used": 0.994147,
+                "txt_budget_used": 0.659096,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.12213,
+                "txt_dist": 0.1948,
+                "txt_sim": 0.8052
+            },
+            "swad_metrics": {
+                "iou_0": 0.87402,
+                "delta_m_plus": 1.0,
+                "phi": 0.70686,
+                "swad": 0.70686
+            },
+            "l2_distance": 0.22992,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bowl, cup o\u200br mug, fry\u200ding \u0440a\u200b n, sp\u200b ptul\u200da, stvo\u0435\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [378, 250, 544, 400], \"label\": \"bowl\"},\n\t{\"bbox_2d\": [498, 388, 648, 600], \"label\": \"cup o\u200br mug\"},\n\t{\"bbox_2d\": [678, 238, 972, 520], \"label\": \"fry\u200ding \u0440a\u200b n\"},\n\t{\"bbox_2d\": [15, 350, 300, 620], \"label\": \"sp\u200b ptul\u200da\"},\n\t{\"bbox_2d\": [150, 538, 652, 872], \"label\": \"sp\u200b ptul\u200da\"},\n\t{\"bbox_2d\": [378, 250, 544, 400], \"label\": \"sp\u200b ptul\u200da\"},\n\t{\"bbox_2d\": [678, 238, 972, 520], \"label\": \"sp\u200b ptul\u200da\"},\n\t{\"bbox_2d\": [15, 350, 300, 620], \"label\": \"sp\u200b ptul\u200da\"},\n\t{\"bbox_2d\": [150, 538, 652, 872], \"label\": \"sp\u200b ptul\u200da\"},\n\t{\"bbox_2d\": [378, 250, 544, 400], \"label\": \"sp\u200b ptul\u200da\"},\n\t{\"bbox_2d\": [678, 238, 972, 520], \"label\": \"sp\u200b ptul\u200da\"},\n\t{\"bbox_2d\": [15, 350, 300, 620], \"label\": \"sp\u200b ptul\u200da\"},\n\t{\"bbox_2d\": [150, 538, 652, 872], \"label\": \"sp\u200b ptul\u200da\"},\n\t{\"bbox_2d\": [378, 250, 544, 400], \"label\": \"sp\u200b ptul\u200da\"},\n\t{\"bbox_2d\": [678, 238, 972, 520], \"label\": \"sp\u200b ptul\u200da\"},\n\t{\"bbox_2d\": [15, 350, 300, 620], \"label\": \"sp\u200b ptul\u200da\"},\n\t{\"bbox_2d\": [150, 538, 652, 872], \"label\": \"sp\u200b ptul\u200da\"},\n\t{\"bbox_2d\": [378, 250, 544, 400], \"label\": \"sp\u200b ptul\u200da\"},\n\t{\"bbox_2d\": [678, 238, 972, 520], \"label\": \"sp\u200b ptul\u200da\"},\n\t{\"bbox_2d\": [15, 350, 300, 620], \"label\": \"sp\u200b ptul\u200da\"},\n\t{\"bbox_2d\": [150, 538, 652, 872",
+                "parsed_predictions": [],
+                "token_count": 800,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.4696
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.3483630886141014,
+                "defocus_blur": 0.2897218713331129,
+                "motion_blur": 0.07296887822102863,
+                "fog_filter": 0.13582372306219406,
+                "pixelate": 0.030599543604092685,
+                "jpeg_filter": 0.11667019062564118
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.008202519007236633,
+                "synonym": 0.020946896795479154,
+                "ata_saliency": 0.1628161516018632,
+                "fragmentation": 0.39344127690182507,
+                "character_noise": 0.07368885704424935
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.028485,
+                    "defocus_blur": 0.012312,
+                    "motion_blur": 0.011352,
+                    "fog_filter": 0.009226,
+                    "pixelate": 0.025898,
+                    "jpeg_filter": 0.055361
+                },
+                "text_corruptions": {
+                    "homophone": 0.051779,
+                    "synonym": 0.040436,
+                    "ata_saliency": 0.346776,
+                    "fragmentation": 0.030149,
+                    "character_noise": 0.194072
+                },
+                "img_budget_used": 0.142633,
+                "txt_budget_used": 0.663211,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.37119,
+                "img_dist": 0.08929,
+                "txt_dist": 0.28313,
+                "txt_sim": 0.71687
+            },
+            "swad_metrics": {
+                "iou_0": 0.87402,
+                "delta_m_plus": 0.57531,
+                "phi": 0.65286,
+                "swad": 0.3756
+            },
+            "l2_distance": 0.47531,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bow\u200bl, ucp\u200b or\u200d mzg , f r\u0443i\u200bng a\u0440n, spatu\u200dw\u0430, st\u200dove\u200b\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [380, 264, 540, 416], \"label\": \"bow\u200bl\"},\n\t{\"bbox_2d\": [250, 200, 408, 380], \"label\": \"spatu\u200dw\u0430\"},\n\t{\"bbox_2d\": [0, 100, 1000, 998], \"label\": \"st\u200dove\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            380,
+                            264,
+                            540,
+                            416
+                        ],
+                        "label": "bow\u200bl"
+                    },
+                    {
+                        "bbox_2d": [
+                            250,
+                            200,
+                            408,
+                            380
+                        ],
+                        "label": "spatu\u200dw\u0430"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            100,
+                            1000,
+                            998
+                        ],
+                        "label": "st\u200dove"
+                    }
+                ],
+                "token_count": 114,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.4696
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.02848546799265548,
+                "defocus_blur": 0.012311905844247571,
+                "motion_blur": 0.011351532198538026,
+                "fog_filter": 0.009225560696718172,
+                "pixelate": 0.025897737413748314,
+                "jpeg_filter": 0.05536116091399541
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.05177873954467846,
+                "synonym": 0.04043633735259358,
+                "ata_saliency": 0.34677599991269037,
+                "fragmentation": 0.030148525415915062,
+                "character_noise": 0.19407182282168484
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.09261,
+                    "defocus_blur": 0.003543,
+                    "motion_blur": 0.186898,
+                    "fog_filter": 0.032786,
+                    "pixelate": 0.015941,
+                    "jpeg_filter": 0.00285
+                },
+                "text_corruptions": {
+                    "homophone": 0.134131,
+                    "synonym": 0.047416,
+                    "ata_saliency": 0.052349,
+                    "fragmentation": 0.018992,
+                    "character_noise": 0.05636
+                },
+                "img_budget_used": 0.334628,
+                "txt_budget_used": 0.309248,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.61748,
+                "img_dist": 0.09147,
+                "txt_dist": 0.2433,
+                "txt_sim": 0.7567
+            },
+            "swad_metrics": {
+                "iou_0": 0.87402,
+                "delta_m_plus": 0.29352,
+                "phi": 0.68748,
+                "swad": 0.20179
+            },
+            "l2_distance": 0.66996,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bowl, drsnk\u0456ng cup, skille\u200dt\u200d, spktula\u200d, st\u043ev\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [384, 264, 544, 416], \"label\": \"bowl\"},\n\t{\"bbox_2d\": [500, 392, 648, 588], \"label\": \"drsnk\u0456ng cup\"},\n\t{\"bbox_2d\": [658, 244, 972, 520], \"label\": \"skille\u200dt\u200d\"},\n\t{\"bbox_2d\": [344, 196, 408, 296], \"label\": \"spktula\u200d\"},\n\t{\"bbox_2d\": [0, 100, 998, 998], \"label\": \"st\u043ev\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            384,
+                            264,
+                            544,
+                            416
+                        ],
+                        "label": "bowl"
+                    },
+                    {
+                        "bbox_2d": [
+                            500,
+                            392,
+                            648,
+                            588
+                        ],
+                        "label": "drsnk\u0456ng cup"
+                    },
+                    {
+                        "bbox_2d": [
+                            658,
+                            244,
+                            972,
+                            520
+                        ],
+                        "label": "skille\u200dt\u200d"
+                    },
+                    {
+                        "bbox_2d": [
+                            344,
+                            196,
+                            408,
+                            296
+                        ],
+                        "label": "spktula\u200d"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            100,
+                            998,
+                            998
+                        ],
+                        "label": "st\u043ev"
+                    }
+                ],
+                "token_count": 187,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.4696
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.09261009812177555,
+                "defocus_blur": 0.0035427739289875812,
+                "motion_blur": 0.1868982071296849,
+                "fog_filter": 0.03278555683103267,
+                "pixelate": 0.015941458841790254,
+                "jpeg_filter": 0.0028503203272586403
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.13413051208406226,
+                "synonym": 0.047415689193890255,
+                "ata_saliency": 0.052349419652370256,
+                "fragmentation": 0.018992034514051147,
+                "character_noise": 0.05636044609596111
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.009907,
+                    "defocus_blur": 0.005314,
+                    "motion_blur": 0.001503,
+                    "fog_filter": 0.022043,
+                    "pixelate": 0.001859,
+                    "jpeg_filter": 0.000678
+                },
+                "text_corruptions": {
+                    "homophone": 0.01295,
+                    "synonym": 0.042139,
+                    "ata_saliency": 0.013307,
+                    "fragmentation": 0.060435,
+                    "character_noise": 3e-05
+                },
+                "img_budget_used": 0.041303,
+                "txt_budget_used": 0.128861,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.81643,
+                "img_dist": 0.09117,
+                "txt_dist": 0.07377,
+                "txt_sim": 0.92623
+            },
+            "swad_metrics": {
+                "iou_0": 0.87402,
+                "delta_m_plus": 0.06589,
+                "phi": 0.84179,
+                "swad": 0.05547
+            },
+            "l2_distance": 0.82481,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bow\u200dl, cup or mug, frying pan, spatula, st\u043e\u200bf\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [380, 264, 540, 416], \"label\": \"bow\u200dl\"},\n\t{\"bbox_2d\": [500, 398, 652, 592], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [666, 248, 974, 516], \"label\": \"frying pan\"},\n\t{\"bbox_2d\": [15, 352, 306, 628], \"label\": \"frying pan\"},\n\t{\"bbox_2d\": [152, 536, 658, 880], \"label\": \"frying pan\"},\n\t{\"bbox_2d\": [342, 200, 672, 366], \"label\": \"spatula\"},\n\t{\"bbox_2d\": [0, 128, 1000, 998], \"label\": \"st\u043e\u200bf\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            380,
+                            264,
+                            540,
+                            416
+                        ],
+                        "label": "bow\u200dl"
+                    },
+                    {
+                        "bbox_2d": [
+                            500,
+                            398,
+                            652,
+                            592
+                        ],
+                        "label": "cup or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            666,
+                            248,
+                            974,
+                            516
+                        ],
+                        "label": "frying pan"
+                    },
+                    {
+                        "bbox_2d": [
+                            15,
+                            352,
+                            306,
+                            628
+                        ],
+                        "label": "frying pan"
+                    },
+                    {
+                        "bbox_2d": [
+                            152,
+                            536,
+                            658,
+                            880
+                        ],
+                        "label": "frying pan"
+                    },
+                    {
+                        "bbox_2d": [
+                            342,
+                            200,
+                            672,
+                            366
+                        ],
+                        "label": "spatula"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            128,
+                            1000,
+                            998
+                        ],
+                        "label": "st\u043e\u200bf"
+                    }
+                ],
+                "token_count": 251,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.4696
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.009907183523458927,
+                "defocus_blur": 0.005313567285748384,
+                "motion_blur": 0.0015026789209473571,
+                "fog_filter": 0.022042810118782414,
+                "pixelate": 0.0018593530458918307,
+                "jpeg_filter": 0.0006775917287385015
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.012950431775459646,
+                "synonym": 0.04213913445936305,
+                "ata_saliency": 0.013306986886470041,
+                "fragmentation": 0.06043451963941235,
+                "character_noise": 2.983520981875557e-05
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.075282,
+                    "defocus_blur": 0.01858,
+                    "motion_blur": 0.041809,
+                    "fog_filter": 0.02322,
+                    "pixelate": 0.009537,
+                    "jpeg_filter": 0.015348
+                },
+                "text_corruptions": {
+                    "homophone": 0.02816,
+                    "synonym": 0.041115,
+                    "ata_saliency": 0.003867,
+                    "fragmentation": 0.00604,
+                    "character_noise": 0.024521
+                },
+                "img_budget_used": 0.183776,
+                "txt_budget_used": 0.103703,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.80619,
+                "img_dist": 0.09131,
+                "txt_dist": 0.13553,
+                "txt_sim": 0.86447
+            },
+            "swad_metrics": {
+                "iou_0": 0.87402,
+                "delta_m_plus": 0.07761,
+                "phi": 0.78554,
+                "swad": 0.06096
+            },
+            "l2_distance": 0.82259,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bowl, cuy oar mu\u200bg, fry\u200b\u0456ng p \u0430\u200bn, sp\u200ba\u200btula, stove\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [380, 264, 542, 412], \"label\": \"bowl\"},\n\t{\"bbox_2d\": [500, 398, 650, 592], \"label\": \"cuy oar mu\u200bg\"},\n\t{\"bbox_2d\": [650, 250, 972, 516], \"label\": \"fry\u200b\u0456ng p \u0430\u200bn\"},\n\t{\"bbox_2d\": [24, 352, 308, 630], \"label\": \"fry\u200b\u0456ng p \u0430\u200bn\"},\n\t{\"bbox_2d\": [156, 536, 658, 880], \"label\": \"fry\u200b\u0456ng p \u0430\u200bn\"},\n\t{\"bbox_2d\": [342, 200, 408, 292], \"label\": \"spa\u200btula\"},\n\t{\"bbox_2d\": [0, 12, 998, 998], \"label\": \"stove\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            380,
+                            264,
+                            542,
+                            412
+                        ],
+                        "label": "bowl"
+                    },
+                    {
+                        "bbox_2d": [
+                            500,
+                            398,
+                            650,
+                            592
+                        ],
+                        "label": "cuy oar mu\u200bg"
+                    },
+                    {
+                        "bbox_2d": [
+                            650,
+                            250,
+                            972,
+                            516
+                        ],
+                        "label": "fry\u200b\u0456ng p \u0430\u200bn"
+                    },
+                    {
+                        "bbox_2d": [
+                            24,
+                            352,
+                            308,
+                            630
+                        ],
+                        "label": "fry\u200b\u0456ng p \u0430\u200bn"
+                    },
+                    {
+                        "bbox_2d": [
+                            156,
+                            536,
+                            658,
+                            880
+                        ],
+                        "label": "fry\u200b\u0456ng p \u0430\u200bn"
+                    },
+                    {
+                        "bbox_2d": [
+                            342,
+                            200,
+                            408,
+                            292
+                        ],
+                        "label": "spa\u200btula"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            12,
+                            998,
+                            998
+                        ],
+                        "label": "stove"
+                    }
+                ],
+                "token_count": 268,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.4696
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.0752820407902939,
+                "defocus_blur": 0.018580175390144765,
+                "motion_blur": 0.04180875104455405,
+                "fog_filter": 0.023220498881238876,
+                "pixelate": 0.009536549440919124,
+                "jpeg_filter": 0.015347705300879458
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.028160340021132334,
+                "synonym": 0.04111482211426429,
+                "ata_saliency": 0.003867025320847871,
+                "fragmentation": 0.006040248670603249,
+                "character_noise": 0.02452086722460043
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.019338,
+                    "defocus_blur": 0.004763,
+                    "motion_blur": 0.033212,
+                    "fog_filter": 0.002368,
+                    "pixelate": 0.054807,
+                    "jpeg_filter": 0.012997
+                },
+                "text_corruptions": {
+                    "homophone": 0.13105,
+                    "synonym": 0.033538,
+                    "ata_saliency": 0.044478,
+                    "fragmentation": 0.105635,
+                    "character_noise": 0.031984
+                },
+                "img_budget_used": 0.127486,
+                "txt_budget_used": 0.346684,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.8609,
+                "img_dist": 0.08849,
+                "txt_dist": 0.16334,
+                "txt_sim": 0.83666
+            },
+            "swad_metrics": {
+                "iou_0": 0.87402,
+                "delta_m_plus": 0.01501,
+                "phi": 0.76262,
+                "swad": 0.01145
+            },
+            "l2_distance": 0.88072,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"b\u043ewl, cu\u200dl or m\u200dg u, fryin g pan, spatul\u0430, sto\u200bve\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [383, 256, 542, 416], \"label\": \"b\u043ewl\"},\n\t{\"bbox_2d\": [498, 398, 650, 592], \"label\": \"cu\u200dl or m\u200dg u\"},\n\t{\"bbox_2d\": [650, 256, 972, 528], \"label\": \"fryin g pan\"},\n\t{\"bbox_2d\": [15, 352, 306, 636], \"label\": \"fryin g pan\"},\n\t{\"bbox_2d\": [152, 536, 658, 880], \"label\": \"fryin g pan\"},\n\t{\"bbox_2d\": [338, 200, 408, 292], \"label\": \"spatul\u0430\"},\n\t{\"bbox_2d\": [400, 236, 650, 366], \"label\": \"spatul\u0430\"},\n\t{\"bbox_2d\": [0, 100, 1000, 998], \"label\": \"sto\u200bve\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            383,
+                            256,
+                            542,
+                            416
+                        ],
+                        "label": "b\u043ewl"
+                    },
+                    {
+                        "bbox_2d": [
+                            498,
+                            398,
+                            650,
+                            592
+                        ],
+                        "label": "cu\u200dl or m\u200dg u"
+                    },
+                    {
+                        "bbox_2d": [
+                            650,
+                            256,
+                            972,
+                            528
+                        ],
+                        "label": "fryin g pan"
+                    },
+                    {
+                        "bbox_2d": [
+                            15,
+                            352,
+                            306,
+                            636
+                        ],
+                        "label": "fryin g pan"
+                    },
+                    {
+                        "bbox_2d": [
+                            152,
+                            536,
+                            658,
+                            880
+                        ],
+                        "label": "fryin g pan"
+                    },
+                    {
+                        "bbox_2d": [
+                            338,
+                            200,
+                            408,
+                            292
+                        ],
+                        "label": "spatul\u0430"
+                    },
+                    {
+                        "bbox_2d": [
+                            400,
+                            236,
+                            650,
+                            366
+                        ],
+                        "label": "spatul\u0430"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            100,
+                            1000,
+                            998
+                        ],
+                        "label": "sto\u200bve"
+                    }
+                ],
+                "token_count": 299,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.4696
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.019338096484429447,
+                "defocus_blur": 0.004763224088882951,
+                "motion_blur": 0.0332120168586273,
+                "fog_filter": 0.00236839881525676,
+                "pixelate": 0.054806903014627296,
+                "jpeg_filter": 0.012996921488887973
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.13104971662316964,
+                "synonym": 0.03353780496964789,
+                "ata_saliency": 0.04447789554951073,
+                "fragmentation": 0.1056346017435959,
+                "character_noise": 0.03198441216633925
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.0002,
+                    "defocus_blur": 0.051383,
+                    "motion_blur": 0.285122,
+                    "fog_filter": 0.013985,
+                    "pixelate": 0.015643,
+                    "jpeg_filter": 0.135828
+                },
+                "text_corruptions": {
+                    "homophone": 0.009051,
+                    "synonym": 0.057425,
+                    "ata_saliency": 0.012359,
+                    "fragmentation": 0.036447,
+                    "character_noise": 0.014449
+                },
+                "img_budget_used": 0.502161,
+                "txt_budget_used": 0.129731,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.63574,
+                "img_dist": 0.09306,
+                "txt_dist": 0.16738,
+                "txt_sim": 0.83262
+            },
+            "swad_metrics": {
+                "iou_0": 0.87402,
+                "delta_m_plus": 0.27263,
+                "phi": 0.75514,
+                "swad": 0.20587
+            },
+            "l2_distance": 0.66396,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"b\u200bowl, cup or mug, fr \u0443ing \u0440anne, spatu la, stove\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [380, 270, 544, 416], \"label\": \"b\u200bowl\"},\n\t{\"bbox_2d\": [498, 398, 648, 588], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [670, 244, 974, 520], \"label\": \"fr \u0443ing \u0440anne\"},\n\t{\"bbox_2d\": [348, 196, 688, 388], \"label\": \"spatu la\"},\n\t{\"bbox_2d\": [0, 0, 1000, 998], \"label\": \"stove\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            380,
+                            270,
+                            544,
+                            416
+                        ],
+                        "label": "b\u200bowl"
+                    },
+                    {
+                        "bbox_2d": [
+                            498,
+                            398,
+                            648,
+                            588
+                        ],
+                        "label": "cup or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            670,
+                            244,
+                            974,
+                            520
+                        ],
+                        "label": "fr \u0443ing \u0440anne"
+                    },
+                    {
+                        "bbox_2d": [
+                            348,
+                            196,
+                            688,
+                            388
+                        ],
+                        "label": "spatu la"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            998
+                        ],
+                        "label": "stove"
+                    }
+                ],
+                "token_count": 179,
+                "raw_token_count": 297,
+                "runtime_seconds": 0.9204
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.0002004802930027603,
+                "defocus_blur": 0.051382861661078576,
+                "motion_blur": 0.28512224736703035,
+                "fog_filter": 0.013984899163817469,
+                "pixelate": 0.01564294734429644,
+                "jpeg_filter": 0.13582784559317926
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.009051187995029943,
+                "synonym": 0.05742472673221789,
+                "ata_saliency": 0.012359276334470952,
+                "fragmentation": 0.036446956382624025,
+                "character_noise": 0.014449242156748827
+            }
+        },
+        {
+            "index": 9,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.058151,
+                    "defocus_blur": 0.006588,
+                    "motion_blur": 0.001362,
+                    "fog_filter": 0.049606,
+                    "pixelate": 0.008221,
+                    "jpeg_filter": 0.019187
+                },
+                "text_corruptions": {
+                    "homophone": 0.036615,
+                    "synonym": 0.043359,
+                    "ata_saliency": 0.013507,
+                    "fragmentation": 0.059682,
+                    "character_noise": 5e-05
+                },
+                "img_budget_used": 0.143115,
+                "txt_budget_used": 0.153213,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.78443,
+                "img_dist": 0.09525,
+                "txt_dist": 0.11364,
+                "txt_sim": 0.88636
+            },
+            "swad_metrics": {
+                "iou_0": 0.87402,
+                "delta_m_plus": 0.1025,
+                "phi": 0.80193,
+                "swad": 0.0822
+            },
+            "l2_distance": 0.79832,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bowl, \u0441\u200bup or m ug, skillet, s\u0440atula, stove\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [380, 256, 540, 416], \"label\": \"bowl\"},\n\t{\"bbox_2d\": [498, 398, 648, 588], \"label\": \"\u0441\u200bup or m ug\"},\n\t{\"bbox_2d\": [658, 256, 972, 528], \"label\": \"skillet\"},\n\t{\"bbox_2d\": [15, 356, 302, 656], \"label\": \"skillet\"},\n\t{\"bbox_2d\": [152, 536, 658, 888], \"label\": \"skillet\"},\n\t{\"bbox_2d\": [398, 236, 672, 372], \"label\": \"\u0441\u043f\u0430\u0442\u0443\u043b\u0430\"},\n\t{\"bbox_2d\": [0, 108, 1000, 998], \"label\": \"stove\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            380,
+                            256,
+                            540,
+                            416
+                        ],
+                        "label": "bowl"
+                    },
+                    {
+                        "bbox_2d": [
+                            498,
+                            398,
+                            648,
+                            588
+                        ],
+                        "label": "\u0441\u200bup or m ug"
+                    },
+                    {
+                        "bbox_2d": [
+                            658,
+                            256,
+                            972,
+                            528
+                        ],
+                        "label": "skillet"
+                    },
+                    {
+                        "bbox_2d": [
+                            15,
+                            356,
+                            302,
+                            656
+                        ],
+                        "label": "skillet"
+                    },
+                    {
+                        "bbox_2d": [
+                            152,
+                            536,
+                            658,
+                            888
+                        ],
+                        "label": "skillet"
+                    },
+                    {
+                        "bbox_2d": [
+                            398,
+                            236,
+                            672,
+                            372
+                        ],
+                        "label": "\u0441\u043f\u0430\u0442\u0443\u043b\u0430"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            108,
+                            1000,
+                            998
+                        ],
+                        "label": "stove"
+                    }
+                ],
+                "token_count": 248,
+                "raw_token_count": 297,
+                "runtime_seconds": 0.9204
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.05815069815434588,
+                "defocus_blur": 0.006588021581552533,
+                "motion_blur": 0.0013617992148079426,
+                "fog_filter": 0.0496060278566488,
+                "pixelate": 0.008221462548605597,
+                "jpeg_filter": 0.019186705341761055
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.03661494192521025,
+                "synonym": 0.04335856556314754,
+                "ata_saliency": 0.013506828615476557,
+                "fragmentation": 0.05968248514696663,
+                "character_noise": 4.990521916115536e-05
+            }
+        },
+        {
+            "index": 10,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.057986,
+                    "defocus_blur": 0.006119,
+                    "motion_blur": 0.028996,
+                    "fog_filter": 0.052371,
+                    "pixelate": 0.100856,
+                    "jpeg_filter": 0.044057
+                },
+                "text_corruptions": {
+                    "homophone": 0.200283,
+                    "synonym": 0.087413,
+                    "ata_saliency": 0.107371,
+                    "fragmentation": 0.070699,
+                    "character_noise": 0.013822
+                },
+                "img_budget_used": 0.290386,
+                "txt_budget_used": 0.479587,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.80931,
+                "img_dist": 0.09591,
+                "txt_dist": 0.09578,
+                "txt_sim": 0.90422
+            },
+            "swad_metrics": {
+                "iou_0": 0.87402,
+                "delta_m_plus": 0.07404,
+                "phi": 0.8175,
+                "swad": 0.06053
+            },
+            "l2_distance": 0.82058,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"b\u200bo\u200dwl, cup or mug, fryint pan, sap\u200dtula, stove\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [380, 278, 540, 412], \"label\": \"b\u200bo\u200dwl\"},\n\t{\"bbox_2d\": [498, 400, 648, 592], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [658, 250, 972, 520], \"label\": \"fryint pan\"},\n\t{\"bbox_2d\": [15, 350, 308, 630], \"label\": \"fryint pan\"},\n\t{\"bbox_2d\": [152, 530, 658, 892], \"label\": \"fryint pan\"},\n\t{\"bbox_2d\": [338, 200, 666, 372], \"label\": \"sap\u200dtula\"},\n\t{\"bbox_2d\": [0, 128, 998, 998], \"label\": \"stove\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            380,
+                            278,
+                            540,
+                            412
+                        ],
+                        "label": "b\u200bo\u200dwl"
+                    },
+                    {
+                        "bbox_2d": [
+                            498,
+                            400,
+                            648,
+                            592
+                        ],
+                        "label": "cup or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            658,
+                            250,
+                            972,
+                            520
+                        ],
+                        "label": "fryint pan"
+                    },
+                    {
+                        "bbox_2d": [
+                            15,
+                            350,
+                            308,
+                            630
+                        ],
+                        "label": "fryint pan"
+                    },
+                    {
+                        "bbox_2d": [
+                            152,
+                            530,
+                            658,
+                            892
+                        ],
+                        "label": "fryint pan"
+                    },
+                    {
+                        "bbox_2d": [
+                            338,
+                            200,
+                            666,
+                            372
+                        ],
+                        "label": "sap\u200dtula"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            128,
+                            998,
+                            998
+                        ],
+                        "label": "stove"
+                    }
+                ],
+                "token_count": 255,
+                "raw_token_count": 297,
+                "runtime_seconds": 0.9204
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.05798556172959289,
+                "defocus_blur": 0.006119463253289984,
+                "motion_blur": 0.028996451734601317,
+                "fog_filter": 0.05237119244129763,
+                "pixelate": 0.10085622972226865,
+                "jpeg_filter": 0.044056679455136215
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.20028282735348785,
+                "synonym": 0.08741297346344061,
+                "ata_saliency": 0.10737085377120203,
+                "fragmentation": 0.07069875788605681,
+                "character_noise": 0.013821602722632378
+            }
+        },
+        {
+            "index": 11,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.028485,
+                    "defocus_blur": 0.012312,
+                    "motion_blur": 0.133429,
+                    "fog_filter": 0.02578,
+                    "pixelate": 0.067837,
+                    "jpeg_filter": 0.055361
+                },
+                "text_corruptions": {
+                    "homophone": 0.051779,
+                    "synonym": 0.054411,
+                    "ata_saliency": 0.067288,
+                    "fragmentation": 0.030149,
+                    "character_noise": 0.194046
+                },
+                "img_budget_used": 0.323205,
+                "txt_budget_used": 0.397671,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.30078,
+                "img_dist": 0.09046,
+                "txt_dist": 0.31141,
+                "txt_sim": 0.68859
+            },
+            "swad_metrics": {
+                "iou_0": 0.87402,
+                "delta_m_plus": 0.65587,
+                "phi": 0.6263,
+                "swad": 0.41077
+            },
+            "l2_distance": 0.4423,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dish, c\u200bup oa\u200br mug, rfy\u0456n\u200bg \u0440an\u200bne, spa\u200dtu\u200dl\u200da\u200d, r\u0430ng\u0435\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [378, 278, 548, 416], \"label\": \"dish\"},\n\t{\"bbox_2d\": [500, 398, 648, 584], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [0, 0, 998, 998], \"label\": \"ranging panne\"},\n\t{\"bbox_2d\": [338, 198, 412, 300], \"label\": \"spatula\"},\n\t{\"bbox_2d\": [0, 0, 998, 998], \"label\": \"range\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            378,
+                            278,
+                            548,
+                            416
+                        ],
+                        "label": "dish"
+                    },
+                    {
+                        "bbox_2d": [
+                            500,
+                            398,
+                            648,
+                            584
+                        ],
+                        "label": "cup or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            998,
+                            998
+                        ],
+                        "label": "ranging panne"
+                    },
+                    {
+                        "bbox_2d": [
+                            338,
+                            198,
+                            412,
+                            300
+                        ],
+                        "label": "spatula"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            998,
+                            998
+                        ],
+                        "label": "range"
+                    }
+                ],
+                "token_count": 170,
+                "raw_token_count": 297,
+                "runtime_seconds": 0.9204
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.02848546799265548,
+                "defocus_blur": 0.012311905844247571,
+                "motion_blur": 0.1334290331017286,
+                "fog_filter": 0.02577989710350389,
+                "pixelate": 0.06783740835741356,
+                "jpeg_filter": 0.05536116091399541
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.05177873954467846,
+                "synonym": 0.05441070881108245,
+                "ata_saliency": 0.06728761928120502,
+                "fragmentation": 0.030148525415915062,
+                "character_noise": 0.19404584464443347
+            }
+        },
+        {
+            "index": 12,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.008552,
+                    "defocus_blur": 0.005314,
+                    "motion_blur": 0.035229,
+                    "fog_filter": 0.148717,
+                    "pixelate": 0.078773,
+                    "jpeg_filter": 0.000678
+                },
+                "text_corruptions": {
+                    "homophone": 0.040116,
+                    "synonym": 0.024164,
+                    "ata_saliency": 0.075839,
+                    "fragmentation": 0.004223,
+                    "character_noise": 0.053063
+                },
+                "img_budget_used": 0.277262,
+                "txt_budget_used": 0.197405,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.11066,
+                "txt_dist": 0.26621,
+                "txt_sim": 0.73379
+            },
+            "swad_metrics": {
+                "iou_0": 0.87402,
+                "delta_m_plus": 1.0,
+                "phi": 0.65259,
+                "swad": 0.65259
+            },
+            "l2_distance": 0.28829,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bow\u200bg\u200b, cuo or mug, fsyin\u200bg p\u0430n, sp\u0430txl\u200ba, stoev\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [498, 392, 648, 592], \"label\": \"mug\"},\n\t{\"bbox_2d\": [658, 250, 972, 520], \"label\": \"frying pan\"},\n\t{\"bbox_2d\": [152, 532, 658, 892], \"label\": \"frying pan\"},\n\t{\"bbox_2d\": [18, 348, 308, 630], \"label\": \"frying pan\"},\n\t{\"bbox_2d\": [388, 270, 542, 416], \"label\": \"bowl\"},\n\t{\"bbox_2d\": [342, 200, 408, 288], \"label\": \"spatula\"},\n\t{\"bbox_2d\": [408, 250, 658, 366], \"label\": \"spatula\"},\n\t{\"bbox_2d\": [700, 180, 800, 260], \"label\": \"spatula\"},\n\t{\"bbox_2d\": [700, 180, 800, 260], \"label\": \"spatula\"},\n\t{\"bbox_2d\": [700, 180, 800, 260], \"label\": \"spatula\"},\n\t{\"bbox_2d\": [700, 180, 800, 260], \"label\": \"spatula\"},\n\t{\"bbox_2d\": [700, 180, 800, 260], \"label\": \"spatula\"},\n\t{\"bbox_2d\": [700, 180, 800, 260], \"label\": \"spatula\"},\n\t{\"bbox_2d\": [700, 180, 800, 260], \"label\": \"spatula\"},\n\t{\"bbox_2d\": [700, 180, 800, 260], \"label\": \"spatula\"},\n\t{\"bbox_2d\": [700, 180, 800, 260], \"label\": \"spatula\"},\n\t{\"bbox_2d\": [700, 180, 800, 260], \"label\": \"spatula\"},\n\t{\"bbox_2d\": [700, 180, 800, 260], \"label\": \"spatula\"},\n\t{\"bbox_2d\": [700, 180, 800, 260], \"label\": \"spatula\"},\n\t{\"bbox_2d\": [700, 180, 800, 260], \"label\": \"spatula\"},\n\t{\"bbox_2d\": [700, 180, 800, 260], \"label\": \"spatula\"},\n\t{\"bbox_2d\": [700, 180, 800, 260], \"label\": \"spatula\"},\n\t{\"bbox_2d\": [700, 180, 800, 260], \"label",
+                "parsed_predictions": [],
+                "token_count": 800,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.4431
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.00855153224297171,
+                "defocus_blur": 0.005313567285748384,
+                "motion_blur": 0.03522944572477728,
+                "fog_filter": 0.14871717464864617,
+                "pixelate": 0.07877302200237266,
+                "jpeg_filter": 0.0006775917287385015
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.04011621979840698,
+                "synonym": 0.024163917908242967,
+                "ata_saliency": 0.07583904527433763,
+                "fragmentation": 0.00422312810435627,
+                "character_noise": 0.05306280392639528
+            }
+        },
+        {
+            "index": 13,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.091726,
+                    "defocus_blur": 0.166495,
+                    "motion_blur": 0.001488,
+                    "fog_filter": 0.015852,
+                    "pixelate": 0.143037,
+                    "jpeg_filter": 0.183849
+                },
+                "text_corruptions": {
+                    "homophone": 0.060689,
+                    "synonym": 0.099524,
+                    "ata_saliency": 0.352262,
+                    "fragmentation": 0.066954,
+                    "character_noise": 0.080894
+                },
+                "img_budget_used": 0.602447,
+                "txt_budget_used": 0.660323,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.09578,
+                "txt_dist": 0.29667,
+                "txt_sim": 0.70333
+            },
+            "swad_metrics": {
+                "iou_0": 0.87402,
+                "delta_m_plus": 1.0,
+                "phi": 0.63597,
+                "swad": 0.63597
+            },
+            "l2_distance": 0.31175,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bg w\u200bl, c\u0440u or m g\u200bu, fr\u0443ing p an\u200b, spatula\u200b, st\u043ewe\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 688, 340], \"label\": \"bg w\u200bl, c\u0440u or m g\u200bu, fr\u0443ing p an\u200b, spatula\u200b, st\u043ewe\"},\n\t{\"bbox_2d\": [388, 238, 658, 390], \"label\": \"spatula\u200b, st\u043ewe\"},\n\t{\"bbox_2d\": [688, 180, 972, 520], \"label\": \"fr\u0443ing p an\u200b, spatula\u200b, st\u043ewe\"},\n\t{\"bbox_2d\": [0, 240, 322, 620], \"label\": \"fr\u0443ing p an\u200b, spatula\u200b, st\u043ewe\"},\n\t{\"bbox_2d\": [152, 530, 658, 880], \"label\": \"fr\u0443ing p an\u200b, spatula\u200b, st\u043ewe\"},\n\t{\"bbox_2d\": [498, 398, 652, 590], \"label\": \"c\u0440u or m g\u200bu, fr\u0443ing p an\u200b, spatula\u200b, st\u043ewe\"},\n\t{\"bbox_2d\": [378, 280, 542, 416], \"label\": \"c\u0440u or m g\u200bu, fr\u0443ing p an\u200b, spatula\u200b, st\u043ewe\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            688,
+                            340
+                        ],
+                        "label": "bg w\u200bl, c\u0440u or m g\u200bu, fr\u0443ing p an\u200b, spatula\u200b, st\u043ewe"
+                    },
+                    {
+                        "bbox_2d": [
+                            388,
+                            238,
+                            658,
+                            390
+                        ],
+                        "label": "spatula\u200b, st\u043ewe"
+                    },
+                    {
+                        "bbox_2d": [
+                            688,
+                            180,
+                            972,
+                            520
+                        ],
+                        "label": "fr\u0443ing p an\u200b, spatula\u200b, st\u043ewe"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            240,
+                            322,
+                            620
+                        ],
+                        "label": "fr\u0443ing p an\u200b, spatula\u200b, st\u043ewe"
+                    },
+                    {
+                        "bbox_2d": [
+                            152,
+                            530,
+                            658,
+                            880
+                        ],
+                        "label": "fr\u0443ing p an\u200b, spatula\u200b, st\u043ewe"
+                    },
+                    {
+                        "bbox_2d": [
+                            498,
+                            398,
+                            652,
+                            590
+                        ],
+                        "label": "c\u0440u or m g\u200bu, fr\u0443ing p an\u200b, spatula\u200b, st\u043ewe"
+                    },
+                    {
+                        "bbox_2d": [
+                            378,
+                            280,
+                            542,
+                            416
+                        ],
+                        "label": "c\u0440u or m g\u200bu, fr\u0443ing p an\u200b, spatula\u200b, st\u043ewe"
+                    }
+                ],
+                "token_count": 348,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.4431
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.09172589161374764,
+                "defocus_blur": 0.16649486508880845,
+                "motion_blur": 0.00148848738153678,
+                "fog_filter": 0.01585218814339286,
+                "pixelate": 0.14303686295992138,
+                "jpeg_filter": 0.18384890812416899
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.06068916290309475,
+                "synonym": 0.0995243439571862,
+                "ata_saliency": 0.35226199160264077,
+                "fragmentation": 0.06695441154602837,
+                "character_noise": 0.0808935105883011
+            }
+        },
+        {
+            "index": 14,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.209374,
+                    "defocus_blur": 0.051911,
+                    "motion_blur": 0.222705,
+                    "fog_filter": 0.040829,
+                    "pixelate": 0.276538,
+                    "jpeg_filter": 0.019187
+                },
+                "text_corruptions": {
+                    "homophone": 0.036615,
+                    "synonym": 0.025383,
+                    "ata_saliency": 0.076899,
+                    "fragmentation": 0.003315,
+                    "character_noise": 0.000703
+                },
+                "img_budget_used": 0.820543,
+                "txt_budget_used": 0.142915,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.45549,
+                "img_dist": 0.09446,
+                "txt_dist": 0.11853,
+                "txt_sim": 0.88147
+            },
+            "swad_metrics": {
+                "iou_0": 0.87402,
+                "delta_m_plus": 0.47886,
+                "phi": 0.79821,
+                "swad": 0.38223
+            },
+            "l2_distance": 0.48004,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bowl, drink\u200bing c\u200dup, fr\u200bying pae, spatul\u0430 , st\u043eve\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [380, 272, 540, 408], \"label\": \"bowl\"},\n\t{\"bbox_2d\": [498, 398, 648, 592], \"label\": \"drink\u200bing c\u200dup\"},\n\t{\"bbox_2d\": [658, 244, 972, 520], \"label\": \"fr\u200bying pae\"},\n\t{\"bbox_2d\": [342, 200, 412, 300], \"label\": \"spatul\u0430\"},\n\t{\"bbox_2d\": [0, 100, 998, 998], \"label\": \"st\u043e\u0435\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            380,
+                            272,
+                            540,
+                            408
+                        ],
+                        "label": "bowl"
+                    },
+                    {
+                        "bbox_2d": [
+                            498,
+                            398,
+                            648,
+                            592
+                        ],
+                        "label": "drink\u200bing c\u200dup"
+                    },
+                    {
+                        "bbox_2d": [
+                            658,
+                            244,
+                            972,
+                            520
+                        ],
+                        "label": "fr\u200bying pae"
+                    },
+                    {
+                        "bbox_2d": [
+                            342,
+                            200,
+                            412,
+                            300
+                        ],
+                        "label": "spatul\u0430"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            100,
+                            998,
+                            998
+                        ],
+                        "label": "st\u043e\u0435"
+                    }
+                ],
+                "token_count": 184,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.4431
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.20937365090852486,
+                "defocus_blur": 0.051910816819664814,
+                "motion_blur": 0.22270537774118224,
+                "fog_filter": 0.04082921568447242,
+                "pixelate": 0.27653761523717746,
+                "jpeg_filter": 0.019186705341761055
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.03661494192521025,
+                "synonym": 0.025383349010998684,
+                "ata_saliency": 0.07689915383791787,
+                "fragmentation": 0.0033146942958511855,
+                "character_noise": 0.0007030136893652041
+            }
+        },
+        {
+            "index": 15,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.00025,
+                    "defocus_blur": 0.005992,
+                    "motion_blur": 0.028273,
+                    "fog_filter": 0.003465,
+                    "pixelate": 0.158224,
+                    "jpeg_filter": 0.059492
+                },
+                "text_corruptions": {
+                    "homophone": 0.246081,
+                    "synonym": 0.145679,
+                    "ata_saliency": 0.034,
+                    "fragmentation": 0.220962,
+                    "character_noise": 0.089575
+                },
+                "img_budget_used": 0.255696,
+                "txt_budget_used": 0.736297,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.69881,
+                "img_dist": 0.08892,
+                "txt_dist": 0.17324,
+                "txt_sim": 0.82676
+            },
+            "swad_metrics": {
+                "iou_0": 0.87402,
+                "delta_m_plus": 0.20046,
+                "phi": 0.75324,
+                "swad": 0.151
+            },
+            "l2_distance": 0.72543,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bowl\u200d, cu\u200bt or mgu, fryin\u200dg p\u0430n, spat\u200bchul\u200ba, stov\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [385, 278, 548, 416], \"label\": \"bowl\u200d, cu\u200bt or mgu\"},\n\t{\"bbox_2d\": [655, 250, 975, 520], \"label\": \"fryin\u200dg p\u0430n\"},\n\t{\"bbox_2d\": [24, 350, 305, 630], \"label\": \"fryin\u200dg p\u0430n\"},\n\t{\"bbox_2d\": [155, 536, 655, 892], \"label\": \"fryin\u200dg p\u0430n\"},\n\t{\"bbox_2d\": [345, 208, 405, 280], \"label\": \"spatchula\"},\n\t{\"bbox_2d\": [385, 230, 675, 372], \"label\": \"spatchula\"},\n\t{\"bbox_2d\": [0, 128, 999, 998], \"label\": \"stov\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            385,
+                            278,
+                            548,
+                            416
+                        ],
+                        "label": "bowl\u200d, cu\u200bt or mgu"
+                    },
+                    {
+                        "bbox_2d": [
+                            655,
+                            250,
+                            975,
+                            520
+                        ],
+                        "label": "fryin\u200dg p\u0430n"
+                    },
+                    {
+                        "bbox_2d": [
+                            24,
+                            350,
+                            305,
+                            630
+                        ],
+                        "label": "fryin\u200dg p\u0430n"
+                    },
+                    {
+                        "bbox_2d": [
+                            155,
+                            536,
+                            655,
+                            892
+                        ],
+                        "label": "fryin\u200dg p\u0430n"
+                    },
+                    {
+                        "bbox_2d": [
+                            345,
+                            208,
+                            405,
+                            280
+                        ],
+                        "label": "spatchula"
+                    },
+                    {
+                        "bbox_2d": [
+                            385,
+                            230,
+                            675,
+                            372
+                        ],
+                        "label": "spatchula"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            128,
+                            999,
+                            998
+                        ],
+                        "label": "stov"
+                    }
+                ],
+                "token_count": 273,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.4431
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.00024998049473523576,
+                "defocus_blur": 0.005991654932058069,
+                "motion_blur": 0.028273401842354662,
+                "fog_filter": 0.0034649123137974686,
+                "pixelate": 0.15822364431416372,
+                "jpeg_filter": 0.05949214456473751
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.24608101527503468,
+                "synonym": 0.1456788283595508,
+                "ata_saliency": 0.034000388250948546,
+                "fragmentation": 0.22096218710709464,
+                "character_noise": 0.08957484683471094
+            }
+        }
+    ]
+}

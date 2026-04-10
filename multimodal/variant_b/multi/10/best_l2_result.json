@@ -1,0 +1,166 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/10",
+        "folder_id": "10",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00049219.JPEG"
+    },
+    "pareto_index": 2,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.001837,
+            "defocus_blur": 0.003113,
+            "motion_blur": 0.013241,
+            "fog_filter": 0.004423,
+            "pixelate": 0.000739,
+            "jpeg_filter": 0.002284
+        },
+        "text_corruptions": {
+            "homophone": 0.017981,
+            "synonym": 0.005383,
+            "ata_saliency": 0.02475,
+            "fragmentation": 0.006553,
+            "character_noise": 0.015728
+        },
+        "img_budget_used": 0.025638,
+        "txt_budget_used": 0.070396,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.08128,
+        "img_dist": 0.09777,
+        "txt_dist": 0.06296,
+        "txt_sim": 0.93704
+    },
+    "swad_metrics": {
+        "iou_0": 0.74193,
+        "delta_m_plus": 0.89045,
+        "phi": 0.84543,
+        "swad": 0.75281
+    },
+    "l2_distance": 0.14188,
+    "original_prompt": "Identify the objects \"hotdog, salt or pepper shaker\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "hotdog": {
+            "xmin": 44,
+            "ymin": 217,
+            "xmax": 187,
+            "ymax": 374
+        },
+        "hotdog_1": {
+            "xmin": 244,
+            "ymin": 189,
+            "xmax": 411,
+            "ymax": 344
+        },
+        "hotdog_2": {
+            "xmin": 322,
+            "ymin": 109,
+            "xmax": 478,
+            "ymax": 168
+        },
+        "hotdog_3": {
+            "xmin": 68,
+            "ymin": 53,
+            "xmax": 209,
+            "ymax": 141
+        },
+        "hotdog_4": {
+            "xmin": 224,
+            "ymin": 87,
+            "xmax": 330,
+            "ymax": 201
+        },
+        "hotdog_5": {
+            "xmin": 331,
+            "ymin": 160,
+            "xmax": 497,
+            "ymax": 265
+        },
+        "hotdog_6": {
+            "xmin": 181,
+            "ymin": 209,
+            "xmax": 298,
+            "ymax": 342
+        },
+        "hotdog_7": {
+            "xmin": 272,
+            "ymin": 18,
+            "xmax": 422,
+            "ymax": 112
+        },
+        "hotdog_8": {
+            "xmin": 115,
+            "ymin": 121,
+            "xmax": 247,
+            "ymax": 254
+        },
+        "hotdog_9": {
+            "xmin": 33,
+            "ymin": 125,
+            "xmax": 164,
+            "ymax": 222
+        },
+        "hotdog_10": {
+            "xmin": 154,
+            "ymin": 2,
+            "xmax": 229,
+            "ymax": 72
+        },
+        "salt or pepper shaker": {
+            "xmin": 0,
+            "ymin": 16,
+            "xmax": 64,
+            "ymax": 90
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"hot\u200bdog, salt or e\u0440pper sh\u200baker\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [44, 0, 998, 1000], \"label\": \"hot\u200bdog\"},\n\t{\"bbox_2d\": [108, 0, 250, 172], \"label\": \"salt or e\u0440pper sh\u200baker\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    44,
+                    0,
+                    998,
+                    1000
+                ],
+                "label": "hot\u200bdog"
+            },
+            {
+                "bbox_2d": [
+                    108,
+                    0,
+                    250,
+                    172
+                ],
+                "label": "salt or e\u0440pper sh\u200baker"
+            }
+        ],
+        "token_count": 77,
+        "raw_token_count": 800,
+        "runtime_seconds": 2.8923
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0018365360046188601,
+        "defocus_blur": 0.003113159274590399,
+        "motion_blur": 0.013241423582600855,
+        "fog_filter": 0.004423230668310273,
+        "pixelate": 0.0007389250435882355,
+        "jpeg_filter": 0.002284309766582886
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.017981243052542877,
+        "synonym": 0.005383059602243011,
+        "ata_saliency": 0.02474974863731583,
+        "fragmentation": 0.006553375750200658,
+        "character_noise": 0.015728436477586198
+    }
+}

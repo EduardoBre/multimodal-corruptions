@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/26",
+        "folder_id": "26",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00049779.JPEG"
+    },
+    "pareto_index": 2,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.00480074184198432,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.23229615717017046
+    },
+    "objectives": {
+        "iou": 0.07357,
+        "img_dist": 0.01101,
+        "txt_dist": 0.36117,
+        "txt_sim": 0.63883
+    },
+    "swad_metrics": {
+        "iou_0": 0.96288,
+        "delta_m_plus": 0.92359,
+        "phi": 0.6318,
+        "swad": 0.58352
+    },
+    "l2_distance": 0.36875,
+    "original_prompt": "Identify the objects \"dog\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 188,
+            "ymin": 30,
+            "xmax": 405,
+            "ymax": 262
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"deg\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 592, 1000, 999], \"label\": \"deg\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    592,
+                    1000,
+                    999
+                ],
+                "label": "deg"
+            }
+        ],
+        "token_count": 38,
+        "raw_token_count": 44,
+        "runtime_seconds": 0.1694
+    }
+}

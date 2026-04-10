@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/48",
+        "folder_id": "48",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00039467.JPEG"
+    },
+    "pareto_index": 10,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 45,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.026179,
+            "defocus_blur": 0.010598,
+            "motion_blur": 0.095854,
+            "fog_filter": 0.025824,
+            "pixelate": 0.16515,
+            "jpeg_filter": 0.00372
+        },
+        "text_corruptions": {
+            "homophone": 0.004856,
+            "synonym": 0.042178,
+            "ata_saliency": 0.066089,
+            "fragmentation": 0.070892,
+            "character_noise": 0.146174
+        },
+        "img_budget_used": 0.327324,
+        "txt_budget_used": 0.33019,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.08176,
+        "txt_dist": 0.26876,
+        "txt_sim": 0.73124
+    },
+    "swad_metrics": {
+        "iou_0": 0.91427,
+        "delta_m_plus": 1.0,
+        "phi": 0.67145,
+        "swad": 0.67145
+    },
+    "l2_distance": 0.28092,
+    "original_prompt": "Identify the objects \"lipstick, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 0,
+            "ymin": 3,
+            "xmax": 332,
+            "ymax": 497
+        },
+        "lipstick": {
+            "xmin": 147,
+            "ymin": 295,
+            "xmax": 240,
+            "ymax": 361
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"lip\u200dst\u200bick, \u0440eru on\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [440, 599, 690, 720], \"label\": \"lip\u200dst\u200bick, \u0440eru on\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    440,
+                    599,
+                    690,
+                    720
+                ],
+                "label": "lip\u200dst\u200bick, \u0440eru on"
+            }
+        ],
+        "token_count": 49,
+        "raw_token_count": 89,
+        "runtime_seconds": 0.2965
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.026178546470335358,
+        "defocus_blur": 0.01059759302287589,
+        "motion_blur": 0.09585404710424744,
+        "fog_filter": 0.02582388784045394,
+        "pixelate": 0.1651499075476487,
+        "jpeg_filter": 0.0037197877499450735
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.0048561302147331845,
+        "synonym": 0.042178359796626305,
+        "ata_saliency": 0.06608941933127403,
+        "fragmentation": 0.07089229412942138,
+        "character_noise": 0.14617421046059126
+    }
+}

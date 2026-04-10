@@ -1,0 +1,106 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/161",
+        "folder_id": "161",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00004490.JPEG"
+    },
+    "pareto_index": 4,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 45,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.004516,
+            "defocus_blur": 0.02091,
+            "motion_blur": 0.185107,
+            "fog_filter": 0.014993,
+            "pixelate": 0.05467,
+            "jpeg_filter": 0.021107
+        },
+        "text_corruptions": {
+            "homophone": 0.314163,
+            "synonym": 0.009018,
+            "ata_saliency": 0.529311,
+            "fragmentation": 0.005144,
+            "character_noise": 0.142365
+        },
+        "img_budget_used": 0.301302,
+        "txt_budget_used": 1.0,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0014,
+        "img_dist": 0.09824,
+        "txt_dist": 0.28478,
+        "txt_sim": 0.71522
+    },
+    "swad_metrics": {
+        "iou_0": 0.91426,
+        "delta_m_plus": 0.99847,
+        "phi": 0.64496,
+        "swad": 0.64397
+    },
+    "l2_distance": 0.30125,
+    "original_prompt": "Identify the objects \"bus\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bus": {
+            "xmin": 115,
+            "ymin": 22,
+            "xmax": 485,
+            "ymax": 363
+        },
+        "bus_1": {
+            "xmin": 29,
+            "ymin": 150,
+            "xmax": 124,
+            "ymax": 267
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bzuz\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [820, 725, 850, 788], \"label\": \"bzuz\"},\n\t{\"bbox_2d\": [875, 778, 912, 825], \"label\": \"bzuz\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    820,
+                    725,
+                    850,
+                    788
+                ],
+                "label": "bzuz"
+            },
+            {
+                "bbox_2d": [
+                    875,
+                    778,
+                    912,
+                    825
+                ],
+                "label": "bzuz"
+            }
+        ],
+        "token_count": 74,
+        "raw_token_count": 93,
+        "runtime_seconds": 0.2805
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.004515519468424257,
+        "defocus_blur": 0.020910027600826643,
+        "motion_blur": 0.18510664756027914,
+        "fog_filter": 0.014992546776958722,
+        "pixelate": 0.054670145849404564,
+        "jpeg_filter": 0.021107260934305018
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.31416263791806254,
+        "synonym": 0.009017819658010217,
+        "ata_saliency": 0.5293107566449012,
+        "fragmentation": 0.005144267208602264,
+        "character_noise": 0.14236451857042387
+    }
+}

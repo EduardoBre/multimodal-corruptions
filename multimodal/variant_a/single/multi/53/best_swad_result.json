@@ -1,0 +1,73 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/53",
+        "folder_id": "53",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00047934.JPEG"
+    },
+    "pareto_index": 3,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.6126883641923373,
+        "txt_attack": "homophone",
+        "txt_scale": 0.10684452896191199
+    },
+    "objectives": {
+        "iou": 0.31593,
+        "img_dist": 0.03876,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.59654,
+        "delta_m_plus": 0.4704,
+        "phi": 0.96124,
+        "swad": 0.45216
+    },
+    "l2_distance": 0.3183,
+    "original_prompt": "Identify the objects \"watercraft\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "watercraft": {
+            "xmin": 89,
+            "ymin": 1,
+            "xmax": 514,
+            "ymax": 383
+        },
+        "watercraft_1": {
+            "xmin": 28,
+            "ymin": 249,
+            "xmax": 49,
+            "ymax": 270
+        },
+        "watercraft_2": {
+            "xmin": 261,
+            "ymin": 248,
+            "xmax": 276,
+            "ymax": 270
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"watercraft\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [150, 10, 857, 838], \"label\": \"watercraft\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    150,
+                    10,
+                    857,
+                    838
+                ],
+                "label": "watercraft"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 47,
+        "runtime_seconds": 0.1585
+    }
+}

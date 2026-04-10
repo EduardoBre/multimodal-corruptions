@@ -1,0 +1,892 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/105",
+        "folder_id": "105",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00017047.JPEG"
+    },
+    "original_prompt": "Identify the objects \"bowl, cup or mug, pretzel, table, wine bottle\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "pretzel": {
+            "xmin": 61,
+            "ymin": 280,
+            "xmax": 247,
+            "ymax": 421
+        },
+        "pretzel_1": {
+            "xmin": 57,
+            "ymin": 351,
+            "xmax": 305,
+            "ymax": 487
+        },
+        "pretzel_2": {
+            "xmin": 0,
+            "ymin": 255,
+            "xmax": 203,
+            "ymax": 381
+        },
+        "pretzel_3": {
+            "xmin": 303,
+            "ymin": 426,
+            "xmax": 395,
+            "ymax": 492
+        },
+        "table": {
+            "xmin": 1,
+            "ymin": 78,
+            "xmax": 498,
+            "ymax": 498
+        },
+        "cup or mug": {
+            "xmin": 105,
+            "ymin": 66,
+            "xmax": 223,
+            "ymax": 268
+        },
+        "cup or mug_1": {
+            "xmin": 290,
+            "ymin": 40,
+            "xmax": 381,
+            "ymax": 206
+        },
+        "bowl": {
+            "xmin": 258,
+            "ymin": 412,
+            "xmax": 427,
+            "ymax": 498
+        },
+        "wine bottle": {
+            "xmin": 461,
+            "ymin": 2,
+            "xmax": 496,
+            "ymax": 97
+        }
+    },
+    "baseline_iou": 0.5543,
+    "swad_star": 0.70011,
+    "swad_star_index": 4,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 7,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.081404,
+                    "defocus_blur": 0.185867,
+                    "motion_blur": 0.245718,
+                    "fog_filter": 0.107593,
+                    "pixelate": 0.079936,
+                    "jpeg_filter": 0.03231
+                },
+                "text_corruptions": {
+                    "homophone": 0.040133,
+                    "synonym": 0.006012,
+                    "ata_saliency": 0.028689,
+                    "fragmentation": 0.003719,
+                    "character_noise": 0.017385
+                },
+                "img_budget_used": 0.732828,
+                "txt_budget_used": 0.095938,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.69186,
+                "img_dist": 0.09435,
+                "txt_dist": 0.06542,
+                "txt_sim": 0.93458
+            },
+            "swad_metrics": {
+                "iou_0": 0.5543,
+                "delta_m_plus": 0.0,
+                "phi": 0.8464,
+                "swad": 0.0
+            },
+            "l2_distance": 0.70132,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"b\u043ewl , c\u200bu\u200bp or mug, \u0440retzel, table, wi\u200bne bottle\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [518, 827, 848, 1000], \"label\": \"b\u043ewl\"},\n\t{\"bbox_2d\": [208, 102, 412, 548], \"label\": \"c\u200bu\u200bp or mug\"},\n\t{\"bbox_2d\": [388, 102, 594, 458], \"label\": \"c\u200bu\u200bp or mug\"},\n\t{\"bbox_2d\": [572, 72, 762, 402], \"label\": \"c\u200bu\u200bp or mug\"},\n\t{\"bbox_2d\": [738, 52, 928, 377], \"label\": \"c\u200bu\u200bp or mug\"},\n\t{\"bbox_2d\": [112, 738, 604, 972], \"label\": \"pretzel\"},\n\t{\"bbox_2d\": [138, 577, 492, 848], \"label\": \"pretzel\"},\n\t{\"bbox_2d\": [92, 512, 488, 720], \"label\": \"pretzel\"},\n\t{\"bbox_2d\": [0, 577, 138, 758], \"label\": \"pretzel\"},\n\t{\"bbox_2d\": [0, 258, 1000, 1000], \"label\": \"table\"},\n\t{\"bbox_2d\": [0, 0, 1000, 377], \"label\": \"wine bottle\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            518,
+                            827,
+                            848,
+                            1000
+                        ],
+                        "label": "b\u043ewl"
+                    },
+                    {
+                        "bbox_2d": [
+                            208,
+                            102,
+                            412,
+                            548
+                        ],
+                        "label": "c\u200bu\u200bp or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            388,
+                            102,
+                            594,
+                            458
+                        ],
+                        "label": "c\u200bu\u200bp or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            572,
+                            72,
+                            762,
+                            402
+                        ],
+                        "label": "c\u200bu\u200bp or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            738,
+                            52,
+                            928,
+                            377
+                        ],
+                        "label": "c\u200bu\u200bp or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            112,
+                            738,
+                            604,
+                            972
+                        ],
+                        "label": "pretzel"
+                    },
+                    {
+                        "bbox_2d": [
+                            138,
+                            577,
+                            492,
+                            848
+                        ],
+                        "label": "pretzel"
+                    },
+                    {
+                        "bbox_2d": [
+                            92,
+                            512,
+                            488,
+                            720
+                        ],
+                        "label": "pretzel"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            577,
+                            138,
+                            758
+                        ],
+                        "label": "pretzel"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            258,
+                            1000,
+                            1000
+                        ],
+                        "label": "table"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            377
+                        ],
+                        "label": "wine bottle"
+                    }
+                ],
+                "token_count": 393,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.427
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.08140396167705871,
+                "defocus_blur": 0.18586688399408896,
+                "motion_blur": 0.24571770698416176,
+                "fog_filter": 0.10759346735454396,
+                "pixelate": 0.0799356658231807,
+                "jpeg_filter": 0.032310489875022795
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.04013295213965577,
+                "synonym": 0.006011644406196389,
+                "ata_saliency": 0.028688868905131833,
+                "fragmentation": 0.003719069337102892,
+                "character_noise": 0.017385472289781045
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.009536,
+                    "defocus_blur": 0.001365,
+                    "motion_blur": 0.007179,
+                    "fog_filter": 0.000584,
+                    "pixelate": 0.003601,
+                    "jpeg_filter": 0.001006
+                },
+                "text_corruptions": {
+                    "homophone": 0.50545,
+                    "synonym": 0.176279,
+                    "ata_saliency": 0.077594,
+                    "fragmentation": 0.079379,
+                    "character_noise": 0.029049
+                },
+                "img_budget_used": 0.02327,
+                "txt_budget_used": 0.867752,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.52575,
+                "img_dist": 0.06991,
+                "txt_dist": 0.10406,
+                "txt_sim": 0.89594
+            },
+            "swad_metrics": {
+                "iou_0": 0.5543,
+                "delta_m_plus": 0.05151,
+                "phi": 0.8333,
+                "swad": 0.04292
+            },
+            "l2_distance": 0.54049,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bowl, \u0441up or mug, pr\u200betzel, desj, wine bott\u200ble\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [518, 827, 850, 1000], \"label\": \"bowl\"},\n\t{\"bbox_2d\": [218, 133, 444, 533], \"label\": \"\u0441up or mug\"},\n\t{\"bbox_2d\": [388, 99, 594, 458], \"label\": \"\u0441up or mug\"},\n\t{\"bbox_2d\": [568, 63, 768, 400], \"label\": \"\u0441up or mug\"},\n\t{\"bbox_2d\": [738, 48, 928, 383], \"label\": \"\u0441up or mug\"},\n\t{\"bbox_2d\": [0, 512, 606, 973], \"label\": \"pr\u200betzel\"},\n\t{\"bbox_2d\": [0, 0, 999, 383], \"label\": \"desj\"},\n\t{\"bbox_2d\": [0, 0, 999, 383], \"label\": \"wine bott\u200ble\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            518,
+                            827,
+                            850,
+                            1000
+                        ],
+                        "label": "bowl"
+                    },
+                    {
+                        "bbox_2d": [
+                            218,
+                            133,
+                            444,
+                            533
+                        ],
+                        "label": "\u0441up or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            388,
+                            99,
+                            594,
+                            458
+                        ],
+                        "label": "\u0441up or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            568,
+                            63,
+                            768,
+                            400
+                        ],
+                        "label": "\u0441up or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            738,
+                            48,
+                            928,
+                            383
+                        ],
+                        "label": "\u0441up or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            512,
+                            606,
+                            973
+                        ],
+                        "label": "pr\u200betzel"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            999,
+                            383
+                        ],
+                        "label": "desj"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            999,
+                            383
+                        ],
+                        "label": "wine bott\u200ble"
+                    }
+                ],
+                "token_count": 278,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.427
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.0095355565420551,
+                "defocus_blur": 0.0013653864347256612,
+                "motion_blur": 0.007178544116460024,
+                "fog_filter": 0.0005835053915526611,
+                "pixelate": 0.003600894181996445,
+                "jpeg_filter": 0.0010059646079089346
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.5054501217947718,
+                "synonym": 0.1762787646886881,
+                "ata_saliency": 0.07759434676720418,
+                "fragmentation": 0.0793791382045922,
+                "character_noise": 0.029049132387173042
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.047174,
+                    "defocus_blur": 0.011213,
+                    "motion_blur": 0.210443,
+                    "fog_filter": 0.061301,
+                    "pixelate": 0.054939,
+                    "jpeg_filter": 0.105798
+                },
+                "text_corruptions": {
+                    "homophone": 0.295798,
+                    "synonym": 0.265285,
+                    "ata_saliency": 0.112934,
+                    "fragmentation": 0.029991,
+                    "character_noise": 0.115563
+                },
+                "img_budget_used": 0.490868,
+                "txt_budget_used": 0.819572,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.42982,
+                "img_dist": 0.08164,
+                "txt_dist": 0.18833,
+                "txt_sim": 0.81167
+            },
+            "swad_metrics": {
+                "iou_0": 0.5543,
+                "delta_m_plus": 0.22457,
+                "phi": 0.74541,
+                "swad": 0.1674
+            },
+            "l2_distance": 0.47632,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bw ol\u200d, cup \u043ear mug, soft p\u200dr\u0435ztel, table, wi\u200bne b\u043edd le\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [518, 827, 848, 1000], \"label\": \"bw ol\u200d, cup \u043ear mug\"},\n\t{\"bbox_2d\": [0, 512, 604, 970], \"label\": \"soft p\u200dr\u0435ztel\"},\n\t{\"bbox_2d\": [0, 170, 1000, 999], \"label\": \"table\"},\n\t{\"bbox_2d\": [0, 0, 999, 380], \"label\": \"wine b\u043edd le\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            518,
+                            827,
+                            848,
+                            1000
+                        ],
+                        "label": "bw ol\u200d, cup \u043ear mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            512,
+                            604,
+                            970
+                        ],
+                        "label": "soft p\u200dr\u0435ztel"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            170,
+                            1000,
+                            999
+                        ],
+                        "label": "table"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            999,
+                            380
+                        ],
+                        "label": "wine b\u043edd le"
+                    }
+                ],
+                "token_count": 151,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.427
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.04717351630805774,
+                "defocus_blur": 0.011213059509611377,
+                "motion_blur": 0.21044323704745085,
+                "fog_filter": 0.06130063736828333,
+                "pixelate": 0.05493871886652911,
+                "jpeg_filter": 0.10579841754499775
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.29579814895877726,
+                "synonym": 0.2652852608116447,
+                "ata_saliency": 0.1129341820423128,
+                "fragmentation": 0.029991247093908276,
+                "character_noise": 0.11556325064845734
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.076498,
+                    "defocus_blur": 0.023874,
+                    "motion_blur": 0.002504,
+                    "fog_filter": 0.008731,
+                    "pixelate": 0.106,
+                    "jpeg_filter": 0.088355
+                },
+                "text_corruptions": {
+                    "homophone": 0.068136,
+                    "synonym": 0.191105,
+                    "ata_saliency": 0.033011,
+                    "fragmentation": 0.069371,
+                    "character_noise": 0.008166
+                },
+                "img_budget_used": 0.305962,
+                "txt_budget_used": 0.369789,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.46411,
+                "img_dist": 0.07271,
+                "txt_dist": 0.20968,
+                "txt_sim": 0.79032
+            },
+            "swad_metrics": {
+                "iou_0": 0.5543,
+                "delta_m_plus": 0.16271,
+                "phi": 0.73286,
+                "swad": 0.11924
+            },
+            "l2_distance": 0.51444,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bole, drinking c\u200bu\u0440, prezte l, table, b\u043ettle\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [212, 131, 444, 533], \"label\": \"bole\"},\n\t{\"bbox_2d\": [394, 112, 594, 458], \"label\": \"drinking c\u200bu\u0440\"},\n\t{\"bbox_2d\": [570, 67, 766, 408], \"label\": \"drinking c\u200bu\u0440\"},\n\t{\"bbox_2d\": [738, 50, 924, 375], \"label\": \"drinking c\u200bu\u0440\"},\n\t{\"bbox_2d\": [0, 512, 606, 972], \"label\": \"prezte l\"},\n\t{\"bbox_2d\": [0, 172, 1000, 998], \"label\": \"table\"},\n\t{\"bbox_2d\": [0, 0, 998, 381], \"label\": \"b\u043ettle\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            212,
+                            131,
+                            444,
+                            533
+                        ],
+                        "label": "bole"
+                    },
+                    {
+                        "bbox_2d": [
+                            394,
+                            112,
+                            594,
+                            458
+                        ],
+                        "label": "drinking c\u200bu\u0440"
+                    },
+                    {
+                        "bbox_2d": [
+                            570,
+                            67,
+                            766,
+                            408
+                        ],
+                        "label": "drinking c\u200bu\u0440"
+                    },
+                    {
+                        "bbox_2d": [
+                            738,
+                            50,
+                            924,
+                            375
+                        ],
+                        "label": "drinking c\u200bu\u0440"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            512,
+                            606,
+                            972
+                        ],
+                        "label": "prezte l"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            172,
+                            1000,
+                            998
+                        ],
+                        "label": "table"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            998,
+                            381
+                        ],
+                        "label": "b\u043ettle"
+                    }
+                ],
+                "token_count": 248,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.427
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.07649818548874983,
+                "defocus_blur": 0.02387394832253263,
+                "motion_blur": 0.002503689116929564,
+                "fog_filter": 0.00873053970050293,
+                "pixelate": 0.10600039455336555,
+                "jpeg_filter": 0.08835539589584365
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.06813613829476665,
+                "synonym": 0.19110505068466196,
+                "ata_saliency": 0.033011032520227586,
+                "fragmentation": 0.06937100900112343,
+                "character_noise": 0.008165566161948802
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.005788,
+                    "defocus_blur": 0.166342,
+                    "motion_blur": 0.276637,
+                    "fog_filter": 0.037957,
+                    "pixelate": 0.004072,
+                    "jpeg_filter": 0.022808
+                },
+                "text_corruptions": {
+                    "homophone": 0.006054,
+                    "synonym": 0.29696,
+                    "ata_saliency": 0.173026,
+                    "fragmentation": 0.064415,
+                    "character_noise": 0.259802
+                },
+                "img_budget_used": 0.513604,
+                "txt_budget_used": 0.800258,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.08015,
+                "txt_dist": 0.23889,
+                "txt_sim": 0.76111
+            },
+            "swad_metrics": {
+                "iou_0": 0.5543,
+                "delta_m_plus": 1.0,
+                "phi": 0.70011,
+                "swad": 0.70011
+            },
+            "l2_distance": 0.25198,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"b\u043el\u200d e, cf\u043e\u200df\u200bee \u0441up, \u0440de\u200dtze\u200bl\u200d, t\u0430b\u200dl\u200d\u0435, w\u200d\u0456n\u0435\u200b b\u200bottle\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 512, 608, 972], \"label\": \"p\u200dd\u200de\u200dt\u200dz\u200de\u200dl\"},\n\t{\"bbox_2d\": [0, 512, 608, 972], \"label\": \"p\u200dd\u200de\u200dt\u200dz\u200de\u200dl\"},\n\t{\"bbox_2d\": [0, 512, 608, 972], \"label\": \"p\u200dd\u200de\u200dt\u200dz\u200de\u200dl\"},\n\t{\"bbox_2d\": [0, 512, 608, 972], \"label\": \"p\u200dd\u200de\u200dt\u200dz\u200de\u200dl\"},\n\t{\"bbox_2d\": [0, 512, 608, 972], \"label\": \"p\u200dd\u200de\u200dt\u200dz\u200de\u200dl\"},\n\t{\"bbox_2d\": [0, 512, 608, 972], \"label\": \"p\u200dd\u200de\u200dt\u200dz\u200de\u200dl\"},\n\t{\"bbox_2d\": [0, 512, 608, 972], \"label\": \"p\u200dd\u200de\u200dt\u200dz\u200de\u200dl\"},\n\t{\"bbox_2d\": [0, 512, 608, 972], \"label\": \"p\u200dd\u200de\u200dt\u200dz\u200de\u200dl\"},\n\t{\"bbox_2d\": [0, 512, 608, 972], \"label\": \"p\u200dd\u200de\u200dt\u200dz\u200de\u200dl\"},\n\t{\"bbox_2d\": [0, 512, 608, 972], \"label\": \"p\u200dd\u200de\u200dt\u200dz\u200de\u200dl\"},\n\t{\"bbox_2d\": [0, 512, 608, 972], \"label\": \"p\u200dd\u200de\u200dt\u200dz\u200de\u200dl\"},\n\t{\"bbox_2d\": [0, 512, 608, 972], \"label\": \"p\u200dd\u200de\u200dt\u200dz\u200de\u200dl\"},\n\t{\"bbox_2d\": [0, 512, 608, 972], \"label\": \"p\u200dd\u200de\u200dt\u200dz\u200de\u200dl\"},\n\t{\"bbox_2d\": [0, 512, 608, 972], \"label\": \"p\u200dd\u200de\u200dt\u200dz\u200de\u200dl\"},\n\t{\"bbox_2d\": [0, 512, 608, 972], \"label\": \"p\u200dd\u200de\u200dt\u200dz\u200de\u200dl\"},\n\t{\"bbox_2d\": [0, 512, 608, 972], \"label\": \"p\u200dd\u200de\u200dt\u200dz\u200de\u200dl\"},\n\t{\"bbox_2d\": [0, 5",
+                "parsed_predictions": [],
+                "token_count": 800,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.427
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.005788054687061132,
+                "defocus_blur": 0.16634221850228723,
+                "motion_blur": 0.2766368222944814,
+                "fog_filter": 0.037957156004397266,
+                "pixelate": 0.004071772407415262,
+                "jpeg_filter": 0.022807946679960812
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.00605446699399438,
+                "synonym": 0.2969597663760202,
+                "ata_saliency": 0.17302637420256223,
+                "fragmentation": 0.06441494142130026,
+                "character_noise": 0.25980249134988115
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.075794,
+                    "defocus_blur": 0.014457,
+                    "motion_blur": 0.002584,
+                    "fog_filter": 0.009741,
+                    "pixelate": 0.033553,
+                    "jpeg_filter": 0.074034
+                },
+                "text_corruptions": {
+                    "homophone": 0.102624,
+                    "synonym": 0.154375,
+                    "ata_saliency": 0.397106,
+                    "fragmentation": 0.071853,
+                    "character_noise": 0.270622
+                },
+                "img_budget_used": 0.210163,
+                "txt_budget_used": 0.99658,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.46461,
+                "img_dist": 0.07239,
+                "txt_dist": 0.26401,
+                "txt_sim": 0.73599
+            },
+            "swad_metrics": {
+                "iou_0": 0.5543,
+                "delta_m_plus": 0.16181,
+                "phi": 0.68271,
+                "swad": 0.11047
+            },
+            "l2_distance": 0.53926,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"b\u0440wl, c\u200bu\u0440 or\u200d m\u200dug, pr\u200be\u200btn\u200b ul, desk, whi\u200bn\u0435 b\u200bot\u200btle\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [212, 127, 444, 538], \"label\": \"c\u200bu\u200br or\u200d m\u200bu\u200bg\"},\n\t{\"bbox_2d\": [392, 107, 594, 458], \"label\": \"c\u200bu\u200br or\u200d m\u200bu\u200bg\"},\n\t{\"bbox_2d\": [578, 62, 764, 402], \"label\": \"c\u200bu\u200br or\u200d m\u200bu\u200bg\"},\n\t{\"bbox_2d\": [740, 48, 928, 377], \"label\": \"c\u200bu\u200br or\u200d m\u200bu\u200bg\"},\n\t{\"bbox_2d\": [0, 514, 606, 972], \"label\": \"pr\u200be\u200btn\u200b ul\"},\n\t{\"bbox_2d\": [0, 177, 1000, 999], \"label\": \"desk\"},\n\t{\"bbox_2d\": [0, 0, 1000, 388], \"label\": \"whi\u200bn\u0435 b\u200bot\u200btle\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            212,
+                            127,
+                            444,
+                            538
+                        ],
+                        "label": "c\u200bu\u200br or\u200d m\u200bu\u200bg"
+                    },
+                    {
+                        "bbox_2d": [
+                            392,
+                            107,
+                            594,
+                            458
+                        ],
+                        "label": "c\u200bu\u200br or\u200d m\u200bu\u200bg"
+                    },
+                    {
+                        "bbox_2d": [
+                            578,
+                            62,
+                            764,
+                            402
+                        ],
+                        "label": "c\u200bu\u200br or\u200d m\u200bu\u200bg"
+                    },
+                    {
+                        "bbox_2d": [
+                            740,
+                            48,
+                            928,
+                            377
+                        ],
+                        "label": "c\u200bu\u200br or\u200d m\u200bu\u200bg"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            514,
+                            606,
+                            972
+                        ],
+                        "label": "pr\u200be\u200btn\u200b ul"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            177,
+                            1000,
+                            999
+                        ],
+                        "label": "desk"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            388
+                        ],
+                        "label": "whi\u200bn\u0435 b\u200bot\u200btle"
+                    }
+                ],
+                "token_count": 292,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.427
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.0757941802952198,
+                "defocus_blur": 0.01445728275674877,
+                "motion_blur": 0.0025836211003164213,
+                "fog_filter": 0.009740547568592403,
+                "pixelate": 0.03355297858720727,
+                "jpeg_filter": 0.0740342682035091
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.10262367762302314,
+                "synonym": 0.15437491388994484,
+                "ata_saliency": 0.3971064938034211,
+                "fragmentation": 0.07185302156468341,
+                "character_noise": 0.2706218145218001
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.016748,
+                    "defocus_blur": 0.053339,
+                    "motion_blur": 0.445185,
+                    "fog_filter": 0.015035,
+                    "pixelate": 0.199469,
+                    "jpeg_filter": 0.243423
+                },
+                "text_corruptions": {
+                    "homophone": 0.065323,
+                    "synonym": 0.080514,
+                    "ata_saliency": 0.288517,
+                    "fragmentation": 0.127634,
+                    "character_noise": 0.103703
+                },
+                "img_budget_used": 0.973199,
+                "txt_budget_used": 0.665689,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.28844,
+                "img_dist": 0.07626,
+                "txt_dist": 0.24269,
+                "txt_sim": 0.75731
+            },
+            "swad_metrics": {
+                "iou_0": 0.5543,
+                "delta_m_plus": 0.47963,
+                "phi": 0.69956,
+                "swad": 0.33553
+            },
+            "l2_distance": 0.38459,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"buwl, c\u200dup or\u200b mgu\u200d, s\u043e\u200bft\u200b p\u200dretz\u0435l, tabel\u200b, obtt\u200ble\u200b\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [212, 105, 408, 530], \"label\": \"cup\"},\n\t{\"bbox_2d\": [388, 95, 594, 468], \"label\": \"cup\"},\n\t{\"bbox_2d\": [578, 75, 766, 405], \"label\": \"cup\"},\n\t{\"bbox_2d\": [738, 55, 928, 385], \"label\": \"cup\"},\n\t{\"bbox_2d\": [0, 512, 608, 975], \"label\": \"soft pretzel\"},\n\t{\"bbox_2d\": [0, 175, 1000, 999], \"label\": \"tabel\"},\n\t{\"bbox_2d\": [0, 0, 999, 385], \"label\": \"obttle\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            212,
+                            105,
+                            408,
+                            530
+                        ],
+                        "label": "cup"
+                    },
+                    {
+                        "bbox_2d": [
+                            388,
+                            95,
+                            594,
+                            468
+                        ],
+                        "label": "cup"
+                    },
+                    {
+                        "bbox_2d": [
+                            578,
+                            75,
+                            766,
+                            405
+                        ],
+                        "label": "cup"
+                    },
+                    {
+                        "bbox_2d": [
+                            738,
+                            55,
+                            928,
+                            385
+                        ],
+                        "label": "cup"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            512,
+                            608,
+                            975
+                        ],
+                        "label": "soft pretzel"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            175,
+                            1000,
+                            999
+                        ],
+                        "label": "tabel"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            999,
+                            385
+                        ],
+                        "label": "obttle"
+                    }
+                ],
+                "token_count": 232,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.427
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.01674807911090657,
+                "defocus_blur": 0.0533391271571765,
+                "motion_blur": 0.44518450525377745,
+                "fog_filter": 0.015035163627372897,
+                "pixelate": 0.1994690629937398,
+                "jpeg_filter": 0.24342289862531158
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.06532254377220612,
+                "synonym": 0.08051364768822719,
+                "ata_saliency": 0.28851675240403873,
+                "fragmentation": 0.12763377026670628,
+                "character_noise": 0.10370268049627264
+            }
+        }
+    ]
+}

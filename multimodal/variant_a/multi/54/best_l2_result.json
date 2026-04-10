@@ -1,0 +1,142 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/54",
+        "folder_id": "54",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00024633.JPEG"
+    },
+    "pareto_index": 19,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 60,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.8181617493544074,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.48292199334693586
+    },
+    "objectives": {
+        "iou": 0.18161,
+        "img_dist": 0.056,
+        "txt_dist": 0.05903,
+        "txt_sim": 0.94097
+    },
+    "swad_metrics": {
+        "iou_0": 0.83801,
+        "delta_m_plus": 0.78329,
+        "phi": 0.88828,
+        "swad": 0.69577
+    },
+    "l2_distance": 0.199,
+    "original_prompt": "Identify the objects \"bowl, cup or mug, guacamole, table\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "table": {
+            "xmin": 73,
+            "ymin": 36,
+            "xmax": 372,
+            "ymax": 90
+        },
+        "table_1": {
+            "xmin": 0,
+            "ymin": 40,
+            "xmax": 498,
+            "ymax": 498
+        },
+        "cup or mug": {
+            "xmin": 331,
+            "ymin": 61,
+            "xmax": 368,
+            "ymax": 92
+        },
+        "bowl": {
+            "xmin": 280,
+            "ymin": 90,
+            "xmax": 428,
+            "ymax": 193
+        },
+        "bowl_1": {
+            "xmin": 218,
+            "ymin": 363,
+            "xmax": 328,
+            "ymax": 462
+        },
+        "bowl_2": {
+            "xmin": 133,
+            "ymin": 222,
+            "xmax": 220,
+            "ymax": 296
+        },
+        "bowl_3": {
+            "xmin": 186,
+            "ymin": 270,
+            "xmax": 273,
+            "ymax": 350
+        },
+        "guacamole": {
+            "xmin": 145,
+            "ymin": 147,
+            "xmax": 282,
+            "ymax": 201
+        },
+        "bowl_4": {
+            "xmin": 176,
+            "ymin": 41,
+            "xmax": 308,
+            "ymax": 130
+        },
+        "bowl_5": {
+            "xmin": 138,
+            "ymin": 132,
+            "xmax": 289,
+            "ymax": 225
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bowp, cup or mug, guacamole, table\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [848, 0, 1000, 300], \"label\": \"bowp\"},\n\t{\"bbox_2d\": [938, 210, 1000, 472], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [272, 484, 422, 578], \"label\": \"guacamole\"},\n\t{\"bbox_2d\": [0, 138, 1000, 998], \"label\": \"table\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    848,
+                    0,
+                    1000,
+                    300
+                ],
+                "label": "bowp"
+            },
+            {
+                "bbox_2d": [
+                    938,
+                    210,
+                    1000,
+                    472
+                ],
+                "label": "cup or mug"
+            },
+            {
+                "bbox_2d": [
+                    272,
+                    484,
+                    422,
+                    578
+                ],
+                "label": "guacamole"
+            },
+            {
+                "bbox_2d": [
+                    0,
+                    138,
+                    1000,
+                    998
+                ],
+                "label": "table"
+            }
+        ],
+        "token_count": 142,
+        "raw_token_count": 800,
+        "runtime_seconds": 3.2067
+    }
+}

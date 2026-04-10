@@ -1,0 +1,94 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/13",
+        "folder_id": "13",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00044999.JPEG"
+    },
+    "pareto_index": 0,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.8181617493544074,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.41721849968957336
+    },
+    "objectives": {
+        "iou": 0.27368,
+        "img_dist": 0.08059,
+        "txt_dist": 0.14794,
+        "txt_sim": 0.85206
+    },
+    "swad_metrics": {
+        "iou_0": 0.63501,
+        "delta_m_plus": 0.56901,
+        "phi": 0.78339,
+        "swad": 0.44576
+    },
+    "l2_distance": 0.32137,
+    "original_prompt": "Identify the objects \"antelope, bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 58,
+            "ymin": 88,
+            "xmax": 129,
+            "ymax": 202
+        },
+        "bird_1": {
+            "xmin": 302,
+            "ymin": 157,
+            "xmax": 346,
+            "ymax": 287
+        },
+        "bird_2": {
+            "xmin": 354,
+            "ymin": 179,
+            "xmax": 445,
+            "ymax": 276
+        },
+        "antelope": {
+            "xmin": 167,
+            "ymin": 121,
+            "xmax": 216,
+            "ymax": 167
+        },
+        "antelope_1": {
+            "xmin": 177,
+            "ymin": 146,
+            "xmax": 337,
+            "ymax": 205
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"anteloce, bird\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [110, 240, 238, 510], \"label\": \"bird\"},\n\t{\"bbox_2d\": [602, 540, 692, 758], \"label\": \"bird\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    110,
+                    240,
+                    238,
+                    510
+                ],
+                "label": "bird"
+            },
+            {
+                "bbox_2d": [
+                    602,
+                    540,
+                    692,
+                    758
+                ],
+                "label": "bird"
+            }
+        ],
+        "token_count": 72,
+        "raw_token_count": 200,
+        "runtime_seconds": 0.8593
+    }
+}

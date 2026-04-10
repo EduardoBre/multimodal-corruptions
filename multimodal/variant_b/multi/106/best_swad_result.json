@@ -1,0 +1,106 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/106",
+        "folder_id": "106",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00042801.JPEG"
+    },
+    "pareto_index": 5,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.000849,
+            "defocus_blur": 0.004971,
+            "motion_blur": 8.6e-05,
+            "fog_filter": 0.000625,
+            "pixelate": 0.000315,
+            "jpeg_filter": 0.002555
+        },
+        "text_corruptions": {
+            "homophone": 0.149513,
+            "synonym": 0.065946,
+            "ata_saliency": 0.026315,
+            "fragmentation": 0.167749,
+            "character_noise": 0.327953
+        },
+        "img_budget_used": 0.0094,
+        "txt_budget_used": 0.737475,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.07225,
+        "txt_dist": 0.23192,
+        "txt_sim": 0.76808
+    },
+    "swad_metrics": {
+        "iou_0": 0.84387,
+        "delta_m_plus": 1.0,
+        "phi": 0.71259,
+        "swad": 0.71259
+    },
+    "l2_distance": 0.24291,
+    "original_prompt": "Identify the objects \"person, watercraft\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 271,
+            "ymin": 257,
+            "xmax": 291,
+            "ymax": 312
+        },
+        "watercraft": {
+            "xmin": 52,
+            "ymin": 52,
+            "xmax": 242,
+            "ymax": 306
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"p\u200b\u0435r\u200ds\u043e n\u200d, w\u200da\u200bt\u200de\u200dr\u0441\u200br\u0430\u200bft\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [478, 525, 516, 688], \"label\": \"p\u200b\u0435r\u200ds\u043e n\u200d, w\u200da\u200bt\u200de\u200dr\u0441\u200br\u0430\u200bft\"},\n\t{\"bbox_2d\": [112, 125, 478, 700], \"label\": \"p\u200b\u0435r\u200ds\u043e n\u200d, w\u200da\u200bt\u200de\u200dr\u0441\u200br\u0430\u200bft\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    478,
+                    525,
+                    516,
+                    688
+                ],
+                "label": "p\u200b\u0435r\u200ds\u043e n\u200d, w\u200da\u200bt\u200de\u200dr\u0441\u200br\u0430\u200bft"
+            },
+            {
+                "bbox_2d": [
+                    112,
+                    125,
+                    478,
+                    700
+                ],
+                "label": "p\u200b\u0435r\u200ds\u043e n\u200d, w\u200da\u200bt\u200de\u200dr\u0441\u200br\u0430\u200bft"
+            }
+        ],
+        "token_count": 130,
+        "raw_token_count": 226,
+        "runtime_seconds": 0.7185
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0008487065573397422,
+        "defocus_blur": 0.004970778003338498,
+        "motion_blur": 8.567346811770843e-05,
+        "fog_filter": 0.0006252908298078298,
+        "pixelate": 0.00031454276070652453,
+        "jpeg_filter": 0.0025548132644066415
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.1495126808753428,
+        "synonym": 0.06594554715985093,
+        "ata_saliency": 0.026314706736629556,
+        "fragmentation": 0.16774894465581563,
+        "character_noise": 0.3279528995787514
+    }
+}

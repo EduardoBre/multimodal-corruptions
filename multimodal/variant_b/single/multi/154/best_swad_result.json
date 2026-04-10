@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/154",
+        "folder_id": "154",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00049801.JPEG"
+    },
+    "pareto_index": 7,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 45,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.303011,
+            "defocus_blur": 0.102885,
+            "motion_blur": 0.027808,
+            "fog_filter": 0.038052,
+            "pixelate": 0.157849,
+            "jpeg_filter": 0.295037
+        },
+        "text_corruptions": {
+            "homophone": 0.085998,
+            "synonym": 0.004689,
+            "ata_saliency": 0.078479,
+            "fragmentation": 0.025555,
+            "character_noise": 0.18056
+        },
+        "img_budget_used": 0.924641,
+        "txt_budget_used": 0.375281,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.33125,
+        "img_dist": 0.08847,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.87342,
+        "delta_m_plus": 0.62074,
+        "phi": 0.91153,
+        "swad": 0.56583
+    },
+    "l2_distance": 0.34286,
+    "original_prompt": "Identify the objects \"whale\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "whale": {
+            "xmin": 0,
+            "ymin": 169,
+            "xmax": 89,
+            "ymax": 225
+        },
+        "whale_1": {
+            "xmin": 135,
+            "ymin": 39,
+            "xmax": 410,
+            "ymax": 214
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"whale\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [2, 98, 792, 598], \"label\": \"whale\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    2,
+                    98,
+                    792,
+                    598
+                ],
+                "label": "whale"
+            }
+        ],
+        "token_count": 37,
+        "raw_token_count": 85,
+        "runtime_seconds": 0.2745
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.3030114148668199,
+        "defocus_blur": 0.10288453094756869,
+        "motion_blur": 0.02780806868271647,
+        "fog_filter": 0.03805214697240938,
+        "pixelate": 0.1578485117618625,
+        "jpeg_filter": 0.29503667624698576
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.0859981786144389,
+        "synonym": 0.004689146272857398,
+        "ata_saliency": 0.07847886627057322,
+        "fragmentation": 0.025554572577563446,
+        "character_noise": 0.18056043193007962
+    }
+}

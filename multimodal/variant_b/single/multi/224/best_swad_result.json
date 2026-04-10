@@ -1,0 +1,109 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/224",
+        "folder_id": "224",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00015048.JPEG"
+    },
+    "pareto_index": 17,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 4,
+    "total_evaluations": 120,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.06064,
+            "defocus_blur": 0.183727,
+            "motion_blur": 0.067823,
+            "fog_filter": 0.007838,
+            "pixelate": 0.037635,
+            "jpeg_filter": 0.00981
+        },
+        "text_corruptions": {
+            "homophone": 0.355398,
+            "synonym": 0.002991,
+            "ata_saliency": 0.010701,
+            "fragmentation": 0.174722,
+            "character_noise": 0.024235
+        },
+        "img_budget_used": 0.367471,
+        "txt_budget_used": 0.568046,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.22287,
+        "img_dist": 0.07226,
+        "txt_dist": 0.15136,
+        "txt_sim": 0.84864
+    },
+    "swad_metrics": {
+        "iou_0": 0.89964,
+        "delta_m_plus": 0.75227,
+        "phi": 0.78732,
+        "swad": 0.59227
+    },
+    "l2_distance": 0.27893,
+    "original_prompt": "Identify the objects \"bus\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bus": {
+            "xmin": 0,
+            "ymin": 124,
+            "xmax": 227,
+            "ymax": 318
+        },
+        "bus_1": {
+            "xmin": 396,
+            "ymin": 167,
+            "xmax": 499,
+            "ymax": 269
+        },
+        "bus_2": {
+            "xmin": 286,
+            "ymin": 155,
+            "xmax": 450,
+            "ymax": 280
+        },
+        "bus_3": {
+            "xmin": 173,
+            "ymin": 133,
+            "xmax": 350,
+            "ymax": 293
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bu\u200bs p\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [3, 230, 428, 819], \"label\": \"bu\u200bs p\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    3,
+                    230,
+                    428,
+                    819
+                ],
+                "label": "bu\u200bs p"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 162,
+        "runtime_seconds": 0.4848
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.06063982102286838,
+        "defocus_blur": 0.18372662860697303,
+        "motion_blur": 0.06782276785221744,
+        "fog_filter": 0.007837503171141957,
+        "pixelate": 0.037635062078472344,
+        "jpeg_filter": 0.00980964276325755
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.3553980827672705,
+        "synonym": 0.00299075201718782,
+        "ata_saliency": 0.010700527651931451,
+        "fragmentation": 0.17472162310447475,
+        "character_noise": 0.02423462848761762
+    }
+}

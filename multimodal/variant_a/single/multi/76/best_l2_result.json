@@ -1,0 +1,73 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/76",
+        "folder_id": "76",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00033890.JPEG"
+    },
+    "pareto_index": 3,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "motion_blur",
+        "img_scale": 0.018595721213425453,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.6130568625347235
+    },
+    "objectives": {
+        "iou": 0.33892,
+        "img_dist": 0.03669,
+        "txt_dist": 0.25551,
+        "txt_sim": 0.74449
+    },
+    "swad_metrics": {
+        "iou_0": 0.85558,
+        "delta_m_plus": 0.60387,
+        "phi": 0.71717,
+        "swad": 0.43308
+    },
+    "l2_distance": 0.42603,
+    "original_prompt": "Identify the objects \"fox\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "fox": {
+            "xmin": 129,
+            "ymin": 146,
+            "xmax": 227,
+            "ymax": 288
+        },
+        "fox_1": {
+            "xmin": 292,
+            "ymin": 171,
+            "xmax": 409,
+            "ymax": 251
+        },
+        "fox_2": {
+            "xmin": 180,
+            "ymin": 70,
+            "xmax": 304,
+            "ymax": 285
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"foa\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [375, 183, 620, 720], \"label\": \"foa\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    375,
+                    183,
+                    620,
+                    720
+                ],
+                "label": "foa"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 121,
+        "runtime_seconds": 0.386
+    }
+}

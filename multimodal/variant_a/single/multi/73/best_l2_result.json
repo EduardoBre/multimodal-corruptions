@@ -1,0 +1,79 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/73",
+        "folder_id": "73",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00041846.JPEG"
+    },
+    "pareto_index": 8,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.9316177058680379,
+        "txt_attack": "homophone",
+        "txt_scale": 0.9948250792623392
+    },
+    "objectives": {
+        "iou": 0.28875,
+        "img_dist": 0.07395,
+        "txt_dist": 0.13512,
+        "txt_sim": 0.86488
+    },
+    "swad_metrics": {
+        "iou_0": 0.86717,
+        "delta_m_plus": 0.66702,
+        "phi": 0.80092,
+        "swad": 0.53423
+    },
+    "l2_distance": 0.32727,
+    "original_prompt": "Identify the objects \"car\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "car": {
+            "xmin": 37,
+            "ymin": 65,
+            "xmax": 489,
+            "ymax": 348
+        },
+        "car_1": {
+            "xmin": 1,
+            "ymin": 74,
+            "xmax": 173,
+            "ymax": 183
+        },
+        "car_2": {
+            "xmin": 439,
+            "ymin": 219,
+            "xmax": 499,
+            "ymax": 374
+        },
+        "car_3": {
+            "xmin": 452,
+            "ymin": 64,
+            "xmax": 499,
+            "ymax": 100
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"carr\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [74, 172, 972, 932], \"label\": \"carr\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    74,
+                    172,
+                    972,
+                    932
+                ],
+                "label": "carr"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 154,
+        "runtime_seconds": 0.5496
+    }
+}

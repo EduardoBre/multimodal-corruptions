@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/192",
+        "folder_id": "192",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00036238.JPEG"
+    },
+    "pareto_index": 8,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 60,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.486062019522153,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.8971524375333463
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.04727,
+        "txt_dist": 0.26055,
+        "txt_sim": 0.73945
+    },
+    "swad_metrics": {
+        "iou_0": 0.97979,
+        "delta_m_plus": 1.0,
+        "phi": 0.7045,
+        "swad": 0.7045
+    },
+    "l2_distance": 0.2648,
+    "original_prompt": "Identify the objects \"monkey\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "monkey": {
+            "xmin": 104,
+            "ymin": 204,
+            "xmax": 472,
+            "ymax": 614
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"m\u200d\u043e\u200bn\u200bk\u200d\u0435\u200b\u0443\u200d\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [172, 253, 780, 767], \"label\": \"m\u200d\u043e\u200b\u043d\u200b\u043a\u200d\u0435\u200b\u0443\u200d\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    172,
+                    253,
+                    780,
+                    767
+                ],
+                "label": "m\u200d\u043e\u200b\u043d\u200b\u043a\u200d\u0435\u200b\u0443\u200d"
+            }
+        ],
+        "token_count": 53,
+        "raw_token_count": 54,
+        "runtime_seconds": 0.2371
+    }
+}

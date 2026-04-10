@@ -1,0 +1,76 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/69",
+        "folder_id": "69",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00033027.JPEG"
+    },
+    "pareto_index": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 6,
+    "total_evaluations": 180,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "fog_filter",
+        "img_scale": 0.06465833768041196,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6372470340611498
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.06399,
+        "txt_dist": 0.26447,
+        "txt_sim": 0.73553
+    },
+    "swad_metrics": {
+        "iou_0": 0.79396,
+        "delta_m_plus": 1.0,
+        "phi": 0.68846,
+        "swad": 0.68846
+    },
+    "l2_distance": 0.2721,
+    "original_prompt": "Identify the objects \"dog, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 18,
+            "ymin": 24,
+            "xmax": 452,
+            "ymax": 427
+        },
+        "dog": {
+            "xmin": 224,
+            "ymin": 82,
+            "xmax": 481,
+            "ymax": 427
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"doug, per son\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [32, 57, 905, 989], \"label\": \"doug, per son\"},\n\t{\"bbox_2d\": [433, 188, 972, 998], \"label\": \"doug, per son\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    32,
+                    57,
+                    905,
+                    989
+                ],
+                "label": "doug, per son"
+            },
+            {
+                "bbox_2d": [
+                    433,
+                    188,
+                    972,
+                    998
+                ],
+                "label": "doug, per son"
+            }
+        ],
+        "token_count": 78,
+        "raw_token_count": 105,
+        "runtime_seconds": 0.3665
+    }
+}

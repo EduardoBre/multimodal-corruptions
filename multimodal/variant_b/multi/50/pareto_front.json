@@ -1,0 +1,440 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/50",
+        "folder_id": "50",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00034039.JPEG"
+    },
+    "original_prompt": "Identify the objects \"bathing cap, person, swimming trunks\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 0,
+            "ymin": 0,
+            "xmax": 499,
+            "ymax": 374
+        },
+        "bathing cap": {
+            "xmin": 155,
+            "ymin": 0,
+            "xmax": 471,
+            "ymax": 215
+        },
+        "swimming trunks": {
+            "xmin": 125,
+            "ymin": 0,
+            "xmax": 449,
+            "ymax": 374
+        }
+    },
+    "baseline_iou": 0.73595,
+    "swad_star": 0.76247,
+    "swad_star_index": 0,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 5,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.153206,
+                    "defocus_blur": 0.033929,
+                    "motion_blur": 0.063254,
+                    "fog_filter": 0.009444,
+                    "pixelate": 0.049545,
+                    "jpeg_filter": 0.066891
+                },
+                "text_corruptions": {
+                    "homophone": 0.036883,
+                    "synonym": 0.050415,
+                    "ata_saliency": 0.009964,
+                    "fragmentation": 0.012227,
+                    "character_noise": 0.016177
+                },
+                "img_budget_used": 0.37627,
+                "txt_budget_used": 0.125666,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.06824,
+                "txt_dist": 0.18169,
+                "txt_sim": 0.81831
+            },
+            "swad_metrics": {
+                "iou_0": 0.73595,
+                "delta_m_plus": 1.0,
+                "phi": 0.76247,
+                "swad": 0.76247
+            },
+            "l2_distance": 0.19408,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"b\u200dath\u200bing cx\u200dp\u200b, p\u0435rs\u200b\u043en, swimming trunks\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 1000, 1000], \"label\": \"b\u200dath\u200bing cx\u200dp\u200b, p\u0435rs\u200b\u043en, swimming trunks\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            1000
+                        ],
+                        "label": "b\u200dath\u200bing cx\u200dp\u200b, p\u0435rs\u200b\u043en, swimming trunks"
+                    }
+                ],
+                "token_count": 58,
+                "raw_token_count": 121,
+                "runtime_seconds": 0.3897
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.153206206352143,
+                "defocus_blur": 0.03392913311897037,
+                "motion_blur": 0.06325361772183345,
+                "fog_filter": 0.009444272362299503,
+                "pixelate": 0.04954514708981718,
+                "jpeg_filter": 0.06689119018934273
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.03688334078471577,
+                "synonym": 0.05041450219034034,
+                "ata_saliency": 0.009964068805936,
+                "fragmentation": 0.012226769843505842,
+                "character_noise": 0.016177053815188795
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.008857,
+                    "defocus_blur": 6.3e-05,
+                    "motion_blur": 0.000757,
+                    "fog_filter": 0.001226,
+                    "pixelate": 0.001604,
+                    "jpeg_filter": 0.000717
+                },
+                "text_corruptions": {
+                    "homophone": 0.194883,
+                    "synonym": 0.128556,
+                    "ata_saliency": 0.100857,
+                    "fragmentation": 0.031758,
+                    "character_noise": 0.031992
+                },
+                "img_budget_used": 0.013224,
+                "txt_budget_used": 0.488046,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.81215,
+                "img_dist": 0.06588,
+                "txt_dist": 0.20753,
+                "txt_sim": 0.79247
+            },
+            "swad_metrics": {
+                "iou_0": 0.73595,
+                "delta_m_plus": 0.0,
+                "phi": 0.74026,
+                "swad": 0.0
+            },
+            "l2_distance": 0.84083,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"s\u200bwim cap, per s\u200bon, swimming tyunks\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [300, 0, 928, 700], \"label\": \"s\u200bwim cap\"},\n\t{\"bbox_2d\": [0, 0, 999, 999], \"label\": \"per s\u200bon\"},\n\t{\"bbox_2d\": [0, 499, 999, 999], \"label\": \"swimming tyunks\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            300,
+                            0,
+                            928,
+                            700
+                        ],
+                        "label": "s\u200bwim cap"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            999,
+                            999
+                        ],
+                        "label": "per s\u200bon"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            499,
+                            999,
+                            999
+                        ],
+                        "label": "swimming tyunks"
+                    }
+                ],
+                "token_count": 107,
+                "raw_token_count": 121,
+                "runtime_seconds": 0.3897
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.008856585790778686,
+                "defocus_blur": 6.313990160519447e-05,
+                "motion_blur": 0.000756940441927271,
+                "fog_filter": 0.0012263675973298459,
+                "pixelate": 0.0016041270947932949,
+                "jpeg_filter": 0.0007169660887028988
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.19488335970786025,
+                "synonym": 0.12855639690613652,
+                "ata_saliency": 0.10085698028773128,
+                "fragmentation": 0.031757884433936144,
+                "character_noise": 0.0319917550350345
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.071043,
+                    "defocus_blur": 0.141558,
+                    "motion_blur": 0.101954,
+                    "fog_filter": 0.082722,
+                    "pixelate": 0.099936,
+                    "jpeg_filter": 0.006001
+                },
+                "text_corruptions": {
+                    "homophone": 0.0081,
+                    "synonym": 0.065714,
+                    "ata_saliency": 0.028774,
+                    "fragmentation": 0.019675,
+                    "character_noise": 0.028747
+                },
+                "img_budget_used": 0.503215,
+                "txt_budget_used": 0.151011,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.8082,
+                "img_dist": 0.08428,
+                "txt_dist": 0.05773,
+                "txt_sim": 0.94227
+            },
+            "swad_metrics": {
+                "iou_0": 0.73595,
+                "delta_m_plus": 0.0,
+                "phi": 0.86286,
+                "swad": 0.0
+            },
+            "l2_distance": 0.81463,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bathing c\u200dap, perso\u200dn, swimming trunks\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [308, 0, 928, 720], \"label\": \"bathing c\u200dap\"},\n\t{\"bbox_2d\": [0, 0, 999, 999], \"label\": \"perso\u200dn\"},\n\t{\"bbox_2d\": [0, 508, 999, 999], \"label\": \"swimming trunks\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            308,
+                            0,
+                            928,
+                            720
+                        ],
+                        "label": "bathing c\u200dap"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            999,
+                            999
+                        ],
+                        "label": "perso\u200dn"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            508,
+                            999,
+                            999
+                        ],
+                        "label": "swimming trunks"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 121,
+                "runtime_seconds": 0.3897
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.0710428783946788,
+                "defocus_blur": 0.14155815777329403,
+                "motion_blur": 0.10195423832586685,
+                "fog_filter": 0.08272224848903563,
+                "pixelate": 0.09993619441688421,
+                "jpeg_filter": 0.006001080611590107
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.008100297873901133,
+                "synonym": 0.06571441283705667,
+                "ata_saliency": 0.02877438223670094,
+                "fragmentation": 0.019674709872939716,
+                "character_noise": 0.02874711858982414
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.000785,
+                    "defocus_blur": 0.00279,
+                    "motion_blur": 0.00071,
+                    "fog_filter": 0.002124,
+                    "pixelate": 0.009823,
+                    "jpeg_filter": 0.011904
+                },
+                "text_corruptions": {
+                    "homophone": 0.052838,
+                    "synonym": 0.025307,
+                    "ata_saliency": 0.176999,
+                    "fragmentation": 0.144998,
+                    "character_noise": 0.312038
+                },
+                "img_budget_used": 0.028137,
+                "txt_budget_used": 0.712179,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.06622,
+                "txt_dist": 0.35727,
+                "txt_sim": 0.64273
+            },
+            "swad_metrics": {
+                "iou_0": 0.73595,
+                "delta_m_plus": 1.0,
+                "phi": 0.60017,
+                "swad": 0.60017
+            },
+            "l2_distance": 0.36336,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"s\u200dw\u200di\u200bm \u0441\u200d \u0440a, \u0440e\u200dr\u200b yon, swim i\u200dn\u200d tru\u0445\u200dks\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 1000, 1000], \"label\": \"s\u200dw\u200di\u200bm \u0441\u200d \u0440a, \u0440e\u200dr\u200b yon, swim i\u200dn\u200d tru\u0445\u200dks\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            1000
+                        ],
+                        "label": "s\u200dw\u200di\u200bm \u0441\u200d \u0440a, \u0440e\u200dr\u200b yon, swim i\u200dn\u200d tru\u0445\u200dks"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 121,
+                "runtime_seconds": 0.3897
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.0007854038245539189,
+                "defocus_blur": 0.002790161865679897,
+                "motion_blur": 0.0007104513188324763,
+                "fog_filter": 0.0021242072972782497,
+                "pixelate": 0.009822674846937461,
+                "jpeg_filter": 0.011904441153021212
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.05283799107499684,
+                "synonym": 0.025306556342176195,
+                "ata_saliency": 0.17699896473900534,
+                "fragmentation": 0.14499760008438303,
+                "character_noise": 0.3120376611209264
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.047017,
+                    "defocus_blur": 0.005134,
+                    "motion_blur": 0.072076,
+                    "fog_filter": 0.039841,
+                    "pixelate": 0.04743,
+                    "jpeg_filter": 0.090653
+                },
+                "text_corruptions": {
+                    "homophone": 0.282512,
+                    "synonym": 0.272711,
+                    "ata_saliency": 0.073155,
+                    "fragmentation": 0.054244,
+                    "character_noise": 0.106311
+                },
+                "img_budget_used": 0.302151,
+                "txt_budget_used": 0.788932,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.81709,
+                "img_dist": 0.07445,
+                "txt_dist": 0.1752,
+                "txt_sim": 0.8248
+            },
+            "swad_metrics": {
+                "iou_0": 0.73595,
+                "delta_m_plus": 0.0,
+                "phi": 0.76339,
+                "swad": 0.0
+            },
+            "l2_distance": 0.83897,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bathin\u200dg c\u0430p\u200b, pers\u043e n, swim\u200d sh orts\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [306, 0, 900, 500], \"label\": \"bathin\u200dg c\u0430p\u200b\"},\n\t{\"bbox_2d\": [0, 0, 1000, 1000], \"label\": \"pers\u043e n\"},\n\t{\"bbox_2d\": [0, 500, 1000, 1000], \"label\": \"swim\u200d sh orts\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            306,
+                            0,
+                            900,
+                            500
+                        ],
+                        "label": "bathin\u200dg c\u0430p\u200b"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            1000
+                        ],
+                        "label": "pers\u043e n"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            500,
+                            1000,
+                            1000
+                        ],
+                        "label": "swim\u200d sh orts"
+                    }
+                ],
+                "token_count": 118,
+                "raw_token_count": 121,
+                "runtime_seconds": 0.3897
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.047017210611402925,
+                "defocus_blur": 0.005134038515389777,
+                "motion_blur": 0.07207640737966126,
+                "fog_filter": 0.03984070253004026,
+                "pixelate": 0.0474296587334946,
+                "jpeg_filter": 0.09065284259987039
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.28251179111322594,
+                "synonym": 0.27271076137269173,
+                "ata_saliency": 0.07315488151593866,
+                "fragmentation": 0.05424368819549846,
+                "character_noise": 0.1063110478336319
+            }
+        }
+    ]
+}

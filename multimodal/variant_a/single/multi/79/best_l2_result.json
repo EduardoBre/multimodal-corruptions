@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/79",
+        "folder_id": "79",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00025490.JPEG"
+    },
+    "pareto_index": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.3117117835129945,
+        "txt_attack": "homophone",
+        "txt_scale": 0.38124316703748284
+    },
+    "objectives": {
+        "iou": 0.48253,
+        "img_dist": 0.01894,
+        "txt_dist": 0.09608,
+        "txt_sim": 0.90392
+    },
+    "swad_metrics": {
+        "iou_0": 0.98035,
+        "delta_m_plus": 0.5078,
+        "phi": 0.8868,
+        "swad": 0.45032
+    },
+    "l2_distance": 0.49237,
+    "original_prompt": "Identify the objects \"salt or pepper shaker\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "salt or pepper shaker": {
+            "xmin": 233,
+            "ymin": 52,
+            "xmax": 427,
+            "ymax": 391
+        },
+        "salt or pepper shaker_1": {
+            "xmin": 43,
+            "ymin": 30,
+            "xmax": 219,
+            "ymax": 334
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"salter pepper shaker\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [500, 112, 912, 912], \"label\": \"salter pepper shaker\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    500,
+                    112,
+                    912,
+                    912
+                ],
+                "label": "salter pepper shaker"
+            }
+        ],
+        "token_count": 43,
+        "raw_token_count": 79,
+        "runtime_seconds": 0.1724
+    }
+}

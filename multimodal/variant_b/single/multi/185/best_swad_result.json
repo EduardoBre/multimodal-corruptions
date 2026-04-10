@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/185",
+        "folder_id": "185",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00049125.JPEG"
+    },
+    "pareto_index": 4,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.078758,
+            "defocus_blur": 0.016392,
+            "motion_blur": 0.035199,
+            "fog_filter": 0.032377,
+            "pixelate": 0.083739,
+            "jpeg_filter": 0.045785
+        },
+        "text_corruptions": {
+            "homophone": 0.093547,
+            "synonym": 0.0087,
+            "ata_saliency": 0.057691,
+            "fragmentation": 0.036942,
+            "character_noise": 0.065283
+        },
+        "img_budget_used": 0.292249,
+        "txt_budget_used": 0.262164,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.25255,
+        "img_dist": 0.09989,
+        "txt_dist": 0.24211,
+        "txt_sim": 0.75789
+    },
+    "swad_metrics": {
+        "iou_0": 0.85071,
+        "delta_m_plus": 0.70313,
+        "phi": 0.68218,
+        "swad": 0.47966
+    },
+    "l2_distance": 0.36384,
+    "original_prompt": "Identify the objects \"fox\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "fox": {
+            "xmin": 58,
+            "ymin": 109,
+            "xmax": 200,
+            "ymax": 322
+        },
+        "fox_1": {
+            "xmin": 214,
+            "ymin": 27,
+            "xmax": 383,
+            "ymax": 196
+        },
+        "fox_2": {
+            "xmin": 130,
+            "ymin": 40,
+            "xmax": 312,
+            "ymax": 196
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"fzx\u200b\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [130, 348, 357, 997], \"label\": \"fzx\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    130,
+                    348,
+                    357,
+                    997
+                ],
+                "label": "fzx"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 117,
+        "runtime_seconds": 0.3623
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.07875763745262022,
+        "defocus_blur": 0.01639156704458178,
+        "motion_blur": 0.035199004790628,
+        "fog_filter": 0.03237691651558791,
+        "pixelate": 0.08373932304633375,
+        "jpeg_filter": 0.04578476831446397
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.09354699634157114,
+        "synonym": 0.008700283082355627,
+        "ata_saliency": 0.05769118237952612,
+        "fragmentation": 0.03694233748819782,
+        "character_noise": 0.06528347662566869
+    }
+}

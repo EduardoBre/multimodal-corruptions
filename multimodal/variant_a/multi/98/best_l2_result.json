@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/98",
+        "folder_id": "98",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00045855.JPEG"
+    },
+    "pareto_index": 15,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.08646227720474076,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6881327596781619
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.06334,
+        "txt_dist": 0.16557,
+        "txt_sim": 0.83443
+    },
+    "swad_metrics": {
+        "iou_0": 0.79246,
+        "delta_m_plus": 1.0,
+        "phi": 0.78158,
+        "swad": 0.78158
+    },
+    "l2_distance": 0.17727,
+    "original_prompt": "Identify the objects \"frying pan, stove\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "stove": {
+            "xmin": 45,
+            "ymin": 82,
+            "xmax": 498,
+            "ymax": 312
+        },
+        "frying pan": {
+            "xmin": 74,
+            "ymin": 78,
+            "xmax": 308,
+            "ymax": 207
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"fry in pan, stoave\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [168, 220, 617, 608], \"label\": \"fry in pan, stoave\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    168,
+                    220,
+                    617,
+                    608
+                ],
+                "label": "fry in pan, stoave"
+            }
+        ],
+        "token_count": 45,
+        "raw_token_count": 91,
+        "runtime_seconds": 0.335
+    }
+}

@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/108",
+        "folder_id": "108",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00001284.JPEG"
+    },
+    "pareto_index": 15,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 9,
+    "total_evaluations": 270,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.004886893853426161,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.3309470900738364
+    },
+    "objectives": {
+        "iou": 0.03261,
+        "img_dist": 0.01332,
+        "txt_dist": 0.29511,
+        "txt_sim": 0.70489
+    },
+    "swad_metrics": {
+        "iou_0": 0.77745,
+        "delta_m_plus": 0.95806,
+        "phi": 0.6955,
+        "swad": 0.66633
+    },
+    "l2_distance": 0.2972,
+    "original_prompt": "Identify the objects \"dog\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 87,
+            "ymin": 97,
+            "xmax": 317,
+            "ymax": 470
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"odg\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 583, 330, 748], \"label\": \"odg\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    583,
+                    330,
+                    748
+                ],
+                "label": "odg"
+            }
+        ],
+        "token_count": 38,
+        "raw_token_count": 47,
+        "runtime_seconds": 0.1785
+    }
+}

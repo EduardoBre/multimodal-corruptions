@@ -1,0 +1,76 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/244",
+        "folder_id": "244",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00014902.JPEG"
+    },
+    "pareto_index": 6,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.863144940280058,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6678992108124702
+    },
+    "objectives": {
+        "iou": 0.30289,
+        "img_dist": 0.05655,
+        "txt_dist": 0.04956,
+        "txt_sim": 0.95044
+    },
+    "swad_metrics": {
+        "iou_0": 0.72684,
+        "delta_m_plus": 0.58328,
+        "phi": 0.89669,
+        "swad": 0.52302
+    },
+    "l2_distance": 0.31208,
+    "original_prompt": "Identify the objects \"lizard\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "lizard": {
+            "xmin": 136,
+            "ymin": 128,
+            "xmax": 916,
+            "ymax": 543
+        },
+        "lizard_1": {
+            "xmin": 664,
+            "ymin": 167,
+            "xmax": 1022,
+            "ymax": 654
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"lizzard\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [130, 238, 440, 700], \"label\": \"lizzard\"},\n\t{\"bbox_2d\": [430, 218, 840, 590], \"label\": \"lizzard\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    130,
+                    238,
+                    440,
+                    700
+                ],
+                "label": "lizzard"
+            },
+            {
+                "bbox_2d": [
+                    430,
+                    218,
+                    840,
+                    590
+                ],
+                "label": "lizzard"
+            }
+        ],
+        "token_count": 74,
+        "raw_token_count": 115,
+        "runtime_seconds": 0.6022
+    }
+}

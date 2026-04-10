@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/210",
+        "folder_id": "210",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00049201.JPEG"
+    },
+    "pareto_index": 10,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.9926241290493918,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.9151564096411614
+    },
+    "objectives": {
+        "iou": 0.54082,
+        "img_dist": 0.10222,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.97731,
+        "delta_m_plus": 0.44662,
+        "phi": 0.89778,
+        "swad": 0.40097
+    },
+    "l2_distance": 0.5504,
+    "original_prompt": "Identify the objects \"dragonfly\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dragonfly": {
+            "xmin": 178,
+            "ymin": 101,
+            "xmax": 394,
+            "ymax": 303
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"dragonfly\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [330, 200, 788, 976], \"label\": \"dragonfly\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    330,
+                    200,
+                    788,
+                    976
+                ],
+                "label": "dragonfly"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 42,
+        "runtime_seconds": 0.1567
+    }
+}

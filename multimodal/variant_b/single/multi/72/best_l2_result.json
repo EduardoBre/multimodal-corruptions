@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/72",
+        "folder_id": "72",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00040025.JPEG"
+    },
+    "pareto_index": 1,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.059736,
+            "defocus_blur": 0.061566,
+            "motion_blur": 0.04588,
+            "fog_filter": 0.081672,
+            "pixelate": 0.210205,
+            "jpeg_filter": 0.018793
+        },
+        "text_corruptions": {
+            "homophone": 0.017916,
+            "synonym": 0.274921,
+            "ata_saliency": 0.194921,
+            "fragmentation": 0.146325,
+            "character_noise": 0.079567
+        },
+        "img_budget_used": 0.477851,
+        "txt_budget_used": 0.713651,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.20556,
+        "img_dist": 0.08392,
+        "txt_dist": 0.21327,
+        "txt_sim": 0.78673
+    },
+    "swad_metrics": {
+        "iou_0": 0.654,
+        "delta_m_plus": 0.68569,
+        "phi": 0.72071,
+        "swad": 0.49418
+    },
+    "l2_distance": 0.30787,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 181,
+            "ymin": 283,
+            "xmax": 311,
+            "ymax": 385
+        },
+        "bird_1": {
+            "xmin": 336,
+            "ymin": 295,
+            "xmax": 436,
+            "ymax": 435
+        },
+        "bird_2": {
+            "xmin": 395,
+            "ymin": 65,
+            "xmax": 417,
+            "ymax": 79
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"winged am\u200di\u200bm\u0430l\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [373, 587, 609, 842], \"label\": \"winged am\u200di\u200bm\u0430l\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    373,
+                    587,
+                    609,
+                    842
+                ],
+                "label": "winged am\u200di\u200bm\u0430l"
+            }
+        ],
+        "token_count": 48,
+        "raw_token_count": 93,
+        "runtime_seconds": 0.2977
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.05973571933265654,
+        "defocus_blur": 0.061566099606563854,
+        "motion_blur": 0.04588033185028302,
+        "fog_filter": 0.0816715548700544,
+        "pixelate": 0.21020472712864485,
+        "jpeg_filter": 0.01879267796929222
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.017916238381641122,
+        "synonym": 0.27492126132154754,
+        "ata_saliency": 0.1949214855712244,
+        "fragmentation": 0.14632502040097575,
+        "character_noise": 0.07956733547778669
+    }
+}

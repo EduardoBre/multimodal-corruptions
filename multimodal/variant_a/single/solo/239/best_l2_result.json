@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/239",
+        "folder_id": "239",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00020564.JPEG"
+    },
+    "pareto_index": 7,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.956810286327587,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.5919188485823369
+    },
+    "objectives": {
+        "iou": 0.32795,
+        "img_dist": 0.07253,
+        "txt_dist": 0.28193,
+        "txt_sim": 0.71807
+    },
+    "swad_metrics": {
+        "iou_0": 0.87144,
+        "delta_m_plus": 0.62367,
+        "phi": 0.66599,
+        "swad": 0.41536
+    },
+    "l2_distance": 0.43852,
+    "original_prompt": "Identify the objects \"bee\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bee": {
+            "xmin": 257,
+            "ymin": 215,
+            "xmax": 402,
+            "ymax": 346
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"b\u200b\u0435\u200d\u0435\u200b\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [333, 383, 933, 800], \"label\": \"b\u200b\u0435\u200d\u0435\u200b\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    333,
+                    383,
+                    933,
+                    800
+                ],
+                "label": "b\u200b\u0435\u200d\u0435\u200b"
+            }
+        ],
+        "token_count": 45,
+        "raw_token_count": 46,
+        "runtime_seconds": 0.1517
+    }
+}

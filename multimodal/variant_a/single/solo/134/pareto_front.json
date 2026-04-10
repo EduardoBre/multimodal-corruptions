@@ -1,0 +1,157 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/single/solo/134",
+        "folder_id": "134",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00048104.JPEG"
+    },
+    "original_prompt": "Identify the objects \"lizard\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "lizard": {
+            "xmin": 119,
+            "ymin": 95,
+            "xmax": 499,
+            "ymax": 242
+        }
+    },
+    "baseline_iou": 0.94666,
+    "swad_star": 0.67467,
+    "swad_star_index": 0,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 3,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8181617493544074,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.41721849968957336
+            },
+            "objectives": {
+                "iou": 0.25131,
+                "img_dist": 0.08149,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.94666,
+                "delta_m_plus": 0.73453,
+                "phi": 0.91851,
+                "swad": 0.67467
+            },
+            "l2_distance": 0.26419,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"lizard\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [494, 420, 816, 650], \"label\": \"lizard\"},\n\t{\"bbox_2d\": [220, 378, 542, 628], \"label\": \"lizard\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            494,
+                            420,
+                            816,
+                            650
+                        ],
+                        "label": "lizard"
+                    },
+                    {
+                        "bbox_2d": [
+                            220,
+                            378,
+                            542,
+                            628
+                        ],
+                        "label": "lizard"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 75,
+                "runtime_seconds": 0.2371
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.21300761893764208,
+                "txt_attack": "synonym",
+                "txt_scale": 0.11490566325799068
+            },
+            "objectives": {
+                "iou": 0.90448,
+                "img_dist": 0.05451,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.94666,
+                "delta_m_plus": 0.04456,
+                "phi": 0.94549,
+                "swad": 0.04213
+            },
+            "l2_distance": 0.90612,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"lizard\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [212, 240, 1000, 658], \"label\": \"lizard\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            212,
+                            240,
+                            1000,
+                            658
+                        ],
+                        "label": "lizard"
+                    }
+                ],
+                "token_count": 41,
+                "raw_token_count": 75,
+                "runtime_seconds": 0.2371
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.94817,
+                "img_dist": 0.03926,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.94666,
+                "delta_m_plus": 0.0,
+                "phi": 0.96074,
+                "swad": 0.0
+            },
+            "l2_distance": 0.94898,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"lizard\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [228, 250, 1000, 657], \"label\": \"lizard\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            228,
+                            250,
+                            1000,
+                            657
+                        ],
+                        "label": "lizard"
+                    }
+                ],
+                "token_count": 41,
+                "raw_token_count": 75,
+                "runtime_seconds": 0.2371
+            }
+        }
+    ]
+}

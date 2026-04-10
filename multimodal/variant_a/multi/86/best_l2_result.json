@@ -1,0 +1,79 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/86",
+        "folder_id": "86",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00039308.JPEG"
+    },
+    "pareto_index": 12,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 3,
+    "total_evaluations": 90,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.9994700276452868,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6310521330498112
+    },
+    "objectives": {
+        "iou": 0.12565,
+        "img_dist": 0.12834,
+        "txt_dist": 0.20207,
+        "txt_sim": 0.79793
+    },
+    "swad_metrics": {
+        "iou_0": 0.59458,
+        "delta_m_plus": 0.78867,
+        "phi": 0.69552,
+        "swad": 0.54854
+    },
+    "l2_distance": 0.27035,
+    "original_prompt": "Identify the objects \"person, ray\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 408,
+            "ymin": 294,
+            "xmax": 499,
+            "ymax": 373
+        },
+        "ray": {
+            "xmin": 145,
+            "ymin": 82,
+            "xmax": 297,
+            "ymax": 162
+        },
+        "ray_1": {
+            "xmin": 152,
+            "ymin": 163,
+            "xmax": 499,
+            "ymax": 324
+        },
+        "ray_2": {
+            "xmin": 328,
+            "ymin": 73,
+            "xmax": 412,
+            "ymax": 115
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"purse on, ray\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [312, 470, 700, 880], \"label\": \"purse on, ray\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    312,
+                    470,
+                    700,
+                    880
+                ],
+                "label": "purse on, ray"
+            }
+        ],
+        "token_count": 43,
+        "raw_token_count": 147,
+        "runtime_seconds": 0.5269
+    }
+}

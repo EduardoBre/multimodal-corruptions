@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/189",
+        "folder_id": "189",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00036067.JPEG"
+    },
+    "pareto_index": 11,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 5,
+    "total_evaluations": 150,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.129777,
+            "defocus_blur": 0.350409,
+            "motion_blur": 0.001181,
+            "fog_filter": 0.032786,
+            "pixelate": 0.001329,
+            "jpeg_filter": 0.001689
+        },
+        "text_corruptions": {
+            "homophone": 0.002891,
+            "synonym": 0.008754,
+            "ata_saliency": 0.293596,
+            "fragmentation": 0.059108,
+            "character_noise": 0.027309
+        },
+        "img_budget_used": 0.517171,
+        "txt_budget_used": 0.391658,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.08096,
+        "img_dist": 0.08768,
+        "txt_dist": 0.07046,
+        "txt_sim": 0.92954
+    },
+    "swad_metrics": {
+        "iou_0": 0.96353,
+        "delta_m_plus": 0.91598,
+        "phi": 0.84804,
+        "swad": 0.77678
+    },
+    "l2_distance": 0.13859,
+    "original_prompt": "Identify the objects \"snake\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "snake": {
+            "xmin": 66,
+            "ymin": 109,
+            "xmax": 391,
+            "ymax": 253
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"snak\u0435\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [625, 288, 788, 420], \"label\": \"snak\u0435\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    625,
+                    288,
+                    788,
+                    420
+                ],
+                "label": "snak\u0435"
+            }
+        ],
+        "token_count": 41,
+        "raw_token_count": 47,
+        "runtime_seconds": 0.1618
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.1297765879102888,
+        "defocus_blur": 0.35040900307233325,
+        "motion_blur": 0.0011805520666580832,
+        "fog_filter": 0.03278637772636586,
+        "pixelate": 0.0013294019444506223,
+        "jpeg_filter": 0.0016888332402924472
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.0028909612779090543,
+        "synonym": 0.00875436250627333,
+        "ata_saliency": 0.29359577437917017,
+        "fragmentation": 0.05910790713955068,
+        "character_noise": 0.027309295566287358
+    }
+}

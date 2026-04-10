@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/115",
+        "folder_id": "115",
+        "category": "single/multi",
+        "filename": "ILSVRC2013_val_00004012.JPEG"
+    },
+    "pareto_index": 13,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.000101,
+            "defocus_blur": 0.273515,
+            "motion_blur": 0.001934,
+            "fog_filter": 0.089295,
+            "pixelate": 0.406812,
+            "jpeg_filter": 0.127843
+        },
+        "text_corruptions": {
+            "homophone": 0.272814,
+            "synonym": 0.178421,
+            "ata_saliency": 0.35226,
+            "fragmentation": 0.168591,
+            "character_noise": 0.027912
+        },
+        "img_budget_used": 0.899499,
+        "txt_budget_used": 1.0,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.05633,
+        "img_dist": 0.13499,
+        "txt_dist": 0.26613,
+        "txt_sim": 0.73387
+    },
+    "swad_metrics": {
+        "iou_0": 0.79295,
+        "delta_m_plus": 0.92896,
+        "phi": 0.6348,
+        "swad": 0.58971
+    },
+    "l2_distance": 0.30368,
+    "original_prompt": "Identify the objects \"armadillo\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "armadillo": {
+            "xmin": 1,
+            "ymin": 242,
+            "xmax": 212,
+            "ymax": 317
+        },
+        "armadillo_1": {
+            "xmin": 230,
+            "ymin": 192,
+            "xmax": 333,
+            "ymax": 330
+        },
+        "armadillo_2": {
+            "xmin": 313,
+            "ymin": 232,
+            "xmax": 450,
+            "ymax": 376
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"armadi\u200dlo\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 999, 567], \"label\": \"armadi\u200dlo\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    999,
+                    567
+                ],
+                "label": "armadi\u200dlo"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 134,
+        "runtime_seconds": 0.4439
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.00010089385006327294,
+        "defocus_blur": 0.2735151867538579,
+        "motion_blur": 0.001933586974911826,
+        "fog_filter": 0.08929455263117411,
+        "pixelate": 0.4068123266622904,
+        "jpeg_filter": 0.12784274209884278
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.27281447216542404,
+        "synonym": 0.1784214141995707,
+        "ata_saliency": 0.3522603957146612,
+        "fragmentation": 0.168591307586939,
+        "character_noise": 0.027912410333405097
+    }
+}

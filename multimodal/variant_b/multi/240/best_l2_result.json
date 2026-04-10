@@ -1,0 +1,121 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/240",
+        "folder_id": "240",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00014058.JPEG"
+    },
+    "pareto_index": 6,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.002036,
+            "defocus_blur": 0.007436,
+            "motion_blur": 0.150166,
+            "fog_filter": 0.000185,
+            "pixelate": 0.002182,
+            "jpeg_filter": 0.028229
+        },
+        "text_corruptions": {
+            "homophone": 0.000969,
+            "synonym": 0.005756,
+            "ata_saliency": 0.227591,
+            "fragmentation": 0.390032,
+            "character_noise": 0.200778
+        },
+        "img_budget_used": 0.190233,
+        "txt_budget_used": 0.825126,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.01005,
+        "img_dist": 0.10017,
+        "txt_dist": 0.23165,
+        "txt_sim": 0.76835
+    },
+    "swad_metrics": {
+        "iou_0": 0.91043,
+        "delta_m_plus": 0.98896,
+        "phi": 0.69138,
+        "swad": 0.68375
+    },
+    "l2_distance": 0.25258,
+    "original_prompt": "Identify the objects \"chair, dog, table\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 103,
+            "ymin": 51,
+            "xmax": 494,
+            "ymax": 312
+        },
+        "table": {
+            "xmin": 0,
+            "ymin": 60,
+            "xmax": 256,
+            "ymax": 262
+        },
+        "chair": {
+            "xmin": 256,
+            "ymin": 104,
+            "xmax": 386,
+            "ymax": 142
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"chai r, c\u0430 n\u200dine, table\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 138, 520, 588], \"label\": \"chai r, c\u0430 n\u200dine, table\"},\n\t{\"bbox_2d\": [872, 416, 1000, 540], \"label\": \"table\"},\n\t{\"bbox_2d\": [858, 296, 1000, 372], \"label\": \"table\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    138,
+                    520,
+                    588
+                ],
+                "label": "chai r, c\u0430 n\u200dine, table"
+            },
+            {
+                "bbox_2d": [
+                    872,
+                    416,
+                    1000,
+                    540
+                ],
+                "label": "table"
+            },
+            {
+                "bbox_2d": [
+                    858,
+                    296,
+                    1000,
+                    372
+                ],
+                "label": "table"
+            }
+        ],
+        "token_count": 115,
+        "raw_token_count": 223,
+        "runtime_seconds": 0.7058
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0020361431218031594,
+        "defocus_blur": 0.007435666930608468,
+        "motion_blur": 0.15016566688376304,
+        "fog_filter": 0.00018489681761014749,
+        "pixelate": 0.0021817040405489856,
+        "jpeg_filter": 0.028229213776290396
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.000969166049780007,
+        "synonym": 0.005756025366730389,
+        "ata_saliency": 0.22759098760298624,
+        "fragmentation": 0.39003219640304015,
+        "character_noise": 0.20077800304044133
+    }
+}

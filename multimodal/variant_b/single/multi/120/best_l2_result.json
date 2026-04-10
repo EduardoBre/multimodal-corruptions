@@ -1,0 +1,106 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/120",
+        "folder_id": "120",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00035229.JPEG"
+    },
+    "pareto_index": 1,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.114411,
+            "defocus_blur": 0.059168,
+            "motion_blur": 0.161683,
+            "fog_filter": 0.155144,
+            "pixelate": 0.162234,
+            "jpeg_filter": 0.295703
+        },
+        "text_corruptions": {
+            "homophone": 0.009939,
+            "synonym": 0.037435,
+            "ata_saliency": 0.085725,
+            "fragmentation": 0.048227,
+            "character_noise": 0.06194
+        },
+        "img_budget_used": 0.948344,
+        "txt_budget_used": 0.243265,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.11686,
+        "img_dist": 0.11674,
+        "txt_dist": 0.11135,
+        "txt_sim": 0.88865
+    },
+    "swad_metrics": {
+        "iou_0": 0.91399,
+        "delta_m_plus": 0.87214,
+        "phi": 0.78491,
+        "swad": 0.68455
+    },
+    "l2_distance": 0.19921,
+    "original_prompt": "Identify the objects \"chair\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "chair": {
+            "xmin": 130,
+            "ymin": 120,
+            "xmax": 335,
+            "ymax": 461
+        },
+        "chair_1": {
+            "xmin": 57,
+            "ymin": 95,
+            "xmax": 207,
+            "ymax": 376
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"seat\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [420, 420, 800, 550], \"label\": \"seat\"},\n\t{\"bbox_2d\": [172, 348, 488, 420], \"label\": \"seat\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    420,
+                    420,
+                    800,
+                    550
+                ],
+                "label": "seat"
+            },
+            {
+                "bbox_2d": [
+                    172,
+                    348,
+                    488,
+                    420
+                ],
+                "label": "seat"
+            }
+        ],
+        "token_count": 72,
+        "raw_token_count": 87,
+        "runtime_seconds": 0.2721
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.11441107493661992,
+        "defocus_blur": 0.059168264971588794,
+        "motion_blur": 0.1616831403620504,
+        "fog_filter": 0.1551443139788631,
+        "pixelate": 0.1622340991663636,
+        "jpeg_filter": 0.2957027768117471
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.009938695960212084,
+        "synonym": 0.03743450342006467,
+        "ata_saliency": 0.08572518870322411,
+        "fragmentation": 0.04822698559182938,
+        "character_noise": 0.06193980154094939
+    }
+}

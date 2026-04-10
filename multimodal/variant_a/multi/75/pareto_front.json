@@ -1,0 +1,230 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/75",
+        "folder_id": "75",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00026947.JPEG"
+    },
+    "original_prompt": "Identify the objects \"car, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 84,
+            "ymin": 69,
+            "xmax": 167,
+            "ymax": 142
+        },
+        "car": {
+            "xmin": 0,
+            "ymin": 172,
+            "xmax": 188,
+            "ymax": 255
+        }
+    },
+    "baseline_iou": 0.68153,
+    "swad_star": 0.68868,
+    "swad_star_index": 2,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 4,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.018153363333776373,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.24927259019092207
+            },
+            "objectives": {
+                "iou": 0.19186,
+                "img_dist": 0.02696,
+                "txt_dist": 0.12035,
+                "txt_sim": 0.87965
+            },
+            "swad_metrics": {
+                "iou_0": 0.68153,
+                "delta_m_plus": 0.71849,
+                "phi": 0.85593,
+                "swad": 0.61498
+            },
+            "l2_distance": 0.22808,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"\u0441ar, \u0440\u0435rson\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [175, 188, 275, 312], \"label\": \"\u0440\u0435rson\"},\n\t{\"bbox_2d\": [175, 188, 275, 312], \"label\": \"\u0440\u0435rson\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            175,
+                            188,
+                            275,
+                            312
+                        ],
+                        "label": "\u0440\u0435rson"
+                    },
+                    {
+                        "bbox_2d": [
+                            175,
+                            188,
+                            275,
+                            312
+                        ],
+                        "label": "\u0440\u0435rson"
+                    }
+                ],
+                "token_count": 76,
+                "raw_token_count": 104,
+                "runtime_seconds": 0.389
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.70063,
+                "img_dist": 0.02536,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.68153,
+                "delta_m_plus": 0.0,
+                "phi": 0.97464,
+                "swad": 0.0
+            },
+            "l2_distance": 0.70109,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"car, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 456, 365, 688], \"label\": \"car\"},\n\t{\"bbox_2d\": [185, 188, 300, 500], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            456,
+                            365,
+                            688
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            185,
+                            188,
+                            300,
+                            500
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 70,
+                "raw_token_count": 104,
+                "runtime_seconds": 0.389
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.19917,
+                "img_dist": 0.02696,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.68153,
+                "delta_m_plus": 0.70776,
+                "phi": 0.97304,
+                "swad": 0.68868
+            },
+            "l2_distance": 0.20099,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"car, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 472, 100, 530], \"label\": \"car\"},\n\t{\"bbox_2d\": [188, 188, 278, 306], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            472,
+                            100,
+                            530
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            188,
+                            188,
+                            278,
+                            306
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 70,
+                "raw_token_count": 104,
+                "runtime_seconds": 0.389
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.018595721213425453,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6130568625347235
+            },
+            "objectives": {
+                "iou": 0.61962,
+                "img_dist": 0.02567,
+                "txt_dist": 0.38861,
+                "txt_sim": 0.61139
+            },
+            "swad_metrics": {
+                "iou_0": 0.68153,
+                "delta_m_plus": 0.09084,
+                "phi": 0.5957,
+                "swad": 0.05411
+            },
+            "l2_distance": 0.73185,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"crr, persox\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [17, 458, 365, 638], \"label\": \"crr\"},\n\t{\"bbox_2d\": [183, 192, 308, 500], \"label\": \"persox\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            17,
+                            458,
+                            365,
+                            638
+                        ],
+                        "label": "crr"
+                    },
+                    {
+                        "bbox_2d": [
+                            183,
+                            192,
+                            308,
+                            500
+                        ],
+                        "label": "persox"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 104,
+                "runtime_seconds": 0.389
+            }
+        }
+    ]
+}

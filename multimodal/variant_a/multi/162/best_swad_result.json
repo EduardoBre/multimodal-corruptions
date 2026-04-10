@@ -1,0 +1,82 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/162",
+        "folder_id": "162",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00004116.JPEG"
+    },
+    "pareto_index": 6,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.8004900574692112,
+        "txt_attack": "homophone",
+        "txt_scale": 0.3273709769105356
+    },
+    "objectives": {
+        "iou": 0.32047,
+        "img_dist": 0.07818,
+        "txt_dist": 0.0795,
+        "txt_sim": 0.9205
+    },
+    "swad_metrics": {
+        "iou_0": 0.75712,
+        "delta_m_plus": 0.57672,
+        "phi": 0.84854,
+        "swad": 0.48937
+    },
+    "l2_distance": 0.33931,
+    "original_prompt": "Identify the objects \"domestic cat, horse\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "domestic cat": {
+            "xmin": 90,
+            "ymin": 248,
+            "xmax": 234,
+            "ymax": 353
+        },
+        "domestic cat_1": {
+            "xmin": 85,
+            "ymin": 247,
+            "xmax": 265,
+            "ymax": 391
+        },
+        "horse": {
+            "xmin": 0,
+            "ymin": 326,
+            "xmax": 331,
+            "ymax": 498
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"domestic kat, horse\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 700, 999, 1000], \"label\": \"domestic kat\"},\n\t{\"bbox_2d\": [0, 700, 999, 1000], \"label\": \"horse\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    700,
+                    999,
+                    1000
+                ],
+                "label": "domestic kat"
+            },
+            {
+                "bbox_2d": [
+                    0,
+                    700,
+                    999,
+                    1000
+                ],
+                "label": "horse"
+            }
+        ],
+        "token_count": 72,
+        "raw_token_count": 101,
+        "runtime_seconds": 0.3505
+    }
+}

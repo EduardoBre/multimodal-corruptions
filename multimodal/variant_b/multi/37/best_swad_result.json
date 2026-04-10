@@ -1,0 +1,133 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/37",
+        "folder_id": "37",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00044693.JPEG"
+    },
+    "pareto_index": 5,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.045605,
+            "defocus_blur": 0.055717,
+            "motion_blur": 0.074228,
+            "fog_filter": 0.036578,
+            "pixelate": 0.023305,
+            "jpeg_filter": 0.00939
+        },
+        "text_corruptions": {
+            "homophone": 0.400214,
+            "synonym": 0.066623,
+            "ata_saliency": 0.403711,
+            "fragmentation": 0.024165,
+            "character_noise": 0.080489
+        },
+        "img_budget_used": 0.244823,
+        "txt_budget_used": 0.975202,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.26711,
+        "img_dist": 0.08791,
+        "txt_dist": 0.25421,
+        "txt_sim": 0.74579
+    },
+    "swad_metrics": {
+        "iou_0": 0.73123,
+        "delta_m_plus": 0.63471,
+        "phi": 0.68023,
+        "swad": 0.43175
+    },
+    "l2_distance": 0.37908,
+    "original_prompt": "Identify the objects \"golfcart, lamp, person, tie\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 222,
+            "ymin": 134,
+            "xmax": 324,
+            "ymax": 249
+        },
+        "lamp": {
+            "xmin": 443,
+            "ymin": 123,
+            "xmax": 460,
+            "ymax": 142
+        },
+        "lamp_1": {
+            "xmin": 341,
+            "ymin": 0,
+            "xmax": 388,
+            "ymax": 15
+        },
+        "golfcart": {
+            "xmin": 129,
+            "ymin": 84,
+            "xmax": 403,
+            "ymax": 378
+        },
+        "tie": {
+            "xmin": 255,
+            "ymin": 170,
+            "xmax": 284,
+            "ymax": 232
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"go\u200blf k\u200da\u200dr\u200dt, lafp, p\u200dreson, tie\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [252, 230, 802, 1000], \"label\": \"go\u200blf k\u200da\u200dr\u200dt\"},\n\t{\"bbox_2d\": [448, 450, 538, 548], \"label\": \"lafp\"},\n\t{\"bbox_2d\": [502, 450, 538, 530], \"label\": \"tie\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    252,
+                    230,
+                    802,
+                    1000
+                ],
+                "label": "go\u200blf k\u200da\u200dr\u200dt"
+            },
+            {
+                "bbox_2d": [
+                    448,
+                    450,
+                    538,
+                    548
+                ],
+                "label": "lafp"
+            },
+            {
+                "bbox_2d": [
+                    502,
+                    450,
+                    538,
+                    530
+                ],
+                "label": "tie"
+            }
+        ],
+        "token_count": 120,
+        "raw_token_count": 252,
+        "runtime_seconds": 0.8008
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.045604639162785614,
+        "defocus_blur": 0.05571669169024432,
+        "motion_blur": 0.07422812511439399,
+        "fog_filter": 0.03657823395986347,
+        "pixelate": 0.023305172577254042,
+        "jpeg_filter": 0.009390081968478046
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.400214027473096,
+        "synonym": 0.06662287311768858,
+        "ata_saliency": 0.40371128895995567,
+        "fragmentation": 0.024165118972747392,
+        "character_noise": 0.08048853833845339
+    }
+}

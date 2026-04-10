@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/186",
+        "folder_id": "186",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00023076.JPEG"
+    },
+    "pareto_index": 13,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 4,
+    "total_evaluations": 120,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.008625,
+            "defocus_blur": 0.000401,
+            "motion_blur": 0.000199,
+            "fog_filter": 0.003551,
+            "pixelate": 0.007739,
+            "jpeg_filter": 0.007387
+        },
+        "text_corruptions": {
+            "homophone": 0.06674,
+            "synonym": 0.130358,
+            "ata_saliency": 0.44083,
+            "fragmentation": 0.200211,
+            "character_noise": 0.144543
+        },
+        "img_budget_used": 0.027902,
+        "txt_budget_used": 0.982682,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.09144,
+        "txt_dist": 0.32738,
+        "txt_sim": 0.67262
+    },
+    "swad_metrics": {
+        "iou_0": 0.94018,
+        "delta_m_plus": 1.0,
+        "phi": 0.61112,
+        "swad": 0.61112
+    },
+    "l2_distance": 0.33991,
+    "original_prompt": "Identify the objects \"dog, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 312,
+            "ymin": 0,
+            "xmax": 373,
+            "ymax": 217
+        },
+        "person_1": {
+            "xmin": 0,
+            "ymin": 181,
+            "xmax": 115,
+            "ymax": 480
+        },
+        "dog": {
+            "xmin": 117,
+            "ymin": 8,
+            "xmax": 276,
+            "ymax": 490
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"dagw, pe\u200br non\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [308, 28, 738, 974], \"label\": \"dagw, pe\u200br non\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    308,
+                    28,
+                    738,
+                    974
+                ],
+                "label": "dagw, pe\u200br non"
+            }
+        ],
+        "token_count": 44,
+        "raw_token_count": 116,
+        "runtime_seconds": 0.3759
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.008625398274130907,
+        "defocus_blur": 0.00040095739034858024,
+        "motion_blur": 0.00019890518062217076,
+        "fog_filter": 0.0035507540442232446,
+        "pixelate": 0.007738872056415238,
+        "jpeg_filter": 0.007386726143740363
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.06674015185871016,
+        "synonym": 0.13035842907483275,
+        "ata_saliency": 0.44082963083388343,
+        "fragmentation": 0.20021123936159785,
+        "character_noise": 0.14454291523313526
+    }
+}

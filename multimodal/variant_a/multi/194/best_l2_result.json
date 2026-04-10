@@ -1,0 +1,112 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/194",
+        "folder_id": "194",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00000673.JPEG"
+    },
+    "pareto_index": 0,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "motion_blur",
+        "img_scale": 0.23165185207671868,
+        "txt_attack": "homophone",
+        "txt_scale": 0.2847437692140504
+    },
+    "objectives": {
+        "iou": 0.2671,
+        "img_dist": 0.03855,
+        "txt_dist": 0.24096,
+        "txt_sim": 0.75904
+    },
+    "swad_metrics": {
+        "iou_0": 0.87494,
+        "delta_m_plus": 0.69472,
+        "phi": 0.72978,
+        "swad": 0.50699
+    },
+    "l2_distance": 0.36179,
+    "original_prompt": "Identify the objects \"guitar, person, saxophone\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "saxophone": {
+            "xmin": 107,
+            "ymin": 85,
+            "xmax": 255,
+            "ymax": 413
+        },
+        "person": {
+            "xmin": 156,
+            "ymin": 17,
+            "xmax": 332,
+            "ymax": 498
+        },
+        "person_1": {
+            "xmin": 0,
+            "ymin": 225,
+            "xmax": 146,
+            "ymax": 498
+        },
+        "person_2": {
+            "xmin": 57,
+            "ymin": 177,
+            "xmax": 131,
+            "ymax": 342
+        },
+        "guitar": {
+            "xmin": 0,
+            "ymin": 321,
+            "xmax": 145,
+            "ymax": 462
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"gitar, purse on, sax a phone\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 663, 396, 925], \"label\": \"gitar\"},\n\t{\"bbox_2d\": [312, 157, 752, 831], \"label\": \"sax\"},\n\t{\"bbox_2d\": [0, 815, 336, 998], \"label\": \"purse on\"},\n\t{\"bbox_2d\": [0, 139, 116, 200], \"label\": \"a phone\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    663,
+                    396,
+                    925
+                ],
+                "label": "gitar"
+            },
+            {
+                "bbox_2d": [
+                    312,
+                    157,
+                    752,
+                    831
+                ],
+                "label": "sax"
+            },
+            {
+                "bbox_2d": [
+                    0,
+                    815,
+                    336,
+                    998
+                ],
+                "label": "purse on"
+            },
+            {
+                "bbox_2d": [
+                    0,
+                    139,
+                    116,
+                    200
+                ],
+                "label": "a phone"
+            }
+        ],
+        "token_count": 137,
+        "raw_token_count": 193,
+        "runtime_seconds": 0.6812
+    }
+}

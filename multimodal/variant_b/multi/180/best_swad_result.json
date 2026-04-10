@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/180",
+        "folder_id": "180",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00010611.JPEG"
+    },
+    "pareto_index": 0,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.057194,
+            "defocus_blur": 0.031348,
+            "motion_blur": 0.023267,
+            "fog_filter": 0.060618,
+            "pixelate": 0.063417,
+            "jpeg_filter": 0.409416
+        },
+        "text_corruptions": {
+            "homophone": 0.215854,
+            "synonym": 0.13248,
+            "ata_saliency": 0.147136,
+            "fragmentation": 0.039303,
+            "character_noise": 0.03129
+        },
+        "img_budget_used": 0.645259,
+        "txt_budget_used": 0.566064,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.06471,
+        "txt_dist": 0.29178,
+        "txt_sim": 0.70822
+    },
+    "swad_metrics": {
+        "iou_0": 0.93535,
+        "delta_m_plus": 1.0,
+        "phi": 0.66239,
+        "swad": 0.66239
+    },
+    "l2_distance": 0.29887,
+    "original_prompt": "Identify the objects \"brassiere, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 48,
+            "ymin": 0,
+            "xmax": 290,
+            "ymax": 498
+        },
+        "brassiere": {
+            "xmin": 96,
+            "ymin": 123,
+            "xmax": 246,
+            "ymax": 266
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"rba zeez, pe\u200drson\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [138, 0, 888, 1000], \"label\": \"rba zeez, pe\u200drson\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    138,
+                    0,
+                    888,
+                    1000
+                ],
+                "label": "rba zeez, pe\u200drson"
+            }
+        ],
+        "token_count": 48,
+        "raw_token_count": 125,
+        "runtime_seconds": 0.4215
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.05719365161310342,
+        "defocus_blur": 0.03134842850095183,
+        "motion_blur": 0.023267094765061797,
+        "fog_filter": 0.060617828339953175,
+        "pixelate": 0.06341680658147053,
+        "jpeg_filter": 0.4094155897969539
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.21585364973364873,
+        "synonym": 0.13248035975838823,
+        "ata_saliency": 0.1471364756232984,
+        "fragmentation": 0.03930301560912301,
+        "character_noise": 0.03129039929092893
+    }
+}

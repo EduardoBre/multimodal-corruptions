@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/5",
+        "folder_id": "5",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00045126.JPEG"
+    },
+    "pareto_index": 1,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.066281,
+            "defocus_blur": 0.060451,
+            "motion_blur": 0.128092,
+            "fog_filter": 0.015741,
+            "pixelate": 0.005912,
+            "jpeg_filter": 0.003151
+        },
+        "text_corruptions": {
+            "homophone": 0.058993,
+            "synonym": 0.201705,
+            "ata_saliency": 0.013199,
+            "fragmentation": 0.255884,
+            "character_noise": 0.049011
+        },
+        "img_budget_used": 0.279629,
+        "txt_budget_used": 0.578792,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.11991,
+        "txt_dist": 0.14797,
+        "txt_sim": 0.85203
+    },
+    "swad_metrics": {
+        "iou_0": 0.72696,
+        "delta_m_plus": 1.0,
+        "phi": 0.74986,
+        "swad": 0.74986
+    },
+    "l2_distance": 0.19046,
+    "original_prompt": "Identify the objects \"person, pineapple\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 221,
+            "ymin": 45,
+            "xmax": 365,
+            "ymax": 405
+        },
+        "pineapple": {
+            "xmin": 67,
+            "ymin": 127,
+            "xmax": 123,
+            "ymax": 228
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"p\u0435r so n, pineapple\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [188, 200, 348, 478], \"label\": \"p\u0435r so n, pineapple\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    188,
+                    200,
+                    348,
+                    478
+                ],
+                "label": "p\u0435r so n, pineapple"
+            }
+        ],
+        "token_count": 45,
+        "raw_token_count": 83,
+        "runtime_seconds": 0.2771
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.06628095900187732,
+        "defocus_blur": 0.060451049193859845,
+        "motion_blur": 0.12809234402539962,
+        "fog_filter": 0.015741449601793092,
+        "pixelate": 0.0059123482669592095,
+        "jpeg_filter": 0.003151317174338227
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.05899307866529212,
+        "synonym": 0.20170499292286564,
+        "ata_saliency": 0.013198715902132948,
+        "fragmentation": 0.2558840309340179,
+        "character_noise": 0.04901069385521979
+    }
+}

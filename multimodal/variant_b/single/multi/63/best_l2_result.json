@@ -1,0 +1,106 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/63",
+        "folder_id": "63",
+        "category": "single/multi",
+        "filename": "ILSVRC2013_val_00000008.JPEG"
+    },
+    "pareto_index": 10,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.004069,
+            "defocus_blur": 0.020465,
+            "motion_blur": 0.211843,
+            "fog_filter": 0.000341,
+            "pixelate": 0.047543,
+            "jpeg_filter": 0.01756
+        },
+        "text_corruptions": {
+            "homophone": 0.023647,
+            "synonym": 0.20547,
+            "ata_saliency": 0.1342,
+            "fragmentation": 0.321645,
+            "character_noise": 0.062845
+        },
+        "img_budget_used": 0.301821,
+        "txt_budget_used": 0.747806,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.00811,
+        "img_dist": 0.07682,
+        "txt_dist": 0.3748,
+        "txt_sim": 0.6252
+    },
+    "swad_metrics": {
+        "iou_0": 0.95932,
+        "delta_m_plus": 0.99155,
+        "phi": 0.57717,
+        "swad": 0.57229
+    },
+    "l2_distance": 0.38268,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 231,
+            "ymin": 86,
+            "xmax": 449,
+            "ymax": 333
+        },
+        "bird_1": {
+            "xmin": 71,
+            "ymin": 19,
+            "xmax": 286,
+            "ymax": 333
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bur red\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [308, 120, 352, 190], \"label\": \"bur red\"},\n\t{\"bbox_2d\": [638, 367, 682, 430], \"label\": \"bur red\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    308,
+                    120,
+                    352,
+                    190
+                ],
+                "label": "bur red"
+            },
+            {
+                "bbox_2d": [
+                    638,
+                    367,
+                    682,
+                    430
+                ],
+                "label": "bur red"
+            }
+        ],
+        "token_count": 74,
+        "raw_token_count": 90,
+        "runtime_seconds": 0.3105
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.004068626954450404,
+        "defocus_blur": 0.020464952259698185,
+        "motion_blur": 0.21184263529954228,
+        "fog_filter": 0.00034123304806407684,
+        "pixelate": 0.047543164275615946,
+        "jpeg_filter": 0.017560353833803916
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.023647051054641762,
+        "synonym": 0.20546951143831116,
+        "ata_saliency": 0.13419964000859191,
+        "fragmentation": 0.3216445460149555,
+        "character_noise": 0.06284537048943141
+    }
+}

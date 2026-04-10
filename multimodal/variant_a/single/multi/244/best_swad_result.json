@@ -1,0 +1,85 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/244",
+        "folder_id": "244",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00014902.JPEG"
+    },
+    "pareto_index": 3,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.6126883641923373,
+        "txt_attack": "homophone",
+        "txt_scale": 0.10684452896191199
+    },
+    "objectives": {
+        "iou": 0.32316,
+        "img_dist": 0.04092,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.76058,
+        "delta_m_plus": 0.57511,
+        "phi": 0.95908,
+        "swad": 0.55158
+    },
+    "l2_distance": 0.32574,
+    "original_prompt": "Identify the objects \"lizard\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "lizard": {
+            "xmin": 136,
+            "ymin": 128,
+            "xmax": 916,
+            "ymax": 543
+        },
+        "lizard_1": {
+            "xmin": 664,
+            "ymin": 167,
+            "xmax": 1022,
+            "ymax": 654
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"lizard\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [132, 238, 430, 750], \"label\": \"lizard\"},\n\t{\"bbox_2d\": [430, 217, 837, 578], \"label\": \"lizard\"},\n\t{\"bbox_2d\": [567, 388, 870, 712], \"label\": \"lizard\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    132,
+                    238,
+                    430,
+                    750
+                ],
+                "label": "lizard"
+            },
+            {
+                "bbox_2d": [
+                    430,
+                    217,
+                    837,
+                    578
+                ],
+                "label": "lizard"
+            },
+            {
+                "bbox_2d": [
+                    567,
+                    388,
+                    870,
+                    712
+                ],
+                "label": "lizard"
+            }
+        ],
+        "token_count": 108,
+        "raw_token_count": 115,
+        "runtime_seconds": 0.6022
+    }
+}

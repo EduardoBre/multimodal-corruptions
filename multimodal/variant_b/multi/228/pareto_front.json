@@ -1,0 +1,1028 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/228",
+        "folder_id": "228",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00047549.JPEG"
+    },
+    "original_prompt": "Identify the objects \"person, watercraft\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 334,
+            "ymin": 151,
+            "xmax": 344,
+            "ymax": 166
+        },
+        "person_1": {
+            "xmin": 128,
+            "ymin": 152,
+            "xmax": 161,
+            "ymax": 194
+        },
+        "person_2": {
+            "xmin": 296,
+            "ymin": 152,
+            "xmax": 307,
+            "ymax": 166
+        },
+        "person_3": {
+            "xmin": 52,
+            "ymin": 167,
+            "xmax": 92,
+            "ymax": 209
+        },
+        "person_4": {
+            "xmin": 175,
+            "ymin": 153,
+            "xmax": 210,
+            "ymax": 186
+        },
+        "person_5": {
+            "xmin": 209,
+            "ymin": 156,
+            "xmax": 238,
+            "ymax": 180
+        },
+        "person_6": {
+            "xmin": 95,
+            "ymin": 161,
+            "xmax": 114,
+            "ymax": 191
+        },
+        "person_7": {
+            "xmin": 158,
+            "ymin": 154,
+            "xmax": 183,
+            "ymax": 185
+        },
+        "person_8": {
+            "xmin": 206,
+            "ymin": 305,
+            "xmax": 263,
+            "ymax": 333
+        },
+        "person_9": {
+            "xmin": 33,
+            "ymin": 165,
+            "xmax": 54,
+            "ymax": 206
+        },
+        "watercraft": {
+            "xmin": 81,
+            "ymin": 166,
+            "xmax": 286,
+            "ymax": 206
+        },
+        "person_10": {
+            "xmin": 227,
+            "ymin": 170,
+            "xmax": 257,
+            "ymax": 198
+        },
+        "person_11": {
+            "xmin": 196,
+            "ymin": 176,
+            "xmax": 228,
+            "ymax": 198
+        }
+    },
+    "baseline_iou": 0.53747,
+    "swad_star": 0.74106,
+    "swad_star_index": 2,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 6,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.235522,
+                    "defocus_blur": 0.112407,
+                    "motion_blur": 0.059798,
+                    "fog_filter": 0.106497,
+                    "pixelate": 0.013831,
+                    "jpeg_filter": 0.090442
+                },
+                "text_corruptions": {
+                    "homophone": 0.360633,
+                    "synonym": 0.275216,
+                    "ata_saliency": 0.159322,
+                    "fragmentation": 0.058986,
+                    "character_noise": 0.01966
+                },
+                "img_budget_used": 0.618497,
+                "txt_budget_used": 0.873816,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.51958,
+                "img_dist": 0.07784,
+                "txt_dist": 0.18164,
+                "txt_sim": 0.81836
+            },
+            "swad_metrics": {
+                "iou_0": 0.53747,
+                "delta_m_plus": 0.03329,
+                "phi": 0.75466,
+                "swad": 0.02512
+            },
+            "l2_distance": 0.55589,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"h\u200d uman\u200d, w\u0430tercraft\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [66, 512, 107, 612], \"label\": \"h\u200d uman\u200d\"},\n\t{\"bbox_2d\": [185, 494, 230, 576], \"label\": \"h\u200d uman\u200d\"},\n\t{\"bbox_2d\": [270, 476, 312, 560], \"label\": \"h\u200d uman\u200d\"},\n\t{\"bbox_2d\": [312, 468, 350, 556], \"label\": \"h\u200d uman\u200d\"},\n\t{\"bbox_2d\": [350, 460, 390, 548], \"label\": \"h\u200d uman\u200d\"},\n\t{\"bbox_2d\": [390, 460, 430, 548], \"label\": \"h\u200d uman\u200d\"},\n\t{\"bbox_2d\": [430, 460, 470, 548], \"label\": \"h\u200d uman\u200d\"},\n\t{\"bbox_2d\": [470, 460, 510, 548], \"label\": \"h\u200d uman\u200d\"},\n\t{\"bbox_2d\": [510, 460, 550, 548], \"label\": \"h\u200d uman\u200d\"},\n\t{\"bbox_2d\": [666, 448, 685, 500], \"label\": \"h\u200d uman\u200d\"},\n\t{\"bbox_2d\": [595, 460, 605, 494], \"label\": \"h\u200d uman\u200d\"},\n\t{\"bbox_2d\": [410, 908, 520, 1000], \"label\": \"h\u200d uman\u200d\"},\n\t{\"bbox_2d\": [107, 512, 565, 612], \"label\": \"w\u0430tercraft\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            66,
+                            512,
+                            107,
+                            612
+                        ],
+                        "label": "h\u200d uman\u200d"
+                    },
+                    {
+                        "bbox_2d": [
+                            185,
+                            494,
+                            230,
+                            576
+                        ],
+                        "label": "h\u200d uman\u200d"
+                    },
+                    {
+                        "bbox_2d": [
+                            270,
+                            476,
+                            312,
+                            560
+                        ],
+                        "label": "h\u200d uman\u200d"
+                    },
+                    {
+                        "bbox_2d": [
+                            312,
+                            468,
+                            350,
+                            556
+                        ],
+                        "label": "h\u200d uman\u200d"
+                    },
+                    {
+                        "bbox_2d": [
+                            350,
+                            460,
+                            390,
+                            548
+                        ],
+                        "label": "h\u200d uman\u200d"
+                    },
+                    {
+                        "bbox_2d": [
+                            390,
+                            460,
+                            430,
+                            548
+                        ],
+                        "label": "h\u200d uman\u200d"
+                    },
+                    {
+                        "bbox_2d": [
+                            430,
+                            460,
+                            470,
+                            548
+                        ],
+                        "label": "h\u200d uman\u200d"
+                    },
+                    {
+                        "bbox_2d": [
+                            470,
+                            460,
+                            510,
+                            548
+                        ],
+                        "label": "h\u200d uman\u200d"
+                    },
+                    {
+                        "bbox_2d": [
+                            510,
+                            460,
+                            550,
+                            548
+                        ],
+                        "label": "h\u200d uman\u200d"
+                    },
+                    {
+                        "bbox_2d": [
+                            666,
+                            448,
+                            685,
+                            500
+                        ],
+                        "label": "h\u200d uman\u200d"
+                    },
+                    {
+                        "bbox_2d": [
+                            595,
+                            460,
+                            605,
+                            494
+                        ],
+                        "label": "h\u200d uman\u200d"
+                    },
+                    {
+                        "bbox_2d": [
+                            410,
+                            908,
+                            520,
+                            1000
+                        ],
+                        "label": "h\u200d uman\u200d"
+                    },
+                    {
+                        "bbox_2d": [
+                            107,
+                            512,
+                            565,
+                            612
+                        ],
+                        "label": "w\u0430tercraft"
+                    }
+                ],
+                "token_count": 510,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.4354
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.23552177027981538,
+                "defocus_blur": 0.11240736268185136,
+                "motion_blur": 0.05979800307919441,
+                "fog_filter": 0.10649694883121777,
+                "pixelate": 0.01383118553125683,
+                "jpeg_filter": 0.09044180958130339
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.36063265525024973,
+                "synonym": 0.27521590581972466,
+                "ata_saliency": 0.15932153907971408,
+                "fragmentation": 0.05898558880208995,
+                "character_noise": 0.019660378306478116
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.068833,
+                    "defocus_blur": 0.089305,
+                    "motion_blur": 0.160741,
+                    "fog_filter": 0.003168,
+                    "pixelate": 0.055803,
+                    "jpeg_filter": 0.020188
+                },
+                "text_corruptions": {
+                    "homophone": 0.128304,
+                    "synonym": 0.074502,
+                    "ata_saliency": 0.037822,
+                    "fragmentation": 0.040099,
+                    "character_noise": 0.025489
+                },
+                "img_budget_used": 0.398039,
+                "txt_budget_used": 0.306215,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.56124,
+                "img_dist": 0.06929,
+                "txt_dist": 0.16396,
+                "txt_sim": 0.83604
+            },
+            "swad_metrics": {
+                "iou_0": 0.53747,
+                "delta_m_plus": 0.0,
+                "phi": 0.77811,
+                "swad": 0.0
+            },
+            "l2_distance": 0.58879,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"p\u200derson, wat\u0435rcraf\u200dt\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [412, 908, 522, 1000], \"label\": \"p\u200derson\"},\n\t{\"bbox_2d\": [666, 448, 686, 500], \"label\": \"p\u200derson\"},\n\t{\"bbox_2d\": [598, 460, 612, 492], \"label\": \"p\u200derson\"},\n\t{\"bbox_2d\": [184, 500, 228, 572], \"label\": \"p\u200derson\"},\n\t{\"bbox_2d\": [108, 528, 152, 608], \"label\": \"p\u200derson\"},\n\t{\"bbox_2d\": [66, 516, 108, 608], \"label\": \"p\u200derson\"},\n\t{\"bbox_2d\": [35, 324, 50, 348], \"label\": \"p\u200derson\"},\n\t{\"bbox_2d\": [258, 472, 308, 550], \"label\": \"p\u200derson\"},\n\t{\"bbox_2d\": [308, 460, 358, 548], \"label\": \"p\u200derson\"},\n\t{\"bbox_2d\": [358, 456, 408, 540], \"label\": \"p\u200derson\"},\n\t{\"bbox_2d\": [408, 460, 458, 540], \"label\": \"p\u200derson\"},\n\t{\"bbox_2d\": [458, 460, 508, 540], \"label\": \"p\u200derson\"},\n\t{\"bbox_2d\": [128, 500, 570, 608], \"label\": \"wat\u0435rcraf\u200dt\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            412,
+                            908,
+                            522,
+                            1000
+                        ],
+                        "label": "p\u200derson"
+                    },
+                    {
+                        "bbox_2d": [
+                            666,
+                            448,
+                            686,
+                            500
+                        ],
+                        "label": "p\u200derson"
+                    },
+                    {
+                        "bbox_2d": [
+                            598,
+                            460,
+                            612,
+                            492
+                        ],
+                        "label": "p\u200derson"
+                    },
+                    {
+                        "bbox_2d": [
+                            184,
+                            500,
+                            228,
+                            572
+                        ],
+                        "label": "p\u200derson"
+                    },
+                    {
+                        "bbox_2d": [
+                            108,
+                            528,
+                            152,
+                            608
+                        ],
+                        "label": "p\u200derson"
+                    },
+                    {
+                        "bbox_2d": [
+                            66,
+                            516,
+                            108,
+                            608
+                        ],
+                        "label": "p\u200derson"
+                    },
+                    {
+                        "bbox_2d": [
+                            35,
+                            324,
+                            50,
+                            348
+                        ],
+                        "label": "p\u200derson"
+                    },
+                    {
+                        "bbox_2d": [
+                            258,
+                            472,
+                            308,
+                            550
+                        ],
+                        "label": "p\u200derson"
+                    },
+                    {
+                        "bbox_2d": [
+                            308,
+                            460,
+                            358,
+                            548
+                        ],
+                        "label": "p\u200derson"
+                    },
+                    {
+                        "bbox_2d": [
+                            358,
+                            456,
+                            408,
+                            540
+                        ],
+                        "label": "p\u200derson"
+                    },
+                    {
+                        "bbox_2d": [
+                            408,
+                            460,
+                            458,
+                            540
+                        ],
+                        "label": "p\u200derson"
+                    },
+                    {
+                        "bbox_2d": [
+                            458,
+                            460,
+                            508,
+                            540
+                        ],
+                        "label": "p\u200derson"
+                    },
+                    {
+                        "bbox_2d": [
+                            128,
+                            500,
+                            570,
+                            608
+                        ],
+                        "label": "wat\u0435rcraf\u200dt"
+                    }
+                ],
+                "token_count": 475,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.4354
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.06883331936884475,
+                "defocus_blur": 0.08930517363751612,
+                "motion_blur": 0.16074057900658936,
+                "fog_filter": 0.003168419342441296,
+                "pixelate": 0.05580330688735896,
+                "jpeg_filter": 0.020188351648606502
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.128303789076878,
+                "synonym": 0.07450178991380971,
+                "ata_saliency": 0.03782183531263206,
+                "fragmentation": 0.04009894881093811,
+                "character_noise": 0.02548854030179304
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.012316,
+                    "defocus_blur": 0.013566,
+                    "motion_blur": 0.067023,
+                    "fog_filter": 0.00156,
+                    "pixelate": 0.05313,
+                    "jpeg_filter": 0.002155
+                },
+                "text_corruptions": {
+                    "homophone": 0.188276,
+                    "synonym": 0.026588,
+                    "ata_saliency": 0.469419,
+                    "fragmentation": 0.030176,
+                    "character_noise": 0.102829
+                },
+                "img_budget_used": 0.14975,
+                "txt_budget_used": 0.817288,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.06654,
+                "txt_dist": 0.20611,
+                "txt_sim": 0.79389
+            },
+            "swad_metrics": {
+                "iou_0": 0.53747,
+                "delta_m_plus": 1.0,
+                "phi": 0.74106,
+                "swad": 0.74106
+            },
+            "l2_distance": 0.21658,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"per sn\u043e\u200d, w\u0430tercr\u0430ft\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [157, 517, 569, 610], \"label\": \"per sn\u043e\u200d, w\u0430tercr\u0430ft\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            157,
+                            517,
+                            569,
+                            610
+                        ],
+                        "label": "per sn\u043e\u200d, w\u0430tercr\u0430ft"
+                    }
+                ],
+                "token_count": 50,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.4354
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.012316066472265826,
+                "defocus_blur": 0.01356552925869648,
+                "motion_blur": 0.06702298391727686,
+                "fog_filter": 0.0015604840494275127,
+                "pixelate": 0.05312969017494189,
+                "jpeg_filter": 0.0021551232995476945
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.18827553772226138,
+                "synonym": 0.026587687683736122,
+                "ata_saliency": 0.46941888086350103,
+                "fragmentation": 0.030176323583858574,
+                "character_noise": 0.10282937647035628
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.0234,
+                    "defocus_blur": 0.004088,
+                    "motion_blur": 0.004576,
+                    "fog_filter": 0.004377,
+                    "pixelate": 0.002423,
+                    "jpeg_filter": 0.010113
+                },
+                "text_corruptions": {
+                    "homophone": 0.360606,
+                    "synonym": 0.039813,
+                    "ata_saliency": 0.078208,
+                    "fragmentation": 0.114556,
+                    "character_noise": 0.017676
+                },
+                "img_budget_used": 0.048977,
+                "txt_budget_used": 0.610859,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.5676,
+                "img_dist": 0.06657,
+                "txt_dist": 0.17058,
+                "txt_sim": 0.82942
+            },
+            "swad_metrics": {
+                "iou_0": 0.53747,
+                "delta_m_plus": 0.0,
+                "phi": 0.77421,
+                "swad": 0.0
+            },
+            "l2_distance": 0.5964,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hum\u200dan, water craft\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [66, 500, 107, 610], \"label\": \"hum\u200dan\"},\n\t{\"bbox_2d\": [107, 516, 157, 610], \"label\": \"hum\u200dan\"},\n\t{\"bbox_2d\": [188, 488, 227, 570], \"label\": \"hum\u200dan\"},\n\t{\"bbox_2d\": [267, 470, 317, 560], \"label\": \"hum\u200dan\"},\n\t{\"bbox_2d\": [357, 460, 417, 550], \"label\": \"hum\u200dan\"},\n\t{\"bbox_2d\": [427, 460, 477, 550], \"label\": \"hum\u200dan\"},\n\t{\"bbox_2d\": [477, 460, 517, 550], \"label\": \"hum\u200dan\"},\n\t{\"bbox_2d\": [517, 460, 557, 550], \"label\": \"hum\u200dan\"},\n\t{\"bbox_2d\": [667, 450, 688, 500], \"label\": \"hum\u200dan\"},\n\t{\"bbox_2d\": [597, 460, 607, 488], \"label\": \"hum\u200dan\"},\n\t{\"bbox_2d\": [417, 908, 522, 1000], \"label\": \"hum\u200dan\"},\n\t{\"bbox_2d\": [157, 516, 567, 610], \"label\": \"water craft\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            66,
+                            500,
+                            107,
+                            610
+                        ],
+                        "label": "hum\u200dan"
+                    },
+                    {
+                        "bbox_2d": [
+                            107,
+                            516,
+                            157,
+                            610
+                        ],
+                        "label": "hum\u200dan"
+                    },
+                    {
+                        "bbox_2d": [
+                            188,
+                            488,
+                            227,
+                            570
+                        ],
+                        "label": "hum\u200dan"
+                    },
+                    {
+                        "bbox_2d": [
+                            267,
+                            470,
+                            317,
+                            560
+                        ],
+                        "label": "hum\u200dan"
+                    },
+                    {
+                        "bbox_2d": [
+                            357,
+                            460,
+                            417,
+                            550
+                        ],
+                        "label": "hum\u200dan"
+                    },
+                    {
+                        "bbox_2d": [
+                            427,
+                            460,
+                            477,
+                            550
+                        ],
+                        "label": "hum\u200dan"
+                    },
+                    {
+                        "bbox_2d": [
+                            477,
+                            460,
+                            517,
+                            550
+                        ],
+                        "label": "hum\u200dan"
+                    },
+                    {
+                        "bbox_2d": [
+                            517,
+                            460,
+                            557,
+                            550
+                        ],
+                        "label": "hum\u200dan"
+                    },
+                    {
+                        "bbox_2d": [
+                            667,
+                            450,
+                            688,
+                            500
+                        ],
+                        "label": "hum\u200dan"
+                    },
+                    {
+                        "bbox_2d": [
+                            597,
+                            460,
+                            607,
+                            488
+                        ],
+                        "label": "hum\u200dan"
+                    },
+                    {
+                        "bbox_2d": [
+                            417,
+                            908,
+                            522,
+                            1000
+                        ],
+                        "label": "hum\u200dan"
+                    },
+                    {
+                        "bbox_2d": [
+                            157,
+                            516,
+                            567,
+                            610
+                        ],
+                        "label": "water craft"
+                    }
+                ],
+                "token_count": 436,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.4354
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.02340010775876363,
+                "defocus_blur": 0.004088270449895055,
+                "motion_blur": 0.00457552797071623,
+                "fog_filter": 0.004376846132720159,
+                "pixelate": 0.0024229523384407914,
+                "jpeg_filter": 0.010112810906160489
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.36060606130653633,
+                "synonym": 0.03981255829991503,
+                "ata_saliency": 0.0782084657174822,
+                "fragmentation": 0.11455643696252972,
+                "character_noise": 0.017675909333883345
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.086188,
+                    "defocus_blur": 0.01671,
+                    "motion_blur": 0.03523,
+                    "fog_filter": 0.040172,
+                    "pixelate": 0.126216,
+                    "jpeg_filter": 0.301009
+                },
+                "text_corruptions": {
+                    "homophone": 0.100472,
+                    "synonym": 0.169929,
+                    "ata_saliency": 0.188503,
+                    "fragmentation": 0.1874,
+                    "character_noise": 0.073109
+                },
+                "img_budget_used": 0.605525,
+                "txt_budget_used": 0.719413,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.62286,
+                "img_dist": 0.07084,
+                "txt_dist": 0.06688,
+                "txt_sim": 0.93312
+            },
+            "swad_metrics": {
+                "iou_0": 0.53747,
+                "delta_m_plus": 0.0,
+                "phi": 0.86702,
+                "swad": 0.0
+            },
+            "l2_distance": 0.63043,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"pe rson, w\u0430tercraft\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [412, 908, 520, 1000], \"label\": \"pe rson\"},\n\t{\"bbox_2d\": [66, 500, 108, 608], \"label\": \"pe rson\"},\n\t{\"bbox_2d\": [108, 500, 158, 608], \"label\": \"pe rson\"},\n\t{\"bbox_2d\": [188, 488, 238, 576], \"label\": \"pe rson\"},\n\t{\"bbox_2d\": [270, 476, 318, 556], \"label\": \"pe rson\"},\n\t{\"bbox_2d\": [318, 460, 368, 548], \"label\": \"pe rson\"},\n\t{\"bbox_2d\": [368, 456, 418, 548], \"label\": \"pe rson\"},\n\t{\"bbox_2d\": [418, 460, 468, 548], \"label\": \"pe rson\"},\n\t{\"bbox_2d\": [468, 460, 518, 548], \"label\": \"pe rson\"},\n\t{\"bbox_2d\": [662, 456, 688, 500], \"label\": \"pe rson\"},\n\t{\"bbox_2d\": [596, 460, 618, 492], \"label\": \"pe rson\"},\n\t{\"bbox_2d\": [158, 500, 568, 608], \"label\": \"w\u0430tercraft\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            412,
+                            908,
+                            520,
+                            1000
+                        ],
+                        "label": "pe rson"
+                    },
+                    {
+                        "bbox_2d": [
+                            66,
+                            500,
+                            108,
+                            608
+                        ],
+                        "label": "pe rson"
+                    },
+                    {
+                        "bbox_2d": [
+                            108,
+                            500,
+                            158,
+                            608
+                        ],
+                        "label": "pe rson"
+                    },
+                    {
+                        "bbox_2d": [
+                            188,
+                            488,
+                            238,
+                            576
+                        ],
+                        "label": "pe rson"
+                    },
+                    {
+                        "bbox_2d": [
+                            270,
+                            476,
+                            318,
+                            556
+                        ],
+                        "label": "pe rson"
+                    },
+                    {
+                        "bbox_2d": [
+                            318,
+                            460,
+                            368,
+                            548
+                        ],
+                        "label": "pe rson"
+                    },
+                    {
+                        "bbox_2d": [
+                            368,
+                            456,
+                            418,
+                            548
+                        ],
+                        "label": "pe rson"
+                    },
+                    {
+                        "bbox_2d": [
+                            418,
+                            460,
+                            468,
+                            548
+                        ],
+                        "label": "pe rson"
+                    },
+                    {
+                        "bbox_2d": [
+                            468,
+                            460,
+                            518,
+                            548
+                        ],
+                        "label": "pe rson"
+                    },
+                    {
+                        "bbox_2d": [
+                            662,
+                            456,
+                            688,
+                            500
+                        ],
+                        "label": "pe rson"
+                    },
+                    {
+                        "bbox_2d": [
+                            596,
+                            460,
+                            618,
+                            492
+                        ],
+                        "label": "pe rson"
+                    },
+                    {
+                        "bbox_2d": [
+                            158,
+                            500,
+                            568,
+                            608
+                        ],
+                        "label": "w\u0430tercraft"
+                    }
+                ],
+                "token_count": 427,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.4354
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.0861881688062633,
+                "defocus_blur": 0.0167095833270848,
+                "motion_blur": 0.035230188791577,
+                "fog_filter": 0.04017190313697149,
+                "pixelate": 0.12621577891463195,
+                "jpeg_filter": 0.3010089425872834
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.10047211921385273,
+                "synonym": 0.16992856459521247,
+                "ata_saliency": 0.18850295005834905,
+                "fragmentation": 0.18740001623349506,
+                "character_noise": 0.07310906555318533
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.003947,
+                    "defocus_blur": 0.002043,
+                    "motion_blur": 0.000783,
+                    "fog_filter": 0.001863,
+                    "pixelate": 0.000769,
+                    "jpeg_filter": 0.00115
+                },
+                "text_corruptions": {
+                    "homophone": 0.028832,
+                    "synonym": 0.007826,
+                    "ata_saliency": 0.098009,
+                    "fragmentation": 0.039554,
+                    "character_noise": 0.021661
+                },
+                "img_budget_used": 0.010555,
+                "txt_budget_used": 0.195881,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.59426,
+                "img_dist": 0.06642,
+                "txt_dist": 0.14512,
+                "txt_sim": 0.85488
+            },
+            "swad_metrics": {
+                "iou_0": 0.53747,
+                "delta_m_plus": 0.0,
+                "phi": 0.7981,
+                "swad": 0.0
+            },
+            "l2_distance": 0.61532,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"peraon\u200b, w\u200bat\u0435rcraft\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [414, 912, 520, 1000], \"label\": \"peraon\u200b\"},\n\t{\"bbox_2d\": [66, 500, 106, 612], \"label\": \"peraon\u200b\"},\n\t{\"bbox_2d\": [106, 512, 152, 612], \"label\": \"peraon\u200b\"},\n\t{\"bbox_2d\": [188, 488, 228, 572], \"label\": \"peraon\u200b\"},\n\t{\"bbox_2d\": [268, 476, 312, 560], \"label\": \"peraon\u200b\"},\n\t{\"bbox_2d\": [312, 468, 352, 556], \"label\": \"peraon\u200b\"},\n\t{\"bbox_2d\": [352, 468, 400, 556], \"label\": \"peraon\u200b\"},\n\t{\"bbox_2d\": [400, 468, 448, 556], \"label\": \"peraon\u200b\"},\n\t{\"bbox_2d\": [448, 468, 496, 556], \"label\": \"peraon\u200b\"},\n\t{\"bbox_2d\": [592, 468, 608, 496], \"label\": \"peraon\u200b\"},\n\t{\"bbox_2d\": [666, 450, 688, 496], \"label\": \"peraon\u200b\"},\n\t{\"bbox_2d\": [152, 512, 568, 612], \"label\": \"wat\u0435rcraft\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            414,
+                            912,
+                            520,
+                            1000
+                        ],
+                        "label": "peraon\u200b"
+                    },
+                    {
+                        "bbox_2d": [
+                            66,
+                            500,
+                            106,
+                            612
+                        ],
+                        "label": "peraon\u200b"
+                    },
+                    {
+                        "bbox_2d": [
+                            106,
+                            512,
+                            152,
+                            612
+                        ],
+                        "label": "peraon\u200b"
+                    },
+                    {
+                        "bbox_2d": [
+                            188,
+                            488,
+                            228,
+                            572
+                        ],
+                        "label": "peraon\u200b"
+                    },
+                    {
+                        "bbox_2d": [
+                            268,
+                            476,
+                            312,
+                            560
+                        ],
+                        "label": "peraon\u200b"
+                    },
+                    {
+                        "bbox_2d": [
+                            312,
+                            468,
+                            352,
+                            556
+                        ],
+                        "label": "peraon\u200b"
+                    },
+                    {
+                        "bbox_2d": [
+                            352,
+                            468,
+                            400,
+                            556
+                        ],
+                        "label": "peraon\u200b"
+                    },
+                    {
+                        "bbox_2d": [
+                            400,
+                            468,
+                            448,
+                            556
+                        ],
+                        "label": "peraon\u200b"
+                    },
+                    {
+                        "bbox_2d": [
+                            448,
+                            468,
+                            496,
+                            556
+                        ],
+                        "label": "peraon\u200b"
+                    },
+                    {
+                        "bbox_2d": [
+                            592,
+                            468,
+                            608,
+                            496
+                        ],
+                        "label": "peraon\u200b"
+                    },
+                    {
+                        "bbox_2d": [
+                            666,
+                            450,
+                            688,
+                            496
+                        ],
+                        "label": "peraon\u200b"
+                    },
+                    {
+                        "bbox_2d": [
+                            152,
+                            512,
+                            568,
+                            612
+                        ],
+                        "label": "wat\u0435rcraft"
+                    }
+                ],
+                "token_count": 438,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.4354
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.003947050817310479,
+                "defocus_blur": 0.0020427957792955365,
+                "motion_blur": 0.0007827598943384757,
+                "fog_filter": 0.0018630704779663268,
+                "pixelate": 0.000769020618313637,
+                "jpeg_filter": 0.001149837859755807
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.028831891772257773,
+                "synonym": 0.007826127443313983,
+                "ata_saliency": 0.09800874433108048,
+                "fragmentation": 0.03955368107294268,
+                "character_noise": 0.02166073207605127
+            }
+        }
+    ]
+}

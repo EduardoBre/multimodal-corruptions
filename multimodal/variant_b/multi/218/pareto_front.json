@@ -1,0 +1,536 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/218",
+        "folder_id": "218",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00033272.JPEG"
+    },
+    "original_prompt": "Identify the objects \"diaper, table\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "diaper": {
+            "xmin": 160,
+            "ymin": 232,
+            "xmax": 292,
+            "ymax": 357
+        },
+        "diaper_1": {
+            "xmin": 98,
+            "ymin": 231,
+            "xmax": 162,
+            "ymax": 357
+        },
+        "table": {
+            "xmin": 0,
+            "ymin": 71,
+            "xmax": 85,
+            "ymax": 247
+        }
+    },
+    "baseline_iou": 0.84588,
+    "swad_star": 0.6724,
+    "swad_star_index": 5,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 6,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.168919,
+                    "defocus_blur": 0.117649,
+                    "motion_blur": 0.163925,
+                    "fog_filter": 0.10411,
+                    "pixelate": 0.169683,
+                    "jpeg_filter": 0.078347
+                },
+                "text_corruptions": {
+                    "homophone": 0.077182,
+                    "synonym": 0.047662,
+                    "ata_saliency": 0.072214,
+                    "fragmentation": 0.077593,
+                    "character_noise": 0.306295
+                },
+                "img_budget_used": 0.802633,
+                "txt_budget_used": 0.580946,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.8409,
+                "img_dist": 0.10896,
+                "txt_dist": 0.04268,
+                "txt_sim": 0.95732
+            },
+            "swad_metrics": {
+                "iou_0": 0.84588,
+                "delta_m_plus": 0.00589,
+                "phi": 0.85301,
+                "swad": 0.00502
+            },
+            "l2_distance": 0.849,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"diaper\u200d, t\u0430ble\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [268, 478, 408, 718], \"label\": \"diaper\u200d\"},\n\t{\"bbox_2d\": [468, 478, 778, 718], \"label\": \"diaper\u200d\"},\n\t{\"bbox_2d\": [0, 138, 220, 500], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            268,
+                            478,
+                            408,
+                            718
+                        ],
+                        "label": "diaper\u200d"
+                    },
+                    {
+                        "bbox_2d": [
+                            468,
+                            478,
+                            778,
+                            718
+                        ],
+                        "label": "diaper\u200d"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            138,
+                            220,
+                            500
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 136,
+                "runtime_seconds": 0.4535
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.16891913060965036,
+                "defocus_blur": 0.11764852664387532,
+                "motion_blur": 0.16392503533750713,
+                "fog_filter": 0.10411047233180618,
+                "pixelate": 0.16968324460439502,
+                "jpeg_filter": 0.07834668447503798
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.07718152016083658,
+                "synonym": 0.04766249430775985,
+                "ata_saliency": 0.07221356182637868,
+                "fragmentation": 0.07759264724325084,
+                "character_noise": 0.3062953491375633
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.009493,
+                    "defocus_blur": 0.029374,
+                    "motion_blur": 0.007523,
+                    "fog_filter": 0.00753,
+                    "pixelate": 0.003942,
+                    "jpeg_filter": 0.015437
+                },
+                "text_corruptions": {
+                    "homophone": 0.007506,
+                    "synonym": 0.047495,
+                    "ata_saliency": 0.003829,
+                    "fragmentation": 0.006848,
+                    "character_noise": 0.014944
+                },
+                "img_budget_used": 0.0733,
+                "txt_budget_used": 0.080621,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.90267,
+                "img_dist": 0.08664,
+                "txt_dist": 0.08581,
+                "txt_sim": 0.91419
+            },
+            "swad_metrics": {
+                "iou_0": 0.84588,
+                "delta_m_plus": 0.0,
+                "phi": 0.83498,
+                "swad": 0.0
+            },
+            "l2_distance": 0.91087,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"diap\u0435r, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [268, 472, 416, 718], \"label\": \"diap\u0435r\"},\n\t{\"bbox_2d\": [432, 472, 780, 718], \"label\": \"diap\u0435r\"},\n\t{\"bbox_2d\": [0, 141, 220, 488], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            268,
+                            472,
+                            416,
+                            718
+                        ],
+                        "label": "diap\u0435r"
+                    },
+                    {
+                        "bbox_2d": [
+                            432,
+                            472,
+                            780,
+                            718
+                        ],
+                        "label": "diap\u0435r"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            141,
+                            220,
+                            488
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 136,
+                "runtime_seconds": 0.4535
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.009493446225566363,
+                "defocus_blur": 0.02937396218133861,
+                "motion_blur": 0.007523351275347174,
+                "fog_filter": 0.007530409412838559,
+                "pixelate": 0.003941517327911017,
+                "jpeg_filter": 0.015436918353047406
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.007505738612447369,
+                "synonym": 0.04749500260246813,
+                "ata_saliency": 0.003829147966150524,
+                "fragmentation": 0.006847993871821898,
+                "character_noise": 0.014943547960652986
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.184462,
+                    "defocus_blur": 0.026652,
+                    "motion_blur": 0.120525,
+                    "fog_filter": 0.022422,
+                    "pixelate": 0.004971,
+                    "jpeg_filter": 0.210962
+                },
+                "text_corruptions": {
+                    "homophone": 0.04605,
+                    "synonym": 0.002004,
+                    "ata_saliency": 0.123958,
+                    "fragmentation": 0.029411,
+                    "character_noise": 0.011712
+                },
+                "img_budget_used": 0.569994,
+                "txt_budget_used": 0.213134,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.85061,
+                "img_dist": 0.0922,
+                "txt_dist": 0.05669,
+                "txt_sim": 0.94331
+            },
+            "swad_metrics": {
+                "iou_0": 0.84588,
+                "delta_m_plus": 0.0,
+                "phi": 0.85634,
+                "swad": 0.0
+            },
+            "l2_distance": 0.85747,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"diaper, t\u200bable\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [450, 478, 778, 716], \"label\": \"diaper\"},\n\t{\"bbox_2d\": [268, 478, 408, 716], \"label\": \"diaper\"},\n\t{\"bbox_2d\": [0, 148, 220, 480], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            450,
+                            478,
+                            778,
+                            716
+                        ],
+                        "label": "diaper"
+                    },
+                    {
+                        "bbox_2d": [
+                            268,
+                            478,
+                            408,
+                            716
+                        ],
+                        "label": "diaper"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            148,
+                            220,
+                            480
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 136,
+                "runtime_seconds": 0.4535
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.18446150310967843,
+                "defocus_blur": 0.026651879871566152,
+                "motion_blur": 0.12052483010857443,
+                "fog_filter": 0.02242239691588417,
+                "pixelate": 0.004970666642621606,
+                "jpeg_filter": 0.21096233668757594
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.04604953778338516,
+                "synonym": 0.002003735295692791,
+                "ata_saliency": 0.12395813303591813,
+                "fragmentation": 0.029410668158720184,
+                "character_noise": 0.011712213213883244
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.063482,
+                    "defocus_blur": 0.011829,
+                    "motion_blur": 0.011693,
+                    "fog_filter": 0.01174,
+                    "pixelate": 0.007492,
+                    "jpeg_filter": 0.008954
+                },
+                "text_corruptions": {
+                    "homophone": 0.083855,
+                    "synonym": 0.029223,
+                    "ata_saliency": 0.081432,
+                    "fragmentation": 0.600512,
+                    "character_noise": 0.203619
+                },
+                "img_budget_used": 0.115191,
+                "txt_budget_used": 0.99864,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.34897,
+                "img_dist": 0.08778,
+                "txt_dist": 0.17398,
+                "txt_sim": 0.82602
+            },
+            "swad_metrics": {
+                "iou_0": 0.84588,
+                "delta_m_plus": 0.58745,
+                "phi": 0.75351,
+                "swad": 0.44265
+            },
+            "l2_distance": 0.39969,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"d\u0456\u200da\u200d\u0440er, t\u0430ble\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 141, 220, 500], \"label\": \"table\"},\n\t{\"bbox_2d\": [568, 37, 1000, 600], \"label\": \"d\u0456\u200da\u200d\u0440er\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            141,
+                            220,
+                            500
+                        ],
+                        "label": "table"
+                    },
+                    {
+                        "bbox_2d": [
+                            568,
+                            37,
+                            1000,
+                            600
+                        ],
+                        "label": "d\u0456\u200da\u200d\u0440er"
+                    }
+                ],
+                "token_count": 78,
+                "raw_token_count": 136,
+                "runtime_seconds": 0.4535
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.06348180053771635,
+                "defocus_blur": 0.011829461413412724,
+                "motion_blur": 0.011693422390779107,
+                "fog_filter": 0.011739813673971936,
+                "pixelate": 0.007491804435431058,
+                "jpeg_filter": 0.0089543318446466
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.08385455579052967,
+                "synonym": 0.029222936044451055,
+                "ata_saliency": 0.08143200399497812,
+                "fragmentation": 0.6005116000312013,
+                "character_noise": 0.20361923952677824
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.18299,
+                    "defocus_blur": 0.078953,
+                    "motion_blur": 0.135938,
+                    "fog_filter": 0.049854,
+                    "pixelate": 0.229358,
+                    "jpeg_filter": 0.006349
+                },
+                "text_corruptions": {
+                    "homophone": 0.065715,
+                    "synonym": 0.056933,
+                    "ata_saliency": 0.215126,
+                    "fragmentation": 0.015499,
+                    "character_noise": 0.046304
+                },
+                "img_budget_used": 0.683441,
+                "txt_budget_used": 0.399577,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.89398,
+                "img_dist": 0.0964,
+                "txt_dist": 0.03356,
+                "txt_sim": 0.96644
+            },
+            "swad_metrics": {
+                "iou_0": 0.84588,
+                "delta_m_plus": 0.0,
+                "phi": 0.87328,
+                "swad": 0.0
+            },
+            "l2_distance": 0.89979,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"diaper, tabl\u0435\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [438, 474, 780, 718], \"label\": \"diaper\"},\n\t{\"bbox_2d\": [268, 474, 416, 718], \"label\": \"diaper\"},\n\t{\"bbox_2d\": [0, 137, 230, 500], \"label\": \"tabl\u0435\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            438,
+                            474,
+                            780,
+                            718
+                        ],
+                        "label": "diaper"
+                    },
+                    {
+                        "bbox_2d": [
+                            268,
+                            474,
+                            416,
+                            718
+                        ],
+                        "label": "diaper"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            137,
+                            230,
+                            500
+                        ],
+                        "label": "tabl\u0435"
+                    }
+                ],
+                "token_count": 106,
+                "raw_token_count": 136,
+                "runtime_seconds": 0.4535
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.1829897210971371,
+                "defocus_blur": 0.07895268569542734,
+                "motion_blur": 0.13593845615199984,
+                "fog_filter": 0.049854169019972264,
+                "pixelate": 0.22935752976115897,
+                "jpeg_filter": 0.006348668012872334
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.06571526624913199,
+                "synonym": 0.05693252168906568,
+                "ata_saliency": 0.21512604661581924,
+                "fragmentation": 0.015498769945550146,
+                "character_noise": 0.04630391629088158
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.033244,
+                    "defocus_blur": 0.041641,
+                    "motion_blur": 0.029453,
+                    "fog_filter": 0.042328,
+                    "pixelate": 0.022043,
+                    "jpeg_filter": 0.079552
+                },
+                "text_corruptions": {
+                    "homophone": 0.059871,
+                    "synonym": 0.130567,
+                    "ata_saliency": 0.278065,
+                    "fragmentation": 0.005897,
+                    "character_noise": 0.509156
+                },
+                "img_budget_used": 0.248262,
+                "txt_budget_used": 0.983555,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.09402,
+                "txt_dist": 0.25782,
+                "txt_sim": 0.74218
+            },
+            "swad_metrics": {
+                "iou_0": 0.84588,
+                "delta_m_plus": 1.0,
+                "phi": 0.6724,
+                "swad": 0.6724
+            },
+            "l2_distance": 0.27443,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"n\u200da\u200b\u0440p\u0443\u200b, tabl\u0435\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 147, 236, 500], \"label\": \"n\u200da\u200b\u0440p\u0443\u200b, tabl\u0435\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            147,
+                            236,
+                            500
+                        ],
+                        "label": "n\u200da\u200b\u0440p\u0443\u200b, tabl\u0435"
+                    }
+                ],
+                "token_count": 49,
+                "raw_token_count": 136,
+                "runtime_seconds": 0.4535
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.033244184877543104,
+                "defocus_blur": 0.04164095555695317,
+                "motion_blur": 0.029452629095551852,
+                "fog_filter": 0.04232812940020189,
+                "pixelate": 0.02204310882374955,
+                "jpeg_filter": 0.07955249988794211
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.0598710833717249,
+                "synonym": 0.13056650743913703,
+                "ata_saliency": 0.2780647197207737,
+                "fragmentation": 0.005897118505865354,
+                "character_noise": 0.5091560118461013
+            }
+        }
+    ]
+}

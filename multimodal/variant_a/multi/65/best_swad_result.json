@@ -1,0 +1,82 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/65",
+        "folder_id": "65",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00025619.JPEG"
+    },
+    "pareto_index": 0,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "motion_blur",
+        "img_scale": 0.3997956906557353,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.647636093318414
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.05965,
+        "txt_dist": 0.23444,
+        "txt_sim": 0.76556
+    },
+    "swad_metrics": {
+        "iou_0": 0.55231,
+        "delta_m_plus": 1.0,
+        "phi": 0.71989,
+        "swad": 0.71989
+    },
+    "l2_distance": 0.24191,
+    "original_prompt": "Identify the objects \"axe, chair, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "axe": {
+            "xmin": 151,
+            "ymin": 252,
+            "xmax": 190,
+            "ymax": 321
+        },
+        "person": {
+            "xmin": 136,
+            "ymin": 33,
+            "xmax": 292,
+            "ymax": 457
+        },
+        "chair": {
+            "xmin": 297,
+            "ymin": 161,
+            "xmax": 318,
+            "ymax": 209
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"aze, cahir, pehson\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [378, 64, 764, 911], \"label\": \"aze, cahir, pehson\"},\n\t{\"bbox_2d\": [464, 258, 798, 452], \"label\": \"aze, cahir, pehson\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    378,
+                    64,
+                    764,
+                    911
+                ],
+                "label": "aze, cahir, pehson"
+            },
+            {
+                "bbox_2d": [
+                    464,
+                    258,
+                    798,
+                    452
+                ],
+                "label": "aze, cahir, pehson"
+            }
+        ],
+        "token_count": 85,
+        "raw_token_count": 172,
+        "runtime_seconds": 0.5771
+    }
+}

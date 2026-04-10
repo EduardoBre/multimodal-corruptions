@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/124",
+        "folder_id": "124",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00000018.JPEG"
+    },
+    "pareto_index": 3,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.9316177058680379,
+        "txt_attack": "homophone",
+        "txt_scale": 0.9948250792623392
+    },
+    "objectives": {
+        "iou": 0.27438,
+        "img_dist": 0.06529,
+        "txt_dist": 0.14994,
+        "txt_sim": 0.85006
+    },
+    "swad_metrics": {
+        "iou_0": 0.67878,
+        "delta_m_plus": 0.59577,
+        "phi": 0.79456,
+        "swad": 0.47338
+    },
+    "l2_distance": 0.31942,
+    "original_prompt": "Identify the objects \"microphone, person, sunglasses\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 7,
+            "ymin": 32,
+            "xmax": 492,
+            "ymax": 332
+        },
+        "sunglasses": {
+            "xmin": 151,
+            "ymin": 75,
+            "xmax": 303,
+            "ymax": 137
+        },
+        "microphone": {
+            "xmin": 267,
+            "ymin": 76,
+            "xmax": 473,
+            "ymax": 332
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"microphone, purse on, sun glasses\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [552, 340, 658, 523], \"label\": \"microphone\"},\n\t{\"bbox_2d\": [758, 227, 852, 340], \"label\": \"microphone\"},\n\t{\"bbox_2d\": [318, 240, 588, 390], \"label\": \"sun glasses\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    552,
+                    340,
+                    658,
+                    523
+                ],
+                "label": "microphone"
+            },
+            {
+                "bbox_2d": [
+                    758,
+                    227,
+                    852,
+                    340
+                ],
+                "label": "microphone"
+            },
+            {
+                "bbox_2d": [
+                    318,
+                    240,
+                    588,
+                    390
+                ],
+                "label": "sun glasses"
+            }
+        ],
+        "token_count": 108,
+        "raw_token_count": 150,
+        "runtime_seconds": 0.4918
+    }
+}

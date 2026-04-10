@@ -1,0 +1,118 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/15",
+        "folder_id": "15",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00002393.JPEG"
+    },
+    "pareto_index": 8,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.863144940280058,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6678992108124702
+    },
+    "objectives": {
+        "iou": 0.31562,
+        "img_dist": 0.09291,
+        "txt_dist": 0.15445,
+        "txt_sim": 0.84555
+    },
+    "swad_metrics": {
+        "iou_0": 0.61276,
+        "delta_m_plus": 0.48492,
+        "phi": 0.76699,
+        "swad": 0.37193
+    },
+    "l2_distance": 0.36346,
+    "original_prompt": "Identify the objects \"chair, person, table, tape player\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 0,
+            "ymin": 25,
+            "xmax": 226,
+            "ymax": 468
+        },
+        "table": {
+            "xmin": 230,
+            "ymin": 331,
+            "xmax": 342,
+            "ymax": 468
+        },
+        "table_1": {
+            "xmin": 276,
+            "ymin": 326,
+            "xmax": 394,
+            "ymax": 498
+        },
+        "tape player": {
+            "xmin": 297,
+            "ymin": 356,
+            "xmax": 394,
+            "ymax": 425
+        },
+        "tape player_1": {
+            "xmin": 286,
+            "ymin": 330,
+            "xmax": 394,
+            "ymax": 360
+        },
+        "chair": {
+            "xmin": 0,
+            "ymin": 406,
+            "xmax": 155,
+            "ymax": 498
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"chair, person, tay bul, tape playa\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [718, 788, 999, 1000], \"label\": \"chair\"},\n\t{\"bbox_2d\": [0, 50, 530, 900], \"label\": \"person\"},\n\t{\"bbox_2d\": [188, 492, 338, 588], \"label\": \"tay bul\"},\n\t{\"bbox_2d\": [360, 672, 628, 872], \"label\": \"tape playa\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    718,
+                    788,
+                    999,
+                    1000
+                ],
+                "label": "chair"
+            },
+            {
+                "bbox_2d": [
+                    0,
+                    50,
+                    530,
+                    900
+                ],
+                "label": "person"
+            },
+            {
+                "bbox_2d": [
+                    188,
+                    492,
+                    338,
+                    588
+                ],
+                "label": "tay bul"
+            },
+            {
+                "bbox_2d": [
+                    360,
+                    672,
+                    628,
+                    872
+                ],
+                "label": "tape playa"
+            }
+        ],
+        "token_count": 139,
+        "raw_token_count": 172,
+        "runtime_seconds": 0.735
+    }
+}

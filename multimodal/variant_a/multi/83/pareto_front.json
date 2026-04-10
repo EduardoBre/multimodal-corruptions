@@ -1,0 +1,831 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/83",
+        "folder_id": "83",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00013471.JPEG"
+    },
+    "original_prompt": "Identify the objects \"cream, soap dispenser\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "cream": {
+            "xmin": 36,
+            "ymin": 74,
+            "xmax": 128,
+            "ymax": 285
+        },
+        "soap dispenser": {
+            "xmin": 36,
+            "ymin": 75,
+            "xmax": 125,
+            "ymax": 283
+        },
+        "soap dispenser_1": {
+            "xmin": 135,
+            "ymin": 76,
+            "xmax": 224,
+            "ymax": 287
+        },
+        "cream_1": {
+            "xmin": 138,
+            "ymin": 76,
+            "xmax": 226,
+            "ymax": 287
+        },
+        "cream_2": {
+            "xmin": 233,
+            "ymin": 77,
+            "xmax": 328,
+            "ymax": 293
+        },
+        "soap dispenser_2": {
+            "xmin": 234,
+            "ymin": 76,
+            "xmax": 330,
+            "ymax": 292
+        }
+    },
+    "baseline_iou": 0.90597,
+    "swad_star": 0.77331,
+    "swad_star_index": 10,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 6,
+    "total_evaluations": 165,
+    "skipped_evaluations": 45,
+    "n_solutions": 11,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.018153363333776373,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.24927259019092207
+            },
+            "objectives": {
+                "iou": 0.41929,
+                "img_dist": 0.03349,
+                "txt_dist": 0.19798,
+                "txt_sim": 0.80202
+            },
+            "swad_metrics": {
+                "iou_0": 0.90597,
+                "delta_m_plus": 0.53719,
+                "phi": 0.77516,
+                "swad": 0.41641
+            },
+            "l2_distance": 0.46489,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"c\u200dre\u200bam\u200d, soap\u200d d\u0456\u200ds\u200b\u0440\u0435ns\u0435r\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [100, 200, 340, 790], \"label\": \"cream, soap disperser\"},\n\t{\"bbox_2d\": [360, 200, 600, 790], \"label\": \"cream, soap disperser\"},\n\t{\"bbox_2d\": [630, 200, 870, 790], \"label\": \"cream, soap disperser\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            100,
+                            200,
+                            340,
+                            790
+                        ],
+                        "label": "cream, soap disperser"
+                    },
+                    {
+                        "bbox_2d": [
+                            360,
+                            200,
+                            600,
+                            790
+                        ],
+                        "label": "cream, soap disperser"
+                    },
+                    {
+                        "bbox_2d": [
+                            630,
+                            200,
+                            870,
+                            790
+                        ],
+                        "label": "cream, soap disperser"
+                    }
+                ],
+                "token_count": 117,
+                "raw_token_count": 209,
+                "runtime_seconds": 0.7091
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.01779778079639127,
+                "txt_attack": "homophone",
+                "txt_scale": 0.1284025875851289
+            },
+            "objectives": {
+                "iou": 0.82976,
+                "img_dist": 0.03349,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.90597,
+                "delta_m_plus": 0.08412,
+                "phi": 0.96651,
+                "swad": 0.0813
+            },
+            "l2_distance": 0.83044,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cream, soap dispenser\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [100, 200, 340, 790], \"label\": \"cream\"},\n\t{\"bbox_2d\": [360, 200, 600, 790], \"label\": \"cream\"},\n\t{\"bbox_2d\": [630, 200, 870, 790], \"label\": \"cream\"},\n\t{\"bbox_2d\": [100, 200, 340, 790], \"label\": \"soap dispenser\"},\n\t{\"bbox_2d\": [360, 200, 600, 790], \"label\": \"soap dispenser\"},\n\t{\"bbox_2d\": [630, 200, 870, 790], \"label\": \"soap dispenser\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            100,
+                            200,
+                            340,
+                            790
+                        ],
+                        "label": "cream"
+                    },
+                    {
+                        "bbox_2d": [
+                            360,
+                            200,
+                            600,
+                            790
+                        ],
+                        "label": "cream"
+                    },
+                    {
+                        "bbox_2d": [
+                            630,
+                            200,
+                            870,
+                            790
+                        ],
+                        "label": "cream"
+                    },
+                    {
+                        "bbox_2d": [
+                            100,
+                            200,
+                            340,
+                            790
+                        ],
+                        "label": "soap dispenser"
+                    },
+                    {
+                        "bbox_2d": [
+                            360,
+                            200,
+                            600,
+                            790
+                        ],
+                        "label": "soap dispenser"
+                    },
+                    {
+                        "bbox_2d": [
+                            630,
+                            200,
+                            870,
+                            790
+                        ],
+                        "label": "soap dispenser"
+                    }
+                ],
+                "token_count": 207,
+                "raw_token_count": 208,
+                "runtime_seconds": 0.6863
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.06836199843902974,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.24927259019092207
+            },
+            "objectives": {
+                "iou": 0.89577,
+                "img_dist": 0.02999,
+                "txt_dist": 0.16088,
+                "txt_sim": 0.83912
+            },
+            "swad_metrics": {
+                "iou_0": 0.90597,
+                "delta_m_plus": 0.01126,
+                "phi": 0.81395,
+                "swad": 0.00916
+            },
+            "l2_distance": 0.9106,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cr\u200be\u0430m, s\u043e\u0430\u0440 dis\u200bpens\u200be\u200br\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [87, 203, 347, 790], \"label\": \"cr\u200be\u0430m, s\u043e\u0430\u0440 dis\u200bpens\u200be\u200br\"},\n\t{\"bbox_2d\": [370, 203, 630, 790], \"label\": \"cr\u200be\u0430m, s\u043e\u0430\u0440 dis\u200bpens\u200be\u200br\"},\n\t{\"bbox_2d\": [630, 203, 900, 790], \"label\": \"cr\u200be\u0430m, s\u043e\u0430\u0440 dis\u200bpens\u200be\u200br\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            87,
+                            203,
+                            347,
+                            790
+                        ],
+                        "label": "cr\u200be\u0430m, s\u043e\u0430\u0440 dis\u200bpens\u200be\u200br"
+                    },
+                    {
+                        "bbox_2d": [
+                            370,
+                            203,
+                            630,
+                            790
+                        ],
+                        "label": "cr\u200be\u0430m, s\u043e\u0430\u0440 dis\u200bpens\u200be\u200br"
+                    },
+                    {
+                        "bbox_2d": [
+                            630,
+                            203,
+                            900,
+                            790
+                        ],
+                        "label": "cr\u200be\u0430m, s\u043e\u0430\u0440 dis\u200bpens\u200be\u200br"
+                    }
+                ],
+                "token_count": 152,
+                "raw_token_count": 206,
+                "runtime_seconds": 0.7414
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.0004291458209917543,
+                "txt_attack": "homophone",
+                "txt_scale": 0.3274059080290541
+            },
+            "objectives": {
+                "iou": 0.82976,
+                "img_dist": 0.03349,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.90597,
+                "delta_m_plus": 0.08412,
+                "phi": 0.96651,
+                "swad": 0.0813
+            },
+            "l2_distance": 0.83044,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cream, soap dispenser\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [100, 200, 340, 790], \"label\": \"cream\"},\n\t{\"bbox_2d\": [360, 200, 600, 790], \"label\": \"cream\"},\n\t{\"bbox_2d\": [630, 200, 870, 790], \"label\": \"cream\"},\n\t{\"bbox_2d\": [100, 200, 340, 790], \"label\": \"soap dispenser\"},\n\t{\"bbox_2d\": [360, 200, 600, 790], \"label\": \"soap dispenser\"},\n\t{\"bbox_2d\": [630, 200, 870, 790], \"label\": \"soap dispenser\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            100,
+                            200,
+                            340,
+                            790
+                        ],
+                        "label": "cream"
+                    },
+                    {
+                        "bbox_2d": [
+                            360,
+                            200,
+                            600,
+                            790
+                        ],
+                        "label": "cream"
+                    },
+                    {
+                        "bbox_2d": [
+                            630,
+                            200,
+                            870,
+                            790
+                        ],
+                        "label": "cream"
+                    },
+                    {
+                        "bbox_2d": [
+                            100,
+                            200,
+                            340,
+                            790
+                        ],
+                        "label": "soap dispenser"
+                    },
+                    {
+                        "bbox_2d": [
+                            360,
+                            200,
+                            600,
+                            790
+                        ],
+                        "label": "soap dispenser"
+                    },
+                    {
+                        "bbox_2d": [
+                            630,
+                            200,
+                            870,
+                            790
+                        ],
+                        "label": "soap dispenser"
+                    }
+                ],
+                "token_count": 207,
+                "raw_token_count": 208,
+                "runtime_seconds": 0.6583
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.014457170204526103,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2485602239982031
+            },
+            "objectives": {
+                "iou": 0.91153,
+                "img_dist": 0.02828,
+                "txt_dist": 0.04332,
+                "txt_sim": 0.95668
+            },
+            "swad_metrics": {
+                "iou_0": 0.90597,
+                "delta_m_plus": 0.0,
+                "phi": 0.92963,
+                "swad": 0.0
+            },
+            "l2_distance": 0.913,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"creme, soap dispenser\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [92, 208, 352, 792], \"label\": \"creme, soap dispenser\"},\n\t{\"bbox_2d\": [370, 214, 630, 792], \"label\": \"creme, soap dispenser\"},\n\t{\"bbox_2d\": [630, 214, 900, 792], \"label\": \"creme, soap dispenser\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            92,
+                            208,
+                            352,
+                            792
+                        ],
+                        "label": "creme, soap dispenser"
+                    },
+                    {
+                        "bbox_2d": [
+                            370,
+                            214,
+                            630,
+                            792
+                        ],
+                        "label": "creme, soap dispenser"
+                    },
+                    {
+                        "bbox_2d": [
+                            630,
+                            214,
+                            900,
+                            792
+                        ],
+                        "label": "creme, soap dispenser"
+                    }
+                ],
+                "token_count": 116,
+                "raw_token_count": 208,
+                "runtime_seconds": 0.6583
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.0007267106192251557,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.2045330975195776
+            },
+            "objectives": {
+                "iou": 0.82976,
+                "img_dist": 0.03349,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.90597,
+                "delta_m_plus": 0.08412,
+                "phi": 0.96651,
+                "swad": 0.0813
+            },
+            "l2_distance": 0.83044,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cream, soap dispenser\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [100, 200, 340, 790], \"label\": \"cream\"},\n\t{\"bbox_2d\": [360, 200, 600, 790], \"label\": \"cream\"},\n\t{\"bbox_2d\": [630, 200, 870, 790], \"label\": \"cream\"},\n\t{\"bbox_2d\": [100, 200, 340, 790], \"label\": \"soap dispenser\"},\n\t{\"bbox_2d\": [360, 200, 600, 790], \"label\": \"soap dispenser\"},\n\t{\"bbox_2d\": [630, 200, 870, 790], \"label\": \"soap dispenser\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            100,
+                            200,
+                            340,
+                            790
+                        ],
+                        "label": "cream"
+                    },
+                    {
+                        "bbox_2d": [
+                            360,
+                            200,
+                            600,
+                            790
+                        ],
+                        "label": "cream"
+                    },
+                    {
+                        "bbox_2d": [
+                            630,
+                            200,
+                            870,
+                            790
+                        ],
+                        "label": "cream"
+                    },
+                    {
+                        "bbox_2d": [
+                            100,
+                            200,
+                            340,
+                            790
+                        ],
+                        "label": "soap dispenser"
+                    },
+                    {
+                        "bbox_2d": [
+                            360,
+                            200,
+                            600,
+                            790
+                        ],
+                        "label": "soap dispenser"
+                    },
+                    {
+                        "bbox_2d": [
+                            630,
+                            200,
+                            870,
+                            790
+                        ],
+                        "label": "soap dispenser"
+                    }
+                ],
+                "token_count": 207,
+                "raw_token_count": 208,
+                "runtime_seconds": 0.6583
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.016904366327037845,
+                "txt_attack": "homophone",
+                "txt_scale": 0.08097343317181763
+            },
+            "objectives": {
+                "iou": 0.82976,
+                "img_dist": 0.03349,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.90597,
+                "delta_m_plus": 0.08412,
+                "phi": 0.96651,
+                "swad": 0.0813
+            },
+            "l2_distance": 0.83044,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cream, soap dispenser\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [100, 200, 340, 790], \"label\": \"cream\"},\n\t{\"bbox_2d\": [360, 200, 600, 790], \"label\": \"cream\"},\n\t{\"bbox_2d\": [630, 200, 870, 790], \"label\": \"cream\"},\n\t{\"bbox_2d\": [100, 200, 340, 790], \"label\": \"soap dispenser\"},\n\t{\"bbox_2d\": [360, 200, 600, 790], \"label\": \"soap dispenser\"},\n\t{\"bbox_2d\": [630, 200, 870, 790], \"label\": \"soap dispenser\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            100,
+                            200,
+                            340,
+                            790
+                        ],
+                        "label": "cream"
+                    },
+                    {
+                        "bbox_2d": [
+                            360,
+                            200,
+                            600,
+                            790
+                        ],
+                        "label": "cream"
+                    },
+                    {
+                        "bbox_2d": [
+                            630,
+                            200,
+                            870,
+                            790
+                        ],
+                        "label": "cream"
+                    },
+                    {
+                        "bbox_2d": [
+                            100,
+                            200,
+                            340,
+                            790
+                        ],
+                        "label": "soap dispenser"
+                    },
+                    {
+                        "bbox_2d": [
+                            360,
+                            200,
+                            600,
+                            790
+                        ],
+                        "label": "soap dispenser"
+                    },
+                    {
+                        "bbox_2d": [
+                            630,
+                            200,
+                            870,
+                            790
+                        ],
+                        "label": "soap dispenser"
+                    }
+                ],
+                "token_count": 207,
+                "raw_token_count": 208,
+                "runtime_seconds": 0.6583
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.016904366327037845,
+                "txt_attack": "homophone",
+                "txt_scale": 0.07649305964450906
+            },
+            "objectives": {
+                "iou": 0.82976,
+                "img_dist": 0.03349,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.90597,
+                "delta_m_plus": 0.08412,
+                "phi": 0.96651,
+                "swad": 0.0813
+            },
+            "l2_distance": 0.83044,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cream, soap dispenser\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [100, 200, 340, 790], \"label\": \"cream\"},\n\t{\"bbox_2d\": [360, 200, 600, 790], \"label\": \"cream\"},\n\t{\"bbox_2d\": [630, 200, 870, 790], \"label\": \"cream\"},\n\t{\"bbox_2d\": [100, 200, 340, 790], \"label\": \"soap dispenser\"},\n\t{\"bbox_2d\": [360, 200, 600, 790], \"label\": \"soap dispenser\"},\n\t{\"bbox_2d\": [630, 200, 870, 790], \"label\": \"soap dispenser\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            100,
+                            200,
+                            340,
+                            790
+                        ],
+                        "label": "cream"
+                    },
+                    {
+                        "bbox_2d": [
+                            360,
+                            200,
+                            600,
+                            790
+                        ],
+                        "label": "cream"
+                    },
+                    {
+                        "bbox_2d": [
+                            630,
+                            200,
+                            870,
+                            790
+                        ],
+                        "label": "cream"
+                    },
+                    {
+                        "bbox_2d": [
+                            100,
+                            200,
+                            340,
+                            790
+                        ],
+                        "label": "soap dispenser"
+                    },
+                    {
+                        "bbox_2d": [
+                            360,
+                            200,
+                            600,
+                            790
+                        ],
+                        "label": "soap dispenser"
+                    },
+                    {
+                        "bbox_2d": [
+                            630,
+                            200,
+                            870,
+                            790
+                        ],
+                        "label": "soap dispenser"
+                    }
+                ],
+                "token_count": 207,
+                "raw_token_count": 208,
+                "runtime_seconds": 0.7195
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.018820348357008743,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.2615581575625241
+            },
+            "objectives": {
+                "iou": 0.89771,
+                "img_dist": 0.02836,
+                "txt_dist": 0.11145,
+                "txt_sim": 0.88855
+            },
+            "swad_metrics": {
+                "iou_0": 0.90597,
+                "delta_m_plus": 0.00912,
+                "phi": 0.86335,
+                "swad": 0.00787
+            },
+            "l2_distance": 0.90505,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"crema, soap disepnser\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [88, 200, 358, 792], \"label\": \"crema, soap disepnser\"},\n\t{\"bbox_2d\": [364, 200, 632, 792], \"label\": \"crema, soap disepnser\"},\n\t{\"bbox_2d\": [636, 200, 908, 792], \"label\": \"crema, soap disepnser\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            88,
+                            200,
+                            358,
+                            792
+                        ],
+                        "label": "crema, soap disepnser"
+                    },
+                    {
+                        "bbox_2d": [
+                            364,
+                            200,
+                            632,
+                            792
+                        ],
+                        "label": "crema, soap disepnser"
+                    },
+                    {
+                        "bbox_2d": [
+                            636,
+                            200,
+                            908,
+                            792
+                        ],
+                        "label": "crema, soap disepnser"
+                    }
+                ],
+                "token_count": 125,
+                "raw_token_count": 208,
+                "runtime_seconds": 0.7195
+            }
+        },
+        {
+            "index": 9,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.04884514181135065,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.4417317805892605
+            },
+            "objectives": {
+                "iou": 0.87277,
+                "img_dist": 0.02865,
+                "txt_dist": 0.18628,
+                "txt_sim": 0.81372
+            },
+            "swad_metrics": {
+                "iou_0": 0.90597,
+                "delta_m_plus": 0.03665,
+                "phi": 0.79041,
+                "swad": 0.02897
+            },
+            "l2_distance": 0.89289,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cr\u0435\u200b\u0430\u200dm\u200d, s\u200d\u043eap\u200b d\u200bisp\u0435n\u200bs\u200ber\u200d\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [90, 200, 340, 788], \"label\": \"cr\u0435\u200b\u0430\u200dm\u200d, s\u200d\u043eap\u200b d\u200bisp\u0435n\u200bs\u200ber\"},\n\t{\"bbox_2d\": [360, 200, 620, 788], \"label\": \"cr\u0435\u200b\u0430\u200dm\u200d, s\u200d\u043eap\u200b d\u200bisp\u0435n\u200bs\u200ber\"},\n\t{\"bbox_2d\": [630, 200, 900, 788], \"label\": \"cr\u0435\u200b\u0430\u200dm\u200d, s\u200d\u043eap\u200b d\u200bisp\u0435n\u200bs\u200ber\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            90,
+                            200,
+                            340,
+                            788
+                        ],
+                        "label": "cr\u0435\u200b\u0430\u200dm\u200d, s\u200d\u043eap\u200b d\u200bisp\u0435n\u200bs\u200ber"
+                    },
+                    {
+                        "bbox_2d": [
+                            360,
+                            200,
+                            620,
+                            788
+                        ],
+                        "label": "cr\u0435\u200b\u0430\u200dm\u200d, s\u200d\u043eap\u200b d\u200bisp\u0435n\u200bs\u200ber"
+                    },
+                    {
+                        "bbox_2d": [
+                            630,
+                            200,
+                            900,
+                            788
+                        ],
+                        "label": "cr\u0435\u200b\u0430\u200dm\u200d, s\u200d\u043eap\u200b d\u200bisp\u0435n\u200bs\u200ber"
+                    }
+                ],
+                "token_count": 176,
+                "raw_token_count": 208,
+                "runtime_seconds": 0.7195
+            }
+        },
+        {
+            "index": 10,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.018011457664902714,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.2090250136223543
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.03349,
+                "txt_dist": 0.19989,
+                "txt_sim": 0.80011
+            },
+            "swad_metrics": {
+                "iou_0": 0.90597,
+                "delta_m_plus": 1.0,
+                "phi": 0.77331,
+                "swad": 0.77331
+            },
+            "l2_distance": 0.20268,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"c\u200dr\u0435\u200ba\u200dm\u200b, s\u043e\u200da\u200d\u0440\u200b dis\u200dpens\u0435r\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [100, 200, 340, 790], \"label\": \"c\u200dr\u058ae\u200ba\u200dm\u200b, s\u058ao\u058aa\u058ap\u200b dis\u058apens\u058ae\u200br\"},\n\t{\"bbox_2d\": [360, 200, 630, 790], \"label\": \"c\u200dr\u058ae\u200ba\u200dm\u200b, s\u058ao\u058aa\u058ap\u200b dis\u058apens\u058ae\u200br\"},\n\t{\"bbox_2d\": [630, 200, 900, 790], \"label\": \"c\u200dr\u058ae\u200ba\u200dm\u200b, s\u058ao\u058aa\u058ap\u200b dis\u058apens\u058ae\u200br\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            100,
+                            200,
+                            340,
+                            790
+                        ],
+                        "label": "c\u200dr\u058ae\u200ba\u200dm\u200b, s\u058ao\u058aa\u058ap\u200b dis\u058apens\u058ae\u200br"
+                    },
+                    {
+                        "bbox_2d": [
+                            360,
+                            200,
+                            630,
+                            790
+                        ],
+                        "label": "c\u200dr\u058ae\u200ba\u200dm\u200b, s\u058ao\u058aa\u058ap\u200b dis\u058apens\u058ae\u200br"
+                    },
+                    {
+                        "bbox_2d": [
+                            630,
+                            200,
+                            900,
+                            790
+                        ],
+                        "label": "c\u200dr\u058ae\u200ba\u200dm\u200b, s\u058ao\u058aa\u058ap\u200b dis\u058apens\u058ae\u200br"
+                    }
+                ],
+                "token_count": 207,
+                "raw_token_count": 208,
+                "runtime_seconds": 0.7195
+            }
+        }
+    ]
+}

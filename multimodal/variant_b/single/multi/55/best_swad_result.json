@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/55",
+        "folder_id": "55",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00002515.JPEG"
+    },
+    "pareto_index": 0,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.000333,
+            "defocus_blur": 0.014233,
+            "motion_blur": 0.135504,
+            "fog_filter": 0.000562,
+            "pixelate": 0.018414,
+            "jpeg_filter": 0.000384
+        },
+        "text_corruptions": {
+            "homophone": 0.116321,
+            "synonym": 0.073773,
+            "ata_saliency": 0.203853,
+            "fragmentation": 0.33925,
+            "character_noise": 0.004355
+        },
+        "img_budget_used": 0.16943,
+        "txt_budget_used": 0.737553,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.51919,
+        "img_dist": 0.09343,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.52023,
+        "delta_m_plus": 0.002,
+        "phi": 0.90657,
+        "swad": 0.00181
+    },
+    "l2_distance": 0.52753,
+    "original_prompt": "Identify the objects \"lobster\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "lobster": {
+            "xmin": 10,
+            "ymin": 0,
+            "xmax": 331,
+            "ymax": 370
+        },
+        "lobster_1": {
+            "xmin": 1,
+            "ymin": 334,
+            "xmax": 331,
+            "ymax": 498
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"lobster\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 1000, 1000], \"label\": \"lobster\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    1000,
+                    1000
+                ],
+                "label": "lobster"
+            }
+        ],
+        "token_count": 38,
+        "raw_token_count": 46,
+        "runtime_seconds": 0.1525
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.00033314240910286804,
+        "defocus_blur": 0.014233395796502688,
+        "motion_blur": 0.1355041657180163,
+        "fog_filter": 0.0005620829141872361,
+        "pixelate": 0.018413625704922408,
+        "jpeg_filter": 0.00038397674913188154
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.11632110335150386,
+        "synonym": 0.07377342972348297,
+        "ata_saliency": 0.20385307491123444,
+        "fragmentation": 0.3392504448363113,
+        "character_noise": 0.0043547503627986775
+    }
+}

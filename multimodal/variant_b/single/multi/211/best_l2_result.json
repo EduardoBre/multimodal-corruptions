@@ -1,0 +1,112 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/211",
+        "folder_id": "211",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00003955.JPEG"
+    },
+    "pareto_index": 13,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.3986,
+            "defocus_blur": 0.030635,
+            "motion_blur": 0.036349,
+            "fog_filter": 0.022116,
+            "pixelate": 0.015069,
+            "jpeg_filter": 0.006918
+        },
+        "text_corruptions": {
+            "homophone": 0.02196,
+            "synonym": 0.02634,
+            "ata_saliency": 0.05993,
+            "fragmentation": 0.061511,
+            "character_noise": 0.117285
+        },
+        "img_budget_used": 0.509687,
+        "txt_budget_used": 0.287025,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.27539,
+        "img_dist": 0.09195,
+        "txt_dist": 0.16973,
+        "txt_sim": 0.83027
+    },
+    "swad_metrics": {
+        "iou_0": 0.56909,
+        "delta_m_plus": 0.51608,
+        "phi": 0.75393,
+        "swad": 0.38909
+    },
+    "l2_distance": 0.33631,
+    "original_prompt": "Identify the objects \"jellyfish\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "jellyfish": {
+            "xmin": 288,
+            "ymin": 0,
+            "xmax": 410,
+            "ymax": 252
+        },
+        "jellyfish_1": {
+            "xmin": 0,
+            "ymin": 0,
+            "xmax": 265,
+            "ymax": 374
+        },
+        "jellyfish_2": {
+            "xmin": 385,
+            "ymin": 91,
+            "xmax": 471,
+            "ymax": 212
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"jelly\u200bfi sh\u200b\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 292, 400, 774], \"label\": \"jelly\u200bfi sh\"},\n\t{\"bbox_2d\": [620, 368, 820, 670], \"label\": \"jelly\u200bfi sh\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    292,
+                    400,
+                    774
+                ],
+                "label": "jelly\u200bfi sh"
+            },
+            {
+                "bbox_2d": [
+                    620,
+                    368,
+                    820,
+                    670
+                ],
+                "label": "jelly\u200bfi sh"
+            }
+        ],
+        "token_count": 78,
+        "raw_token_count": 135,
+        "runtime_seconds": 0.5634
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.39859968585044137,
+        "defocus_blur": 0.030635012940287334,
+        "motion_blur": 0.03634921277561894,
+        "fog_filter": 0.022115918600992674,
+        "pixelate": 0.015068960172060846,
+        "jpeg_filter": 0.006918179557350964
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.021959667799089057,
+        "synonym": 0.02633974677771411,
+        "ata_saliency": 0.05993038095017459,
+        "fragmentation": 0.06151080091962571,
+        "character_noise": 0.1172846890955097
+    }
+}

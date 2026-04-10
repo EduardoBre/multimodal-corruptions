@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/222",
+        "folder_id": "222",
+        "category": "single/solo",
+        "filename": "ILSVRC2013_val_00002186.JPEG"
+    },
+    "pareto_index": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "motion_blur",
+        "img_scale": 0.3997956906557353,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.647636093318414
+    },
+    "objectives": {
+        "iou": 0.11766,
+        "img_dist": 0.07376,
+        "txt_dist": 0.21873,
+        "txt_sim": 0.78127
+    },
+    "swad_metrics": {
+        "iou_0": 0.62087,
+        "delta_m_plus": 0.81049,
+        "phi": 0.72364,
+        "swad": 0.58651
+    },
+    "l2_distance": 0.25909,
+    "original_prompt": "Identify the objects \"flower pot\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "flower pot": {
+            "xmin": 437,
+            "ymin": 305,
+            "xmax": 498,
+            "ymax": 339
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"flower poo\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [867, 767, 998, 830], \"label\": \"flower poo\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    867,
+                    767,
+                    998,
+                    830
+                ],
+                "label": "flower poo"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 51,
+        "runtime_seconds": 0.1887
+    }
+}

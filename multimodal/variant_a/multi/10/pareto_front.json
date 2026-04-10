@@ -1,0 +1,1151 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/10",
+        "folder_id": "10",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00049219.JPEG"
+    },
+    "original_prompt": "Identify the objects \"hotdog, salt or pepper shaker\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "hotdog": {
+            "xmin": 44,
+            "ymin": 217,
+            "xmax": 187,
+            "ymax": 374
+        },
+        "hotdog_1": {
+            "xmin": 244,
+            "ymin": 189,
+            "xmax": 411,
+            "ymax": 344
+        },
+        "hotdog_2": {
+            "xmin": 322,
+            "ymin": 109,
+            "xmax": 478,
+            "ymax": 168
+        },
+        "hotdog_3": {
+            "xmin": 68,
+            "ymin": 53,
+            "xmax": 209,
+            "ymax": 141
+        },
+        "hotdog_4": {
+            "xmin": 224,
+            "ymin": 87,
+            "xmax": 330,
+            "ymax": 201
+        },
+        "hotdog_5": {
+            "xmin": 331,
+            "ymin": 160,
+            "xmax": 497,
+            "ymax": 265
+        },
+        "hotdog_6": {
+            "xmin": 181,
+            "ymin": 209,
+            "xmax": 298,
+            "ymax": 342
+        },
+        "hotdog_7": {
+            "xmin": 272,
+            "ymin": 18,
+            "xmax": 422,
+            "ymax": 112
+        },
+        "hotdog_8": {
+            "xmin": 115,
+            "ymin": 121,
+            "xmax": 247,
+            "ymax": 254
+        },
+        "hotdog_9": {
+            "xmin": 33,
+            "ymin": 125,
+            "xmax": 164,
+            "ymax": 222
+        },
+        "hotdog_10": {
+            "xmin": 154,
+            "ymin": 2,
+            "xmax": 229,
+            "ymax": 72
+        },
+        "salt or pepper shaker": {
+            "xmin": 0,
+            "ymin": 16,
+            "xmax": 64,
+            "ymax": 90
+        }
+    },
+    "baseline_iou": 0.71926,
+    "swad_star": 0.76842,
+    "swad_star_index": 3,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 8,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8181617493544074,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.41721849968957336
+            },
+            "objectives": {
+                "iou": 0.06497,
+                "img_dist": 0.07359,
+                "txt_dist": 0.27696,
+                "txt_sim": 0.72304
+            },
+            "swad_metrics": {
+                "iou_0": 0.71926,
+                "delta_m_plus": 0.90967,
+                "phi": 0.66983,
+                "swad": 0.60933
+            },
+            "l2_distance": 0.29384,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hotvog, aslt or pecper shaker\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 135, 240], \"label\": \"hotvog, aslt or pecper shaker\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            135,
+                            240
+                        ],
+                        "label": "hotvog, aslt or pecper shaker"
+                    }
+                ],
+                "token_count": 45,
+                "raw_token_count": 800,
+                "runtime_seconds": 3.2755
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.3997956906557353,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.647636093318414
+            },
+            "objectives": {
+                "iou": 0.68185,
+                "img_dist": 0.05502,
+                "txt_dist": 0.20081,
+                "txt_sim": 0.79919
+            },
+            "swad_metrics": {
+                "iou_0": 0.71926,
+                "delta_m_plus": 0.05201,
+                "phi": 0.75522,
+                "swad": 0.03928
+            },
+            "l2_distance": 0.71293,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"htodog, salt or pepepr sahker\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [450, 236, 744, 540], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [552, 148, 820, 288], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [570, 52, 820, 200], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [638, 288, 960, 420], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [648, 436, 984, 700], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [538, 536, 812, 912], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [370, 620, 580, 908], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [158, 650, 352, 1000], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [70, 312, 312, 600], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [158, 148, 420, 336], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [288, 324, 480, 672], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [288, 10, 448, 200], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [430, 32, 588, 272], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [64, 24, 258, 236], \"label\": \"salt or pepepr sahker\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            450,
+                            236,
+                            744,
+                            540
+                        ],
+                        "label": "htodog"
+                    },
+                    {
+                        "bbox_2d": [
+                            552,
+                            148,
+                            820,
+                            288
+                        ],
+                        "label": "htodog"
+                    },
+                    {
+                        "bbox_2d": [
+                            570,
+                            52,
+                            820,
+                            200
+                        ],
+                        "label": "htodog"
+                    },
+                    {
+                        "bbox_2d": [
+                            638,
+                            288,
+                            960,
+                            420
+                        ],
+                        "label": "htodog"
+                    },
+                    {
+                        "bbox_2d": [
+                            648,
+                            436,
+                            984,
+                            700
+                        ],
+                        "label": "htodog"
+                    },
+                    {
+                        "bbox_2d": [
+                            538,
+                            536,
+                            812,
+                            912
+                        ],
+                        "label": "htodog"
+                    },
+                    {
+                        "bbox_2d": [
+                            370,
+                            620,
+                            580,
+                            908
+                        ],
+                        "label": "htodog"
+                    },
+                    {
+                        "bbox_2d": [
+                            158,
+                            650,
+                            352,
+                            1000
+                        ],
+                        "label": "htodog"
+                    },
+                    {
+                        "bbox_2d": [
+                            70,
+                            312,
+                            312,
+                            600
+                        ],
+                        "label": "htodog"
+                    },
+                    {
+                        "bbox_2d": [
+                            158,
+                            148,
+                            420,
+                            336
+                        ],
+                        "label": "htodog"
+                    },
+                    {
+                        "bbox_2d": [
+                            288,
+                            324,
+                            480,
+                            672
+                        ],
+                        "label": "htodog"
+                    },
+                    {
+                        "bbox_2d": [
+                            288,
+                            10,
+                            448,
+                            200
+                        ],
+                        "label": "htodog"
+                    },
+                    {
+                        "bbox_2d": [
+                            430,
+                            32,
+                            588,
+                            272
+                        ],
+                        "label": "htodog"
+                    },
+                    {
+                        "bbox_2d": [
+                            64,
+                            24,
+                            258,
+                            236
+                        ],
+                        "label": "salt or pepepr sahker"
+                    }
+                ],
+                "token_count": 496,
+                "raw_token_count": 800,
+                "runtime_seconds": 3.2755
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.6126883641923373,
+                "txt_attack": "homophone",
+                "txt_scale": 0.10684452896191199
+            },
+            "objectives": {
+                "iou": 0.70083,
+                "img_dist": 0.06468,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.71926,
+                "delta_m_plus": 0.02562,
+                "phi": 0.93532,
+                "swad": 0.02397
+            },
+            "l2_distance": 0.70381,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hotdog, salt or pepper shaker\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [294, 320, 482, 672], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [448, 240, 652, 540], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [578, 58, 830, 180], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [558, 160, 822, 272], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [660, 288, 958, 416], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [688, 480, 984, 712], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [530, 536, 812, 920], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [372, 620, 580, 900], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [98, 650, 322, 1000], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [148, 172, 422, 312], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [72, 352, 312, 608], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [72, 272, 312, 450], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [308, 0, 440, 172], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [428, 100, 580, 272], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [488, 20, 592, 100], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [0, 0, 100, 240], \"label\": \"salt or pepper shaker\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            294,
+                            320,
+                            482,
+                            672
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            448,
+                            240,
+                            652,
+                            540
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            578,
+                            58,
+                            830,
+                            180
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            558,
+                            160,
+                            822,
+                            272
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            660,
+                            288,
+                            958,
+                            416
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            688,
+                            480,
+                            984,
+                            712
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            530,
+                            536,
+                            812,
+                            920
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            372,
+                            620,
+                            580,
+                            900
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            98,
+                            650,
+                            322,
+                            1000
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            148,
+                            172,
+                            422,
+                            312
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            72,
+                            352,
+                            312,
+                            608
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            72,
+                            272,
+                            312,
+                            450
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            308,
+                            0,
+                            440,
+                            172
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            428,
+                            100,
+                            580,
+                            272
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            488,
+                            20,
+                            592,
+                            100
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            100,
+                            240
+                        ],
+                        "label": "salt or pepper shaker"
+                    }
+                ],
+                "token_count": 543,
+                "raw_token_count": 800,
+                "runtime_seconds": 3.2755
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6124377601560459,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.09093,
+                "txt_dist": 0.15472,
+                "txt_sim": 0.84528
+            },
+            "swad_metrics": {
+                "iou_0": 0.71926,
+                "delta_m_plus": 1.0,
+                "phi": 0.76842,
+                "swad": 0.76842
+            },
+            "l2_distance": 0.17946,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"htodog, salt or pepper shakyr\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [55, 250, 312, 625], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [150, 130, 420, 330], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [280, 310, 470, 675], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [430, 225, 650, 550], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [550, 50, 820, 275], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [650, 260, 940, 450], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [670, 510, 980, 725], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [520, 530, 800, 910], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [370, 580, 580, 890], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [100, 600, 340, 1000], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [300, 0, 440, 180], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [420, 50, 580, 250], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [300, 0, 440, 180], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [420, 50, 580, 250], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [550, 50, 820, 275], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [650, 260, 940, 450], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [670, 510, 980, 725], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [520, 530, 800, 910], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [370, 580, 580, 890], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [100, 600, 340, 1000], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [280, 310, 470, 675], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [430, 225, 650, 550], \"label\": \"htodog\"},\n\t{\"bbox_2d\": [150, 130, 420, 330], \"label\": \"htod",
+                "parsed_predictions": [],
+                "token_count": 800,
+                "raw_token_count": 800,
+                "runtime_seconds": 3.2755
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.21300761893764208,
+                "txt_attack": "synonym",
+                "txt_scale": 0.11490566325799068
+            },
+            "objectives": {
+                "iou": 0.70936,
+                "img_dist": 0.05009,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.71926,
+                "delta_m_plus": 0.01376,
+                "phi": 0.94991,
+                "swad": 0.01307
+            },
+            "l2_distance": 0.71113,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hotdog, salt or pepper shaker\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [298, 324, 484, 684], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [452, 244, 742, 536], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [678, 512, 988, 712], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [530, 536, 812, 916], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [438, 536, 588, 876], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [648, 292, 960, 452], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [558, 152, 822, 308], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [572, 52, 828, 176], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [438, 100, 592, 272], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [152, 148, 422, 324], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [298, 10, 452, 200], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [72, 272, 322, 616], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [96, 652, 368, 1000], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [0, 0, 138, 272], \"label\": \"salt or pepper shaker\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            298,
+                            324,
+                            484,
+                            684
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            452,
+                            244,
+                            742,
+                            536
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            678,
+                            512,
+                            988,
+                            712
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            530,
+                            536,
+                            812,
+                            916
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            438,
+                            536,
+                            588,
+                            876
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            648,
+                            292,
+                            960,
+                            452
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            558,
+                            152,
+                            822,
+                            308
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            572,
+                            52,
+                            828,
+                            176
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            438,
+                            100,
+                            592,
+                            272
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            152,
+                            148,
+                            422,
+                            324
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            298,
+                            10,
+                            452,
+                            200
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            72,
+                            272,
+                            322,
+                            616
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            96,
+                            652,
+                            368,
+                            1000
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            138,
+                            272
+                        ],
+                        "label": "salt or pepper shaker"
+                    }
+                ],
+                "token_count": 478,
+                "raw_token_count": 800,
+                "runtime_seconds": 3.2755
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "fog_filter",
+                "img_scale": 0.35190791434280455,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.020329096070927366
+            },
+            "objectives": {
+                "iou": 0.70026,
+                "img_dist": 0.15538,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.71926,
+                "delta_m_plus": 0.02642,
+                "phi": 0.84462,
+                "swad": 0.02231
+            },
+            "l2_distance": 0.71729,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hotdog, salt or pepper shaker\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [93, 576, 363, 1000], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [363, 604, 585, 912], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [550, 148, 825, 296], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [575, 50, 825, 172], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [675, 498, 984, 700], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [655, 292, 960, 436], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [452, 248, 740, 520], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [298, 324, 480, 672], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [150, 158, 420, 336], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [118, 266, 320, 472], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [70, 324, 310, 604], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [430, 100, 585, 272], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [298, 10, 440, 200], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [0, 0, 130, 272], \"label\": \"salt or pepper shaker\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            93,
+                            576,
+                            363,
+                            1000
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            363,
+                            604,
+                            585,
+                            912
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            550,
+                            148,
+                            825,
+                            296
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            575,
+                            50,
+                            825,
+                            172
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            675,
+                            498,
+                            984,
+                            700
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            655,
+                            292,
+                            960,
+                            436
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            452,
+                            248,
+                            740,
+                            520
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            298,
+                            324,
+                            480,
+                            672
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            150,
+                            158,
+                            420,
+                            336
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            118,
+                            266,
+                            320,
+                            472
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            70,
+                            324,
+                            310,
+                            604
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            430,
+                            100,
+                            585,
+                            272
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            298,
+                            10,
+                            440,
+                            200
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            130,
+                            272
+                        ],
+                        "label": "salt or pepper shaker"
+                    }
+                ],
+                "token_count": 478,
+                "raw_token_count": 800,
+                "runtime_seconds": 3.2755
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.65153,
+                "img_dist": 0.08779,
+                "txt_dist": 0.07083,
+                "txt_sim": 0.92917
+            },
+            "swad_metrics": {
+                "iou_0": 0.71926,
+                "delta_m_plus": 0.09417,
+                "phi": 0.8476,
+                "swad": 0.07982
+            },
+            "l2_distance": 0.66122,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hotdog, salt or pepper shake her\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [78, 264, 312, 614], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [100, 614, 320, 999], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [388, 614, 580, 899], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [528, 528, 808, 914], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [672, 499, 988, 714], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [658, 309, 948, 509], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [558, 124, 812, 288], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [448, 238, 660, 559], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [288, 324, 472, 674], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [158, 149, 428, 338], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [308, 0, 438, 188], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [438, 38, 580, 264], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [572, 38, 832, 188], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [672, 0, 832, 109], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [808, 0, 992, 188], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [808, 0, 992, 188], \"label\": \"salt or pepper shake her\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            78,
+                            264,
+                            312,
+                            614
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            100,
+                            614,
+                            320,
+                            999
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            388,
+                            614,
+                            580,
+                            899
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            528,
+                            528,
+                            808,
+                            914
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            672,
+                            499,
+                            988,
+                            714
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            658,
+                            309,
+                            948,
+                            509
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            558,
+                            124,
+                            812,
+                            288
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            448,
+                            238,
+                            660,
+                            559
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            288,
+                            324,
+                            472,
+                            674
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            158,
+                            149,
+                            428,
+                            338
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            308,
+                            0,
+                            438,
+                            188
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            438,
+                            38,
+                            580,
+                            264
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            572,
+                            38,
+                            832,
+                            188
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            672,
+                            0,
+                            832,
+                            109
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            808,
+                            0,
+                            992,
+                            188
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            808,
+                            0,
+                            992,
+                            188
+                        ],
+                        "label": "salt or pepper shake her"
+                    }
+                ],
+                "token_count": 542,
+                "raw_token_count": 800,
+                "runtime_seconds": 3.2755
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.71985,
+                "img_dist": 0.03631,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.71926,
+                "delta_m_plus": 0.0,
+                "phi": 0.96369,
+                "swad": 0.0
+            },
+            "l2_distance": 0.72077,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hotdog, salt or pepper shaker\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [296, 324, 482, 676], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [454, 244, 738, 528], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [678, 508, 988, 698], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [648, 300, 958, 456], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [558, 152, 820, 288], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [572, 52, 828, 172], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [432, 58, 592, 272], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [148, 148, 420, 324], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [138, 640, 358, 1000], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [372, 624, 588, 916], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [458, 530, 812, 916], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [64, 308, 318, 612], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [148, 250, 328, 456], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [296, 10, 448, 200], \"label\": \"hotdog\"},\n\t{\"bbox_2d\": [0, 0, 132, 272], \"label\": \"salt or pepper shaker\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            296,
+                            324,
+                            482,
+                            676
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            454,
+                            244,
+                            738,
+                            528
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            678,
+                            508,
+                            988,
+                            698
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            648,
+                            300,
+                            958,
+                            456
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            558,
+                            152,
+                            820,
+                            288
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            572,
+                            52,
+                            828,
+                            172
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            432,
+                            58,
+                            592,
+                            272
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            148,
+                            148,
+                            420,
+                            324
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            138,
+                            640,
+                            358,
+                            1000
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            372,
+                            624,
+                            588,
+                            916
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            458,
+                            530,
+                            812,
+                            916
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            64,
+                            308,
+                            318,
+                            612
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            148,
+                            250,
+                            328,
+                            456
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            296,
+                            10,
+                            448,
+                            200
+                        ],
+                        "label": "hotdog"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            132,
+                            272
+                        ],
+                        "label": "salt or pepper shaker"
+                    }
+                ],
+                "token_count": 512,
+                "raw_token_count": 800,
+                "runtime_seconds": 3.2755
+            }
+        }
+    ]
+}

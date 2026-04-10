@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/171",
+        "folder_id": "171",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00045626.JPEG"
+    },
+    "pareto_index": 1,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.017159,
+            "defocus_blur": 0.074724,
+            "motion_blur": 0.130853,
+            "fog_filter": 0.088649,
+            "pixelate": 0.034782,
+            "jpeg_filter": 0.005295
+        },
+        "text_corruptions": {
+            "homophone": 0.33655,
+            "synonym": 0.088005,
+            "ata_saliency": 0.151941,
+            "fragmentation": 0.037426,
+            "character_noise": 0.147708
+        },
+        "img_budget_used": 0.351463,
+        "txt_budget_used": 0.761631,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.27458,
+        "img_dist": 0.09461,
+        "txt_dist": 0.3745,
+        "txt_sim": 0.6255
+    },
+    "swad_metrics": {
+        "iou_0": 0.55733,
+        "delta_m_plus": 0.50733,
+        "phi": 0.56632,
+        "swad": 0.28731
+    },
+    "l2_distance": 0.47392,
+    "original_prompt": "Identify the objects \"monkey\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "monkey": {
+            "xmin": 46,
+            "ymin": 67,
+            "xmax": 191,
+            "ymax": 309
+        },
+        "monkey_1": {
+            "xmin": 193,
+            "ymin": 59,
+            "xmax": 406,
+            "ymax": 224
+        },
+        "monkey_2": {
+            "xmin": 422,
+            "ymin": 115,
+            "xmax": 499,
+            "ymax": 236
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"umn\u200d key\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [355, 160, 830, 680], \"label\": \"umn\u200d key\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    355,
+                    160,
+                    830,
+                    680
+                ],
+                "label": "umn\u200d key"
+            }
+        ],
+        "token_count": 42,
+        "raw_token_count": 92,
+        "runtime_seconds": 0.2827
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.017158824435450443,
+        "defocus_blur": 0.07472421236484444,
+        "motion_blur": 0.13085323371461308,
+        "fog_filter": 0.08864933479280505,
+        "pixelate": 0.03478223719866353,
+        "jpeg_filter": 0.005295130371675899
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.3365502367563647,
+        "synonym": 0.08800505665063024,
+        "ata_saliency": 0.15194069930770093,
+        "fragmentation": 0.03742649323616876,
+        "character_noise": 0.14770835659456094
+    }
+}

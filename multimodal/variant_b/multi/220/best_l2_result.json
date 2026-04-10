@@ -1,0 +1,106 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/220",
+        "folder_id": "220",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00022333.JPEG"
+    },
+    "pareto_index": 15,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.06247,
+            "defocus_blur": 0.016342,
+            "motion_blur": 0.154103,
+            "fog_filter": 0.00188,
+            "pixelate": 0.017038,
+            "jpeg_filter": 0.0078
+        },
+        "text_corruptions": {
+            "homophone": 0.279238,
+            "synonym": 0.030807,
+            "ata_saliency": 0.211463,
+            "fragmentation": 0.088648,
+            "character_noise": 0.094377
+        },
+        "img_budget_used": 0.259633,
+        "txt_budget_used": 0.704532,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.10174,
+        "txt_dist": 0.21221,
+        "txt_sim": 0.78779
+    },
+    "swad_metrics": {
+        "iou_0": 0.93761,
+        "delta_m_plus": 1.0,
+        "phi": 0.70764,
+        "swad": 0.70764
+    },
+    "l2_distance": 0.23534,
+    "original_prompt": "Identify the objects \"dog, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 190,
+            "ymin": 78,
+            "xmax": 301,
+            "ymax": 463
+        },
+        "dog": {
+            "xmin": 101,
+            "ymin": 281,
+            "xmax": 217,
+            "ymax": 427
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"dwag\u200d, per\u200dson\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [280, 563, 572, 852], \"label\": \"dwag\u200d, per\u200dson\"},\n\t{\"bbox_2d\": [498, 158, 800, 928], \"label\": \"dwag\u200d, per\u200dson\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    280,
+                    563,
+                    572,
+                    852
+                ],
+                "label": "dwag\u200d, per\u200dson"
+            },
+            {
+                "bbox_2d": [
+                    498,
+                    158,
+                    800,
+                    928
+                ],
+                "label": "dwag\u200d, per\u200dson"
+            }
+        ],
+        "token_count": 88,
+        "raw_token_count": 89,
+        "runtime_seconds": 0.2757
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.062470069747148346,
+        "defocus_blur": 0.016342454989502635,
+        "motion_blur": 0.15410274947745814,
+        "fog_filter": 0.0018795683830973944,
+        "pixelate": 0.01703834702544192,
+        "jpeg_filter": 0.007799574919172575
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.27923798845136805,
+        "synonym": 0.03080728882953284,
+        "ata_saliency": 0.21146256313202483,
+        "fragmentation": 0.08864757389580737,
+        "character_noise": 0.09437670345574788
+    }
+}

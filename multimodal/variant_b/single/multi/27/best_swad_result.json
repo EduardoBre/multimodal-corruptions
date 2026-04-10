@@ -1,0 +1,109 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/27",
+        "folder_id": "27",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00040503.JPEG"
+    },
+    "pareto_index": 18,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.019338,
+            "defocus_blur": 0.17812,
+            "motion_blur": 0.183299,
+            "fog_filter": 0.003673,
+            "pixelate": 0.098218,
+            "jpeg_filter": 0.378058
+        },
+        "text_corruptions": {
+            "homophone": 0.036327,
+            "synonym": 0.175937,
+            "ata_saliency": 0.048616,
+            "fragmentation": 0.101275,
+            "character_noise": 0.006408
+        },
+        "img_budget_used": 0.860705,
+        "txt_budget_used": 0.368563,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.03184,
+        "img_dist": 0.15388,
+        "txt_dist": 0.26771,
+        "txt_sim": 0.73229
+    },
+    "swad_metrics": {
+        "iou_0": 0.73331,
+        "delta_m_plus": 0.95658,
+        "phi": 0.61961,
+        "swad": 0.5927
+    },
+    "l2_distance": 0.31042,
+    "original_prompt": "Identify the objects \"fox\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "fox": {
+            "xmin": 74,
+            "ymin": 124,
+            "xmax": 144,
+            "ymax": 207
+        },
+        "fox_1": {
+            "xmin": 375,
+            "ymin": 165,
+            "xmax": 490,
+            "ymax": 229
+        },
+        "fox_2": {
+            "xmin": 101,
+            "ymin": 99,
+            "xmax": 160,
+            "ymax": 149
+        },
+        "fox_3": {
+            "xmin": 82,
+            "ymin": 71,
+            "xmax": 172,
+            "ymax": 127
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"fog\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 999, 999], \"label\": \"fog\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    999,
+                    999
+                ],
+                "label": "fog"
+            }
+        ],
+        "token_count": 36,
+        "raw_token_count": 115,
+        "runtime_seconds": 0.3766
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.019338059660695073,
+        "defocus_blur": 0.17811984851391824,
+        "motion_blur": 0.18329912326106643,
+        "fog_filter": 0.003672546050782502,
+        "pixelate": 0.09821784186719035,
+        "jpeg_filter": 0.37805792528076376
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.03632692780382721,
+        "synonym": 0.1759374618900582,
+        "ata_saliency": 0.048615813552887716,
+        "fragmentation": 0.10127520582587808,
+        "character_noise": 0.0064080540891052334
+    }
+}

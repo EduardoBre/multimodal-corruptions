@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/116",
+        "folder_id": "116",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00021104.JPEG"
+    },
+    "pareto_index": 20,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.036598,
+            "defocus_blur": 0.004513,
+            "motion_blur": 0.166861,
+            "fog_filter": 0.001866,
+            "pixelate": 0.062457,
+            "jpeg_filter": 0.005694
+        },
+        "text_corruptions": {
+            "homophone": 0.003481,
+            "synonym": 0.064612,
+            "ata_saliency": 0.022664,
+            "fragmentation": 0.014083,
+            "character_noise": 0.001134
+        },
+        "img_budget_used": 0.277988,
+        "txt_budget_used": 0.105974,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.05776,
+        "img_dist": 0.12936,
+        "txt_dist": 0.33425,
+        "txt_sim": 0.66575
+    },
+    "swad_metrics": {
+        "iou_0": 0.9434,
+        "delta_m_plus": 0.93877,
+        "phi": 0.57963,
+        "swad": 0.54414
+    },
+    "l2_distance": 0.36303,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 52,
+            "ymin": 73,
+            "xmax": 272,
+            "ymax": 192
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"biri\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 388, 999, 999], \"label\": \"biri\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    388,
+                    999,
+                    999
+                ],
+                "label": "biri"
+            }
+        ],
+        "token_count": 38,
+        "raw_token_count": 52,
+        "runtime_seconds": 0.1877
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.036597712045536336,
+        "defocus_blur": 0.00451290226945085,
+        "motion_blur": 0.1668610791302631,
+        "fog_filter": 0.00186558003923965,
+        "pixelate": 0.062457202333233465,
+        "jpeg_filter": 0.005693971127569482
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.0034806681844465606,
+        "synonym": 0.06461233397509648,
+        "ata_saliency": 0.02266368654076059,
+        "fragmentation": 0.014083164786878086,
+        "character_noise": 0.0011338317821734268
+    }
+}

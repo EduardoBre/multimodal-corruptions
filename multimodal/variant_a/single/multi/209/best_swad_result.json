@@ -1,0 +1,76 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/209",
+        "folder_id": "209",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00043556.JPEG"
+    },
+    "pareto_index": 2,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "motion_blur",
+        "img_scale": 0.3997956906557353,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.647636093318414
+    },
+    "objectives": {
+        "iou": 0.00682,
+        "img_dist": 0.04856,
+        "txt_dist": 0.29806,
+        "txt_sim": 0.70194
+    },
+    "swad_metrics": {
+        "iou_0": 0.95086,
+        "delta_m_plus": 0.99283,
+        "phi": 0.66785,
+        "swad": 0.66306
+    },
+    "l2_distance": 0.30207,
+    "original_prompt": "Identify the objects \"dog\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 280,
+            "ymin": 31,
+            "xmax": 499,
+            "ymax": 255
+        },
+        "dog_1": {
+            "xmin": 0,
+            "ymin": 54,
+            "xmax": 402,
+            "ymax": 329
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"dot\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [585, 100, 605, 158], \"label\": \"dot\"},\n\t{\"bbox_2d\": [768, 100, 812, 182], \"label\": \"dot\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    585,
+                    100,
+                    605,
+                    158
+                ],
+                "label": "dot"
+            },
+            {
+                "bbox_2d": [
+                    768,
+                    100,
+                    812,
+                    182
+                ],
+                "label": "dot"
+            }
+        ],
+        "token_count": 72,
+        "raw_token_count": 80,
+        "runtime_seconds": 0.296
+    }
+}

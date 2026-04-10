@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/47",
+        "folder_id": "47",
+        "category": "single/multi",
+        "filename": "ILSVRC2013_val_00000715.JPEG"
+    },
+    "pareto_index": 10,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.000715,
+            "defocus_blur": 0.001943,
+            "motion_blur": 0.158084,
+            "fog_filter": 0.006125,
+            "pixelate": 0.159719,
+            "jpeg_filter": 0.058942
+        },
+        "text_corruptions": {
+            "homophone": 0.101558,
+            "synonym": 0.108547,
+            "ata_saliency": 0.191817,
+            "fragmentation": 0.207468,
+            "character_noise": 0.096737
+        },
+        "img_budget_used": 0.385528,
+        "txt_budget_used": 0.706127,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.10546,
+        "txt_dist": 0.33937,
+        "txt_sim": 0.66063
+    },
+    "swad_metrics": {
+        "iou_0": 0.81366,
+        "delta_m_plus": 1.0,
+        "phi": 0.59096,
+        "swad": 0.59096
+    },
+    "l2_distance": 0.35538,
+    "original_prompt": "Identify the objects \"car\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "car": {
+            "xmin": 330,
+            "ymin": 182,
+            "xmax": 371,
+            "ymax": 213
+        },
+        "car_1": {
+            "xmin": 231,
+            "ymin": 181,
+            "xmax": 268,
+            "ymax": 209
+        },
+        "car_2": {
+            "xmin": 281,
+            "ymin": 178,
+            "xmax": 319,
+            "ymax": 209
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"c\u0430b\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [34, 543, 112, 637], \"label\": \"c\u0430b\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    34,
+                    543,
+                    112,
+                    637
+                ],
+                "label": "c\u0430b"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 323,
+        "runtime_seconds": 1.0323
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0007152076813068029,
+        "defocus_blur": 0.001943341138695577,
+        "motion_blur": 0.15808379971079026,
+        "fog_filter": 0.006124551691970861,
+        "pixelate": 0.1597191416536523,
+        "jpeg_filter": 0.058942423471910144
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.1015578531077751,
+        "synonym": 0.10854717217083175,
+        "ata_saliency": 0.19181688771511285,
+        "fragmentation": 0.20746832286925265,
+        "character_noise": 0.09673706600502784
+    }
+}

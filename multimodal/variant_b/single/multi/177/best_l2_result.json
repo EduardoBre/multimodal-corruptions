@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/177",
+        "folder_id": "177",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00045107.JPEG"
+    },
+    "pareto_index": 8,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.064927,
+            "defocus_blur": 0.009891,
+            "motion_blur": 0.181376,
+            "fog_filter": 0.001782,
+            "pixelate": 0.02476,
+            "jpeg_filter": 0.007368
+        },
+        "text_corruptions": {
+            "homophone": 0.025898,
+            "synonym": 0.011498,
+            "ata_saliency": 0.005604,
+            "fragmentation": 0.008531,
+            "character_noise": 0.007875
+        },
+        "img_budget_used": 0.290103,
+        "txt_budget_used": 0.059406,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.0791,
+        "txt_dist": 0.39563,
+        "txt_sim": 0.60437
+    },
+    "swad_metrics": {
+        "iou_0": 0.96177,
+        "delta_m_plus": 1.0,
+        "phi": 0.55656,
+        "swad": 0.55656
+    },
+    "l2_distance": 0.40346,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 327,
+            "ymin": 48,
+            "xmax": 407,
+            "ymax": 218
+        },
+        "bird_1": {
+            "xmin": 119,
+            "ymin": 108,
+            "xmax": 212,
+            "ymax": 301
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"burred\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [78, 172, 124, 228], \"label\": \"burred\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    78,
+                    172,
+                    124,
+                    228
+                ],
+                "label": "burred"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 95,
+        "runtime_seconds": 0.2928
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.06492682111048828,
+        "defocus_blur": 0.009891039155234357,
+        "motion_blur": 0.18137617756067842,
+        "fog_filter": 0.001781752037659655,
+        "pixelate": 0.024759524594795475,
+        "jpeg_filter": 0.007367808356370847
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.025897997974539788,
+        "synonym": 0.01149795292176833,
+        "ata_saliency": 0.005604459281884051,
+        "fragmentation": 0.008530607626239736,
+        "character_noise": 0.007875425060734402
+    }
+}

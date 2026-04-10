@@ -1,0 +1,88 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/143",
+        "folder_id": "143",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00002183.JPEG"
+    },
+    "pareto_index": 24,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 3,
+    "total_evaluations": 90,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "gaussian_noise",
+        "img_scale": 0.3066280691581086,
+        "txt_attack": "homophone",
+        "txt_scale": 0.3266260007593333
+    },
+    "objectives": {
+        "iou": 0.15401,
+        "img_dist": 0.06755,
+        "txt_dist": 0.19253,
+        "txt_sim": 0.80747
+    },
+    "swad_metrics": {
+        "iou_0": 0.81019,
+        "delta_m_plus": 0.80991,
+        "phi": 0.75293,
+        "swad": 0.6098
+    },
+    "l2_distance": 0.25564,
+    "original_prompt": "Identify the objects \"car, flower pot\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "car": {
+            "xmin": 106,
+            "ymin": 105,
+            "xmax": 359,
+            "ymax": 289
+        },
+        "car_1": {
+            "xmin": 353,
+            "ymin": 120,
+            "xmax": 492,
+            "ymax": 228
+        },
+        "car_2": {
+            "xmin": 447,
+            "ymin": 111,
+            "xmax": 499,
+            "ymax": 194
+        },
+        "flower pot": {
+            "xmin": 37,
+            "ymin": 188,
+            "xmax": 83,
+            "ymax": 246
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"cah, flower pot\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [58, 527, 163, 720], \"label\": \"cah\"},\n\t{\"bbox_2d\": [58, 527, 163, 720], \"label\": \"flower pot\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    58,
+                    527,
+                    163,
+                    720
+                ],
+                "label": "cah"
+            },
+            {
+                "bbox_2d": [
+                    58,
+                    527,
+                    163,
+                    720
+                ],
+                "label": "flower pot"
+            }
+        ],
+        "token_count": 72,
+        "raw_token_count": 167,
+        "runtime_seconds": 0.5632
+    }
+}

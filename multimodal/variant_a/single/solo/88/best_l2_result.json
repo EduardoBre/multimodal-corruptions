@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/88",
+        "folder_id": "88",
+        "category": "single/solo",
+        "filename": "ILSVRC2013_val_00000663.JPEG"
+    },
+    "pareto_index": 4,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 14,
+    "total_evaluations": 420,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.017203219200836867,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.6644158982996291
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.05679,
+        "txt_dist": 0.28912,
+        "txt_sim": 0.71088
+    },
+    "swad_metrics": {
+        "iou_0": 0.90495,
+        "delta_m_plus": 1.0,
+        "phi": 0.67051,
+        "swad": 0.67051
+    },
+    "l2_distance": 0.29464,
+    "original_prompt": "Identify the objects \"porcupine\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "porcupine": {
+            "xmin": 112,
+            "ymin": 17,
+            "xmax": 403,
+            "ymax": 332
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"p\u200b\u043e\u200dr\u200d\u0441\u200bu\u0440\u200dine\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [222, 120, 794, 997], \"label\": \"p\u200b\u043e\u200dr\u200d\u0441\u200b\u0443\u200b\u0440\u200b\u0438\u200b\u043d\u200b\u0435\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    222,
+                    120,
+                    794,
+                    997
+                ],
+                "label": "p\u200b\u043e\u200dr\u200d\u0441\u200b\u0443\u200b\u0440\u200b\u0438\u200b\u043d\u200b\u0435"
+            }
+        ],
+        "token_count": 57,
+        "raw_token_count": 61,
+        "runtime_seconds": 0.2154
+    }
+}

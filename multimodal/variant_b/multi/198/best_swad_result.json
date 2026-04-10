@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/198",
+        "folder_id": "198",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00020862.JPEG"
+    },
+    "pareto_index": 12,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 3,
+    "total_evaluations": 75,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.045328,
+            "defocus_blur": 0.038066,
+            "motion_blur": 0.005195,
+            "fog_filter": 0.006355,
+            "pixelate": 0.005933,
+            "jpeg_filter": 0.030381
+        },
+        "text_corruptions": {
+            "homophone": 0.107429,
+            "synonym": 0.089896,
+            "ata_saliency": 0.062203,
+            "fragmentation": 0.050798,
+            "character_noise": 0.111648
+        },
+        "img_budget_used": 0.131258,
+        "txt_budget_used": 0.421974,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.08531,
+        "txt_dist": 0.34887,
+        "txt_sim": 0.65113
+    },
+    "swad_metrics": {
+        "iou_0": 0.62324,
+        "delta_m_plus": 1.0,
+        "phi": 0.59558,
+        "swad": 0.59558
+    },
+    "l2_distance": 0.35915,
+    "original_prompt": "Identify the objects \"backpack, miniskirt, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 104,
+            "ymin": 21,
+            "xmax": 269,
+            "ymax": 487
+        },
+        "backpack": {
+            "xmin": 120,
+            "ymin": 97,
+            "xmax": 139,
+            "ymax": 248
+        },
+        "miniskirt": {
+            "xmin": 115,
+            "ymin": 213,
+            "xmax": 229,
+            "ymax": 312
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"b\u200bc\u0430k p\u0430\u0441k, m\u200d inf\u200b, p\u0435r sn\u043e\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [278, 47, 708, 976], \"label\": \"b\u200bc\u0430k p\u0430\u0441k, m\u200d inf\u200b, p\u0435r sn\u043e\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    278,
+                    47,
+                    708,
+                    976
+                ],
+                "label": "b\u200bc\u0430k p\u0430\u0441k, m\u200d inf\u200b, p\u0435r sn\u043e"
+            }
+        ],
+        "token_count": 57,
+        "raw_token_count": 159,
+        "runtime_seconds": 0.509
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.04532836701703568,
+        "defocus_blur": 0.038066390440017965,
+        "motion_blur": 0.00519523603192843,
+        "fog_filter": 0.006355061284691779,
+        "pixelate": 0.005932589201864957,
+        "jpeg_filter": 0.030380528707593016
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.1074289523233473,
+        "synonym": 0.08989578455828225,
+        "ata_saliency": 0.06220335048060473,
+        "fragmentation": 0.05079754460461802,
+        "character_noise": 0.11164835639202567
+    }
+}

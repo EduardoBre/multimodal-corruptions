@@ -1,0 +1,310 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/157",
+        "folder_id": "157",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00002977.JPEG"
+    },
+    "original_prompt": "Identify the objects \"person, watercraft\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 445,
+            "ymin": 183,
+            "xmax": 481,
+            "ymax": 267
+        },
+        "person_1": {
+            "xmin": 156,
+            "ymin": 195,
+            "xmax": 188,
+            "ymax": 261
+        },
+        "person_2": {
+            "xmin": 390,
+            "ymin": 185,
+            "xmax": 438,
+            "ymax": 273
+        },
+        "watercraft": {
+            "xmin": 84,
+            "ymin": 2,
+            "xmax": 310,
+            "ymax": 189
+        }
+    },
+    "baseline_iou": 0.53743,
+    "swad_star": 0.66027,
+    "swad_star_index": 2,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 3,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.2907,
+                "img_dist": 0.02597,
+                "txt_dist": 0.0787,
+                "txt_sim": 0.9213
+            },
+            "swad_metrics": {
+                "iou_0": 0.53743,
+                "delta_m_plus": 0.45909,
+                "phi": 0.89737,
+                "swad": 0.41198
+            },
+            "l2_distance": 0.30228,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"eprson, watercraft\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [888, 484, 956, 576], \"label\": \"eprson\"},\n\t{\"bbox_2d\": [790, 498, 856, 600], \"label\": \"eprson\"},\n\t{\"bbox_2d\": [328, 520, 372, 650], \"label\": \"eprson\"},\n\t{\"bbox_2d\": [82, 548, 138, 648], \"label\": \"eprson\"},\n\t{\"bbox_2d\": [448, 488, 530, 524], \"label\": \"watercraft\"},\n\t{\"bbox_2d\": [194, 500, 240, 536], \"label\": \"watercraft\"},\n\t{\"bbox_2d\": [588, 420, 638, 460], \"label\": \"watercraft\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            888,
+                            484,
+                            956,
+                            576
+                        ],
+                        "label": "eprson"
+                    },
+                    {
+                        "bbox_2d": [
+                            790,
+                            498,
+                            856,
+                            600
+                        ],
+                        "label": "eprson"
+                    },
+                    {
+                        "bbox_2d": [
+                            328,
+                            520,
+                            372,
+                            650
+                        ],
+                        "label": "eprson"
+                    },
+                    {
+                        "bbox_2d": [
+                            82,
+                            548,
+                            138,
+                            648
+                        ],
+                        "label": "eprson"
+                    },
+                    {
+                        "bbox_2d": [
+                            448,
+                            488,
+                            530,
+                            524
+                        ],
+                        "label": "watercraft"
+                    },
+                    {
+                        "bbox_2d": [
+                            194,
+                            500,
+                            240,
+                            536
+                        ],
+                        "label": "watercraft"
+                    },
+                    {
+                        "bbox_2d": [
+                            588,
+                            420,
+                            638,
+                            460
+                        ],
+                        "label": "watercraft"
+                    }
+                ],
+                "token_count": 247,
+                "raw_token_count": 372,
+                "runtime_seconds": 1.2774
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.6126883641923373,
+                "txt_attack": "homophone",
+                "txt_scale": 0.10684452896191199
+            },
+            "objectives": {
+                "iou": 0.25039,
+                "img_dist": 0.03957,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.53743,
+                "delta_m_plus": 0.5341,
+                "phi": 0.96043,
+                "swad": 0.51296
+            },
+            "l2_distance": 0.2535,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"person, watercraft\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [890, 488, 952, 578], \"label\": \"person\"},\n\t{\"bbox_2d\": [788, 494, 852, 602], \"label\": \"person\"},\n\t{\"bbox_2d\": [332, 528, 370, 630], \"label\": \"person\"},\n\t{\"bbox_2d\": [82, 548, 136, 656], \"label\": \"person\"},\n\t{\"bbox_2d\": [288, 602, 332, 688], \"label\": \"person\"},\n\t{\"bbox_2d\": [448, 676, 500, 716], \"label\": \"person\"},\n\t{\"bbox_2d\": [550, 616, 600, 688], \"label\": \"person\"},\n\t{\"bbox_2d\": [750, 588, 800, 688], \"label\": \"person\"},\n\t{\"bbox_2d\": [448, 492, 536, 524], \"label\": \"watercraft\"},\n\t{\"bbox_2d\": [196, 500, 242, 542], \"label\": \"watercraft\"},\n\t{\"bbox_2d\": [116, 440, 178, 488], \"label\": \"watercraft\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            890,
+                            488,
+                            952,
+                            578
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            788,
+                            494,
+                            852,
+                            602
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            332,
+                            528,
+                            370,
+                            630
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            82,
+                            548,
+                            136,
+                            656
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            288,
+                            602,
+                            332,
+                            688
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            448,
+                            676,
+                            500,
+                            716
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            550,
+                            616,
+                            600,
+                            688
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            750,
+                            588,
+                            800,
+                            688
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            448,
+                            492,
+                            536,
+                            524
+                        ],
+                        "label": "watercraft"
+                    },
+                    {
+                        "bbox_2d": [
+                            196,
+                            500,
+                            242,
+                            542
+                        ],
+                        "label": "watercraft"
+                    },
+                    {
+                        "bbox_2d": [
+                            116,
+                            440,
+                            178,
+                            488
+                        ],
+                        "label": "watercraft"
+                    }
+                ],
+                "token_count": 371,
+                "raw_token_count": 372,
+                "runtime_seconds": 1.2774
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.10193,
+                "txt_dist": 0.26479,
+                "txt_sim": 0.73521
+            },
+            "swad_metrics": {
+                "iou_0": 0.53743,
+                "delta_m_plus": 1.0,
+                "phi": 0.66027,
+                "swad": 0.66027
+            },
+            "l2_distance": 0.28373,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"pursun, wader craft\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [148, 10, 620, 510], \"label\": \"pursun, wader craft\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            148,
+                            10,
+                            620,
+                            510
+                        ],
+                        "label": "pursun, wader craft"
+                    }
+                ],
+                "token_count": 44,
+                "raw_token_count": 372,
+                "runtime_seconds": 1.2774
+            }
+        }
+    ]
+}

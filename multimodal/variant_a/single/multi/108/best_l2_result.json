@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/108",
+        "folder_id": "108",
+        "category": "single/multi",
+        "filename": "ILSVRC2013_val_00000429.JPEG"
+    },
+    "pareto_index": 0,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.019479490436056013,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.4011167653317744
+    },
+    "objectives": {
+        "iou": 0.06434,
+        "img_dist": 0.03822,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.80084,
+        "delta_m_plus": 0.91966,
+        "phi": 0.96178,
+        "swad": 0.88451
+    },
+    "l2_distance": 0.07484,
+    "original_prompt": "Identify the objects \"person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 38,
+            "ymin": 44,
+            "xmax": 171,
+            "ymax": 202
+        },
+        "person_1": {
+            "xmin": 165,
+            "ymin": 81,
+            "xmax": 234,
+            "ymax": 198
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"person\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 999, 999], \"label\": \"person\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    999,
+                    999
+                ],
+                "label": "person"
+            }
+        ],
+        "token_count": 35,
+        "raw_token_count": 200,
+        "runtime_seconds": 0.6557
+    }
+}

@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/241",
+        "folder_id": "241",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00015933.JPEG"
+    },
+    "pareto_index": 18,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 12,
+    "total_evaluations": 345,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.085642,
+            "defocus_blur": 0.306268,
+            "motion_blur": 0.045925,
+            "fog_filter": 0.063875,
+            "pixelate": 0.220727,
+            "jpeg_filter": 0.211015
+        },
+        "text_corruptions": {
+            "homophone": 0.010886,
+            "synonym": 0.101712,
+            "ata_saliency": 0.115719,
+            "fragmentation": 0.353996,
+            "character_noise": 0.152567
+        },
+        "img_budget_used": 0.933454,
+        "txt_budget_used": 0.734879,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.32643,
+        "img_dist": 0.08658,
+        "txt_dist": 0.21824,
+        "txt_sim": 0.78176
+    },
+    "swad_metrics": {
+        "iou_0": 0.96021,
+        "delta_m_plus": 0.66004,
+        "phi": 0.71408,
+        "swad": 0.47132
+    },
+    "l2_distance": 0.4021,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 0,
+            "ymin": 93,
+            "xmax": 133,
+            "ymax": 498
+        },
+        "bird_1": {
+            "xmin": 160,
+            "ymin": 123,
+            "xmax": 331,
+            "ymax": 497
+        },
+        "bird_2": {
+            "xmin": 308,
+            "ymin": 143,
+            "xmax": 373,
+            "ymax": 498
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"b i\u200brd\u200d\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 177, 352, 998], \"label\": \"b i\u200brd\u200d\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    177,
+                    352,
+                    998
+                ],
+                "label": "b i\u200brd\u200d"
+            }
+        ],
+        "token_count": 42,
+        "raw_token_count": 132,
+        "runtime_seconds": 0.3927
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.08564224599230287,
+        "defocus_blur": 0.30626821020204814,
+        "motion_blur": 0.04592534044972178,
+        "fog_filter": 0.06387498970385502,
+        "pixelate": 0.22072739636622474,
+        "jpeg_filter": 0.21101544107459788
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.010885595957282043,
+        "synonym": 0.10171153256336911,
+        "ata_saliency": 0.1157192781623692,
+        "fragmentation": 0.3539956750607032,
+        "character_noise": 0.15256694625339248
+    }
+}

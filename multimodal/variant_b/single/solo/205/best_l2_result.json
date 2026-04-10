@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/205",
+        "folder_id": "205",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00023073.JPEG"
+    },
+    "pareto_index": 13,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 13,
+    "total_evaluations": 375,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.00662,
+            "defocus_blur": 0.011846,
+            "motion_blur": 0.080355,
+            "fog_filter": 0.002913,
+            "pixelate": 0.00576,
+            "jpeg_filter": 0.102354
+        },
+        "text_corruptions": {
+            "homophone": 0.182642,
+            "synonym": 0.008758,
+            "ata_saliency": 0.036376,
+            "fragmentation": 0.016876,
+            "character_noise": 0.00197
+        },
+        "img_budget_used": 0.209847,
+        "txt_budget_used": 0.246622,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.07759,
+        "img_dist": 0.07544,
+        "txt_dist": 0.27038,
+        "txt_sim": 0.72962
+    },
+    "swad_metrics": {
+        "iou_0": 0.87842,
+        "delta_m_plus": 0.91167,
+        "phi": 0.67458,
+        "swad": 0.61499
+    },
+    "l2_distance": 0.29123,
+    "original_prompt": "Identify the objects \"monkey\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "monkey": {
+            "xmin": 26,
+            "ymin": 244,
+            "xmax": 247,
+            "ymax": 478
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"mon\u200dk ey\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [458, 458, 588, 577], \"label\": \"mon\u200dk ey\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    458,
+                    458,
+                    588,
+                    577
+                ],
+                "label": "mon\u200dk ey"
+            }
+        ],
+        "token_count": 43,
+        "raw_token_count": 49,
+        "runtime_seconds": 0.1607
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.006619936683425212,
+        "defocus_blur": 0.011845773909866353,
+        "motion_blur": 0.08035485981325022,
+        "fog_filter": 0.0029132105625781363,
+        "pixelate": 0.00576001670153802,
+        "jpeg_filter": 0.10235356140911968
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.1826424961486076,
+        "synonym": 0.008758421269202704,
+        "ata_saliency": 0.03637604240393563,
+        "fragmentation": 0.01687560247908051,
+        "character_noise": 0.0019697586983550616
+    }
+}

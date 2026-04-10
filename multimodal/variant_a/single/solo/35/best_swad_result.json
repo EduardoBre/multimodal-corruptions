@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/35",
+        "folder_id": "35",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00037811.JPEG"
+    },
+    "pareto_index": 3,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 3,
+    "total_evaluations": 75,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.7890306045407028,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.45676532610398934
+    },
+    "objectives": {
+        "iou": 0.02789,
+        "img_dist": 0.08335,
+        "txt_dist": 0.39802,
+        "txt_sim": 0.60198
+    },
+    "swad_metrics": {
+        "iou_0": 0.95586,
+        "delta_m_plus": 0.97082,
+        "phi": 0.5518,
+        "swad": 0.5357
+    },
+    "l2_distance": 0.40761,
+    "original_prompt": "Identify the objects \"dog\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 1,
+            "ymin": 107,
+            "xmax": 342,
+            "ymax": 373
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"doi\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [355, 299, 458, 430], \"label\": \"doi\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    355,
+                    299,
+                    458,
+                    430
+                ],
+                "label": "doi"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 42,
+        "runtime_seconds": 0.187
+    }
+}

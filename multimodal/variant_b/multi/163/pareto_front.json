@@ -1,0 +1,468 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/163",
+        "folder_id": "163",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00007438.JPEG"
+    },
+    "original_prompt": "Identify the objects \"helmet, person, watercraft\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 167,
+            "ymin": 152,
+            "xmax": 291,
+            "ymax": 249
+        },
+        "person_1": {
+            "xmin": 12,
+            "ymin": 151,
+            "xmax": 107,
+            "ymax": 241
+        },
+        "person_2": {
+            "xmin": 285,
+            "ymin": 157,
+            "xmax": 406,
+            "ymax": 259
+        },
+        "person_3": {
+            "xmin": 440,
+            "ymin": 161,
+            "xmax": 487,
+            "ymax": 221
+        },
+        "person_4": {
+            "xmin": 129,
+            "ymin": 150,
+            "xmax": 159,
+            "ymax": 200
+        },
+        "helmet": {
+            "xmin": 319,
+            "ymin": 157,
+            "xmax": 355,
+            "ymax": 189
+        },
+        "helmet_1": {
+            "xmin": 211,
+            "ymin": 154,
+            "xmax": 244,
+            "ymax": 193
+        },
+        "watercraft": {
+            "xmin": 0,
+            "ymin": 220,
+            "xmax": 324,
+            "ymax": 273
+        },
+        "watercraft_1": {
+            "xmin": 91,
+            "ymin": 170,
+            "xmax": 215,
+            "ymax": 206
+        },
+        "watercraft_2": {
+            "xmin": 450,
+            "ymin": 189,
+            "xmax": 498,
+            "ymax": 228
+        },
+        "watercraft_3": {
+            "xmin": 303,
+            "ymin": 237,
+            "xmax": 466,
+            "ymax": 273
+        },
+        "watercraft_4": {
+            "xmin": 374,
+            "ymin": 187,
+            "xmax": 451,
+            "ymax": 219
+        },
+        "watercraft_5": {
+            "xmin": 245,
+            "ymin": 187,
+            "xmax": 384,
+            "ymax": 214
+        }
+    },
+    "baseline_iou": 0.62594,
+    "swad_star": 0.82114,
+    "swad_star_index": 2,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 3,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.003017,
+                    "defocus_blur": 0.005173,
+                    "motion_blur": 0.000373,
+                    "fog_filter": 0.000299,
+                    "pixelate": 0.000282,
+                    "jpeg_filter": 9.2e-05
+                },
+                "text_corruptions": {
+                    "homophone": 0.010111,
+                    "synonym": 0.022399,
+                    "ata_saliency": 0.113544,
+                    "fragmentation": 0.17832,
+                    "character_noise": 0.201027
+                },
+                "img_budget_used": 0.009237,
+                "txt_budget_used": 0.525402,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.08437,
+                "txt_dist": 0.14473,
+                "txt_sim": 0.85527
+            },
+            "swad_metrics": {
+                "iou_0": 0.62594,
+                "delta_m_plus": 1.0,
+                "phi": 0.78311,
+                "swad": 0.78311
+            },
+            "l2_distance": 0.16753,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"helmet, p\u200b\u0435r son, w\u200ba\u200bt\u0435rcr\u200baft\u200b\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [420, 412, 488, 488], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [644, 420, 708, 500], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [588, 372, 628, 416], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [338, 398, 372, 436], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [256, 400, 288, 436], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [72, 408, 138, 476], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [912, 450, 950, 488], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [568, 416, 628, 500], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [568, 416, 628, 500], \"label\": \"p\u200b\u0435r son\"},\n\t{\"bbox_2d\": [588, 420, 708, 672], \"label\": \"p\u200b\u0435r son\"},\n\t{\"bbox_2d\": [338, 412, 550, 636], \"label\": \"p\u200b\u0435r son\"},\n\t{\"bbox_2d\": [256, 400, 372, 500], \"label\": \"p\u200b\u0435r son\"},\n\t{\"bbox_2d\": [568, 372, 628, 500], \"label\": \"p\u200b\u0435r son\"},\n\t{\"bbox_2d\": [912, 450, 950, 500], \"label\": \"p\u200b\u0435r son\"},\n\t{\"bbox_2d\": [72, 408, 138, 620], \"label\": \"p\u200b\u0435r son\"},\n\t{\"bbox_2d\": [0, 600, 644, 720], \"label\": \"w\u200ba\u200bt\u200be\u200br\u200bc\u200br\u200ba\u200bf\u200bt\"},\n\t{\"bbox_2d\": [192, 488, 372, 550], \"label\": \"w\u200ba\u200bt\u200be\u200br\u200bc\u200br\u200ba\u200bf\u200bt\"},\n\t{\"bbox_2d\": [742, 512, 950, 572], \"label\": \"w\u200ba\u200bt\u200be\u200br\u200bc\u200br\u200ba\u200bf\u200bt\"},\n\t{\"bbox_2d\": [898, 500, 998, 572], \"label\": \"w\u200ba\u200bt\u200be\u200br\u200bc\u200br\u200ba\u200bf\u200bt\"},\n\t{\"bbox_2d\": [600, 500, 742, 572], \"label\": \"w\u200ba\u200bt\u200be\u200br\u200bc\u200br\u200ba\u200bf\u200bt\"},\n\t{\"bbox_2d\": [568, 5",
+                "parsed_predictions": [],
+                "token_count": 800,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.5297
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.003017392139606195,
+                "defocus_blur": 0.005173092500894387,
+                "motion_blur": 0.0003732884033535129,
+                "fog_filter": 0.0002988499966108671,
+                "pixelate": 0.00028243479727759515,
+                "jpeg_filter": 9.150458994510952e-05
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.010111145534892483,
+                "synonym": 0.022399312632897142,
+                "ata_saliency": 0.11354378935474918,
+                "fragmentation": 0.17832039828576896,
+                "character_noise": 0.20102699204166333
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.268636,
+                    "defocus_blur": 0.021461,
+                    "motion_blur": 0.027904,
+                    "fog_filter": 0.207562,
+                    "pixelate": 0.465828,
+                    "jpeg_filter": 0.008143
+                },
+                "text_corruptions": {
+                    "homophone": 0.060818,
+                    "synonym": 0.125356,
+                    "ata_saliency": 0.014033,
+                    "fragmentation": 0.020181,
+                    "character_noise": 0.085548
+                },
+                "img_budget_used": 0.999534,
+                "txt_budget_used": 0.305937,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.56167,
+                "img_dist": 0.10207,
+                "txt_dist": 0.0718,
+                "txt_sim": 0.9282
+            },
+            "swad_metrics": {
+                "iou_0": 0.62594,
+                "delta_m_plus": 0.10268,
+                "phi": 0.83346,
+                "swad": 0.08558
+            },
+            "l2_distance": 0.57537,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"helmet, pe\u200drs\u043en, w\u0430ter\u0441ra\u200dft\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [420, 416, 484, 488], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [644, 424, 708, 500], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [338, 398, 372, 430], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [256, 404, 288, 436], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [588, 376, 620, 408], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [912, 450, 944, 488], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [72, 408, 140, 488], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [568, 416, 620, 500], \"label\": \"person\"},\n\t{\"bbox_2d\": [592, 424, 772, 660], \"label\": \"person\"},\n\t{\"bbox_2d\": [320, 416, 500, 636], \"label\": \"person\"},\n\t{\"bbox_2d\": [250, 408, 300, 500], \"label\": \"person\"},\n\t{\"bbox_2d\": [320, 398, 372, 500], \"label\": \"person\"},\n\t{\"bbox_2d\": [568, 376, 620, 488], \"label\": \"person\"},\n\t{\"bbox_2d\": [912, 450, 944, 500], \"label\": \"person\"},\n\t{\"bbox_2d\": [72, 408, 140, 620], \"label\": \"person\"},\n\t{\"bbox_2d\": [0, 608, 644, 720], \"label\": \"watercraft\"},\n\t{\"bbox_2d\": [192, 476, 338, 540], \"label\": \"watercraft\"},\n\t{\"bbox_2d\": [744, 500, 998, 590], \"label\": \"watercraft\"},\n\t{\"bbox_2d\": [538, 640, 920, 720], \"label\": \"watercraft\"},\n\t{\"bbox_2d\": [892, 608, 1000, 720], \"label\": \"watercraft\"},\n\t{\"bbox_2d\": [488, 496, 772, 576], \"label\": \"watercraft\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            420,
+                            416,
+                            484,
+                            488
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            644,
+                            424,
+                            708,
+                            500
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            338,
+                            398,
+                            372,
+                            430
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            256,
+                            404,
+                            288,
+                            436
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            588,
+                            376,
+                            620,
+                            408
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            912,
+                            450,
+                            944,
+                            488
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            72,
+                            408,
+                            140,
+                            488
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            568,
+                            416,
+                            620,
+                            500
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            592,
+                            424,
+                            772,
+                            660
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            320,
+                            416,
+                            500,
+                            636
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            250,
+                            408,
+                            300,
+                            500
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            320,
+                            398,
+                            372,
+                            500
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            568,
+                            376,
+                            620,
+                            488
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            912,
+                            450,
+                            944,
+                            500
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            72,
+                            408,
+                            140,
+                            620
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            608,
+                            644,
+                            720
+                        ],
+                        "label": "watercraft"
+                    },
+                    {
+                        "bbox_2d": [
+                            192,
+                            476,
+                            338,
+                            540
+                        ],
+                        "label": "watercraft"
+                    },
+                    {
+                        "bbox_2d": [
+                            744,
+                            500,
+                            998,
+                            590
+                        ],
+                        "label": "watercraft"
+                    },
+                    {
+                        "bbox_2d": [
+                            538,
+                            640,
+                            920,
+                            720
+                        ],
+                        "label": "watercraft"
+                    },
+                    {
+                        "bbox_2d": [
+                            892,
+                            608,
+                            1000,
+                            720
+                        ],
+                        "label": "watercraft"
+                    },
+                    {
+                        "bbox_2d": [
+                            488,
+                            496,
+                            772,
+                            576
+                        ],
+                        "label": "watercraft"
+                    }
+                ],
+                "token_count": 709,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.5297
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.2686361724675081,
+                "defocus_blur": 0.021461440707940434,
+                "motion_blur": 0.027903863332126175,
+                "fog_filter": 0.2075615646704154,
+                "pixelate": 0.46582775597304715,
+                "jpeg_filter": 0.008143433314917249
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.06081808853652368,
+                "synonym": 0.12535578510596526,
+                "ata_saliency": 0.014033470548071338,
+                "fragmentation": 0.020181457954154252,
+                "character_noise": 0.08554837435609135
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.038329,
+                    "defocus_blur": 0.046344,
+                    "motion_blur": 0.032712,
+                    "fog_filter": 0.046355,
+                    "pixelate": 0.025693,
+                    "jpeg_filter": 0.078015
+                },
+                "text_corruptions": {
+                    "homophone": 0.243275,
+                    "synonym": 0.043108,
+                    "ata_saliency": 0.145596,
+                    "fragmentation": 0.104274,
+                    "character_noise": 0.193139
+                },
+                "img_budget_used": 0.267448,
+                "txt_budget_used": 0.729391,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.08786,
+                "txt_dist": 0.09976,
+                "txt_sim": 0.90024
+            },
+            "swad_metrics": {
+                "iou_0": 0.62594,
+                "delta_m_plus": 1.0,
+                "phi": 0.82114,
+                "swad": 0.82114
+            },
+            "l2_distance": 0.13293,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"h\u200be\u200blm\u0435t, per\u200bson, wa\u200bt\u200ber\u200dc ra\u200bft\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [420, 410, 488, 488], \"label\": \"h\u200be\u200blm\u0435t\"},\n\t{\"bbox_2d\": [640, 418, 708, 500], \"label\": \"h\u200be\u200blm\u200be\u200bt\"},\n\t{\"bbox_2d\": [338, 396, 372, 430], \"label\": \"h\u200be\u200blm\u200be\u200bt\"},\n\t{\"bbox_2d\": [254, 402, 288, 436], \"label\": \"h\u200be\u200blm\u200be\u200bt\"},\n\t{\"bbox_2d\": [588, 376, 622, 410], \"label\": \"h\u200be\u200blm\u200be\u200bt\"},\n\t{\"bbox_2d\": [910, 448, 948, 488], \"label\": \"h\u200be\u200blm\u200be\u200bt\"},\n\t{\"bbox_2d\": [72, 408, 138, 488], \"label\": \"h\u200be\u200blm\u200be\u200bt\"},\n\t{\"bbox_2d\": [568, 410, 628, 500], \"label\": \"per\u200bson\"},\n\t{\"bbox_2d\": [338, 410, 550, 648], \"label\": \"per\u200bson\"},\n\t{\"bbox_2d\": [588, 418, 800, 680], \"label\": \"per\u200bson\"},\n\t{\"bbox_2d\": [328, 396, 372, 500], \"label\": \"per\u200bson\"},\n\t{\"bbox_2d\": [254, 402, 328, 500], \"label\": \"per\u200bson\"},\n\t{\"bbox_2d\": [568, 376, 628, 500], \"label\": \"per\u200bson\"},\n\t{\"bbox_2d\": [910, 448, 948, 500], \"label\": \"per\u200bson\"},\n\t{\"bbox_2d\": [72, 408, 138, 500], \"label\": \"per\u200bson\"},\n\t{\"bbox_2d\": [0, 600, 650, 720], \"label\": \"wa\u200bt\u200ber\u200dc ra\u200bft\"},\n\t{\"bbox_2d\": [188, 470, 328, 548], \"label\": \"wa\u200bt\u200ber\u200dc ra\u200bft\"},\n\t{\"bbox_2d\": [740, 500, 998, 580], \"label\": \"wa\u200bt\u200ber\u200dc ra\u200bft\"},\n\t{\"bbox_2d\": [898, 500, 998, 580], \"label\": \"wa\u200bt\u200ber\u200dc ra\u200bft\"},\n\t{\"bbox_2d\": [588, 500, 800, 580], \"label\": \"wa\u200bt\u200ber\u200dc ra\u200bft\"},\n\t{\"bbox_2d\": [328, 470, 55",
+                "parsed_predictions": [],
+                "token_count": 800,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.5297
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.03832875056622642,
+                "defocus_blur": 0.046343513522316436,
+                "motion_blur": 0.03271180817764226,
+                "fog_filter": 0.0463549475618832,
+                "pixelate": 0.025693446430611284,
+                "jpeg_filter": 0.07801541438789453
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.24327451125748203,
+                "synonym": 0.043108021470490365,
+                "ata_saliency": 0.14559599244686727,
+                "fragmentation": 0.1042741469849238,
+                "character_noise": 0.19313877201319846
+            }
+        }
+    ]
+}

@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/76",
+        "folder_id": "76",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00033890.JPEG"
+    },
+    "pareto_index": 11,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 45,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.002648,
+            "defocus_blur": 0.256542,
+            "motion_blur": 0.226348,
+            "fog_filter": 0.097852,
+            "pixelate": 0.01,
+            "jpeg_filter": 0.273948
+        },
+        "text_corruptions": {
+            "homophone": 0.008595,
+            "synonym": 0.067941,
+            "ata_saliency": 0.008633,
+            "fragmentation": 0.023285,
+            "character_noise": 0.096362
+        },
+        "img_budget_used": 0.867337,
+        "txt_budget_used": 0.204817,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.24323,
+        "img_dist": 0.09606,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.84703,
+        "delta_m_plus": 0.71284,
+        "phi": 0.90394,
+        "swad": 0.64437
+    },
+    "l2_distance": 0.26151,
+    "original_prompt": "Identify the objects \"fox\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "fox": {
+            "xmin": 129,
+            "ymin": 146,
+            "xmax": 227,
+            "ymax": 288
+        },
+        "fox_1": {
+            "xmin": 292,
+            "ymin": 171,
+            "xmax": 409,
+            "ymax": 251
+        },
+        "fox_2": {
+            "xmin": 180,
+            "ymin": 70,
+            "xmax": 304,
+            "ymax": 285
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"fox\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [258, 408, 400, 750], \"label\": \"fox\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    258,
+                    408,
+                    400,
+                    750
+                ],
+                "label": "fox"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 118,
+        "runtime_seconds": 0.3878
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0026482808493249257,
+        "defocus_blur": 0.2565417966815344,
+        "motion_blur": 0.22634752011643258,
+        "fog_filter": 0.09785156490506608,
+        "pixelate": 0.010000051919128311,
+        "jpeg_filter": 0.2739476718558398
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.00859526365996947,
+        "synonym": 0.06794138557656428,
+        "ata_saliency": 0.00863331116067478,
+        "fragmentation": 0.023284858140047868,
+        "character_noise": 0.09636242761129783
+    }
+}

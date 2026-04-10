@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/225",
+        "folder_id": "225",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00010702.JPEG"
+    },
+    "pareto_index": 25,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 5,
+    "total_evaluations": 150,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "gaussian_noise",
+        "img_scale": 0.04524431675221882,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6076379780908148
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.03467,
+        "txt_dist": 0.24791,
+        "txt_sim": 0.75209
+    },
+    "swad_metrics": {
+        "iou_0": 0.94005,
+        "delta_m_plus": 1.0,
+        "phi": 0.72602,
+        "swad": 0.72602
+    },
+    "l2_distance": 0.25032,
+    "original_prompt": "Identify the objects \"dog, rabbit\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "rabbit": {
+            "xmin": 67,
+            "ymin": 407,
+            "xmax": 333,
+            "ymax": 493
+        },
+        "dog": {
+            "xmin": 127,
+            "ymin": 12,
+            "xmax": 342,
+            "ymax": 420
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"dag, rabid\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [158, 812, 764, 988], \"label\": \"dag, rabid\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    158,
+                    812,
+                    764,
+                    988
+                ],
+                "label": "dag, rabid"
+            }
+        ],
+        "token_count": 42,
+        "raw_token_count": 74,
+        "runtime_seconds": 0.2807
+    }
+}

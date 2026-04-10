@@ -1,0 +1,106 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/204",
+        "folder_id": "204",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00017895.JPEG"
+    },
+    "pareto_index": 22,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 9,
+    "total_evaluations": 255,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.140947,
+            "defocus_blur": 0.067184,
+            "motion_blur": 0.01587,
+            "fog_filter": 0.00575,
+            "pixelate": 0.000285,
+            "jpeg_filter": 0.077242
+        },
+        "text_corruptions": {
+            "homophone": 0.006053,
+            "synonym": 0.216028,
+            "ata_saliency": 0.283519,
+            "fragmentation": 0.015007,
+            "character_noise": 0.002243
+        },
+        "img_budget_used": 0.307278,
+        "txt_budget_used": 0.52285,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.06352,
+        "img_dist": 0.08427,
+        "txt_dist": 0.22112,
+        "txt_sim": 0.77888
+    },
+    "swad_metrics": {
+        "iou_0": 0.62549,
+        "delta_m_plus": 0.89845,
+        "phi": 0.71324,
+        "swad": 0.64081
+    },
+    "l2_distance": 0.24501,
+    "original_prompt": "Identify the objects \"hamburger, table\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "table": {
+            "xmin": 0,
+            "ymin": 60,
+            "xmax": 493,
+            "ymax": 374
+        },
+        "hamburger": {
+            "xmin": 53,
+            "ymin": 83,
+            "xmax": 328,
+            "ymax": 274
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"b\u200duqger, ta\u200bble\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [655, 107, 1000, 484], \"label\": \"b\u200duqger\"},\n\t{\"bbox_2d\": [0, 747, 400, 997], \"label\": \"table\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    655,
+                    107,
+                    1000,
+                    484
+                ],
+                "label": "b\u200duqger"
+            },
+            {
+                "bbox_2d": [
+                    0,
+                    747,
+                    400,
+                    997
+                ],
+                "label": "table"
+            }
+        ],
+        "token_count": 76,
+        "raw_token_count": 87,
+        "runtime_seconds": 0.2796
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.14094747897206744,
+        "defocus_blur": 0.0671841985121299,
+        "motion_blur": 0.015869662495552717,
+        "fog_filter": 0.005749923328879372,
+        "pixelate": 0.0002847165786612495,
+        "jpeg_filter": 0.07724220162329198
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.006052581060131488,
+        "synonym": 0.21602802034309648,
+        "ata_saliency": 0.28351910576134653,
+        "fragmentation": 0.015006819871502501,
+        "character_noise": 0.002243032052658092
+    }
+}

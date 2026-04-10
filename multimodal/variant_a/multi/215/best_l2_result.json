@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/215",
+        "folder_id": "215",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00032274.JPEG"
+    },
+    "pareto_index": 3,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "gaussian_noise",
+        "img_scale": 0.08142031165696761,
+        "txt_attack": "homophone",
+        "txt_scale": 0.2228478256331735
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.03584,
+        "txt_dist": 0.21944,
+        "txt_sim": 0.78056
+    },
+    "swad_metrics": {
+        "iou_0": 0.65132,
+        "delta_m_plus": 1.0,
+        "phi": 0.75258,
+        "swad": 0.75258
+    },
+    "l2_distance": 0.22235,
+    "original_prompt": "Identify the objects \"bicycle, printer\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bicycle": {
+            "xmin": 54,
+            "ymin": 138,
+            "xmax": 203,
+            "ymax": 232
+        },
+        "printer": {
+            "xmin": 259,
+            "ymin": 163,
+            "xmax": 452,
+            "ymax": 309
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"by cycle, prinner\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [548, 487, 905, 807], \"label\": \"by cycle, prinner\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    548,
+                    487,
+                    905,
+                    807
+                ],
+                "label": "by cycle, prinner"
+            }
+        ],
+        "token_count": 43,
+        "raw_token_count": 87,
+        "runtime_seconds": 0.3411
+    }
+}

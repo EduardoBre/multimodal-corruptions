@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/233",
+        "folder_id": "233",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00021149.JPEG"
+    },
+    "pareto_index": 7,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 8,
+    "total_evaluations": 240,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.049911,
+            "defocus_blur": 0.044697,
+            "motion_blur": 0.016275,
+            "fog_filter": 0.005186,
+            "pixelate": 0.004609,
+            "jpeg_filter": 0.011454
+        },
+        "text_corruptions": {
+            "homophone": 0.053458,
+            "synonym": 0.056625,
+            "ata_saliency": 0.177989,
+            "fragmentation": 0.049733,
+            "character_noise": 0.39152
+        },
+        "img_budget_used": 0.132132,
+        "txt_budget_used": 0.729325,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.15334,
+        "img_dist": 0.09622,
+        "txt_dist": 0.35359,
+        "txt_sim": 0.64641
+    },
+    "swad_metrics": {
+        "iou_0": 0.90268,
+        "delta_m_plus": 0.83013,
+        "phi": 0.58421,
+        "swad": 0.48497
+    },
+    "l2_distance": 0.39724,
+    "original_prompt": "Identify the objects \"sheep\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "sheep": {
+            "xmin": 94,
+            "ymin": 77,
+            "xmax": 303,
+            "ymax": 283
+        },
+        "sheep_1": {
+            "xmin": 316,
+            "ymin": 80,
+            "xmax": 450,
+            "ymax": 234
+        },
+        "sheep_2": {
+            "xmin": 458,
+            "ymin": 81,
+            "xmax": 499,
+            "ymax": 176
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"sh\u200de\u200b\u0435p\u200b\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 999, 687], \"label\": \"sh\u200de\u200be\u200bp\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    999,
+                    687
+                ],
+                "label": "sh\u200de\u200be\u200bp"
+            }
+        ],
+        "token_count": 42,
+        "raw_token_count": 124,
+        "runtime_seconds": 0.3928
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.049910676324665,
+        "defocus_blur": 0.04469716771003676,
+        "motion_blur": 0.016274713713301584,
+        "fog_filter": 0.00518580814447972,
+        "pixelate": 0.004608978421951517,
+        "jpeg_filter": 0.011454498053188444
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.053458035795662086,
+        "synonym": 0.056624509618266095,
+        "ata_saliency": 0.1779886813570528,
+        "fragmentation": 0.04973330588175163,
+        "character_noise": 0.39152013028405763
+    }
+}

@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/174",
+        "folder_id": "174",
+        "category": "single/solo",
+        "filename": "ILSVRC2013_val_00002410.JPEG"
+    },
+    "pareto_index": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 7,
+    "total_evaluations": 195,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.018106401902482756,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.41813348293278285
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.0207,
+        "txt_dist": 0.2741,
+        "txt_sim": 0.7259
+    },
+    "swad_metrics": {
+        "iou_0": 0.95397,
+        "delta_m_plus": 1.0,
+        "phi": 0.71087,
+        "swad": 0.71087
+    },
+    "l2_distance": 0.27488,
+    "original_prompt": "Identify the objects \"cup or mug\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "cup or mug": {
+            "xmin": 193,
+            "ymin": 114,
+            "xmax": 276,
+            "ymax": 242
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"\u0441\u200bu\u200bp or\u200b m\u200bu\u200bg\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [388, 333, 552, 719], \"label\": \"\u0441\u200b\u0443\u200b\u043f or\u200b \u043c\u200b\u0443\u200b\u0433\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    388,
+                    333,
+                    552,
+                    719
+                ],
+                "label": "\u0441\u200b\u0443\u200b\u043f or\u200b \u043c\u200b\u0443\u200b\u0433"
+            }
+        ],
+        "token_count": 50,
+        "raw_token_count": 74,
+        "runtime_seconds": 0.2721
+    }
+}

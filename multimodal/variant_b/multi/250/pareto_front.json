@@ -1,0 +1,277 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/250",
+        "folder_id": "250",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00000650.JPEG"
+    },
+    "original_prompt": "Identify the objects \"chair, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 122,
+            "ymin": 78,
+            "xmax": 434,
+            "ymax": 336
+        },
+        "person_1": {
+            "xmin": 21,
+            "ymin": 152,
+            "xmax": 110,
+            "ymax": 330
+        },
+        "person_2": {
+            "xmin": 92,
+            "ymin": 95,
+            "xmax": 207,
+            "ymax": 313
+        },
+        "chair": {
+            "xmin": 0,
+            "ymin": 222,
+            "xmax": 78,
+            "ymax": 336
+        },
+        "chair_1": {
+            "xmin": 390,
+            "ymin": 227,
+            "xmax": 499,
+            "ymax": 306
+        }
+    },
+    "baseline_iou": 0.5144,
+    "swad_star": 0.82261,
+    "swad_star_index": 2,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 3,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.000339,
+                    "defocus_blur": 0.000378,
+                    "motion_blur": 6.7e-05,
+                    "fog_filter": 0.000283,
+                    "pixelate": 8e-06,
+                    "jpeg_filter": 9.4e-05
+                },
+                "text_corruptions": {
+                    "homophone": 0.030413,
+                    "synonym": 0.082982,
+                    "ata_saliency": 0.097586,
+                    "fragmentation": 0.04376,
+                    "character_noise": 0.261556
+                },
+                "img_budget_used": 0.00117,
+                "txt_budget_used": 0.516297,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.06441,
+                "txt_dist": 0.22426,
+                "txt_sim": 0.77574
+            },
+            "swad_metrics": {
+                "iou_0": 0.5144,
+                "delta_m_plus": 1.0,
+                "phi": 0.72577,
+                "swad": 0.72577
+            },
+            "l2_distance": 0.23333,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"\u0441h air, \u0440erso\u200dn\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 999, 999], \"label\": \"\u0441h air, \u0440erso\u200dn\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            999,
+                            999
+                        ],
+                        "label": "\u0441h air, \u0440erso\u200dn"
+                    }
+                ],
+                "token_count": 44,
+                "raw_token_count": 800,
+                "runtime_seconds": 3.0734
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.0003390691780256777,
+                "defocus_blur": 0.0003776614187921041,
+                "motion_blur": 6.732532864856036e-05,
+                "fog_filter": 0.0002831701433295948,
+                "pixelate": 8.34797092738369e-06,
+                "jpeg_filter": 9.422697394638173e-05
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.030412646676694587,
+                "synonym": 0.08298161608853459,
+                "ata_saliency": 0.09758632715702724,
+                "fragmentation": 0.043759905102163876,
+                "character_noise": 0.26155619459869256
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.028669,
+                    "defocus_blur": 0.343291,
+                    "motion_blur": 0.11702,
+                    "fog_filter": 0.001247,
+                    "pixelate": 0.358589,
+                    "jpeg_filter": 0.07449
+                },
+                "text_corruptions": {
+                    "homophone": 0.4385,
+                    "synonym": 0.056844,
+                    "ata_saliency": 0.244588,
+                    "fragmentation": 0.054333,
+                    "character_noise": 0.083977
+                },
+                "img_budget_used": 0.923306,
+                "txt_budget_used": 0.878242,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.68798,
+                "img_dist": 0.07319,
+                "txt_dist": 0.09726,
+                "txt_sim": 0.90274
+            },
+            "swad_metrics": {
+                "iou_0": 0.5144,
+                "delta_m_plus": 0.0,
+                "phi": 0.83667,
+                "swad": 0.0
+            },
+            "l2_distance": 0.69866,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chair, \u0440er\u200bso\u200bn\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [788, 670, 998, 998], \"label\": \"chair\"},\n\t{\"bbox_2d\": [258, 230, 408, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [258, 230, 872, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [38, 458, 188, 998], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            788,
+                            670,
+                            998,
+                            998
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            258,
+                            230,
+                            408,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            258,
+                            230,
+                            872,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            38,
+                            458,
+                            188,
+                            998
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 137,
+                "raw_token_count": 800,
+                "runtime_seconds": 3.0734
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.028668617662975255,
+                "defocus_blur": 0.3432905694461725,
+                "motion_blur": 0.11702019936033647,
+                "fog_filter": 0.0012472547233695252,
+                "pixelate": 0.35858943672027316,
+                "jpeg_filter": 0.07448961055561601
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.4385004064228013,
+                "synonym": 0.05684361663575584,
+                "ata_saliency": 0.24458765314968034,
+                "fragmentation": 0.054332941855170014,
+                "character_noise": 0.08397730030266869
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.001468,
+                    "defocus_blur": 0.009869,
+                    "motion_blur": 0.01811,
+                    "fog_filter": 0.009795,
+                    "pixelate": 0.012916,
+                    "jpeg_filter": 0.008833
+                },
+                "text_corruptions": {
+                    "homophone": 0.049068,
+                    "synonym": 0.086529,
+                    "ata_saliency": 0.121072,
+                    "fragmentation": 0.115172,
+                    "character_noise": 0.008681
+                },
+                "img_budget_used": 0.060992,
+                "txt_budget_used": 0.380523,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.0657,
+                "txt_dist": 0.11954,
+                "txt_sim": 0.88046
+            },
+            "swad_metrics": {
+                "iou_0": 0.5144,
+                "delta_m_plus": 1.0,
+                "phi": 0.82261,
+                "swad": 0.82261
+            },
+            "l2_distance": 0.1364,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chair, p\u200ders\u043ew\u200d\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [808, 680, 998, 998], \"label\": \"chair\"},\n\t{\"bbox_2d\": [0, 700, 100, 998], \"label\": \"chair\"},\n\t{\"bbox_2d\": [65, 700, 220, 998], \"label\": \"chair\"},\n\t{\"bbox_2d\": [658, 630, 848, 850], \"label\": \"chair\"},\n\t{\"bbox_2d\": [258, 230, 872, 998], \"label\": \"pers\u043ew\u200d\"},\n\t{\"bbox_2d\": [258, 230, 872, 998], \"label\": \"pers\u043ew\u200d\"},\n\t{\"bbox_2d\": [258, 230, 872, 998], \"label\": \"pers\u043ew\u200d\"},\n\t{\"bbox_2d\": [258, 230, 872, 998], \"label\": \"pers\u043ew\u200d\"},\n\t{\"bbox_2d\": [258, 230, 872, 998], \"label\": \"pers\u043ew\u200d\"},\n\t{\"bbox_2d\": [258, 230, 872, 998], \"label\": \"pers\u043ew\u200d\"},\n\t{\"bbox_2d\": [258, 230, 872, 998], \"label\": \"pers\u043ew\u200d\"},\n\t{\"bbox_2d\": [258, 230, 872, 998], \"label\": \"pers\u043ew\u200d\"},\n\t{\"bbox_2d\": [258, 230, 872, 998], \"label\": \"pers\u043ew\u200d\"},\n\t{\"bbox_2d\": [258, 230, 872, 998], \"label\": \"pers\u043ew\u200d\"},\n\t{\"bbox_2d\": [258, 230, 872, 998], \"label\": \"pers\u043ew\u200d\"},\n\t{\"bbox_2d\": [258, 230, 872, 998], \"label\": \"pers\u043ew\u200d\"},\n\t{\"bbox_2d\": [258, 230, 872, 998], \"label\": \"pers\u043ew\u200d\"},\n\t{\"bbox_2d\": [258, 230, 872, 998], \"label\": \"pers\u043ew\u200d\"},\n\t{\"bbox_2d\": [258, 230, 872, 998], \"label\": \"pers\u043ew\u200d\"},\n\t{\"bbox_2d\": [258, 230, 872, 998], \"label\": \"pers\u043ew\u200d\"},\n\t{\"bbox_2d\": [258, 230, 872, 998], \"label\": \"pers\u043ew\u200d\"},\n\t{\"bbox_2d\": [258, 230, 872, 998], \"label\": \"pers\u043ew\u200d\"},\n\t",
+                "parsed_predictions": [],
+                "token_count": 800,
+                "raw_token_count": 800,
+                "runtime_seconds": 3.0734
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.0014680443354094315,
+                "defocus_blur": 0.009869225908907948,
+                "motion_blur": 0.01811048949763972,
+                "fog_filter": 0.009795416976433685,
+                "pixelate": 0.012915545510459238,
+                "jpeg_filter": 0.008833136262679737
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.04906794400980739,
+                "synonym": 0.0865293440415263,
+                "ata_saliency": 0.12107220535765087,
+                "fragmentation": 0.11517241475643887,
+                "character_noise": 0.00868060760187958
+            }
+        }
+    ]
+}

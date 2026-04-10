@@ -1,0 +1,115 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/4",
+        "folder_id": "4",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00001919.JPEG"
+    },
+    "pareto_index": 2,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.001155,
+            "defocus_blur": 0.003811,
+            "motion_blur": 0.015166,
+            "fog_filter": 0.010666,
+            "pixelate": 0.011268,
+            "jpeg_filter": 0.051223
+        },
+        "text_corruptions": {
+            "homophone": 0.071009,
+            "synonym": 0.065302,
+            "ata_saliency": 0.464665,
+            "fragmentation": 0.202311,
+            "character_noise": 0.036333
+        },
+        "img_budget_used": 0.093289,
+        "txt_budget_used": 0.83962,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.19324,
+        "img_dist": 0.09014,
+        "txt_dist": 0.09172,
+        "txt_sim": 0.90828
+    },
+    "swad_metrics": {
+        "iou_0": 0.75274,
+        "delta_m_plus": 0.74328,
+        "phi": 0.82641,
+        "swad": 0.61426
+    },
+    "l2_distance": 0.23212,
+    "original_prompt": "Identify the objects \"flower pot\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "flower pot": {
+            "xmin": 221,
+            "ymin": 336,
+            "xmax": 320,
+            "ymax": 448
+        },
+        "flower pot_1": {
+            "xmin": 293,
+            "ymin": 117,
+            "xmax": 373,
+            "ymax": 222
+        },
+        "flower pot_2": {
+            "xmin": 71,
+            "ymin": 261,
+            "xmax": 198,
+            "ymax": 425
+        },
+        "flower pot_3": {
+            "xmin": 0,
+            "ymin": 333,
+            "xmax": 67,
+            "ymax": 446
+        },
+        "flower pot_4": {
+            "xmin": 2,
+            "ymin": 422,
+            "xmax": 102,
+            "ymax": 498
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"flover pot\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [588, 673, 848, 895], \"label\": \"flover pot\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    588,
+                    673,
+                    848,
+                    895
+                ],
+                "label": "flover pot"
+            }
+        ],
+        "token_count": 41,
+        "raw_token_count": 153,
+        "runtime_seconds": 0.5568
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0011552590416317146,
+        "defocus_blur": 0.0038105716726254497,
+        "motion_blur": 0.015165667685066185,
+        "fog_filter": 0.010666248571614172,
+        "pixelate": 0.011268264880758588,
+        "jpeg_filter": 0.0512229096097494
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.07100928461738808,
+        "synonym": 0.06530233995413377,
+        "ata_saliency": 0.4646646386221778,
+        "fragmentation": 0.20231107176447705,
+        "character_noise": 0.03633271525613559
+    }
+}

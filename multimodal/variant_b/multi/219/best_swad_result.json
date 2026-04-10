@@ -1,0 +1,112 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/219",
+        "folder_id": "219",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00026610.JPEG"
+    },
+    "pareto_index": 22,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 3,
+    "total_evaluations": 75,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.078199,
+            "defocus_blur": 0.051489,
+            "motion_blur": 0.040826,
+            "fog_filter": 0.097003,
+            "pixelate": 0.004063,
+            "jpeg_filter": 0.082617
+        },
+        "text_corruptions": {
+            "homophone": 0.019472,
+            "synonym": 0.09638,
+            "ata_saliency": 0.436353,
+            "fragmentation": 0.022446,
+            "character_noise": 0.0676
+        },
+        "img_budget_used": 0.354197,
+        "txt_budget_used": 0.642251,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.10952,
+        "txt_dist": 0.18017,
+        "txt_sim": 0.81983
+    },
+    "swad_metrics": {
+        "iou_0": 0.95112,
+        "delta_m_plus": 1.0,
+        "phi": 0.73004,
+        "swad": 0.73004
+    },
+    "l2_distance": 0.21085,
+    "original_prompt": "Identify the objects \"bow, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 9,
+            "ymin": 240,
+            "xmax": 401,
+            "ymax": 654
+        },
+        "person_1": {
+            "xmin": 584,
+            "ymin": 184,
+            "xmax": 870,
+            "ymax": 766
+        },
+        "bow": {
+            "xmin": 357,
+            "ymin": 140,
+            "xmax": 958,
+            "ymax": 408
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"beau, p\u200derson\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [18, 320, 388, 842], \"label\": \"beau, p\u200derson\"},\n\t{\"bbox_2d\": [567, 238, 852, 999], \"label\": \"beau, p\u200derson\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    18,
+                    320,
+                    388,
+                    842
+                ],
+                "label": "beau, p\u200derson"
+            },
+            {
+                "bbox_2d": [
+                    567,
+                    238,
+                    852,
+                    999
+                ],
+                "label": "beau, p\u200derson"
+            }
+        ],
+        "token_count": 83,
+        "raw_token_count": 140,
+        "runtime_seconds": 0.4839
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.07819927932775156,
+        "defocus_blur": 0.05148885930526582,
+        "motion_blur": 0.040826095798810275,
+        "fog_filter": 0.09700267686309713,
+        "pixelate": 0.0040634741353354695,
+        "jpeg_filter": 0.08261659267202844
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.019472167968270324,
+        "synonym": 0.09638031422990309,
+        "ata_saliency": 0.43635285985487277,
+        "fragmentation": 0.022445608686198867,
+        "character_noise": 0.06760017447291498
+    }
+}

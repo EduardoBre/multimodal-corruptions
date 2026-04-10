@@ -1,0 +1,76 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/117",
+        "folder_id": "117",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00027572.JPEG"
+    },
+    "pareto_index": 12,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 3,
+    "total_evaluations": 75,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.9066365260863412,
+        "txt_attack": "homophone",
+        "txt_scale": 0.9972962936150932
+    },
+    "objectives": {
+        "iou": 0.01983,
+        "img_dist": 0.03583,
+        "txt_dist": 0.26131,
+        "txt_sim": 0.73869
+    },
+    "swad_metrics": {
+        "iou_0": 0.9207,
+        "delta_m_plus": 0.97846,
+        "phi": 0.71222,
+        "swad": 0.69688
+    },
+    "l2_distance": 0.2645,
+    "original_prompt": "Identify the objects \"neck brace, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 167,
+            "ymin": 0,
+            "xmax": 492,
+            "ymax": 373
+        },
+        "neck brace": {
+            "xmin": 229,
+            "ymin": 153,
+            "xmax": 412,
+            "ymax": 303
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"neck brass, pursun\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [518, 472, 570, 536], \"label\": \"neck brass\"},\n\t{\"bbox_2d\": [130, 658, 370, 998], \"label\": \"pursun\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    518,
+                    472,
+                    570,
+                    536
+                ],
+                "label": "neck brass"
+            },
+            {
+                "bbox_2d": [
+                    130,
+                    658,
+                    370,
+                    998
+                ],
+                "label": "pursun"
+            }
+        ],
+        "token_count": 75,
+        "raw_token_count": 76,
+        "runtime_seconds": 0.2762
+    }
+}

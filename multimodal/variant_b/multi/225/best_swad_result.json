@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/225",
+        "folder_id": "225",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00010702.JPEG"
+    },
+    "pareto_index": 16,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.002575,
+            "defocus_blur": 0.011044,
+            "motion_blur": 0.068343,
+            "fog_filter": 0.000481,
+            "pixelate": 0.00218,
+            "jpeg_filter": 0.002441
+        },
+        "text_corruptions": {
+            "homophone": 0.004268,
+            "synonym": 0.02692,
+            "ata_saliency": 0.518514,
+            "fragmentation": 0.110381,
+            "character_noise": 0.136354
+        },
+        "img_budget_used": 0.087063,
+        "txt_budget_used": 0.796437,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.13976,
+        "txt_dist": 0.28715,
+        "txt_sim": 0.71285
+    },
+    "swad_metrics": {
+        "iou_0": 0.91221,
+        "delta_m_plus": 1.0,
+        "phi": 0.61322,
+        "swad": 0.61322
+    },
+    "l2_distance": 0.31936,
+    "original_prompt": "Identify the objects \"dog, rabbit\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "rabbit": {
+            "xmin": 67,
+            "ymin": 407,
+            "xmax": 333,
+            "ymax": 493
+        },
+        "dog": {
+            "xmin": 127,
+            "ymin": 12,
+            "xmax": 342,
+            "ymax": 420
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"c\u0430\u200dn\u0456n\u0435, rabbi\u200dt\u200d\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [168, 812, 772, 980], \"label\": \"c\u0430\u200dn\u0456\u043d\u0435, rabbi\u200dt\u200d\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    168,
+                    812,
+                    772,
+                    980
+                ],
+                "label": "c\u0430\u200dn\u0456\u043d\u0435, rabbi\u200dt\u200d"
+            }
+        ],
+        "token_count": 53,
+        "raw_token_count": 79,
+        "runtime_seconds": 0.2771
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0025748349271556004,
+        "defocus_blur": 0.011044350247307693,
+        "motion_blur": 0.06834254412309372,
+        "fog_filter": 0.0004807426249096395,
+        "pixelate": 0.002179556012479203,
+        "jpeg_filter": 0.002440709592114726
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.004268049688776951,
+        "synonym": 0.026920062216960198,
+        "ata_saliency": 0.5185135514480818,
+        "fragmentation": 0.11038099808820184,
+        "character_noise": 0.1363543714950527
+    }
+}

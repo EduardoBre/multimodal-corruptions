@@ -1,0 +1,76 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/192",
+        "folder_id": "192",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00002075.JPEG"
+    },
+    "pareto_index": 6,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.863144940280058,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6678992108124702
+    },
+    "objectives": {
+        "iou": 0.18367,
+        "img_dist": 0.06654,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.58297,
+        "delta_m_plus": 0.68494,
+        "phi": 0.93346,
+        "swad": 0.63937
+    },
+    "l2_distance": 0.19535,
+    "original_prompt": "Identify the objects \"diaper, table\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "diaper": {
+            "xmin": 184,
+            "ymin": 195,
+            "xmax": 254,
+            "ymax": 261
+        },
+        "table": {
+            "xmin": 0,
+            "ymin": 154,
+            "xmax": 127,
+            "ymax": 209
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"diaper, table\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [488, 640, 550, 796], \"label\": \"diaper\"},\n\t{\"bbox_2d\": [0, 420, 250, 820], \"label\": \"table\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    488,
+                    640,
+                    550,
+                    796
+                ],
+                "label": "diaper"
+            },
+            {
+                "bbox_2d": [
+                    0,
+                    420,
+                    250,
+                    820
+                ],
+                "label": "table"
+            }
+        ],
+        "token_count": 71,
+        "raw_token_count": 81,
+        "runtime_seconds": 0.2826
+    }
+}

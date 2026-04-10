@@ -1,0 +1,106 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/215",
+        "folder_id": "215",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00032274.JPEG"
+    },
+    "pareto_index": 7,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.006876,
+            "defocus_blur": 0.004392,
+            "motion_blur": 0.171708,
+            "fog_filter": 0.000288,
+            "pixelate": 0.000157,
+            "jpeg_filter": 0.064277
+        },
+        "text_corruptions": {
+            "homophone": 0.084833,
+            "synonym": 0.210693,
+            "ata_saliency": 0.002672,
+            "fragmentation": 0.266034,
+            "character_noise": 0.095261
+        },
+        "img_budget_used": 0.247697,
+        "txt_budget_used": 0.659494,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.1012,
+        "txt_dist": 0.08885,
+        "txt_sim": 0.91115
+    },
+    "swad_metrics": {
+        "iou_0": 0.65132,
+        "delta_m_plus": 1.0,
+        "phi": 0.81894,
+        "swad": 0.81894
+    },
+    "l2_distance": 0.13467,
+    "original_prompt": "Identify the objects \"bicycle, printer\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bicycle": {
+            "xmin": 54,
+            "ymin": 138,
+            "xmax": 203,
+            "ymax": 232
+        },
+        "printer": {
+            "xmin": 259,
+            "ymin": 163,
+            "xmax": 452,
+            "ymax": 309
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"by cycle, pr\u0456nter\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [55, 250, 522, 740], \"label\": \"by cycle, pr\u0456nter\"},\n\t{\"bbox_2d\": [550, 478, 905, 867], \"label\": \"by cycle, pr\u0456nter\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    55,
+                    250,
+                    522,
+                    740
+                ],
+                "label": "by cycle, pr\u0456nter"
+            },
+            {
+                "bbox_2d": [
+                    550,
+                    478,
+                    905,
+                    867
+                ],
+                "label": "by cycle, pr\u0456nter"
+            }
+        ],
+        "token_count": 83,
+        "raw_token_count": 84,
+        "runtime_seconds": 0.2635
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.006875821241386594,
+        "defocus_blur": 0.004392397275138214,
+        "motion_blur": 0.17170785028360117,
+        "fog_filter": 0.00028807944615567583,
+        "pixelate": 0.00015669384820260306,
+        "jpeg_filter": 0.06427653546885179
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.08483324860521858,
+        "synonym": 0.2106930189036233,
+        "ata_saliency": 0.0026719136242183486,
+        "fragmentation": 0.266034410772097,
+        "character_noise": 0.09526103344009937
+    }
+}

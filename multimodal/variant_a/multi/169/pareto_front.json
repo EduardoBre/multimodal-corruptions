@@ -1,0 +1,417 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/169",
+        "folder_id": "169",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00007591.JPEG"
+    },
+    "original_prompt": "Identify the objects \"bird, table\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 162,
+            "ymin": 11,
+            "xmax": 411,
+            "ymax": 373
+        },
+        "table": {
+            "xmin": 0,
+            "ymin": 42,
+            "xmax": 442,
+            "ymax": 498
+        }
+    },
+    "baseline_iou": 0.97445,
+    "swad_star": 0.69944,
+    "swad_star_index": 6,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 8,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.8632061743184387,
+                "txt_attack": "synonym",
+                "txt_scale": 0.7724979474714236
+            },
+            "objectives": {
+                "iou": 0.8456,
+                "img_dist": 0.17816,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.97445,
+                "delta_m_plus": 0.13223,
+                "phi": 0.82184,
+                "swad": 0.10867
+            },
+            "l2_distance": 0.86416,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bird, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [358, 0, 944, 748], \"label\": \"bird\"},\n\t{\"bbox_2d\": [0, 272, 1000, 972], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            358,
+                            0,
+                            944,
+                            748
+                        ],
+                        "label": "bird"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            272,
+                            1000,
+                            972
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 69,
+                "raw_token_count": 83,
+                "runtime_seconds": 0.2887
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.97971,
+                "img_dist": 0.05072,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.97445,
+                "delta_m_plus": 0.0,
+                "phi": 0.94928,
+                "swad": 0.0
+            },
+            "l2_distance": 0.98102,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bird, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [364, 28, 924, 748], \"label\": \"bird\"},\n\t{\"bbox_2d\": [0, 101, 1000, 998], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            364,
+                            28,
+                            924,
+                            748
+                        ],
+                        "label": "bird"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            101,
+                            1000,
+                            998
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 70,
+                "raw_token_count": 83,
+                "runtime_seconds": 0.2887
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.87049,
+                "img_dist": 0.04359,
+                "txt_dist": 0.08139,
+                "txt_sim": 0.91861
+            },
+            "swad_metrics": {
+                "iou_0": 0.97445,
+                "delta_m_plus": 0.10669,
+                "phi": 0.87857,
+                "swad": 0.09373
+            },
+            "l2_distance": 0.87537,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bird, tablx\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [364, 27, 924, 748], \"label\": \"bird\"},\n\t{\"bbox_2d\": [0, 267, 1000, 958], \"label\": \"tablx\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            364,
+                            27,
+                            924,
+                            748
+                        ],
+                        "label": "bird"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            267,
+                            1000,
+                            958
+                        ],
+                        "label": "tablx"
+                    }
+                ],
+                "token_count": 71,
+                "raw_token_count": 83,
+                "runtime_seconds": 0.2887
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6124377601560459,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.96352,
+                "img_dist": 0.08662,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.97445,
+                "delta_m_plus": 0.01122,
+                "phi": 0.91338,
+                "swad": 0.01025
+            },
+            "l2_distance": 0.96741,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bird, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [350, 0, 928, 744], \"label\": \"bird\"},\n\t{\"bbox_2d\": [0, 80, 1000, 999], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            350,
+                            0,
+                            928,
+                            744
+                        ],
+                        "label": "bird"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            80,
+                            1000,
+                            999
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 68,
+                "raw_token_count": 83,
+                "runtime_seconds": 0.2887
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.5656671100314771,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.039875089079669634
+            },
+            "objectives": {
+                "iou": 0.96845,
+                "img_dist": 0.08343,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.97445,
+                "delta_m_plus": 0.00616,
+                "phi": 0.91657,
+                "swad": 0.00564
+            },
+            "l2_distance": 0.97204,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bird, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [356, 0, 928, 748], \"label\": \"bird\"},\n\t{\"bbox_2d\": [0, 80, 1000, 999], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            356,
+                            0,
+                            928,
+                            748
+                        ],
+                        "label": "bird"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            80,
+                            1000,
+                            999
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 68,
+                "raw_token_count": 83,
+                "runtime_seconds": 0.2887
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.018595721213425453,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6130568625347235
+            },
+            "objectives": {
+                "iou": 0.67808,
+                "img_dist": 0.05069,
+                "txt_dist": 0.18772,
+                "txt_sim": 0.81228
+            },
+            "swad_metrics": {
+                "iou_0": 0.97445,
+                "delta_m_plus": 0.30414,
+                "phi": 0.77111,
+                "swad": 0.23452
+            },
+            "l2_distance": 0.70541,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bitd, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 103, 1000, 998], \"label\": \"bitd\"},\n\t{\"bbox_2d\": [0, 103, 1000, 998], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            103,
+                            1000,
+                            998
+                        ],
+                        "label": "bitd"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            103,
+                            1000,
+                            998
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 71,
+                "raw_token_count": 83,
+                "runtime_seconds": 0.2887
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.08861,
+                "txt_dist": 0.23256,
+                "txt_sim": 0.76744
+            },
+            "swad_metrics": {
+                "iou_0": 0.97445,
+                "delta_m_plus": 1.0,
+                "phi": 0.69944,
+                "swad": 0.69944
+            },
+            "l2_distance": 0.24887,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"burred, tabel\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 100, 999, 999], \"label\": \"burred, tabel\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            100,
+                            999,
+                            999
+                        ],
+                        "label": "burred, tabel"
+                    }
+                ],
+                "token_count": 40,
+                "raw_token_count": 83,
+                "runtime_seconds": 0.2887
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.98206,
+                "img_dist": 0.03916,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.97445,
+                "delta_m_plus": 0.0,
+                "phi": 0.96084,
+                "swad": 0.0
+            },
+            "l2_distance": 0.98284,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bird, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [362, 28, 920, 748], \"label\": \"bird\"},\n\t{\"bbox_2d\": [0, 87, 1000, 998], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            362,
+                            28,
+                            920,
+                            748
+                        ],
+                        "label": "bird"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            87,
+                            1000,
+                            998
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 69,
+                "raw_token_count": 83,
+                "runtime_seconds": 0.2887
+            }
+        }
+    ]
+}

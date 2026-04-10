@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/181",
+        "folder_id": "181",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00019000.JPEG"
+    },
+    "pareto_index": 24,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 4,
+    "total_evaluations": 120,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.8004900574692112,
+        "txt_attack": "homophone",
+        "txt_scale": 0.3201926010800944
+    },
+    "objectives": {
+        "iou": 0.27862,
+        "img_dist": 0.07295,
+        "txt_dist": 0.13471,
+        "txt_sim": 0.86529
+    },
+    "swad_metrics": {
+        "iou_0": 0.60684,
+        "delta_m_plus": 0.54087,
+        "phi": 0.80217,
+        "swad": 0.43387
+    },
+    "l2_distance": 0.31796,
+    "original_prompt": "Identify the objects \"person, racket, tennis ball\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "racket": {
+            "xmin": 186,
+            "ymin": 137,
+            "xmax": 245,
+            "ymax": 226
+        },
+        "person": {
+            "xmin": 104,
+            "ymin": 131,
+            "xmax": 246,
+            "ymax": 486
+        },
+        "tennis ball": {
+            "xmin": 129,
+            "ymin": 3,
+            "xmax": 139,
+            "ymax": 21
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"purse on, racket, tennis ball\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [308, 588, 472, 778], \"label\": \"purse on\"},\n\t{\"bbox_2d\": [536, 328, 612, 450], \"label\": \"racket\"},\n\t{\"bbox_2d\": [308, 0, 364, 44], \"label\": \"tennis ball\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    308,
+                    588,
+                    472,
+                    778
+                ],
+                "label": "purse on"
+            },
+            {
+                "bbox_2d": [
+                    536,
+                    328,
+                    612,
+                    450
+                ],
+                "label": "racket"
+            },
+            {
+                "bbox_2d": [
+                    308,
+                    0,
+                    364,
+                    44
+                ],
+                "label": "tennis ball"
+            }
+        ],
+        "token_count": 107,
+        "raw_token_count": 120,
+        "runtime_seconds": 0.4439
+    }
+}

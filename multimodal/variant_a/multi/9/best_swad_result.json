@@ -1,0 +1,130 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/9",
+        "folder_id": "9",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00013800.JPEG"
+    },
+    "pareto_index": 7,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.863144940280058,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6678992108124702
+    },
+    "objectives": {
+        "iou": 0.18899,
+        "img_dist": 0.1093,
+        "txt_dist": 0.13412,
+        "txt_sim": 0.86588
+    },
+    "swad_metrics": {
+        "iou_0": 0.54719,
+        "delta_m_plus": 0.65462,
+        "phi": 0.77124,
+        "swad": 0.50487
+    },
+    "l2_distance": 0.25623,
+    "original_prompt": "Identify the objects \"chair, dog, person, sunglasses\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 346,
+            "ymin": 155,
+            "xmax": 380,
+            "ymax": 232
+        },
+        "person_1": {
+            "xmin": 301,
+            "ymin": 127,
+            "xmax": 327,
+            "ymax": 188
+        },
+        "sunglasses": {
+            "xmin": 136,
+            "ymin": 74,
+            "xmax": 177,
+            "ymax": 93
+        },
+        "sunglasses_1": {
+            "xmin": 71,
+            "ymin": 148,
+            "xmax": 88,
+            "ymax": 160
+        },
+        "sunglasses_2": {
+            "xmin": 23,
+            "ymin": 152,
+            "xmax": 40,
+            "ymax": 161
+        },
+        "dog": {
+            "xmin": 125,
+            "ymin": 219,
+            "xmax": 392,
+            "ymax": 477
+        },
+        "chair": {
+            "xmin": 306,
+            "ymin": 173,
+            "xmax": 351,
+            "ymax": 233
+        },
+        "chair_1": {
+            "xmin": 239,
+            "ymin": 186,
+            "xmax": 280,
+            "ymax": 237
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"cher, dag, person, sunglasses\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [368, 448, 938, 948], \"label\": \"cher\"},\n\t{\"bbox_2d\": [368, 448, 938, 948], \"label\": \"dag\"},\n\t{\"bbox_2d\": [256, 112, 556, 868], \"label\": \"person\"},\n\t{\"bbox_2d\": [328, 144, 428, 176], \"label\": \"sunglasses\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    368,
+                    448,
+                    938,
+                    948
+                ],
+                "label": "cher"
+            },
+            {
+                "bbox_2d": [
+                    368,
+                    448,
+                    938,
+                    948
+                ],
+                "label": "dag"
+            },
+            {
+                "bbox_2d": [
+                    256,
+                    112,
+                    556,
+                    868
+                ],
+                "label": "person"
+            },
+            {
+                "bbox_2d": [
+                    328,
+                    144,
+                    428,
+                    176
+                ],
+                "label": "sunglasses"
+            }
+        ],
+        "token_count": 140,
+        "raw_token_count": 533,
+        "runtime_seconds": 1.9816
+    }
+}

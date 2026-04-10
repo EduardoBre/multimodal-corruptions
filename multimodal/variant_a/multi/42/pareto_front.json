@@ -1,0 +1,604 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/42",
+        "folder_id": "42",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00010967.JPEG"
+    },
+    "original_prompt": "Identify the objects \"bench, burrito, cup or mug, table\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bench": {
+            "xmin": 2,
+            "ymin": 0,
+            "xmax": 499,
+            "ymax": 162
+        },
+        "burrito": {
+            "xmin": 187,
+            "ymin": 131,
+            "xmax": 436,
+            "ymax": 214
+        },
+        "cup or mug": {
+            "xmin": 11,
+            "ymin": 182,
+            "xmax": 167,
+            "ymax": 374
+        },
+        "table": {
+            "xmin": 0,
+            "ymin": 139,
+            "xmax": 499,
+            "ymax": 374
+        }
+    },
+    "baseline_iou": 0.94977,
+    "swad_star": 0.68167,
+    "swad_star_index": 8,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 45,
+    "skipped_evaluations": 45,
+    "n_solutions": 9,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.94044,
+                "img_dist": 0.04188,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.94977,
+                "delta_m_plus": 0.00982,
+                "phi": 0.95812,
+                "swad": 0.00941
+            },
+            "l2_distance": 0.94137,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bench, burrito, cup or mug, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 1000, 420], \"label\": \"bench\"},\n\t{\"bbox_2d\": [370, 357, 860, 560], \"label\": \"burrito\"},\n\t{\"bbox_2d\": [28, 500, 325, 997], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [0, 380, 1000, 997], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            420
+                        ],
+                        "label": "bench"
+                    },
+                    {
+                        "bbox_2d": [
+                            370,
+                            357,
+                            860,
+                            560
+                        ],
+                        "label": "burrito"
+                    },
+                    {
+                        "bbox_2d": [
+                            28,
+                            500,
+                            325,
+                            997
+                        ],
+                        "label": "cup or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            380,
+                            1000,
+                            997
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 136,
+                "raw_token_count": 154,
+                "runtime_seconds": 0.4988
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.6126883641923373,
+                "txt_attack": "homophone",
+                "txt_scale": 0.10684452896191199
+            },
+            "objectives": {
+                "iou": 0.71798,
+                "img_dist": 0.05672,
+                "txt_dist": 0.07265,
+                "txt_sim": 0.92735
+            },
+            "swad_metrics": {
+                "iou_0": 0.94977,
+                "delta_m_plus": 0.24405,
+                "phi": 0.87475,
+                "swad": 0.21348
+            },
+            "l2_distance": 0.72387,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bensh, burrito, cup or mug, tabel\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [360, 352, 860, 560], \"label\": \"burrito\"},\n\t{\"bbox_2d\": [28, 500, 322, 997], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [0, 380, 1000, 997], \"label\": \"tabel\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            360,
+                            352,
+                            860,
+                            560
+                        ],
+                        "label": "burrito"
+                    },
+                    {
+                        "bbox_2d": [
+                            28,
+                            500,
+                            322,
+                            997
+                        ],
+                        "label": "cup or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            380,
+                            1000,
+                            997
+                        ],
+                        "label": "tabel"
+                    }
+                ],
+                "token_count": 107,
+                "raw_token_count": 154,
+                "runtime_seconds": 0.4988
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.307337327911573,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.93976,
+                "img_dist": 0.05312,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.94977,
+                "delta_m_plus": 0.01054,
+                "phi": 0.94688,
+                "swad": 0.00998
+            },
+            "l2_distance": 0.94126,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bench, burrito, cup or mug, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 1000, 420], \"label\": \"bench\"},\n\t{\"bbox_2d\": [370, 357, 862, 560], \"label\": \"burrito\"},\n\t{\"bbox_2d\": [28, 500, 325, 997], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [0, 384, 1000, 997], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            420
+                        ],
+                        "label": "bench"
+                    },
+                    {
+                        "bbox_2d": [
+                            370,
+                            357,
+                            862,
+                            560
+                        ],
+                        "label": "burrito"
+                    },
+                    {
+                        "bbox_2d": [
+                            28,
+                            500,
+                            325,
+                            997
+                        ],
+                        "label": "cup or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            384,
+                            1000,
+                            997
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 136,
+                "raw_token_count": 154,
+                "runtime_seconds": 0.4988
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.018595721213425453,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6130568625347235
+            },
+            "objectives": {
+                "iou": 0.76254,
+                "img_dist": 0.04247,
+                "txt_dist": 0.08777,
+                "txt_sim": 0.91223
+            },
+            "swad_metrics": {
+                "iou_0": 0.94977,
+                "delta_m_plus": 0.19713,
+                "phi": 0.87349,
+                "swad": 0.17219
+            },
+            "l2_distance": 0.76875,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bench, burrito, cup or mug, takle\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 1000, 420], \"label\": \"bench\"},\n\t{\"bbox_2d\": [373, 357, 862, 566], \"label\": \"burrito\"},\n\t{\"bbox_2d\": [30, 500, 327, 997], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [306, 162, 448, 417], \"label\": \"tackle\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            420
+                        ],
+                        "label": "bench"
+                    },
+                    {
+                        "bbox_2d": [
+                            373,
+                            357,
+                            862,
+                            566
+                        ],
+                        "label": "burrito"
+                    },
+                    {
+                        "bbox_2d": [
+                            30,
+                            500,
+                            327,
+                            997
+                        ],
+                        "label": "cup or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            306,
+                            162,
+                            448,
+                            417
+                        ],
+                        "label": "tackle"
+                    }
+                ],
+                "token_count": 138,
+                "raw_token_count": 154,
+                "runtime_seconds": 0.4988
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.94266,
+                "img_dist": 0.03889,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.94977,
+                "delta_m_plus": 0.00749,
+                "phi": 0.96111,
+                "swad": 0.00719
+            },
+            "l2_distance": 0.94346,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bench, burrito, cup or mug, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 1000, 420], \"label\": \"bench\"},\n\t{\"bbox_2d\": [371, 357, 860, 562], \"label\": \"burrito\"},\n\t{\"bbox_2d\": [30, 500, 325, 997], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [0, 377, 1000, 997], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            420
+                        ],
+                        "label": "bench"
+                    },
+                    {
+                        "bbox_2d": [
+                            371,
+                            357,
+                            860,
+                            562
+                        ],
+                        "label": "burrito"
+                    },
+                    {
+                        "bbox_2d": [
+                            30,
+                            500,
+                            325,
+                            997
+                        ],
+                        "label": "cup or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            377,
+                            1000,
+                            997
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 136,
+                "raw_token_count": 154,
+                "runtime_seconds": 0.4988
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.03732619454213726,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.33647038540361596
+            },
+            "objectives": {
+                "iou": 0.94898,
+                "img_dist": 0.03454,
+                "txt_dist": 0.06359,
+                "txt_sim": 0.93641
+            },
+            "swad_metrics": {
+                "iou_0": 0.94977,
+                "delta_m_plus": 0.00083,
+                "phi": 0.90407,
+                "swad": 0.00075
+            },
+            "l2_distance": 0.95174,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bench, burrito, cua or mug, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 1000, 420], \"label\": \"bench\"},\n\t{\"bbox_2d\": [370, 354, 862, 564], \"label\": \"burrito\"},\n\t{\"bbox_2d\": [28, 500, 325, 997], \"label\": \"cua or mug\"},\n\t{\"bbox_2d\": [0, 380, 1000, 997], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            420
+                        ],
+                        "label": "bench"
+                    },
+                    {
+                        "bbox_2d": [
+                            370,
+                            354,
+                            862,
+                            564
+                        ],
+                        "label": "burrito"
+                    },
+                    {
+                        "bbox_2d": [
+                            28,
+                            500,
+                            325,
+                            997
+                        ],
+                        "label": "cua or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            380,
+                            1000,
+                            997
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 137,
+                "raw_token_count": 178,
+                "runtime_seconds": 0.5959
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.08646227720474076,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6881327596781619
+            },
+            "objectives": {
+                "iou": 0.53518,
+                "img_dist": 0.05957,
+                "txt_dist": 0.15321,
+                "txt_sim": 0.84679
+            },
+            "swad_metrics": {
+                "iou_0": 0.94977,
+                "delta_m_plus": 0.43652,
+                "phi": 0.79635,
+                "swad": 0.34762
+            },
+            "l2_distance": 0.55986,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bunch, burrito, cup or mug, tay bul\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [368, 356, 860, 560], \"label\": \"burrito\"},\n\t{\"bbox_2d\": [28, 500, 328, 998], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [304, 160, 440, 412], \"label\": \"tay bul\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            368,
+                            356,
+                            860,
+                            560
+                        ],
+                        "label": "burrito"
+                    },
+                    {
+                        "bbox_2d": [
+                            28,
+                            500,
+                            328,
+                            998
+                        ],
+                        "label": "cup or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            304,
+                            160,
+                            440,
+                            412
+                        ],
+                        "label": "tay bul"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 178,
+                "runtime_seconds": 0.5959
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.33787443280380924,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.76169,
+                "img_dist": 0.05094,
+                "txt_dist": 0.09927,
+                "txt_sim": 0.90073
+            },
+            "swad_metrics": {
+                "iou_0": 0.94977,
+                "delta_m_plus": 0.19803,
+                "phi": 0.85485,
+                "swad": 0.16928
+            },
+            "l2_distance": 0.76982,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bench, burrito, cup or mug, tay bull\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 1000, 424], \"label\": \"bench\"},\n\t{\"bbox_2d\": [373, 357, 860, 564], \"label\": \"burrito\"},\n\t{\"bbox_2d\": [30, 500, 327, 997], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [363, 88, 467, 377], \"label\": \"tay bull\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            424
+                        ],
+                        "label": "bench"
+                    },
+                    {
+                        "bbox_2d": [
+                            373,
+                            357,
+                            860,
+                            564
+                        ],
+                        "label": "burrito"
+                    },
+                    {
+                        "bbox_2d": [
+                            30,
+                            500,
+                            327,
+                            997
+                        ],
+                        "label": "cup or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            363,
+                            88,
+                            467,
+                            377
+                        ],
+                        "label": "tay bull"
+                    }
+                ],
+                "token_count": 138,
+                "raw_token_count": 177,
+                "runtime_seconds": 0.629
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.9014415695141608,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6424261740794441
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.06961,
+                "txt_dist": 0.26733,
+                "txt_sim": 0.73267
+            },
+            "swad_metrics": {
+                "iou_0": 0.94977,
+                "delta_m_plus": 1.0,
+                "phi": 0.68167,
+                "swad": 0.68167
+            },
+            "l2_distance": 0.27624,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bnech, burirto, cep or mgu, tabne\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [230, 360, 995, 724], \"label\": \"bnech, burirto, cep or mgu, tabne\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            230,
+                            360,
+                            995,
+                            724
+                        ],
+                        "label": "bnech, burirto, cep or mgu, tabne"
+                    }
+                ],
+                "token_count": 53,
+                "raw_token_count": 177,
+                "runtime_seconds": 0.629
+            }
+        }
+    ]
+}

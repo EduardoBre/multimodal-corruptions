@@ -1,0 +1,202 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/single/multi/105",
+        "folder_id": "105",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00002004.JPEG"
+    },
+    "original_prompt": "Identify the objects \"dog\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 0,
+            "ymin": 68,
+            "xmax": 324,
+            "ymax": 415
+        },
+        "dog_1": {
+            "xmin": 219,
+            "ymin": 15,
+            "xmax": 471,
+            "ymax": 415
+        }
+    },
+    "baseline_iou": 0.91341,
+    "swad_star": 0.67665,
+    "swad_star_index": 2,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 4,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.9151,
+                "img_dist": 0.02422,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.91341,
+                "delta_m_plus": 0.0,
+                "phi": 0.97578,
+                "swad": 0.0
+            },
+            "l2_distance": 0.91542,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 172, 643, 1000], \"label\": \"dog\"},\n\t{\"bbox_2d\": [357, 40, 942, 1000], \"label\": \"dog\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            172,
+                            643,
+                            1000
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            357,
+                            40,
+                            942,
+                            1000
+                        ],
+                        "label": "dog"
+                    }
+                ],
+                "token_count": 71,
+                "raw_token_count": 76,
+                "runtime_seconds": 0.252
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.87983,
+                "img_dist": 0.02477,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.91341,
+                "delta_m_plus": 0.03676,
+                "phi": 0.97523,
+                "swad": 0.03585
+            },
+            "l2_distance": 0.88018,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 170, 648, 1000], \"label\": \"dog\"},\n\t{\"bbox_2d\": [300, 38, 938, 1000], \"label\": \"dog\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            170,
+                            648,
+                            1000
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            300,
+                            38,
+                            938,
+                            1000
+                        ],
+                        "label": "dog"
+                    }
+                ],
+                "token_count": 71,
+                "raw_token_count": 76,
+                "runtime_seconds": 0.252
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6124377601560459,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.06427,
+                "txt_dist": 0.27687,
+                "txt_sim": 0.72313
+            },
+            "swad_metrics": {
+                "iou_0": 0.91341,
+                "delta_m_plus": 1.0,
+                "phi": 0.67665,
+                "swad": 0.67665
+            },
+            "l2_distance": 0.28423,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dig\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "There is no object matching the query \"dig\" in the image.",
+                "parsed_predictions": [],
+                "token_count": 14,
+                "raw_token_count": 76,
+                "runtime_seconds": 0.252
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.018595721213425453,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6130568625347235
+            },
+            "objectives": {
+                "iou": 0.59011,
+                "img_dist": 0.02867,
+                "txt_dist": 0.31761,
+                "txt_sim": 0.68239
+            },
+            "swad_metrics": {
+                "iou_0": 0.91341,
+                "delta_m_plus": 0.35395,
+                "phi": 0.66283,
+                "swad": 0.23461
+            },
+            "l2_distance": 0.67077,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"doa\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 172, 645, 1000], \"label\": \"doa\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            172,
+                            645,
+                            1000
+                        ],
+                        "label": "doa"
+                    }
+                ],
+                "token_count": 39,
+                "raw_token_count": 76,
+                "runtime_seconds": 0.252
+            }
+        }
+    ]
+}

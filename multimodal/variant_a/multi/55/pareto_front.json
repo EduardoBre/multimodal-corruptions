@@ -1,0 +1,532 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/55",
+        "folder_id": "55",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00006373.JPEG"
+    },
+    "original_prompt": "Identify the objects \"guitar, tape player\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "tape player": {
+            "xmin": 1,
+            "ymin": 338,
+            "xmax": 220,
+            "ymax": 482
+        },
+        "guitar": {
+            "xmin": 2,
+            "ymin": 1,
+            "xmax": 251,
+            "ymax": 335
+        },
+        "guitar_1": {
+            "xmin": 255,
+            "ymin": 25,
+            "xmax": 458,
+            "ymax": 366
+        },
+        "guitar_2": {
+            "xmin": 226,
+            "ymin": 319,
+            "xmax": 398,
+            "ymax": 497
+        }
+    },
+    "baseline_iou": 0.88861,
+    "swad_star": 0.75159,
+    "swad_star_index": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 9,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.8632061743184387,
+                "txt_attack": "synonym",
+                "txt_scale": 0.7724979474714236
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.17269,
+                "txt_dist": 0.13329,
+                "txt_sim": 0.86671
+            },
+            "swad_metrics": {
+                "iou_0": 0.88861,
+                "delta_m_plus": 1.0,
+                "phi": 0.71704,
+                "swad": 0.71704
+            },
+            "l2_distance": 0.21815,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"six-string, tape recorder\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 540, 673], \"label\": \"six-string, tape recorder\"},\n\t{\"bbox_2d\": [548, 48, 998, 638], \"label\": \"six-string, tape recorder\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            540,
+                            673
+                        ],
+                        "label": "six-string, tape recorder"
+                    },
+                    {
+                        "bbox_2d": [
+                            548,
+                            48,
+                            998,
+                            638
+                        ],
+                        "label": "six-string, tape recorder"
+                    }
+                ],
+                "token_count": 75,
+                "raw_token_count": 163,
+                "runtime_seconds": 0.676
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.3997956906557353,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.647636093318414
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.06804,
+                "txt_dist": 0.19354,
+                "txt_sim": 0.80646
+            },
+            "swad_metrics": {
+                "iou_0": 0.88861,
+                "delta_m_plus": 1.0,
+                "phi": 0.75159,
+                "swad": 0.75159
+            },
+            "l2_distance": 0.20515,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"guitaa, taep palyer\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 542, 672], \"label\": \"guitaa, taep palyer\"},\n\t{\"bbox_2d\": [548, 48, 998, 740], \"label\": \"guitaa, taep palyer\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            542,
+                            672
+                        ],
+                        "label": "guitaa, taep palyer"
+                    },
+                    {
+                        "bbox_2d": [
+                            548,
+                            48,
+                            998,
+                            740
+                        ],
+                        "label": "guitaa, taep palyer"
+                    }
+                ],
+                "token_count": 83,
+                "raw_token_count": 163,
+                "runtime_seconds": 0.676
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.86631,
+                "img_dist": 0.03824,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.88861,
+                "delta_m_plus": 0.0251,
+                "phi": 0.96176,
+                "swad": 0.02414
+            },
+            "l2_distance": 0.86715,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"guitar, tape player\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [12, 0, 530, 652], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [548, 48, 978, 652], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [530, 630, 868, 1000], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [28, 680, 472, 998], \"label\": \"tape player\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            12,
+                            0,
+                            530,
+                            652
+                        ],
+                        "label": "guitar"
+                    },
+                    {
+                        "bbox_2d": [
+                            548,
+                            48,
+                            978,
+                            652
+                        ],
+                        "label": "guitar"
+                    },
+                    {
+                        "bbox_2d": [
+                            530,
+                            630,
+                            868,
+                            1000
+                        ],
+                        "label": "guitar"
+                    },
+                    {
+                        "bbox_2d": [
+                            28,
+                            680,
+                            472,
+                            998
+                        ],
+                        "label": "tape player"
+                    }
+                ],
+                "token_count": 138,
+                "raw_token_count": 163,
+                "runtime_seconds": 0.676
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6124377601560459,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.70467,
+                "img_dist": 0.11882,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.88861,
+                "delta_m_plus": 0.207,
+                "phi": 0.88118,
+                "swad": 0.1824
+            },
+            "l2_distance": 0.71462,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"guitar, tape player\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 550, 678], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [548, 38, 998, 738], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [0, 660, 472, 998], \"label\": \"tape player\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            550,
+                            678
+                        ],
+                        "label": "guitar"
+                    },
+                    {
+                        "bbox_2d": [
+                            548,
+                            38,
+                            998,
+                            738
+                        ],
+                        "label": "guitar"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            660,
+                            472,
+                            998
+                        ],
+                        "label": "tape player"
+                    }
+                ],
+                "token_count": 101,
+                "raw_token_count": 163,
+                "runtime_seconds": 0.676
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.5656671100314771,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.039875089079669634
+            },
+            "objectives": {
+                "iou": 0.62224,
+                "img_dist": 0.11418,
+                "txt_dist": 0.01477,
+                "txt_sim": 0.98523
+            },
+            "swad_metrics": {
+                "iou_0": 0.88861,
+                "delta_m_plus": 0.29976,
+                "phi": 0.87274,
+                "swad": 0.26161
+            },
+            "l2_distance": 0.6328,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"guitar, tape\u200b player\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 540, 658], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [540, 38, 888, 640], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [800, 38, 1000, 730], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [0, 660, 472, 1000], \"label\": \"tape\u200b player\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            540,
+                            658
+                        ],
+                        "label": "guitar"
+                    },
+                    {
+                        "bbox_2d": [
+                            540,
+                            38,
+                            888,
+                            640
+                        ],
+                        "label": "guitar"
+                    },
+                    {
+                        "bbox_2d": [
+                            800,
+                            38,
+                            1000,
+                            730
+                        ],
+                        "label": "guitar"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            660,
+                            472,
+                            1000
+                        ],
+                        "label": "tape\u200b player"
+                    }
+                ],
+                "token_count": 137,
+                "raw_token_count": 163,
+                "runtime_seconds": 0.676
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.307337327911573,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.04777,
+                "txt_dist": 0.44789,
+                "txt_sim": 0.55211
+            },
+            "swad_metrics": {
+                "iou_0": 0.88861,
+                "delta_m_plus": 1.0,
+                "phi": 0.52574,
+                "swad": 0.52574
+            },
+            "l2_distance": 0.45043,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"git tar, tay player\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [10, 0, 540, 650], \"label\": \"git tar, tay player\"},\n\t{\"bbox_2d\": [552, 40, 998, 620], \"label\": \"git tar, tay player\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            10,
+                            0,
+                            540,
+                            650
+                        ],
+                        "label": "git tar, tay player"
+                    },
+                    {
+                        "bbox_2d": [
+                            552,
+                            40,
+                            998,
+                            620
+                        ],
+                        "label": "git tar, tay player"
+                    }
+                ],
+                "token_count": 78,
+                "raw_token_count": 163,
+                "runtime_seconds": 0.676
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.018595721213425453,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6130568625347235
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.06717,
+                "txt_dist": 0.29742,
+                "txt_sim": 0.70258
+            },
+            "swad_metrics": {
+                "iou_0": 0.88861,
+                "delta_m_plus": 1.0,
+                "phi": 0.65539,
+                "swad": 0.65539
+            },
+            "l2_distance": 0.30491,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"guiqar, tape pdayer\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [20, 688, 468, 998], \"label\": \"guiqar, tape pdayer\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            20,
+                            688,
+                            468,
+                            998
+                        ],
+                        "label": "guiqar, tape pdayer"
+                    }
+                ],
+                "token_count": 44,
+                "raw_token_count": 163,
+                "runtime_seconds": 0.676
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.42424,
+                "img_dist": 0.12385,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.88861,
+                "delta_m_plus": 0.52258,
+                "phi": 0.87615,
+                "swad": 0.45786
+            },
+            "l2_distance": 0.44195,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"guitar, tape player\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [550, 625, 850, 999], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [0, 688, 460, 999], \"label\": \"tape player\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            550,
+                            625,
+                            850,
+                            999
+                        ],
+                        "label": "guitar"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            688,
+                            460,
+                            999
+                        ],
+                        "label": "tape player"
+                    }
+                ],
+                "token_count": 72,
+                "raw_token_count": 163,
+                "runtime_seconds": 0.676
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.68418,
+                "img_dist": 0.03833,
+                "txt_dist": 0.15388,
+                "txt_sim": 0.84612
+            },
+            "swad_metrics": {
+                "iou_0": 0.88861,
+                "delta_m_plus": 0.23006,
+                "phi": 0.81369,
+                "swad": 0.18719
+            },
+            "l2_distance": 0.70232,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"guitar, tay player\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 542, 655], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [550, 48, 998, 655], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [480, 633, 870, 998], \"label\": \"tay player\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            542,
+                            655
+                        ],
+                        "label": "guitar"
+                    },
+                    {
+                        "bbox_2d": [
+                            550,
+                            48,
+                            998,
+                            655
+                        ],
+                        "label": "guitar"
+                    },
+                    {
+                        "bbox_2d": [
+                            480,
+                            633,
+                            870,
+                            998
+                        ],
+                        "label": "tay player"
+                    }
+                ],
+                "token_count": 104,
+                "raw_token_count": 163,
+                "runtime_seconds": 0.676
+            }
+        }
+    ]
+}

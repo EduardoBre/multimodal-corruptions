@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/83",
+        "folder_id": "83",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00000175.JPEG"
+    },
+    "pareto_index": 28,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 9,
+    "total_evaluations": 270,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.06451480608273147,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.2824972512985727
+    },
+    "objectives": {
+        "iou": 0.00564,
+        "img_dist": 0.05313,
+        "txt_dist": 0.28015,
+        "txt_sim": 0.71985
+    },
+    "swad_metrics": {
+        "iou_0": 0.92008,
+        "delta_m_plus": 0.99387,
+        "phi": 0.6816,
+        "swad": 0.67743
+    },
+    "l2_distance": 0.2852,
+    "original_prompt": "Identify the objects \"car\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "car": {
+            "xmin": 49,
+            "ymin": 90,
+            "xmax": 473,
+            "ymax": 296
+        },
+        "car_1": {
+            "xmin": 1,
+            "ymin": 141,
+            "xmax": 54,
+            "ymax": 167
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"cam\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [678, 370, 750, 450], \"label\": \"cam\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    678,
+                    370,
+                    750,
+                    450
+                ],
+                "label": "cam"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 79,
+        "runtime_seconds": 0.2827
+    }
+}

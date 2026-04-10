@@ -1,0 +1,79 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/104",
+        "folder_id": "104",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00045742.JPEG"
+    },
+    "pareto_index": 4,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.6126883641923373,
+        "txt_attack": "homophone",
+        "txt_scale": 0.10684452896191199
+    },
+    "objectives": {
+        "iou": 0.01555,
+        "img_dist": 0.03448,
+        "txt_dist": 0.39563,
+        "txt_sim": 0.60437
+    },
+    "swad_metrics": {
+        "iou_0": 0.81235,
+        "delta_m_plus": 0.98086,
+        "phi": 0.58353,
+        "swad": 0.57236
+    },
+    "l2_distance": 0.39743,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 341,
+            "ymin": 161,
+            "xmax": 495,
+            "ymax": 346
+        },
+        "bird_1": {
+            "xmin": 90,
+            "ymin": 78,
+            "xmax": 171,
+            "ymax": 227
+        },
+        "bird_2": {
+            "xmin": 160,
+            "ymin": 123,
+            "xmax": 242,
+            "ymax": 199
+        },
+        "bird_3": {
+            "xmin": 338,
+            "ymin": 128,
+            "xmax": 403,
+            "ymax": 236
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"burred\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [518, 550, 708, 708], \"label\": \"burred\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    518,
+                    550,
+                    708,
+                    708
+                ],
+                "label": "burred"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 143,
+        "runtime_seconds": 0.5032
+    }
+}

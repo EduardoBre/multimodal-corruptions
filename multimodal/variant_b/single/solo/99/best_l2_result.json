@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/99",
+        "folder_id": "99",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00005430.JPEG"
+    },
+    "pareto_index": 9,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 6,
+    "total_evaluations": 165,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.092141,
+            "defocus_blur": 0.028965,
+            "motion_blur": 0.061743,
+            "fog_filter": 0.004364,
+            "pixelate": 0.000428,
+            "jpeg_filter": 0.003848
+        },
+        "text_corruptions": {
+            "homophone": 0.051192,
+            "synonym": 0.025441,
+            "ata_saliency": 0.099706,
+            "fragmentation": 0.021288,
+            "character_noise": 0.023442
+        },
+        "img_budget_used": 0.191491,
+        "txt_budget_used": 0.221068,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0331,
+        "img_dist": 0.09542,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.97428,
+        "delta_m_plus": 0.96603,
+        "phi": 0.90458,
+        "swad": 0.87385
+    },
+    "l2_distance": 0.101,
+    "original_prompt": "Identify the objects \"can opener\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "can opener": {
+            "xmin": 192,
+            "ymin": 99,
+            "xmax": 529,
+            "ymax": 337
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"can opener\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [520, 599, 587, 724], \"label\": \"can opener\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    520,
+                    599,
+                    587,
+                    724
+                ],
+                "label": "can opener"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 48,
+        "runtime_seconds": 0.1672
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.09214139812768085,
+        "defocus_blur": 0.02896548763979285,
+        "motion_blur": 0.061742577550032776,
+        "fog_filter": 0.004364408598478531,
+        "pixelate": 0.0004283830192072593,
+        "jpeg_filter": 0.0038482479110163825
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.051191612469043205,
+        "synonym": 0.025440985655924623,
+        "ata_saliency": 0.09970555638352649,
+        "fragmentation": 0.02128848338099701,
+        "character_noise": 0.0234416728671082
+    }
+}

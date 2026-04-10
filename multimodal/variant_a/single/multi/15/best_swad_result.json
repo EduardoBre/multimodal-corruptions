@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/15",
+        "folder_id": "15",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00041932.JPEG"
+    },
+    "pareto_index": 3,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 4,
+    "total_evaluations": 120,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.019448432070985844,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.24927259019092207
+    },
+    "objectives": {
+        "iou": 0.04445,
+        "img_dist": 0.02711,
+        "txt_dist": 0.23189,
+        "txt_sim": 0.76811
+    },
+    "swad_metrics": {
+        "iou_0": 0.96509,
+        "delta_m_plus": 0.95394,
+        "phi": 0.74729,
+        "swad": 0.71287
+    },
+    "l2_distance": 0.23766,
+    "original_prompt": "Identify the objects \"face powder\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "face powder": {
+            "xmin": 5,
+            "ymin": 10,
+            "xmax": 347,
+            "ymax": 316
+        },
+        "face powder_1": {
+            "xmin": 279,
+            "ymin": 118,
+            "xmax": 618,
+            "ymax": 433
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"f\u0430c\u200be\u200d \u0440o\u200bwder\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [355, 28, 532, 220], \"label\": \"f\u0430c\u200be\u200d \u0440o\u200bwder\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    355,
+                    28,
+                    532,
+                    220
+                ],
+                "label": "f\u0430c\u200be\u200d \u0440o\u200bwder"
+            }
+        ],
+        "token_count": 49,
+        "raw_token_count": 77,
+        "runtime_seconds": 0.2648
+    }
+}

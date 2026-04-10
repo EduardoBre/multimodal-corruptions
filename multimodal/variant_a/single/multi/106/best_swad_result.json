@@ -1,0 +1,73 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/106",
+        "folder_id": "106",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00014679.JPEG"
+    },
+    "pareto_index": 15,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 3,
+    "total_evaluations": 90,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.9276926850356338,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.4436718794106229
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.06921,
+        "txt_dist": 0.27104,
+        "txt_sim": 0.72896
+    },
+    "swad_metrics": {
+        "iou_0": 0.92934,
+        "delta_m_plus": 1.0,
+        "phi": 0.67851,
+        "swad": 0.67851
+    },
+    "l2_distance": 0.27974,
+    "original_prompt": "Identify the objects \"chair\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "chair": {
+            "xmin": 266,
+            "ymin": 52,
+            "xmax": 388,
+            "ymax": 271
+        },
+        "chair_1": {
+            "xmin": 156,
+            "ymin": 54,
+            "xmax": 264,
+            "ymax": 256
+        },
+        "chair_2": {
+            "xmin": 0,
+            "ymin": 79,
+            "xmax": 160,
+            "ymax": 323
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"chaiw\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [857, 210, 1000, 450], \"label\": \"chaiw\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    857,
+                    210,
+                    1000,
+                    450
+                ],
+                "label": "chaiw"
+            }
+        ],
+        "token_count": 41,
+        "raw_token_count": 122,
+        "runtime_seconds": 0.3734
+    }
+}

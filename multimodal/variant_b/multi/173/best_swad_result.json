@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/173",
+        "folder_id": "173",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00036814.JPEG"
+    },
+    "pareto_index": 3,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.027426,
+            "defocus_blur": 0.294042,
+            "motion_blur": 0.01753,
+            "fog_filter": 0.067728,
+            "pixelate": 0.052094,
+            "jpeg_filter": 0.010445
+        },
+        "text_corruptions": {
+            "homophone": 0.001683,
+            "synonym": 0.117819,
+            "ata_saliency": 0.491103,
+            "fragmentation": 0.034779,
+            "character_noise": 0.144411
+        },
+        "img_budget_used": 0.469266,
+        "txt_budget_used": 0.789795,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.06297,
+        "txt_dist": 0.25808,
+        "txt_sim": 0.74192
+    },
+    "swad_metrics": {
+        "iou_0": 0.97025,
+        "delta_m_plus": 1.0,
+        "phi": 0.6952,
+        "swad": 0.6952
+    },
+    "l2_distance": 0.26565,
+    "original_prompt": "Identify the objects \"band aid, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 0,
+            "ymin": 48,
+            "xmax": 442,
+            "ymax": 328
+        },
+        "band aid": {
+            "xmin": 83,
+            "ymin": 155,
+            "xmax": 236,
+            "ymax": 288
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"badn aid, e\u0440\u200brson\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 140, 999, 999], \"label\": \"badn aid, e\u0440\u200brson\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    140,
+                    999,
+                    999
+                ],
+                "label": "badn aid, e\u0440\u200brson"
+            }
+        ],
+        "token_count": 45,
+        "raw_token_count": 87,
+        "runtime_seconds": 0.2862
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0274264703211317,
+        "defocus_blur": 0.2940420435548486,
+        "motion_blur": 0.01753032175682892,
+        "fog_filter": 0.067728176644843,
+        "pixelate": 0.05209393708480466,
+        "jpeg_filter": 0.010445141470275313
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.0016827701701915272,
+        "synonym": 0.11781899712033714,
+        "ata_saliency": 0.49110266595230384,
+        "fragmentation": 0.03477927047447234,
+        "character_noise": 0.1444111584177241
+    }
+}

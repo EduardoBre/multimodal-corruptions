@@ -1,0 +1,94 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/171",
+        "folder_id": "171",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00021838.JPEG"
+    },
+    "pareto_index": 12,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 3,
+    "total_evaluations": 75,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.03610520451161549,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.33647038540361596
+    },
+    "objectives": {
+        "iou": 0.00519,
+        "img_dist": 0.04094,
+        "txt_dist": 0.25639,
+        "txt_sim": 0.74361
+    },
+    "swad_metrics": {
+        "iou_0": 0.7441,
+        "delta_m_plus": 0.99303,
+        "phi": 0.71317,
+        "swad": 0.70819
+    },
+    "l2_distance": 0.25969,
+    "original_prompt": "Identify the objects \"dog, flower pot\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 172,
+            "ymin": 128,
+            "xmax": 460,
+            "ymax": 315
+        },
+        "dog_1": {
+            "xmin": 28,
+            "ymin": 91,
+            "xmax": 176,
+            "ymax": 305
+        },
+        "flower pot": {
+            "xmin": 46,
+            "ymin": 145,
+            "xmax": 68,
+            "ymax": 164
+        },
+        "flower pot_1": {
+            "xmin": 63,
+            "ymin": 134,
+            "xmax": 87,
+            "ymax": 165
+        },
+        "flower pot_2": {
+            "xmin": 32,
+            "ymin": 138,
+            "xmax": 60,
+            "ymax": 164
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"odg, flower opt\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [788, 400, 908, 470], \"label\": \"odg, flower opt\"},\n\t{\"bbox_2d\": [558, 300, 630, 370], \"label\": \"odg, flower opt\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    788,
+                    400,
+                    908,
+                    470
+                ],
+                "label": "odg, flower opt"
+            },
+            {
+                "bbox_2d": [
+                    558,
+                    300,
+                    630,
+                    370
+                ],
+                "label": "odg, flower opt"
+            }
+        ],
+        "token_count": 80,
+        "raw_token_count": 176,
+        "runtime_seconds": 0.5803
+    }
+}

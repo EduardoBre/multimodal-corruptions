@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/28",
+        "folder_id": "28",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00037896.JPEG"
+    },
+    "pareto_index": 2,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 60,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.244029,
+            "defocus_blur": 0.17779,
+            "motion_blur": 0.028301,
+            "fog_filter": 0.012507,
+            "pixelate": 0.036592,
+            "jpeg_filter": 0.067966
+        },
+        "text_corruptions": {
+            "homophone": 0.000152,
+            "synonym": 0.000191,
+            "ata_saliency": 0.000257,
+            "fragmentation": 0.001017,
+            "character_noise": 0.000259
+        },
+        "img_budget_used": 0.567185,
+        "txt_budget_used": 0.001877,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0175,
+        "img_dist": 0.07786,
+        "txt_dist": 0.38125,
+        "txt_sim": 0.61875
+    },
+    "swad_metrics": {
+        "iou_0": 0.83199,
+        "delta_m_plus": 0.97897,
+        "phi": 0.57057,
+        "swad": 0.55857
+    },
+    "l2_distance": 0.38951,
+    "original_prompt": "Identify the objects \"dog\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 17,
+            "ymin": 67,
+            "xmax": 240,
+            "ymax": 374
+        },
+        "dog_1": {
+            "xmin": 329,
+            "ymin": 81,
+            "xmax": 463,
+            "ymax": 333
+        },
+        "dog_2": {
+            "xmin": 213,
+            "ymin": 66,
+            "xmax": 352,
+            "ymax": 328
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"can ine\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [800, 0, 1000, 312], \"label\": \"can ine\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    800,
+                    0,
+                    1000,
+                    312
+                ],
+                "label": "can ine"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 114,
+        "runtime_seconds": 0.4145
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.24402895787783938,
+        "defocus_blur": 0.17778971919606912,
+        "motion_blur": 0.028301444471411558,
+        "fog_filter": 0.012506710343468027,
+        "pixelate": 0.036591912202814963,
+        "jpeg_filter": 0.06796592703105762
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.0001522814608226715,
+        "synonym": 0.000191067811237569,
+        "ata_saliency": 0.0002573045417682089,
+        "fragmentation": 0.0010171974564038122,
+        "character_noise": 0.0002592580787951445
+    }
+}

@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/133",
+        "folder_id": "133",
+        "category": "single/solo",
+        "filename": "ILSVRC2013_val_00004422.JPEG"
+    },
+    "pareto_index": 13,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 10,
+    "total_evaluations": 300,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.173636,
+            "defocus_blur": 0.009158,
+            "motion_blur": 0.026526,
+            "fog_filter": 0.003602,
+            "pixelate": 0.019884,
+            "jpeg_filter": 0.004592
+        },
+        "text_corruptions": {
+            "homophone": 0.156415,
+            "synonym": 0.308145,
+            "ata_saliency": 0.083932,
+            "fragmentation": 0.107672,
+            "character_noise": 0.147705
+        },
+        "img_budget_used": 0.2374,
+        "txt_budget_used": 0.803869,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.05854,
+        "img_dist": 0.09851,
+        "txt_dist": 0.28925,
+        "txt_sim": 0.71075
+    },
+    "swad_metrics": {
+        "iou_0": 0.94603,
+        "delta_m_plus": 0.93812,
+        "phi": 0.64073,
+        "swad": 0.60109
+    },
+    "l2_distance": 0.31112,
+    "original_prompt": "Identify the objects \"person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 231,
+            "ymin": 53,
+            "xmax": 300,
+            "ymax": 278
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"peryon\u200b\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [532, 400, 700, 478], \"label\": \"peryon\u200b\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    532,
+                    400,
+                    700,
+                    478
+                ],
+                "label": "peryon\u200b"
+            }
+        ],
+        "token_count": 41,
+        "raw_token_count": 51,
+        "runtime_seconds": 0.1703
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.17363645332435163,
+        "defocus_blur": 0.009158451150362732,
+        "motion_blur": 0.026526463381044335,
+        "fog_filter": 0.0036018432063418047,
+        "pixelate": 0.01988438335724028,
+        "jpeg_filter": 0.004592451397511572
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.15641524715744348,
+        "synonym": 0.3081447193031547,
+        "ata_saliency": 0.08393190508322373,
+        "fragmentation": 0.10767228214093166,
+        "character_noise": 0.14770507635282396
+    }
+}

@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/58",
+        "folder_id": "58",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00030271.JPEG"
+    },
+    "pareto_index": 6,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.063855,
+            "defocus_blur": 0.029112,
+            "motion_blur": 0.217803,
+            "fog_filter": 0.175249,
+            "pixelate": 0.014148,
+            "jpeg_filter": 0.358568
+        },
+        "text_corruptions": {
+            "homophone": 0.057872,
+            "synonym": 0.045079,
+            "ata_saliency": 0.486069,
+            "fragmentation": 0.167845,
+            "character_noise": 0.114923
+        },
+        "img_budget_used": 0.858736,
+        "txt_budget_used": 0.871787,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.077,
+        "txt_dist": 0.29761,
+        "txt_sim": 0.70239
+    },
+    "swad_metrics": {
+        "iou_0": 0.85979,
+        "delta_m_plus": 1.0,
+        "phi": 0.64831,
+        "swad": 0.64831
+    },
+    "l2_distance": 0.30741,
+    "original_prompt": "Identify the objects \"dog\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 254,
+            "ymin": 104,
+            "xmax": 797,
+            "ymax": 867
+        },
+        "dog_1": {
+            "xmin": 93,
+            "ymin": 104,
+            "xmax": 445,
+            "ymax": 871
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"od\u200bg\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [714, 955, 972, 980], \"label\": \"od\u200bg\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    714,
+                    955,
+                    972,
+                    980
+                ],
+                "label": "od\u200bg"
+            }
+        ],
+        "token_count": 41,
+        "raw_token_count": 83,
+        "runtime_seconds": 0.332
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0638552805822261,
+        "defocus_blur": 0.029111952741308882,
+        "motion_blur": 0.21780333515653283,
+        "fog_filter": 0.17524906179247599,
+        "pixelate": 0.014148469128018286,
+        "jpeg_filter": 0.35856778476672213
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.05787183687393465,
+        "synonym": 0.045079012684516695,
+        "ata_saliency": 0.4860693361658908,
+        "fragmentation": 0.16784454046405226,
+        "character_noise": 0.11492254919476878
+    }
+}

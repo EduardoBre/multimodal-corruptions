@@ -1,0 +1,109 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/178",
+        "folder_id": "178",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00047487.JPEG"
+    },
+    "pareto_index": 28,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 6,
+    "total_evaluations": 165,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.031488,
+            "defocus_blur": 0.172245,
+            "motion_blur": 0.059086,
+            "fog_filter": 0.091913,
+            "pixelate": 0.001213,
+            "jpeg_filter": 0.000668
+        },
+        "text_corruptions": {
+            "homophone": 0.084561,
+            "synonym": 0.528205,
+            "ata_saliency": 0.000438,
+            "fragmentation": 0.009422,
+            "character_noise": 0.048178
+        },
+        "img_budget_used": 0.356613,
+        "txt_budget_used": 0.670803,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.10252,
+        "txt_dist": 0.24697,
+        "txt_sim": 0.75303
+    },
+    "swad_metrics": {
+        "iou_0": 0.63581,
+        "delta_m_plus": 1.0,
+        "phi": 0.67583,
+        "swad": 0.67583
+    },
+    "l2_distance": 0.2674,
+    "original_prompt": "Identify the objects \"dog, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 108,
+            "ymin": 0,
+            "xmax": 344,
+            "ymax": 237
+        },
+        "person_1": {
+            "xmin": 317,
+            "ymin": 0,
+            "xmax": 366,
+            "ymax": 82
+        },
+        "person_2": {
+            "xmin": 367,
+            "ymin": 0,
+            "xmax": 399,
+            "ymax": 29
+        },
+        "dog": {
+            "xmin": 37,
+            "ymin": 65,
+            "xmax": 306,
+            "ymax": 266
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"canin\u0435, per sop\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [87, 247, 755, 899], \"label\": \"canin\u0435, per sop\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    87,
+                    247,
+                    755,
+                    899
+                ],
+                "label": "canin\u0435, per sop"
+            }
+        ],
+        "token_count": 43,
+        "raw_token_count": 120,
+        "runtime_seconds": 0.3939
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.03148823357266789,
+        "defocus_blur": 0.17224518005862602,
+        "motion_blur": 0.059086138287074125,
+        "fog_filter": 0.09191265664495152,
+        "pixelate": 0.0012129980799522756,
+        "jpeg_filter": 0.0006680179071591307
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.08456065289052085,
+        "synonym": 0.5282050191393604,
+        "ata_saliency": 0.00043789359348642143,
+        "fragmentation": 0.009421765106855114,
+        "character_noise": 0.04817801663041222
+    }
+}

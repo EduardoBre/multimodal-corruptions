@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/170",
+        "folder_id": "170",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00045152.JPEG"
+    },
+    "pareto_index": 6,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "fog_filter",
+        "img_scale": 0.02226035255626979,
+        "txt_attack": "homophone",
+        "txt_scale": 0.4303904312548027
+    },
+    "objectives": {
+        "iou": 0.29575,
+        "img_dist": 0.07839,
+        "txt_dist": 0.21063,
+        "txt_sim": 0.78937
+    },
+    "swad_metrics": {
+        "iou_0": 0.68895,
+        "delta_m_plus": 0.57072,
+        "phi": 0.72749,
+        "swad": 0.4152
+    },
+    "l2_distance": 0.37145,
+    "original_prompt": "Identify the objects \"bicycle, helmet, person, sunglasses\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 106,
+            "ymin": 90,
+            "xmax": 373,
+            "ymax": 490
+        },
+        "sunglasses": {
+            "xmin": 153,
+            "ymin": 135,
+            "xmax": 230,
+            "ymax": 176
+        },
+        "bicycle": {
+            "xmin": 28,
+            "ymin": 287,
+            "xmax": 373,
+            "ymax": 498
+        },
+        "helmet": {
+            "xmin": 143,
+            "ymin": 91,
+            "xmax": 225,
+            "ymax": 201
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"by cycle, helmet, purse on, sung lasses\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [388, 187, 607, 343], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [648, 248, 997, 433], \"label\": \"purse on\"},\n\t{\"bbox_2d\": [424, 300, 552, 343], \"label\": \"sung lasses\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    388,
+                    187,
+                    607,
+                    343
+                ],
+                "label": "helmet"
+            },
+            {
+                "bbox_2d": [
+                    648,
+                    248,
+                    997,
+                    433
+                ],
+                "label": "purse on"
+            },
+            {
+                "bbox_2d": [
+                    424,
+                    300,
+                    552,
+                    343
+                ],
+                "label": "sung lasses"
+            }
+        ],
+        "token_count": 111,
+        "raw_token_count": 195,
+        "runtime_seconds": 0.7053
+    }
+}

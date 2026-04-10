@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/197",
+        "folder_id": "197",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00034931.JPEG"
+    },
+    "pareto_index": 7,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.030484,
+            "defocus_blur": 0.000941,
+            "motion_blur": 0.064849,
+            "fog_filter": 0.070205,
+            "pixelate": 0.043913,
+            "jpeg_filter": 0.026778
+        },
+        "text_corruptions": {
+            "homophone": 0.019593,
+            "synonym": 0.065276,
+            "ata_saliency": 0.045198,
+            "fragmentation": 0.015837,
+            "character_noise": 0.199032
+        },
+        "img_budget_used": 0.23717,
+        "txt_budget_used": 0.344936,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.0898,
+        "txt_dist": 0.24753,
+        "txt_sim": 0.75247
+    },
+    "swad_metrics": {
+        "iou_0": 0.95492,
+        "delta_m_plus": 1.0,
+        "phi": 0.6849,
+        "swad": 0.6849
+    },
+    "l2_distance": 0.26332,
+    "original_prompt": "Identify the objects \"dog, sofa\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 131,
+            "ymin": 48,
+            "xmax": 351,
+            "ymax": 361
+        },
+        "sofa": {
+            "xmin": 12,
+            "ymin": 0,
+            "xmax": 498,
+            "ymax": 295
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"cani\u200bn\u200be\u200d, s\u043eea\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [264, 148, 692, 960], \"label\": \"cani\u200bn\u200be\u200d, s\u043eea\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    264,
+                    148,
+                    692,
+                    960
+                ],
+                "label": "cani\u200bn\u200be\u200d, s\u043eea"
+            }
+        ],
+        "token_count": 50,
+        "raw_token_count": 82,
+        "runtime_seconds": 0.305
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.030484147860178386,
+        "defocus_blur": 0.0009411795255335378,
+        "motion_blur": 0.06484930896817023,
+        "fog_filter": 0.07020486379078252,
+        "pixelate": 0.04391251962983112,
+        "jpeg_filter": 0.026778173046171888
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.019593467417296798,
+        "synonym": 0.06527614984377926,
+        "ata_saliency": 0.04519778259271178,
+        "fragmentation": 0.01583654558512393,
+        "character_noise": 0.19903229899086283
+    }
+}

@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/175",
+        "folder_id": "175",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00036275.JPEG"
+    },
+    "pareto_index": 0,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.014796,
+            "defocus_blur": 0.257159,
+            "motion_blur": 0.046742,
+            "fog_filter": 0.035424,
+            "pixelate": 0.086619,
+            "jpeg_filter": 0.146275
+        },
+        "text_corruptions": {
+            "homophone": 0.003147,
+            "synonym": 0.069156,
+            "ata_saliency": 0.399088,
+            "fragmentation": 0.209258,
+            "character_noise": 0.166236
+        },
+        "img_budget_used": 0.587015,
+        "txt_budget_used": 0.846885,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.48712,
+        "img_dist": 0.12844,
+        "txt_dist": 0.44931,
+        "txt_sim": 0.55069
+    },
+    "swad_metrics": {
+        "iou_0": 0.91639,
+        "delta_m_plus": 0.46844,
+        "phi": 0.47996,
+        "swad": 0.22483
+    },
+    "l2_distance": 0.67503,
+    "original_prompt": "Identify the objects \"cucumber\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "cucumber": {
+            "xmin": 142,
+            "ymin": 52,
+            "xmax": 264,
+            "ymax": 338
+        },
+        "cucumber_1": {
+            "xmin": 240,
+            "ymin": 69,
+            "xmax": 433,
+            "ymax": 362
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"cu\u200b\u0441ubm\u0435 r\u200b\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [278, 120, 548, 890], \"label\": \"cu\u200bs\u200bubm\u200be r\u200b\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    278,
+                    120,
+                    548,
+                    890
+                ],
+                "label": "cu\u200bs\u200bubm\u200be r\u200b"
+            }
+        ],
+        "token_count": 48,
+        "raw_token_count": 97,
+        "runtime_seconds": 0.3165
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.014796013755463942,
+        "defocus_blur": 0.2571593196439449,
+        "motion_blur": 0.04674230734476143,
+        "fog_filter": 0.03542357038156429,
+        "pixelate": 0.08661901724410427,
+        "jpeg_filter": 0.14627491298405065
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.003147276826064029,
+        "synonym": 0.06915621259489747,
+        "ata_saliency": 0.39908781846307173,
+        "fragmentation": 0.20925762121713637,
+        "character_noise": 0.16623581118886815
+    }
+}

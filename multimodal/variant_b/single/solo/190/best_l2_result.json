@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/190",
+        "folder_id": "190",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00036394.JPEG"
+    },
+    "pareto_index": 15,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 13,
+    "total_evaluations": 375,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.077973,
+            "defocus_blur": 6.4e-05,
+            "motion_blur": 0.002164,
+            "fog_filter": 0.000538,
+            "pixelate": 0.200734,
+            "jpeg_filter": 0.033265
+        },
+        "text_corruptions": {
+            "homophone": 0.255995,
+            "synonym": 0.012914,
+            "ata_saliency": 0.251308,
+            "fragmentation": 0.113685,
+            "character_noise": 0.147663
+        },
+        "img_budget_used": 0.314739,
+        "txt_budget_used": 0.781565,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0379,
+        "img_dist": 0.09586,
+        "txt_dist": 0.22392,
+        "txt_sim": 0.77608
+    },
+    "swad_metrics": {
+        "iou_0": 0.94138,
+        "delta_m_plus": 0.95974,
+        "phi": 0.70168,
+        "swad": 0.67344
+    },
+    "l2_distance": 0.24651,
+    "original_prompt": "Identify the objects \"airplane\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "airplane": {
+            "xmin": 49,
+            "ymin": 82,
+            "xmax": 416,
+            "ymax": 269
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"\u0430i\u200dr\u0440\u200blane\u200b\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [238, 307, 365, 430], \"label\": \"\u0430i\u200dr\u0440\u200blane\u200b\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    238,
+                    307,
+                    365,
+                    430
+                ],
+                "label": "\u0430i\u200dr\u0440\u200blane\u200b"
+            }
+        ],
+        "token_count": 47,
+        "raw_token_count": 51,
+        "runtime_seconds": 0.1776
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.07797325251615737,
+        "defocus_blur": 6.439811522762802e-05,
+        "motion_blur": 0.0021638058517828383,
+        "fog_filter": 0.0005382270457342934,
+        "pixelate": 0.20073441782806245,
+        "jpeg_filter": 0.03326462998661944
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.25599520436598794,
+        "synonym": 0.012914156655477717,
+        "ata_saliency": 0.25130819154010087,
+        "fragmentation": 0.11368473468892504,
+        "character_noise": 0.14766275904894433
+    }
+}

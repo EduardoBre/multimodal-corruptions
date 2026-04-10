@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/81",
+        "folder_id": "81",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00035607.JPEG"
+    },
+    "pareto_index": 0,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.018153363333776373,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.24927259019092207
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.03901,
+        "txt_dist": 0.19043,
+        "txt_sim": 0.80957
+    },
+    "swad_metrics": {
+        "iou_0": 0.93097,
+        "delta_m_plus": 1.0,
+        "phi": 0.77799,
+        "swad": 0.77799
+    },
+    "l2_distance": 0.19438,
+    "original_prompt": "Identify the objects \"brassiere, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 0,
+            "ymin": 42,
+            "xmax": 337,
+            "ymax": 498
+        },
+        "brassiere": {
+            "xmin": 63,
+            "ymin": 166,
+            "xmax": 178,
+            "ymax": 285
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"br\u200das\u200bsier\u0435, per\u200bson\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 82, 1000, 1000], \"label\": \"br\u200das\u200bsier\u0435, per\u200bson\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    82,
+                    1000,
+                    1000
+                ],
+                "label": "br\u200das\u200bsier\u0435, per\u200bson"
+            }
+        ],
+        "token_count": 49,
+        "raw_token_count": 85,
+        "runtime_seconds": 0.3087
+    }
+}

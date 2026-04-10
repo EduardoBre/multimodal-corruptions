@@ -1,0 +1,893 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/24",
+        "folder_id": "24",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00005962.JPEG"
+    },
+    "original_prompt": "Identify the objects \"banjo, drum, oboe, person, saxophone, table, trombone\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "banjo": {
+            "xmin": 290,
+            "ymin": 181,
+            "xmax": 371,
+            "ymax": 248
+        },
+        "drum": {
+            "xmin": 409,
+            "ymin": 267,
+            "xmax": 452,
+            "ymax": 296
+        },
+        "oboe": {
+            "xmin": 75,
+            "ymin": 188,
+            "xmax": 111,
+            "ymax": 281
+        },
+        "person": {
+            "xmin": 131,
+            "ymin": 164,
+            "xmax": 208,
+            "ymax": 358
+        },
+        "person_1": {
+            "xmin": 282,
+            "ymin": 153,
+            "xmax": 347,
+            "ymax": 335
+        },
+        "person_2": {
+            "xmin": 37,
+            "ymin": 158,
+            "xmax": 107,
+            "ymax": 337
+        },
+        "saxophone": {
+            "xmin": 214,
+            "ymin": 144,
+            "xmax": 268,
+            "ymax": 251
+        },
+        "trombone": {
+            "xmin": 152,
+            "ymin": 191,
+            "xmax": 217,
+            "ymax": 324
+        },
+        "person_3": {
+            "xmin": 388,
+            "ymin": 185,
+            "xmax": 450,
+            "ymax": 300
+        },
+        "person_4": {
+            "xmin": 2,
+            "ymin": 242,
+            "xmax": 72,
+            "ymax": 374
+        },
+        "person_5": {
+            "xmin": 348,
+            "ymin": 292,
+            "xmax": 438,
+            "ymax": 374
+        },
+        "person_6": {
+            "xmin": 54,
+            "ymin": 327,
+            "xmax": 135,
+            "ymax": 374
+        },
+        "table": {
+            "xmin": 24,
+            "ymin": 338,
+            "xmax": 219,
+            "ymax": 374
+        }
+    },
+    "baseline_iou": 0.69561,
+    "swad_star": 0.68562,
+    "swad_star_index": 3,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 8,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.006614,
+                    "defocus_blur": 0.157604,
+                    "motion_blur": 0.140608,
+                    "fog_filter": 0.164349,
+                    "pixelate": 0.007188,
+                    "jpeg_filter": 0.139197
+                },
+                "text_corruptions": {
+                    "homophone": 0.036431,
+                    "synonym": 0.134008,
+                    "ata_saliency": 0.00688,
+                    "fragmentation": 0.141727,
+                    "character_noise": 0.045242
+                },
+                "img_budget_used": 0.61556,
+                "txt_budget_used": 0.364287,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.13983,
+                "txt_dist": 0.22095,
+                "txt_sim": 0.77905
+            },
+            "swad_metrics": {
+                "iou_0": 0.69561,
+                "delta_m_plus": 1.0,
+                "phi": 0.67012,
+                "swad": 0.67012
+            },
+            "l2_distance": 0.26148,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"banj\u043e, rdum, obo\u0435, p\u200b\u0435\u200dr s\u200don, sax, table, tr om\u200dbone\u200b\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [598, 568, 662, 652], \"label\": \"banj\u043e\"},\n\t{\"bbox_2d\": [328, 500, 388, 672], \"label\": \"rdum\"},\n\t{\"bbox_2d\": [388, 472, 448, 672], \"label\": \"oboe\"},\n\t{\"bbox_2d\": [448, 472, 528, 672], \"label\": \"oboe\"},\n\t{\"bbox_2d\": [300, 896, 438, 1000], \"label\": \"table\"},\n\t{\"bbox_2d\": [388, 472, 528, 672], \"label\": \"tr om\u200dbone\u200b\"},\n\t{\"bbox_2d\": [328, 500, 388, 672], \"label\": \"tr om\u200dbone\u200b\"},\n\t{\"bbox_2d\": [598, 568, 662, 652], \"label\": \"tr om\u200dbone\u200b\"},\n\t{\"bbox_2d\": [448, 472, 528, 672], \"label\": \"tr om\u200dbone\u200b\"},\n\t{\"bbox_2d\": [388, 472, 448, 672], \"label\": \"tr om\u200dbone\u200b\"},\n\t{\"bbox_2d\": [328, 500, 388, 672], \"label\": \"tr om\u200dbone\u200b\"},\n\t{\"bbox_2d\": [598, 568, 662, 652], \"label\": \"tr om\u200dbone\u200b\"},\n\t{\"bbox_2d\": [448, 472, 528, 672], \"label\": \"tr om\u200dbone\u200b\"},\n\t{\"bbox_2d\": [388, 472, 448, 672], \"label\": \"tr om\u200dbone\u200b\"},\n\t{\"bbox_2d\": [328, 500, 388, 672], \"label\": \"tr om\u200dbone\u200b\"},\n\t{\"bbox_2d\": [598, 568, 662, 652], \"label\": \"tr om\u200dbone\u200b\"},\n\t{\"bbox_2d\": [448, 472, 528, 672], \"label\": \"tr om\u200dbone\u200b\"},\n\t{\"bbox_2d\": [388, 472, 448, 672], \"label\": \"tr om\u200dbone\u200b\"},\n\t{\"bbox_2d\": [328, 500, 388, 672], \"label\": \"tr om\u200dbone\u200b\"},\n\t{\"bbox_2d\": [598, 568, 662, 652], \"label\": \"tr om\u200dbone\u200b\"},\n\t{\"bbox_2d\": [448, 472, 528, 672], \"label\": \"tr om\u200dbone\u200b\"},\n\t{\"bbox_2d\": [388, 472,",
+                "parsed_predictions": [],
+                "token_count": 800,
+                "raw_token_count": 800,
+                "runtime_seconds": 3.3205
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.006614418195422615,
+                "defocus_blur": 0.15760413046833915,
+                "motion_blur": 0.14060776005061204,
+                "fog_filter": 0.16434909810672302,
+                "pixelate": 0.007187595947893252,
+                "jpeg_filter": 0.13919658908881102
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.036430823127383244,
+                "synonym": 0.13400802297574751,
+                "ata_saliency": 0.006880186125151731,
+                "fragmentation": 0.14172651773356373,
+                "character_noise": 0.04524150560127955
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.068071,
+                    "defocus_blur": 0.111084,
+                    "motion_blur": 0.006421,
+                    "fog_filter": 0.147931,
+                    "pixelate": 0.003892,
+                    "jpeg_filter": 0.003376
+                },
+                "text_corruptions": {
+                    "homophone": 0.07005,
+                    "synonym": 0.200289,
+                    "ata_saliency": 0.018235,
+                    "fragmentation": 0.434845,
+                    "character_noise": 0.104501
+                },
+                "img_budget_used": 0.340775,
+                "txt_budget_used": 0.827919,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.13866,
+                "img_dist": 0.13578,
+                "txt_dist": 0.2149,
+                "txt_sim": 0.7851
+            },
+            "swad_metrics": {
+                "iou_0": 0.69561,
+                "delta_m_plus": 0.80066,
+                "phi": 0.6785,
+                "swad": 0.54325
+            },
+            "l2_distance": 0.28956,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bn\u0430j\u200bo , sn\u0430re dr\u200du\u200d m, oboe, per son\u200b , s\u0430x, table , t rombon\u200be\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [595, 570, 666, 650], \"label\": \"bn\u0430j\u200bo , sn\u0430re dr\u200du\u200d m\"},\n\t{\"bbox_2d\": [325, 520, 388, 720], \"label\": \"oboe\"},\n\t{\"bbox_2d\": [438, 400, 520, 650], \"label\": \"per son\u200b\"},\n\t{\"bbox_2d\": [388, 420, 470, 900], \"label\": \"s\u0430x\"},\n\t{\"bbox_2d\": [266, 888, 440, 1000], \"label\": \"table\"},\n\t{\"bbox_2d\": [438, 400, 520, 650], \"label\": \"t rombon\u200be\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            595,
+                            570,
+                            666,
+                            650
+                        ],
+                        "label": "bn\u0430j\u200bo , sn\u0430re dr\u200du\u200d m"
+                    },
+                    {
+                        "bbox_2d": [
+                            325,
+                            520,
+                            388,
+                            720
+                        ],
+                        "label": "oboe"
+                    },
+                    {
+                        "bbox_2d": [
+                            438,
+                            400,
+                            520,
+                            650
+                        ],
+                        "label": "per son\u200b"
+                    },
+                    {
+                        "bbox_2d": [
+                            388,
+                            420,
+                            470,
+                            900
+                        ],
+                        "label": "s\u0430x"
+                    },
+                    {
+                        "bbox_2d": [
+                            266,
+                            888,
+                            440,
+                            1000
+                        ],
+                        "label": "table"
+                    },
+                    {
+                        "bbox_2d": [
+                            438,
+                            400,
+                            520,
+                            650
+                        ],
+                        "label": "t rombon\u200be"
+                    }
+                ],
+                "token_count": 229,
+                "raw_token_count": 800,
+                "runtime_seconds": 3.3205
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.06807134819412675,
+                "defocus_blur": 0.1110838287205725,
+                "motion_blur": 0.006421175724004447,
+                "fog_filter": 0.14793117464046648,
+                "pixelate": 0.0038921932305296322,
+                "jpeg_filter": 0.003375555251737422
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.07005045730143036,
+                "synonym": 0.20028916931814755,
+                "ata_saliency": 0.0182346424949408,
+                "fragmentation": 0.43484453285157887,
+                "character_noise": 0.10450055729161882
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.005243,
+                    "defocus_blur": 0.008554,
+                    "motion_blur": 0.004618,
+                    "fog_filter": 0.005069,
+                    "pixelate": 0.000818,
+                    "jpeg_filter": 0.001247
+                },
+                "text_corruptions": {
+                    "homophone": 0.008326,
+                    "synonym": 0.005919,
+                    "ata_saliency": 0.003541,
+                    "fragmentation": 0.028094,
+                    "character_noise": 0.018096
+                },
+                "img_budget_used": 0.025549,
+                "txt_budget_used": 0.063975,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.6462,
+                "img_dist": 0.09377,
+                "txt_dist": 0.02174,
+                "txt_sim": 0.97826
+            },
+            "swad_metrics": {
+                "iou_0": 0.69561,
+                "delta_m_plus": 0.07103,
+                "phi": 0.88653,
+                "swad": 0.06297
+            },
+            "l2_distance": 0.65333,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"banjo, drum, oboe, pe\u200brson, saxo\u200bphone, table, trombone\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [825, 712, 908, 850], \"label\": \"drum\"},\n\t{\"bbox_2d\": [0, 638, 150, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [77, 420, 200, 872], \"label\": \"person\"},\n\t{\"bbox_2d\": [266, 444, 388, 938], \"label\": \"person\"},\n\t{\"bbox_2d\": [380, 420, 488, 908], \"label\": \"person\"},\n\t{\"bbox_2d\": [562, 420, 688, 888], \"label\": \"person\"},\n\t{\"bbox_2d\": [778, 496, 892, 850], \"label\": \"person\"},\n\t{\"bbox_2d\": [666, 778, 888, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [87, 888, 278, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [428, 450, 528, 650], \"label\": \"saxophone\"},\n\t{\"bbox_2d\": [338, 520, 418, 850], \"label\": \"trombone\"},\n\t{\"bbox_2d\": [258, 900, 438, 1000], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            825,
+                            712,
+                            908,
+                            850
+                        ],
+                        "label": "drum"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            638,
+                            150,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            77,
+                            420,
+                            200,
+                            872
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            266,
+                            444,
+                            388,
+                            938
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            380,
+                            420,
+                            488,
+                            908
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            562,
+                            420,
+                            688,
+                            888
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            778,
+                            496,
+                            892,
+                            850
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            666,
+                            778,
+                            888,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            87,
+                            888,
+                            278,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            428,
+                            450,
+                            528,
+                            650
+                        ],
+                        "label": "saxophone"
+                    },
+                    {
+                        "bbox_2d": [
+                            338,
+                            520,
+                            418,
+                            850
+                        ],
+                        "label": "trombone"
+                    },
+                    {
+                        "bbox_2d": [
+                            258,
+                            900,
+                            438,
+                            1000
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 406,
+                "raw_token_count": 800,
+                "runtime_seconds": 3.3205
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.005243033528322505,
+                "defocus_blur": 0.00855448644072651,
+                "motion_blur": 0.004617741983182871,
+                "fog_filter": 0.00506930598892774,
+                "pixelate": 0.0008177100216936352,
+                "jpeg_filter": 0.001247032077005457
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.008325954238922491,
+                "synonym": 0.005918660083600635,
+                "ata_saliency": 0.0035408745736549255,
+                "fragmentation": 0.028093596015541802,
+                "character_noise": 0.018096151505432895
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.022451,
+                    "defocus_blur": 0.16972,
+                    "motion_blur": 0.003618,
+                    "fog_filter": 0.086204,
+                    "pixelate": 0.018772,
+                    "jpeg_filter": 0.065102
+                },
+                "text_corruptions": {
+                    "homophone": 0.228537,
+                    "synonym": 0.255856,
+                    "ata_saliency": 0.232516,
+                    "fragmentation": 0.150017,
+                    "character_noise": 0.001309
+                },
+                "img_budget_used": 0.365868,
+                "txt_budget_used": 0.868235,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.11851,
+                "txt_dist": 0.2222,
+                "txt_sim": 0.7778
+            },
+            "swad_metrics": {
+                "iou_0": 0.69561,
+                "delta_m_plus": 1.0,
+                "phi": 0.68562,
+                "swad": 0.68562
+            },
+            "l2_distance": 0.25183,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fivestr\u200bign bgn\u200bj\u043e, drum\u200b, oboe, person, sa\u0445 ophone, ta\u200dbre, t\u200dr \u043em boen\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [588, 570, 662, 650], \"label\": \"drum\"},\n\t{\"bbox_2d\": [268, 438, 388, 940], \"label\": \"person\"},\n\t{\"bbox_2d\": [388, 416, 500, 916], \"label\": \"person\"},\n\t{\"bbox_2d\": [558, 416, 678, 888], \"label\": \"person\"},\n\t{\"bbox_2d\": [778, 492, 898, 838], \"label\": \"person\"},\n\t{\"bbox_2d\": [658, 778, 878, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [0, 638, 150, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [78, 416, 200, 888], \"label\": \"person\"},\n\t{\"bbox_2d\": [438, 400, 528, 916], \"label\": \"person\"},\n\t{\"bbox_2d\": [678, 338, 778, 500], \"label\": \"person\"},\n\t{\"bbox_2d\": [228, 316, 350, 538], \"label\": \"person\"},\n\t{\"bbox_2d\": [678, 338, 778, 500], \"label\": \"person\"},\n\t{\"bbox_2d\": [228, 316, 350, 538], \"label\": \"person\"},\n\t{\"bbox_2d\": [678, 338, 778, 500], \"label\": \"person\"},\n\t{\"bbox_2d\": [228, 316, 350, 538], \"label\": \"person\"},\n\t{\"bbox_2d\": [678, 338, 778, 500], \"label\": \"person\"},\n\t{\"bbox_2d\": [228, 316, 350, 538], \"label\": \"person\"},\n\t{\"bbox_2d\": [678, 338, 778, 500], \"label\": \"person\"},\n\t{\"bbox_2d\": [228, 316, 350, 538], \"label\": \"person\"},\n\t{\"bbox_2d\": [678, 338, 778, 500], \"label\": \"person\"},\n\t{\"bbox_2d\": [228, 316, 350, 538], \"label\": \"person\"},\n\t{\"bbox_2d\": [678, 338, 778, 500], \"label\": \"person\"},\n\t{\"bbox_2d\": [228, 316, 350, 538], \"label\": \"person\"},\n\t{\"bbox_2d\": [678, 338, 778, 500], \"label\": \"person\"},\n\t{\"bbox_2",
+                "parsed_predictions": [],
+                "token_count": 800,
+                "raw_token_count": 800,
+                "runtime_seconds": 3.3205
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.022451305373037526,
+                "defocus_blur": 0.1697204909437308,
+                "motion_blur": 0.0036182342797012926,
+                "fog_filter": 0.08620399419910409,
+                "pixelate": 0.01877160904672485,
+                "jpeg_filter": 0.06510245960737272
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.22853729312010235,
+                "synonym": 0.25585571767632936,
+                "ata_saliency": 0.23251640305557847,
+                "fragmentation": 0.15001657062342635,
+                "character_noise": 0.0013090162697721233
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.48509,
+                    "defocus_blur": 0.128739,
+                    "motion_blur": 0.021674,
+                    "fog_filter": 0.006536,
+                    "pixelate": 0.046688,
+                    "jpeg_filter": 0.23776
+                },
+                "text_corruptions": {
+                    "homophone": 0.426465,
+                    "synonym": 0.273175,
+                    "ata_saliency": 0.078515,
+                    "fragmentation": 0.05513,
+                    "character_noise": 0.092302
+                },
+                "img_budget_used": 0.926486,
+                "txt_budget_used": 0.925588,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.0995,
+                "img_dist": 0.11142,
+                "txt_dist": 0.22504,
+                "txt_sim": 0.77496
+            },
+            "swad_metrics": {
+                "iou_0": 0.69561,
+                "delta_m_plus": 0.85696,
+                "phi": 0.68861,
+                "swad": 0.59011
+            },
+            "l2_distance": 0.27011,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"str\u200bing\u200b\u0435d inst\u200drument, drahm, obo\u0435, per osn\u200b, s\u0430xop\u200bhone, t able, tr\u200bo\u200dm\u200bbone\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [370, 500, 500, 888], \"label\": \"str\u200bing\u200b\u0435d inst\u200drument\"},\n\t{\"bbox_2d\": [220, 888, 438, 1000], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            370,
+                            500,
+                            500,
+                            888
+                        ],
+                        "label": "str\u200bing\u200b\u0435d inst\u200drument"
+                    },
+                    {
+                        "bbox_2d": [
+                            220,
+                            888,
+                            438,
+                            1000
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 83,
+                "raw_token_count": 800,
+                "runtime_seconds": 3.3205
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.48508982321155464,
+                "defocus_blur": 0.1287388373025778,
+                "motion_blur": 0.021673543416458784,
+                "fog_filter": 0.006536383579070035,
+                "pixelate": 0.046687735912058506,
+                "jpeg_filter": 0.2377597838273395
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.4264648736398653,
+                "synonym": 0.27317516719855184,
+                "ata_saliency": 0.07851520332924707,
+                "fragmentation": 0.055130199834085125,
+                "character_noise": 0.0923021886471576
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.121496,
+                    "defocus_blur": 0.025737,
+                    "motion_blur": 0.027827,
+                    "fog_filter": 0.006829,
+                    "pixelate": 0.005677,
+                    "jpeg_filter": 0.010792
+                },
+                "text_corruptions": {
+                    "homophone": 0.272587,
+                    "synonym": 0.461551,
+                    "ata_saliency": 0.095393,
+                    "fragmentation": 0.004284,
+                    "character_noise": 0.020313
+                },
+                "img_budget_used": 0.198357,
+                "txt_budget_used": 0.854128,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.26599,
+                "img_dist": 0.09624,
+                "txt_dist": 0.16335,
+                "txt_sim": 0.83665
+            },
+            "swad_metrics": {
+                "iou_0": 0.69561,
+                "delta_m_plus": 0.61762,
+                "phi": 0.75613,
+                "swad": 0.467
+            },
+            "l2_distance": 0.32664,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fi\u200dve\u200d-stri\u200bng\u200b banjo\u200b, snar\u200be dr\u200bum, oboe, per son, sax, tab\u200dle\u200d, tormbo\u200bne\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [438, 384, 530, 658], \"label\": \"fi\u200dve\u200d-stri\u200bng\u200b banjo\u200b\"},\n\t{\"bbox_2d\": [812, 708, 940, 858], \"label\": \"snar\u200be dr\u200bum\"},\n\t{\"bbox_2d\": [308, 488, 420, 872], \"label\": \"sax\"},\n\t{\"bbox_2d\": [208, 892, 438, 1000], \"label\": \"tab\u200dle\u200d\"},\n\t{\"bbox_2d\": [438, 384, 530, 658], \"label\": \"tormbo\u200bne\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            438,
+                            384,
+                            530,
+                            658
+                        ],
+                        "label": "fi\u200dve\u200d-stri\u200bng\u200b banjo\u200b"
+                    },
+                    {
+                        "bbox_2d": [
+                            812,
+                            708,
+                            940,
+                            858
+                        ],
+                        "label": "snar\u200be dr\u200bum"
+                    },
+                    {
+                        "bbox_2d": [
+                            308,
+                            488,
+                            420,
+                            872
+                        ],
+                        "label": "sax"
+                    },
+                    {
+                        "bbox_2d": [
+                            208,
+                            892,
+                            438,
+                            1000
+                        ],
+                        "label": "tab\u200dle\u200d"
+                    },
+                    {
+                        "bbox_2d": [
+                            438,
+                            384,
+                            530,
+                            658
+                        ],
+                        "label": "tormbo\u200bne"
+                    }
+                ],
+                "token_count": 201,
+                "raw_token_count": 800,
+                "runtime_seconds": 3.3205
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.12149565305073104,
+                "defocus_blur": 0.02573698834179766,
+                "motion_blur": 0.027827185019887467,
+                "fog_filter": 0.006828955967177258,
+                "pixelate": 0.005676788821415005,
+                "jpeg_filter": 0.010791681931282368
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.2725868185506704,
+                "synonym": 0.46155128203082635,
+                "ata_saliency": 0.09539269336567972,
+                "fragmentation": 0.004284445182241951,
+                "character_noise": 0.020312986268468943
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.335178,
+                    "defocus_blur": 0.244207,
+                    "motion_blur": 0.062823,
+                    "fog_filter": 0.024387,
+                    "pixelate": 0.002222,
+                    "jpeg_filter": 0.0473
+                },
+                "text_corruptions": {
+                    "homophone": 0.011438,
+                    "synonym": 0.029706,
+                    "ata_saliency": 0.010997,
+                    "fragmentation": 0.04947,
+                    "character_noise": 0.058272
+                },
+                "img_budget_used": 0.716117,
+                "txt_budget_used": 0.159882,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.54465,
+                "img_dist": 0.10843,
+                "txt_dist": 0.10468,
+                "txt_sim": 0.89532
+            },
+            "swad_metrics": {
+                "iou_0": 0.69561,
+                "delta_m_plus": 0.21702,
+                "phi": 0.79824,
+                "swad": 0.17323
+            },
+            "l2_distance": 0.56512,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"banjo, dr\u200bum, ob\u043ee\u200b, person\u200d, sax\u200bophon\u0435, tabel, tr\u043e mb\u043ene\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [598, 570, 662, 658], \"label\": \"dr\u200bum\"},\n\t{\"bbox_2d\": [0, 638, 148, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [77, 418, 208, 872], \"label\": \"person\"},\n\t{\"bbox_2d\": [268, 438, 388, 938], \"label\": \"person\"},\n\t{\"bbox_2d\": [388, 418, 528, 920], \"label\": \"person\"},\n\t{\"bbox_2d\": [562, 418, 688, 888], \"label\": \"person\"},\n\t{\"bbox_2d\": [778, 488, 908, 838], \"label\": \"person\"},\n\t{\"bbox_2d\": [662, 778, 878, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [438, 418, 538, 658], \"label\": \"sax\u200bophon\u0435\"},\n\t{\"bbox_2d\": [438, 418, 538, 658], \"label\": \"sax\u200bophon\u0435\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            598,
+                            570,
+                            662,
+                            658
+                        ],
+                        "label": "dr\u200bum"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            638,
+                            148,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            77,
+                            418,
+                            208,
+                            872
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            268,
+                            438,
+                            388,
+                            938
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            388,
+                            418,
+                            528,
+                            920
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            562,
+                            418,
+                            688,
+                            888
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            778,
+                            488,
+                            908,
+                            838
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            662,
+                            778,
+                            878,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            438,
+                            418,
+                            538,
+                            658
+                        ],
+                        "label": "sax\u200bophon\u0435"
+                    },
+                    {
+                        "bbox_2d": [
+                            438,
+                            418,
+                            538,
+                            658
+                        ],
+                        "label": "sax\u200bophon\u0435"
+                    }
+                ],
+                "token_count": 345,
+                "raw_token_count": 800,
+                "runtime_seconds": 3.3205
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.3351781234266299,
+                "defocus_blur": 0.24420708367719715,
+                "motion_blur": 0.06282293640325644,
+                "fog_filter": 0.024386849444621654,
+                "pixelate": 0.002222379827963704,
+                "jpeg_filter": 0.04729952525486553
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.011437576667710907,
+                "synonym": 0.029705578533539462,
+                "ata_saliency": 0.010996704168050271,
+                "fragmentation": 0.049470451970687154,
+                "character_noise": 0.05827202983424894
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.040424,
+                    "defocus_blur": 0.001583,
+                    "motion_blur": 0.012211,
+                    "fog_filter": 0.043409,
+                    "pixelate": 0.010149,
+                    "jpeg_filter": 0.066486
+                },
+                "text_corruptions": {
+                    "homophone": 0.074006,
+                    "synonym": 0.037842,
+                    "ata_saliency": 0.07844,
+                    "fragmentation": 0.24943,
+                    "character_noise": 0.147481
+                },
+                "img_budget_used": 0.174261,
+                "txt_budget_used": 0.5872,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.10504,
+                "txt_dist": 0.26416,
+                "txt_sim": 0.73584
+            },
+            "swad_metrics": {
+                "iou_0": 0.69561,
+                "delta_m_plus": 1.0,
+                "phi": 0.65855,
+                "swad": 0.65855
+            },
+            "l2_distance": 0.28428,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"ba\u200dnjo\u200d, d\u200d r\u0430m, \u043e\u200dboe, hum\u200dan\u200b, sa\u0445, tab le, s ld\u0456\u0435 trombone\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [333, 488, 438, 900], \"label\": \"s ax\"},\n\t{\"bbox_2d\": [416, 400, 528, 900], \"label\": \"s ax\"},\n\t{\"bbox_2d\": [568, 416, 678, 888], \"label\": \"hum\u200dan\u200b\"},\n\t{\"bbox_2d\": [778, 496, 892, 836], \"label\": \"hum\u200dan\u200b\"},\n\t{\"bbox_2d\": [66, 420, 212, 888], \"label\": \"hum\u200dan\u200b\"},\n\t{\"bbox_2d\": [266, 440, 388, 936], \"label\": \"hum\u200dan\u200b\"},\n\t{\"bbox_2d\": [388, 420, 488, 916], \"label\": \"hum\u200dan\u200b\"},\n\t{\"bbox_2d\": [0, 636, 152, 998], \"label\": \"hum\u200dan\u200b\"},\n\t{\"bbox_2d\": [666, 776, 878, 1000], \"label\": \"hum\u200dan\u200b\"},\n\t{\"bbox_2d\": [878, 800, 998, 1000], \"label\": \"hum\u200dan\u200b\"},\n\t{\"bbox_2d\": [100, 888, 272, 1000], \"label\": \"hum\u200dan\u200b\"},\n\t{\"bbox_2d\": [228, 896, 448, 1000], \"label\": \"tab le\"},\n\t{\"bbox_2d\": [488, 650, 588, 750], \"label\": \"tab le\"},\n\t{\"bbox_2d\": [678, 636, 778, 750], \"label\": \"tab le\"},\n\t{\"bbox_2d\": [448, 388, 528, 476], \"label\": \"d r\u0430m\"},\n\t{\"bbox_2d\": [416, 400, 528, 900], \"label\": \"s ax\"},\n\t{\"bbox_2d\": [333, 488, 438, 900], \"label\": \"s ax\"},\n\t{\"bbox_2d\": [568, 416, 678, 888], \"label\": \"hum\u200dan\u200b\"},\n\t{\"bbox_2d\": [778, 496, 892, 836], \"label\": \"hum\u200dan\u200b\"},\n\t{\"bbox_2d\": [66, 420, 212, 888], \"label\": \"hum\u200dan\u200b\"},\n\t{\"bbox_2d\": [266, 440, 388, 936], \"label\": \"hum\u200dan\u200b\"},\n\t{\"bbox_2d\": [388, 420, 488, 916], \"label\": \"hum\u200dan\u200b\"},\n\t{\"bbox_",
+                "parsed_predictions": [],
+                "token_count": 800,
+                "raw_token_count": 800,
+                "runtime_seconds": 3.3205
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.04042368572753184,
+                "defocus_blur": 0.0015827952867286472,
+                "motion_blur": 0.012211332514368966,
+                "fog_filter": 0.04340850151244263,
+                "pixelate": 0.010148644986451604,
+                "jpeg_filter": 0.06648630477453317
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.07400630692450542,
+                "synonym": 0.03784222619629913,
+                "ata_saliency": 0.07844030478199425,
+                "fragmentation": 0.24942979235204946,
+                "character_noise": 0.14748127672949482
+            }
+        }
+    ]
+}

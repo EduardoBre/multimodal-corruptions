@@ -1,0 +1,124 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/75",
+        "folder_id": "75",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00026947.JPEG"
+    },
+    "pareto_index": 3,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.013097,
+            "defocus_blur": 0.227721,
+            "motion_blur": 0.144804,
+            "fog_filter": 0.110027,
+            "pixelate": 0.205325,
+            "jpeg_filter": 0.02185
+        },
+        "text_corruptions": {
+            "homophone": 0.071596,
+            "synonym": 0.01625,
+            "ata_saliency": 0.027079,
+            "fragmentation": 0.077649,
+            "character_noise": 0.073388
+        },
+        "img_budget_used": 0.722825,
+        "txt_budget_used": 0.265963,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.11611,
+        "img_dist": 0.1031,
+        "txt_dist": 0.10047,
+        "txt_sim": 0.89953
+    },
+    "swad_metrics": {
+        "iou_0": 0.64636,
+        "delta_m_plus": 0.82036,
+        "phi": 0.80679,
+        "swad": 0.66186
+    },
+    "l2_distance": 0.18495,
+    "original_prompt": "Identify the objects \"car, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 84,
+            "ymin": 69,
+            "xmax": 167,
+            "ymax": 142
+        },
+        "car": {
+            "xmin": 0,
+            "ymin": 172,
+            "xmax": 188,
+            "ymax": 255
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"car, per\u200bs\u200do\u200dn\u200d\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [180, 180, 240, 310], \"label\": \"person\"},\n\t{\"bbox_2d\": [17, 228, 120, 450], \"label\": \"person\"},\n\t{\"bbox_2d\": [17, 228, 120, 450], \"label\": \"person\"},\n\t{\"bbox_2d\": [180, 180, 240, 310], \"label\": \"person\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    180,
+                    180,
+                    240,
+                    310
+                ],
+                "label": "person"
+            },
+            {
+                "bbox_2d": [
+                    17,
+                    228,
+                    120,
+                    450
+                ],
+                "label": "person"
+            },
+            {
+                "bbox_2d": [
+                    17,
+                    228,
+                    120,
+                    450
+                ],
+                "label": "person"
+            },
+            {
+                "bbox_2d": [
+                    180,
+                    180,
+                    240,
+                    310
+                ],
+                "label": "person"
+            }
+        ],
+        "token_count": 136,
+        "raw_token_count": 137,
+        "runtime_seconds": 0.4145
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.013097388479961282,
+        "defocus_blur": 0.22772147878751772,
+        "motion_blur": 0.14480415084672857,
+        "fog_filter": 0.11002715910145434,
+        "pixelate": 0.20532549977900813,
+        "jpeg_filter": 0.021849566691647605
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.07159603947348386,
+        "synonym": 0.01624988813586951,
+        "ata_saliency": 0.027079437195394136,
+        "fragmentation": 0.07764923460273161,
+        "character_noise": 0.07338803158798152
+    }
+}

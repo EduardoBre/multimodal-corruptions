@@ -1,0 +1,106 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/22",
+        "folder_id": "22",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00028958.JPEG"
+    },
+    "pareto_index": 10,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 60,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "fog_filter",
+        "img_scale": 0.03740711226116222,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.20427072300820825
+    },
+    "objectives": {
+        "iou": 0.24741,
+        "img_dist": 0.05277,
+        "txt_dist": 0.11088,
+        "txt_sim": 0.88912
+    },
+    "swad_metrics": {
+        "iou_0": 0.9036,
+        "delta_m_plus": 0.72619,
+        "phi": 0.8422,
+        "swad": 0.6116
+    },
+    "l2_distance": 0.27621,
+    "original_prompt": "Identify the objects \"pencil sharpener\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "pencil sharpener": {
+            "xmin": 349,
+            "ymin": 82,
+            "xmax": 464,
+            "ymax": 297
+        },
+        "pencil sharpener_1": {
+            "xmin": 32,
+            "ymin": 71,
+            "xmax": 149,
+            "ymax": 297
+        },
+        "pencil sharpener_2": {
+            "xmin": 252,
+            "ymin": 70,
+            "xmax": 348,
+            "ymax": 287
+        },
+        "pencil sharpener_3": {
+            "xmin": 141,
+            "ymin": 74,
+            "xmax": 236,
+            "ymax": 284
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"pencil sharpeenr\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [115, 448, 270, 700], \"label\": \"pencil sharpeenr\"},\n\t{\"bbox_2d\": [347, 448, 466, 688], \"label\": \"pencil sharpeenr\"},\n\t{\"bbox_2d\": [552, 448, 660, 688], \"label\": \"pencil sharpeenr\"},\n\t{\"bbox_2d\": [738, 456, 852, 700], \"label\": \"pencil sharpeenr\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    115,
+                    448,
+                    270,
+                    700
+                ],
+                "label": "pencil sharpeenr"
+            },
+            {
+                "bbox_2d": [
+                    347,
+                    448,
+                    466,
+                    688
+                ],
+                "label": "pencil sharpeenr"
+            },
+            {
+                "bbox_2d": [
+                    552,
+                    448,
+                    660,
+                    688
+                ],
+                "label": "pencil sharpeenr"
+            },
+            {
+                "bbox_2d": [
+                    738,
+                    456,
+                    852,
+                    700
+                ],
+                "label": "pencil sharpeenr"
+            }
+        ],
+        "token_count": 158,
+        "raw_token_count": 274,
+        "runtime_seconds": 1.0469
+    }
+}

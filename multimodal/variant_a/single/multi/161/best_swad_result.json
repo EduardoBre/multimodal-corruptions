@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/161",
+        "folder_id": "161",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00004490.JPEG"
+    },
+    "pareto_index": 18,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 4,
+    "total_evaluations": 105,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "fog_filter",
+        "img_scale": 0.0406186442263389,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.40766424092952663
+    },
+    "objectives": {
+        "iou": 0.03001,
+        "img_dist": 0.06383,
+        "txt_dist": 0.27371,
+        "txt_sim": 0.72629
+    },
+    "swad_metrics": {
+        "iou_0": 0.91426,
+        "delta_m_plus": 0.96718,
+        "phi": 0.67993,
+        "swad": 0.65761
+    },
+    "l2_distance": 0.28265,
+    "original_prompt": "Identify the objects \"bus\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bus": {
+            "xmin": 115,
+            "ymin": 22,
+            "xmax": 485,
+            "ymax": 363
+        },
+        "bus_1": {
+            "xmin": 29,
+            "ymin": 150,
+            "xmax": 124,
+            "ymax": 267
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bum\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [625, 720, 788, 972], \"label\": \"bum\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    625,
+                    720,
+                    788,
+                    972
+                ],
+                "label": "bum"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 77,
+        "runtime_seconds": 0.2488
+    }
+}

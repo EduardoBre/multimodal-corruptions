@@ -1,0 +1,100 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/115",
+        "folder_id": "115",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00028443.JPEG"
+    },
+    "pareto_index": 0,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.004926,
+            "defocus_blur": 0.042726,
+            "motion_blur": 0.007612,
+            "fog_filter": 2.6e-05,
+            "pixelate": 0.013216,
+            "jpeg_filter": 0.058256
+        },
+        "text_corruptions": {
+            "homophone": 0.373367,
+            "synonym": 0.025338,
+            "ata_saliency": 0.017587,
+            "fragmentation": 0.122236,
+            "character_noise": 0.005101
+        },
+        "img_budget_used": 0.126762,
+        "txt_budget_used": 0.543629,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.10937,
+        "txt_dist": 0.2588,
+        "txt_sim": 0.7412
+    },
+    "swad_metrics": {
+        "iou_0": 0.77515,
+        "delta_m_plus": 1.0,
+        "phi": 0.66013,
+        "swad": 0.66013
+    },
+    "l2_distance": 0.28096,
+    "original_prompt": "Identify the objects \"vacuum\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "vacuum": {
+            "xmin": 69,
+            "ymin": 84,
+            "xmax": 345,
+            "ymax": 267
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"va kume\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [625, 750, 730, 978], \"label\": \"va kume\"},\n\t{\"bbox_2d\": [748, 730, 808, 978], \"label\": \"va kume\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    625,
+                    750,
+                    730,
+                    978
+                ],
+                "label": "va kume"
+            },
+            {
+                "bbox_2d": [
+                    748,
+                    730,
+                    808,
+                    978
+                ],
+                "label": "va kume"
+            }
+        ],
+        "token_count": 76,
+        "raw_token_count": 77,
+        "runtime_seconds": 0.2549
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.00492620213443009,
+        "defocus_blur": 0.04272561402365749,
+        "motion_blur": 0.007611690940325034,
+        "fog_filter": 2.5877548044860033e-05,
+        "pixelate": 0.013216454124319287,
+        "jpeg_filter": 0.05825636257537463
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.3733666101227808,
+        "synonym": 0.025338441405989856,
+        "ata_saliency": 0.017586957768922856,
+        "fragmentation": 0.12223600672805388,
+        "character_noise": 0.00510109305902348
+    }
+}

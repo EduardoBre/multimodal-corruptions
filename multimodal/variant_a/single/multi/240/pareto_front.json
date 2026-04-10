@@ -1,0 +1,393 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/single/multi/240",
+        "folder_id": "240",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00025179.JPEG"
+    },
+    "original_prompt": "Identify the objects \"car\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "car": {
+            "xmin": 59,
+            "ymin": 110,
+            "xmax": 408,
+            "ymax": 295
+        },
+        "car_1": {
+            "xmin": 24,
+            "ymin": 139,
+            "xmax": 69,
+            "ymax": 183
+        },
+        "car_2": {
+            "xmin": 54,
+            "ymin": 124,
+            "xmax": 165,
+            "ymax": 216
+        },
+        "car_3": {
+            "xmin": 5,
+            "ymin": 138,
+            "xmax": 33,
+            "ymax": 169
+        }
+    },
+    "baseline_iou": 0.81811,
+    "swad_star": 0.92919,
+    "swad_star_index": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 6,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.018153363333776373,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.24927259019092207
+            },
+            "objectives": {
+                "iou": 0.78826,
+                "img_dist": 0.04418,
+                "txt_dist": 0.23099,
+                "txt_sim": 0.76901
+            },
+            "swad_metrics": {
+                "iou_0": 0.81811,
+                "delta_m_plus": 0.03649,
+                "phi": 0.73504,
+                "swad": 0.02682
+            },
+            "l2_distance": 0.82259,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"ca\u200br\u200d\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [105, 348, 305, 638], \"label\": \"ca\u200br\u200d\"},\n\t{\"bbox_2d\": [52, 367, 140, 483], \"label\": \"ca\u200br\u200d\"},\n\t{\"bbox_2d\": [18, 367, 78, 457], \"label\": \"ca\u200br\u200d\"},\n\t{\"bbox_2d\": [0, 367, 40, 440], \"label\": \"ca\u200br\u200d\"},\n\t{\"bbox_2d\": [105, 298, 812, 779], \"label\": \"ca\u200br\u200d\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            105,
+                            348,
+                            305,
+                            638
+                        ],
+                        "label": "ca\u200br\u200d"
+                    },
+                    {
+                        "bbox_2d": [
+                            52,
+                            367,
+                            140,
+                            483
+                        ],
+                        "label": "ca\u200br\u200d"
+                    },
+                    {
+                        "bbox_2d": [
+                            18,
+                            367,
+                            78,
+                            457
+                        ],
+                        "label": "ca\u200br\u200d"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            367,
+                            40,
+                            440
+                        ],
+                        "label": "ca\u200br\u200d"
+                    },
+                    {
+                        "bbox_2d": [
+                            105,
+                            298,
+                            812,
+                            779
+                        ],
+                        "label": "ca\u200br\u200d"
+                    }
+                ],
+                "token_count": 185,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.5691
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.3997956906557353,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.647636093318414
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.07081,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.81811,
+                "delta_m_plus": 1.0,
+                "phi": 0.92919,
+                "swad": 0.92919
+            },
+            "l2_distance": 0.07081,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"car\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [105, 352, 308, 638], \"label\": \"car\"},\n\t{\"bbox_2d\": [54, 366, 145, 488], \"label\": \"car\"},\n\t{\"bbox_2d\": [22, 366, 68, 456], \"label\": \"car\"},\n\t{\"bbox_2d\": [18, 366, 48, 440], \"label\": \"car\"},\n\t{\"bbox_2d\": [22, 366, 68, 456], \"label\": \"car\"},\n\t{\"bbox_2d\": [18, 366, 48, 440], \"label\": \"car\"},\n\t{\"bbox_2d\": [105, 352, 308, 638], \"label\": \"car\"},\n\t{\"bbox_2d\": [54, 366, 145, 488], \"label\": \"car\"},\n\t{\"bbox_2d\": [22, 366, 68, 456], \"label\": \"car\"},\n\t{\"bbox_2d\": [18, 366, 48, 440], \"label\": \"car\"},\n\t{\"bbox_2d\": [105, 352, 308, 638], \"label\": \"car\"},\n\t{\"bbox_2d\": [54, 366, 145, 488], \"label\": \"car\"},\n\t{\"bbox_2d\": [22, 366, 68, 456], \"label\": \"car\"},\n\t{\"bbox_2d\": [18, 366, 48, 440], \"label\": \"car\"},\n\t{\"bbox_2d\": [22, 366, 68, 456], \"label\": \"car\"},\n\t{\"bbox_2d\": [18, 366, 48, 440], \"label\": \"car\"},\n\t{\"bbox_2d\": [105, 352, 308, 638], \"label\": \"car\"},\n\t{\"bbox_2d\": [54, 366, 145, 488], \"label\": \"car\"},\n\t{\"bbox_2d\": [22, 366, 68, 456], \"label\": \"car\"},\n\t{\"bbox_2d\": [18, 366, 48, 440], \"label\": \"car\"},\n\t{\"bbox_2d\": [105, 352, 308, 638], \"label\": \"car\"},\n\t{\"bbox_2d\": [54, 366, 145, 488], \"label\": \"car\"},\n\t{\"bbox_2d\": [22, 366, 68, 456], \"label\": \"car\"},\n\t{\"bbox_2d\": [18, 366, 48, 440], \"label\": \"car\"},\n\t{\"bbox_2d\": [105, 352, 308, 638], \"label\": \"car\"},\n\t{\"bbox_",
+                "parsed_predictions": [],
+                "token_count": 800,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.5691
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.21687,
+                "img_dist": 0.04418,
+                "txt_dist": 0.40829,
+                "txt_sim": 0.59171
+            },
+            "swad_metrics": {
+                "iou_0": 0.81811,
+                "delta_m_plus": 0.73491,
+                "phi": 0.56557,
+                "swad": 0.41564
+            },
+            "l2_distance": 0.46442,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cra\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [107, 348, 302, 638], \"label\": \"cra\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            107,
+                            348,
+                            302,
+                            638
+                        ],
+                        "label": "cra"
+                    }
+                ],
+                "token_count": 40,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.5691
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.6126883641923373,
+                "txt_attack": "homophone",
+                "txt_scale": 0.10684452896191199
+            },
+            "objectives": {
+                "iou": 0.77167,
+                "img_dist": 0.05823,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.81811,
+                "delta_m_plus": 0.05676,
+                "phi": 0.94177,
+                "swad": 0.05346
+            },
+            "l2_distance": 0.77386,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"car\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [105, 348, 312, 630], \"label\": \"car\"},\n\t{\"bbox_2d\": [58, 367, 148, 488], \"label\": \"car\"},\n\t{\"bbox_2d\": [20, 367, 78, 452], \"label\": \"car\"},\n\t{\"bbox_2d\": [10, 367, 48, 440], \"label\": \"car\"},\n\t{\"bbox_2d\": [0, 367, 28, 430], \"label\": \"car\"},\n\t{\"bbox_2d\": [105, 296, 812, 778], \"label\": \"car\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            105,
+                            348,
+                            312,
+                            630
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            58,
+                            367,
+                            148,
+                            488
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            20,
+                            367,
+                            78,
+                            452
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            10,
+                            367,
+                            48,
+                            440
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            367,
+                            28,
+                            430
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            105,
+                            296,
+                            812,
+                            778
+                        ],
+                        "label": "car"
+                    }
+                ],
+                "token_count": 196,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.5691
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.307337327911573,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.28077,
+                "img_dist": 0.05234,
+                "txt_dist": 0.30968,
+                "txt_sim": 0.69032
+            },
+            "swad_metrics": {
+                "iou_0": 0.81811,
+                "delta_m_plus": 0.65681,
+                "phi": 0.65419,
+                "swad": 0.42968
+            },
+            "l2_distance": 0.42128,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"kar\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [103, 298, 812, 779], \"label\": \"kar\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            103,
+                            298,
+                            812,
+                            779
+                        ],
+                        "label": "kar"
+                    }
+                ],
+                "token_count": 39,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.5691
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.83108,
+                "img_dist": 0.03916,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.81811,
+                "delta_m_plus": 0.0,
+                "phi": 0.96084,
+                "swad": 0.0
+            },
+            "l2_distance": 0.832,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"car\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [107, 346, 308, 638], \"label\": \"car\"},\n\t{\"bbox_2d\": [54, 367, 141, 486], \"label\": \"car\"},\n\t{\"bbox_2d\": [18, 367, 68, 452], \"label\": \"car\"},\n\t{\"bbox_2d\": [10, 367, 48, 436], \"label\": \"car\"},\n\t{\"bbox_2d\": [107, 294, 810, 778], \"label\": \"car\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            107,
+                            346,
+                            308,
+                            638
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            54,
+                            367,
+                            141,
+                            486
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            18,
+                            367,
+                            68,
+                            452
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            10,
+                            367,
+                            48,
+                            436
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            107,
+                            294,
+                            810,
+                            778
+                        ],
+                        "label": "car"
+                    }
+                ],
+                "token_count": 166,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.5691
+            }
+        }
+    ]
+}

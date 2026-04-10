@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/53",
+        "folder_id": "53",
+        "category": "single/solo",
+        "filename": "ILSVRC2013_val_00003215.JPEG"
+    },
+    "pareto_index": 1,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.002632,
+            "defocus_blur": 0.060997,
+            "motion_blur": 0.021868,
+            "fog_filter": 0.002993,
+            "pixelate": 0.016055,
+            "jpeg_filter": 0.084475
+        },
+        "text_corruptions": {
+            "homophone": 0.046902,
+            "synonym": 0.062825,
+            "ata_saliency": 0.018323,
+            "fragmentation": 0.011106,
+            "character_noise": 0.080116
+        },
+        "img_budget_used": 0.18902,
+        "txt_budget_used": 0.219271,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.81134,
+        "img_dist": 0.10659,
+        "txt_dist": 0.04865,
+        "txt_sim": 0.95135
+    },
+    "swad_metrics": {
+        "iou_0": 0.85852,
+        "delta_m_plus": 0.05496,
+        "phi": 0.84995,
+        "swad": 0.04671
+    },
+    "l2_distance": 0.81976,
+    "original_prompt": "Identify the objects \"dragonfly\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dragonfly": {
+            "xmin": 32,
+            "ymin": 140,
+            "xmax": 263,
+            "ymax": 285
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"dragon\u200bfly\u200d\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [112, 300, 752, 552], \"label\": \"dragon\u200bfly\u200d\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    112,
+                    300,
+                    752,
+                    552
+                ],
+                "label": "dragon\u200bfly\u200d"
+            }
+        ],
+        "token_count": 43,
+        "raw_token_count": 50,
+        "runtime_seconds": 0.1587
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0026324857410917474,
+        "defocus_blur": 0.06099725460401651,
+        "motion_blur": 0.021867951103770995,
+        "fog_filter": 0.0029926185944039556,
+        "pixelate": 0.016054814525766188,
+        "jpeg_filter": 0.0844750101006566
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.04690215888106042,
+        "synonym": 0.06282455818345303,
+        "ata_saliency": 0.01832258945079449,
+        "fragmentation": 0.011106174411181615,
+        "character_noise": 0.0801155418354723
+    }
+}

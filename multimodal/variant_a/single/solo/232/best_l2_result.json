@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/232",
+        "folder_id": "232",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00015265.JPEG"
+    },
+    "pareto_index": 2,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.9870986572510505,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.8971524375333463
+    },
+    "objectives": {
+        "iou": 0.5139,
+        "img_dist": 0.06168,
+        "txt_dist": 0.04405,
+        "txt_sim": 0.95595
+    },
+    "swad_metrics": {
+        "iou_0": 0.70101,
+        "delta_m_plus": 0.26691,
+        "phi": 0.89699,
+        "swad": 0.23942
+    },
+    "l2_distance": 0.51946,
+    "original_prompt": "Identify the objects \"tiger\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "tiger": {
+            "xmin": 155,
+            "ymin": 117,
+            "xmax": 390,
+            "ymax": 196
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"tigre\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [300, 325, 650, 680], \"label\": \"tigre\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    300,
+                    325,
+                    650,
+                    680
+                ],
+                "label": "tigre"
+            }
+        ],
+        "token_count": 41,
+        "raw_token_count": 47,
+        "runtime_seconds": 0.1731
+    }
+}

@@ -1,0 +1,73 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/94",
+        "folder_id": "94",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00016905.JPEG"
+    },
+    "pareto_index": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 60,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "motion_blur",
+        "img_scale": 0.23165185207671868,
+        "txt_attack": "homophone",
+        "txt_scale": 0.2847437692140504
+    },
+    "objectives": {
+        "iou": 0.40549,
+        "img_dist": 0.05185,
+        "txt_dist": 0.06781,
+        "txt_sim": 0.93219
+    },
+    "swad_metrics": {
+        "iou_0": 0.5484,
+        "delta_m_plus": 0.26059,
+        "phi": 0.88386,
+        "swad": 0.23032
+    },
+    "l2_distance": 0.41438,
+    "original_prompt": "Identify the objects \"snake\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "snake": {
+            "xmin": 61,
+            "ymin": 118,
+            "xmax": 431,
+            "ymax": 374
+        },
+        "snake_1": {
+            "xmin": 235,
+            "ymin": 274,
+            "xmax": 418,
+            "ymax": 374
+        },
+        "snake_2": {
+            "xmin": 109,
+            "ymin": 93,
+            "xmax": 364,
+            "ymax": 262
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"schnake\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [131, 253, 853, 750], \"label\": \"schnake\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    131,
+                    253,
+                    853,
+                    750
+                ],
+                "label": "schnake"
+            }
+        ],
+        "token_count": 41,
+        "raw_token_count": 141,
+        "runtime_seconds": 0.4891
+    }
+}

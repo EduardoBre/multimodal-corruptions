@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/177",
+        "folder_id": "177",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00048300.JPEG"
+    },
+    "pareto_index": 3,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.003381,
+            "defocus_blur": 0.137935,
+            "motion_blur": 0.107646,
+            "fog_filter": 0.004784,
+            "pixelate": 0.225326,
+            "jpeg_filter": 0.097325
+        },
+        "text_corruptions": {
+            "homophone": 0.058595,
+            "synonym": 0.010734,
+            "ata_saliency": 0.006336,
+            "fragmentation": 0.050186,
+            "character_noise": 0.000658
+        },
+        "img_budget_used": 0.576397,
+        "txt_budget_used": 0.126509,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.08455,
+        "txt_dist": 0.34194,
+        "txt_sim": 0.65806
+    },
+    "swad_metrics": {
+        "iou_0": 0.66043,
+        "delta_m_plus": 1.0,
+        "phi": 0.60242,
+        "swad": 0.60242
+    },
+    "l2_distance": 0.35224,
+    "original_prompt": "Identify the objects \"bathing cap, maillot, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 86,
+            "ymin": 167,
+            "xmax": 326,
+            "ymax": 470
+        },
+        "maillot": {
+            "xmin": 67,
+            "ymin": 241,
+            "xmax": 170,
+            "ymax": 427
+        },
+        "bathing cap": {
+            "xmin": 146,
+            "ymin": 167,
+            "xmax": 224,
+            "ymax": 220
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bahti\u200dn\u200dg c\u200dmp\u200d, m\u200by \u043eh, per\u200ds\u043en\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [200, 339, 872, 925], \"label\": \"bahti\u200dn\u200dg c\u200dmp\u200d, m\u200by \u043eh, per\u200ds\u043en\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    200,
+                    339,
+                    872,
+                    925
+                ],
+                "label": "bahti\u200dn\u200dg c\u200dmp\u200d, m\u200by \u043eh, per\u200ds\u043en"
+            }
+        ],
+        "token_count": 65,
+        "raw_token_count": 151,
+        "runtime_seconds": 0.4645
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0033811862523767107,
+        "defocus_blur": 0.1379352690550662,
+        "motion_blur": 0.10764601633015575,
+        "fog_filter": 0.004783765314848696,
+        "pixelate": 0.22532633609156844,
+        "jpeg_filter": 0.09732485615597758
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.0585947996577428,
+        "synonym": 0.010733882688782866,
+        "ata_saliency": 0.006335991784169819,
+        "fragmentation": 0.05018642325466339,
+        "character_noise": 0.0006582002139248831
+    }
+}

@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/217",
+        "folder_id": "217",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00040974.JPEG"
+    },
+    "pareto_index": 12,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 3,
+    "total_evaluations": 90,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.062806,
+            "defocus_blur": 0.122256,
+            "motion_blur": 0.553472,
+            "fog_filter": 0.052501,
+            "pixelate": 0.121665,
+            "jpeg_filter": 0.062457
+        },
+        "text_corruptions": {
+            "homophone": 0.098507,
+            "synonym": 0.100498,
+            "ata_saliency": 0.178407,
+            "fragmentation": 0.022951,
+            "character_noise": 0.011231
+        },
+        "img_budget_used": 0.975157,
+        "txt_budget_used": 0.411594,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.04116,
+        "img_dist": 0.08011,
+        "txt_dist": 0.19036,
+        "txt_sim": 0.80964
+    },
+    "swad_metrics": {
+        "iou_0": 0.71262,
+        "delta_m_plus": 0.94224,
+        "phi": 0.74478,
+        "swad": 0.70176
+    },
+    "l2_distance": 0.21059,
+    "original_prompt": "Identify the objects \"watercraft\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "watercraft": {
+            "xmin": 54,
+            "ymin": 122,
+            "xmax": 174,
+            "ymax": 261
+        },
+        "watercraft_1": {
+            "xmin": 322,
+            "ymin": 162,
+            "xmax": 428,
+            "ymax": 270
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"watero\u200draft\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 630, 999, 999], \"label\": \"watero\u200draft\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    630,
+                    999,
+                    999
+                ],
+                "label": "watero\u200draft"
+            }
+        ],
+        "token_count": 41,
+        "raw_token_count": 101,
+        "runtime_seconds": 0.3191
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.06280564188922491,
+        "defocus_blur": 0.12225573465200082,
+        "motion_blur": 0.5534723749282715,
+        "fog_filter": 0.05250126484514276,
+        "pixelate": 0.12166529649638483,
+        "jpeg_filter": 0.06245711468207457
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.0985072752780396,
+        "synonym": 0.10049792863769608,
+        "ata_saliency": 0.17840696096457587,
+        "fragmentation": 0.022950549720574857,
+        "character_noise": 0.011230935072849137
+    }
+}

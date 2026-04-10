@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/114",
+        "folder_id": "114",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00002090.JPEG"
+    },
+    "pareto_index": 7,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 5,
+    "total_evaluations": 135,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.005360977587466786,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.4668202598336557
+    },
+    "objectives": {
+        "iou": 0.08233,
+        "img_dist": 0.06559,
+        "txt_dist": 0.3034,
+        "txt_sim": 0.6966
+    },
+    "swad_metrics": {
+        "iou_0": 0.73689,
+        "delta_m_plus": 0.88827,
+        "phi": 0.65091,
+        "swad": 0.57819
+    },
+    "l2_distance": 0.32114,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 75,
+            "ymin": 2,
+            "xmax": 226,
+            "ymax": 95
+        },
+        "bird_1": {
+            "xmin": 0,
+            "ymin": 112,
+            "xmax": 226,
+            "ymax": 377
+        },
+        "bird_2": {
+            "xmin": 206,
+            "ymin": 75,
+            "xmax": 341,
+            "ymax": 233
+        },
+        "bird_3": {
+            "xmin": 187,
+            "ymin": 240,
+            "xmax": 454,
+            "ymax": 498
+        },
+        "bird_4": {
+            "xmin": 205,
+            "ymin": 193,
+            "xmax": 437,
+            "ymax": 325
+        },
+        "bird_5": {
+            "xmin": 0,
+            "ymin": 1,
+            "xmax": 63,
+            "ymax": 31
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"birn\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [418, 385, 672, 540], \"label\": \"birn\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    418,
+                    385,
+                    672,
+                    540
+                ],
+                "label": "birn"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 261,
+        "runtime_seconds": 0.8614
+    }
+}

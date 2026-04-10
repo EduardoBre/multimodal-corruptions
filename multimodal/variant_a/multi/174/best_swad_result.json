@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/174",
+        "folder_id": "174",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00003324.JPEG"
+    },
+    "pareto_index": 7,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.956810286327587,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.5919188485823369
+    },
+    "objectives": {
+        "iou": 0.23729,
+        "img_dist": 0.07157,
+        "txt_dist": 0.25564,
+        "txt_sim": 0.74436
+    },
+    "swad_metrics": {
+        "iou_0": 0.85303,
+        "delta_m_plus": 0.72183,
+        "phi": 0.69109,
+        "swad": 0.49884
+    },
+    "l2_distance": 0.35606,
+    "original_prompt": "Identify the objects \"microwave, refrigerator, stove\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "refrigerator": {
+            "xmin": 231,
+            "ymin": 88,
+            "xmax": 348,
+            "ymax": 278
+        },
+        "microwave": {
+            "xmin": 89,
+            "ymin": 132,
+            "xmax": 148,
+            "ymax": 172
+        },
+        "stove": {
+            "xmin": 94,
+            "ymin": 172,
+            "xmax": 134,
+            "ymax": 290
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"m\u200d\u0456\u200dcr\u200bow\u200b\u0430\u200dve, r\u200b\u0435\u200df\u200dr\u0456g\u200de\u200br\u200d\u0430\u200dt\u200bo\u200br, sto\u200dv\u200de\u200d\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [170, 350, 270, 680], \"label\": \"m\u200d\u0456\u200dcr\u200bow\u200b\u0430\u200dve\"},\n\t{\"bbox_2d\": [170, 350, 270, 680], \"label\": \"r\u200b\u0435\u200df\u200dr\u0456g\u200de\u200br\u200d\u0430\u200dt\u200bo\u200br\"},\n\t{\"bbox_2d\": [170, 350, 270, 680], \"label\": \"sto\u200dv\u200de\u200d\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    170,
+                    350,
+                    270,
+                    680
+                ],
+                "label": "m\u200d\u0456\u200dcr\u200bow\u200b\u0430\u200dve"
+            },
+            {
+                "bbox_2d": [
+                    170,
+                    350,
+                    270,
+                    680
+                ],
+                "label": "r\u200b\u0435\u200df\u200dr\u0456g\u200de\u200br\u200d\u0430\u200dt\u200bo\u200br"
+            },
+            {
+                "bbox_2d": [
+                    170,
+                    350,
+                    270,
+                    680
+                ],
+                "label": "sto\u200dv\u200de\u200d"
+            }
+        ],
+        "token_count": 151,
+        "raw_token_count": 152,
+        "runtime_seconds": 0.508
+    }
+}

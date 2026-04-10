@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/121",
+        "folder_id": "121",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00044238.JPEG"
+    },
+    "pareto_index": 0,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.015944,
+            "defocus_blur": 0.005707,
+            "motion_blur": 0.000254,
+            "fog_filter": 0.001602,
+            "pixelate": 0.000721,
+            "jpeg_filter": 0.004233
+        },
+        "text_corruptions": {
+            "homophone": 0.119608,
+            "synonym": 0.027234,
+            "ata_saliency": 0.030596,
+            "fragmentation": 0.074892,
+            "character_noise": 0.007836
+        },
+        "img_budget_used": 0.028461,
+        "txt_budget_used": 0.260165,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.06645,
+        "img_dist": 0.06483,
+        "txt_dist": 0.31688,
+        "txt_sim": 0.68312
+    },
+    "swad_metrics": {
+        "iou_0": 0.80711,
+        "delta_m_plus": 0.91767,
+        "phi": 0.63883,
+        "swad": 0.58624
+    },
+    "l2_distance": 0.3302,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 134,
+            "ymin": 155,
+            "xmax": 378,
+            "ymax": 289
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"wing ed\u200d an\u200d imal\u200b\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [462, 576, 600, 658], \"label\": \"wing ed\u200d an\u200d imal\u200b\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    462,
+                    576,
+                    600,
+                    658
+                ],
+                "label": "wing ed\u200d an\u200d imal\u200b"
+            }
+        ],
+        "token_count": 48,
+        "raw_token_count": 49,
+        "runtime_seconds": 0.1703
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.015944334038109853,
+        "defocus_blur": 0.005707257023777241,
+        "motion_blur": 0.00025368880607525707,
+        "fog_filter": 0.001601878463899655,
+        "pixelate": 0.0007214474086097419,
+        "jpeg_filter": 0.0042327742120487335
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.11960823351893377,
+        "synonym": 0.02723404971485376,
+        "ata_saliency": 0.03059583009613173,
+        "fragmentation": 0.07489174803643893,
+        "character_noise": 0.00783563314967559
+    }
+}

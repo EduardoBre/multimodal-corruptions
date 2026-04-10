@@ -1,0 +1,124 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/3",
+        "folder_id": "3",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00001445.JPEG"
+    },
+    "pareto_index": 0,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "motion_blur",
+        "img_scale": 0.23165185207671868,
+        "txt_attack": "homophone",
+        "txt_scale": 0.2847437692140504
+    },
+    "objectives": {
+        "iou": 0.21994,
+        "img_dist": 0.04402,
+        "txt_dist": 0.20207,
+        "txt_sim": 0.79793
+    },
+    "swad_metrics": {
+        "iou_0": 0.85617,
+        "delta_m_plus": 0.74311,
+        "phi": 0.76281,
+        "swad": 0.56685
+    },
+    "l2_distance": 0.3019,
+    "original_prompt": "Identify the objects \"basketball, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 43,
+            "ymin": 16,
+            "xmax": 216,
+            "ymax": 219
+        },
+        "person_1": {
+            "xmin": 283,
+            "ymin": 172,
+            "xmax": 498,
+            "ymax": 497
+        },
+        "person_2": {
+            "xmin": 282,
+            "ymin": 0,
+            "xmax": 458,
+            "ymax": 221
+        },
+        "person_3": {
+            "xmin": 2,
+            "ymin": 183,
+            "xmax": 271,
+            "ymax": 498
+        },
+        "person_4": {
+            "xmin": 195,
+            "ymin": 102,
+            "xmax": 356,
+            "ymax": 498
+        },
+        "basketball": {
+            "xmin": 258,
+            "ymin": 46,
+            "xmax": 325,
+            "ymax": 96
+        },
+        "basketball_1": {
+            "xmin": 0,
+            "ymin": 278,
+            "xmax": 30,
+            "ymax": 345
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"basketball, purse on\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [530, 95, 630, 192], \"label\": \"basketball\"},\n\t{\"bbox_2d\": [0, 567, 52, 673], \"label\": \"basketball\"},\n\t{\"bbox_2d\": [81, 804, 200, 950], \"label\": \"basketball\"},\n\t{\"bbox_2d\": [818, 904, 938, 1000], \"label\": \"purse on\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    530,
+                    95,
+                    630,
+                    192
+                ],
+                "label": "basketball"
+            },
+            {
+                "bbox_2d": [
+                    0,
+                    567,
+                    52,
+                    673
+                ],
+                "label": "basketball"
+            },
+            {
+                "bbox_2d": [
+                    81,
+                    804,
+                    200,
+                    950
+                ],
+                "label": "basketball"
+            },
+            {
+                "bbox_2d": [
+                    818,
+                    904,
+                    938,
+                    1000
+                ],
+                "label": "purse on"
+            }
+        ],
+        "token_count": 139,
+        "raw_token_count": 356,
+        "runtime_seconds": 1.6318
+    }
+}

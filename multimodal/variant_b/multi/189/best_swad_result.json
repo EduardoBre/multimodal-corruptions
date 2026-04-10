@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/189",
+        "folder_id": "189",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00003464.JPEG"
+    },
+    "pareto_index": 4,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.042216,
+            "defocus_blur": 0.078094,
+            "motion_blur": 0.076755,
+            "fog_filter": 0.067932,
+            "pixelate": 0.049295,
+            "jpeg_filter": 0.115364
+        },
+        "text_corruptions": {
+            "homophone": 0.002314,
+            "synonym": 0.278764,
+            "ata_saliency": 0.242273,
+            "fragmentation": 0.088344,
+            "character_noise": 0.129095
+        },
+        "img_budget_used": 0.429655,
+        "txt_budget_used": 0.740789,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.04918,
+        "txt_dist": 0.30723,
+        "txt_sim": 0.69277
+    },
+    "swad_metrics": {
+        "iou_0": 0.96096,
+        "delta_m_plus": 1.0,
+        "phi": 0.6587,
+        "swad": 0.6587
+    },
+    "l2_distance": 0.31114,
+    "original_prompt": "Identify the objects \"person, tiger\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 0,
+            "ymin": 119,
+            "xmax": 95,
+            "ymax": 222
+        },
+        "tiger": {
+            "xmin": 203,
+            "ymin": 237,
+            "xmax": 375,
+            "ymax": 453
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"\u0440zr s\u200don, t\u200di\u200dg\u200be\u200dr\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [540, 520, 998, 998], \"label\": \"\u0440zr s\u200don, t\u200di\u200dg\u200be\u200dr\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    540,
+                    520,
+                    998,
+                    998
+                ],
+                "label": "\u0440zr s\u200don, t\u200di\u200dg\u200be\u200dr"
+            }
+        ],
+        "token_count": 58,
+        "raw_token_count": 88,
+        "runtime_seconds": 0.265
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.042215756828846256,
+        "defocus_blur": 0.07809373194436844,
+        "motion_blur": 0.07675465564839014,
+        "fog_filter": 0.06793213458991883,
+        "pixelate": 0.04929505943668616,
+        "jpeg_filter": 0.11536358844259148
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.002313585715372724,
+        "synonym": 0.27876422692433167,
+        "ata_saliency": 0.24227253567594106,
+        "fragmentation": 0.08834381355503036,
+        "character_noise": 0.1290951969722037
+    }
+}

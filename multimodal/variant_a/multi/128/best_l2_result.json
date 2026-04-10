@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/128",
+        "folder_id": "128",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00000758.JPEG"
+    },
+    "pareto_index": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "motion_blur",
+        "img_scale": 0.23165185207671868,
+        "txt_attack": "homophone",
+        "txt_scale": 0.2847437692140504
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.06327,
+        "txt_dist": 0.20207,
+        "txt_sim": 0.79793
+    },
+    "swad_metrics": {
+        "iou_0": 0.54524,
+        "delta_m_plus": 1.0,
+        "phi": 0.74744,
+        "swad": 0.74744
+    },
+    "l2_distance": 0.21174,
+    "original_prompt": "Identify the objects \"person, watercraft\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 291,
+            "ymin": 391,
+            "xmax": 310,
+            "ymax": 418
+        },
+        "watercraft": {
+            "xmin": 277,
+            "ymin": 122,
+            "xmax": 298,
+            "ymax": 171
+        },
+        "watercraft_1": {
+            "xmin": 75,
+            "ymin": 144,
+            "xmax": 92,
+            "ymax": 185
+        },
+        "watercraft_2": {
+            "xmin": 76,
+            "ymin": 15,
+            "xmax": 338,
+            "ymax": 438
+        },
+        "person_1": {
+            "xmin": 269,
+            "ymin": 401,
+            "xmax": 281,
+            "ymax": 411
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"purse on, watercraft\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [174, 34, 838, 893], \"label\": \"purse on, watercraft\"},\n\t{\"bbox_2d\": [694, 238, 728, 335], \"label\": \"purse on, watercraft\"},\n\t{\"bbox_2d\": [190, 275, 224, 367], \"label\": \"purse on, watercraft\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    174,
+                    34,
+                    838,
+                    893
+                ],
+                "label": "purse on, watercraft"
+            },
+            {
+                "bbox_2d": [
+                    694,
+                    238,
+                    728,
+                    335
+                ],
+                "label": "purse on, watercraft"
+            },
+            {
+                "bbox_2d": [
+                    190,
+                    275,
+                    224,
+                    367
+                ],
+                "label": "purse on, watercraft"
+            }
+        ],
+        "token_count": 119,
+        "raw_token_count": 286,
+        "runtime_seconds": 0.9483
+    }
+}

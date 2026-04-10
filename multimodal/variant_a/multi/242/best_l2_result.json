@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/242",
+        "folder_id": "242",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00049750.JPEG"
+    },
+    "pareto_index": 7,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 3,
+    "total_evaluations": 90,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.020165567215984566,
+        "txt_attack": "homophone",
+        "txt_scale": 0.7357204217772441
+    },
+    "objectives": {
+        "iou": 0.23664,
+        "img_dist": 0.07274,
+        "txt_dist": 0.16633,
+        "txt_sim": 0.83367
+    },
+    "swad_metrics": {
+        "iou_0": 0.77278,
+        "delta_m_plus": 0.69378,
+        "phi": 0.77303,
+        "swad": 0.53631
+    },
+    "l2_distance": 0.29825,
+    "original_prompt": "Identify the objects \"bicycle, helmet, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 98,
+            "ymin": 32,
+            "xmax": 289,
+            "ymax": 425
+        },
+        "bicycle": {
+            "xmin": 117,
+            "ymin": 218,
+            "xmax": 274,
+            "ymax": 497
+        },
+        "helmet": {
+            "xmin": 140,
+            "ymin": 31,
+            "xmax": 205,
+            "ymax": 112
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"by cycle, helmet, pursun\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [328, 437, 756, 508], \"label\": \"by cycle\"},\n\t{\"bbox_2d\": [392, 67, 556, 158], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [428, 158, 536, 428], \"label\": \"pursun\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    328,
+                    437,
+                    756,
+                    508
+                ],
+                "label": "by cycle"
+            },
+            {
+                "bbox_2d": [
+                    392,
+                    67,
+                    556,
+                    158
+                ],
+                "label": "helmet"
+            },
+            {
+                "bbox_2d": [
+                    428,
+                    158,
+                    536,
+                    428
+                ],
+                "label": "pursun"
+            }
+        ],
+        "token_count": 108,
+        "raw_token_count": 111,
+        "runtime_seconds": 0.3641
+    }
+}

@@ -1,0 +1,188 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/single/solo/233",
+        "folder_id": "233",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00035783.JPEG"
+    },
+    "original_prompt": "Identify the objects \"airplane\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "airplane": {
+            "xmin": 158,
+            "ymin": 200,
+            "xmax": 431,
+            "ymax": 329
+        }
+    },
+    "baseline_iou": 0.94248,
+    "swad_star": 0.6011,
+    "swad_star_index": 3,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 4,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.8632061743184387,
+                "txt_attack": "synonym",
+                "txt_scale": 0.7724979474714236
+            },
+            "objectives": {
+                "iou": 0.92652,
+                "img_dist": 0.18843,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.94248,
+                "delta_m_plus": 0.01693,
+                "phi": 0.81157,
+                "swad": 0.01374
+            },
+            "l2_distance": 0.94549,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"airplane\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [315, 538, 867, 860], \"label\": \"airplane\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            315,
+                            538,
+                            867,
+                            860
+                        ],
+                        "label": "airplane"
+                    }
+                ],
+                "token_count": 40,
+                "raw_token_count": 49,
+                "runtime_seconds": 0.2084
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.018153363333776373,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.24927259019092207
+            },
+            "objectives": {
+                "iou": 0.93507,
+                "img_dist": 0.03937,
+                "txt_dist": 0.18237,
+                "txt_sim": 0.81763
+            },
+            "swad_metrics": {
+                "iou_0": 0.94248,
+                "delta_m_plus": 0.00786,
+                "phi": 0.78544,
+                "swad": 0.00618
+            },
+            "l2_distance": 0.9535,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"a\u200b\u0456r\u200dplan\u0435\u200d\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [323, 540, 852, 872], \"label\": \"a\u200b\u0456r\u200dplan\u0435\u200d\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            323,
+                            540,
+                            852,
+                            872
+                        ],
+                        "label": "a\u200b\u0456r\u200dplan\u0435\u200d"
+                    }
+                ],
+                "token_count": 48,
+                "raw_token_count": 49,
+                "runtime_seconds": 0.2084
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.93683,
+                "img_dist": 0.03937,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.94248,
+                "delta_m_plus": 0.00599,
+                "phi": 0.96063,
+                "swad": 0.00576
+            },
+            "l2_distance": 0.93766,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"airplane\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [320, 540, 850, 872], \"label\": \"airplane\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            320,
+                            540,
+                            850,
+                            872
+                        ],
+                        "label": "airplane"
+                    }
+                ],
+                "token_count": 40,
+                "raw_token_count": 49,
+                "runtime_seconds": 0.2084
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.30348,
+                "img_dist": 0.09171,
+                "txt_dist": 0.0239,
+                "txt_sim": 0.9761
+            },
+            "swad_metrics": {
+                "iou_0": 0.94248,
+                "delta_m_plus": 0.678,
+                "phi": 0.88658,
+                "swad": 0.6011
+            },
+            "l2_distance": 0.31793,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"air plane\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [320, 700, 700, 850], \"label\": \"air plane\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            320,
+                            700,
+                            700,
+                            850
+                        ],
+                        "label": "air plane"
+                    }
+                ],
+                "token_count": 40,
+                "raw_token_count": 49,
+                "runtime_seconds": 0.2084
+            }
+        }
+    ]
+}

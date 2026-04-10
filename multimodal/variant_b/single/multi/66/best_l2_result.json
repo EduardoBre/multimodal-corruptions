@@ -1,0 +1,106 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/66",
+        "folder_id": "66",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00036358.JPEG"
+    },
+    "pareto_index": 10,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.001619,
+            "defocus_blur": 0.032591,
+            "motion_blur": 0.021245,
+            "fog_filter": 0.028583,
+            "pixelate": 0.225357,
+            "jpeg_filter": 0.06733
+        },
+        "text_corruptions": {
+            "homophone": 0.018054,
+            "synonym": 0.097024,
+            "ata_saliency": 0.149406,
+            "fragmentation": 0.014045,
+            "character_noise": 0.023951
+        },
+        "img_budget_used": 0.376724,
+        "txt_budget_used": 0.30248,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.96566,
+        "img_dist": 0.04847,
+        "txt_dist": 0.02418,
+        "txt_sim": 0.97582
+    },
+    "swad_metrics": {
+        "iou_0": 0.97079,
+        "delta_m_plus": 0.00529,
+        "phi": 0.92852,
+        "swad": 0.00491
+    },
+    "l2_distance": 0.96718,
+    "original_prompt": "Identify the objects \"salt or pepper shaker\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "salt or pepper shaker": {
+            "xmin": 53,
+            "ymin": 34,
+            "xmax": 236,
+            "ymax": 323
+        },
+        "salt or pepper shaker_1": {
+            "xmin": 251,
+            "ymin": 26,
+            "xmax": 430,
+            "ymax": 307
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"salt or pepper shak\u0435r\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [105, 90, 467, 890], \"label\": \"salt or pepper shak\u0435r\"},\n\t{\"bbox_2d\": [500, 78, 867, 858], \"label\": \"salt or pepper shak\u0435r\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    105,
+                    90,
+                    467,
+                    890
+                ],
+                "label": "salt or pepper shak\u0435r"
+            },
+            {
+                "bbox_2d": [
+                    500,
+                    78,
+                    867,
+                    858
+                ],
+                "label": "salt or pepper shak\u0435r"
+            }
+        ],
+        "token_count": 82,
+        "raw_token_count": 103,
+        "runtime_seconds": 0.3203
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0016190788003544929,
+        "defocus_blur": 0.03259073549658733,
+        "motion_blur": 0.021245169398214546,
+        "fog_filter": 0.02858285288996648,
+        "pixelate": 0.22535670544093372,
+        "jpeg_filter": 0.06732973235022467
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.018053714810867205,
+        "synonym": 0.09702383306345849,
+        "ata_saliency": 0.1494056983935493,
+        "fragmentation": 0.014045157822809545,
+        "character_noise": 0.023951390510569666
+    }
+}

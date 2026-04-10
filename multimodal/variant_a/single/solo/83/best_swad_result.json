@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/83",
+        "folder_id": "83",
+        "category": "single/solo",
+        "filename": "ILSVRC2013_val_00003473.JPEG"
+    },
+    "pareto_index": 4,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 12,
+    "total_evaluations": 360,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "gaussian_noise",
+        "img_scale": 3.11041130332202e-05,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6003748967429903
+    },
+    "objectives": {
+        "iou": 0.03695,
+        "img_dist": 0.02948,
+        "txt_dist": 0.26582,
+        "txt_sim": 0.73418
+    },
+    "swad_metrics": {
+        "iou_0": 0.95014,
+        "delta_m_plus": 0.96111,
+        "phi": 0.71254,
+        "swad": 0.68483
+    },
+    "l2_distance": 0.26999,
+    "original_prompt": "Identify the objects \"tiger\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "tiger": {
+            "xmin": 189,
+            "ymin": 56,
+            "xmax": 329,
+            "ymax": 374
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"tyer\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [405, 162, 512, 244], \"label\": \"tyer\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    405,
+                    162,
+                    512,
+                    244
+                ],
+                "label": "tyer"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 49,
+        "runtime_seconds": 0.161
+    }
+}

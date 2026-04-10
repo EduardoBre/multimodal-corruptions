@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/233",
+        "folder_id": "233",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00035783.JPEG"
+    },
+    "pareto_index": 3,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.863144940280058,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6678992108124702
+    },
+    "objectives": {
+        "iou": 0.30348,
+        "img_dist": 0.09171,
+        "txt_dist": 0.0239,
+        "txt_sim": 0.9761
+    },
+    "swad_metrics": {
+        "iou_0": 0.91605,
+        "delta_m_plus": 0.66871,
+        "phi": 0.88658,
+        "swad": 0.59286
+    },
+    "l2_distance": 0.31793,
+    "original_prompt": "Identify the objects \"airplane\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "airplane": {
+            "xmin": 158,
+            "ymin": 200,
+            "xmax": 431,
+            "ymax": 329
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"air plane\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [320, 700, 700, 850], \"label\": \"air plane\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    320,
+                    700,
+                    700,
+                    850
+                ],
+                "label": "air plane"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 49,
+        "runtime_seconds": 0.2084
+    }
+}

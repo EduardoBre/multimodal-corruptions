@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/110",
+        "folder_id": "110",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00005667.JPEG"
+    },
+    "pareto_index": 1,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.046138,
+            "defocus_blur": 0.10861,
+            "motion_blur": 0.057921,
+            "fog_filter": 0.338929,
+            "pixelate": 0.361983,
+            "jpeg_filter": 0.084379
+        },
+        "text_corruptions": {
+            "homophone": 0.014676,
+            "synonym": 0.002615,
+            "ata_saliency": 0.042151,
+            "fragmentation": 0.001082,
+            "character_noise": 0.016112
+        },
+        "img_budget_used": 0.99796,
+        "txt_budget_used": 0.076636,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.09339,
+        "img_dist": 0.09697,
+        "txt_dist": 0.21162,
+        "txt_sim": 0.78838
+    },
+    "swad_metrics": {
+        "iou_0": 0.97125,
+        "delta_m_plus": 0.90385,
+        "phi": 0.71193,
+        "swad": 0.64348
+    },
+    "l2_distance": 0.25081,
+    "original_prompt": "Identify the objects \"filing cabinet\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "filing cabinet": {
+            "xmin": 135,
+            "ymin": 14,
+            "xmax": 365,
+            "ymax": 360
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"filn\u200dig cab\u0456net\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [658, 0, 1000, 910], \"label\": \"filn\u200dig cab\u0456net\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    658,
+                    0,
+                    1000,
+                    910
+                ],
+                "label": "filn\u200dig cab\u0456net"
+            }
+        ],
+        "token_count": 45,
+        "raw_token_count": 58,
+        "runtime_seconds": 0.1796
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.046138074534905885,
+        "defocus_blur": 0.10861018714883355,
+        "motion_blur": 0.057921010819996954,
+        "fog_filter": 0.33892850488170806,
+        "pixelate": 0.3619832908807013,
+        "jpeg_filter": 0.08437894085934113
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.014676413816471128,
+        "synonym": 0.0026147931726769377,
+        "ata_saliency": 0.04215112964650534,
+        "fragmentation": 0.0010815480983680005,
+        "character_noise": 0.016112051087955177
+    }
+}

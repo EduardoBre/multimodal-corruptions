@@ -1,0 +1,112 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/175",
+        "folder_id": "175",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00001659.JPEG"
+    },
+    "pareto_index": 3,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.03664,
+            "defocus_blur": 0.008601,
+            "motion_blur": 0.026163,
+            "fog_filter": 0.213629,
+            "pixelate": 0.19413,
+            "jpeg_filter": 0.124531
+        },
+        "text_corruptions": {
+            "homophone": 0.229126,
+            "synonym": 0.078399,
+            "ata_saliency": 0.247826,
+            "fragmentation": 0.098206,
+            "character_noise": 0.241141
+        },
+        "img_budget_used": 0.603694,
+        "txt_budget_used": 0.894699,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.09276,
+        "txt_dist": 0.28909,
+        "txt_sim": 0.71091
+    },
+    "swad_metrics": {
+        "iou_0": 0.60229,
+        "delta_m_plus": 1.0,
+        "phi": 0.64497,
+        "swad": 0.64497
+    },
+    "l2_distance": 0.30361,
+    "original_prompt": "Identify the objects \"chair, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 82,
+            "ymin": 26,
+            "xmax": 416,
+            "ymax": 453
+        },
+        "chair": {
+            "xmin": 32,
+            "ymin": 218,
+            "xmax": 155,
+            "ymax": 398
+        },
+        "chair_1": {
+            "xmin": 298,
+            "ymin": 190,
+            "xmax": 431,
+            "ymax": 342
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"\u0441ha\u200dir, per syn\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [70, 434, 266, 792], \"label\": \"\u0441ha\u200dir, per syn\"},\n\t{\"bbox_2d\": [738, 450, 852, 738], \"label\": \"\u0441ha\u200dir, per syn\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    70,
+                    434,
+                    266,
+                    792
+                ],
+                "label": "\u0441ha\u200dir, per syn"
+            },
+            {
+                "bbox_2d": [
+                    738,
+                    450,
+                    852,
+                    738
+                ],
+                "label": "\u0441ha\u200dir, per syn"
+            }
+        ],
+        "token_count": 85,
+        "raw_token_count": 188,
+        "runtime_seconds": 0.5836
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.03663955309533215,
+        "defocus_blur": 0.008601084324363047,
+        "motion_blur": 0.026162770061930865,
+        "fog_filter": 0.21362935247914686,
+        "pixelate": 0.19413041691190172,
+        "jpeg_filter": 0.12453118536464443
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.2291261601612856,
+        "synonym": 0.07839924755906306,
+        "ata_saliency": 0.2478262335584334,
+        "fragmentation": 0.09820642186998028,
+        "character_noise": 0.24114125882171747
+    }
+}

@@ -1,0 +1,480 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/single/multi/233",
+        "folder_id": "233",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00021149.JPEG"
+    },
+    "original_prompt": "Identify the objects \"sheep\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "sheep": {
+            "xmin": 94,
+            "ymin": 77,
+            "xmax": 303,
+            "ymax": 283
+        },
+        "sheep_1": {
+            "xmin": 316,
+            "ymin": 80,
+            "xmax": 450,
+            "ymax": 234
+        },
+        "sheep_2": {
+            "xmin": 458,
+            "ymin": 81,
+            "xmax": 499,
+            "ymax": 176
+        }
+    },
+    "baseline_iou": 0.89718,
+    "swad_star": 0.59418,
+    "swad_star_index": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 3,
+    "total_evaluations": 75,
+    "skipped_evaluations": 45,
+    "n_solutions": 9,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.77471,
+                "img_dist": 0.0511,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.89718,
+                "delta_m_plus": 0.13651,
+                "phi": 0.9489,
+                "swad": 0.12953
+            },
+            "l2_distance": 0.77639,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"sheep\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [185, 237, 609, 843], \"label\": \"sheep\"},\n\t{\"bbox_2d\": [630, 250, 898, 720], \"label\": \"sheep\"},\n\t{\"bbox_2d\": [809, 247, 999, 527], \"label\": \"sheep\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            185,
+                            237,
+                            609,
+                            843
+                        ],
+                        "label": "sheep"
+                    },
+                    {
+                        "bbox_2d": [
+                            630,
+                            250,
+                            898,
+                            720
+                        ],
+                        "label": "sheep"
+                    },
+                    {
+                        "bbox_2d": [
+                            809,
+                            247,
+                            999,
+                            527
+                        ],
+                        "label": "sheep"
+                    }
+                ],
+                "token_count": 108,
+                "raw_token_count": 118,
+                "runtime_seconds": 0.4106
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.018595721213425453,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6130568625347235
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.05577,
+                "txt_dist": 0.37073,
+                "txt_sim": 0.62927
+            },
+            "swad_metrics": {
+                "iou_0": 0.89718,
+                "delta_m_plus": 1.0,
+                "phi": 0.59418,
+                "swad": 0.59418
+            },
+            "l2_distance": 0.3749,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"sleep\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "There is no object labeled \"sleep\" in the image. Therefore, the bounding boxes are:\n\n```json\n[]\n```",
+                "parsed_predictions": [],
+                "token_count": 24,
+                "raw_token_count": 118,
+                "runtime_seconds": 0.4106
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.21161444969129456,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.5919188485823369
+            },
+            "objectives": {
+                "iou": 0.32192,
+                "img_dist": 0.08103,
+                "txt_dist": 0.33706,
+                "txt_sim": 0.66294
+            },
+            "swad_metrics": {
+                "iou_0": 0.89718,
+                "delta_m_plus": 0.64119,
+                "phi": 0.60922,
+                "swad": 0.39063
+            },
+            "l2_distance": 0.47308,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"s\u200dh\u200d\u0435\u200be\u200dp\u200b\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [188, 228, 609, 836], \"label\": \"s\u200dh\u200d\u0435\u200be\u200dp\u200b\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            188,
+                            228,
+                            609,
+                            836
+                        ],
+                        "label": "s\u200dh\u200d\u0435\u200be\u200dp\u200b"
+                    }
+                ],
+                "token_count": 51,
+                "raw_token_count": 121,
+                "runtime_seconds": 0.4008
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.02226035255626979,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4303904312548027
+            },
+            "objectives": {
+                "iou": 0.86384,
+                "img_dist": 0.03266,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.89718,
+                "delta_m_plus": 0.03716,
+                "phi": 0.96734,
+                "swad": 0.03595
+            },
+            "l2_distance": 0.86446,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"sheep\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [183, 232, 609, 843], \"label\": \"sheep\"},\n\t{\"bbox_2d\": [625, 232, 895, 720], \"label\": \"sheep\"},\n\t{\"bbox_2d\": [887, 244, 998, 517], \"label\": \"sheep\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            183,
+                            232,
+                            609,
+                            843
+                        ],
+                        "label": "sheep"
+                    },
+                    {
+                        "bbox_2d": [
+                            625,
+                            232,
+                            895,
+                            720
+                        ],
+                        "label": "sheep"
+                    },
+                    {
+                        "bbox_2d": [
+                            887,
+                            244,
+                            998,
+                            517
+                        ],
+                        "label": "sheep"
+                    }
+                ],
+                "token_count": 108,
+                "raw_token_count": 115,
+                "runtime_seconds": 0.3832
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.02226035255626979,
+                "txt_attack": "homophone",
+                "txt_scale": 0.5392537687824642
+            },
+            "objectives": {
+                "iou": 0.86968,
+                "img_dist": 0.0326,
+                "txt_dist": 0.25294,
+                "txt_sim": 0.74706
+            },
+            "swad_metrics": {
+                "iou_0": 0.89718,
+                "delta_m_plus": 0.03065,
+                "phi": 0.72271,
+                "swad": 0.02215
+            },
+            "l2_distance": 0.9063,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"sheap\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [185, 230, 609, 837], \"label\": \"sheap\"},\n\t{\"bbox_2d\": [627, 230, 897, 720], \"label\": \"sheap\"},\n\t{\"bbox_2d\": [887, 247, 998, 527], \"label\": \"sheap\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            185,
+                            230,
+                            609,
+                            837
+                        ],
+                        "label": "sheap"
+                    },
+                    {
+                        "bbox_2d": [
+                            627,
+                            230,
+                            897,
+                            720
+                        ],
+                        "label": "sheap"
+                    },
+                    {
+                        "bbox_2d": [
+                            887,
+                            247,
+                            998,
+                            527
+                        ],
+                        "label": "sheap"
+                    }
+                ],
+                "token_count": 108,
+                "raw_token_count": 109,
+                "runtime_seconds": 0.3578
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.18859314561510063,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.574959505503685
+            },
+            "objectives": {
+                "iou": 0.32661,
+                "img_dist": 0.05533,
+                "txt_dist": 0.32244,
+                "txt_sim": 0.67756
+            },
+            "swad_metrics": {
+                "iou_0": 0.89718,
+                "delta_m_plus": 0.63596,
+                "phi": 0.64007,
+                "swad": 0.40706
+            },
+            "l2_distance": 0.46228,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"s\u200bh\u0435\u200be\u0440\u200b\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [188, 230, 607, 840], \"label\": \"s\u200bh\u0435\u200be\u0440\u200b\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            188,
+                            230,
+                            607,
+                            840
+                        ],
+                        "label": "s\u200bh\u0435\u200be\u0440\u200b"
+                    }
+                ],
+                "token_count": 46,
+                "raw_token_count": 109,
+                "runtime_seconds": 0.3578
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.8223310335987789,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6172812806467369
+            },
+            "objectives": {
+                "iou": 0.30693,
+                "img_dist": 0.09504,
+                "txt_dist": 0.24162,
+                "txt_sim": 0.75838
+            },
+            "swad_metrics": {
+                "iou_0": 0.89718,
+                "delta_m_plus": 0.65789,
+                "phi": 0.6863,
+                "swad": 0.45152
+            },
+            "l2_distance": 0.40202,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"shep\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [178, 220, 610, 830], \"label\": \"shep\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            178,
+                            220,
+                            610,
+                            830
+                        ],
+                        "label": "shep"
+                    }
+                ],
+                "token_count": 40,
+                "raw_token_count": 109,
+                "runtime_seconds": 0.3578
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.2494872020767977,
+                "txt_attack": "homophone",
+                "txt_scale": 0.5919213382887198
+            },
+            "objectives": {
+                "iou": 0.77456,
+                "img_dist": 0.05881,
+                "txt_dist": 0.25294,
+                "txt_sim": 0.74706
+            },
+            "swad_metrics": {
+                "iou_0": 0.89718,
+                "delta_m_plus": 0.13667,
+                "phi": 0.70313,
+                "swad": 0.0961
+            },
+            "l2_distance": 0.81693,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"sheap\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [183, 236, 607, 837], \"label\": \"sheap\"},\n\t{\"bbox_2d\": [630, 236, 900, 717], \"label\": \"sheap\"},\n\t{\"bbox_2d\": [807, 243, 995, 530], \"label\": \"sheap\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            183,
+                            236,
+                            607,
+                            837
+                        ],
+                        "label": "sheap"
+                    },
+                    {
+                        "bbox_2d": [
+                            630,
+                            236,
+                            900,
+                            717
+                        ],
+                        "label": "sheap"
+                    },
+                    {
+                        "bbox_2d": [
+                            807,
+                            243,
+                            995,
+                            530
+                        ],
+                        "label": "sheap"
+                    }
+                ],
+                "token_count": 108,
+                "raw_token_count": 109,
+                "runtime_seconds": 0.3578
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8181617493544074,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.40239628960799545
+            },
+            "objectives": {
+                "iou": 0.74998,
+                "img_dist": 0.07458,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.89718,
+                "delta_m_plus": 0.16407,
+                "phi": 0.92542,
+                "swad": 0.15183
+            },
+            "l2_distance": 0.75368,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"sheep\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [188, 234, 607, 827], \"label\": \"sheep\"},\n\t{\"bbox_2d\": [632, 260, 897, 730], \"label\": \"sheep\"},\n\t{\"bbox_2d\": [807, 234, 999, 507], \"label\": \"sheep\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            188,
+                            234,
+                            607,
+                            827
+                        ],
+                        "label": "sheep"
+                    },
+                    {
+                        "bbox_2d": [
+                            632,
+                            260,
+                            897,
+                            730
+                        ],
+                        "label": "sheep"
+                    },
+                    {
+                        "bbox_2d": [
+                            807,
+                            234,
+                            999,
+                            507
+                        ],
+                        "label": "sheep"
+                    }
+                ],
+                "token_count": 108,
+                "raw_token_count": 109,
+                "runtime_seconds": 0.3578
+            }
+        }
+    ]
+}

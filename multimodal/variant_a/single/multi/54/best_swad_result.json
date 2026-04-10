@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/54",
+        "folder_id": "54",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00016485.JPEG"
+    },
+    "pareto_index": 8,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.3810764979952218,
+        "txt_attack": "synonym",
+        "txt_scale": 0.8286080825406955
+    },
+    "objectives": {
+        "iou": 0.45423,
+        "img_dist": 0.05026,
+        "txt_dist": 0.04808,
+        "txt_sim": 0.95192
+    },
+    "swad_metrics": {
+        "iou_0": 0.91773,
+        "delta_m_plus": 0.50505,
+        "phi": 0.90408,
+        "swad": 0.4566
+    },
+    "l2_distance": 0.45952,
+    "original_prompt": "Identify the objects \"salt or pepper shaker\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "salt or pepper shaker": {
+            "xmin": 151,
+            "ymin": 41,
+            "xmax": 278,
+            "ymax": 497
+        },
+        "salt or pepper shaker_1": {
+            "xmin": 8,
+            "ymin": 6,
+            "xmax": 142,
+            "ymax": 496
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"salt shaker\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [500, 75, 975, 987], \"label\": \"salt shaker\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    500,
+                    75,
+                    975,
+                    987
+                ],
+                "label": "salt shaker"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 80,
+        "runtime_seconds": 0.2612
+    }
+}

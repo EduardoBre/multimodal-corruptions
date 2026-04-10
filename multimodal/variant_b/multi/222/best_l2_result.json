@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/222",
+        "folder_id": "222",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00038289.JPEG"
+    },
+    "pareto_index": 3,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.030599,
+            "defocus_blur": 0.066986,
+            "motion_blur": 0.143079,
+            "fog_filter": 0.050142,
+            "pixelate": 0.208167,
+            "jpeg_filter": 0.055435
+        },
+        "text_corruptions": {
+            "homophone": 0.027998,
+            "synonym": 0.362036,
+            "ata_saliency": 0.05052,
+            "fragmentation": 0.021168,
+            "character_noise": 0.101666
+        },
+        "img_budget_used": 0.554408,
+        "txt_budget_used": 0.563388,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.04641,
+        "txt_dist": 0.27663,
+        "txt_sim": 0.72337
+    },
+    "swad_metrics": {
+        "iou_0": 0.76075,
+        "delta_m_plus": 1.0,
+        "phi": 0.6898,
+        "swad": 0.6898
+    },
+    "l2_distance": 0.2805,
+    "original_prompt": "Identify the objects \"brassiere, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 0,
+            "ymin": 20,
+            "xmax": 337,
+            "ymax": 575
+        },
+        "brassiere": {
+            "xmin": 97,
+            "ymin": 239,
+            "xmax": 317,
+            "ymax": 448
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"br\u0430s\u200bsi\u200d\u0435\u200bre\u200b, p\u0435r son\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [202, 550, 420, 788], \"label\": \"br\u0430s\u200bsi\u200d\u0435\u200bre\u200b, p\u0435r son\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    202,
+                    550,
+                    420,
+                    788
+                ],
+                "label": "br\u0430s\u200bsi\u200d\u0435\u200bre\u200b, p\u0435r son"
+            }
+        ],
+        "token_count": 54,
+        "raw_token_count": 88,
+        "runtime_seconds": 0.2863
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.03059866842919594,
+        "defocus_blur": 0.06698594591858523,
+        "motion_blur": 0.14307903870740127,
+        "fog_filter": 0.050142300581014945,
+        "pixelate": 0.20816700030733537,
+        "jpeg_filter": 0.055435303184126705
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.027998060264650293,
+        "synonym": 0.3620362684616076,
+        "ata_saliency": 0.05051989303062545,
+        "fragmentation": 0.021167514873368508,
+        "character_noise": 0.10166579080202023
+    }
+}

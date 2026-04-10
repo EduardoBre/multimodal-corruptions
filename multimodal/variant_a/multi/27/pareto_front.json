@@ -1,0 +1,387 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/27",
+        "folder_id": "27",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00017980.JPEG"
+    },
+    "original_prompt": "Identify the objects \"chair, dog, flower pot\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 161,
+            "ymin": 52,
+            "xmax": 409,
+            "ymax": 298
+        },
+        "flower pot": {
+            "xmin": 384,
+            "ymin": 129,
+            "xmax": 436,
+            "ymax": 186
+        },
+        "chair": {
+            "xmin": 0,
+            "ymin": 131,
+            "xmax": 165,
+            "ymax": 374
+        }
+    },
+    "baseline_iou": 0.81644,
+    "swad_star": 0.68641,
+    "swad_star_index": 4,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 6,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.50961,
+                "img_dist": 0.04145,
+                "txt_dist": 0.08723,
+                "txt_sim": 0.91277
+            },
+            "swad_metrics": {
+                "iou_0": 0.81644,
+                "delta_m_plus": 0.37581,
+                "phi": 0.87494,
+                "swad": 0.32881
+            },
+            "l2_distance": 0.51868,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cher, dog, flower pot\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [700, 132, 925, 536], \"label\": \"cher\"},\n\t{\"bbox_2d\": [327, 142, 800, 792], \"label\": \"dog\"},\n\t{\"bbox_2d\": [770, 378, 867, 536], \"label\": \"flower pot\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            700,
+                            132,
+                            925,
+                            536
+                        ],
+                        "label": "cher"
+                    },
+                    {
+                        "bbox_2d": [
+                            327,
+                            142,
+                            800,
+                            792
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            770,
+                            378,
+                            867,
+                            536
+                        ],
+                        "label": "flower pot"
+                    }
+                ],
+                "token_count": 106,
+                "raw_token_count": 173,
+                "runtime_seconds": 0.612
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.38154,
+                "img_dist": 0.04105,
+                "txt_dist": 0.17851,
+                "txt_sim": 0.82149
+            },
+            "swad_metrics": {
+                "iou_0": 0.81644,
+                "delta_m_plus": 0.53268,
+                "phi": 0.78777,
+                "swad": 0.41963
+            },
+            "l2_distance": 0.42323,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cahir, dog, flower opt\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [325, 140, 805, 792], \"label\": \"cahir\"},\n\t{\"bbox_2d\": [325, 140, 805, 792], \"label\": \"dog\"},\n\t{\"bbox_2d\": [698, 130, 925, 520], \"label\": \"flower opt\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            325,
+                            140,
+                            805,
+                            792
+                        ],
+                        "label": "cahir"
+                    },
+                    {
+                        "bbox_2d": [
+                            325,
+                            140,
+                            805,
+                            792
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            698,
+                            130,
+                            925,
+                            520
+                        ],
+                        "label": "flower opt"
+                    }
+                ],
+                "token_count": 107,
+                "raw_token_count": 173,
+                "runtime_seconds": 0.612
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6124377601560459,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.7901,
+                "img_dist": 0.08543,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.81644,
+                "delta_m_plus": 0.03226,
+                "phi": 0.91457,
+                "swad": 0.02951
+            },
+            "l2_distance": 0.79471,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chair, dog, flower pot\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [384, 530, 1000, 999], \"label\": \"chair\"},\n\t{\"bbox_2d\": [0, 480, 316, 999], \"label\": \"chair\"},\n\t{\"bbox_2d\": [324, 138, 792, 799], \"label\": \"dog\"},\n\t{\"bbox_2d\": [778, 350, 852, 500], \"label\": \"flower pot\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            384,
+                            530,
+                            1000,
+                            999
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            480,
+                            316,
+                            999
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            324,
+                            138,
+                            792,
+                            799
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            778,
+                            350,
+                            852,
+                            500
+                        ],
+                        "label": "flower pot"
+                    }
+                ],
+                "token_count": 138,
+                "raw_token_count": 173,
+                "runtime_seconds": 0.612
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.307337327911573,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.79968,
+                "img_dist": 0.04787,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.81644,
+                "delta_m_plus": 0.02053,
+                "phi": 0.95213,
+                "swad": 0.01955
+            },
+            "l2_distance": 0.80111,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chair, dog, flower pot\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 324, 322, 997], \"label\": \"chair\"},\n\t{\"bbox_2d\": [322, 138, 800, 792], \"label\": \"dog\"},\n\t{\"bbox_2d\": [788, 372, 862, 530], \"label\": \"flower pot\"},\n\t{\"bbox_2d\": [700, 372, 788, 488], \"label\": \"flower pot\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            324,
+                            322,
+                            997
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            322,
+                            138,
+                            800,
+                            792
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            788,
+                            372,
+                            862,
+                            530
+                        ],
+                        "label": "flower pot"
+                    },
+                    {
+                        "bbox_2d": [
+                            700,
+                            372,
+                            788,
+                            488
+                        ],
+                        "label": "flower pot"
+                    }
+                ],
+                "token_count": 138,
+                "raw_token_count": 173,
+                "runtime_seconds": 0.612
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.08483,
+                "txt_dist": 0.24996,
+                "txt_sim": 0.75004
+            },
+            "swad_metrics": {
+                "iou_0": 0.81644,
+                "delta_m_plus": 1.0,
+                "phi": 0.68641,
+                "swad": 0.68641
+            },
+            "l2_distance": 0.26396,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cher, doug, flower pod\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "There are no objects matching the query in the image.",
+                "parsed_predictions": [],
+                "token_count": 11,
+                "raw_token_count": 173,
+                "runtime_seconds": 0.612
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.81997,
+                "img_dist": 0.03761,
+                "txt_dist": 0.07529,
+                "txt_sim": 0.92471
+            },
+            "swad_metrics": {
+                "iou_0": 0.81644,
+                "delta_m_plus": 0.0,
+                "phi": 0.88993,
+                "swad": 0.0
+            },
+            "l2_distance": 0.82428,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chair, dog, flour pot\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 324, 322, 989], \"label\": \"chair\"},\n\t{\"bbox_2d\": [383, 536, 1000, 989], \"label\": \"chair\"},\n\t{\"bbox_2d\": [328, 140, 800, 792], \"label\": \"dog\"},\n\t{\"bbox_2d\": [770, 377, 867, 536], \"label\": \"flour pot\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            324,
+                            322,
+                            989
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            383,
+                            536,
+                            1000,
+                            989
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            328,
+                            140,
+                            800,
+                            792
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            770,
+                            377,
+                            867,
+                            536
+                        ],
+                        "label": "flour pot"
+                    }
+                ],
+                "token_count": 139,
+                "raw_token_count": 173,
+                "runtime_seconds": 0.612
+            }
+        }
+    ]
+}

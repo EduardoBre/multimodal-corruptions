@@ -1,0 +1,82 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/89",
+        "folder_id": "89",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00016217.JPEG"
+    },
+    "pareto_index": 4,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "motion_blur",
+        "img_scale": 0.9796484008897928,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.9054583419344215
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.08832,
+        "txt_dist": 0.34796,
+        "txt_sim": 0.65204
+    },
+    "swad_metrics": {
+        "iou_0": 0.8777,
+        "delta_m_plus": 1.0,
+        "phi": 0.59445,
+        "swad": 0.59445
+    },
+    "l2_distance": 0.35899,
+    "original_prompt": "Identify the objects \"car, golfcart\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "car": {
+            "xmin": 20,
+            "ymin": 150,
+            "xmax": 102,
+            "ymax": 241
+        },
+        "golfcart": {
+            "xmin": 204,
+            "ymin": 72,
+            "xmax": 449,
+            "ymax": 334
+        },
+        "golfcart_1": {
+            "xmin": 44,
+            "ymin": 95,
+            "xmax": 264,
+            "ymax": 313
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"\u0441\u200b\u0430\u200dr\u200b, g\u200d\u043e\u200bl\u200df\u0441\u200d\u0430\u200dr\u200bt\u200d\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [405, 188, 905, 888], \"label\": \"\u0441\u200b\u0430\u200d\u0440\u200b, g\u200d\u043e\u200bl\u200df\u0441\u200d\u0430\u200d\u0440\u200b\u0442\u200d\"},\n\t{\"bbox_2d\": [78, 250, 490, 832], \"label\": \"\u0441\u200b\u0430\u200d\u0440\u200b, g\u200d\u043e\u200bl\u200df\u0441\u200d\u0430\u200d\u0440\u200b\u0442\u200d\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    405,
+                    188,
+                    905,
+                    888
+                ],
+                "label": "\u0441\u200b\u0430\u200d\u0440\u200b, g\u200d\u043e\u200bl\u200df\u0441\u200d\u0430\u200d\u0440\u200b\u0442\u200d"
+            },
+            {
+                "bbox_2d": [
+                    78,
+                    250,
+                    490,
+                    832
+                ],
+                "label": "\u0441\u200b\u0430\u200d\u0440\u200b, g\u200d\u043e\u200bl\u200df\u0441\u200d\u0430\u200d\u0440\u200b\u0442\u200d"
+            }
+        ],
+        "token_count": 125,
+        "raw_token_count": 141,
+        "runtime_seconds": 0.5545
+    }
+}

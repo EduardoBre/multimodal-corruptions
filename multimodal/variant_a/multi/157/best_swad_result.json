@@ -1,0 +1,79 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/157",
+        "folder_id": "157",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00002977.JPEG"
+    },
+    "pareto_index": 2,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.863144940280058,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6678992108124702
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.10193,
+        "txt_dist": 0.26479,
+        "txt_sim": 0.73521
+    },
+    "swad_metrics": {
+        "iou_0": 0.53743,
+        "delta_m_plus": 1.0,
+        "phi": 0.66027,
+        "swad": 0.66027
+    },
+    "l2_distance": 0.28373,
+    "original_prompt": "Identify the objects \"person, watercraft\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 445,
+            "ymin": 183,
+            "xmax": 481,
+            "ymax": 267
+        },
+        "person_1": {
+            "xmin": 156,
+            "ymin": 195,
+            "xmax": 188,
+            "ymax": 261
+        },
+        "person_2": {
+            "xmin": 390,
+            "ymin": 185,
+            "xmax": 438,
+            "ymax": 273
+        },
+        "watercraft": {
+            "xmin": 84,
+            "ymin": 2,
+            "xmax": 310,
+            "ymax": 189
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"pursun, wader craft\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [148, 10, 620, 510], \"label\": \"pursun, wader craft\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    148,
+                    10,
+                    620,
+                    510
+                ],
+                "label": "pursun, wader craft"
+            }
+        ],
+        "token_count": 44,
+        "raw_token_count": 372,
+        "runtime_seconds": 1.2774
+    }
+}

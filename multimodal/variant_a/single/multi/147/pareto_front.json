@@ -1,0 +1,162 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/single/multi/147",
+        "folder_id": "147",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00012208.JPEG"
+    },
+    "original_prompt": "Identify the objects \"harmonica\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "harmonica": {
+            "xmin": 95,
+            "ymin": 142,
+            "xmax": 341,
+            "ymax": 302
+        },
+        "harmonica_1": {
+            "xmin": 274,
+            "ymin": 20,
+            "xmax": 490,
+            "ymax": 258
+        }
+    },
+    "baseline_iou": 0.94536,
+    "swad_star": 0.78589,
+    "swad_star_index": 2,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "n_solutions": 3,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.92739,
+                "img_dist": 0.09229,
+                "txt_dist": 0.02666,
+                "txt_sim": 0.97334
+            },
+            "swad_metrics": {
+                "iou_0": 0.94536,
+                "delta_m_plus": 0.01901,
+                "phi": 0.88351,
+                "swad": 0.01679
+            },
+            "l2_distance": 0.93235,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"harmonika\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [190, 367, 672, 790], \"label\": \"harmonika\"},\n\t{\"bbox_2d\": [540, 50, 972, 672], \"label\": \"harmonika\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            190,
+                            367,
+                            672,
+                            790
+                        ],
+                        "label": "harmonika"
+                    },
+                    {
+                        "bbox_2d": [
+                            540,
+                            50,
+                            972,
+                            672
+                        ],
+                        "label": "harmonika"
+                    }
+                ],
+                "token_count": 75,
+                "raw_token_count": 90,
+                "runtime_seconds": 0.3321
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.93667,
+                "img_dist": 0.03827,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.94536,
+                "delta_m_plus": 0.00919,
+                "phi": 0.96173,
+                "swad": 0.00884
+            },
+            "l2_distance": 0.93745,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"harmonica\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [208, 380, 675, 795], \"label\": \"harmonica\"},\n\t{\"bbox_2d\": [544, 57, 974, 674], \"label\": \"harmonica\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            208,
+                            380,
+                            675,
+                            795
+                        ],
+                        "label": "harmonica"
+                    },
+                    {
+                        "bbox_2d": [
+                            544,
+                            57,
+                            974,
+                            674
+                        ],
+                        "label": "harmonica"
+                    }
+                ],
+                "token_count": 75,
+                "raw_token_count": 90,
+                "runtime_seconds": 0.3321
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.7585322514200842,
+                "txt_attack": "synonym",
+                "txt_scale": 0.8286080825406955
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.07874,
+                "txt_dist": 0.14694,
+                "txt_sim": 0.85306
+            },
+            "swad_metrics": {
+                "iou_0": 0.94536,
+                "delta_m_plus": 1.0,
+                "phi": 0.78589,
+                "swad": 0.78589
+            },
+            "l2_distance": 0.16671,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"harp\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "There is no object matching the query in the image.",
+                "parsed_predictions": [],
+                "token_count": 11,
+                "raw_token_count": 102,
+                "runtime_seconds": 0.3649
+            }
+        }
+    ]
+}

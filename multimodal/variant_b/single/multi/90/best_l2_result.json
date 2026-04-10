@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/90",
+        "folder_id": "90",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00013110.JPEG"
+    },
+    "pareto_index": 3,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.005373,
+            "defocus_blur": 0.056685,
+            "motion_blur": 0.13403,
+            "fog_filter": 0.002971,
+            "pixelate": 0.012749,
+            "jpeg_filter": 0.011844
+        },
+        "text_corruptions": {
+            "homophone": 0.274352,
+            "synonym": 0.024873,
+            "ata_saliency": 0.027644,
+            "fragmentation": 0.200169,
+            "character_noise": 0.140096
+        },
+        "img_budget_used": 0.223652,
+        "txt_budget_used": 0.667134,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.38748,
+        "img_dist": 0.08517,
+        "txt_dist": 0.34158,
+        "txt_sim": 0.65842
+    },
+    "swad_metrics": {
+        "iou_0": 0.91502,
+        "delta_m_plus": 0.57653,
+        "phi": 0.60234,
+        "swad": 0.34727
+    },
+    "l2_distance": 0.52352,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 38,
+            "ymin": 56,
+            "xmax": 317,
+            "ymax": 374
+        },
+        "bird_1": {
+            "xmin": 0,
+            "ymin": 103,
+            "xmax": 220,
+            "ymax": 269
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"berd\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [224, 158, 570, 819], \"label\": \"berd\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    224,
+                    158,
+                    570,
+                    819
+                ],
+                "label": "berd"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 86,
+        "runtime_seconds": 0.2803
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.005373441601274787,
+        "defocus_blur": 0.05668489132302451,
+        "motion_blur": 0.1340300190039779,
+        "fog_filter": 0.002970997144208172,
+        "pixelate": 0.012748836912505314,
+        "jpeg_filter": 0.011843803523123805
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.27435208882917567,
+        "synonym": 0.024873069625386525,
+        "ata_saliency": 0.027643636787304353,
+        "fragmentation": 0.20016882704841513,
+        "character_noise": 0.14009626768926886
+    }
+}

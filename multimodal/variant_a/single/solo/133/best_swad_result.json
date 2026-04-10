@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/133",
+        "folder_id": "133",
+        "category": "single/solo",
+        "filename": "ILSVRC2013_val_00004422.JPEG"
+    },
+    "pareto_index": 26,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 8,
+    "total_evaluations": 240,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.8491774482742067,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.4163418059221158
+    },
+    "objectives": {
+        "iou": 0.05609,
+        "img_dist": 0.07554,
+        "txt_dist": 0.28287,
+        "txt_sim": 0.71713
+    },
+    "swad_metrics": {
+        "iou_0": 0.94603,
+        "delta_m_plus": 0.94071,
+        "phi": 0.66296,
+        "swad": 0.62365
+    },
+    "l2_distance": 0.29811,
+    "original_prompt": "Identify the objects \"person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 231,
+            "ymin": 53,
+            "xmax": 300,
+            "ymax": 278
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"perkon\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [530, 400, 698, 472], \"label\": \"perkon\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    530,
+                    400,
+                    698,
+                    472
+                ],
+                "label": "perkon"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 74,
+        "runtime_seconds": 0.273
+    }
+}

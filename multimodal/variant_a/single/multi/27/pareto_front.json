@@ -1,0 +1,1498 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/single/multi/27",
+        "folder_id": "27",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00040503.JPEG"
+    },
+    "original_prompt": "Identify the objects \"fox\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "fox": {
+            "xmin": 74,
+            "ymin": 124,
+            "xmax": 144,
+            "ymax": 207
+        },
+        "fox_1": {
+            "xmin": 375,
+            "ymin": 165,
+            "xmax": 490,
+            "ymax": 229
+        },
+        "fox_2": {
+            "xmin": 101,
+            "ymin": 99,
+            "xmax": 160,
+            "ymax": 149
+        },
+        "fox_3": {
+            "xmin": 82,
+            "ymin": 71,
+            "xmax": 172,
+            "ymax": 127
+        }
+    },
+    "baseline_iou": 0.73331,
+    "swad_star": 0.63912,
+    "swad_star_index": 2,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 13,
+    "total_evaluations": 390,
+    "skipped_evaluations": 30,
+    "n_solutions": 30,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.0017781587882189712,
+                "txt_attack": "synonym",
+                "txt_scale": 0.37403085712587425
+            },
+            "objectives": {
+                "iou": 0.71741,
+                "img_dist": 0.03002,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.73331,
+                "delta_m_plus": 0.02168,
+                "phi": 0.96998,
+                "swad": 0.02103
+            },
+            "l2_distance": 0.71804,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fox\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [159, 207, 345, 390], \"label\": \"fox\"},\n\t{\"bbox_2d\": [163, 330, 298, 617], \"label\": \"fox\"},\n\t{\"bbox_2d\": [752, 497, 972, 660], \"label\": \"fox\"},\n\t{\"bbox_2d\": [202, 300, 278, 407], \"label\": \"fox\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            159,
+                            207,
+                            345,
+                            390
+                        ],
+                        "label": "fox"
+                    },
+                    {
+                        "bbox_2d": [
+                            163,
+                            330,
+                            298,
+                            617
+                        ],
+                        "label": "fox"
+                    },
+                    {
+                        "bbox_2d": [
+                            752,
+                            497,
+                            972,
+                            660
+                        ],
+                        "label": "fox"
+                    },
+                    {
+                        "bbox_2d": [
+                            202,
+                            300,
+                            278,
+                            407
+                        ],
+                        "label": "fox"
+                    }
+                ],
+                "token_count": 138,
+                "raw_token_count": 139,
+                "runtime_seconds": 0.5541
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.9674948918591794,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.11333147020846701
+            },
+            "objectives": {
+                "iou": 0.23722,
+                "img_dist": 0.17241,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.73331,
+                "delta_m_plus": 0.67651,
+                "phi": 0.82759,
+                "swad": 0.55987
+            },
+            "l2_distance": 0.29326,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fox\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [140, 190, 340, 600], \"label\": \"fox\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            140,
+                            190,
+                            340,
+                            600
+                        ],
+                        "label": "fox"
+                    }
+                ],
+                "token_count": 39,
+                "raw_token_count": 139,
+                "runtime_seconds": 0.5541
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.9860248308306898,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2037928347833402
+            },
+            "objectives": {
+                "iou": 0.02909,
+                "img_dist": 0.135,
+                "txt_dist": 0.23061,
+                "txt_sim": 0.76939
+            },
+            "swad_metrics": {
+                "iou_0": 0.73331,
+                "delta_m_plus": 0.96033,
+                "phi": 0.66552,
+                "swad": 0.63912
+            },
+            "l2_distance": 0.2688,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"focks\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [825, 37, 875, 997], \"label\": \"focks\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            825,
+                            37,
+                            875,
+                            997
+                        ],
+                        "label": "focks"
+                    }
+                ],
+                "token_count": 39,
+                "raw_token_count": 143,
+                "runtime_seconds": 0.5935
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.0017781587882189712,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.37403085712587425
+            },
+            "objectives": {
+                "iou": 0.25173,
+                "img_dist": 0.03007,
+                "txt_dist": 0.29626,
+                "txt_sim": 0.70374
+            },
+            "swad_metrics": {
+                "iou_0": 0.73331,
+                "delta_m_plus": 0.65672,
+                "phi": 0.68258,
+                "swad": 0.44826
+            },
+            "l2_distance": 0.38993,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fsx\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [163, 370, 298, 617], \"label\": \"fsx\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            163,
+                            370,
+                            298,
+                            617
+                        ],
+                        "label": "fsx"
+                    }
+                ],
+                "token_count": 40,
+                "raw_token_count": 139,
+                "runtime_seconds": 0.4842
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.9674948918591794,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.3707517004740687
+            },
+            "objectives": {
+                "iou": 0.23722,
+                "img_dist": 0.17241,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.73331,
+                "delta_m_plus": 0.67651,
+                "phi": 0.82759,
+                "swad": 0.55987
+            },
+            "l2_distance": 0.29326,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fox\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [140, 190, 340, 600], \"label\": \"fox\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            140,
+                            190,
+                            340,
+                            600
+                        ],
+                        "label": "fox"
+                    }
+                ],
+                "token_count": 39,
+                "raw_token_count": 139,
+                "runtime_seconds": 0.4842
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.7202386421115154,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.8973362401268625
+            },
+            "objectives": {
+                "iou": 0.25165,
+                "img_dist": 0.15191,
+                "txt_dist": 0.17299,
+                "txt_sim": 0.82701
+            },
+            "swad_metrics": {
+                "iou_0": 0.73331,
+                "delta_m_plus": 0.65683,
+                "phi": 0.70138,
+                "swad": 0.46069
+            },
+            "l2_distance": 0.34107,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fux\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [152, 196, 340, 620], \"label\": \"fux\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            152,
+                            196,
+                            340,
+                            620
+                        ],
+                        "label": "fux"
+                    }
+                ],
+                "token_count": 40,
+                "raw_token_count": 139,
+                "runtime_seconds": 0.4842
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8181617493544074,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.11084615619006305
+            },
+            "objectives": {
+                "iou": 0.65031,
+                "img_dist": 0.12192,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.73331,
+                "delta_m_plus": 0.11319,
+                "phi": 0.87808,
+                "swad": 0.09939
+            },
+            "l2_distance": 0.66164,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fox\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [158, 207, 338, 387], \"label\": \"fox\"},\n\t{\"bbox_2d\": [160, 387, 312, 621], \"label\": \"fox\"},\n\t{\"bbox_2d\": [756, 503, 972, 650], \"label\": \"fox\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            158,
+                            207,
+                            338,
+                            387
+                        ],
+                        "label": "fox"
+                    },
+                    {
+                        "bbox_2d": [
+                            160,
+                            387,
+                            312,
+                            621
+                        ],
+                        "label": "fox"
+                    },
+                    {
+                        "bbox_2d": [
+                            756,
+                            503,
+                            972,
+                            650
+                        ],
+                        "label": "fox"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 139,
+                "runtime_seconds": 0.5627
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.9477907613911236,
+                "txt_attack": "homophone",
+                "txt_scale": 0.27076515156238395
+            },
+            "objectives": {
+                "iou": 0.27872,
+                "img_dist": 0.12955,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.73331,
+                "delta_m_plus": 0.61992,
+                "phi": 0.87045,
+                "swad": 0.53961
+            },
+            "l2_distance": 0.30736,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fox\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [158, 378, 342, 628], \"label\": \"fox\"},\n\t{\"bbox_2d\": [760, 528, 990, 972], \"label\": \"fox\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            158,
+                            378,
+                            342,
+                            628
+                        ],
+                        "label": "fox"
+                    },
+                    {
+                        "bbox_2d": [
+                            760,
+                            528,
+                            990,
+                            972
+                        ],
+                        "label": "fox"
+                    }
+                ],
+                "token_count": 72,
+                "raw_token_count": 147,
+                "runtime_seconds": 0.5705
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.69112,
+                "img_dist": 0.03948,
+                "txt_dist": 0.23061,
+                "txt_sim": 0.76939
+            },
+            "swad_metrics": {
+                "iou_0": 0.73331,
+                "delta_m_plus": 0.05753,
+                "phi": 0.73901,
+                "swad": 0.04252
+            },
+            "l2_distance": 0.72965,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"focks\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [157, 200, 343, 393], \"label\": \"focks\"},\n\t{\"bbox_2d\": [163, 387, 308, 617], \"label\": \"focks\"},\n\t{\"bbox_2d\": [752, 500, 972, 660], \"label\": \"focks\"},\n\t{\"bbox_2d\": [200, 297, 278, 393], \"label\": \"focks\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            157,
+                            200,
+                            343,
+                            393
+                        ],
+                        "label": "focks"
+                    },
+                    {
+                        "bbox_2d": [
+                            163,
+                            387,
+                            308,
+                            617
+                        ],
+                        "label": "focks"
+                    },
+                    {
+                        "bbox_2d": [
+                            752,
+                            500,
+                            972,
+                            660
+                        ],
+                        "label": "focks"
+                    },
+                    {
+                        "bbox_2d": [
+                            200,
+                            297,
+                            278,
+                            393
+                        ],
+                        "label": "focks"
+                    }
+                ],
+                "token_count": 142,
+                "raw_token_count": 143,
+                "runtime_seconds": 0.5675
+            }
+        },
+        {
+            "index": 9,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.005033482430145219,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2077268624395638
+            },
+            "objectives": {
+                "iou": 0.66802,
+                "img_dist": 0.0807,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.73331,
+                "delta_m_plus": 0.08903,
+                "phi": 0.9193,
+                "swad": 0.08185
+            },
+            "l2_distance": 0.67288,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fox\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [159, 207, 345, 393], \"label\": \"fox\"},\n\t{\"bbox_2d\": [163, 370, 305, 617], \"label\": \"fox\"},\n\t{\"bbox_2d\": [756, 503, 970, 657], \"label\": \"fox\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            159,
+                            207,
+                            345,
+                            393
+                        ],
+                        "label": "fox"
+                    },
+                    {
+                        "bbox_2d": [
+                            163,
+                            370,
+                            305,
+                            617
+                        ],
+                        "label": "fox"
+                    },
+                    {
+                        "bbox_2d": [
+                            756,
+                            503,
+                            970,
+                            657
+                        ],
+                        "label": "fox"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 139,
+                "runtime_seconds": 0.5541
+            }
+        },
+        {
+            "index": 10,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.01151312571747608,
+                "txt_attack": "homophone",
+                "txt_scale": 0.5870417586011065
+            },
+            "objectives": {
+                "iou": 0.6512,
+                "img_dist": 0.08134,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.73331,
+                "delta_m_plus": 0.11197,
+                "phi": 0.91866,
+                "swad": 0.10286
+            },
+            "l2_distance": 0.65626,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fox\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [159, 210, 343, 390], \"label\": \"fox\"},\n\t{\"bbox_2d\": [163, 350, 312, 617], \"label\": \"fox\"},\n\t{\"bbox_2d\": [754, 507, 970, 657], \"label\": \"fox\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            159,
+                            210,
+                            343,
+                            390
+                        ],
+                        "label": "fox"
+                    },
+                    {
+                        "bbox_2d": [
+                            163,
+                            350,
+                            312,
+                            617
+                        ],
+                        "label": "fox"
+                    },
+                    {
+                        "bbox_2d": [
+                            754,
+                            507,
+                            970,
+                            657
+                        ],
+                        "label": "fox"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 139,
+                "runtime_seconds": 0.5794
+            }
+        },
+        {
+            "index": 11,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.9677819032416473,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2682023031456273
+            },
+            "objectives": {
+                "iou": 0.02909,
+                "img_dist": 0.135,
+                "txt_dist": 0.23061,
+                "txt_sim": 0.76939
+            },
+            "swad_metrics": {
+                "iou_0": 0.73331,
+                "delta_m_plus": 0.96033,
+                "phi": 0.66552,
+                "swad": 0.63912
+            },
+            "l2_distance": 0.2688,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"focks\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [825, 37, 875, 997], \"label\": \"focks\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            825,
+                            37,
+                            875,
+                            997
+                        ],
+                        "label": "focks"
+                    }
+                ],
+                "token_count": 39,
+                "raw_token_count": 304,
+                "runtime_seconds": 1.0263
+            }
+        },
+        {
+            "index": 12,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.8265274609159969,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.8698275027567656
+            },
+            "objectives": {
+                "iou": 0.24998,
+                "img_dist": 0.15363,
+                "txt_dist": 0.2252,
+                "txt_sim": 0.7748
+            },
+            "swad_metrics": {
+                "iou_0": 0.73331,
+                "delta_m_plus": 0.65911,
+                "phi": 0.65577,
+                "swad": 0.43222
+            },
+            "l2_distance": 0.36987,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fxx\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [150, 196, 342, 620], \"label\": \"fxx\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            150,
+                            196,
+                            342,
+                            620
+                        ],
+                        "label": "fxx"
+                    }
+                ],
+                "token_count": 40,
+                "raw_token_count": 143,
+                "runtime_seconds": 0.4829
+            }
+        },
+        {
+            "index": 13,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.01258652924995207,
+                "txt_attack": "synonym",
+                "txt_scale": 0.3156999836875132
+            },
+            "objectives": {
+                "iou": 0.67573,
+                "img_dist": 0.03129,
+                "txt_dist": 0.25472,
+                "txt_sim": 0.74528
+            },
+            "swad_metrics": {
+                "iou_0": 0.73331,
+                "delta_m_plus": 0.07852,
+                "phi": 0.72196,
+                "swad": 0.05669
+            },
+            "l2_distance": 0.72282,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"vixen\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [163, 200, 343, 396], \"label\": \"vixen\"},\n\t{\"bbox_2d\": [163, 357, 298, 617], \"label\": \"vixen\"},\n\t{\"bbox_2d\": [752, 500, 972, 660], \"label\": \"vixen\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            163,
+                            200,
+                            343,
+                            396
+                        ],
+                        "label": "vixen"
+                    },
+                    {
+                        "bbox_2d": [
+                            163,
+                            357,
+                            298,
+                            617
+                        ],
+                        "label": "vixen"
+                    },
+                    {
+                        "bbox_2d": [
+                            752,
+                            500,
+                            972,
+                            660
+                        ],
+                        "label": "vixen"
+                    }
+                ],
+                "token_count": 111,
+                "raw_token_count": 139,
+                "runtime_seconds": 0.5733
+            }
+        },
+        {
+            "index": 14,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.9674948918591794,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.0810759860550248
+            },
+            "objectives": {
+                "iou": 0.2612,
+                "img_dist": 0.135,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.73331,
+                "delta_m_plus": 0.64381,
+                "phi": 0.865,
+                "swad": 0.55689
+            },
+            "l2_distance": 0.29402,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fox\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [158, 330, 316, 620], \"label\": \"fox\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            158,
+                            330,
+                            316,
+                            620
+                        ],
+                        "label": "fox"
+                    }
+                ],
+                "token_count": 39,
+                "raw_token_count": 139,
+                "runtime_seconds": 0.4842
+            }
+        },
+        {
+            "index": 15,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.012197780223219636,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.2687630698215929
+            },
+            "objectives": {
+                "iou": 0.6719,
+                "img_dist": 0.03128,
+                "txt_dist": 0.26009,
+                "txt_sim": 0.73991
+            },
+            "swad_metrics": {
+                "iou_0": 0.73331,
+                "delta_m_plus": 0.08374,
+                "phi": 0.71677,
+                "swad": 0.06002
+            },
+            "l2_distance": 0.72116,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fxo\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [157, 203, 343, 393], \"label\": \"fxo\"},\n\t{\"bbox_2d\": [163, 387, 298, 617], \"label\": \"fxo\"},\n\t{\"bbox_2d\": [756, 497, 972, 660], \"label\": \"fxo\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            157,
+                            203,
+                            343,
+                            393
+                        ],
+                        "label": "fxo"
+                    },
+                    {
+                        "bbox_2d": [
+                            163,
+                            387,
+                            298,
+                            617
+                        ],
+                        "label": "fxo"
+                    },
+                    {
+                        "bbox_2d": [
+                            756,
+                            497,
+                            972,
+                            660
+                        ],
+                        "label": "fxo"
+                    }
+                ],
+                "token_count": 108,
+                "raw_token_count": 143,
+                "runtime_seconds": 0.5611
+            }
+        },
+        {
+            "index": 16,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.9477907613911236,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.2702007500941684
+            },
+            "objectives": {
+                "iou": 0.27872,
+                "img_dist": 0.12955,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.73331,
+                "delta_m_plus": 0.61992,
+                "phi": 0.87045,
+                "swad": 0.53961
+            },
+            "l2_distance": 0.30736,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fox\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [158, 378, 342, 628], \"label\": \"fox\"},\n\t{\"bbox_2d\": [760, 528, 990, 972], \"label\": \"fox\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            158,
+                            378,
+                            342,
+                            628
+                        ],
+                        "label": "fox"
+                    },
+                    {
+                        "bbox_2d": [
+                            760,
+                            528,
+                            990,
+                            972
+                        ],
+                        "label": "fox"
+                    }
+                ],
+                "token_count": 72,
+                "raw_token_count": 143,
+                "runtime_seconds": 0.5611
+            }
+        },
+        {
+            "index": 17,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.9477907613911236,
+                "txt_attack": "homophone",
+                "txt_scale": 0.1754261884499999
+            },
+            "objectives": {
+                "iou": 0.24175,
+                "img_dist": 0.16585,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.73331,
+                "delta_m_plus": 0.67033,
+                "phi": 0.83415,
+                "swad": 0.55916
+            },
+            "l2_distance": 0.29317,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fox\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [140, 196, 338, 616], \"label\": \"fox\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            140,
+                            196,
+                            338,
+                            616
+                        ],
+                        "label": "fox"
+                    }
+                ],
+                "token_count": 39,
+                "raw_token_count": 143,
+                "runtime_seconds": 0.5026
+            }
+        },
+        {
+            "index": 18,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.8461723086551638,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6469829511854194
+            },
+            "objectives": {
+                "iou": 0.25165,
+                "img_dist": 0.1576,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.73331,
+                "delta_m_plus": 0.65683,
+                "phi": 0.8424,
+                "swad": 0.55331
+            },
+            "l2_distance": 0.29693,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fox\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [152, 196, 340, 620], \"label\": \"fox\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            152,
+                            196,
+                            340,
+                            620
+                        ],
+                        "label": "fox"
+                    }
+                ],
+                "token_count": 39,
+                "raw_token_count": 143,
+                "runtime_seconds": 0.5905
+            }
+        },
+        {
+            "index": 19,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.0067503073157942975,
+                "txt_attack": "synonym",
+                "txt_scale": 0.2944797643666236
+            },
+            "objectives": {
+                "iou": 0.68349,
+                "img_dist": 0.03061,
+                "txt_dist": 0.25472,
+                "txt_sim": 0.74528
+            },
+            "swad_metrics": {
+                "iou_0": 0.73331,
+                "delta_m_plus": 0.06794,
+                "phi": 0.72247,
+                "swad": 0.04908
+            },
+            "l2_distance": 0.73005,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"vixen\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [163, 200, 345, 390], \"label\": \"vixen\"},\n\t{\"bbox_2d\": [163, 360, 294, 617], \"label\": \"vixen\"},\n\t{\"bbox_2d\": [754, 497, 972, 657], \"label\": \"vixen\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            163,
+                            200,
+                            345,
+                            390
+                        ],
+                        "label": "vixen"
+                    },
+                    {
+                        "bbox_2d": [
+                            163,
+                            360,
+                            294,
+                            617
+                        ],
+                        "label": "vixen"
+                    },
+                    {
+                        "bbox_2d": [
+                            754,
+                            497,
+                            972,
+                            657
+                        ],
+                        "label": "vixen"
+                    }
+                ],
+                "token_count": 111,
+                "raw_token_count": 143,
+                "runtime_seconds": 0.5026
+            }
+        },
+        {
+            "index": 20,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.0035449957941517188,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.1396341484264209
+            },
+            "objectives": {
+                "iou": 0.69316,
+                "img_dist": 0.03023,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.73331,
+                "delta_m_plus": 0.05475,
+                "phi": 0.96977,
+                "swad": 0.0531
+            },
+            "l2_distance": 0.69382,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fox\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [155, 200, 345, 390], \"label\": \"fox\"},\n\t{\"bbox_2d\": [163, 360, 298, 617], \"label\": \"fox\"},\n\t{\"bbox_2d\": [752, 497, 972, 657], \"label\": \"fox\"},\n\t{\"bbox_2d\": [202, 297, 272, 387], \"label\": \"fox\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            155,
+                            200,
+                            345,
+                            390
+                        ],
+                        "label": "fox"
+                    },
+                    {
+                        "bbox_2d": [
+                            163,
+                            360,
+                            298,
+                            617
+                        ],
+                        "label": "fox"
+                    },
+                    {
+                        "bbox_2d": [
+                            752,
+                            497,
+                            972,
+                            657
+                        ],
+                        "label": "fox"
+                    },
+                    {
+                        "bbox_2d": [
+                            202,
+                            297,
+                            272,
+                            387
+                        ],
+                        "label": "fox"
+                    }
+                ],
+                "token_count": 138,
+                "raw_token_count": 143,
+                "runtime_seconds": 0.4829
+            }
+        },
+        {
+            "index": 21,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.001968297205957155,
+                "txt_attack": "homophone",
+                "txt_scale": 0.40062363657113453
+            },
+            "objectives": {
+                "iou": 0.71566,
+                "img_dist": 0.03006,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.73331,
+                "delta_m_plus": 0.02407,
+                "phi": 0.96994,
+                "swad": 0.02335
+            },
+            "l2_distance": 0.71629,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fox\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [157, 200, 345, 396], \"label\": \"fox\"},\n\t{\"bbox_2d\": [163, 370, 298, 617], \"label\": \"fox\"},\n\t{\"bbox_2d\": [752, 497, 972, 657], \"label\": \"fox\"},\n\t{\"bbox_2d\": [202, 297, 272, 407], \"label\": \"fox\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            157,
+                            200,
+                            345,
+                            396
+                        ],
+                        "label": "fox"
+                    },
+                    {
+                        "bbox_2d": [
+                            163,
+                            370,
+                            298,
+                            617
+                        ],
+                        "label": "fox"
+                    },
+                    {
+                        "bbox_2d": [
+                            752,
+                            497,
+                            972,
+                            657
+                        ],
+                        "label": "fox"
+                    },
+                    {
+                        "bbox_2d": [
+                            202,
+                            297,
+                            272,
+                            407
+                        ],
+                        "label": "fox"
+                    }
+                ],
+                "token_count": 138,
+                "raw_token_count": 139,
+                "runtime_seconds": 0.4842
+            }
+        },
+        {
+            "index": 22,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.006379439600230054,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.2687630698215929
+            },
+            "objectives": {
+                "iou": 0.69066,
+                "img_dist": 0.03058,
+                "txt_dist": 0.26009,
+                "txt_sim": 0.73991
+            },
+            "swad_metrics": {
+                "iou_0": 0.73331,
+                "delta_m_plus": 0.05816,
+                "phi": 0.71728,
+                "swad": 0.04172
+            },
+            "l2_distance": 0.73864,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fxo\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [157, 206, 345, 390], \"label\": \"fxo\"},\n\t{\"bbox_2d\": [163, 370, 298, 617], \"label\": \"fxo\"},\n\t{\"bbox_2d\": [752, 497, 972, 660], \"label\": \"fxo\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            157,
+                            206,
+                            345,
+                            390
+                        ],
+                        "label": "fxo"
+                    },
+                    {
+                        "bbox_2d": [
+                            163,
+                            370,
+                            298,
+                            617
+                        ],
+                        "label": "fxo"
+                    },
+                    {
+                        "bbox_2d": [
+                            752,
+                            497,
+                            972,
+                            660
+                        ],
+                        "label": "fxo"
+                    }
+                ],
+                "token_count": 108,
+                "raw_token_count": 143,
+                "runtime_seconds": 0.5026
+            }
+        },
+        {
+            "index": 23,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.8461723086551638,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6750423041130265
+            },
+            "objectives": {
+                "iou": 0.25165,
+                "img_dist": 0.1576,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.73331,
+                "delta_m_plus": 0.65683,
+                "phi": 0.8424,
+                "swad": 0.55331
+            },
+            "l2_distance": 0.29693,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fox\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [152, 196, 340, 620], \"label\": \"fox\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            152,
+                            196,
+                            340,
+                            620
+                        ],
+                        "label": "fox"
+                    }
+                ],
+                "token_count": 39,
+                "raw_token_count": 304,
+                "runtime_seconds": 1.0263
+            }
+        },
+        {
+            "index": 24,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.9860248308306898,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2037928347833402
+            },
+            "objectives": {
+                "iou": 0.24036,
+                "img_dist": 0.16886,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.73331,
+                "delta_m_plus": 0.67223,
+                "phi": 0.83114,
+                "swad": 0.55871
+            },
+            "l2_distance": 0.29375,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fox\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [138, 208, 338, 632], \"label\": \"fox\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            138,
+                            208,
+                            338,
+                            632
+                        ],
+                        "label": "fox"
+                    }
+                ],
+                "token_count": 39,
+                "raw_token_count": 143,
+                "runtime_seconds": 0.5974
+            }
+        },
+        {
+            "index": 25,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.947693192859925,
+                "txt_attack": "homophone",
+                "txt_scale": 0.20748849251050136
+            },
+            "objectives": {
+                "iou": 0.24175,
+                "img_dist": 0.16585,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.73331,
+                "delta_m_plus": 0.67033,
+                "phi": 0.83415,
+                "swad": 0.55916
+            },
+            "l2_distance": 0.29317,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fox\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [140, 196, 338, 616], \"label\": \"fox\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            140,
+                            196,
+                            338,
+                            616
+                        ],
+                        "label": "fox"
+                    }
+                ],
+                "token_count": 39,
+                "raw_token_count": 143,
+                "runtime_seconds": 0.5594
+            }
+        },
+        {
+            "index": 26,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.9855665128024241,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.2006230170701575
+            },
+            "objectives": {
+                "iou": 0.24036,
+                "img_dist": 0.16886,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.73331,
+                "delta_m_plus": 0.67223,
+                "phi": 0.83114,
+                "swad": 0.55871
+            },
+            "l2_distance": 0.29375,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fox\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [138, 208, 338, 632], \"label\": \"fox\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            138,
+                            208,
+                            338,
+                            632
+                        ],
+                        "label": "fox"
+                    }
+                ],
+                "token_count": 39,
+                "raw_token_count": 143,
+                "runtime_seconds": 0.5026
+            }
+        },
+        {
+            "index": 27,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.9566045263384317,
+                "txt_attack": "homophone",
+                "txt_scale": 0.26892156287608804
+            },
+            "objectives": {
+                "iou": 0.2612,
+                "img_dist": 0.135,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.73331,
+                "delta_m_plus": 0.64381,
+                "phi": 0.865,
+                "swad": 0.55689
+            },
+            "l2_distance": 0.29402,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fox\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [158, 330, 316, 620], \"label\": \"fox\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            158,
+                            330,
+                            316,
+                            620
+                        ],
+                        "label": "fox"
+                    }
+                ],
+                "token_count": 39,
+                "raw_token_count": 304,
+                "runtime_seconds": 1.0263
+            }
+        },
+        {
+            "index": 28,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.9963118948129006,
+                "txt_attack": "homophone",
+                "txt_scale": 0.1943083860819809
+            },
+            "objectives": {
+                "iou": 0.24123,
+                "img_dist": 0.16729,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.73331,
+                "delta_m_plus": 0.67104,
+                "phi": 0.83271,
+                "swad": 0.55878
+            },
+            "l2_distance": 0.29356,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fox\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [144, 187, 338, 593], \"label\": \"fox\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            144,
+                            187,
+                            338,
+                            593
+                        ],
+                        "label": "fox"
+                    }
+                ],
+                "token_count": 39,
+                "raw_token_count": 143,
+                "runtime_seconds": 0.5594
+            }
+        },
+        {
+            "index": 29,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.9957875250629478,
+                "txt_attack": "homophone",
+                "txt_scale": 0.1943083860819809
+            },
+            "objectives": {
+                "iou": 0.24123,
+                "img_dist": 0.16729,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.73331,
+                "delta_m_plus": 0.67104,
+                "phi": 0.83271,
+                "swad": 0.55878
+            },
+            "l2_distance": 0.29356,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fox\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [144, 187, 338, 593], \"label\": \"fox\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            144,
+                            187,
+                            338,
+                            593
+                        ],
+                        "label": "fox"
+                    }
+                ],
+                "token_count": 39,
+                "raw_token_count": 139,
+                "runtime_seconds": 0.5376
+            }
+        }
+    ]
+}

@@ -1,0 +1,127 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/19",
+        "folder_id": "19",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00023682.JPEG"
+    },
+    "pareto_index": 4,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 8.9e-05,
+            "defocus_blur": 0.045528,
+            "motion_blur": 0.291751,
+            "fog_filter": 0.17772,
+            "pixelate": 0.057046,
+            "jpeg_filter": 0.194372
+        },
+        "text_corruptions": {
+            "homophone": 0.02659,
+            "synonym": 0.193298,
+            "ata_saliency": 0.094196,
+            "fragmentation": 0.084432,
+            "character_noise": 0.031074
+        },
+        "img_budget_used": 0.766507,
+        "txt_budget_used": 0.42959,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.10915,
+        "txt_dist": 0.19593,
+        "txt_sim": 0.80407
+    },
+    "swad_metrics": {
+        "iou_0": 0.8087,
+        "delta_m_plus": 1.0,
+        "phi": 0.71631,
+        "swad": 0.71631
+    },
+    "l2_distance": 0.22428,
+    "original_prompt": "Identify the objects \"neck brace, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 83,
+            "ymin": 101,
+            "xmax": 152,
+            "ymax": 188
+        },
+        "person_1": {
+            "xmin": 0,
+            "ymin": 48,
+            "xmax": 274,
+            "ymax": 374
+        },
+        "person_2": {
+            "xmin": 268,
+            "ymin": 64,
+            "xmax": 499,
+            "ymax": 374
+        },
+        "neck brace": {
+            "xmin": 127,
+            "ymin": 134,
+            "xmax": 244,
+            "ymax": 252
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"n ece b\u200br a\u0441\u0435, person\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 132, 562, 1000], \"label\": \"n ece b\u200br a\u0441\u0435, person\"},\n\t{\"bbox_2d\": [500, 170, 1000, 1000], \"label\": \"n ece b\u200br a\u0441\u0435, person\"},\n\t{\"bbox_2d\": [172, 288, 300, 500], \"label\": \"n ece b\u200br a\u0441\u0435, person\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    132,
+                    562,
+                    1000
+                ],
+                "label": "n ece b\u200br a\u0441\u0435, person"
+            },
+            {
+                "bbox_2d": [
+                    500,
+                    170,
+                    1000,
+                    1000
+                ],
+                "label": "n ece b\u200br a\u0441\u0435, person"
+            },
+            {
+                "bbox_2d": [
+                    172,
+                    288,
+                    300,
+                    500
+                ],
+                "label": "n ece b\u200br a\u0441\u0435, person"
+            }
+        ],
+        "token_count": 133,
+        "raw_token_count": 172,
+        "runtime_seconds": 0.6233
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 8.897823131918207e-05,
+        "defocus_blur": 0.04552830126974153,
+        "motion_blur": 0.29175127144630325,
+        "fog_filter": 0.1777199022792206,
+        "pixelate": 0.0570458212619788,
+        "jpeg_filter": 0.19437247590168977
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.02658995211013601,
+        "synonym": 0.1932982056293009,
+        "ata_saliency": 0.09419630002928527,
+        "fragmentation": 0.08443203382959785,
+        "character_noise": 0.031073983102417563
+    }
+}

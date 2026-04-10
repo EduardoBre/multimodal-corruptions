@@ -1,0 +1,73 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/205",
+        "folder_id": "205",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00031290.JPEG"
+    },
+    "pareto_index": 29,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.9261074551722305,
+        "txt_attack": "synonym",
+        "txt_scale": 0.5920725234368083
+    },
+    "objectives": {
+        "iou": 0.35873,
+        "img_dist": 0.11457,
+        "txt_dist": 0.13147,
+        "txt_sim": 0.86853
+    },
+    "swad_metrics": {
+        "iou_0": 0.46307,
+        "delta_m_plus": 0.22532,
+        "phi": 0.76902,
+        "swad": 0.17328
+    },
+    "l2_distance": 0.39887,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 192,
+            "ymin": 121,
+            "xmax": 278,
+            "ymax": 245
+        },
+        "bird_1": {
+            "xmin": 271,
+            "ymin": 123,
+            "xmax": 350,
+            "ymax": 268
+        },
+        "bird_2": {
+            "xmin": 96,
+            "ymin": 69,
+            "xmax": 322,
+            "ymax": 240
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"songbird\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [192, 184, 672, 732], \"label\": \"songbird\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    192,
+                    184,
+                    672,
+                    732
+                ],
+                "label": "songbird"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 106,
+        "runtime_seconds": 0.3919
+    }
+}

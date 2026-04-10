@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/130",
+        "folder_id": "130",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00009701.JPEG"
+    },
+    "pareto_index": 0,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.001215,
+            "defocus_blur": 0.050715,
+            "motion_blur": 0.033024,
+            "fog_filter": 0.003562,
+            "pixelate": 0.053618,
+            "jpeg_filter": 0.201099
+        },
+        "text_corruptions": {
+            "homophone": 0.001698,
+            "synonym": 0.009116,
+            "ata_saliency": 0.01137,
+            "fragmentation": 0.0478,
+            "character_noise": 0.082696
+        },
+        "img_budget_used": 0.343233,
+        "txt_budget_used": 0.152681,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.2934,
+        "img_dist": 0.11663,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.86053,
+        "delta_m_plus": 0.65905,
+        "phi": 0.88337,
+        "swad": 0.58218
+    },
+    "l2_distance": 0.31573,
+    "original_prompt": "Identify the objects \"monkey\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "monkey": {
+            "xmin": 49,
+            "ymin": 134,
+            "xmax": 342,
+            "ymax": 346
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"monkey\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [345, 359, 669, 659], \"label\": \"monkey\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    345,
+                    359,
+                    669,
+                    659
+                ],
+                "label": "monkey"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 49,
+        "runtime_seconds": 0.1624
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0012149835890696275,
+        "defocus_blur": 0.05071497247907981,
+        "motion_blur": 0.03302408952010476,
+        "fog_filter": 0.0035624002275216927,
+        "pixelate": 0.053617931273662475,
+        "jpeg_filter": 0.20109906498071045
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.0016980984689581573,
+        "synonym": 0.009116480733526638,
+        "ata_saliency": 0.011370274356867348,
+        "fragmentation": 0.04780044043047123,
+        "character_noise": 0.08269592033833024
+    }
+}

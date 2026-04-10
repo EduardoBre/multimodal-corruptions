@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/115",
+        "folder_id": "115",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00028443.JPEG"
+    },
+    "pareto_index": 22,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 8,
+    "total_evaluations": 225,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.9528496583687428,
+        "txt_attack": "synonym",
+        "txt_scale": 0.9695409844258612
+    },
+    "objectives": {
+        "iou": 0.08751,
+        "img_dist": 0.08959,
+        "txt_dist": 0.23944,
+        "txt_sim": 0.76056
+    },
+    "swad_metrics": {
+        "iou_0": 0.78962,
+        "delta_m_plus": 0.88917,
+        "phi": 0.69242,
+        "swad": 0.61568
+    },
+    "l2_distance": 0.27021,
+    "original_prompt": "Identify the objects \"vacuum\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "vacuum": {
+            "xmin": 69,
+            "ymin": 84,
+            "xmax": 345,
+            "ymax": 267
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"sweeper\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [328, 620, 616, 828], \"label\": \"sweeper\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    328,
+                    620,
+                    616,
+                    828
+                ],
+                "label": "sweeper"
+            }
+        ],
+        "token_count": 41,
+        "raw_token_count": 45,
+        "runtime_seconds": 0.1612
+    }
+}

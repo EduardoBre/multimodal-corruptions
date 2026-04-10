@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/237",
+        "folder_id": "237",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00046149.JPEG"
+    },
+    "pareto_index": 2,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 7,
+    "total_evaluations": 210,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "fog_filter",
+        "img_scale": 0.4852737928361007,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.8971524375333463
+    },
+    "objectives": {
+        "iou": 0.30709,
+        "img_dist": 0.16268,
+        "txt_dist": 0.1673,
+        "txt_sim": 0.8327
+    },
+    "swad_metrics": {
+        "iou_0": 0.72373,
+        "delta_m_plus": 0.57568,
+        "phi": 0.69724,
+        "swad": 0.40139
+    },
+    "l2_distance": 0.38569,
+    "original_prompt": "Identify the objects \"turtle\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "turtle": {
+            "xmin": 189,
+            "ymin": 152,
+            "xmax": 499,
+            "ymax": 328
+        },
+        "turtle_1": {
+            "xmin": 1,
+            "ymin": 60,
+            "xmax": 271,
+            "ymax": 331
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"turtlj\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [280, 180, 655, 896], \"label\": \"turtlj\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    280,
+                    180,
+                    655,
+                    896
+                ],
+                "label": "turtlj"
+            }
+        ],
+        "token_count": 41,
+        "raw_token_count": 117,
+        "runtime_seconds": 0.4377
+    }
+}

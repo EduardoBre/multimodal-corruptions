@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/85",
+        "folder_id": "85",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00004755.JPEG"
+    },
+    "pareto_index": 0,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.9022932687974975,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.7715943290460987
+    },
+    "objectives": {
+        "iou": 0.11612,
+        "img_dist": 0.11342,
+        "txt_dist": 0.2404,
+        "txt_sim": 0.7596
+    },
+    "swad_metrics": {
+        "iou_0": 0.93502,
+        "delta_m_plus": 0.87581,
+        "phi": 0.67345,
+        "swad": 0.58981
+    },
+    "l2_distance": 0.29007,
+    "original_prompt": "Identify the objects \"whale\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "whale": {
+            "xmin": 176,
+            "ymin": 123,
+            "xmax": 491,
+            "ymax": 230
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"whlae\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [335, 375, 448, 625], \"label\": \"whlae\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    335,
+                    375,
+                    448,
+                    625
+                ],
+                "label": "whlae"
+            }
+        ],
+        "token_count": 41,
+        "raw_token_count": 42,
+        "runtime_seconds": 0.1496
+    }
+}

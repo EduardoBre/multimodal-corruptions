@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/173",
+        "folder_id": "173",
+        "category": "single/multi",
+        "filename": "ILSVRC2013_val_00004407.JPEG"
+    },
+    "pareto_index": 25,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 7,
+    "total_evaluations": 210,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.074956,
+            "defocus_blur": 0.028079,
+            "motion_blur": 0.007825,
+            "fog_filter": 0.032826,
+            "pixelate": 0.181343,
+            "jpeg_filter": 0.115478
+        },
+        "text_corruptions": {
+            "homophone": 0.000489,
+            "synonym": 0.030645,
+            "ata_saliency": 0.018655,
+            "fragmentation": 0.001313,
+            "character_noise": 0.009061
+        },
+        "img_budget_used": 0.440507,
+        "txt_budget_used": 0.060163,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.05114,
+        "img_dist": 0.08754,
+        "txt_dist": 0.23979,
+        "txt_sim": 0.76021
+    },
+    "swad_metrics": {
+        "iou_0": 0.90388,
+        "delta_m_plus": 0.94342,
+        "phi": 0.69366,
+        "swad": 0.65442
+    },
+    "l2_distance": 0.26034,
+    "original_prompt": "Identify the objects \"person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 121,
+            "ymin": 50,
+            "xmax": 498,
+            "ymax": 498
+        },
+        "person_1": {
+            "xmin": 61,
+            "ymin": 212,
+            "xmax": 213,
+            "ymax": 497
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"per son\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [258, 708, 344, 872], \"label\": \"per son\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    258,
+                    708,
+                    344,
+                    872
+                ],
+                "label": "per son"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 88,
+        "runtime_seconds": 0.2968
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.07495571901002483,
+        "defocus_blur": 0.028079489230428453,
+        "motion_blur": 0.007824732426033904,
+        "fog_filter": 0.032826362476725046,
+        "pixelate": 0.18134288637929796,
+        "jpeg_filter": 0.11547824539749532
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.0004885908697536976,
+        "synonym": 0.030645405492010058,
+        "ata_saliency": 0.01865473734427625,
+        "fragmentation": 0.0013130475899295474,
+        "character_noise": 0.009061309865035245
+    }
+}

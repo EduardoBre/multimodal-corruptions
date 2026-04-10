@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/185",
+        "folder_id": "185",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00000909.JPEG"
+    },
+    "pareto_index": 8,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.023509,
+            "defocus_blur": 0.01802,
+            "motion_blur": 0.005413,
+            "fog_filter": 0.050087,
+            "pixelate": 0.031021,
+            "jpeg_filter": 0.018315
+        },
+        "text_corruptions": {
+            "homophone": 0.311793,
+            "synonym": 0.023069,
+            "ata_saliency": 0.209335,
+            "fragmentation": 0.037826,
+            "character_noise": 0.030089
+        },
+        "img_budget_used": 0.146365,
+        "txt_budget_used": 0.612111,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.09256,
+        "txt_dist": 0.32481,
+        "txt_sim": 0.67519
+    },
+    "swad_metrics": {
+        "iou_0": 0.93785,
+        "delta_m_plus": 1.0,
+        "phi": 0.61269,
+        "swad": 0.61269
+    },
+    "l2_distance": 0.33774,
+    "original_prompt": "Identify the objects \"dog, person, plastic bag\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 19,
+            "ymin": 0,
+            "xmax": 299,
+            "ymax": 355
+        },
+        "dog": {
+            "xmin": 186,
+            "ymin": 114,
+            "xmax": 368,
+            "ymax": 374
+        },
+        "plastic bag": {
+            "xmin": 127,
+            "ymin": 190,
+            "xmax": 222,
+            "ymax": 337
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"dgo\u200b, purse on, s hopp\u0456ng bag\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [262, 540, 430, 888], \"label\": \"dgo\u200b, purse on, s hopp\u0456ng bag\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    262,
+                    540,
+                    430,
+                    888
+                ],
+                "label": "dgo\u200b, purse on, s hopp\u0456ng bag"
+            }
+        ],
+        "token_count": 51,
+        "raw_token_count": 125,
+        "runtime_seconds": 0.4106
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.023509040676435715,
+        "defocus_blur": 0.01802025189153713,
+        "motion_blur": 0.005413133862559687,
+        "fog_filter": 0.05008725851500718,
+        "pixelate": 0.031021058886976913,
+        "jpeg_filter": 0.018314734169173685
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.31179282420201077,
+        "synonym": 0.02306866037870204,
+        "ata_saliency": 0.2093346977791678,
+        "fragmentation": 0.037826106247347654,
+        "character_noise": 0.030088764982690763
+    }
+}

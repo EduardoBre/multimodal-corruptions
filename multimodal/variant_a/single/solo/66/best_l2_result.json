@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/66",
+        "folder_id": "66",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00038746.JPEG"
+    },
+    "pareto_index": 4,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.02175540829805032,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.3654488993195789
+    },
+    "objectives": {
+        "iou": 0.01498,
+        "img_dist": 0.03007,
+        "txt_dist": 0.30569,
+        "txt_sim": 0.69431
+    },
+    "swad_metrics": {
+        "iou_0": 0.72918,
+        "delta_m_plus": 0.97946,
+        "phi": 0.67343,
+        "swad": 0.6596
+    },
+    "l2_distance": 0.30753,
+    "original_prompt": "Identify the objects \"bow tie\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bow tie": {
+            "xmin": 160,
+            "ymin": 182,
+            "xmax": 206,
+            "ymax": 213
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bew tue\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [200, 117, 847, 998], \"label\": \"bew tue\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    200,
+                    117,
+                    847,
+                    998
+                ],
+                "label": "bew tue"
+            }
+        ],
+        "token_count": 41,
+        "raw_token_count": 44,
+        "runtime_seconds": 0.1418
+    }
+}

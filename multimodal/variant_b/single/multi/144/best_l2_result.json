@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/144",
+        "folder_id": "144",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00008463.JPEG"
+    },
+    "pareto_index": 17,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.012648,
+            "defocus_blur": 0.043843,
+            "motion_blur": 0.177075,
+            "fog_filter": 0.013561,
+            "pixelate": 0.103804,
+            "jpeg_filter": 0.115428
+        },
+        "text_corruptions": {
+            "homophone": 0.271648,
+            "synonym": 0.101537,
+            "ata_saliency": 0.418126,
+            "fragmentation": 0.023389,
+            "character_noise": 0.1853
+        },
+        "img_budget_used": 0.466359,
+        "txt_budget_used": 1.0,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.23056,
+        "img_dist": 0.15648,
+        "txt_dist": 0.36626,
+        "txt_sim": 0.63374
+    },
+    "swad_metrics": {
+        "iou_0": 0.94699,
+        "delta_m_plus": 0.75653,
+        "phi": 0.53457,
+        "swad": 0.40442
+    },
+    "l2_distance": 0.46021,
+    "original_prompt": "Identify the objects \"dog\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 186,
+            "ymin": 37,
+            "xmax": 435,
+            "ymax": 230
+        },
+        "dog_1": {
+            "xmin": 27,
+            "ymin": 97,
+            "xmax": 258,
+            "ymax": 218
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"can\u200b\u0440ne\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 999, 1000], \"label\": \"can\u200b\u0440ne\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    999,
+                    1000
+                ],
+                "label": "can\u200b\u0440ne"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 90,
+        "runtime_seconds": 0.2845
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.012648211895904718,
+        "defocus_blur": 0.04384316608256108,
+        "motion_blur": 0.17707463919240965,
+        "fog_filter": 0.013561351254623188,
+        "pixelate": 0.10380359077276911,
+        "jpeg_filter": 0.1154277502151969
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.2716475021274953,
+        "synonym": 0.10153714150212496,
+        "ata_saliency": 0.4181263006863457,
+        "fragmentation": 0.023388996322212953,
+        "character_noise": 0.185300059361821
+    }
+}

@@ -1,0 +1,436 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/single/multi/240",
+        "folder_id": "240",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00025179.JPEG"
+    },
+    "original_prompt": "Identify the objects \"car\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "car": {
+            "xmin": 59,
+            "ymin": 110,
+            "xmax": 408,
+            "ymax": 295
+        },
+        "car_1": {
+            "xmin": 24,
+            "ymin": 139,
+            "xmax": 69,
+            "ymax": 183
+        },
+        "car_2": {
+            "xmin": 54,
+            "ymin": 124,
+            "xmax": 165,
+            "ymax": 216
+        },
+        "car_3": {
+            "xmin": 5,
+            "ymin": 138,
+            "xmax": 33,
+            "ymax": 169
+        }
+    },
+    "baseline_iou": 0.81811,
+    "swad_star": 0.78016,
+    "swad_star_index": 4,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 5,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.00026,
+                    "defocus_blur": 0.000257,
+                    "motion_blur": 7.2e-05,
+                    "fog_filter": 3.7e-05,
+                    "pixelate": 0.000141,
+                    "jpeg_filter": 0.000223
+                },
+                "text_corruptions": {
+                    "homophone": 0.06058,
+                    "synonym": 0.421738,
+                    "ata_saliency": 0.077437,
+                    "fragmentation": 0.058717,
+                    "character_noise": 0.309834
+                },
+                "img_budget_used": 0.00099,
+                "txt_budget_used": 0.928306,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.22048,
+                "img_dist": 0.09608,
+                "txt_dist": 0.40829,
+                "txt_sim": 0.59171
+            },
+            "swad_metrics": {
+                "iou_0": 0.81811,
+                "delta_m_plus": 0.7305,
+                "phi": 0.53486,
+                "swad": 0.39071
+            },
+            "l2_distance": 0.47386,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cra\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [103, 352, 312, 638], \"label\": \"cra\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            103,
+                            352,
+                            312,
+                            638
+                        ],
+                        "label": "cra"
+                    }
+                ],
+                "token_count": 40,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.4393
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.00026027583035469323,
+                "defocus_blur": 0.0002566804750073151,
+                "motion_blur": 7.212266815236629e-05,
+                "fog_filter": 3.6909682925170945e-05,
+                "pixelate": 0.00014063438517956486,
+                "jpeg_filter": 0.0002230244102688989
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.060579772798958445,
+                "synonym": 0.4217375517681735,
+                "ata_saliency": 0.07743677519053459,
+                "fragmentation": 0.05871729214451502,
+                "character_noise": 0.30983433427356494
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.083937,
+                    "defocus_blur": 0.028635,
+                    "motion_blur": 0.022819,
+                    "fog_filter": 0.000885,
+                    "pixelate": 0.098977,
+                    "jpeg_filter": 0.164111
+                },
+                "text_corruptions": {
+                    "homophone": 0.030288,
+                    "synonym": 0.002837,
+                    "ata_saliency": 0.001056,
+                    "fragmentation": 0.102428,
+                    "character_noise": 0.027665
+                },
+                "img_budget_used": 0.399365,
+                "txt_budget_used": 0.164274,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.54996,
+                "img_dist": 0.09729,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.81811,
+                "delta_m_plus": 0.32777,
+                "phi": 0.90271,
+                "swad": 0.29588
+            },
+            "l2_distance": 0.5585,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"car\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [105, 350, 305, 648], \"label\": \"car\"},\n\t{\"bbox_2d\": [50, 362, 148, 480], \"label\": \"car\"},\n\t{\"bbox_2d\": [20, 362, 80, 450], \"label\": \"car\"},\n\t{\"bbox_2d\": [10, 362, 50, 430], \"label\": \"car\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            105,
+                            350,
+                            305,
+                            648
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            50,
+                            362,
+                            148,
+                            480
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            20,
+                            362,
+                            80,
+                            450
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            10,
+                            362,
+                            50,
+                            430
+                        ],
+                        "label": "car"
+                    }
+                ],
+                "token_count": 133,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.4393
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.08393688831999375,
+                "defocus_blur": 0.028635359440374635,
+                "motion_blur": 0.022818982396037565,
+                "fog_filter": 0.0008849354968911074,
+                "pixelate": 0.09897742205364286,
+                "jpeg_filter": 0.16411135804773994
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.030287803515915684,
+                "synonym": 0.0028374105102314294,
+                "ata_saliency": 0.001056176412989544,
+                "fragmentation": 0.10242820695281368,
+                "character_noise": 0.02766453737563233
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.002825,
+                    "defocus_blur": 0.00967,
+                    "motion_blur": 0.010237,
+                    "fog_filter": 0.004678,
+                    "pixelate": 0.009456,
+                    "jpeg_filter": 0.005387
+                },
+                "text_corruptions": {
+                    "homophone": 0.269692,
+                    "synonym": 0.258056,
+                    "ata_saliency": 0.083006,
+                    "fragmentation": 0.055939,
+                    "character_noise": 0.004628
+                },
+                "img_budget_used": 0.042252,
+                "txt_budget_used": 0.671321,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.21972,
+                "img_dist": 0.09665,
+                "txt_dist": 0.38506,
+                "txt_sim": 0.61494
+            },
+            "swad_metrics": {
+                "iou_0": 0.81811,
+                "delta_m_plus": 0.73143,
+                "phi": 0.55551,
+                "swad": 0.40631
+            },
+            "l2_distance": 0.45375,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cah\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [103, 348, 312, 648], \"label\": \"cah\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            103,
+                            348,
+                            312,
+                            648
+                        ],
+                        "label": "cah"
+                    }
+                ],
+                "token_count": 40,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.4393
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.0028248569732118186,
+                "defocus_blur": 0.00967039684446142,
+                "motion_blur": 0.010236780024567092,
+                "fog_filter": 0.004677726031028749,
+                "pixelate": 0.0094559800205065,
+                "jpeg_filter": 0.005386535178310927
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.2696915563019844,
+                "synonym": 0.2580563357745618,
+                "ata_saliency": 0.08300563560197091,
+                "fragmentation": 0.05593896859270022,
+                "character_noise": 0.0046281124581394485
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.066589,
+                    "defocus_blur": 0.134292,
+                    "motion_blur": 0.09566,
+                    "fog_filter": 0.085749,
+                    "pixelate": 0.360344,
+                    "jpeg_filter": 0.075152
+                },
+                "text_corruptions": {
+                    "homophone": 0.075036,
+                    "synonym": 0.05324,
+                    "ata_saliency": 0.040006,
+                    "fragmentation": 0.002647,
+                    "character_noise": 0.02383
+                },
+                "img_budget_used": 0.817787,
+                "txt_budget_used": 0.194758,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.52881,
+                "img_dist": 0.11493,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.81811,
+                "delta_m_plus": 0.35362,
+                "phi": 0.88507,
+                "swad": 0.31298
+            },
+            "l2_distance": 0.54116,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"car\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [108, 348, 320, 630], \"label\": \"car\"},\n\t{\"bbox_2d\": [40, 360, 148, 480], \"label\": \"car\"},\n\t{\"bbox_2d\": [18, 360, 100, 450], \"label\": \"car\"},\n\t{\"bbox_2d\": [10, 360, 40, 430], \"label\": \"car\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            108,
+                            348,
+                            320,
+                            630
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            40,
+                            360,
+                            148,
+                            480
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            18,
+                            360,
+                            100,
+                            450
+                        ],
+                        "label": "car"
+                    },
+                    {
+                        "bbox_2d": [
+                            10,
+                            360,
+                            40,
+                            430
+                        ],
+                        "label": "car"
+                    }
+                ],
+                "token_count": 134,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.4393
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.0665891278722697,
+                "defocus_blur": 0.13429222046392406,
+                "motion_blur": 0.09566008850576918,
+                "fog_filter": 0.08574911442277175,
+                "pixelate": 0.36034417627238935,
+                "jpeg_filter": 0.07515239896108308
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.07503573361289922,
+                "synonym": 0.05323956208143135,
+                "ata_saliency": 0.040006263753713904,
+                "fragmentation": 0.0026466002758660295,
+                "character_noise": 0.02382958212374274
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.015303,
+                    "defocus_blur": 0.014699,
+                    "motion_blur": 0.004783,
+                    "fog_filter": 0.01204,
+                    "pixelate": 0.011561,
+                    "jpeg_filter": 0.009445
+                },
+                "text_corruptions": {
+                    "homophone": 0.176519,
+                    "synonym": 0.026249,
+                    "ata_saliency": 0.028607,
+                    "fragmentation": 0.164045,
+                    "character_noise": 0.167918
+                },
+                "img_budget_used": 0.067832,
+                "txt_budget_used": 0.56334,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.09771,
+                "txt_dist": 0.13536,
+                "txt_sim": 0.86464
+            },
+            "swad_metrics": {
+                "iou_0": 0.81811,
+                "delta_m_plus": 1.0,
+                "phi": 0.78016,
+                "swad": 0.78016
+            },
+            "l2_distance": 0.16694,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"ca\u200br\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [105, 348, 312, 648], \"label\": \"ca\u200br\"},\n\t{\"bbox_2d\": [48, 362, 150, 484], \"label\": \"ca\u200br\"},\n\t{\"bbox_2d\": [18, 362, 100, 456], \"label\": \"ca\u200br\"},\n\t{\"bbox_2d\": [10, 362, 100, 456], \"label\": \"ca\u200br\"},\n\t{\"bbox_2d\": [10, 362, 100, 456], \"label\": \"ca\u200br\"},\n\t{\"bbox_2d\": [10, 362, 100, 456], \"label\": \"ca\u200br\"},\n\t{\"bbox_2d\": [10, 362, 100, 456], \"label\": \"ca\u200br\"},\n\t{\"bbox_2d\": [10, 362, 100, 456], \"label\": \"ca\u200br\"},\n\t{\"bbox_2d\": [10, 362, 100, 456], \"label\": \"ca\u200br\"},\n\t{\"bbox_2d\": [10, 362, 100, 456], \"label\": \"ca\u200br\"},\n\t{\"bbox_2d\": [10, 362, 100, 456], \"label\": \"ca\u200br\"},\n\t{\"bbox_2d\": [10, 362, 100, 456], \"label\": \"ca\u200br\"},\n\t{\"bbox_2d\": [10, 362, 100, 456], \"label\": \"ca\u200br\"},\n\t{\"bbox_2d\": [10, 362, 100, 456], \"label\": \"ca\u200br\"},\n\t{\"bbox_2d\": [10, 362, 100, 456], \"label\": \"ca\u200br\"},\n\t{\"bbox_2d\": [10, 362, 100, 456], \"label\": \"ca\u200br\"},\n\t{\"bbox_2d\": [10, 362, 100, 456], \"label\": \"ca\u200br\"},\n\t{\"bbox_2d\": [10, 362, 100, 456], \"label\": \"ca\u200br\"},\n\t{\"bbox_2d\": [10, 362, 100, 456], \"label\": \"ca\u200br\"},\n\t{\"bbox_2d\": [10, 362, 100, 456], \"label\": \"ca\u200br\"},\n\t{\"bbox_2d\": [10, 362, 100, 456], \"label\": \"ca\u200br\"},\n\t{\"bbox_2d\": [10, 362, 100, 456], \"label\": \"ca\u200br\"},\n\t{\"bbox_2d\": [10, 362, 100, 456], \"label\": \"ca\u200br\"},\n\t{\"bbox_2d\": [10, 3",
+                "parsed_predictions": [],
+                "token_count": 800,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.4393
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.015303079794096194,
+                "defocus_blur": 0.014699152307031733,
+                "motion_blur": 0.004783304005262152,
+                "fog_filter": 0.012040042710974592,
+                "pixelate": 0.01156066314958386,
+                "jpeg_filter": 0.009445263888196992
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.17651935051488177,
+                "synonym": 0.026249330909041097,
+                "ata_saliency": 0.028607068622705872,
+                "fragmentation": 0.16404544683224725,
+                "character_noise": 0.1679183842504567
+            }
+        }
+    ]
+}

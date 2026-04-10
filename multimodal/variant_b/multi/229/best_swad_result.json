@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/229",
+        "folder_id": "229",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00027829.JPEG"
+    },
+    "pareto_index": 17,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 4,
+    "total_evaluations": 120,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.007834,
+            "defocus_blur": 0.062472,
+            "motion_blur": 0.041742,
+            "fog_filter": 0.203331,
+            "pixelate": 0.137863,
+            "jpeg_filter": 0.183211
+        },
+        "text_corruptions": {
+            "homophone": 0.10255,
+            "synonym": 0.375366,
+            "ata_saliency": 0.212816,
+            "fragmentation": 0.002533,
+            "character_noise": 0.009326
+        },
+        "img_budget_used": 0.636452,
+        "txt_budget_used": 0.702591,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.14611,
+        "txt_dist": 0.17128,
+        "txt_sim": 0.82872
+    },
+    "swad_metrics": {
+        "iou_0": 0.96183,
+        "delta_m_plus": 1.0,
+        "phi": 0.70764,
+        "swad": 0.70764
+    },
+    "l2_distance": 0.22513,
+    "original_prompt": "Identify the objects \"person, snake\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "snake": {
+            "xmin": 228,
+            "ymin": 106,
+            "xmax": 497,
+            "ymax": 337
+        },
+        "person": {
+            "xmin": 1,
+            "ymin": 147,
+            "xmax": 486,
+            "ymax": 368
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"pe\u200dr sno, snake\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [458, 278, 900, 830], \"label\": \"pe\u200dr sno, snake\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    458,
+                    278,
+                    900,
+                    830
+                ],
+                "label": "pe\u200dr sno, snake"
+            }
+        ],
+        "token_count": 45,
+        "raw_token_count": 83,
+        "runtime_seconds": 0.2529
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.007833847022391014,
+        "defocus_blur": 0.0624718170911915,
+        "motion_blur": 0.04174152664171975,
+        "fog_filter": 0.20333082596278618,
+        "pixelate": 0.13786308442427941,
+        "jpeg_filter": 0.1832112776470848
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.10255021390756412,
+        "synonym": 0.37536631109606317,
+        "ata_saliency": 0.21281573397100442,
+        "fragmentation": 0.0025332044308131046,
+        "character_noise": 0.009325854075691219
+    }
+}

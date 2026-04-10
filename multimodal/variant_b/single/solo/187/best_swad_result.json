@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/187",
+        "folder_id": "187",
+        "category": "single/solo",
+        "filename": "ILSVRC2013_val_00002385.JPEG"
+    },
+    "pareto_index": 11,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 5,
+    "total_evaluations": 150,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.024105,
+            "defocus_blur": 0.003199,
+            "motion_blur": 0.291159,
+            "fog_filter": 0.040123,
+            "pixelate": 0.000545,
+            "jpeg_filter": 0.012072
+        },
+        "text_corruptions": {
+            "homophone": 0.04567,
+            "synonym": 0.008557,
+            "ata_saliency": 0.047843,
+            "fragmentation": 0.019464,
+            "character_noise": 0.057537
+        },
+        "img_budget_used": 0.371203,
+        "txt_budget_used": 0.179071,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.08976,
+        "txt_dist": 0.2044,
+        "txt_sim": 0.7956
+    },
+    "swad_metrics": {
+        "iou_0": 0.9867,
+        "delta_m_plus": 1.0,
+        "phi": 0.72419,
+        "swad": 0.72419
+    },
+    "l2_distance": 0.22324,
+    "original_prompt": "Identify the objects \"pizza\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "pizza": {
+            "xmin": 28,
+            "ymin": 53,
+            "xmax": 424,
+            "ymax": 327
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"\u0440i\u200bz\u200bza\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [62, 148, 848, 864], \"label\": \"\u0440i\u200b\u0437\u200b\u0437\u0430\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    62,
+                    148,
+                    848,
+                    864
+                ],
+                "label": "\u0440i\u200b\u0437\u200b\u0437\u0430"
+            }
+        ],
+        "token_count": 43,
+        "raw_token_count": 44,
+        "runtime_seconds": 0.1547
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.02410528810133025,
+        "defocus_blur": 0.0031985071358354026,
+        "motion_blur": 0.2911585625623525,
+        "fog_filter": 0.0401233505205735,
+        "pixelate": 0.0005451661615230034,
+        "jpeg_filter": 0.01207183785034455
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.04566955363576183,
+        "synonym": 0.008557171106643568,
+        "ata_saliency": 0.04784277656218508,
+        "fragmentation": 0.019464137243813462,
+        "character_noise": 0.057537240134457046
+    }
+}

@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/203",
+        "folder_id": "203",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00003386.JPEG"
+    },
+    "pareto_index": 5,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.19288068201153158,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.6217212343834726
+    },
+    "objectives": {
+        "iou": 0.0191,
+        "img_dist": 0.0376,
+        "txt_dist": 0.31935,
+        "txt_sim": 0.68065
+    },
+    "swad_metrics": {
+        "iou_0": 0.93294,
+        "delta_m_plus": 0.97953,
+        "phi": 0.65506,
+        "swad": 0.64165
+    },
+    "l2_distance": 0.32212,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 48,
+            "ymin": 120,
+            "xmax": 321,
+            "ymax": 422
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"birw\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [550, 558, 688, 638], \"label\": \"birw\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    550,
+                    558,
+                    688,
+                    638
+                ],
+                "label": "birw"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 49,
+        "runtime_seconds": 0.1941
+    }
+}

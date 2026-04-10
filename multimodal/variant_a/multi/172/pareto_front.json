@@ -1,0 +1,357 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/172",
+        "folder_id": "172",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00034365.JPEG"
+    },
+    "original_prompt": "Identify the objects \"brassiere, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 126,
+            "ymin": 15,
+            "xmax": 332,
+            "ymax": 311
+        },
+        "person_1": {
+            "xmin": 0,
+            "ymin": 55,
+            "xmax": 146,
+            "ymax": 340
+        },
+        "brassiere": {
+            "xmin": 158,
+            "ymin": 155,
+            "xmax": 297,
+            "ymax": 318
+        }
+    },
+    "baseline_iou": 0.77715,
+    "swad_star": 0.80282,
+    "swad_star_index": 4,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 5,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.3997956906557353,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.647636093318414
+            },
+            "objectives": {
+                "iou": 0.62301,
+                "img_dist": 0.04406,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.77715,
+                "delta_m_plus": 0.19834,
+                "phi": 0.95594,
+                "swad": 0.1896
+            },
+            "l2_distance": 0.62457,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"brassiere, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [506, 297, 888, 583], \"label\": \"brassiere\"},\n\t{\"bbox_2d\": [36, 367, 376, 633], \"label\": \"brassiere\"},\n\t{\"bbox_2d\": [0, 110, 492, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [360, 63, 1000, 998], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            506,
+                            297,
+                            888,
+                            583
+                        ],
+                        "label": "brassiere"
+                    },
+                    {
+                        "bbox_2d": [
+                            36,
+                            367,
+                            376,
+                            633
+                        ],
+                        "label": "brassiere"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            110,
+                            492,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            360,
+                            63,
+                            1000,
+                            998
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 139,
+                "raw_token_count": 160,
+                "runtime_seconds": 0.5155
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.79975,
+                "img_dist": 0.03121,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.77715,
+                "delta_m_plus": 0.0,
+                "phi": 0.96879,
+                "swad": 0.0
+            },
+            "l2_distance": 0.80036,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"brassiere, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [512, 300, 888, 577], \"label\": \"brassiere\"},\n\t{\"bbox_2d\": [36, 367, 380, 677], \"label\": \"brassiere\"},\n\t{\"bbox_2d\": [368, 63, 1000, 577], \"label\": \"person\"},\n\t{\"bbox_2d\": [0, 113, 432, 787], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            512,
+                            300,
+                            888,
+                            577
+                        ],
+                        "label": "brassiere"
+                    },
+                    {
+                        "bbox_2d": [
+                            36,
+                            367,
+                            380,
+                            677
+                        ],
+                        "label": "brassiere"
+                    },
+                    {
+                        "bbox_2d": [
+                            368,
+                            63,
+                            1000,
+                            577
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            113,
+                            432,
+                            787
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 139,
+                "raw_token_count": 160,
+                "runtime_seconds": 0.5155
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.74234,
+                "img_dist": 0.03953,
+                "txt_dist": 0.03602,
+                "txt_sim": 0.96398
+            },
+            "swad_metrics": {
+                "iou_0": 0.77715,
+                "delta_m_plus": 0.04479,
+                "phi": 0.92587,
+                "swad": 0.04147
+            },
+            "l2_distance": 0.74426,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"brassiere, preson\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [509, 304, 880, 579], \"label\": \"brassiere\"},\n\t{\"bbox_2d\": [33, 367, 380, 677], \"label\": \"brassiere\"},\n\t{\"bbox_2d\": [0, 113, 430, 998], \"label\": \"preson\"},\n\t{\"bbox_2d\": [375, 65, 1000, 587], \"label\": \"preson\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            509,
+                            304,
+                            880,
+                            579
+                        ],
+                        "label": "brassiere"
+                    },
+                    {
+                        "bbox_2d": [
+                            33,
+                            367,
+                            380,
+                            677
+                        ],
+                        "label": "brassiere"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            113,
+                            430,
+                            998
+                        ],
+                        "label": "preson"
+                    },
+                    {
+                        "bbox_2d": [
+                            375,
+                            65,
+                            1000,
+                            587
+                        ],
+                        "label": "preson"
+                    }
+                ],
+                "token_count": 141,
+                "raw_token_count": 160,
+                "runtime_seconds": 0.5155
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.018595721213425453,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6130568625347235
+            },
+            "objectives": {
+                "iou": 0.73729,
+                "img_dist": 0.03686,
+                "txt_dist": 0.11451,
+                "txt_sim": 0.88549
+            },
+            "swad_metrics": {
+                "iou_0": 0.77715,
+                "delta_m_plus": 0.05129,
+                "phi": 0.85285,
+                "swad": 0.04374
+            },
+            "l2_distance": 0.74704,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"brapsiere, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [488, 297, 888, 583], \"label\": \"brapsiere\"},\n\t{\"bbox_2d\": [37, 367, 380, 633], \"label\": \"brapsiere\"},\n\t{\"bbox_2d\": [372, 63, 1000, 583], \"label\": \"person\"},\n\t{\"bbox_2d\": [0, 113, 488, 998], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            488,
+                            297,
+                            888,
+                            583
+                        ],
+                        "label": "brapsiere"
+                    },
+                    {
+                        "bbox_2d": [
+                            37,
+                            367,
+                            380,
+                            633
+                        ],
+                        "label": "brapsiere"
+                    },
+                    {
+                        "bbox_2d": [
+                            372,
+                            63,
+                            1000,
+                            583
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            113,
+                            488,
+                            998
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 139,
+                "raw_token_count": 160,
+                "runtime_seconds": 0.5155
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.03957,
+                "txt_dist": 0.1641,
+                "txt_sim": 0.8359
+            },
+            "swad_metrics": {
+                "iou_0": 0.77715,
+                "delta_m_plus": 1.0,
+                "phi": 0.80282,
+                "swad": 0.80282
+            },
+            "l2_distance": 0.1688,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bra zeer, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 109, 497, 998], \"label\": \"bra zeer, person\"},\n\t{\"bbox_2d\": [367, 65, 1000, 625], \"label\": \"bra zeer, person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            109,
+                            497,
+                            998
+                        ],
+                        "label": "bra zeer, person"
+                    },
+                    {
+                        "bbox_2d": [
+                            367,
+                            65,
+                            1000,
+                            625
+                        ],
+                        "label": "bra zeer, person"
+                    }
+                ],
+                "token_count": 78,
+                "raw_token_count": 160,
+                "runtime_seconds": 0.5155
+            }
+        }
+    ]
+}

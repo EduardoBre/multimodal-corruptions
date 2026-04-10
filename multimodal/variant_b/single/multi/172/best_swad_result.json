@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/172",
+        "folder_id": "172",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00036344.JPEG"
+    },
+    "pareto_index": 1,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.008837,
+            "defocus_blur": 0.000603,
+            "motion_blur": 0.13491,
+            "fog_filter": 0.004912,
+            "pixelate": 0.026694,
+            "jpeg_filter": 0.003515
+        },
+        "text_corruptions": {
+            "homophone": 0.078304,
+            "synonym": 0.147298,
+            "ata_saliency": 0.131069,
+            "fragmentation": 0.001737,
+            "character_noise": 0.02655
+        },
+        "img_budget_used": 0.179471,
+        "txt_budget_used": 0.384958,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.09809,
+        "txt_dist": 0.32896,
+        "txt_sim": 0.67104
+    },
+    "swad_metrics": {
+        "iou_0": 0.95394,
+        "delta_m_plus": 1.0,
+        "phi": 0.60522,
+        "swad": 0.60522
+    },
+    "l2_distance": 0.34327,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 121,
+            "ymin": 142,
+            "xmax": 238,
+            "ymax": 414
+        },
+        "bird_1": {
+            "xmin": 278,
+            "ymin": 53,
+            "xmax": 432,
+            "ymax": 162
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bu\u200drr\u0435d\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [87, 564, 236, 798], \"label\": \"bu\u200drr\u0435d\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    87,
+                    564,
+                    236,
+                    798
+                ],
+                "label": "bu\u200drr\u0435d"
+            }
+        ],
+        "token_count": 43,
+        "raw_token_count": 86,
+        "runtime_seconds": 0.2665
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.008837146789374738,
+        "defocus_blur": 0.0006028198347440232,
+        "motion_blur": 0.1349097486929664,
+        "fog_filter": 0.004911949841391348,
+        "pixelate": 0.026694292898414587,
+        "jpeg_filter": 0.003515462280498781
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.07830402833229025,
+        "synonym": 0.1472975058511155,
+        "ata_saliency": 0.13106923756040553,
+        "fragmentation": 0.0017367400442102159,
+        "character_noise": 0.026550419904504435
+    }
+}

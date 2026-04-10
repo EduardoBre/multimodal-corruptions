@@ -1,0 +1,85 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/239",
+        "folder_id": "239",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00031852.JPEG"
+    },
+    "pareto_index": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "motion_blur",
+        "img_scale": 0.3997956906557353,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.647636093318414
+    },
+    "objectives": {
+        "iou": 0.24938,
+        "img_dist": 0.02675,
+        "txt_dist": 0.22897,
+        "txt_sim": 0.77103
+    },
+    "swad_metrics": {
+        "iou_0": 0.51859,
+        "delta_m_plus": 0.51912,
+        "phi": 0.7504,
+        "swad": 0.38955
+    },
+    "l2_distance": 0.33961,
+    "original_prompt": "Identify the objects \"lamp, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 70,
+            "ymin": 157,
+            "xmax": 181,
+            "ymax": 481
+        },
+        "lamp": {
+            "xmin": 100,
+            "ymin": 100,
+            "xmax": 138,
+            "ymax": 153
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"ljmp, person\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 315, 632, 998], \"label\": \"ljmp\"},\n\t{\"bbox_2d\": [0, 315, 632, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [396, 302, 632, 538], \"label\": \"person\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    315,
+                    632,
+                    998
+                ],
+                "label": "ljmp"
+            },
+            {
+                "bbox_2d": [
+                    0,
+                    315,
+                    632,
+                    998
+                ],
+                "label": "person"
+            },
+            {
+                "bbox_2d": [
+                    396,
+                    302,
+                    632,
+                    538
+                ],
+                "label": "person"
+            }
+        ],
+        "token_count": 102,
+        "raw_token_count": 120,
+        "runtime_seconds": 0.4164
+    }
+}

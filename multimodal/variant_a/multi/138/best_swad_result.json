@@ -1,0 +1,76 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/138",
+        "folder_id": "138",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00040891.JPEG"
+    },
+    "pareto_index": 13,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 6,
+    "total_evaluations": 165,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.8439228650839485,
+        "txt_attack": "synonym",
+        "txt_scale": 0.6908324710557691
+    },
+    "objectives": {
+        "iou": 0.09263,
+        "img_dist": 0.06662,
+        "txt_dist": 0.28026,
+        "txt_sim": 0.71974
+    },
+    "swad_metrics": {
+        "iou_0": 0.91238,
+        "delta_m_plus": 0.89847,
+        "phi": 0.67179,
+        "swad": 0.60359
+    },
+    "l2_distance": 0.3026,
+    "original_prompt": "Identify the objects \"filing cabinet, guitar\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "guitar": {
+            "xmin": 212,
+            "ymin": 26,
+            "xmax": 313,
+            "ymax": 331
+        },
+        "filing cabinet": {
+            "xmin": 3,
+            "ymin": 0,
+            "xmax": 256,
+            "ymax": 373
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"file drawer, axe\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 625, 250, 999], \"label\": \"file drawer\"},\n\t{\"bbox_2d\": [175, 0, 280, 888], \"label\": \"axe\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    625,
+                    250,
+                    999
+                ],
+                "label": "file drawer"
+            },
+            {
+                "bbox_2d": [
+                    175,
+                    0,
+                    280,
+                    888
+                ],
+                "label": "axe"
+            }
+        ],
+        "token_count": 69,
+        "raw_token_count": 73,
+        "runtime_seconds": 0.2605
+    }
+}

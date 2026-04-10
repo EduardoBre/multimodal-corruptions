@@ -1,0 +1,106 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/116",
+        "folder_id": "116",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00009638.JPEG"
+    },
+    "pareto_index": 1,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.189097,
+            "defocus_blur": 0.169064,
+            "motion_blur": 0.072681,
+            "fog_filter": 0.180467,
+            "pixelate": 0.000318,
+            "jpeg_filter": 0.033067
+        },
+        "text_corruptions": {
+            "homophone": 0.121751,
+            "synonym": 0.400547,
+            "ata_saliency": 0.038249,
+            "fragmentation": 0.008306,
+            "character_noise": 0.022607
+        },
+        "img_budget_used": 0.644694,
+        "txt_budget_used": 0.59146,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.01092,
+        "img_dist": 0.11065,
+        "txt_dist": 0.32738,
+        "txt_sim": 0.67262
+    },
+    "swad_metrics": {
+        "iou_0": 0.98239,
+        "delta_m_plus": 0.98888,
+        "phi": 0.59819,
+        "swad": 0.59155
+    },
+    "l2_distance": 0.34575,
+    "original_prompt": "Identify the objects \"elephant\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "elephant": {
+            "xmin": 198,
+            "ymin": 72,
+            "xmax": 499,
+            "ymax": 332
+        },
+        "elephant_1": {
+            "xmin": 0,
+            "ymin": 39,
+            "xmax": 263,
+            "ymax": 332
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"tuskre\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [370, 300, 450, 376], \"label\": \"tuskre\"},\n\t{\"bbox_2d\": [460, 428, 520, 488], \"label\": \"tuskre\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    370,
+                    300,
+                    450,
+                    376
+                ],
+                "label": "tuskre"
+            },
+            {
+                "bbox_2d": [
+                    460,
+                    428,
+                    520,
+                    488
+                ],
+                "label": "tuskre"
+            }
+        ],
+        "token_count": 76,
+        "raw_token_count": 98,
+        "runtime_seconds": 0.293
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.18909701094757853,
+        "defocus_blur": 0.16906441512987774,
+        "motion_blur": 0.07268061596631006,
+        "fog_filter": 0.18046709915541634,
+        "pixelate": 0.00031772383562507847,
+        "jpeg_filter": 0.03306744866695848
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.12175135495423947,
+        "synonym": 0.4005469336099453,
+        "ata_saliency": 0.03824904912939581,
+        "fragmentation": 0.008305609885291936,
+        "character_noise": 0.022606630268006238
+    }
+}

@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/167",
+        "folder_id": "167",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00010388.JPEG"
+    },
+    "pareto_index": 6,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.054741,
+            "defocus_blur": 0.263469,
+            "motion_blur": 0.066677,
+            "fog_filter": 0.006812,
+            "pixelate": 0.066822,
+            "jpeg_filter": 0.418224
+        },
+        "text_corruptions": {
+            "homophone": 0.089937,
+            "synonym": 0.069728,
+            "ata_saliency": 0.049959,
+            "fragmentation": 0.19467,
+            "character_noise": 0.086015
+        },
+        "img_budget_used": 0.876745,
+        "txt_budget_used": 0.490308,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.24915,
+        "img_dist": 0.10152,
+        "txt_dist": 0.22828,
+        "txt_sim": 0.77172
+    },
+    "swad_metrics": {
+        "iou_0": 0.87852,
+        "delta_m_plus": 0.7164,
+        "phi": 0.69337,
+        "swad": 0.49673
+    },
+    "l2_distance": 0.35284,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 206,
+            "ymin": 45,
+            "xmax": 365,
+            "ymax": 321
+        },
+        "bird_1": {
+            "xmin": 161,
+            "ymin": 334,
+            "xmax": 360,
+            "ymax": 403
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"b ir\u200bd\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [442, 320, 678, 772], \"label\": \"b ir\u200bd\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    442,
+                    320,
+                    678,
+                    772
+                ],
+                "label": "b ir\u200bd"
+            }
+        ],
+        "token_count": 42,
+        "raw_token_count": 79,
+        "runtime_seconds": 0.2648
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.05474084490079756,
+        "defocus_blur": 0.2634693358717869,
+        "motion_blur": 0.06667726945017954,
+        "fog_filter": 0.006812198169432949,
+        "pixelate": 0.06682152773294542,
+        "jpeg_filter": 0.41822388803463656
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.08993718007440069,
+        "synonym": 0.0697276545058858,
+        "ata_saliency": 0.04995904639945509,
+        "fragmentation": 0.19466963963899728,
+        "character_noise": 0.0860149066468974
+    }
+}

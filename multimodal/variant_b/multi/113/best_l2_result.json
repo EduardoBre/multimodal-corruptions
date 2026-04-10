@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/113",
+        "folder_id": "113",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00008344.JPEG"
+    },
+    "pareto_index": 10,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 45,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.122899,
+            "defocus_blur": 0.023454,
+            "motion_blur": 0.042126,
+            "fog_filter": 0.014963,
+            "pixelate": 0.003507,
+            "jpeg_filter": 0.107237
+        },
+        "text_corruptions": {
+            "homophone": 0.222825,
+            "synonym": 0.122881,
+            "ata_saliency": 0.018644,
+            "fragmentation": 0.013073,
+            "character_noise": 0.130524
+        },
+        "img_budget_used": 0.314186,
+        "txt_budget_used": 0.507946,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.08129,
+        "txt_dist": 0.23165,
+        "txt_sim": 0.76835
+    },
+    "swad_metrics": {
+        "iou_0": 0.90735,
+        "delta_m_plus": 1.0,
+        "phi": 0.70589,
+        "swad": 0.70589
+    },
+    "l2_distance": 0.2455,
+    "original_prompt": "Identify the objects \"neck brace, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 158,
+            "ymin": 59,
+            "xmax": 499,
+            "ymax": 374
+        },
+        "neck brace": {
+            "xmin": 222,
+            "ymin": 218,
+            "xmax": 419,
+            "ymax": 374
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"n\u0435ck b\u200dr\u200bace, \u0440er som\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [448, 588, 848, 1000], \"label\": \"n\u0435ck b\u200dr\u200bace, \u0440er som\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    448,
+                    588,
+                    848,
+                    1000
+                ],
+                "label": "n\u0435ck b\u200dr\u200bace, \u0440er som"
+            }
+        ],
+        "token_count": 52,
+        "raw_token_count": 101,
+        "runtime_seconds": 0.3095
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.12289909882779805,
+        "defocus_blur": 0.023453937761699982,
+        "motion_blur": 0.04212610671392191,
+        "fog_filter": 0.014962750056230607,
+        "pixelate": 0.00350728646274597,
+        "jpeg_filter": 0.10723708875064682
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.2228246337125755,
+        "synonym": 0.12288072377232216,
+        "ata_saliency": 0.01864364968499236,
+        "fragmentation": 0.013073134235451051,
+        "character_noise": 0.13052394923322794
+    }
+}

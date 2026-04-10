@@ -1,0 +1,73 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/241",
+        "folder_id": "241",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00015933.JPEG"
+    },
+    "pareto_index": 5,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.9316177058680379,
+        "txt_attack": "homophone",
+        "txt_scale": 0.9948250792623392
+    },
+    "objectives": {
+        "iou": 0.32694,
+        "img_dist": 0.04826,
+        "txt_dist": 0.21788,
+        "txt_sim": 0.78212
+    },
+    "swad_metrics": {
+        "iou_0": 0.96021,
+        "delta_m_plus": 0.65951,
+        "phi": 0.74437,
+        "swad": 0.49092
+    },
+    "l2_distance": 0.39584,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 0,
+            "ymin": 93,
+            "xmax": 133,
+            "ymax": 498
+        },
+        "bird_1": {
+            "xmin": 160,
+            "ymin": 123,
+            "xmax": 331,
+            "ymax": 497
+        },
+        "bird_2": {
+            "xmin": 308,
+            "ymin": 143,
+            "xmax": 373,
+            "ymax": 498
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"byrd\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 188, 350, 999], \"label\": \"byrd\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    188,
+                    350,
+                    999
+                ],
+                "label": "byrd"
+            }
+        ],
+        "token_count": 38,
+        "raw_token_count": 126,
+        "runtime_seconds": 0.4628
+    }
+}

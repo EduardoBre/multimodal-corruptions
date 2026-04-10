@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/204",
+        "folder_id": "204",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00026327.JPEG"
+    },
+    "pareto_index": 3,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.008882,
+            "defocus_blur": 0.040728,
+            "motion_blur": 0.036404,
+            "fog_filter": 0.133578,
+            "pixelate": 0.046252,
+            "jpeg_filter": 0.011308
+        },
+        "text_corruptions": {
+            "homophone": 0.030256,
+            "synonym": 0.042906,
+            "ata_saliency": 0.176943,
+            "fragmentation": 0.03584,
+            "character_noise": 0.419954
+        },
+        "img_budget_used": 0.277152,
+        "txt_budget_used": 0.705899,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.07617,
+        "txt_dist": 0.30067,
+        "txt_sim": 0.69933
+    },
+    "swad_metrics": {
+        "iou_0": 0.92674,
+        "delta_m_plus": 1.0,
+        "phi": 0.64606,
+        "swad": 0.64606
+    },
+    "l2_distance": 0.31017,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 151,
+            "ymin": 85,
+            "xmax": 446,
+            "ymax": 437
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"wing\u200b\u0435d\u200b \u0430\u200ds\u200dim\u200bal\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "There is no object matching the description \"winged animal\" in the image. The image shows a bird standing in shallow water, which is a winged animal, but the description is too vague and does not match the specific context of the image. The bird is a heron, and it is not \"winged animal\" in the sense of being a mythical or fictional creature.\n\nIf you meant to identify the bird, here is the bounding box for the bird:\n\n```json\n[\n  {\n    \"bbox\": [320, 170, 918, 808],\n    \"label\": \"bird\"\n  }\n]\n```\n\nIf you meant to identify a \"winged animal\" in a different sense (e.g., a mythical creature), there are none in the image.",
+        "parsed_predictions": [
+            {
+                "bbox": [
+                    320,
+                    170,
+                    918,
+                    808
+                ],
+                "label": "bird"
+            }
+        ],
+        "token_count": 166,
+        "raw_token_count": 167,
+        "runtime_seconds": 0.541
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.008881736559224144,
+        "defocus_blur": 0.04072786670865686,
+        "motion_blur": 0.03640416957793091,
+        "fog_filter": 0.1335780911985625,
+        "pixelate": 0.046251975193084674,
+        "jpeg_filter": 0.011307678583813985
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.03025573684973736,
+        "synonym": 0.042906338495599355,
+        "ata_saliency": 0.17694337690714695,
+        "fragmentation": 0.03583981047749097,
+        "character_noise": 0.41995421386577086
+    }
+}

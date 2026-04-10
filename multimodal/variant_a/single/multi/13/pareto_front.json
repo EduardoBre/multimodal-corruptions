@@ -1,0 +1,454 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/single/multi/13",
+        "folder_id": "13",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00005812.JPEG"
+    },
+    "original_prompt": "Identify the objects \"cocktail shaker\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "cocktail shaker": {
+            "xmin": 138,
+            "ymin": 252,
+            "xmax": 212,
+            "ymax": 426
+        },
+        "cocktail shaker_1": {
+            "xmin": 11,
+            "ymin": 231,
+            "xmax": 142,
+            "ymax": 435
+        },
+        "cocktail shaker_2": {
+            "xmin": 31,
+            "ymin": 2,
+            "xmax": 235,
+            "ymax": 315
+        }
+    },
+    "baseline_iou": 0.62114,
+    "swad_star": 0.49763,
+    "swad_star_index": 5,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 9,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8181617493544074,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.41721849968957336
+            },
+            "objectives": {
+                "iou": 0.6171,
+                "img_dist": 0.05707,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.62114,
+                "delta_m_plus": 0.0065,
+                "phi": 0.94293,
+                "swad": 0.00613
+            },
+            "l2_distance": 0.61973,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cocktail shaker\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [48, 478, 470, 850], \"label\": \"cocktail shaker\"},\n\t{\"bbox_2d\": [488, 508, 740, 867], \"label\": \"cocktail shaker\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            48,
+                            478,
+                            470,
+                            850
+                        ],
+                        "label": "cocktail shaker"
+                    },
+                    {
+                        "bbox_2d": [
+                            488,
+                            508,
+                            740,
+                            867
+                        ],
+                        "label": "cocktail shaker"
+                    }
+                ],
+                "token_count": 77,
+                "raw_token_count": 98,
+                "runtime_seconds": 0.3142
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.018153363333776373,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.24927259019092207
+            },
+            "objectives": {
+                "iou": 0.60882,
+                "img_dist": 0.03844,
+                "txt_dist": 0.20973,
+                "txt_sim": 0.79027
+            },
+            "swad_metrics": {
+                "iou_0": 0.62114,
+                "delta_m_plus": 0.01983,
+                "phi": 0.75989,
+                "swad": 0.01507
+            },
+            "l2_distance": 0.64508,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"co\u200b\u0441kt\u0430\u200di\u200dl shake\u200br\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [480, 508, 740, 871], \"label\": \"co\u200bckt\u0430\u200di\u200dl shake\u200br\"},\n\t{\"bbox_2d\": [56, 468, 450, 865], \"label\": \"co\u200bckt\u0430\u200di\u200dl shake\u200br\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            480,
+                            508,
+                            740,
+                            871
+                        ],
+                        "label": "co\u200bckt\u0430\u200di\u200dl shake\u200br"
+                    },
+                    {
+                        "bbox_2d": [
+                            56,
+                            468,
+                            450,
+                            865
+                        ],
+                        "label": "co\u200bckt\u0430\u200di\u200dl shake\u200br"
+                    }
+                ],
+                "token_count": 95,
+                "raw_token_count": 98,
+                "runtime_seconds": 0.3142
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.3997956906557353,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.647636093318414
+            },
+            "objectives": {
+                "iou": 0.32457,
+                "img_dist": 0.05208,
+                "txt_dist": 0.30244,
+                "txt_sim": 0.69756
+            },
+            "swad_metrics": {
+                "iou_0": 0.62114,
+                "delta_m_plus": 0.47746,
+                "phi": 0.66123,
+                "swad": 0.31571
+            },
+            "l2_distance": 0.44669,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cockatil shaked\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [488, 502, 736, 873], \"label\": \"cockatil shaked\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            488,
+                            502,
+                            736,
+                            873
+                        ],
+                        "label": "cockatil shaked"
+                    }
+                ],
+                "token_count": 43,
+                "raw_token_count": 98,
+                "runtime_seconds": 0.3142
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.61763,
+                "img_dist": 0.03704,
+                "txt_dist": 0.08751,
+                "txt_sim": 0.91249
+            },
+            "swad_metrics": {
+                "iou_0": 0.62114,
+                "delta_m_plus": 0.00565,
+                "phi": 0.87869,
+                "swad": 0.00497
+            },
+            "l2_distance": 0.6249,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cocktale shaker\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [488, 506, 732, 875], \"label\": \"cocktale shaker\"},\n\t{\"bbox_2d\": [56, 472, 472, 867], \"label\": \"cocktale shaker\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            488,
+                            506,
+                            732,
+                            875
+                        ],
+                        "label": "cocktale shaker"
+                    },
+                    {
+                        "bbox_2d": [
+                            56,
+                            472,
+                            472,
+                            867
+                        ],
+                        "label": "cocktale shaker"
+                    }
+                ],
+                "token_count": 79,
+                "raw_token_count": 98,
+                "runtime_seconds": 0.3142
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.6126883641923373,
+                "txt_attack": "homophone",
+                "txt_scale": 0.10684452896191199
+            },
+            "objectives": {
+                "iou": 0.3409,
+                "img_dist": 0.04974,
+                "txt_dist": 0.23587,
+                "txt_sim": 0.76413
+            },
+            "swad_metrics": {
+                "iou_0": 0.62114,
+                "delta_m_plus": 0.45117,
+                "phi": 0.72612,
+                "swad": 0.3276
+            },
+            "l2_distance": 0.41752,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cock tale shaker\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [48, 470, 488, 860], \"label\": \"cock tale shaker\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            48,
+                            470,
+                            488,
+                            860
+                        ],
+                        "label": "cock tale shaker"
+                    }
+                ],
+                "token_count": 41,
+                "raw_token_count": 98,
+                "runtime_seconds": 0.3142
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6124377601560459,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.28517,
+                "img_dist": 0.07999,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.62114,
+                "delta_m_plus": 0.54089,
+                "phi": 0.92001,
+                "swad": 0.49763
+            },
+            "l2_distance": 0.29618,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cocktail shaker\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [100, 470, 470, 850], \"label\": \"cocktail shaker\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            100,
+                            470,
+                            470,
+                            850
+                        ],
+                        "label": "cocktail shaker"
+                    }
+                ],
+                "token_count": 42,
+                "raw_token_count": 98,
+                "runtime_seconds": 0.3142
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.5656671100314771,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.039875089079669634
+            },
+            "objectives": {
+                "iou": 0.55655,
+                "img_dist": 0.07635,
+                "txt_dist": 0.13596,
+                "txt_sim": 0.86404
+            },
+            "swad_metrics": {
+                "iou_0": 0.62114,
+                "delta_m_plus": 0.10399,
+                "phi": 0.79807,
+                "swad": 0.08299
+            },
+            "l2_distance": 0.57798,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"co\u0441k\u200dta\u200bil shak\u0435r\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [480, 510, 730, 868], \"label\": \"co\u0441k\u200dta\u200bil shak\u0435r\"},\n\t{\"bbox_2d\": [100, 470, 450, 848], \"label\": \"co\u0441k\u200dta\u200bil shak\u0435r\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            480,
+                            510,
+                            730,
+                            868
+                        ],
+                        "label": "co\u0441k\u200dta\u200bil shak\u0435r"
+                    },
+                    {
+                        "bbox_2d": [
+                            100,
+                            470,
+                            450,
+                            848
+                        ],
+                        "label": "co\u0441k\u200dta\u200bil shak\u0435r"
+                    }
+                ],
+                "token_count": 94,
+                "raw_token_count": 98,
+                "runtime_seconds": 0.3142
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.21300761893764208,
+                "txt_attack": "synonym",
+                "txt_scale": 0.11490566325799068
+            },
+            "objectives": {
+                "iou": 0.62023,
+                "img_dist": 0.0534,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.62114,
+                "delta_m_plus": 0.00147,
+                "phi": 0.9466,
+                "swad": 0.00139
+            },
+            "l2_distance": 0.62252,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cocktail shaker\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [480, 508, 736, 870], \"label\": \"cocktail shaker\"},\n\t{\"bbox_2d\": [56, 473, 480, 860], \"label\": \"cocktail shaker\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            480,
+                            508,
+                            736,
+                            870
+                        ],
+                        "label": "cocktail shaker"
+                    },
+                    {
+                        "bbox_2d": [
+                            56,
+                            473,
+                            480,
+                            860
+                        ],
+                        "label": "cocktail shaker"
+                    }
+                ],
+                "token_count": 77,
+                "raw_token_count": 98,
+                "runtime_seconds": 0.3142
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.018595721213425453,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6130568625347235
+            },
+            "objectives": {
+                "iou": 0.62208,
+                "img_dist": 0.04236,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.62114,
+                "delta_m_plus": 0.0,
+                "phi": 0.95764,
+                "swad": 0.0
+            },
+            "l2_distance": 0.62352,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cocktail shaker\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [486, 500, 736, 875], \"label\": \"cocktail shaker\"},\n\t{\"bbox_2d\": [56, 473, 472, 867], \"label\": \"cocktail shaker\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            486,
+                            500,
+                            736,
+                            875
+                        ],
+                        "label": "cocktail shaker"
+                    },
+                    {
+                        "bbox_2d": [
+                            56,
+                            473,
+                            472,
+                            867
+                        ],
+                        "label": "cocktail shaker"
+                    }
+                ],
+                "token_count": 77,
+                "raw_token_count": 98,
+                "runtime_seconds": 0.3142
+            }
+        }
+    ]
+}

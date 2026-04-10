@@ -1,0 +1,355 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/single/multi/198",
+        "folder_id": "198",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00021982.JPEG"
+    },
+    "original_prompt": "Identify the objects \"turtle\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "turtle": {
+            "xmin": 27,
+            "ymin": 73,
+            "xmax": 916,
+            "ymax": 646
+        },
+        "turtle_1": {
+            "xmin": 151,
+            "ymin": 448,
+            "xmax": 958,
+            "ymax": 718
+        },
+        "turtle_2": {
+            "xmin": 0,
+            "ymin": 466,
+            "xmax": 181,
+            "ymax": 718
+        },
+        "turtle_3": {
+            "xmin": 304,
+            "ymin": 79,
+            "xmax": 796,
+            "ymax": 221
+        },
+        "turtle_4": {
+            "xmin": 716,
+            "ymin": 14,
+            "xmax": 958,
+            "ymax": 455
+        }
+    },
+    "baseline_iou": 0.81472,
+    "swad_star": 0.67778,
+    "swad_star_index": 5,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 6,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.8632061743184387,
+                "txt_attack": "synonym",
+                "txt_scale": 0.7724979474714236
+            },
+            "objectives": {
+                "iou": 0.22195,
+                "img_dist": 0.17717,
+                "txt_dist": 0.16684,
+                "txt_sim": 0.83316
+            },
+            "swad_metrics": {
+                "iou_0": 0.81472,
+                "delta_m_plus": 0.72758,
+                "phi": 0.68555,
+                "swad": 0.49879
+            },
+            "l2_distance": 0.32937,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"sea turtle\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [142, 107, 952, 670], \"label\": \"sea turtle\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            142,
+                            107,
+                            952,
+                            670
+                        ],
+                        "label": "sea turtle"
+                    }
+                ],
+                "token_count": 40,
+                "raw_token_count": 185,
+                "runtime_seconds": 0.6976
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8181617493544074,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.41721849968957336
+            },
+            "objectives": {
+                "iou": 0.54045,
+                "img_dist": 0.04227,
+                "txt_dist": 0.14709,
+                "txt_sim": 0.85291
+            },
+            "swad_metrics": {
+                "iou_0": 0.81472,
+                "delta_m_plus": 0.33664,
+                "phi": 0.81686,
+                "swad": 0.27499
+            },
+            "l2_distance": 0.5617,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"turtel\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [145, 217, 952, 870], \"label\": \"turtel\"},\n\t{\"bbox_2d\": [0, 620, 248, 1000], \"label\": \"turtel\"},\n\t{\"bbox_2d\": [288, 102, 817, 320], \"label\": \"turtel\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            145,
+                            217,
+                            952,
+                            870
+                        ],
+                        "label": "turtel"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            620,
+                            248,
+                            1000
+                        ],
+                        "label": "turtel"
+                    },
+                    {
+                        "bbox_2d": [
+                            288,
+                            102,
+                            817,
+                            320
+                        ],
+                        "label": "turtel"
+                    }
+                ],
+                "token_count": 110,
+                "raw_token_count": 185,
+                "runtime_seconds": 0.6976
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.3997956906557353,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.647636093318414
+            },
+            "objectives": {
+                "iou": 0.56929,
+                "img_dist": 0.02771,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.81472,
+                "delta_m_plus": 0.30124,
+                "phi": 0.97229,
+                "swad": 0.2929
+            },
+            "l2_distance": 0.56996,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"turtle\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 588, 240, 1000], \"label\": \"turtle\"},\n\t{\"bbox_2d\": [32, 105, 955, 890], \"label\": \"turtle\"},\n\t{\"bbox_2d\": [788, 10, 1000, 620], \"label\": \"turtle\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            588,
+                            240,
+                            1000
+                        ],
+                        "label": "turtle"
+                    },
+                    {
+                        "bbox_2d": [
+                            32,
+                            105,
+                            955,
+                            890
+                        ],
+                        "label": "turtle"
+                    },
+                    {
+                        "bbox_2d": [
+                            788,
+                            10,
+                            1000,
+                            620
+                        ],
+                        "label": "turtle"
+                    }
+                ],
+                "token_count": 103,
+                "raw_token_count": 185,
+                "runtime_seconds": 0.6976
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.71269,
+                "img_dist": 0.01756,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.81472,
+                "delta_m_plus": 0.12523,
+                "phi": 0.98244,
+                "swad": 0.12303
+            },
+            "l2_distance": 0.71291,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"turtle\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 595, 240, 1000], \"label\": \"turtle\"},\n\t{\"bbox_2d\": [32, 217, 954, 895], \"label\": \"turtle\"},\n\t{\"bbox_2d\": [312, 105, 817, 305], \"label\": \"turtle\"},\n\t{\"bbox_2d\": [788, 10, 1000, 620], \"label\": \"turtle\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            595,
+                            240,
+                            1000
+                        ],
+                        "label": "turtle"
+                    },
+                    {
+                        "bbox_2d": [
+                            32,
+                            217,
+                            954,
+                            895
+                        ],
+                        "label": "turtle"
+                    },
+                    {
+                        "bbox_2d": [
+                            312,
+                            105,
+                            817,
+                            305
+                        ],
+                        "label": "turtle"
+                    },
+                    {
+                        "bbox_2d": [
+                            788,
+                            10,
+                            1000,
+                            620
+                        ],
+                        "label": "turtle"
+                    }
+                ],
+                "token_count": 136,
+                "raw_token_count": 185,
+                "runtime_seconds": 0.6976
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.6126883641923373,
+                "txt_attack": "homophone",
+                "txt_scale": 0.10684452896191199
+            },
+            "objectives": {
+                "iou": 0.25538,
+                "img_dist": 0.03369,
+                "txt_dist": 0.28522,
+                "txt_sim": 0.71478
+            },
+            "swad_metrics": {
+                "iou_0": 0.81472,
+                "delta_m_plus": 0.68654,
+                "phi": 0.6907,
+                "swad": 0.47419
+            },
+            "l2_distance": 0.38432,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"turdl\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [144, 217, 952, 878], \"label\": \"turdl\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            144,
+                            217,
+                            952,
+                            878
+                        ],
+                        "label": "turdl"
+                    }
+                ],
+                "token_count": 40,
+                "raw_token_count": 185,
+                "runtime_seconds": 0.6976
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.5656671100314771,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.039875089079669634
+            },
+            "objectives": {
+                "iou": 0.228,
+                "img_dist": 0.05884,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.81472,
+                "delta_m_plus": 0.72015,
+                "phi": 0.94116,
+                "swad": 0.67778
+            },
+            "l2_distance": 0.23547,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"turtle\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [142, 104, 952, 688], \"label\": \"turtle\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            142,
+                            104,
+                            952,
+                            688
+                        ],
+                        "label": "turtle"
+                    }
+                ],
+                "token_count": 39,
+                "raw_token_count": 185,
+                "runtime_seconds": 0.6976
+            }
+        }
+    ]
+}

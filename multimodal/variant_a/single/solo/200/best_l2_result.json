@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/200",
+        "folder_id": "200",
+        "category": "single/solo",
+        "filename": "ILSVRC2013_val_00003582.JPEG"
+    },
+    "pareto_index": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.9651225101398473,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.2607682751785617
+    },
+    "objectives": {
+        "iou": 0.63164,
+        "img_dist": 0.06255,
+        "txt_dist": 0.11317,
+        "txt_sim": 0.88683
+    },
+    "swad_metrics": {
+        "iou_0": 0.91984,
+        "delta_m_plus": 0.31332,
+        "phi": 0.83136,
+        "swad": 0.26048
+    },
+    "l2_distance": 0.64474,
+    "original_prompt": "Identify the objects \"dragonfly\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dragonfly": {
+            "xmin": 115,
+            "ymin": 86,
+            "xmax": 438,
+            "ymax": 488
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"d\u200dr\u0430\u200dgon\u200dfly\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [272, 188, 912, 738], \"label\": \"d\u200dr\u0430\u200dgon\u200dfly\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    272,
+                    188,
+                    912,
+                    738
+                ],
+                "label": "d\u200dr\u0430\u200dgon\u200dfly"
+            }
+        ],
+        "token_count": 49,
+        "raw_token_count": 51,
+        "runtime_seconds": 0.216
+    }
+}

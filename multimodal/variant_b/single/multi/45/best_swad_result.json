@@ -1,0 +1,112 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/45",
+        "folder_id": "45",
+        "category": "single/multi",
+        "filename": "ILSVRC2013_val_00003242.JPEG"
+    },
+    "pareto_index": 15,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 4,
+    "total_evaluations": 105,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.424557,
+            "defocus_blur": 0.105107,
+            "motion_blur": 0.181789,
+            "fog_filter": 0.031512,
+            "pixelate": 0.134029,
+            "jpeg_filter": 0.080215
+        },
+        "text_corruptions": {
+            "homophone": 0.112422,
+            "synonym": 0.089558,
+            "ata_saliency": 0.202637,
+            "fragmentation": 0.015588,
+            "character_noise": 0.134177
+        },
+        "img_budget_used": 0.95721,
+        "txt_budget_used": 0.554382,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.08263,
+        "txt_dist": 0.26414,
+        "txt_sim": 0.73586
+    },
+    "swad_metrics": {
+        "iou_0": 0.65831,
+        "delta_m_plus": 1.0,
+        "phi": 0.67506,
+        "swad": 0.67506
+    },
+    "l2_distance": 0.27676,
+    "original_prompt": "Identify the objects \"pomegranate\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "pomegranate": {
+            "xmin": 148,
+            "ymin": 152,
+            "xmax": 187,
+            "ymax": 193
+        },
+        "pomegranate_1": {
+            "xmin": 152,
+            "ymin": 214,
+            "xmax": 462,
+            "ymax": 486
+        },
+        "pomegranate_2": {
+            "xmin": 11,
+            "ymin": 8,
+            "xmax": 302,
+            "ymax": 282
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"\u0440\u043eme\u200bgranat\u200de\u200b\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [18, 18, 604, 570], \"label\": \"\u0440\u043e\u043c\u0435\u200bgranat\u200d\u0435\u200b\"},\n\t{\"bbox_2d\": [304, 424, 928, 978], \"label\": \"\u0440\u043e\u043c\u0435\u200bgranat\u200d\u0435\u200b\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    18,
+                    18,
+                    604,
+                    570
+                ],
+                "label": "\u0440\u043e\u043c\u0435\u200bgranat\u200d\u0435\u200b"
+            },
+            {
+                "bbox_2d": [
+                    304,
+                    424,
+                    928,
+                    978
+                ],
+                "label": "\u0440\u043e\u043c\u0435\u200bgranat\u200d\u0435\u200b"
+            }
+        ],
+        "token_count": 84,
+        "raw_token_count": 101,
+        "runtime_seconds": 0.3269
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.4245570851697593,
+        "defocus_blur": 0.1051073571507995,
+        "motion_blur": 0.18178932791900965,
+        "fog_filter": 0.031511991603648426,
+        "pixelate": 0.13402945540819705,
+        "jpeg_filter": 0.08021489389093517
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.11242164133781124,
+        "synonym": 0.08955753540836056,
+        "ata_saliency": 0.20263735683686937,
+        "fragmentation": 0.015588273700701788,
+        "character_noise": 0.1341767669213647
+    }
+}

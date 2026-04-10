@@ -1,0 +1,112 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/76",
+        "folder_id": "76",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00003519.JPEG"
+    },
+    "pareto_index": 3,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.117114,
+            "defocus_blur": 0.019964,
+            "motion_blur": 0.022809,
+            "fog_filter": 0.011622,
+            "pixelate": 0.161057,
+            "jpeg_filter": 0.014015
+        },
+        "text_corruptions": {
+            "homophone": 0.007576,
+            "synonym": 0.023984,
+            "ata_saliency": 0.064707,
+            "fragmentation": 0.112427,
+            "character_noise": 0.091578
+        },
+        "img_budget_used": 0.346581,
+        "txt_budget_used": 0.300272,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.12866,
+        "txt_dist": 0.14974,
+        "txt_sim": 0.85026
+    },
+    "swad_metrics": {
+        "iou_0": 0.67881,
+        "delta_m_plus": 1.0,
+        "phi": 0.74087,
+        "swad": 0.74087
+    },
+    "l2_distance": 0.19742,
+    "original_prompt": "Identify the objects \"chair, sofa\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "sofa": {
+            "xmin": 81,
+            "ymin": 371,
+            "xmax": 143,
+            "ymax": 443
+        },
+        "chair": {
+            "xmin": 176,
+            "ymin": 301,
+            "xmax": 253,
+            "ymax": 436
+        },
+        "chair_1": {
+            "xmin": 77,
+            "ymin": 301,
+            "xmax": 157,
+            "ymax": 448
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"ch air, sofa\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [228, 607, 450, 877], \"label\": \"ch air, sofa\"},\n\t{\"bbox_2d\": [440, 607, 700, 877], \"label\": \"ch air, sofa\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    228,
+                    607,
+                    450,
+                    877
+                ],
+                "label": "ch air, sofa"
+            },
+            {
+                "bbox_2d": [
+                    440,
+                    607,
+                    700,
+                    877
+                ],
+                "label": "ch air, sofa"
+            }
+        ],
+        "token_count": 78,
+        "raw_token_count": 154,
+        "runtime_seconds": 0.5193
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.1171140170569786,
+        "defocus_blur": 0.019963531242565023,
+        "motion_blur": 0.02280868272163173,
+        "fog_filter": 0.011622164496413196,
+        "pixelate": 0.1610572785174376,
+        "jpeg_filter": 0.014014880949325686
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.007575618131266421,
+        "synonym": 0.023984178071465884,
+        "ata_saliency": 0.06470691764291815,
+        "fragmentation": 0.11242727567409286,
+        "character_noise": 0.09157757546454362
+    }
+}

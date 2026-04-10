@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/80",
+        "folder_id": "80",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00000657.JPEG"
+    },
+    "pareto_index": 12,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 60,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.011459384852496202,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.7876409003542485
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.02295,
+        "txt_dist": 0.26899,
+        "txt_sim": 0.73101
+    },
+    "swad_metrics": {
+        "iou_0": 0.94771,
+        "delta_m_plus": 1.0,
+        "phi": 0.71423,
+        "swad": 0.71423
+    },
+    "l2_distance": 0.26997,
+    "original_prompt": "Identify the objects \"cup or mug, lemon\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "cup or mug": {
+            "xmin": 88,
+            "ymin": 16,
+            "xmax": 485,
+            "ymax": 388
+        },
+        "lemon": {
+            "xmin": 26,
+            "ymin": 207,
+            "xmax": 162,
+            "ymax": 363
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"cop or mgu, lemin\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [44, 418, 333, 745], \"label\": \"cop or mgu, lemin\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    44,
+                    418,
+                    333,
+                    745
+                ],
+                "label": "cop or mgu, lemin"
+            }
+        ],
+        "token_count": 44,
+        "raw_token_count": 92,
+        "runtime_seconds": 0.3324
+    }
+}

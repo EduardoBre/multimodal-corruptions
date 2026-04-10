@@ -1,0 +1,112 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/130",
+        "folder_id": "130",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00019756.JPEG"
+    },
+    "pareto_index": 0,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.046536,
+            "defocus_blur": 0.257364,
+            "motion_blur": 0.044129,
+            "fog_filter": 0.167158,
+            "pixelate": 0.035963,
+            "jpeg_filter": 0.113791
+        },
+        "text_corruptions": {
+            "homophone": 0.073056,
+            "synonym": 0.101383,
+            "ata_saliency": 0.042998,
+            "fragmentation": 0.186334,
+            "character_noise": 0.024986
+        },
+        "img_budget_used": 0.664942,
+        "txt_budget_used": 0.428756,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.11687,
+        "txt_dist": 0.26376,
+        "txt_sim": 0.73624
+    },
+    "swad_metrics": {
+        "iou_0": 0.96083,
+        "delta_m_plus": 1.0,
+        "phi": 0.6502,
+        "swad": 0.6502
+    },
+    "l2_distance": 0.28849,
+    "original_prompt": "Identify the objects \"maraca, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 34,
+            "ymin": 29,
+            "xmax": 336,
+            "ymax": 504
+        },
+        "maraca": {
+            "xmin": 86,
+            "ymin": 251,
+            "xmax": 183,
+            "ymax": 406
+        },
+        "maraca_1": {
+            "xmin": 224,
+            "ymin": 335,
+            "xmax": 335,
+            "ymax": 402
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"ma\u200braca, pbr s\u043en\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [258, 500, 540, 792], \"label\": \"ma\u200braca, pbr s\u043en\"},\n\t{\"bbox_2d\": [666, 666, 992, 792], \"label\": \"ma\u200braca, pbr s\u043en\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    258,
+                    500,
+                    540,
+                    792
+                ],
+                "label": "ma\u200braca, pbr s\u043en"
+            },
+            {
+                "bbox_2d": [
+                    666,
+                    666,
+                    992,
+                    792
+                ],
+                "label": "ma\u200braca, pbr s\u043en"
+            }
+        ],
+        "token_count": 90,
+        "raw_token_count": 122,
+        "runtime_seconds": 0.4037
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0465363458570066,
+        "defocus_blur": 0.2573644197051052,
+        "motion_blur": 0.04412857472307388,
+        "fog_filter": 0.16715816465057123,
+        "pixelate": 0.03596332851473569,
+        "jpeg_filter": 0.1137913848016317
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.07305563698812914,
+        "synonym": 0.10138344648165257,
+        "ata_saliency": 0.042997784726218485,
+        "fragmentation": 0.1863339802289554,
+        "character_noise": 0.02498554554980427
+    }
+}

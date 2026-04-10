@@ -1,0 +1,79 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/228",
+        "folder_id": "228",
+        "category": "single/multi",
+        "filename": "ILSVRC2013_val_00003328.JPEG"
+    },
+    "pareto_index": 16,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 60,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.03732619454213726,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.33647038540361596
+    },
+    "objectives": {
+        "iou": 0.2885,
+        "img_dist": 0.02555,
+        "txt_dist": 0.24715,
+        "txt_sim": 0.75285
+    },
+    "swad_metrics": {
+        "iou_0": 0.87996,
+        "delta_m_plus": 0.67214,
+        "phi": 0.73361,
+        "swad": 0.49309
+    },
+    "l2_distance": 0.38075,
+    "original_prompt": "Identify the objects \"goldfish\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "goldfish": {
+            "xmin": 12,
+            "ymin": 182,
+            "xmax": 286,
+            "ymax": 331
+        },
+        "goldfish_1": {
+            "xmin": 332,
+            "ymin": 0,
+            "xmax": 499,
+            "ymax": 132
+        },
+        "goldfish_2": {
+            "xmin": 89,
+            "ymin": 2,
+            "xmax": 259,
+            "ymax": 188
+        },
+        "goldfish_3": {
+            "xmin": 308,
+            "ymin": 54,
+            "xmax": 417,
+            "ymax": 251
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"golduish\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [655, 0, 999, 399], \"label\": \"golduish\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    655,
+                    0,
+                    999,
+                    399
+                ],
+                "label": "golduish"
+            }
+        ],
+        "token_count": 38,
+        "raw_token_count": 203,
+        "runtime_seconds": 0.6907
+    }
+}

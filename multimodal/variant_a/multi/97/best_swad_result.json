@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/97",
+        "folder_id": "97",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00046449.JPEG"
+    },
+    "pareto_index": 10,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.9316177058680379,
+        "txt_attack": "homophone",
+        "txt_scale": 0.9948250792623392
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.0474,
+        "txt_dist": 0.22416,
+        "txt_sim": 0.77584
+    },
+    "swad_metrics": {
+        "iou_0": 0.97657,
+        "delta_m_plus": 1.0,
+        "phi": 0.73907,
+        "swad": 0.73907
+    },
+    "l2_distance": 0.22912,
+    "original_prompt": "Identify the objects \"bathing cap, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 87,
+            "ymin": 59,
+            "xmax": 450,
+            "ymax": 374
+        },
+        "bathing cap": {
+            "xmin": 106,
+            "ymin": 61,
+            "xmax": 336,
+            "ymax": 253
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bathing kap, per son\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [222, 148, 678, 998], \"label\": \"bathing kap, per son\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    222,
+                    148,
+                    678,
+                    998
+                ],
+                "label": "bathing kap, per son"
+            }
+        ],
+        "token_count": 44,
+        "raw_token_count": 133,
+        "runtime_seconds": 0.4667
+    }
+}

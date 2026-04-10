@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/37",
+        "folder_id": "37",
+        "category": "single/multi",
+        "filename": "ILSVRC2013_val_00003398.JPEG"
+    },
+    "pareto_index": 7,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "gaussian_noise",
+        "img_scale": 0.08142031165696761,
+        "txt_attack": "homophone",
+        "txt_scale": 0.2228478256331735
+    },
+    "objectives": {
+        "iou": 0.06877,
+        "img_dist": 0.03976,
+        "txt_dist": 0.26748,
+        "txt_sim": 0.73252
+    },
+    "swad_metrics": {
+        "iou_0": 0.694,
+        "delta_m_plus": 0.90091,
+        "phi": 0.7034,
+        "swad": 0.63369
+    },
+    "l2_distance": 0.27903,
+    "original_prompt": "Identify the objects \"crutch\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "crutch": {
+            "xmin": 94,
+            "ymin": 72,
+            "xmax": 185,
+            "ymax": 399
+        },
+        "crutch_1": {
+            "xmin": 117,
+            "ymin": 84,
+            "xmax": 251,
+            "ymax": 399
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"clutch\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [190, 184, 407, 264], \"label\": \"clutch\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    190,
+                    184,
+                    407,
+                    264
+                ],
+                "label": "clutch"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 75,
+        "runtime_seconds": 0.3057
+    }
+}

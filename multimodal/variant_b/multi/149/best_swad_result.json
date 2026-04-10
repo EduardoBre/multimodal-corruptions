@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/149",
+        "folder_id": "149",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00025423.JPEG"
+    },
+    "pareto_index": 4,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 6,
+    "total_evaluations": 165,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.050442,
+            "defocus_blur": 0.114294,
+            "motion_blur": 0.134881,
+            "fog_filter": 0.165327,
+            "pixelate": 0.151952,
+            "jpeg_filter": 0.041492
+        },
+        "text_corruptions": {
+            "homophone": 0.541428,
+            "synonym": 0.007398,
+            "ata_saliency": 0.136923,
+            "fragmentation": 0.061096,
+            "character_noise": 0.113412
+        },
+        "img_budget_used": 0.658388,
+        "txt_budget_used": 0.860257,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.12775,
+        "txt_dist": 0.14458,
+        "txt_sim": 0.85542
+    },
+    "swad_metrics": {
+        "iou_0": 0.97087,
+        "delta_m_plus": 1.0,
+        "phi": 0.74614,
+        "swad": 0.74614
+    },
+    "l2_distance": 0.19293,
+    "original_prompt": "Identify the objects \"dog, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 1,
+            "ymin": 5,
+            "xmax": 270,
+            "ymax": 374
+        },
+        "dog": {
+            "xmin": 213,
+            "ymin": 97,
+            "xmax": 499,
+            "ymax": 374
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"doug, person\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 10, 552, 998], \"label\": \"doug, person\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    10,
+                    552,
+                    998
+                ],
+                "label": "doug, person"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 98,
+        "runtime_seconds": 0.3025
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.050441806225664576,
+        "defocus_blur": 0.11429433378274237,
+        "motion_blur": 0.13488135558424172,
+        "fog_filter": 0.16532664291781748,
+        "pixelate": 0.15195180677769107,
+        "jpeg_filter": 0.041491705533955314
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.5414281732320879,
+        "synonym": 0.007397540540368274,
+        "ata_saliency": 0.13692310052130255,
+        "fragmentation": 0.06109604691827683,
+        "character_noise": 0.11341204125601732
+    }
+}

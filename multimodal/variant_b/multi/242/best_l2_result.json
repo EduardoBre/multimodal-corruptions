@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/242",
+        "folder_id": "242",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00049750.JPEG"
+    },
+    "pareto_index": 14,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 8,
+    "total_evaluations": 240,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.081868,
+            "defocus_blur": 0.077896,
+            "motion_blur": 0.239666,
+            "fog_filter": 0.093624,
+            "pixelate": 0.073454,
+            "jpeg_filter": 0.114803
+        },
+        "text_corruptions": {
+            "homophone": 0.281723,
+            "synonym": 0.163023,
+            "ata_saliency": 0.218357,
+            "fragmentation": 0.296462,
+            "character_noise": 0.040435
+        },
+        "img_budget_used": 0.681311,
+        "txt_budget_used": 1.0,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.1051,
+        "txt_dist": 0.26373,
+        "txt_sim": 0.73627
+    },
+    "swad_metrics": {
+        "iou_0": 0.77278,
+        "delta_m_plus": 1.0,
+        "phi": 0.65889,
+        "swad": 0.65889
+    },
+    "l2_distance": 0.2839,
+    "original_prompt": "Identify the objects \"bicycle, helmet, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 98,
+            "ymin": 32,
+            "xmax": 289,
+            "ymax": 425
+        },
+        "bicycle": {
+            "xmin": 117,
+            "ymin": 218,
+            "xmax": 274,
+            "ymax": 497
+        },
+        "helmet": {
+            "xmin": 140,
+            "ymin": 31,
+            "xmax": 205,
+            "ymax": 112
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"by cycel, hemle t, purs e on\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [328, 438, 758, 990], \"label\": \"by cycel, hemle t, purs e on\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    328,
+                    438,
+                    758,
+                    990
+                ],
+                "label": "by cycel, hemle t, purs e on"
+            }
+        ],
+        "token_count": 49,
+        "raw_token_count": 123,
+        "runtime_seconds": 0.4179
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.08186820191785461,
+        "defocus_blur": 0.07789573168108675,
+        "motion_blur": 0.23966605082485412,
+        "fog_filter": 0.09362409671088874,
+        "pixelate": 0.07345406276847405,
+        "jpeg_filter": 0.11480274701801813
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.2817228640666999,
+        "synonym": 0.16302292921294956,
+        "ata_saliency": 0.21835702935591966,
+        "fragmentation": 0.2964619213365865,
+        "character_noise": 0.04043525602784446
+    }
+}

@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/225",
+        "folder_id": "225",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00028222.JPEG"
+    },
+    "pareto_index": 5,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.8069258049227522,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.9599945395327983
+    },
+    "objectives": {
+        "iou": 0.04421,
+        "img_dist": 0.06859,
+        "txt_dist": 0.30096,
+        "txt_sim": 0.69904
+    },
+    "swad_metrics": {
+        "iou_0": 0.97745,
+        "delta_m_plus": 0.95477,
+        "phi": 0.65109,
+        "swad": 0.62164
+    },
+    "l2_distance": 0.31183,
+    "original_prompt": "Identify the objects \"bear\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bear": {
+            "xmin": 270,
+            "ymin": 133,
+            "xmax": 499,
+            "ymax": 374
+        },
+        "bear_1": {
+            "xmin": 0,
+            "ymin": 79,
+            "xmax": 354,
+            "ymax": 373
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bevr\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [838, 327, 1000, 520], \"label\": \"bevr\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    838,
+                    327,
+                    1000,
+                    520
+                ],
+                "label": "bevr"
+            }
+        ],
+        "token_count": 41,
+        "raw_token_count": 76,
+        "runtime_seconds": 0.2557
+    }
+}

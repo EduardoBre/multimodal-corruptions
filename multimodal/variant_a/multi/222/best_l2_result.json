@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/222",
+        "folder_id": "222",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00038289.JPEG"
+    },
+    "pareto_index": 7,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "gaussian_noise",
+        "img_scale": 0.9034372814783611,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.6482806000476753
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.17407,
+        "txt_dist": 0.31287,
+        "txt_sim": 0.68713
+    },
+    "swad_metrics": {
+        "iou_0": 0.76075,
+        "delta_m_plus": 1.0,
+        "phi": 0.56752,
+        "swad": 0.56752
+    },
+    "l2_distance": 0.35803,
+    "original_prompt": "Identify the objects \"brassiere, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 0,
+            "ymin": 20,
+            "xmax": 337,
+            "ymax": 575
+        },
+        "brassiere": {
+            "xmin": 97,
+            "ymin": 239,
+            "xmax": 317,
+            "ymax": 448
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"br\u200b\u0430\u200dss\u200b\u0456\u200d\u0435r\u200b\u0435, \u0440\u200be\u200brs\u200d\u043e\u200dn\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 40, 722, 1000], \"label\": \"br\u200b\u0430\u200dss\u200b\u0456\u200d\u0435r\u200b\u0435, \u0440\u200be\u200brs\u200d\u043e\u200dn\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    40,
+                    722,
+                    1000
+                ],
+                "label": "br\u200b\u0430\u200dss\u200b\u0456\u200d\u0435r\u200b\u0435, \u0440\u200be\u200brs\u200d\u043e\u200dn"
+            }
+        ],
+        "token_count": 62,
+        "raw_token_count": 96,
+        "runtime_seconds": 0.349
+    }
+}

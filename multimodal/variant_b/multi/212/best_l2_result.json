@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/212",
+        "folder_id": "212",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00048581.JPEG"
+    },
+    "pareto_index": 1,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.292711,
+            "defocus_blur": 0.085746,
+            "motion_blur": 0.045747,
+            "fog_filter": 0.148106,
+            "pixelate": 0.034956,
+            "jpeg_filter": 0.269044
+        },
+        "text_corruptions": {
+            "homophone": 0.158579,
+            "synonym": 0.221383,
+            "ata_saliency": 0.026083,
+            "fragmentation": 0.296311,
+            "character_noise": 0.241435
+        },
+        "img_budget_used": 0.87631,
+        "txt_budget_used": 0.943791,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.0982,
+        "txt_dist": 0.19351,
+        "txt_sim": 0.80649
+    },
+    "swad_metrics": {
+        "iou_0": 0.9577,
+        "delta_m_plus": 1.0,
+        "phi": 0.72729,
+        "swad": 0.72729
+    },
+    "l2_distance": 0.217,
+    "original_prompt": "Identify the objects \"person, skunk\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 0,
+            "ymin": 46,
+            "xmax": 304,
+            "ymax": 374
+        },
+        "skunk": {
+            "xmin": 179,
+            "ymin": 87,
+            "xmax": 499,
+            "ymax": 332
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"pe\u200br\u200b s\u043ek , skunk\u200d\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [355, 238, 999, 872], \"label\": \"pe\u200br\u200b s\u043ek , skunk\u200d\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    355,
+                    238,
+                    999,
+                    872
+                ],
+                "label": "pe\u200br\u200b s\u043ek , skunk\u200d"
+            }
+        ],
+        "token_count": 50,
+        "raw_token_count": 92,
+        "runtime_seconds": 0.2832
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.29271124586358016,
+        "defocus_blur": 0.08574567090127069,
+        "motion_blur": 0.045746791183508086,
+        "fog_filter": 0.14810598102405426,
+        "pixelate": 0.034956022480165765,
+        "jpeg_filter": 0.2690438933471061
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.15857934913499538,
+        "synonym": 0.22138252561438637,
+        "ata_saliency": 0.026082799975321765,
+        "fragmentation": 0.2963114040384497,
+        "character_noise": 0.24143510504061003
+    }
+}

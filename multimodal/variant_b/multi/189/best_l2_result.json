@@ -1,0 +1,106 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/189",
+        "folder_id": "189",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00003464.JPEG"
+    },
+    "pareto_index": 6,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.090675,
+            "defocus_blur": 0.200752,
+            "motion_blur": 0.007452,
+            "fog_filter": 0.023627,
+            "pixelate": 0.064063,
+            "jpeg_filter": 0.119134
+        },
+        "text_corruptions": {
+            "homophone": 0.002954,
+            "synonym": 0.059183,
+            "ata_saliency": 0.041134,
+            "fragmentation": 0.093915,
+            "character_noise": 0.018573
+        },
+        "img_budget_used": 0.505703,
+        "txt_budget_used": 0.215759,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.05494,
+        "img_dist": 0.05403,
+        "txt_dist": 0.29672,
+        "txt_sim": 0.70328
+    },
+    "swad_metrics": {
+        "iou_0": 0.93434,
+        "delta_m_plus": 0.9412,
+        "phi": 0.66528,
+        "swad": 0.62616
+    },
+    "l2_distance": 0.30656,
+    "original_prompt": "Identify the objects \"person, tiger\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 0,
+            "ymin": 119,
+            "xmax": 95,
+            "ymax": 222
+        },
+        "tiger": {
+            "xmin": 203,
+            "ymin": 237,
+            "xmax": 375,
+            "ymax": 453
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"pers on, ti\u0441er\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [178, 262, 262, 348], \"label\": \"pers on\"},\n\t{\"bbox_2d\": [566, 378, 606, 430], \"label\": \"ti\u0441er\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    178,
+                    262,
+                    262,
+                    348
+                ],
+                "label": "pers on"
+            },
+            {
+                "bbox_2d": [
+                    566,
+                    378,
+                    606,
+                    430
+                ],
+                "label": "ti\u0441er"
+            }
+        ],
+        "token_count": 75,
+        "raw_token_count": 88,
+        "runtime_seconds": 0.265
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.09067495543995194,
+        "defocus_blur": 0.20075194706498845,
+        "motion_blur": 0.007451632339453969,
+        "fog_filter": 0.02362693425987425,
+        "pixelate": 0.06406328376909341,
+        "jpeg_filter": 0.11913393341725967
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.0029537149101735343,
+        "synonym": 0.0591828487097373,
+        "ata_saliency": 0.041134485839347285,
+        "fragmentation": 0.09391523458216888,
+        "character_noise": 0.018573067381412532
+    }
+}

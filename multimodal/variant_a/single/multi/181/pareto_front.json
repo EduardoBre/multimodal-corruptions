@@ -1,0 +1,379 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/single/multi/181",
+        "folder_id": "181",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00028624.JPEG"
+    },
+    "original_prompt": "Identify the objects \"pretzel\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "pretzel": {
+            "xmin": 28,
+            "ymin": 192,
+            "xmax": 338,
+            "ymax": 374
+        },
+        "pretzel_1": {
+            "xmin": 299,
+            "ymin": 38,
+            "xmax": 499,
+            "ymax": 337
+        },
+        "pretzel_2": {
+            "xmin": 214,
+            "ymin": 1,
+            "xmax": 434,
+            "ymax": 133
+        },
+        "pretzel_3": {
+            "xmin": 0,
+            "ymin": 20,
+            "xmax": 199,
+            "ymax": 201
+        },
+        "pretzel_4": {
+            "xmin": 165,
+            "ymin": 109,
+            "xmax": 308,
+            "ymax": 232
+        },
+        "pretzel_5": {
+            "xmin": 9,
+            "ymin": 165,
+            "xmax": 180,
+            "ymax": 373
+        }
+    },
+    "baseline_iou": 0.8276,
+    "swad_star": 0.70666,
+    "swad_star_index": 0,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 6,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8181617493544074,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.41721849968957336
+            },
+            "objectives": {
+                "iou": 0.20897,
+                "img_dist": 0.05464,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.8276,
+                "delta_m_plus": 0.7475,
+                "phi": 0.94536,
+                "swad": 0.70666
+            },
+            "l2_distance": 0.216,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"pretzel\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 1000, 997], \"label\": \"pretzel\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            997
+                        ],
+                        "label": "pretzel"
+                    }
+                ],
+                "token_count": 37,
+                "raw_token_count": 208,
+                "runtime_seconds": 0.7058
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.018153363333776373,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.24927259019092207
+            },
+            "objectives": {
+                "iou": 0.20839,
+                "img_dist": 0.03649,
+                "txt_dist": 0.08644,
+                "txt_sim": 0.91356
+            },
+            "swad_metrics": {
+                "iou_0": 0.8276,
+                "delta_m_plus": 0.7482,
+                "phi": 0.88022,
+                "swad": 0.65858
+            },
+            "l2_distance": 0.22854,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"pretze\u200bl\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 1000, 1000], \"label\": \"pretze\u200bl\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            1000
+                        ],
+                        "label": "pretze\u200bl"
+                    }
+                ],
+                "token_count": 40,
+                "raw_token_count": 208,
+                "runtime_seconds": 0.7058
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.82202,
+                "img_dist": 0.02945,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.8276,
+                "delta_m_plus": 0.00674,
+                "phi": 0.97055,
+                "swad": 0.00654
+            },
+            "l2_distance": 0.82255,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"pretzel\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 48, 407, 552], \"label\": \"pretzel\"},\n\t{\"bbox_2d\": [427, 0, 730, 348], \"label\": \"pretzel\"},\n\t{\"bbox_2d\": [603, 128, 1000, 896], \"label\": \"pretzel\"},\n\t{\"bbox_2d\": [32, 512, 677, 989], \"label\": \"pretzel\"},\n\t{\"bbox_2d\": [330, 296, 615, 620], \"label\": \"pretzel\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            48,
+                            407,
+                            552
+                        ],
+                        "label": "pretzel"
+                    },
+                    {
+                        "bbox_2d": [
+                            427,
+                            0,
+                            730,
+                            348
+                        ],
+                        "label": "pretzel"
+                    },
+                    {
+                        "bbox_2d": [
+                            603,
+                            128,
+                            1000,
+                            896
+                        ],
+                        "label": "pretzel"
+                    },
+                    {
+                        "bbox_2d": [
+                            32,
+                            512,
+                            677,
+                            989
+                        ],
+                        "label": "pretzel"
+                    },
+                    {
+                        "bbox_2d": [
+                            330,
+                            296,
+                            615,
+                            620
+                        ],
+                        "label": "pretzel"
+                    }
+                ],
+                "token_count": 171,
+                "raw_token_count": 208,
+                "runtime_seconds": 0.7058
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.5656671100314771,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.039875089079669634
+            },
+            "objectives": {
+                "iou": 0.20839,
+                "img_dist": 0.05839,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.8276,
+                "delta_m_plus": 0.7482,
+                "phi": 0.94161,
+                "swad": 0.70451
+            },
+            "l2_distance": 0.21642,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"pretzel\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 1000, 1000], \"label\": \"pretzel\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            1000
+                        ],
+                        "label": "pretzel"
+                    }
+                ],
+                "token_count": 38,
+                "raw_token_count": 208,
+                "runtime_seconds": 0.7058
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.307337327911573,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.76586,
+                "img_dist": 0.04242,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.8276,
+                "delta_m_plus": 0.0746,
+                "phi": 0.95758,
+                "swad": 0.07144
+            },
+            "l2_distance": 0.76703,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"pretzel\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 30, 400, 550], \"label\": \"pretzel\"},\n\t{\"bbox_2d\": [420, 0, 720, 338], \"label\": \"pretzel\"},\n\t{\"bbox_2d\": [606, 112, 1000, 900], \"label\": \"pretzel\"},\n\t{\"bbox_2d\": [28, 508, 672, 1000], \"label\": \"pretzel\"},\n\t{\"bbox_2d\": [350, 296, 580, 576], \"label\": \"pretzel\"},\n\t{\"bbox_2d\": [660, 112, 1000, 596], \"label\": \"pretzel\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            30,
+                            400,
+                            550
+                        ],
+                        "label": "pretzel"
+                    },
+                    {
+                        "bbox_2d": [
+                            420,
+                            0,
+                            720,
+                            338
+                        ],
+                        "label": "pretzel"
+                    },
+                    {
+                        "bbox_2d": [
+                            606,
+                            112,
+                            1000,
+                            900
+                        ],
+                        "label": "pretzel"
+                    },
+                    {
+                        "bbox_2d": [
+                            28,
+                            508,
+                            672,
+                            1000
+                        ],
+                        "label": "pretzel"
+                    },
+                    {
+                        "bbox_2d": [
+                            350,
+                            296,
+                            580,
+                            576
+                        ],
+                        "label": "pretzel"
+                    },
+                    {
+                        "bbox_2d": [
+                            660,
+                            112,
+                            1000,
+                            596
+                        ],
+                        "label": "pretzel"
+                    }
+                ],
+                "token_count": 207,
+                "raw_token_count": 208,
+                "runtime_seconds": 0.7058
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.018595721213425453,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6130568625347235
+            },
+            "objectives": {
+                "iou": 0.21541,
+                "img_dist": 0.03127,
+                "txt_dist": 0.15907,
+                "txt_sim": 0.84093
+            },
+            "swad_metrics": {
+                "iou_0": 0.8276,
+                "delta_m_plus": 0.73972,
+                "phi": 0.81463,
+                "swad": 0.6026
+            },
+            "l2_distance": 0.2696,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"prctzel\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 47, 1000, 997], \"label\": \"prctzel\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            47,
+                            1000,
+                            997
+                        ],
+                        "label": "prctzel"
+                    }
+                ],
+                "token_count": 39,
+                "raw_token_count": 208,
+                "runtime_seconds": 0.7058
+            }
+        }
+    ]
+}

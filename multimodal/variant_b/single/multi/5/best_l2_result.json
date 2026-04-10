@@ -1,0 +1,106 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/5",
+        "folder_id": "5",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00026426.JPEG"
+    },
+    "pareto_index": 20,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.101706,
+            "defocus_blur": 0.079943,
+            "motion_blur": 0.011396,
+            "fog_filter": 0.10828,
+            "pixelate": 0.009933,
+            "jpeg_filter": 0.010614
+        },
+        "text_corruptions": {
+            "homophone": 0.220939,
+            "synonym": 0.055585,
+            "ata_saliency": 0.080807,
+            "fragmentation": 0.153422,
+            "character_noise": 0.265889
+        },
+        "img_budget_used": 0.321872,
+        "txt_budget_used": 0.776642,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.08049,
+        "txt_dist": 0.40612,
+        "txt_sim": 0.59388
+    },
+    "swad_metrics": {
+        "iou_0": 0.92354,
+        "delta_m_plus": 1.0,
+        "phi": 0.54608,
+        "swad": 0.54608
+    },
+    "l2_distance": 0.41402,
+    "original_prompt": "Identify the objects \"dog\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 194,
+            "ymin": 119,
+            "xmax": 498,
+            "ymax": 401
+        },
+        "dog_1": {
+            "xmin": 0,
+            "ymin": 80,
+            "xmax": 259,
+            "ymax": 401
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"\u0441\u200b\u0430\u200bn\u200bine\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 208, 508, 998], \"label\": \"\u0441\u200b\u0430\u200b\u043d\u200b\u0438\u200b\u043d\u200b\u0435\"},\n\t{\"bbox_2d\": [382, 358, 1000, 998], \"label\": \"\u0441\u200b\u0430\u200b\u043d\u200b\u0438\u200b\u043d\u200b\u0435\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    208,
+                    508,
+                    998
+                ],
+                "label": "\u0441\u200b\u0430\u200b\u043d\u200b\u0438\u200b\u043d\u200b\u0435"
+            },
+            {
+                "bbox_2d": [
+                    382,
+                    358,
+                    1000,
+                    998
+                ],
+                "label": "\u0441\u200b\u0430\u200b\u043d\u200b\u0438\u200b\u043d\u200b\u0435"
+            }
+        ],
+        "token_count": 91,
+        "raw_token_count": 92,
+        "runtime_seconds": 0.3089
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.1017062428227664,
+        "defocus_blur": 0.07994269456330005,
+        "motion_blur": 0.011395665665829849,
+        "fog_filter": 0.10828027204604364,
+        "pixelate": 0.009932800540480517,
+        "jpeg_filter": 0.010613870959016183
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.22093895473481928,
+        "synonym": 0.05558488260207886,
+        "ata_saliency": 0.08080673019399186,
+        "fragmentation": 0.15342234270096725,
+        "character_noise": 0.2658892013884968
+    }
+}

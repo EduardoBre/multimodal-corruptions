@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/92",
+        "folder_id": "92",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00003777.JPEG"
+    },
+    "pareto_index": 9,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.863144940280058,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6678992108124702
+    },
+    "objectives": {
+        "iou": 0.33023,
+        "img_dist": 0.07438,
+        "txt_dist": 0.15628,
+        "txt_sim": 0.84372
+    },
+    "swad_metrics": {
+        "iou_0": 0.66558,
+        "delta_m_plus": 0.50385,
+        "phi": 0.78096,
+        "swad": 0.39349
+    },
+    "l2_distance": 0.37284,
+    "original_prompt": "Identify the objects \"bowl, person, stove\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 78,
+            "ymin": 28,
+            "xmax": 280,
+            "ymax": 292
+        },
+        "bowl": {
+            "xmin": 208,
+            "ymin": 287,
+            "xmax": 294,
+            "ymax": 318
+        },
+        "stove": {
+            "xmin": 189,
+            "ymin": 90,
+            "xmax": 253,
+            "ymax": 167
+        },
+        "bowl_1": {
+            "xmin": 134,
+            "ymin": 283,
+            "xmax": 218,
+            "ymax": 313
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"boll, per son, stove\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [520, 880, 650, 960], \"label\": \"boll\"},\n\t{\"bbox_2d\": [148, 88, 556, 850], \"label\": \"per son\"},\n\t{\"bbox_2d\": [40, 700, 1000, 999], \"label\": \"stove\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    520,
+                    880,
+                    650,
+                    960
+                ],
+                "label": "boll"
+            },
+            {
+                "bbox_2d": [
+                    148,
+                    88,
+                    556,
+                    850
+                ],
+                "label": "per son"
+            },
+            {
+                "bbox_2d": [
+                    40,
+                    700,
+                    1000,
+                    999
+                ],
+                "label": "stove"
+            }
+        ],
+        "token_count": 107,
+        "raw_token_count": 184,
+        "runtime_seconds": 0.575
+    }
+}

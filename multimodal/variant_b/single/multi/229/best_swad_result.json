@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/229",
+        "folder_id": "229",
+        "category": "single/multi",
+        "filename": "ILSVRC2013_val_00001071.JPEG"
+    },
+    "pareto_index": 6,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.086323,
+            "defocus_blur": 0.026241,
+            "motion_blur": 0.073009,
+            "fog_filter": 0.012036,
+            "pixelate": 0.043318,
+            "jpeg_filter": 0.2342
+        },
+        "text_corruptions": {
+            "homophone": 0.016221,
+            "synonym": 0.011302,
+            "ata_saliency": 0.411185,
+            "fragmentation": 0.253446,
+            "character_noise": 0.250804
+        },
+        "img_budget_used": 0.475127,
+        "txt_budget_used": 0.942959,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.11189,
+        "txt_dist": 0.17754,
+        "txt_sim": 0.82246
+    },
+    "swad_metrics": {
+        "iou_0": 0.85286,
+        "delta_m_plus": 1.0,
+        "phi": 0.73043,
+        "swad": 0.73043
+    },
+    "l2_distance": 0.20986,
+    "original_prompt": "Identify the objects \"person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 133,
+            "ymin": 156,
+            "xmax": 215,
+            "ymax": 330
+        },
+        "person_1": {
+            "xmin": 250,
+            "ymin": 189,
+            "xmax": 311,
+            "ymax": 317
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"\u0440er\u200dson\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [32, 500, 183, 570], \"label\": \"\u0440er\u200dson\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    32,
+                    500,
+                    183,
+                    570
+                ],
+                "label": "\u0440er\u200dson"
+            }
+        ],
+        "token_count": 42,
+        "raw_token_count": 83,
+        "runtime_seconds": 0.2708
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.08632289723133259,
+        "defocus_blur": 0.026240916311840033,
+        "motion_blur": 0.07300941238471197,
+        "fog_filter": 0.01203593198638234,
+        "pixelate": 0.04331787076653742,
+        "jpeg_filter": 0.23419968583688636
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.016221245778790586,
+        "synonym": 0.011302150770053216,
+        "ata_saliency": 0.4111854677720061,
+        "fragmentation": 0.2534463575622991,
+        "character_noise": 0.25080361414857194
+    }
+}

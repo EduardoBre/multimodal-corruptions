@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/202",
+        "folder_id": "202",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00013517.JPEG"
+    },
+    "pareto_index": 6,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.106948,
+            "defocus_blur": 0.0178,
+            "motion_blur": 0.050591,
+            "fog_filter": 0.059865,
+            "pixelate": 0.066236,
+            "jpeg_filter": 0.677333
+        },
+        "text_corruptions": {
+            "homophone": 0.074074,
+            "synonym": 0.095443,
+            "ata_saliency": 0.140855,
+            "fragmentation": 0.013324,
+            "character_noise": 0.036585
+        },
+        "img_budget_used": 0.978774,
+        "txt_budget_used": 0.360281,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.12423,
+        "txt_dist": 0.38506,
+        "txt_sim": 0.61494
+    },
+    "swad_metrics": {
+        "iou_0": 0.90153,
+        "delta_m_plus": 1.0,
+        "phi": 0.53855,
+        "swad": 0.53855
+    },
+    "l2_distance": 0.4046,
+    "original_prompt": "Identify the objects \"car\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "car": {
+            "xmin": 96,
+            "ymin": 122,
+            "xmax": 457,
+            "ymax": 364
+        },
+        "car_1": {
+            "xmin": 0,
+            "ymin": 193,
+            "xmax": 100,
+            "ymax": 302
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"cah\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [19, 970, 92, 999], \"label\": \"cah\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    19,
+                    970,
+                    92,
+                    999
+                ],
+                "label": "cah"
+            }
+        ],
+        "token_count": 38,
+        "raw_token_count": 90,
+        "runtime_seconds": 0.3548
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.1069480477945383,
+        "defocus_blur": 0.01780045524321223,
+        "motion_blur": 0.05059128425301743,
+        "fog_filter": 0.059864744596818106,
+        "pixelate": 0.06623646292793495,
+        "jpeg_filter": 0.6773325404192745
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.07407401166565843,
+        "synonym": 0.09544313081306235,
+        "ata_saliency": 0.14085529322356957,
+        "fragmentation": 0.01332437843335356,
+        "character_noise": 0.036584530007526525
+    }
+}

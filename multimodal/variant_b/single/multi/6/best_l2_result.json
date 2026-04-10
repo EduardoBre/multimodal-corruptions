@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/6",
+        "folder_id": "6",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00005307.JPEG"
+    },
+    "pareto_index": 11,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 11,
+    "total_evaluations": 315,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.051653,
+            "defocus_blur": 0.575941,
+            "motion_blur": 0.015678,
+            "fog_filter": 0.000304,
+            "pixelate": 0.095186,
+            "jpeg_filter": 0.261238
+        },
+        "text_corruptions": {
+            "homophone": 0.088774,
+            "synonym": 0.050818,
+            "ata_saliency": 0.002219,
+            "fragmentation": 0.072802,
+            "character_noise": 0.057657
+        },
+        "img_budget_used": 1.0,
+        "txt_budget_used": 0.272271,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.27301,
+        "img_dist": 0.09652,
+        "txt_dist": 0.05725,
+        "txt_sim": 0.94275
+    },
+    "swad_metrics": {
+        "iou_0": 0.84892,
+        "delta_m_plus": 0.6784,
+        "phi": 0.85176,
+        "swad": 0.57784
+    },
+    "l2_distance": 0.29517,
+    "original_prompt": "Identify the objects \"lizard\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "lizard": {
+            "xmin": 172,
+            "ymin": 177,
+            "xmax": 426,
+            "ymax": 337
+        },
+        "lizard_1": {
+            "xmin": 0,
+            "ymin": 50,
+            "xmax": 290,
+            "ymax": 185
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"l\u0456zard\u200b\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 999, 657], \"label\": \"l\u0456zard\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    999,
+                    657
+                ],
+                "label": "l\u0456zard"
+            }
+        ],
+        "token_count": 38,
+        "raw_token_count": 87,
+        "runtime_seconds": 0.3504
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.05165262451015764,
+        "defocus_blur": 0.5759405912986785,
+        "motion_blur": 0.015678403959811994,
+        "fog_filter": 0.0003037404151397816,
+        "pixelate": 0.09518646864229947,
+        "jpeg_filter": 0.26123817117391274
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.08877445536066755,
+        "synonym": 0.0508183317185637,
+        "ata_saliency": 0.0022193560135515683,
+        "fragmentation": 0.07280206086851823,
+        "character_noise": 0.05765652438924622
+    }
+}

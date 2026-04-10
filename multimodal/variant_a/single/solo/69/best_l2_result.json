@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/69",
+        "folder_id": "69",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00022095.JPEG"
+    },
+    "pareto_index": 10,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.9282845391324892,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.999228400501682
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.12985,
+        "txt_dist": 0.37298,
+        "txt_sim": 0.62702
+    },
+    "swad_metrics": {
+        "iou_0": 0.98123,
+        "delta_m_plus": 1.0,
+        "phi": 0.5456,
+        "swad": 0.5456
+    },
+    "l2_distance": 0.39494,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 82,
+            "ymin": 203,
+            "xmax": 361,
+            "ymax": 442
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"brid\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [778, 24, 968, 260], \"label\": \"brid\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    778,
+                    24,
+                    968,
+                    260
+                ],
+                "label": "brid"
+            }
+        ],
+        "token_count": 38,
+        "raw_token_count": 45,
+        "runtime_seconds": 0.1513
+    }
+}

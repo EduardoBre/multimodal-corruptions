@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/121",
+        "folder_id": "121",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00044238.JPEG"
+    },
+    "pareto_index": 0,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "motion_blur",
+        "img_scale": 0.005348596788693372,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.6388731935434303
+    },
+    "objectives": {
+        "iou": 0.17029,
+        "img_dist": 0.03733,
+        "txt_dist": 0.37483,
+        "txt_sim": 0.62517
+    },
+    "swad_metrics": {
+        "iou_0": 0.81061,
+        "delta_m_plus": 0.78992,
+        "phi": 0.60183,
+        "swad": 0.4754
+    },
+    "l2_distance": 0.41339,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 134,
+            "ymin": 155,
+            "xmax": 378,
+            "ymax": 289
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bgrd\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 1000, 1000], \"label\": \"bgrd\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    1000,
+                    1000
+                ],
+                "label": "bgrd"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 44,
+        "runtime_seconds": 0.1939
+    }
+}

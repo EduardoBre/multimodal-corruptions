@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/59",
+        "folder_id": "59",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00002355.JPEG"
+    },
+    "pareto_index": 6,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.053599,
+            "defocus_blur": 0.038818,
+            "motion_blur": 0.026095,
+            "fog_filter": 0.014065,
+            "pixelate": 0.192484,
+            "jpeg_filter": 0.226046
+        },
+        "text_corruptions": {
+            "homophone": 0.186669,
+            "synonym": 0.010028,
+            "ata_saliency": 0.029876,
+            "fragmentation": 0.049878,
+            "character_noise": 0.220135
+        },
+        "img_budget_used": 0.551107,
+        "txt_budget_used": 0.496586,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.09825,
+        "txt_dist": 0.21788,
+        "txt_sim": 0.78212
+    },
+    "swad_metrics": {
+        "iou_0": 0.95246,
+        "delta_m_plus": 1.0,
+        "phi": 0.70528,
+        "swad": 0.70528
+    },
+    "l2_distance": 0.23901,
+    "original_prompt": "Identify the objects \"bowl, turtle\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "turtle": {
+            "xmin": 178,
+            "ymin": 107,
+            "xmax": 499,
+            "ymax": 338
+        },
+        "bowl": {
+            "xmin": 191,
+            "ymin": 49,
+            "xmax": 457,
+            "ymax": 135
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bowd, t\u200du rtle\u200b\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [367, 286, 1000, 820], \"label\": \"bowd, t\u200du rtle\u200b\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    367,
+                    286,
+                    1000,
+                    820
+                ],
+                "label": "bowd, t\u200du rtle\u200b"
+            }
+        ],
+        "token_count": 49,
+        "raw_token_count": 93,
+        "runtime_seconds": 0.3071
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.053599211290811966,
+        "defocus_blur": 0.03881819090979909,
+        "motion_blur": 0.02609487474663435,
+        "fog_filter": 0.014065235860031238,
+        "pixelate": 0.19248369026875514,
+        "jpeg_filter": 0.22604623512525227
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.18666925015486122,
+        "synonym": 0.01002842852954004,
+        "ata_saliency": 0.029875994266066158,
+        "fragmentation": 0.049877870360232286,
+        "character_noise": 0.22013469360711196
+    }
+}

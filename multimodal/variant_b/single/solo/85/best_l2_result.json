@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/85",
+        "folder_id": "85",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00004755.JPEG"
+    },
+    "pareto_index": 5,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.159203,
+            "defocus_blur": 0.028507,
+            "motion_blur": 0.143007,
+            "fog_filter": 0.055167,
+            "pixelate": 0.013341,
+            "jpeg_filter": 0.056575
+        },
+        "text_corruptions": {
+            "homophone": 0.084388,
+            "synonym": 0.033397,
+            "ata_saliency": 0.00325,
+            "fragmentation": 0.027749,
+            "character_noise": 0.328288
+        },
+        "img_budget_used": 0.4558,
+        "txt_budget_used": 0.477071,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.20284,
+        "img_dist": 0.10267,
+        "txt_dist": 0.30779,
+        "txt_sim": 0.69221
+    },
+    "swad_metrics": {
+        "iou_0": 0.95559,
+        "delta_m_plus": 0.78773,
+        "phi": 0.62114,
+        "swad": 0.48929
+    },
+    "l2_distance": 0.38265,
+    "original_prompt": "Identify the objects \"whale\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "whale": {
+            "xmin": 176,
+            "ymin": 123,
+            "xmax": 491,
+            "ymax": 230
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"c\u0435\u0430t\u200b\u0441e\u200ban\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 999, 999], \"label\": \"c\u0435\u0430t\u200b\u0441e\u200ban\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    999,
+                    999
+                ],
+                "label": "c\u0435\u0430t\u200b\u0441e\u200ban"
+            }
+        ],
+        "token_count": 43,
+        "raw_token_count": 54,
+        "runtime_seconds": 0.1927
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.15920300765152082,
+        "defocus_blur": 0.028507169367242076,
+        "motion_blur": 0.14300685604440339,
+        "fog_filter": 0.05516674727429343,
+        "pixelate": 0.013341226130351144,
+        "jpeg_filter": 0.05657540487099857
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.08438793726400008,
+        "synonym": 0.03339666527487055,
+        "ata_saliency": 0.003249636119987992,
+        "fragmentation": 0.02774863159589258,
+        "character_noise": 0.3282883083107439
+    }
+}

@@ -1,0 +1,109 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/160",
+        "folder_id": "160",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00003356.JPEG"
+    },
+    "pareto_index": 10,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.08646227720474076,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6881327596781619
+    },
+    "objectives": {
+        "iou": 0.13353,
+        "img_dist": 0.0686,
+        "txt_dist": 0.22921,
+        "txt_sim": 0.77079
+    },
+    "swad_metrics": {
+        "iou_0": 0.66122,
+        "delta_m_plus": 0.79805,
+        "phi": 0.71791,
+        "swad": 0.57293
+    },
+    "l2_distance": 0.274,
+    "original_prompt": "Identify the objects \"bowl, person, plastic bag\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 88,
+            "ymin": 150,
+            "xmax": 207,
+            "ymax": 331
+        },
+        "person_1": {
+            "xmin": 207,
+            "ymin": 162,
+            "xmax": 334,
+            "ymax": 329
+        },
+        "person_2": {
+            "xmin": 234,
+            "ymin": 21,
+            "xmax": 409,
+            "ymax": 250
+        },
+        "plastic bag": {
+            "xmin": 176,
+            "ymin": 261,
+            "xmax": 216,
+            "ymax": 332
+        },
+        "plastic bag_1": {
+            "xmin": 1,
+            "ymin": 182,
+            "xmax": 27,
+            "ymax": 242
+        },
+        "bowl": {
+            "xmin": 385,
+            "ymin": 213,
+            "xmax": 465,
+            "ymax": 253
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"boll, pursun, plastig bag\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [357, 820, 448, 1000], \"label\": \"boll\"},\n\t{\"bbox_2d\": [300, 536, 380, 700], \"label\": \"pursun\"},\n\t{\"bbox_2d\": [357, 820, 448, 1000], \"label\": \"plastig bag\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    357,
+                    820,
+                    448,
+                    1000
+                ],
+                "label": "boll"
+            },
+            {
+                "bbox_2d": [
+                    300,
+                    536,
+                    380,
+                    700
+                ],
+                "label": "pursun"
+            },
+            {
+                "bbox_2d": [
+                    357,
+                    820,
+                    448,
+                    1000
+                ],
+                "label": "plastig bag"
+            }
+        ],
+        "token_count": 113,
+        "raw_token_count": 218,
+        "runtime_seconds": 0.9051
+    }
+}

@@ -1,0 +1,88 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/126",
+        "folder_id": "126",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00013191.JPEG"
+    },
+    "pareto_index": 5,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.863144940280058,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6678992108124702
+    },
+    "objectives": {
+        "iou": 0.10574,
+        "img_dist": 0.13261,
+        "txt_dist": 0.19119,
+        "txt_sim": 0.80881
+    },
+    "swad_metrics": {
+        "iou_0": 0.74547,
+        "delta_m_plus": 0.85816,
+        "phi": 0.70155,
+        "swad": 0.60204
+    },
+    "l2_distance": 0.25558,
+    "original_prompt": "Identify the objects \"person, watercraft\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 336,
+            "ymin": 191,
+            "xmax": 409,
+            "ymax": 257
+        },
+        "person_1": {
+            "xmin": 100,
+            "ymin": 204,
+            "xmax": 136,
+            "ymax": 237
+        },
+        "watercraft": {
+            "xmin": 94,
+            "ymin": 234,
+            "xmax": 138,
+            "ymax": 251
+        },
+        "watercraft_1": {
+            "xmin": 332,
+            "ymin": 244,
+            "xmax": 476,
+            "ymax": 265
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"pursun, water craft\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [138, 512, 272, 690], \"label\": \"pursun\"},\n\t{\"bbox_2d\": [138, 512, 272, 690], \"label\": \"water craft\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    138,
+                    512,
+                    272,
+                    690
+                ],
+                "label": "pursun"
+            },
+            {
+                "bbox_2d": [
+                    138,
+                    512,
+                    272,
+                    690
+                ],
+                "label": "water craft"
+            }
+        ],
+        "token_count": 75,
+        "raw_token_count": 147,
+        "runtime_seconds": 0.4919
+    }
+}

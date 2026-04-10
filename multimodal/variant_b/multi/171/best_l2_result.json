@@ -1,0 +1,124 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/171",
+        "folder_id": "171",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00021838.JPEG"
+    },
+    "pareto_index": 25,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 7,
+    "total_evaluations": 210,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.004373,
+            "defocus_blur": 0.00119,
+            "motion_blur": 5.3e-05,
+            "fog_filter": 0.004139,
+            "pixelate": 0.005655,
+            "jpeg_filter": 0.00094
+        },
+        "text_corruptions": {
+            "homophone": 0.005094,
+            "synonym": 0.002409,
+            "ata_saliency": 0.045762,
+            "fragmentation": 0.071289,
+            "character_noise": 0.2324
+        },
+        "img_budget_used": 0.01635,
+        "txt_budget_used": 0.356955,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.09518,
+        "txt_dist": 0.23215,
+        "txt_sim": 0.76785
+    },
+    "swad_metrics": {
+        "iou_0": 0.7335,
+        "delta_m_plus": 1.0,
+        "phi": 0.69477,
+        "swad": 0.69477
+    },
+    "l2_distance": 0.2509,
+    "original_prompt": "Identify the objects \"dog, flower pot\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 172,
+            "ymin": 128,
+            "xmax": 460,
+            "ymax": 315
+        },
+        "dog_1": {
+            "xmin": 28,
+            "ymin": 91,
+            "xmax": 176,
+            "ymax": 305
+        },
+        "flower pot": {
+            "xmin": 46,
+            "ymin": 145,
+            "xmax": 68,
+            "ymax": 164
+        },
+        "flower pot_1": {
+            "xmin": 63,
+            "ymin": 134,
+            "xmax": 87,
+            "ymax": 165
+        },
+        "flower pot_2": {
+            "xmin": 32,
+            "ymin": 138,
+            "xmax": 60,
+            "ymax": 164
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"\u0441\u0430n\u200din\u0435, f\u200bl\u043ew\u200der\u200d p\u200b\u043et\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [127, 397, 183, 490], \"label\": \"\u0441\u0430n\u200din\u0435, f\u200bl\u043ew\u200der\u200d p\u200b\u043et\"},\n\t{\"bbox_2d\": [75, 420, 127, 490], \"label\": \"\u0441\u0430n\u200din\u0435, f\u200bl\u043ew\u200der\u200d p\u200b\u043et\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    127,
+                    397,
+                    183,
+                    490
+                ],
+                "label": "\u0441\u0430n\u200din\u0435, f\u200bl\u043ew\u200der\u200d p\u200b\u043et"
+            },
+            {
+                "bbox_2d": [
+                    75,
+                    420,
+                    127,
+                    490
+                ],
+                "label": "\u0441\u0430n\u200din\u0435, f\u200bl\u043ew\u200der\u200d p\u200b\u043et"
+            }
+        ],
+        "token_count": 111,
+        "raw_token_count": 229,
+        "runtime_seconds": 0.7122
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.004373144109212578,
+        "defocus_blur": 0.0011902140652873816,
+        "motion_blur": 5.258921290022395e-05,
+        "fog_filter": 0.004138821188053628,
+        "pixelate": 0.005655226206003389,
+        "jpeg_filter": 0.0009395605432485348
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.0050943566513564865,
+        "synonym": 0.0024088876066150205,
+        "ata_saliency": 0.04576215675575032,
+        "fragmentation": 0.0712892271745526,
+        "character_noise": 0.2324004079112582
+    }
+}

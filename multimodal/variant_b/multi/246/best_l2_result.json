@@ -1,0 +1,106 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/246",
+        "folder_id": "246",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00006073.JPEG"
+    },
+    "pareto_index": 6,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.065016,
+            "defocus_blur": 0.000485,
+            "motion_blur": 0.169554,
+            "fog_filter": 0.30026,
+            "pixelate": 0.014326,
+            "jpeg_filter": 0.050106
+        },
+        "text_corruptions": {
+            "homophone": 0.367796,
+            "synonym": 0.11818,
+            "ata_saliency": 0.257644,
+            "fragmentation": 0.155902,
+            "character_noise": 0.099459
+        },
+        "img_budget_used": 0.599748,
+        "txt_budget_used": 0.998982,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.02193,
+        "img_dist": 0.15786,
+        "txt_dist": 0.2259,
+        "txt_sim": 0.7741
+    },
+    "swad_metrics": {
+        "iou_0": 0.91996,
+        "delta_m_plus": 0.97616,
+        "phi": 0.6519,
+        "swad": 0.63636
+    },
+    "l2_distance": 0.27646,
+    "original_prompt": "Identify the objects \"baseball, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "baseball": {
+            "xmin": 73,
+            "ymin": 137,
+            "xmax": 211,
+            "ymax": 276
+        },
+        "person": {
+            "xmin": 293,
+            "ymin": 41,
+            "xmax": 392,
+            "ymax": 235
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"basebal\u200dl\u200b, purs\u200be on\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [148, 388, 428, 788], \"label\": \"basebal\u200dl\u200b, purs\u200be on\"},\n\t{\"bbox_2d\": [612, 338, 680, 408], \"label\": \"purs\u200be on\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    148,
+                    388,
+                    428,
+                    788
+                ],
+                "label": "basebal\u200dl\u200b, purs\u200be on"
+            },
+            {
+                "bbox_2d": [
+                    612,
+                    338,
+                    680,
+                    408
+                ],
+                "label": "purs\u200be on"
+            }
+        ],
+        "token_count": 86,
+        "raw_token_count": 87,
+        "runtime_seconds": 0.3115
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.06501610194226719,
+        "defocus_blur": 0.00048483389854575044,
+        "motion_blur": 0.16955367275028072,
+        "fog_filter": 0.3002602547604753,
+        "pixelate": 0.014326491628238446,
+        "jpeg_filter": 0.050106377403853666
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.36779607713803397,
+        "synonym": 0.11818031536873788,
+        "ata_saliency": 0.25764440443625086,
+        "fragmentation": 0.15590235975252226,
+        "character_noise": 0.09945896509740144
+    }
+}

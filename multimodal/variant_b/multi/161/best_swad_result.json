@@ -1,0 +1,109 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/161",
+        "folder_id": "161",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00003593.JPEG"
+    },
+    "pareto_index": 2,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.464668,
+            "defocus_blur": 0.114171,
+            "motion_blur": 0.013031,
+            "fog_filter": 0.017187,
+            "pixelate": 0.08658,
+            "jpeg_filter": 0.152419
+        },
+        "text_corruptions": {
+            "homophone": 0.034725,
+            "synonym": 0.122571,
+            "ata_saliency": 0.162877,
+            "fragmentation": 0.016512,
+            "character_noise": 0.00061
+        },
+        "img_budget_used": 0.848056,
+        "txt_budget_used": 0.337294,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.08099,
+        "txt_dist": 0.1803,
+        "txt_sim": 0.8197
+    },
+    "swad_metrics": {
+        "iou_0": 0.78373,
+        "delta_m_plus": 1.0,
+        "phi": 0.75331,
+        "swad": 0.75331
+    },
+    "l2_distance": 0.19765,
+    "original_prompt": "Identify the objects \"hat with a wide brim, horse, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 146,
+            "ymin": 230,
+            "xmax": 193,
+            "ymax": 306
+        },
+        "hat with a wide brim": {
+            "xmin": 159,
+            "ymin": 232,
+            "xmax": 184,
+            "ymax": 248
+        },
+        "horse": {
+            "xmin": 226,
+            "ymin": 253,
+            "xmax": 296,
+            "ymax": 366
+        },
+        "horse_1": {
+            "xmin": 142,
+            "ymin": 243,
+            "xmax": 200,
+            "ymax": 365
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"hat wit\u200da a wide br\u200dim, hoarse, pers\u043en\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [472, 463, 560, 538], \"label\": \"hat wit\u200da a wide br\u200dim, hoarse, pers\u043en\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    472,
+                    463,
+                    560,
+                    538
+                ],
+                "label": "hat wit\u200da a wide br\u200dim, hoarse, pers\u043en"
+            }
+        ],
+        "token_count": 56,
+        "raw_token_count": 178,
+        "runtime_seconds": 0.5417
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.46466808545016575,
+        "defocus_blur": 0.1141705958979835,
+        "motion_blur": 0.013031120580953477,
+        "fog_filter": 0.017186764907108694,
+        "pixelate": 0.08658033698198772,
+        "jpeg_filter": 0.15241897970636134
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.034725293380621455,
+        "synonym": 0.12257085072841474,
+        "ata_saliency": 0.16287651359069238,
+        "fragmentation": 0.01651174676056349,
+        "character_noise": 0.0006099839068113188
+    }
+}

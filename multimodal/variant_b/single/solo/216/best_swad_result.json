@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/216",
+        "folder_id": "216",
+        "category": "single/solo",
+        "filename": "ILSVRC2013_val_00001787.JPEG"
+    },
+    "pareto_index": 13,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 3,
+    "total_evaluations": 90,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.180516,
+            "defocus_blur": 0.025853,
+            "motion_blur": 0.005439,
+            "fog_filter": 0.007982,
+            "pixelate": 0.042642,
+            "jpeg_filter": 0.096783
+        },
+        "text_corruptions": {
+            "homophone": 0.01773,
+            "synonym": 0.374894,
+            "ata_saliency": 0.00893,
+            "fragmentation": 0.147228,
+            "character_noise": 0.019909
+        },
+        "img_budget_used": 0.359216,
+        "txt_budget_used": 0.568691,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.05636,
+        "img_dist": 0.08966,
+        "txt_dist": 0.1948,
+        "txt_sim": 0.8052
+    },
+    "swad_metrics": {
+        "iou_0": 0.973,
+        "delta_m_plus": 0.94208,
+        "phi": 0.73301,
+        "swad": 0.69055
+    },
+    "l2_distance": 0.22173,
+    "original_prompt": "Identify the objects \"table\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "table": {
+            "xmin": 0,
+            "ymin": 65,
+            "xmax": 373,
+            "ymax": 498
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"atbl e\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 157, 458, 263], \"label\": \"atbl e\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    157,
+                    458,
+                    263
+                ],
+                "label": "atbl e"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 112,
+        "runtime_seconds": 0.339
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.18051607539919304,
+        "defocus_blur": 0.025853159724367525,
+        "motion_blur": 0.005439392488310688,
+        "fog_filter": 0.007981848525947131,
+        "pixelate": 0.04264249904756608,
+        "jpeg_filter": 0.09678318745614137
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.017730024983367676,
+        "synonym": 0.3748940766461547,
+        "ata_saliency": 0.008929714844993598,
+        "fragmentation": 0.1472283358833471,
+        "character_noise": 0.019908845326338274
+    }
+}

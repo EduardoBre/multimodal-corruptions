@@ -1,0 +1,73 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/87",
+        "folder_id": "87",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00037570.JPEG"
+    },
+    "pareto_index": 4,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.9316177058680379,
+        "txt_attack": "homophone",
+        "txt_scale": 0.9948250792623392
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.06351,
+        "txt_dist": 0.25341,
+        "txt_sim": 0.74659
+    },
+    "swad_metrics": {
+        "iou_0": 0.77843,
+        "delta_m_plus": 1.0,
+        "phi": 0.69917,
+        "swad": 0.69917
+    },
+    "l2_distance": 0.26125,
+    "original_prompt": "Identify the objects \"chair, miniskirt, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 105,
+            "ymin": 48,
+            "xmax": 253,
+            "ymax": 463
+        },
+        "miniskirt": {
+            "xmin": 110,
+            "ymin": 113,
+            "xmax": 250,
+            "ymax": 316
+        },
+        "chair": {
+            "xmin": 193,
+            "ymin": 168,
+            "xmax": 333,
+            "ymax": 425
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"cher, mini squirt, per son\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [278, 97, 672, 917], \"label\": \"cher, mini squirt, per son\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    278,
+                    97,
+                    672,
+                    917
+                ],
+                "label": "cher, mini squirt, per son"
+            }
+        ],
+        "token_count": 44,
+        "raw_token_count": 144,
+        "runtime_seconds": 0.5147
+    }
+}

@@ -1,0 +1,564 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/173",
+        "folder_id": "173",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00036814.JPEG"
+    },
+    "original_prompt": "Identify the objects \"band aid, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 0,
+            "ymin": 48,
+            "xmax": 442,
+            "ymax": 328
+        },
+        "band aid": {
+            "xmin": 83,
+            "ymin": 155,
+            "xmax": 236,
+            "ymax": 288
+        }
+    },
+    "baseline_iou": 0.97025,
+    "swad_star": 0.77816,
+    "swad_star_index": 7,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "n_solutions": 11,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8181617493544074,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.41721849968957336
+            },
+            "objectives": {
+                "iou": 0.56159,
+                "img_dist": 0.03321,
+                "txt_dist": 0.13623,
+                "txt_sim": 0.86377
+            },
+            "swad_metrics": {
+                "iou_0": 0.97025,
+                "delta_m_plus": 0.42119,
+                "phi": 0.83508,
+                "swad": 0.35173
+            },
+            "l2_distance": 0.57883,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"band aia, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 140, 975, 997], \"label\": \"band aia\"},\n\t{\"bbox_2d\": [0, 140, 975, 997], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            140,
+                            975,
+                            997
+                        ],
+                        "label": "band aia"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            140,
+                            975,
+                            997
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 70,
+                "raw_token_count": 84,
+                "runtime_seconds": 0.2778
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.018153363333776373,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.24927259019092207
+            },
+            "objectives": {
+                "iou": 0.95544,
+                "img_dist": 0.01621,
+                "txt_dist": 0.15962,
+                "txt_sim": 0.84038
+            },
+            "swad_metrics": {
+                "iou_0": 0.97025,
+                "delta_m_plus": 0.01526,
+                "phi": 0.82676,
+                "swad": 0.01262
+            },
+            "l2_distance": 0.96882,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"b\u0430\u200bnd aid\u200d, pe\u200drs\u200d\u043e\u200dn\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [182, 470, 522, 858], \"label\": \"b\u0430\u200bnd aid\"},\n\t{\"bbox_2d\": [0, 150, 978, 998], \"label\": \"pe\u200drs\u200d\u043e\u200dn\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            182,
+                            470,
+                            522,
+                            858
+                        ],
+                        "label": "b\u0430\u200bnd aid"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            150,
+                            978,
+                            998
+                        ],
+                        "label": "pe\u200drs\u200d\u043e\u200dn"
+                    }
+                ],
+                "token_count": 83,
+                "raw_token_count": 84,
+                "runtime_seconds": 0.2778
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.96994,
+                "img_dist": 0.01161,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.97025,
+                "delta_m_plus": 0.00032,
+                "phi": 0.98839,
+                "swad": 0.00032
+            },
+            "l2_distance": 0.97001,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"band aid, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [183, 458, 525, 858], \"label\": \"band aid\"},\n\t{\"bbox_2d\": [0, 148, 988, 998], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            183,
+                            458,
+                            525,
+                            858
+                        ],
+                        "label": "band aid"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            148,
+                            988,
+                            998
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 71,
+                "raw_token_count": 84,
+                "runtime_seconds": 0.2778
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.95919,
+                "img_dist": 0.01621,
+                "txt_dist": 0.13196,
+                "txt_sim": 0.86804
+            },
+            "swad_metrics": {
+                "iou_0": 0.97025,
+                "delta_m_plus": 0.0114,
+                "phi": 0.85397,
+                "swad": 0.00973
+            },
+            "l2_distance": 0.96836,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"band ayd, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [182, 470, 524, 858], \"label\": \"band ayd\"},\n\t{\"bbox_2d\": [0, 150, 980, 998], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            182,
+                            470,
+                            524,
+                            858
+                        ],
+                        "label": "band ayd"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            150,
+                            980,
+                            998
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 72,
+                "raw_token_count": 84,
+                "runtime_seconds": 0.2778
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.6126883641923373,
+                "txt_attack": "homophone",
+                "txt_scale": 0.10684452896191199
+            },
+            "objectives": {
+                "iou": 0.94526,
+                "img_dist": 0.02609,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.97025,
+                "delta_m_plus": 0.02576,
+                "phi": 0.97391,
+                "swad": 0.02508
+            },
+            "l2_distance": 0.94562,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"band aid, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [192, 470, 530, 860], \"label\": \"band aid\"},\n\t{\"bbox_2d\": [0, 150, 978, 992], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            192,
+                            470,
+                            530,
+                            860
+                        ],
+                        "label": "band aid"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            150,
+                            978,
+                            992
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 71,
+                "raw_token_count": 84,
+                "runtime_seconds": 0.2778
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.307337327911573,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.94315,
+                "img_dist": 0.02128,
+                "txt_dist": 0.02663,
+                "txt_sim": 0.97337
+            },
+            "swad_metrics": {
+                "iou_0": 0.97025,
+                "delta_m_plus": 0.02793,
+                "phi": 0.95266,
+                "swad": 0.02661
+            },
+            "l2_distance": 0.94377,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bandaid, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [178, 460, 520, 872], \"label\": \"bandaid\"},\n\t{\"bbox_2d\": [0, 150, 978, 998], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            178,
+                            460,
+                            520,
+                            872
+                        ],
+                        "label": "bandaid"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            150,
+                            978,
+                            998
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 71,
+                "raw_token_count": 84,
+                "runtime_seconds": 0.2778
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.9662109336868401,
+                "txt_attack": "synonym",
+                "txt_scale": 0.43519445464759643
+            },
+            "objectives": {
+                "iou": 0.5594,
+                "img_dist": 0.19315,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.97025,
+                "delta_m_plus": 0.42345,
+                "phi": 0.80685,
+                "swad": 0.34166
+            },
+            "l2_distance": 0.59181,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"band aid, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [848, 288, 950, 450], \"label\": \"band aid\"},\n\t{\"bbox_2d\": [0, 148, 988, 998], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            848,
+                            288,
+                            950,
+                            450
+                        ],
+                        "label": "band aid"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            148,
+                            988,
+                            998
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 71,
+                "raw_token_count": 96,
+                "runtime_seconds": 0.3242
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.486062019522153,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.8971524375333463
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.01721,
+                "txt_dist": 0.20821,
+                "txt_sim": 0.79179
+            },
+            "swad_metrics": {
+                "iou_0": 0.97025,
+                "delta_m_plus": 1.0,
+                "phi": 0.77816,
+                "swad": 0.77816
+            },
+            "l2_distance": 0.20892,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bjnd adi, preson\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 147, 978, 990], \"label\": \"bjnd adi, preson\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            147,
+                            978,
+                            990
+                        ],
+                        "label": "bjnd adi, preson"
+                    }
+                ],
+                "token_count": 43,
+                "raw_token_count": 96,
+                "runtime_seconds": 0.3242
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.03732619454213726,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.33647038540361596
+            },
+            "objectives": {
+                "iou": 0.97496,
+                "img_dist": 0.00883,
+                "txt_dist": 0.11301,
+                "txt_sim": 0.88699
+            },
+            "swad_metrics": {
+                "iou_0": 0.97025,
+                "delta_m_plus": 0.0,
+                "phi": 0.87916,
+                "swad": 0.0
+            },
+            "l2_distance": 0.98153,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"band aid, pxrson\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [184, 458, 524, 858], \"label\": \"band aid\"},\n\t{\"bbox_2d\": [0, 146, 988, 994], \"label\": \"pxrson\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            184,
+                            458,
+                            524,
+                            858
+                        ],
+                        "label": "band aid"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            146,
+                            988,
+                            994
+                        ],
+                        "label": "pxrson"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 96,
+                "runtime_seconds": 0.3242
+            }
+        },
+        {
+            "index": 9,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.8004900574692112,
+                "txt_attack": "homophone",
+                "txt_scale": 0.3273709769105356
+            },
+            "objectives": {
+                "iou": 0.85917,
+                "img_dist": 0.04124,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.97025,
+                "delta_m_plus": 0.11449,
+                "phi": 0.95876,
+                "swad": 0.10976
+            },
+            "l2_distance": 0.86016,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"band aid, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [178, 430, 520, 800], \"label\": \"band aid\"},\n\t{\"bbox_2d\": [0, 130, 999, 999], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            178,
+                            430,
+                            520,
+                            800
+                        ],
+                        "label": "band aid"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            130,
+                            999,
+                            999
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 71,
+                "raw_token_count": 96,
+                "runtime_seconds": 0.3242
+            }
+        },
+        {
+            "index": 10,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.7585322514200842,
+                "txt_attack": "synonym",
+                "txt_scale": 0.8286080825406955
+            },
+            "objectives": {
+                "iou": 0.92427,
+                "img_dist": 0.02997,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.97025,
+                "delta_m_plus": 0.04739,
+                "phi": 0.97003,
+                "swad": 0.04597
+            },
+            "l2_distance": 0.92476,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"band aid, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [178, 448, 530, 872], \"label\": \"band aid\"},\n\t{\"bbox_2d\": [0, 148, 998, 998], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            178,
+                            448,
+                            530,
+                            872
+                        ],
+                        "label": "band aid"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            148,
+                            998,
+                            998
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 71,
+                "raw_token_count": 96,
+                "runtime_seconds": 0.3242
+            }
+        }
+    ]
+}

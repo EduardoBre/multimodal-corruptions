@@ -1,0 +1,399 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/250",
+        "folder_id": "250",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00000650.JPEG"
+    },
+    "original_prompt": "Identify the objects \"chair, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 122,
+            "ymin": 78,
+            "xmax": 434,
+            "ymax": 336
+        },
+        "person_1": {
+            "xmin": 21,
+            "ymin": 152,
+            "xmax": 110,
+            "ymax": 330
+        },
+        "person_2": {
+            "xmin": 92,
+            "ymin": 95,
+            "xmax": 207,
+            "ymax": 313
+        },
+        "chair": {
+            "xmin": 0,
+            "ymin": 222,
+            "xmax": 78,
+            "ymax": 336
+        },
+        "chair_1": {
+            "xmin": 390,
+            "ymin": 227,
+            "xmax": 499,
+            "ymax": 306
+        }
+    },
+    "baseline_iou": 0.5144,
+    "swad_star": 0.84135,
+    "swad_star_index": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 6,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8181617493544074,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.41721849968957336
+            },
+            "objectives": {
+                "iou": 0.36741,
+                "img_dist": 0.05006,
+                "txt_dist": 0.12282,
+                "txt_sim": 0.87718
+            },
+            "swad_metrics": {
+                "iou_0": 0.5144,
+                "delta_m_plus": 0.28575,
+                "phi": 0.83327,
+                "swad": 0.23811
+            },
+            "l2_distance": 0.39062,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chair, persen\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [800, 688, 998, 997], \"label\": \"chair\"},\n\t{\"bbox_2d\": [240, 232, 872, 997], \"label\": \"persen\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            800,
+                            688,
+                            998,
+                            997
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            240,
+                            232,
+                            872,
+                            997
+                        ],
+                        "label": "persen"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.4803
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.02538,
+                "txt_dist": 0.13674,
+                "txt_sim": 0.86326
+            },
+            "swad_metrics": {
+                "iou_0": 0.5144,
+                "delta_m_plus": 1.0,
+                "phi": 0.84135,
+                "swad": 0.84135
+            },
+            "l2_distance": 0.13908,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chare, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [258, 232, 870, 989], \"label\": \"chare\"},\n\t{\"bbox_2d\": [258, 232, 870, 989], \"label\": \"person\"},\n\t{\"bbox_2d\": [258, 232, 870, 989], \"label\": \"person\"},\n\t{\"bbox_2d\": [258, 232, 870, 989], \"label\": \"person\"},\n\t{\"bbox_2d\": [258, 232, 870, 989], \"label\": \"person\"},\n\t{\"bbox_2d\": [258, 232, 870, 989], \"label\": \"person\"},\n\t{\"bbox_2d\": [258, 232, 870, 989], \"label\": \"person\"},\n\t{\"bbox_2d\": [258, 232, 870, 989], \"label\": \"person\"},\n\t{\"bbox_2d\": [258, 232, 870, 989], \"label\": \"person\"},\n\t{\"bbox_2d\": [258, 232, 870, 989], \"label\": \"person\"},\n\t{\"bbox_2d\": [258, 232, 870, 989], \"label\": \"person\"},\n\t{\"bbox_2d\": [258, 232, 870, 989], \"label\": \"person\"},\n\t{\"bbox_2d\": [258, 232, 870, 989], \"label\": \"person\"},\n\t{\"bbox_2d\": [258, 232, 870, 989], \"label\": \"person\"},\n\t{\"bbox_2d\": [258, 232, 870, 989], \"label\": \"person\"},\n\t{\"bbox_2d\": [258, 232, 870, 989], \"label\": \"person\"},\n\t{\"bbox_2d\": [258, 232, 870, 989], \"label\": \"person\"},\n\t{\"bbox_2d\": [258, 232, 870, 989], \"label\": \"person\"},\n\t{\"bbox_2d\": [258, 232, 870, 989], \"label\": \"person\"},\n\t{\"bbox_2d\": [258, 232, 870, 989], \"label\": \"person\"},\n\t{\"bbox_2d\": [258, 232, 870, 989], \"label\": \"person\"},\n\t{\"bbox_2d\": [258, 232, 870, 989], \"label\": \"person\"},\n\t{\"bbox_2d\": [258, 232, 870, 989], \"label\": \"person\"},\n\t{\"bbox_2d\": [258, 232, 870, 989], \"label\": \"person\"},\n\t{\"bbox",
+                "parsed_predictions": [],
+                "token_count": 800,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.4803
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.6126883641923373,
+                "txt_attack": "homophone",
+                "txt_scale": 0.10684452896191199
+            },
+            "objectives": {
+                "iou": 0.67748,
+                "img_dist": 0.0425,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.5144,
+                "delta_m_plus": 0.0,
+                "phi": 0.9575,
+                "swad": 0.0
+            },
+            "l2_distance": 0.67881,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chair, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [820, 687, 1000, 997], \"label\": \"chair\"},\n\t{\"bbox_2d\": [240, 227, 872, 997], \"label\": \"person\"},\n\t{\"bbox_2d\": [250, 277, 410, 997], \"label\": \"person\"},\n\t{\"bbox_2d\": [38, 450, 180, 997], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            820,
+                            687,
+                            1000,
+                            997
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            240,
+                            227,
+                            872,
+                            997
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            250,
+                            277,
+                            410,
+                            997
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            38,
+                            450,
+                            180,
+                            997
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 138,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.4803
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.21300761893764208,
+                "txt_attack": "synonym",
+                "txt_scale": 0.11490566325799068
+            },
+            "objectives": {
+                "iou": 0.64541,
+                "img_dist": 0.05533,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.5144,
+                "delta_m_plus": 0.0,
+                "phi": 0.94467,
+                "swad": 0.0
+            },
+            "l2_distance": 0.64778,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chair, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [808, 690, 995, 997], \"label\": \"chair\"},\n\t{\"bbox_2d\": [258, 232, 875, 997], \"label\": \"person\"},\n\t{\"bbox_2d\": [258, 232, 419, 997], \"label\": \"person\"},\n\t{\"bbox_2d\": [44, 460, 258, 997], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            808,
+                            690,
+                            995,
+                            997
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            258,
+                            232,
+                            875,
+                            997
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            258,
+                            232,
+                            419,
+                            997
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            44,
+                            460,
+                            258,
+                            997
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 137,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.4803
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.018595721213425453,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6130568625347235
+            },
+            "objectives": {
+                "iou": 0.68012,
+                "img_dist": 0.02708,
+                "txt_dist": 0.09748,
+                "txt_sim": 0.90252
+            },
+            "swad_metrics": {
+                "iou_0": 0.5144,
+                "delta_m_plus": 0.0,
+                "phi": 0.87808,
+                "swad": 0.0
+            },
+            "l2_distance": 0.6876,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chair, persno\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [800, 688, 995, 997], \"label\": \"chair\"},\n\t{\"bbox_2d\": [252, 234, 870, 997], \"label\": \"persno\"},\n\t{\"bbox_2d\": [248, 234, 408, 997], \"label\": \"persno\"},\n\t{\"bbox_2d\": [40, 463, 180, 997], \"label\": \"persno\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            800,
+                            688,
+                            995,
+                            997
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            252,
+                            234,
+                            870,
+                            997
+                        ],
+                        "label": "persno"
+                    },
+                    {
+                        "bbox_2d": [
+                            248,
+                            234,
+                            408,
+                            997
+                        ],
+                        "label": "persno"
+                    },
+                    {
+                        "bbox_2d": [
+                            40,
+                            463,
+                            180,
+                            997
+                        ],
+                        "label": "persno"
+                    }
+                ],
+                "token_count": 140,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.4803
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.56563,
+                "img_dist": 0.03971,
+                "txt_dist": 0.1199,
+                "txt_sim": 0.8801
+            },
+            "swad_metrics": {
+                "iou_0": 0.5144,
+                "delta_m_plus": 0.0,
+                "phi": 0.84515,
+                "swad": 0.0
+            },
+            "l2_distance": 0.57956,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chair, per son\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [808, 688, 995, 900], \"label\": \"chair\"},\n\t{\"bbox_2d\": [250, 232, 870, 989], \"label\": \"per son\"},\n\t{\"bbox_2d\": [250, 232, 408, 989], \"label\": \"per son\"},\n\t{\"bbox_2d\": [40, 460, 178, 720], \"label\": \"per son\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            808,
+                            688,
+                            995,
+                            900
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            250,
+                            232,
+                            870,
+                            989
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            250,
+                            232,
+                            408,
+                            989
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            40,
+                            460,
+                            178,
+                            720
+                        ],
+                        "label": "per son"
+                    }
+                ],
+                "token_count": 140,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.4803
+            }
+        }
+    ]
+}

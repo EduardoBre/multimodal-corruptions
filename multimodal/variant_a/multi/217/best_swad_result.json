@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/217",
+        "folder_id": "217",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00017255.JPEG"
+    },
+    "pareto_index": 6,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.9316177058680379,
+        "txt_attack": "homophone",
+        "txt_scale": 0.9948250792623392
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.05914,
+        "txt_dist": 0.24146,
+        "txt_sim": 0.75854
+    },
+    "swad_metrics": {
+        "iou_0": 0.79889,
+        "delta_m_plus": 1.0,
+        "phi": 0.71368,
+        "swad": 0.71368
+    },
+    "l2_distance": 0.2486,
+    "original_prompt": "Identify the objects \"person, power drill\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "power drill": {
+            "xmin": 86,
+            "ymin": 36,
+            "xmax": 340,
+            "ymax": 312
+        },
+        "person": {
+            "xmin": 0,
+            "ymin": 2,
+            "xmax": 498,
+            "ymax": 335
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"pearson, pow her drill\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [172, 100, 644, 620], \"label\": \"pearson, pow her drill\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    172,
+                    100,
+                    644,
+                    620
+                ],
+                "label": "pearson, pow her drill"
+            }
+        ],
+        "token_count": 44,
+        "raw_token_count": 92,
+        "runtime_seconds": 0.3163
+    }
+}

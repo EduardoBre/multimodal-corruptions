@@ -1,0 +1,82 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/156",
+        "folder_id": "156",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00019216.JPEG"
+    },
+    "pareto_index": 9,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "gaussian_noise",
+        "img_scale": 0.08142031165696761,
+        "txt_attack": "homophone",
+        "txt_scale": 0.2228478256331735
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.03865,
+        "txt_dist": 0.21691,
+        "txt_sim": 0.78309
+    },
+    "swad_metrics": {
+        "iou_0": 0.8914,
+        "delta_m_plus": 1.0,
+        "phi": 0.75282,
+        "swad": 0.75282
+    },
+    "l2_distance": 0.22033,
+    "original_prompt": "Identify the objects \"dog, sofa\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 157,
+            "ymin": 86,
+            "xmax": 499,
+            "ymax": 316
+        },
+        "dog_1": {
+            "xmin": 15,
+            "ymin": 17,
+            "xmax": 272,
+            "ymax": 246
+        },
+        "sofa": {
+            "xmin": 70,
+            "ymin": 212,
+            "xmax": 498,
+            "ymax": 373
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"dawg, so fah\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [30, 38, 454, 598], \"label\": \"dawg, so fah\"},\n\t{\"bbox_2d\": [315, 232, 1000, 837], \"label\": \"dawg, so fah\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    30,
+                    38,
+                    454,
+                    598
+                ],
+                "label": "dawg, so fah"
+            },
+            {
+                "bbox_2d": [
+                    315,
+                    232,
+                    1000,
+                    837
+                ],
+                "label": "dawg, so fah"
+            }
+        ],
+        "token_count": 83,
+        "raw_token_count": 113,
+        "runtime_seconds": 0.4075
+    }
+}

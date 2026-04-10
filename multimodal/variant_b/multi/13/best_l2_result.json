@@ -1,0 +1,133 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/13",
+        "folder_id": "13",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00044999.JPEG"
+    },
+    "pareto_index": 17,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 60,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.011074,
+            "defocus_blur": 0.162973,
+            "motion_blur": 0.049094,
+            "fog_filter": 0.012551,
+            "pixelate": 0.030483,
+            "jpeg_filter": 0.134705
+        },
+        "text_corruptions": {
+            "homophone": 0.062065,
+            "synonym": 0.046535,
+            "ata_saliency": 0.364954,
+            "fragmentation": 0.019619,
+            "character_noise": 0.030179
+        },
+        "img_budget_used": 0.400881,
+        "txt_budget_used": 0.523353,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.18611,
+        "img_dist": 0.09739,
+        "txt_dist": 0.21555,
+        "txt_sim": 0.78445
+    },
+    "swad_metrics": {
+        "iou_0": 0.62645,
+        "delta_m_plus": 0.70291,
+        "phi": 0.70805,
+        "swad": 0.4977
+    },
+    "l2_distance": 0.30097,
+    "original_prompt": "Identify the objects \"antelope, bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 58,
+            "ymin": 88,
+            "xmax": 129,
+            "ymax": 202
+        },
+        "bird_1": {
+            "xmin": 302,
+            "ymin": 157,
+            "xmax": 346,
+            "ymax": 287
+        },
+        "bird_2": {
+            "xmin": 354,
+            "ymin": 179,
+            "xmax": 445,
+            "ymax": 276
+        },
+        "antelope": {
+            "xmin": 167,
+            "ymin": 121,
+            "xmax": 216,
+            "ymax": 167
+        },
+        "antelope_1": {
+            "xmin": 177,
+            "ymin": 146,
+            "xmax": 337,
+            "ymax": 205
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"antelope, b\u200durred\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [300, 450, 362, 550], \"label\": \"antelope\"},\n\t{\"bbox_2d\": [478, 430, 592, 530], \"label\": \"antelope\"},\n\t{\"bbox_2d\": [708, 500, 872, 700], \"label\": \"buried\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    300,
+                    450,
+                    362,
+                    550
+                ],
+                "label": "antelope"
+            },
+            {
+                "bbox_2d": [
+                    478,
+                    430,
+                    592,
+                    530
+                ],
+                "label": "antelope"
+            },
+            {
+                "bbox_2d": [
+                    708,
+                    500,
+                    872,
+                    700
+                ],
+                "label": "buried"
+            }
+        ],
+        "token_count": 108,
+        "raw_token_count": 193,
+        "runtime_seconds": 0.6936
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.011074347581155886,
+        "defocus_blur": 0.1629734365013941,
+        "motion_blur": 0.04909427317182606,
+        "fog_filter": 0.012550878542586007,
+        "pixelate": 0.030483482084316425,
+        "jpeg_filter": 0.13470457460866564
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.06206519852066335,
+        "synonym": 0.04653463842324569,
+        "ata_saliency": 0.3649544566985373,
+        "fragmentation": 0.019619134165044006,
+        "character_noise": 0.030179426132961876
+    }
+}

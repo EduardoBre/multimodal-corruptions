@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/222",
+        "folder_id": "222",
+        "category": "single/solo",
+        "filename": "ILSVRC2013_val_00002186.JPEG"
+    },
+    "pareto_index": 10,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 15,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.334247,
+            "defocus_blur": 0.023414,
+            "motion_blur": 0.131898,
+            "fog_filter": 0.003155,
+            "pixelate": 0.015976,
+            "jpeg_filter": 0.058231
+        },
+        "text_corruptions": {
+            "homophone": 0.097133,
+            "synonym": 0.089998,
+            "ata_saliency": 0.029346,
+            "fragmentation": 0.573544,
+            "character_noise": 0.128473
+        },
+        "img_budget_used": 0.56692,
+        "txt_budget_used": 0.918494,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.02447,
+        "img_dist": 0.09685,
+        "txt_dist": 0.26444,
+        "txt_sim": 0.73556
+    },
+    "swad_metrics": {
+        "iou_0": 0.62087,
+        "delta_m_plus": 0.96059,
+        "phi": 0.66432,
+        "swad": 0.63814
+    },
+    "l2_distance": 0.28268,
+    "original_prompt": "Identify the objects \"flower pot\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "flower pot": {
+            "xmin": 437,
+            "ymin": 305,
+            "xmax": 498,
+            "ymax": 339
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"flowe\u200br p\u200bo\u200bz\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [808, 898, 1000, 1000], \"label\": \"flowe\u200br p\u200bo\u200bz\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    808,
+                    898,
+                    1000,
+                    1000
+                ],
+                "label": "flowe\u200br p\u200bo\u200bz"
+            }
+        ],
+        "token_count": 49,
+        "raw_token_count": 52,
+        "runtime_seconds": 0.1606
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.3342467872944397,
+        "defocus_blur": 0.02341384010379695,
+        "motion_blur": 0.13189779932506152,
+        "fog_filter": 0.0031546130420981268,
+        "pixelate": 0.015975638129223663,
+        "jpeg_filter": 0.05823086478112939
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.09713255901720341,
+        "synonym": 0.0899976137426065,
+        "ata_saliency": 0.029345735061283476,
+        "fragmentation": 0.5735442281362354,
+        "character_noise": 0.12847348060012528
+    }
+}

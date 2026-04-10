@@ -1,0 +1,88 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/152",
+        "folder_id": "152",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00008276.JPEG"
+    },
+    "pareto_index": 9,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.956810286327587,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.5919188485823369
+    },
+    "objectives": {
+        "iou": 0.24049,
+        "img_dist": 0.0728,
+        "txt_dist": 0.22463,
+        "txt_sim": 0.77537
+    },
+    "swad_metrics": {
+        "iou_0": 0.86394,
+        "delta_m_plus": 0.72164,
+        "phi": 0.71892,
+        "swad": 0.5188
+    },
+    "l2_distance": 0.33704,
+    "original_prompt": "Identify the objects \"person, punching bag\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 17,
+            "ymin": 93,
+            "xmax": 221,
+            "ymax": 382
+        },
+        "punching bag": {
+            "xmin": 293,
+            "ymin": 1,
+            "xmax": 481,
+            "ymax": 320
+        },
+        "punching bag_1": {
+            "xmin": 48,
+            "ymin": 86,
+            "xmax": 92,
+            "ymax": 158
+        },
+        "punching bag_2": {
+            "xmin": 180,
+            "ymin": 34,
+            "xmax": 233,
+            "ymax": 133
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"pe\u200dr\u200bson, \u0440\u200bun\u200dch\u0456\u200bn\u200dg\u200d b\u0430\u200bg\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [12, 238, 468, 1000], \"label\": \"pe\u200dr\u200bson\"},\n\t{\"bbox_2d\": [576, 0, 948, 812], \"label\": \"\u0440\u200bun\u200d\u0447\u0456\u200b\u043d\u200d\u0433\u200d \u0431\u0430\u200b\u0433\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    12,
+                    238,
+                    468,
+                    1000
+                ],
+                "label": "pe\u200dr\u200bson"
+            },
+            {
+                "bbox_2d": [
+                    576,
+                    0,
+                    948,
+                    812
+                ],
+                "label": "\u0440\u200bun\u200d\u0447\u0456\u200b\u043d\u200d\u0433\u200d \u0431\u0430\u200b\u0433"
+            }
+        ],
+        "token_count": 91,
+        "raw_token_count": 187,
+        "runtime_seconds": 0.624
+    }
+}

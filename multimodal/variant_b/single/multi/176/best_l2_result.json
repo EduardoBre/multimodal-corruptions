@@ -1,0 +1,109 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/176",
+        "folder_id": "176",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00031019.JPEG"
+    },
+    "pareto_index": 2,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.105614,
+            "defocus_blur": 0.153069,
+            "motion_blur": 0.011439,
+            "fog_filter": 0.007843,
+            "pixelate": 0.018738,
+            "jpeg_filter": 0.110195
+        },
+        "text_corruptions": {
+            "homophone": 0.15838,
+            "synonym": 0.036082,
+            "ata_saliency": 0.055676,
+            "fragmentation": 0.130045,
+            "character_noise": 0.242759
+        },
+        "img_budget_used": 0.406898,
+        "txt_budget_used": 0.622942,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.34105,
+        "img_dist": 0.08373,
+        "txt_dist": 0.12038,
+        "txt_sim": 0.87962
+    },
+    "swad_metrics": {
+        "iou_0": 0.57565,
+        "delta_m_plus": 0.40754,
+        "phi": 0.80597,
+        "swad": 0.32847
+    },
+    "l2_distance": 0.37124,
+    "original_prompt": "Identify the objects \"apple\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "apple": {
+            "xmin": 30,
+            "ymin": 337,
+            "xmax": 150,
+            "ymax": 422
+        },
+        "apple_1": {
+            "xmin": 13,
+            "ymin": 53,
+            "xmax": 137,
+            "ymax": 168
+        },
+        "apple_2": {
+            "xmin": 65,
+            "ymin": 340,
+            "xmax": 146,
+            "ymax": 415
+        },
+        "apple_3": {
+            "xmin": 18,
+            "ymin": 422,
+            "xmax": 149,
+            "ymax": 498
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"ap\u200b\u0440le\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [58, 684, 444, 856], \"label\": \"ap\u200b\u0440le\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    58,
+                    684,
+                    444,
+                    856
+                ],
+                "label": "ap\u200b\u0440le"
+            }
+        ],
+        "token_count": 41,
+        "raw_token_count": 89,
+        "runtime_seconds": 0.2635
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.10561399378357428,
+        "defocus_blur": 0.15306870603558742,
+        "motion_blur": 0.011439130453523303,
+        "fog_filter": 0.007842969850475579,
+        "pixelate": 0.018738046909178595,
+        "jpeg_filter": 0.11019497395211457
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.15837981052708971,
+        "synonym": 0.03608168841923794,
+        "ata_saliency": 0.05567635312156429,
+        "fragmentation": 0.1300445802322399,
+        "character_noise": 0.2427591815504763
+    }
+}

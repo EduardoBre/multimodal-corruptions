@@ -1,0 +1,525 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/130",
+        "folder_id": "130",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00019756.JPEG"
+    },
+    "original_prompt": "Identify the objects \"maraca, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 34,
+            "ymin": 29,
+            "xmax": 336,
+            "ymax": 504
+        },
+        "maraca": {
+            "xmin": 86,
+            "ymin": 251,
+            "xmax": 183,
+            "ymax": 406
+        },
+        "maraca_1": {
+            "xmin": 224,
+            "ymin": 335,
+            "xmax": 335,
+            "ymax": 402
+        }
+    },
+    "baseline_iou": 0.94213,
+    "swad_star": 0.66357,
+    "swad_star_index": 8,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "n_solutions": 9,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.8632061743184387,
+                "txt_attack": "synonym",
+                "txt_scale": 0.7724979474714236
+            },
+            "objectives": {
+                "iou": 0.79918,
+                "img_dist": 0.18108,
+                "txt_dist": 0.11538,
+                "txt_sim": 0.88462
+            },
+            "swad_metrics": {
+                "iou_0": 0.94213,
+                "delta_m_plus": 0.15173,
+                "phi": 0.72443,
+                "swad": 0.10992
+            },
+            "l2_distance": 0.82752,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"maraca, man\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [256, 496, 544, 796], \"label\": \"maraca\"},\n\t{\"bbox_2d\": [658, 663, 844, 780], \"label\": \"maraca\"},\n\t{\"bbox_2d\": [120, 67, 980, 998], \"label\": \"man\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            256,
+                            496,
+                            544,
+                            796
+                        ],
+                        "label": "maraca"
+                    },
+                    {
+                        "bbox_2d": [
+                            658,
+                            663,
+                            844,
+                            780
+                        ],
+                        "label": "maraca"
+                    },
+                    {
+                        "bbox_2d": [
+                            120,
+                            67,
+                            980,
+                            998
+                        ],
+                        "label": "man"
+                    }
+                ],
+                "token_count": 106,
+                "raw_token_count": 124,
+                "runtime_seconds": 0.4229
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8181617493544074,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.41721849968957336
+            },
+            "objectives": {
+                "iou": 0.56866,
+                "img_dist": 0.05914,
+                "txt_dist": 0.12733,
+                "txt_sim": 0.87267
+            },
+            "swad_metrics": {
+                "iou_0": 0.94213,
+                "delta_m_plus": 0.39641,
+                "phi": 0.82106,
+                "swad": 0.32548
+            },
+            "l2_distance": 0.58573,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"amraca, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [258, 500, 436, 622], \"label\": \"amraca\"},\n\t{\"bbox_2d\": [660, 662, 840, 782], \"label\": \"amraca\"},\n\t{\"bbox_2d\": [116, 58, 998, 1000], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            258,
+                            500,
+                            436,
+                            622
+                        ],
+                        "label": "amraca"
+                    },
+                    {
+                        "bbox_2d": [
+                            660,
+                            662,
+                            840,
+                            782
+                        ],
+                        "label": "amraca"
+                    },
+                    {
+                        "bbox_2d": [
+                            116,
+                            58,
+                            998,
+                            1000
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 124,
+                "runtime_seconds": 0.4229
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.93439,
+                "img_dist": 0.03393,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.94213,
+                "delta_m_plus": 0.00822,
+                "phi": 0.96607,
+                "swad": 0.00794
+            },
+            "l2_distance": 0.93501,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"maraca, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [268, 504, 544, 798], \"label\": \"maraca\"},\n\t{\"bbox_2d\": [664, 658, 988, 798], \"label\": \"maraca\"},\n\t{\"bbox_2d\": [124, 62, 998, 998], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            268,
+                            504,
+                            544,
+                            798
+                        ],
+                        "label": "maraca"
+                    },
+                    {
+                        "bbox_2d": [
+                            664,
+                            658,
+                            988,
+                            798
+                        ],
+                        "label": "maraca"
+                    },
+                    {
+                        "bbox_2d": [
+                            124,
+                            62,
+                            998,
+                            998
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 106,
+                "raw_token_count": 124,
+                "runtime_seconds": 0.4229
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.64792,
+                "img_dist": 0.03609,
+                "txt_dist": 0.14049,
+                "txt_sim": 0.85951
+            },
+            "swad_metrics": {
+                "iou_0": 0.94213,
+                "delta_m_plus": 0.31228,
+                "phi": 0.82849,
+                "swad": 0.25872
+            },
+            "l2_distance": 0.66396,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"maraca, perstn\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [262, 504, 538, 798], \"label\": \"maraca\"},\n\t{\"bbox_2d\": [658, 658, 988, 798], \"label\": \"maraca\"},\n\t{\"bbox_2d\": [848, 672, 932, 712], \"label\": \"perstn\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            262,
+                            504,
+                            538,
+                            798
+                        ],
+                        "label": "maraca"
+                    },
+                    {
+                        "bbox_2d": [
+                            658,
+                            658,
+                            988,
+                            798
+                        ],
+                        "label": "maraca"
+                    },
+                    {
+                        "bbox_2d": [
+                            848,
+                            672,
+                            932,
+                            712
+                        ],
+                        "label": "perstn"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 124,
+                "runtime_seconds": 0.4229
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.018595721213425453,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6130568625347235
+            },
+            "objectives": {
+                "iou": 0.92276,
+                "img_dist": 0.03873,
+                "txt_dist": 0.03602,
+                "txt_sim": 0.96398
+            },
+            "swad_metrics": {
+                "iou_0": 0.94213,
+                "delta_m_plus": 0.02056,
+                "phi": 0.92665,
+                "swad": 0.01905
+            },
+            "l2_distance": 0.92427,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"maraca, preson\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [270, 506, 548, 798], \"label\": \"maraca\"},\n\t{\"bbox_2d\": [668, 658, 988, 798], \"label\": \"maraca\"},\n\t{\"bbox_2d\": [120, 64, 998, 1000], \"label\": \"preson\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            270,
+                            506,
+                            548,
+                            798
+                        ],
+                        "label": "maraca"
+                    },
+                    {
+                        "bbox_2d": [
+                            668,
+                            658,
+                            988,
+                            798
+                        ],
+                        "label": "maraca"
+                    },
+                    {
+                        "bbox_2d": [
+                            120,
+                            64,
+                            998,
+                            1000
+                        ],
+                        "label": "preson"
+                    }
+                ],
+                "token_count": 108,
+                "raw_token_count": 124,
+                "runtime_seconds": 0.4229
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.9316177058680379,
+                "txt_attack": "homophone",
+                "txt_scale": 0.9948250792623392
+            },
+            "objectives": {
+                "iou": 0.20355,
+                "img_dist": 0.06904,
+                "txt_dist": 0.26876,
+                "txt_sim": 0.73124
+            },
+            "swad_metrics": {
+                "iou_0": 0.94213,
+                "delta_m_plus": 0.78395,
+                "phi": 0.68076,
+                "swad": 0.53368
+            },
+            "l2_distance": 0.34414,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"maracka, pursun\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [270, 506, 420, 620], \"label\": \"maracka\"},\n\t{\"bbox_2d\": [660, 670, 820, 780], \"label\": \"pursun\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            270,
+                            506,
+                            420,
+                            620
+                        ],
+                        "label": "maracka"
+                    },
+                    {
+                        "bbox_2d": [
+                            660,
+                            670,
+                            820,
+                            780
+                        ],
+                        "label": "pursun"
+                    }
+                ],
+                "token_count": 76,
+                "raw_token_count": 126,
+                "runtime_seconds": 0.4809
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.03732619454213726,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.33647038540361596
+            },
+            "objectives": {
+                "iou": 0.94156,
+                "img_dist": 0.02689,
+                "txt_dist": 0.09998,
+                "txt_sim": 0.90002
+            },
+            "swad_metrics": {
+                "iou_0": 0.94213,
+                "delta_m_plus": 0.00061,
+                "phi": 0.87582,
+                "swad": 0.00053
+            },
+            "l2_distance": 0.94724,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"marmca, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [268, 502, 544, 798], \"label\": \"marmca\"},\n\t{\"bbox_2d\": [668, 660, 988, 798], \"label\": \"marmca\"},\n\t{\"bbox_2d\": [112, 60, 998, 1000], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            268,
+                            502,
+                            544,
+                            798
+                        ],
+                        "label": "marmca"
+                    },
+                    {
+                        "bbox_2d": [
+                            668,
+                            660,
+                            988,
+                            798
+                        ],
+                        "label": "marmca"
+                    },
+                    {
+                        "bbox_2d": [
+                            112,
+                            60,
+                            998,
+                            1000
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 126,
+                "runtime_seconds": 0.4809
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.956810286327587,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.5919188485823369
+            },
+            "objectives": {
+                "iou": 0.52858,
+                "img_dist": 0.10393,
+                "txt_dist": 0.23213,
+                "txt_sim": 0.76787
+            },
+            "swad_metrics": {
+                "iou_0": 0.94213,
+                "delta_m_plus": 0.43895,
+                "phi": 0.68807,
+                "swad": 0.30203
+            },
+            "l2_distance": 0.58659,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"m\u0430\u200bra\u200bc\u200d\u0430, \u0440\u0435\u200drson\u200b\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [270, 496, 430, 608], \"label\": \"m\u0430\u200bra\u200bc\u200d\u0430\"},\n\t{\"bbox_2d\": [660, 652, 820, 780], \"label\": \"m\u0430\u200bra\u200bc\u200d\u0430\"},\n\t{\"bbox_2d\": [110, 50, 999, 999], \"label\": \"\u0440\u0435\u200drson\u200b\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            270,
+                            496,
+                            430,
+                            608
+                        ],
+                        "label": "m\u0430\u200bra\u200bc\u200d\u0430"
+                    },
+                    {
+                        "bbox_2d": [
+                            660,
+                            652,
+                            820,
+                            780
+                        ],
+                        "label": "m\u0430\u200bra\u200bc\u200d\u0430"
+                    },
+                    {
+                        "bbox_2d": [
+                            110,
+                            50,
+                            999,
+                            999
+                        ],
+                        "label": "\u0440\u0435\u200drson\u200b"
+                    }
+                ],
+                "token_count": 125,
+                "raw_token_count": 126,
+                "runtime_seconds": 0.4809
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.7585322514200842,
+                "txt_attack": "synonym",
+                "txt_scale": 0.8286080825406955
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.06607,
+                "txt_dist": 0.28949,
+                "txt_sim": 0.71051
+            },
+            "swad_metrics": {
+                "iou_0": 0.94213,
+                "delta_m_plus": 1.0,
+                "phi": 0.66357,
+                "swad": 0.66357
+            },
+            "l2_distance": 0.29693,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"shaker, woman\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "There is no object matching the description \"shaker\" or \"woman\" in the image. The image shows a man holding maracas, which are percussion instruments, not shakers. There is no woman in the image.\n\n```json\n{\n  \"shaker\": [],\n  \"woman\": []\n}\n```",
+                "parsed_predictions": [],
+                "token_count": 62,
+                "raw_token_count": 126,
+                "runtime_seconds": 0.4809
+            }
+        }
+    ]
+}

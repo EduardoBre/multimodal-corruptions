@@ -1,0 +1,106 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/167",
+        "folder_id": "167",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00002431.JPEG"
+    },
+    "pareto_index": 3,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.025978,
+            "defocus_blur": 0.032494,
+            "motion_blur": 0.038861,
+            "fog_filter": 0.084846,
+            "pixelate": 0.014994,
+            "jpeg_filter": 0.466827
+        },
+        "text_corruptions": {
+            "homophone": 0.491061,
+            "synonym": 0.11022,
+            "ata_saliency": 0.044665,
+            "fragmentation": 0.083584,
+            "character_noise": 0.095458
+        },
+        "img_budget_used": 0.664,
+        "txt_budget_used": 0.824988,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.16959,
+        "img_dist": 0.09644,
+        "txt_dist": 0.14647,
+        "txt_sim": 0.85353
+    },
+    "swad_metrics": {
+        "iou_0": 0.91075,
+        "delta_m_plus": 0.81379,
+        "phi": 0.77122,
+        "swad": 0.62761
+    },
+    "l2_distance": 0.24396,
+    "original_prompt": "Identify the objects \"flower pot, sofa\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "sofa": {
+            "xmin": 171,
+            "ymin": 139,
+            "xmax": 398,
+            "ymax": 231
+        },
+        "flower pot": {
+            "xmin": 33,
+            "ymin": 180,
+            "xmax": 79,
+            "ymax": 225
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"fl\u200do\u200dw\u200der\u200d pot, so fa\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [58, 400, 158, 700], \"label\": \"fl\u200do\u200dw\u200der\u200d pot\"},\n\t{\"bbox_2d\": [14, 660, 294, 972], \"label\": \"so fa\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    58,
+                    400,
+                    158,
+                    700
+                ],
+                "label": "fl\u200do\u200dw\u200der\u200d pot"
+            },
+            {
+                "bbox_2d": [
+                    14,
+                    660,
+                    294,
+                    972
+                ],
+                "label": "so fa"
+            }
+        ],
+        "token_count": 83,
+        "raw_token_count": 89,
+        "runtime_seconds": 0.2973
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.02597814141153532,
+        "defocus_blur": 0.032493850629237216,
+        "motion_blur": 0.03886062213305447,
+        "fog_filter": 0.08484645234310736,
+        "pixelate": 0.014994046110970502,
+        "jpeg_filter": 0.4668271199014061
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.4910611002440728,
+        "synonym": 0.11022046292654153,
+        "ata_saliency": 0.044664501258098906,
+        "fragmentation": 0.08358359309518922,
+        "character_noise": 0.09545834618830681
+    }
+}

@@ -1,0 +1,73 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/240",
+        "folder_id": "240",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00014058.JPEG"
+    },
+    "pareto_index": 12,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 45,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.9715186776522868,
+        "txt_attack": "homophone",
+        "txt_scale": 0.9948250792623392
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.0876,
+        "txt_dist": 0.29797,
+        "txt_sim": 0.70203
+    },
+    "swad_metrics": {
+        "iou_0": 0.91043,
+        "delta_m_plus": 1.0,
+        "phi": 0.64053,
+        "swad": 0.64053
+    },
+    "l2_distance": 0.31058,
+    "original_prompt": "Identify the objects \"chair, dog, table\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 103,
+            "ymin": 51,
+            "xmax": 494,
+            "ymax": 312
+        },
+        "table": {
+            "xmin": 0,
+            "ymin": 60,
+            "xmax": 256,
+            "ymax": 262
+        },
+        "chair": {
+            "xmin": 256,
+            "ymin": 104,
+            "xmax": 386,
+            "ymax": 142
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"che're, dag, ta bull\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [228, 138, 978, 750], \"label\": \"che're, dag, ta bull\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    228,
+                    138,
+                    978,
+                    750
+                ],
+                "label": "che're, dag, ta bull"
+            }
+        ],
+        "token_count": 45,
+        "raw_token_count": 243,
+        "runtime_seconds": 0.7629
+    }
+}

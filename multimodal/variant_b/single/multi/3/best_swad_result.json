@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/3",
+        "folder_id": "3",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00033089.JPEG"
+    },
+    "pareto_index": 2,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 60,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.000205,
+            "defocus_blur": 0.074116,
+            "motion_blur": 0.118867,
+            "fog_filter": 0.155927,
+            "pixelate": 0.058744,
+            "jpeg_filter": 0.030776
+        },
+        "text_corruptions": {
+            "homophone": 0.001805,
+            "synonym": 0.04074,
+            "ata_saliency": 0.083141,
+            "fragmentation": 0.021848,
+            "character_noise": 0.743372
+        },
+        "img_budget_used": 0.438635,
+        "txt_budget_used": 0.890904,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.10403,
+        "txt_dist": 0.28009,
+        "txt_sim": 0.71991
+    },
+    "swad_metrics": {
+        "iou_0": 0.92129,
+        "delta_m_plus": 1.0,
+        "phi": 0.64502,
+        "swad": 0.64502
+    },
+    "l2_distance": 0.29879,
+    "original_prompt": "Identify the objects \"artichoke\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "artichoke": {
+            "xmin": 22,
+            "ymin": 227,
+            "xmax": 288,
+            "ymax": 497
+        },
+        "artichoke_1": {
+            "xmin": 92,
+            "ymin": 0,
+            "xmax": 357,
+            "ymax": 250
+        },
+        "artichoke_2": {
+            "xmin": 1,
+            "ymin": 123,
+            "xmax": 128,
+            "ymax": 287
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"\u0430\u200dr\u200dt\u200bi\u0441h\u200bok\u0435\u200d\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [234, 0, 948, 577], \"label\": \"\u0430\u200d\u0440\u200d\u0442\u200b\u0438\u200b\u0441\u200b\u043a\u200b\u043e\u200b\u043a\u200b\u0435\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    234,
+                    0,
+                    948,
+                    577
+                ],
+                "label": "\u0430\u200d\u0440\u200d\u0442\u200b\u0438\u200b\u0441\u200b\u043a\u200b\u043e\u200b\u043a\u200b\u0435"
+            }
+        ],
+        "token_count": 55,
+        "raw_token_count": 141,
+        "runtime_seconds": 0.4887
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.00020504653998202596,
+        "defocus_blur": 0.07411648242070425,
+        "motion_blur": 0.11886722998629073,
+        "fog_filter": 0.1559269376187908,
+        "pixelate": 0.05874383033105662,
+        "jpeg_filter": 0.030775916255888856
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.001805146175523974,
+        "synonym": 0.040739526865822606,
+        "ata_saliency": 0.08314061085215738,
+        "fragmentation": 0.02184750810491892,
+        "character_noise": 0.7433715725569237
+    }
+}

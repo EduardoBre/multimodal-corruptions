@@ -1,0 +1,88 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/161",
+        "folder_id": "161",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00003593.JPEG"
+    },
+    "pareto_index": 6,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.956810286327587,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.5919188485823369
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.0658,
+        "txt_dist": 0.20356,
+        "txt_sim": 0.79644
+    },
+    "swad_metrics": {
+        "iou_0": 0.76922,
+        "delta_m_plus": 1.0,
+        "phi": 0.74403,
+        "swad": 0.74403
+    },
+    "l2_distance": 0.21393,
+    "original_prompt": "Identify the objects \"hat with a wide brim, horse, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 146,
+            "ymin": 230,
+            "xmax": 193,
+            "ymax": 306
+        },
+        "hat with a wide brim": {
+            "xmin": 159,
+            "ymin": 232,
+            "xmax": 184,
+            "ymax": 248
+        },
+        "horse": {
+            "xmin": 226,
+            "ymin": 253,
+            "xmax": 296,
+            "ymax": 366
+        },
+        "horse_1": {
+            "xmin": 142,
+            "ymin": 243,
+            "xmax": 200,
+            "ymax": 365
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"h\u200b\u0430\u200bt\u200d w\u0456\u200bth\u200d \u0430\u200b wide\u200b b\u200dr\u200b\u0456\u200dm\u200d, h\u200bor\u200ds\u0435\u200b, p\u0435\u200drs\u043e\u200dn\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [428, 458, 592, 720], \"label\": \"h\u200b\u0430\u200bt\u200d w\u0456\u200bth\u200d \u0430\u200b wide\u200b b\u200dr\u200b\u0456\u200dm\u200d, h\u200bor\u200ds\u0435\u200b, p\u0435\u200drs\u043e\u200dn\"},\n\t{\"bbox_2d\": [678, 492, 856, 720], \"label\": \"h\u200b\u0430\u200bt\u200d w\u0456\u200bth\u200d \u0430\u200b wide\u200b b\u200dr\u200b\u0456\u200dm\u200d, h\u200bor\u200ds\u0435\u200b, p\u0435\u200drs\u043e\u200dn\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    428,
+                    458,
+                    592,
+                    720
+                ],
+                "label": "h\u200b\u0430\u200bt\u200d w\u0456\u200bth\u200d \u0430\u200b wide\u200b b\u200dr\u200b\u0456\u200dm\u200d, h\u200bor\u200ds\u0435\u200b, p\u0435\u200drs\u043e\u200dn"
+            },
+            {
+                "bbox_2d": [
+                    678,
+                    492,
+                    856,
+                    720
+                ],
+                "label": "h\u200b\u0430\u200bt\u200d w\u0456\u200bth\u200d \u0430\u200b wide\u200b b\u200dr\u200b\u0456\u200dm\u200d, h\u200bor\u200ds\u0435\u200b, p\u0435\u200drs\u043e\u200dn"
+            }
+        ],
+        "token_count": 164,
+        "raw_token_count": 185,
+        "runtime_seconds": 0.6362
+    }
+}

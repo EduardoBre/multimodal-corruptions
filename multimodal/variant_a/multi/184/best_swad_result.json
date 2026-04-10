@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/184",
+        "folder_id": "184",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00012279.JPEG"
+    },
+    "pareto_index": 9,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.08646227720474076,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6881327596781619
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.0242,
+        "txt_dist": 0.24772,
+        "txt_sim": 0.75228
+    },
+    "swad_metrics": {
+        "iou_0": 0.97016,
+        "delta_m_plus": 1.0,
+        "phi": 0.73407,
+        "swad": 0.73407
+    },
+    "l2_distance": 0.2489,
+    "original_prompt": "Identify the objects \"apple, spatula\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "apple": {
+            "xmin": 228,
+            "ymin": 31,
+            "xmax": 460,
+            "ymax": 264
+        },
+        "spatula": {
+            "xmin": 49,
+            "ymin": 51,
+            "xmax": 444,
+            "ymax": 306
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"a pull, spadula\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [97, 147, 885, 933], \"label\": \"a pull, spadula\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    97,
+                    147,
+                    885,
+                    933
+                ],
+                "label": "a pull, spadula"
+            }
+        ],
+        "token_count": 43,
+        "raw_token_count": 93,
+        "runtime_seconds": 0.3368
+    }
+}

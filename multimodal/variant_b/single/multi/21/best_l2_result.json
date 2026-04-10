@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/21",
+        "folder_id": "21",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00043092.JPEG"
+    },
+    "pareto_index": 0,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.007109,
+            "defocus_blur": 0.023457,
+            "motion_blur": 0.034109,
+            "fog_filter": 0.049276,
+            "pixelate": 0.012623,
+            "jpeg_filter": 0.007302
+        },
+        "text_corruptions": {
+            "homophone": 0.442839,
+            "synonym": 0.073116,
+            "ata_saliency": 0.130501,
+            "fragmentation": 0.01186,
+            "character_noise": 0.122615
+        },
+        "img_budget_used": 0.133876,
+        "txt_budget_used": 0.78093,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.4412,
+        "img_dist": 0.08272,
+        "txt_dist": 0.2796,
+        "txt_sim": 0.7204
+    },
+    "swad_metrics": {
+        "iou_0": 0.92398,
+        "delta_m_plus": 0.5225,
+        "phi": 0.66081,
+        "swad": 0.34527
+    },
+    "l2_distance": 0.52884,
+    "original_prompt": "Identify the objects \"salt or pepper shaker\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "salt or pepper shaker": {
+            "xmin": 211,
+            "ymin": 106,
+            "xmax": 329,
+            "ymax": 320
+        },
+        "salt or pepper shaker_1": {
+            "xmin": 357,
+            "ymin": 99,
+            "xmax": 487,
+            "ymax": 326
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"s\u200b\u0430ltre\u200d \u0440\u200de\u200bp\u200bper shaker\u200b\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [728, 279, 978, 887], \"label\": \"s\u200b\u0430ltre\u200d \u0440\u200de\u200bp\u200bper shaker\u200b\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    728,
+                    279,
+                    978,
+                    887
+                ],
+                "label": "s\u200b\u0430ltre\u200d \u0440\u200de\u200bp\u200bper shaker\u200b"
+            }
+        ],
+        "token_count": 55,
+        "raw_token_count": 115,
+        "runtime_seconds": 0.4573
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.007108527119596197,
+        "defocus_blur": 0.023457043555454443,
+        "motion_blur": 0.034109426102794244,
+        "fog_filter": 0.04927609372596469,
+        "pixelate": 0.012622932115844048,
+        "jpeg_filter": 0.0073018481238059756
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.44283919529837434,
+        "synonym": 0.07311597147515722,
+        "ata_saliency": 0.13050079512933957,
+        "fragmentation": 0.011859633565523399,
+        "character_noise": 0.1226147977549806
+    }
+}

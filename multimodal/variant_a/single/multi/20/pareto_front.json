@@ -1,0 +1,230 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/single/multi/20",
+        "folder_id": "20",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00013809.JPEG"
+    },
+    "original_prompt": "Identify the objects \"seal\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "seal": {
+            "xmin": 280,
+            "ymin": 34,
+            "xmax": 387,
+            "ymax": 78
+        },
+        "seal_1": {
+            "xmin": 198,
+            "ymin": 98,
+            "xmax": 344,
+            "ymax": 201
+        },
+        "seal_2": {
+            "xmin": 311,
+            "ymin": 104,
+            "xmax": 450,
+            "ymax": 156
+        },
+        "seal_3": {
+            "xmin": 211,
+            "ymin": 169,
+            "xmax": 382,
+            "ymax": 337
+        },
+        "seal_4": {
+            "xmin": 143,
+            "ymin": 71,
+            "xmax": 272,
+            "ymax": 236
+        },
+        "seal_5": {
+            "xmin": 68,
+            "ymin": 97,
+            "xmax": 141,
+            "ymax": 233
+        },
+        "seal_6": {
+            "xmin": 333,
+            "ymin": 307,
+            "xmax": 499,
+            "ymax": 373
+        },
+        "seal_7": {
+            "xmin": 385,
+            "ymin": 251,
+            "xmax": 499,
+            "ymax": 301
+        }
+    },
+    "baseline_iou": 0.89308,
+    "swad_star": 0.86749,
+    "swad_star_index": 0,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 4,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.08133,
+                "img_dist": 0.04559,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.89308,
+                "delta_m_plus": 0.90893,
+                "phi": 0.95441,
+                "swad": 0.86749
+            },
+            "l2_distance": 0.09324,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"seal\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 178, 1000, 998], \"label\": \"seal\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            178,
+                            1000,
+                            998
+                        ],
+                        "label": "seal"
+                    }
+                ],
+                "token_count": 39,
+                "raw_token_count": 572,
+                "runtime_seconds": 2.0116
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.6126883641923373,
+                "txt_attack": "homophone",
+                "txt_scale": 0.10684452896191199
+            },
+            "objectives": {
+                "iou": 0.06926,
+                "img_dist": 0.0596,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.89308,
+                "delta_m_plus": 0.92245,
+                "phi": 0.9404,
+                "swad": 0.86747
+            },
+            "l2_distance": 0.09137,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"seal\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 1000, 997], \"label\": \"seal\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            997
+                        ],
+                        "label": "seal"
+                    }
+                ],
+                "token_count": 37,
+                "raw_token_count": 572,
+                "runtime_seconds": 2.0116
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.01689,
+                "img_dist": 0.10704,
+                "txt_dist": 0.35327,
+                "txt_sim": 0.64673
+            },
+            "swad_metrics": {
+                "iou_0": 0.89308,
+                "delta_m_plus": 0.98109,
+                "phi": 0.5775,
+                "swad": 0.56658
+            },
+            "l2_distance": 0.36952,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"ceil\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [748, 0, 999, 360], \"label\": \"ceil\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            748,
+                            0,
+                            999,
+                            360
+                        ],
+                        "label": "ceil"
+                    }
+                ],
+                "token_count": 37,
+                "raw_token_count": 572,
+                "runtime_seconds": 2.0116
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.10409,
+                "img_dist": 0.03835,
+                "txt_dist": 0.35327,
+                "txt_sim": 0.64673
+            },
+            "swad_metrics": {
+                "iou_0": 0.89308,
+                "delta_m_plus": 0.88345,
+                "phi": 0.62193,
+                "swad": 0.54944
+            },
+            "l2_distance": 0.37028,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"ceil\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [567, 96, 772, 198], \"label\": \"ceil\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            567,
+                            96,
+                            772,
+                            198
+                        ],
+                        "label": "ceil"
+                    }
+                ],
+                "token_count": 38,
+                "raw_token_count": 572,
+                "runtime_seconds": 2.0116
+            }
+        }
+    ]
+}

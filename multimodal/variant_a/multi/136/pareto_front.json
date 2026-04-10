@@ -1,0 +1,165 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/136",
+        "folder_id": "136",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00015169.JPEG"
+    },
+    "original_prompt": "Identify the objects \"drum, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 312,
+            "ymin": 1,
+            "xmax": 499,
+            "ymax": 374
+        },
+        "person_1": {
+            "xmin": 27,
+            "ymin": 1,
+            "xmax": 298,
+            "ymax": 276
+        },
+        "drum": {
+            "xmin": 128,
+            "ymin": 211,
+            "xmax": 377,
+            "ymax": 374
+        }
+    },
+    "baseline_iou": 0.87556,
+    "swad_star": 0.73758,
+    "swad_star_index": 0,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 2,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.018595721213425453,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6130568625347235
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.04985,
+                "txt_dist": 0.22372,
+                "txt_sim": 0.77628
+            },
+            "swad_metrics": {
+                "iou_0": 0.87556,
+                "delta_m_plus": 1.0,
+                "phi": 0.73758,
+                "swad": 0.73758
+            },
+            "l2_distance": 0.22921,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"drym, persno\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [62, 2, 583, 997], \"label\": \"drym, persno\"},\n\t{\"bbox_2d\": [625, 14, 1000, 997], \"label\": \"drym, persno\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            62,
+                            2,
+                            583,
+                            997
+                        ],
+                        "label": "drym, persno"
+                    },
+                    {
+                        "bbox_2d": [
+                            625,
+                            14,
+                            1000,
+                            997
+                        ],
+                        "label": "drym, persno"
+                    }
+                ],
+                "token_count": 77,
+                "raw_token_count": 195,
+                "runtime_seconds": 0.7265
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.87145,
+                "img_dist": 0.03801,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.87556,
+                "delta_m_plus": 0.00469,
+                "phi": 0.96199,
+                "swad": 0.00452
+            },
+            "l2_distance": 0.87228,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"drum, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [252, 576, 742, 1000], \"label\": \"drum\"},\n\t{\"bbox_2d\": [623, 12, 1000, 989], \"label\": \"person\"},\n\t{\"bbox_2d\": [42, 0, 583, 997], \"label\": \"person\"},\n\t{\"bbox_2d\": [308, 138, 375, 212], \"label\": \"person\"},\n\t{\"bbox_2d\": [417, 34, 552, 500], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            252,
+                            576,
+                            742,
+                            1000
+                        ],
+                        "label": "drum"
+                    },
+                    {
+                        "bbox_2d": [
+                            623,
+                            12,
+                            1000,
+                            989
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            42,
+                            0,
+                            583,
+                            997
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            308,
+                            138,
+                            375,
+                            212
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            417,
+                            34,
+                            552,
+                            500
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 169,
+                "raw_token_count": 195,
+                "runtime_seconds": 0.7265
+            }
+        }
+    ]
+}

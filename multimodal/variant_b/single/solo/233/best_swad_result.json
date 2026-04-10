@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/233",
+        "folder_id": "233",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00035783.JPEG"
+    },
+    "pareto_index": 0,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.017417,
+            "defocus_blur": 0.265867,
+            "motion_blur": 0.278962,
+            "fog_filter": 0.00575,
+            "pixelate": 0.111235,
+            "jpeg_filter": 0.081692
+        },
+        "text_corruptions": {
+            "homophone": 0.000229,
+            "synonym": 0.009505,
+            "ata_saliency": 0.054703,
+            "fragmentation": 0.021532,
+            "character_noise": 0.000899
+        },
+        "img_budget_used": 0.760922,
+        "txt_budget_used": 0.086867,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.31519,
+        "img_dist": 0.09825,
+        "txt_dist": 0.04468,
+        "txt_sim": 0.95532
+    },
+    "swad_metrics": {
+        "iou_0": 0.94248,
+        "delta_m_plus": 0.66557,
+        "phi": 0.86146,
+        "swad": 0.57337
+    },
+    "l2_distance": 0.33316,
+    "original_prompt": "Identify the objects \"airplane\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "airplane": {
+            "xmin": 158,
+            "ymin": 200,
+            "xmax": 431,
+            "ymax": 329
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"airpl\u200bane\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [322, 712, 722, 860], \"label\": \"airpl\u200bane\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    322,
+                    712,
+                    722,
+                    860
+                ],
+                "label": "airpl\u200bane"
+            }
+        ],
+        "token_count": 42,
+        "raw_token_count": 57,
+        "runtime_seconds": 0.1862
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.017417365010267985,
+        "defocus_blur": 0.2658667732756844,
+        "motion_blur": 0.27896179227994583,
+        "fog_filter": 0.005749551089190215,
+        "pixelate": 0.11123470605702221,
+        "jpeg_filter": 0.08169153945773708
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.00022897068786281624,
+        "synonym": 0.009504995187085565,
+        "ata_saliency": 0.0547025931655211,
+        "fragmentation": 0.02153173781382245,
+        "character_noise": 0.0008991962588226727
+    }
+}

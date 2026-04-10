@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/85",
+        "folder_id": "85",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00023511.JPEG"
+    },
+    "pareto_index": 15,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.006186,
+            "defocus_blur": 0.011995,
+            "motion_blur": 0.044102,
+            "fog_filter": 0.001608,
+            "pixelate": 0.004991,
+            "jpeg_filter": 0.000201
+        },
+        "text_corruptions": {
+            "homophone": 0.053436,
+            "synonym": 0.167794,
+            "ata_saliency": 0.014366,
+            "fragmentation": 0.016418,
+            "character_noise": 0.004193
+        },
+        "img_budget_used": 0.069082,
+        "txt_budget_used": 0.256206,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.10089,
+        "img_dist": 0.10816,
+        "txt_dist": 0.18031,
+        "txt_sim": 0.81969
+    },
+    "swad_metrics": {
+        "iou_0": 0.97663,
+        "delta_m_plus": 0.8967,
+        "phi": 0.73103,
+        "swad": 0.65551
+    },
+    "l2_distance": 0.23321,
+    "original_prompt": "Identify the objects \"bear\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bear": {
+            "xmin": 26,
+            "ymin": 127,
+            "xmax": 459,
+            "ymax": 525
+        },
+        "bear_1": {
+            "xmin": 352,
+            "ymin": 111,
+            "xmax": 773,
+            "ymax": 524
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bare\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [690, 62, 967, 517], \"label\": \"bare\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    690,
+                    62,
+                    967,
+                    517
+                ],
+                "label": "bare"
+            }
+        ],
+        "token_count": 38,
+        "raw_token_count": 84,
+        "runtime_seconds": 0.2758
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.006185861266428231,
+        "defocus_blur": 0.011995124088213113,
+        "motion_blur": 0.04410170715905161,
+        "fog_filter": 0.00160771076526409,
+        "pixelate": 0.004990535711342628,
+        "jpeg_filter": 0.0002013887259471399
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.05343603073510952,
+        "synonym": 0.16779372825177383,
+        "ata_saliency": 0.014365802015394582,
+        "fragmentation": 0.016417567940915524,
+        "character_noise": 0.004193203963400071
+    }
+}

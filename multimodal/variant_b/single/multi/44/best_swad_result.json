@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/44",
+        "folder_id": "44",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00007542.JPEG"
+    },
+    "pareto_index": 6,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.188402,
+            "defocus_blur": 0.049059,
+            "motion_blur": 0.121546,
+            "fog_filter": 0.427452,
+            "pixelate": 0.080643,
+            "jpeg_filter": 0.007854
+        },
+        "text_corruptions": {
+            "homophone": 0.061237,
+            "synonym": 0.009675,
+            "ata_saliency": 0.280548,
+            "fragmentation": 0.240829,
+            "character_noise": 0.067741
+        },
+        "img_budget_used": 0.874956,
+        "txt_budget_used": 0.660031,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.16213,
+        "txt_dist": 0.31407,
+        "txt_sim": 0.68593
+    },
+    "swad_metrics": {
+        "iou_0": 0.80501,
+        "delta_m_plus": 1.0,
+        "phi": 0.57472,
+        "swad": 0.57472
+    },
+    "l2_distance": 0.35345,
+    "original_prompt": "Identify the objects \"dog\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 0,
+            "ymin": 184,
+            "xmax": 218,
+            "ymax": 332
+        },
+        "dog_1": {
+            "xmin": 203,
+            "ymin": 97,
+            "xmax": 329,
+            "ymax": 321
+        },
+        "dog_2": {
+            "xmin": 24,
+            "ymin": 192,
+            "xmax": 71,
+            "ymax": 218
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"d\u043er\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [678, 0, 800, 200], \"label\": \"d\u043er\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    678,
+                    0,
+                    800,
+                    200
+                ],
+                "label": "d\u043er"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 104,
+        "runtime_seconds": 0.3188
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.18840231508119762,
+        "defocus_blur": 0.049058772215348115,
+        "motion_blur": 0.12154609158194285,
+        "fog_filter": 0.4274519004948909,
+        "pixelate": 0.08064301872465574,
+        "jpeg_filter": 0.007853638607827347
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.06123746731764437,
+        "synonym": 0.009675211928985183,
+        "ata_saliency": 0.28054762392256355,
+        "fragmentation": 0.24082902195265243,
+        "character_noise": 0.06774128054562113
+    }
+}

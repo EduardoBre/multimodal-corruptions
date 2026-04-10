@@ -1,0 +1,76 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/182",
+        "folder_id": "182",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00007586.JPEG"
+    },
+    "pareto_index": 2,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 9,
+    "total_evaluations": 255,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.015378397504088738,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.6269215478665312
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.07588,
+        "txt_dist": 0.29173,
+        "txt_sim": 0.70827
+    },
+    "swad_metrics": {
+        "iou_0": 0.89283,
+        "delta_m_plus": 1.0,
+        "phi": 0.65453,
+        "swad": 0.65453
+    },
+    "l2_distance": 0.30144,
+    "original_prompt": "Identify the objects \"antelope\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "antelope": {
+            "xmin": 82,
+            "ymin": 197,
+            "xmax": 321,
+            "ymax": 337
+        },
+        "antelope_1": {
+            "xmin": 103,
+            "ymin": 81,
+            "xmax": 230,
+            "ymax": 173
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"\u0430\u200dn\u200bt\u200b\u0435lop\u0435\u200d\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [220, 387, 862, 687], \"label\": \"\u0430\u200d\u043d\u200b\u0442\u200b\u0435\u200b\u043b\u200b\u043e\u200b\u043f\u200b\u0435\"},\n\t{\"bbox_2d\": [280, 173, 612, 363], \"label\": \"\u0430\u200d\u043d\u200b\u0442\u200b\u0435\u200b\u043b\u200b\u043e\u200b\u043f\u200b\u0435\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    220,
+                    387,
+                    862,
+                    687
+                ],
+                "label": "\u0430\u200d\u043d\u200b\u0442\u200b\u0435\u200b\u043b\u200b\u043e\u200b\u043f\u200b\u0435"
+            },
+            {
+                "bbox_2d": [
+                    280,
+                    173,
+                    612,
+                    363
+                ],
+                "label": "\u0430\u200d\u043d\u200b\u0442\u200b\u0435\u200b\u043b\u200b\u043e\u200b\u043f\u200b\u0435"
+            }
+        ],
+        "token_count": 102,
+        "raw_token_count": 103,
+        "runtime_seconds": 0.3472
+    }
+}

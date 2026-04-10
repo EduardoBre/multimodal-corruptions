@@ -1,0 +1,76 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/18",
+        "folder_id": "18",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00005059.JPEG"
+    },
+    "pareto_index": 5,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.863144940280058,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6678992108124702
+    },
+    "objectives": {
+        "iou": 0.32202,
+        "img_dist": 0.08143,
+        "txt_dist": 0.27543,
+        "txt_sim": 0.72457
+    },
+    "swad_metrics": {
+        "iou_0": 0.93615,
+        "delta_m_plus": 0.65602,
+        "phi": 0.66557,
+        "swad": 0.43662
+    },
+    "l2_distance": 0.4315,
+    "original_prompt": "Identify the objects \"chair, dog\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 147,
+            "ymin": 69,
+            "xmax": 266,
+            "ymax": 311
+        },
+        "chair": {
+            "xmin": 388,
+            "ymin": 175,
+            "xmax": 488,
+            "ymax": 223
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"cher, doug\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [370, 180, 524, 830], \"label\": \"cher\"},\n\t{\"bbox_2d\": [0, 380, 380, 750], \"label\": \"doug\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    370,
+                    180,
+                    524,
+                    830
+                ],
+                "label": "cher"
+            },
+            {
+                "bbox_2d": [
+                    0,
+                    380,
+                    380,
+                    750
+                ],
+                "label": "doug"
+            }
+        ],
+        "token_count": 71,
+        "raw_token_count": 77,
+        "runtime_seconds": 0.3112
+    }
+}

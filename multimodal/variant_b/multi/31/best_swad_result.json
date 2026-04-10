@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/31",
+        "folder_id": "31",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00032382.JPEG"
+    },
+    "pareto_index": 9,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.008827,
+            "defocus_blur": 0.161943,
+            "motion_blur": 0.043541,
+            "fog_filter": 0.002586,
+            "pixelate": 0.308222,
+            "jpeg_filter": 0.313567
+        },
+        "text_corruptions": {
+            "homophone": 0.0912,
+            "synonym": 0.043467,
+            "ata_saliency": 0.222312,
+            "fragmentation": 0.165679,
+            "character_noise": 0.225436
+        },
+        "img_budget_used": 0.838687,
+        "txt_budget_used": 0.748096,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.08366,
+        "txt_dist": 0.29773,
+        "txt_sim": 0.70227
+    },
+    "swad_metrics": {
+        "iou_0": 0.56594,
+        "delta_m_plus": 1.0,
+        "phi": 0.64352,
+        "swad": 0.64352
+    },
+    "l2_distance": 0.30926,
+    "original_prompt": "Identify the objects \"bus, car, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 332,
+            "ymin": 203,
+            "xmax": 356,
+            "ymax": 226
+        },
+        "car": {
+            "xmin": 240,
+            "ymin": 222,
+            "xmax": 285,
+            "ymax": 241
+        },
+        "bus": {
+            "xmin": 316,
+            "ymin": 187,
+            "xmax": 421,
+            "ymax": 270
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"b\u200dus\u200b, \u0441\u0430h, p\u200ber s\u043eu\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [632, 498, 832, 712], \"label\": \"b\u200dus\u200b, \u0441\u0430h, p\u200ber s\u043eu\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    632,
+                    498,
+                    832,
+                    712
+                ],
+                "label": "b\u200dus\u200b, \u0441\u0430h, p\u200ber s\u043eu"
+            }
+        ],
+        "token_count": 54,
+        "raw_token_count": 197,
+        "runtime_seconds": 0.795
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.008827386113852542,
+        "defocus_blur": 0.16194260102425875,
+        "motion_blur": 0.04354137896137734,
+        "fog_filter": 0.002585839255011739,
+        "pixelate": 0.3082222005898319,
+        "jpeg_filter": 0.313567142386107
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.09120025328706416,
+        "synonym": 0.04346730394184821,
+        "ata_saliency": 0.22231225997754045,
+        "fragmentation": 0.16567948807811841,
+        "character_noise": 0.22543627340560374
+    }
+}

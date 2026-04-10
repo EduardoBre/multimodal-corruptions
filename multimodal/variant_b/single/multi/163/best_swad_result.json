@@ -1,0 +1,106 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/163",
+        "folder_id": "163",
+        "category": "single/multi",
+        "filename": "ILSVRC2013_val_00003532.JPEG"
+    },
+    "pareto_index": 13,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 7,
+    "total_evaluations": 210,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.006576,
+            "defocus_blur": 0.079937,
+            "motion_blur": 0.15873,
+            "fog_filter": 0.010292,
+            "pixelate": 0.19176,
+            "jpeg_filter": 0.056305
+        },
+        "text_corruptions": {
+            "homophone": 0.047051,
+            "synonym": 0.047701,
+            "ata_saliency": 0.078141,
+            "fragmentation": 0.091447,
+            "character_noise": 0.134921
+        },
+        "img_budget_used": 0.5036,
+        "txt_budget_used": 0.399261,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.08638,
+        "txt_dist": 0.20851,
+        "txt_sim": 0.79149
+    },
+    "swad_metrics": {
+        "iou_0": 0.8544,
+        "delta_m_plus": 1.0,
+        "phi": 0.72312,
+        "swad": 0.72312
+    },
+    "l2_distance": 0.22569,
+    "original_prompt": "Identify the objects \"hippopotamus\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "hippopotamus": {
+            "xmin": 212,
+            "ymin": 40,
+            "xmax": 490,
+            "ymax": 217
+        },
+        "hippopotamus_1": {
+            "xmin": 83,
+            "ymin": 66,
+            "xmax": 262,
+            "ymax": 218
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"h\u200bippo\u0440ot\u200dam\u200dus\u200d\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [416, 117, 974, 697], \"label\": \"h\u200bippo\u0440\u043e\u0442\u200d\u0430\u043c\u200d\u0443\u200d\u0441\"},\n\t{\"bbox_2d\": [170, 210, 528, 697], \"label\": \"h\u200bippo\u0440\u043e\u0442\u200d\u0430\u043c\u200d\u0443\u200d\u0441\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    416,
+                    117,
+                    974,
+                    697
+                ],
+                "label": "h\u200bippo\u0440\u043e\u0442\u200d\u0430\u043c\u200d\u0443\u200d\u0441"
+            },
+            {
+                "bbox_2d": [
+                    170,
+                    210,
+                    528,
+                    697
+                ],
+                "label": "h\u200bippo\u0440\u043e\u0442\u200d\u0430\u043c\u200d\u0443\u200d\u0441"
+            }
+        ],
+        "token_count": 98,
+        "raw_token_count": 99,
+        "runtime_seconds": 0.3347
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.006575518258623127,
+        "defocus_blur": 0.07993712701337144,
+        "motion_blur": 0.1587297821390866,
+        "fog_filter": 0.010292319621014144,
+        "pixelate": 0.1917597086148503,
+        "jpeg_filter": 0.056305283043598844
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.0470509786959301,
+        "synonym": 0.04770116816632235,
+        "ata_saliency": 0.0781407814687655,
+        "fragmentation": 0.09144676688430206,
+        "character_noise": 0.13492101993705188
+    }
+}

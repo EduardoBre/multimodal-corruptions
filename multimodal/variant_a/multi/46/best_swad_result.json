@@ -1,0 +1,82 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/46",
+        "folder_id": "46",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00000435.JPEG"
+    },
+    "pareto_index": 6,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.863144940280058,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6678992108124702
+    },
+    "objectives": {
+        "iou": 0.28144,
+        "img_dist": 0.06567,
+        "txt_dist": 0.18118,
+        "txt_sim": 0.81882
+    },
+    "swad_metrics": {
+        "iou_0": 0.70392,
+        "delta_m_plus": 0.60018,
+        "phi": 0.76505,
+        "swad": 0.45917
+    },
+    "l2_distance": 0.3411,
+    "original_prompt": "Identify the objects \"chair, table\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "table": {
+            "xmin": 360,
+            "ymin": 191,
+            "xmax": 498,
+            "ymax": 295
+        },
+        "table_1": {
+            "xmin": 0,
+            "ymin": 182,
+            "xmax": 115,
+            "ymax": 317
+        },
+        "chair": {
+            "xmin": 102,
+            "ymin": 166,
+            "xmax": 198,
+            "ymax": 310
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"cheer, tabel\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 478, 264, 778], \"label\": \"cheer\"},\n\t{\"bbox_2d\": [0, 478, 264, 778], \"label\": \"tabel\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    478,
+                    264,
+                    778
+                ],
+                "label": "cheer"
+            },
+            {
+                "bbox_2d": [
+                    0,
+                    478,
+                    264,
+                    778
+                ],
+                "label": "tabel"
+            }
+        ],
+        "token_count": 70,
+        "raw_token_count": 220,
+        "runtime_seconds": 0.8716
+    }
+}

@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/1",
+        "folder_id": "1",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00016623.JPEG"
+    },
+    "pareto_index": 24,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.012145,
+            "defocus_blur": 0.095429,
+            "motion_blur": 0.021595,
+            "fog_filter": 0.00654,
+            "pixelate": 0.004061,
+            "jpeg_filter": 0.049934
+        },
+        "text_corruptions": {
+            "homophone": 0.085323,
+            "synonym": 0.014687,
+            "ata_saliency": 0.480691,
+            "fragmentation": 0.02631,
+            "character_noise": 0.211942
+        },
+        "img_budget_used": 0.189704,
+        "txt_budget_used": 0.818953,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.21262,
+        "img_dist": 0.05505,
+        "txt_dist": 0.34054,
+        "txt_sim": 0.65946
+    },
+    "swad_metrics": {
+        "iou_0": 0.90794,
+        "delta_m_plus": 0.76582,
+        "phi": 0.62316,
+        "swad": 0.47723
+    },
+    "l2_distance": 0.40522,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 63,
+            "ymin": 230,
+            "xmax": 360,
+            "ymax": 418
+        },
+        "bird_1": {
+            "xmin": 191,
+            "ymin": 21,
+            "xmax": 336,
+            "ymax": 193
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bild\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [38, 28, 968, 978], \"label\": \"bild\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    38,
+                    28,
+                    968,
+                    978
+                ],
+                "label": "bild"
+            }
+        ],
+        "token_count": 37,
+        "raw_token_count": 88,
+        "runtime_seconds": 0.3151
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.012145123982950628,
+        "defocus_blur": 0.09542869864507067,
+        "motion_blur": 0.021594976605252808,
+        "fog_filter": 0.006540189447245354,
+        "pixelate": 0.004060758045087767,
+        "jpeg_filter": 0.04993424701933401
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.08532302029808114,
+        "synonym": 0.014686552477840236,
+        "ata_saliency": 0.48069072296154014,
+        "fragmentation": 0.026310010853204013,
+        "character_noise": 0.21194224323547659
+    }
+}

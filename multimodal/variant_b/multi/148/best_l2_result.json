@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/148",
+        "folder_id": "148",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00038813.JPEG"
+    },
+    "pareto_index": 1,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 60,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.140438,
+            "defocus_blur": 0.015646,
+            "motion_blur": 0.170725,
+            "fog_filter": 0.0291,
+            "pixelate": 0.016386,
+            "jpeg_filter": 0.260112
+        },
+        "text_corruptions": {
+            "homophone": 0.092388,
+            "synonym": 0.023731,
+            "ata_saliency": 0.164196,
+            "fragmentation": 0.033463,
+            "character_noise": 0.01807
+        },
+        "img_budget_used": 0.632406,
+        "txt_budget_used": 0.331848,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.10809,
+        "txt_dist": 0.19354,
+        "txt_sim": 0.80646
+    },
+    "swad_metrics": {
+        "iou_0": 0.77214,
+        "delta_m_plus": 1.0,
+        "phi": 0.71929,
+        "swad": 0.71929
+    },
+    "l2_distance": 0.22168,
+    "original_prompt": "Identify the objects \"brassiere, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 154,
+            "ymin": 70,
+            "xmax": 300,
+            "ymax": 470
+        },
+        "brassiere": {
+            "xmin": 188,
+            "ymin": 148,
+            "xmax": 255,
+            "ymax": 212
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"brassie re, perso\u200bn\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [48, 28, 972, 972], \"label\": \"brassie re, perso\u200bn\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    48,
+                    28,
+                    972,
+                    972
+                ],
+                "label": "brassie re, perso\u200bn"
+            }
+        ],
+        "token_count": 44,
+        "raw_token_count": 101,
+        "runtime_seconds": 0.3455
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.14043750831863308,
+        "defocus_blur": 0.01564553566311514,
+        "motion_blur": 0.1707247867402147,
+        "fog_filter": 0.029100429449035112,
+        "pixelate": 0.01638575641596675,
+        "jpeg_filter": 0.2601118820529422
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.09238763198828247,
+        "synonym": 0.02373115232887903,
+        "ata_saliency": 0.1641960739774119,
+        "fragmentation": 0.03346335036253616,
+        "character_noise": 0.018069694789383216
+    }
+}

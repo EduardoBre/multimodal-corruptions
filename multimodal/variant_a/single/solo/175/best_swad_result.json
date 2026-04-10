@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/175",
+        "folder_id": "175",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00021071.JPEG"
+    },
+    "pareto_index": 7,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.863144940280058,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6678992108124702
+    },
+    "objectives": {
+        "iou": 0.30827,
+        "img_dist": 0.04681,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.97855,
+        "delta_m_plus": 0.68497,
+        "phi": 0.95319,
+        "swad": 0.65291
+    },
+    "l2_distance": 0.3118,
+    "original_prompt": "Identify the objects \"red panda\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "red panda": {
+            "xmin": 227,
+            "ymin": 65,
+            "xmax": 665,
+            "ymax": 532
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"red panda\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [306, 130, 666, 540], \"label\": \"red panda\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    306,
+                    130,
+                    666,
+                    540
+                ],
+                "label": "red panda"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 59,
+        "runtime_seconds": 0.2701
+    }
+}

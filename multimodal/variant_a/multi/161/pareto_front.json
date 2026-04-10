@@ -1,0 +1,555 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/161",
+        "folder_id": "161",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00003593.JPEG"
+    },
+    "original_prompt": "Identify the objects \"hat with a wide brim, horse, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 146,
+            "ymin": 230,
+            "xmax": 193,
+            "ymax": 306
+        },
+        "hat with a wide brim": {
+            "xmin": 159,
+            "ymin": 232,
+            "xmax": 184,
+            "ymax": 248
+        },
+        "horse": {
+            "xmin": 226,
+            "ymin": 253,
+            "xmax": 296,
+            "ymax": 366
+        },
+        "horse_1": {
+            "xmin": 142,
+            "ymin": 243,
+            "xmax": 200,
+            "ymax": 365
+        }
+    },
+    "baseline_iou": 0.78373,
+    "swad_star": 0.74403,
+    "swad_star_index": 6,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "n_solutions": 8,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8181617493544074,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.41721849968957336
+            },
+            "objectives": {
+                "iou": 0.61001,
+                "img_dist": 0.04953,
+                "txt_dist": 0.12494,
+                "txt_sim": 0.87506
+            },
+            "swad_metrics": {
+                "iou_0": 0.78373,
+                "delta_m_plus": 0.22166,
+                "phi": 0.83172,
+                "swad": 0.18436
+            },
+            "l2_distance": 0.62464,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hay with a wdie rbim, horse, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [692, 512, 872, 732], \"label\": \"hay with a wdie rbim\"},\n\t{\"bbox_2d\": [432, 492, 600, 732], \"label\": \"horse\"},\n\t{\"bbox_2d\": [472, 464, 572, 550], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            692,
+                            512,
+                            872,
+                            732
+                        ],
+                        "label": "hay with a wdie rbim"
+                    },
+                    {
+                        "bbox_2d": [
+                            432,
+                            492,
+                            600,
+                            732
+                        ],
+                        "label": "horse"
+                    },
+                    {
+                        "bbox_2d": [
+                            472,
+                            464,
+                            572,
+                            550
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 111,
+                "raw_token_count": 177,
+                "runtime_seconds": 0.5558
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.78362,
+                "img_dist": 0.03146,
+                "txt_dist": 0.09364,
+                "txt_sim": 0.90636
+            },
+            "swad_metrics": {
+                "iou_0": 0.78373,
+                "delta_m_plus": 0.00014,
+                "phi": 0.87785,
+                "swad": 0.00012
+            },
+            "l2_distance": 0.78982,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hat with a wyde brim, horse, per son\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [480, 467, 552, 500], \"label\": \"hat with a wyde brim\"},\n\t{\"bbox_2d\": [432, 500, 592, 728], \"label\": \"horse\"},\n\t{\"bbox_2d\": [688, 516, 872, 734], \"label\": \"horse\"},\n\t{\"bbox_2d\": [440, 467, 568, 657], \"label\": \"per son\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            480,
+                            467,
+                            552,
+                            500
+                        ],
+                        "label": "hat with a wyde brim"
+                    },
+                    {
+                        "bbox_2d": [
+                            432,
+                            500,
+                            592,
+                            728
+                        ],
+                        "label": "horse"
+                    },
+                    {
+                        "bbox_2d": [
+                            688,
+                            516,
+                            872,
+                            734
+                        ],
+                        "label": "horse"
+                    },
+                    {
+                        "bbox_2d": [
+                            440,
+                            467,
+                            568,
+                            657
+                        ],
+                        "label": "per son"
+                    }
+                ],
+                "token_count": 145,
+                "raw_token_count": 177,
+                "runtime_seconds": 0.5558
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.6144,
+                "img_dist": 0.03377,
+                "txt_dist": 0.01369,
+                "txt_sim": 0.98631
+            },
+            "swad_metrics": {
+                "iou_0": 0.78373,
+                "delta_m_plus": 0.21606,
+                "phi": 0.953,
+                "swad": 0.2059
+            },
+            "l2_distance": 0.61548,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hut with a wide brim, horse, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [378, 307, 572, 371], \"label\": \"hut with a wide brim\"},\n\t{\"bbox_2d\": [428, 498, 596, 730], \"label\": \"horse\"},\n\t{\"bbox_2d\": [688, 520, 868, 734], \"label\": \"horse\"},\n\t{\"bbox_2d\": [468, 468, 572, 638], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            378,
+                            307,
+                            572,
+                            371
+                        ],
+                        "label": "hut with a wide brim"
+                    },
+                    {
+                        "bbox_2d": [
+                            428,
+                            498,
+                            596,
+                            730
+                        ],
+                        "label": "horse"
+                    },
+                    {
+                        "bbox_2d": [
+                            688,
+                            520,
+                            868,
+                            734
+                        ],
+                        "label": "horse"
+                    },
+                    {
+                        "bbox_2d": [
+                            468,
+                            468,
+                            572,
+                            638
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 144,
+                "raw_token_count": 177,
+                "runtime_seconds": 0.5558
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.6126883641923373,
+                "txt_attack": "homophone",
+                "txt_scale": 0.10684452896191199
+            },
+            "objectives": {
+                "iou": 0.66733,
+                "img_dist": 0.04386,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.78373,
+                "delta_m_plus": 0.14852,
+                "phi": 0.95614,
+                "swad": 0.14201
+            },
+            "l2_distance": 0.66877,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hat with a wide brim, horse, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [480, 463, 556, 517], \"label\": \"hat with a wide brim\"},\n\t{\"bbox_2d\": [428, 490, 596, 728], \"label\": \"horse\"},\n\t{\"bbox_2d\": [688, 517, 864, 732], \"label\": \"horse\"},\n\t{\"bbox_2d\": [468, 463, 564, 550], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            480,
+                            463,
+                            556,
+                            517
+                        ],
+                        "label": "hat with a wide brim"
+                    },
+                    {
+                        "bbox_2d": [
+                            428,
+                            490,
+                            596,
+                            728
+                        ],
+                        "label": "horse"
+                    },
+                    {
+                        "bbox_2d": [
+                            688,
+                            517,
+                            864,
+                            732
+                        ],
+                        "label": "horse"
+                    },
+                    {
+                        "bbox_2d": [
+                            468,
+                            463,
+                            564,
+                            550
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 143,
+                "raw_token_count": 177,
+                "runtime_seconds": 0.5558
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.63812,
+                "img_dist": 0.06056,
+                "txt_dist": 0.00287,
+                "txt_sim": 0.99713
+            },
+            "swad_metrics": {
+                "iou_0": 0.78373,
+                "delta_m_plus": 0.18579,
+                "phi": 0.93674,
+                "swad": 0.17404
+            },
+            "l2_distance": 0.64099,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hat witha wide brim, horse, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [480, 458, 550, 530], \"label\": \"hat witha wide brim\"},\n\t{\"bbox_2d\": [420, 498, 590, 730], \"label\": \"horse\"},\n\t{\"bbox_2d\": [690, 510, 860, 728], \"label\": \"horse\"},\n\t{\"bbox_2d\": [420, 458, 560, 728], \"label\": \"person\"},\n\t{\"bbox_2d\": [690, 510, 860, 728], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            480,
+                            458,
+                            550,
+                            530
+                        ],
+                        "label": "hat witha wide brim"
+                    },
+                    {
+                        "bbox_2d": [
+                            420,
+                            498,
+                            590,
+                            730
+                        ],
+                        "label": "horse"
+                    },
+                    {
+                        "bbox_2d": [
+                            690,
+                            510,
+                            860,
+                            728
+                        ],
+                        "label": "horse"
+                    },
+                    {
+                        "bbox_2d": [
+                            420,
+                            458,
+                            560,
+                            728
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            690,
+                            510,
+                            860,
+                            728
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 176,
+                "raw_token_count": 177,
+                "runtime_seconds": 0.5558
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.03732619454213726,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.33647038540361596
+            },
+            "objectives": {
+                "iou": 0.65343,
+                "img_dist": 0.02581,
+                "txt_dist": 0.12231,
+                "txt_sim": 0.87769
+            },
+            "swad_metrics": {
+                "iou_0": 0.78373,
+                "delta_m_plus": 0.16626,
+                "phi": 0.85504,
+                "swad": 0.14216
+            },
+            "l2_distance": 0.66528,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"aht wiht a wide brim, hores, preson\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [480, 468, 558, 548], \"label\": \"aht wiht a wide brim\"},\n\t{\"bbox_2d\": [428, 500, 592, 730], \"label\": \"hores\"},\n\t{\"bbox_2d\": [688, 516, 868, 734], \"label\": \"hores\"},\n\t{\"bbox_2d\": [436, 468, 560, 672], \"label\": \"preson\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            480,
+                            468,
+                            558,
+                            548
+                        ],
+                        "label": "aht wiht a wide brim"
+                    },
+                    {
+                        "bbox_2d": [
+                            428,
+                            500,
+                            592,
+                            730
+                        ],
+                        "label": "hores"
+                    },
+                    {
+                        "bbox_2d": [
+                            688,
+                            516,
+                            868,
+                            734
+                        ],
+                        "label": "hores"
+                    },
+                    {
+                        "bbox_2d": [
+                            436,
+                            468,
+                            560,
+                            672
+                        ],
+                        "label": "preson"
+                    }
+                ],
+                "token_count": 146,
+                "raw_token_count": 185,
+                "runtime_seconds": 0.6362
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.956810286327587,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.5919188485823369
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.0658,
+                "txt_dist": 0.20356,
+                "txt_sim": 0.79644
+            },
+            "swad_metrics": {
+                "iou_0": 0.78373,
+                "delta_m_plus": 1.0,
+                "phi": 0.74403,
+                "swad": 0.74403
+            },
+            "l2_distance": 0.21393,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"h\u200b\u0430\u200bt\u200d w\u0456\u200bth\u200d \u0430\u200b wide\u200b b\u200dr\u200b\u0456\u200dm\u200d, h\u200bor\u200ds\u0435\u200b, p\u0435\u200drs\u043e\u200dn\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [428, 458, 592, 720], \"label\": \"h\u200b\u0430\u200bt\u200d w\u0456\u200bth\u200d \u0430\u200b wide\u200b b\u200dr\u200b\u0456\u200dm\u200d, h\u200bor\u200ds\u0435\u200b, p\u0435\u200drs\u043e\u200dn\"},\n\t{\"bbox_2d\": [678, 492, 856, 720], \"label\": \"h\u200b\u0430\u200bt\u200d w\u0456\u200bth\u200d \u0430\u200b wide\u200b b\u200dr\u200b\u0456\u200dm\u200d, h\u200bor\u200ds\u0435\u200b, p\u0435\u200drs\u043e\u200dn\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            428,
+                            458,
+                            592,
+                            720
+                        ],
+                        "label": "h\u200b\u0430\u200bt\u200d w\u0456\u200bth\u200d \u0430\u200b wide\u200b b\u200dr\u200b\u0456\u200dm\u200d, h\u200bor\u200ds\u0435\u200b, p\u0435\u200drs\u043e\u200dn"
+                    },
+                    {
+                        "bbox_2d": [
+                            678,
+                            492,
+                            856,
+                            720
+                        ],
+                        "label": "h\u200b\u0430\u200bt\u200d w\u0456\u200bth\u200d \u0430\u200b wide\u200b b\u200dr\u200b\u0456\u200dm\u200d, h\u200bor\u200ds\u0435\u200b, p\u0435\u200drs\u043e\u200dn"
+                    }
+                ],
+                "token_count": 164,
+                "raw_token_count": 185,
+                "runtime_seconds": 0.6362
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.08646227720474076,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6881327596781619
+            },
+            "objectives": {
+                "iou": 0.23461,
+                "img_dist": 0.04583,
+                "txt_dist": 0.24855,
+                "txt_sim": 0.75145
+            },
+            "swad_metrics": {
+                "iou_0": 0.78373,
+                "delta_m_plus": 0.70065,
+                "phi": 0.71701,
+                "swad": 0.50237
+            },
+            "l2_distance": 0.34485,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hat with a wide brim, hawse, purse on\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [488, 467, 552, 500], \"label\": \"hat with a wide brim\"},\n\t{\"bbox_2d\": [708, 517, 840, 567], \"label\": \"hawse\"},\n\t{\"bbox_2d\": [708, 517, 840, 567], \"label\": \"purse on\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            488,
+                            467,
+                            552,
+                            500
+                        ],
+                        "label": "hat with a wide brim"
+                    },
+                    {
+                        "bbox_2d": [
+                            708,
+                            517,
+                            840,
+                            567
+                        ],
+                        "label": "hawse"
+                    },
+                    {
+                        "bbox_2d": [
+                            708,
+                            517,
+                            840,
+                            567
+                        ],
+                        "label": "purse on"
+                    }
+                ],
+                "token_count": 114,
+                "raw_token_count": 185,
+                "runtime_seconds": 0.6362
+            }
+        }
+    ]
+}

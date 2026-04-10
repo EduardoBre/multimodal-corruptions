@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/217",
+        "folder_id": "217",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00040974.JPEG"
+    },
+    "pareto_index": 4,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 45,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.9316177058680379,
+        "txt_attack": "homophone",
+        "txt_scale": 0.9948250792623392
+    },
+    "objectives": {
+        "iou": 0.01781,
+        "img_dist": 0.06154,
+        "txt_dist": 0.33532,
+        "txt_sim": 0.66468
+    },
+    "swad_metrics": {
+        "iou_0": 0.72265,
+        "delta_m_plus": 0.97535,
+        "phi": 0.62378,
+        "swad": 0.6084
+    },
+    "l2_distance": 0.34139,
+    "original_prompt": "Identify the objects \"watercraft\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "watercraft": {
+            "xmin": 54,
+            "ymin": 122,
+            "xmax": 174,
+            "ymax": 261
+        },
+        "watercraft_1": {
+            "xmin": 322,
+            "ymin": 162,
+            "xmax": 428,
+            "ymax": 270
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"water craffed\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 677, 999, 999], \"label\": \"water craffed\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    677,
+                    999,
+                    999
+                ],
+                "label": "water craffed"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 114,
+        "runtime_seconds": 0.4179
+    }
+}

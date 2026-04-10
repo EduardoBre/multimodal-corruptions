@@ -1,0 +1,82 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/61",
+        "folder_id": "61",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00016879.JPEG"
+    },
+    "pareto_index": 6,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.863144940280058,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6678992108124702
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.0362,
+        "txt_dist": 0.28747,
+        "txt_sim": 0.71253
+    },
+    "swad_metrics": {
+        "iou_0": 0.85085,
+        "delta_m_plus": 1.0,
+        "phi": 0.68674,
+        "swad": 0.68674
+    },
+    "l2_distance": 0.28974,
+    "original_prompt": "Identify the objects \"person, spatula\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 151,
+            "ymin": 90,
+            "xmax": 321,
+            "ymax": 496
+        },
+        "person_1": {
+            "xmin": 51,
+            "ymin": 68,
+            "xmax": 189,
+            "ymax": 468
+        },
+        "spatula": {
+            "xmin": 151,
+            "ymin": 355,
+            "xmax": 235,
+            "ymax": 407
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"per son, spat you la\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [168, 132, 512, 998], \"label\": \"per son, spat you la\"},\n\t{\"bbox_2d\": [456, 180, 968, 998], \"label\": \"per son, spat you la\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    168,
+                    132,
+                    512,
+                    998
+                ],
+                "label": "per son, spat you la"
+            },
+            {
+                "bbox_2d": [
+                    456,
+                    180,
+                    968,
+                    998
+                ],
+                "label": "per son, spat you la"
+            }
+        ],
+        "token_count": 82,
+        "raw_token_count": 124,
+        "runtime_seconds": 0.4325
+    }
+}

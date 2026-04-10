@@ -1,0 +1,76 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/156",
+        "folder_id": "156",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00012528.JPEG"
+    },
+    "pareto_index": 22,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.03003525999727702,
+        "txt_attack": "homophone",
+        "txt_scale": 0.5858673579365089
+    },
+    "objectives": {
+        "iou": 0.03946,
+        "img_dist": 0.03923,
+        "txt_dist": 0.34158,
+        "txt_sim": 0.65842
+    },
+    "swad_metrics": {
+        "iou_0": 0.95259,
+        "delta_m_plus": 0.95858,
+        "phi": 0.63259,
+        "swad": 0.60639
+    },
+    "l2_distance": 0.34608,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 256,
+            "ymin": 118,
+            "xmax": 383,
+            "ymax": 340
+        },
+        "bird_1": {
+            "xmin": 40,
+            "ymin": 60,
+            "xmax": 196,
+            "ymax": 396
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"berd\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [556, 300, 600, 350], \"label\": \"berd\"},\n\t{\"bbox_2d\": [256, 125, 344, 274], \"label\": \"berd\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    556,
+                    300,
+                    600,
+                    350
+                ],
+                "label": "berd"
+            },
+            {
+                "bbox_2d": [
+                    256,
+                    125,
+                    344,
+                    274
+                ],
+                "label": "berd"
+            }
+        ],
+        "token_count": 74,
+        "raw_token_count": 82,
+        "runtime_seconds": 0.2767
+    }
+}

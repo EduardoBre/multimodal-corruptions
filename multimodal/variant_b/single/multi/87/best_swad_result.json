@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/87",
+        "folder_id": "87",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00039235.JPEG"
+    },
+    "pareto_index": 1,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 15,
+    "total_evaluations": 435,
+    "skipped_evaluations": 15,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.047306,
+            "defocus_blur": 0.005325,
+            "motion_blur": 0.015957,
+            "fog_filter": 0.135628,
+            "pixelate": 0.009444,
+            "jpeg_filter": 0.023823
+        },
+        "text_corruptions": {
+            "homophone": 0.067344,
+            "synonym": 0.333143,
+            "ata_saliency": 0.014368,
+            "fragmentation": 0.154597,
+            "character_noise": 0.091445
+        },
+        "img_budget_used": 0.237482,
+        "txt_budget_used": 0.660897,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.10405,
+        "txt_dist": 0.25682,
+        "txt_sim": 0.74318
+    },
+    "swad_metrics": {
+        "iou_0": 0.95034,
+        "delta_m_plus": 1.0,
+        "phi": 0.66585,
+        "swad": 0.66585
+    },
+    "l2_distance": 0.2771,
+    "original_prompt": "Identify the objects \"dog\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 46,
+            "ymin": 134,
+            "xmax": 322,
+            "ymax": 367
+        },
+        "dog_1": {
+            "xmin": 321,
+            "ymin": 7,
+            "xmax": 498,
+            "ymax": 205
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"c\u0430n\u200dine\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [377, 250, 427, 330], \"label\": \"c\u0430n\u200dine\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    377,
+                    250,
+                    427,
+                    330
+                ],
+                "label": "c\u0430n\u200dine"
+            }
+        ],
+        "token_count": 44,
+        "raw_token_count": 87,
+        "runtime_seconds": 0.2898
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.04730647739531346,
+        "defocus_blur": 0.005324504263998456,
+        "motion_blur": 0.01595671642259329,
+        "fog_filter": 0.1356279046305125,
+        "pixelate": 0.0094442116853813,
+        "jpeg_filter": 0.023822586735550284
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.06734397695723604,
+        "synonym": 0.33314269895173676,
+        "ata_saliency": 0.014368397362040035,
+        "fragmentation": 0.1545967082116898,
+        "character_noise": 0.0914448772627916
+    }
+}

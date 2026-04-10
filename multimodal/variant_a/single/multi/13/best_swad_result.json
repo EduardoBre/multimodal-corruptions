@@ -1,0 +1,73 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/13",
+        "folder_id": "13",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00005812.JPEG"
+    },
+    "pareto_index": 5,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.6124377601560459,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.05557257533910853
+    },
+    "objectives": {
+        "iou": 0.28517,
+        "img_dist": 0.07999,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.62114,
+        "delta_m_plus": 0.54089,
+        "phi": 0.92001,
+        "swad": 0.49763
+    },
+    "l2_distance": 0.29618,
+    "original_prompt": "Identify the objects \"cocktail shaker\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "cocktail shaker": {
+            "xmin": 138,
+            "ymin": 252,
+            "xmax": 212,
+            "ymax": 426
+        },
+        "cocktail shaker_1": {
+            "xmin": 11,
+            "ymin": 231,
+            "xmax": 142,
+            "ymax": 435
+        },
+        "cocktail shaker_2": {
+            "xmin": 31,
+            "ymin": 2,
+            "xmax": 235,
+            "ymax": 315
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"cocktail shaker\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [100, 470, 470, 850], \"label\": \"cocktail shaker\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    100,
+                    470,
+                    470,
+                    850
+                ],
+                "label": "cocktail shaker"
+            }
+        ],
+        "token_count": 42,
+        "raw_token_count": 98,
+        "runtime_seconds": 0.3142
+    }
+}

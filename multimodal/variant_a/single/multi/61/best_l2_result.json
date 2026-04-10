@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/61",
+        "folder_id": "61",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00016304.JPEG"
+    },
+    "pareto_index": 0,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.9531190778377507,
+        "txt_attack": "homophone",
+        "txt_scale": 0.8703335164251853
+    },
+    "objectives": {
+        "iou": 0.39877,
+        "img_dist": 0.07378,
+        "txt_dist": 0.31925,
+        "txt_sim": 0.68075
+    },
+    "swad_metrics": {
+        "iou_0": 0.93555,
+        "delta_m_plus": 0.57376,
+        "phi": 0.63052,
+        "swad": 0.36177
+    },
+    "l2_distance": 0.51612,
+    "original_prompt": "Identify the objects \"lizard\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "lizard": {
+            "xmin": 10,
+            "ymin": 107,
+            "xmax": 188,
+            "ymax": 286
+        },
+        "lizard_1": {
+            "xmin": 29,
+            "ymin": 4,
+            "xmax": 487,
+            "ymax": 335
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"lis ard\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 270, 375, 650], \"label\": \"lis ard\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    270,
+                    375,
+                    650
+                ],
+                "label": "lis ard"
+            }
+        ],
+        "token_count": 38,
+        "raw_token_count": 88,
+        "runtime_seconds": 0.3263
+    }
+}

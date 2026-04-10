@@ -1,0 +1,73 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/214",
+        "folder_id": "214",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00035698.JPEG"
+    },
+    "pareto_index": 4,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "fog_filter",
+        "img_scale": 0.4351463368290732,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.38860316825937224
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.14901,
+        "txt_dist": 0.39179,
+        "txt_sim": 0.60821
+    },
+    "swad_metrics": {
+        "iou_0": 0.67002,
+        "delta_m_plus": 1.0,
+        "phi": 0.51758,
+        "swad": 0.51758
+    },
+    "l2_distance": 0.41917,
+    "original_prompt": "Identify the objects \"cucumber\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "cucumber": {
+            "xmin": 210,
+            "ymin": 171,
+            "xmax": 344,
+            "ymax": 314
+        },
+        "cucumber_1": {
+            "xmin": 161,
+            "ymin": 167,
+            "xmax": 265,
+            "ymax": 293
+        },
+        "cucumber_2": {
+            "xmin": 150,
+            "ymin": 246,
+            "xmax": 259,
+            "ymax": 343
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"\u0441\u200bu\u200d\u0441um\u200db\u200der\u200b\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [292, 452, 512, 922], \"label\": \"\u0441\u200b\u0443\u200d\u0441\u0443\u043c\u200d\u0431\u200b\u0435\u0440\u200b\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    292,
+                    452,
+                    512,
+                    922
+                ],
+                "label": "\u0441\u200b\u0443\u200d\u0441\u0443\u043c\u200d\u0431\u200b\u0435\u0440\u200b"
+            }
+        ],
+        "token_count": 51,
+        "raw_token_count": 75,
+        "runtime_seconds": 0.2562
+    }
+}

@@ -1,0 +1,109 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/72",
+        "folder_id": "72",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00024624.JPEG"
+    },
+    "pareto_index": 5,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 5,
+    "total_evaluations": 135,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.161904,
+            "defocus_blur": 0.120339,
+            "motion_blur": 0.13185,
+            "fog_filter": 0.237053,
+            "pixelate": 0.112605,
+            "jpeg_filter": 0.065791
+        },
+        "text_corruptions": {
+            "homophone": 0.030565,
+            "synonym": 0.0022,
+            "ata_saliency": 0.006808,
+            "fragmentation": 0.001943,
+            "character_noise": 0.059573
+        },
+        "img_budget_used": 0.829543,
+        "txt_budget_used": 0.101088,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.10782,
+        "txt_dist": 0.26557,
+        "txt_sim": 0.73443
+    },
+    "swad_metrics": {
+        "iou_0": 0.95677,
+        "delta_m_plus": 1.0,
+        "phi": 0.65524,
+        "swad": 0.65524
+    },
+    "l2_distance": 0.28662,
+    "original_prompt": "Identify the objects \"dog, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 0,
+            "ymin": 92,
+            "xmax": 42,
+            "ymax": 374
+        },
+        "dog": {
+            "xmin": 112,
+            "ymin": 186,
+            "xmax": 251,
+            "ymax": 293
+        },
+        "dog_1": {
+            "xmin": 118,
+            "ymin": 1,
+            "xmax": 427,
+            "ymax": 184
+        },
+        "dog_2": {
+            "xmin": 284,
+            "ymin": 111,
+            "xmax": 499,
+            "ymax": 330
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"\u0441a nine, pers\u200bor\u200d\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 238, 83, 997], \"label\": \"\u0441a nine, pers\u200bor\u200d\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    238,
+                    83,
+                    997
+                ],
+                "label": "\u0441a nine, pers\u200bor\u200d"
+            }
+        ],
+        "token_count": 44,
+        "raw_token_count": 157,
+        "runtime_seconds": 0.48
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.1619044577206188,
+        "defocus_blur": 0.12033918702032284,
+        "motion_blur": 0.1318498665969294,
+        "fog_filter": 0.2370533328650725,
+        "pixelate": 0.11260547667457485,
+        "jpeg_filter": 0.06579076323168558
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.030564958397388167,
+        "synonym": 0.002199607790294031,
+        "ata_saliency": 0.00680766152789614,
+        "fragmentation": 0.0019428261247790637,
+        "character_noise": 0.05957340482243646
+    }
+}

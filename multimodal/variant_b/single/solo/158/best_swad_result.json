@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/158",
+        "folder_id": "158",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00027721.JPEG"
+    },
+    "pareto_index": 5,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.044655,
+            "defocus_blur": 0.005662,
+            "motion_blur": 0.037627,
+            "fog_filter": 0.006027,
+            "pixelate": 0.012861,
+            "jpeg_filter": 0.047369
+        },
+        "text_corruptions": {
+            "homophone": 0.058753,
+            "synonym": 0.062456,
+            "ata_saliency": 0.177163,
+            "fragmentation": 0.013557,
+            "character_noise": 0.013459
+        },
+        "img_budget_used": 0.154202,
+        "txt_budget_used": 0.325388,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.12143,
+        "img_dist": 0.05378,
+        "txt_dist": 0.17553,
+        "txt_sim": 0.82447
+    },
+    "swad_metrics": {
+        "iou_0": 0.58869,
+        "delta_m_plus": 0.79373,
+        "phi": 0.78013,
+        "swad": 0.61921
+    },
+    "l2_distance": 0.22011,
+    "original_prompt": "Identify the objects \"corkscrew\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "corkscrew": {
+            "xmin": 97,
+            "ymin": 175,
+            "xmax": 313,
+            "ymax": 342
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"c\u043erk s\u200dcrew\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [478, 540, 710, 658], \"label\": \"c\u043erk s\u200dcrew\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    478,
+                    540,
+                    710,
+                    658
+                ],
+                "label": "c\u043erk s\u200dcrew"
+            }
+        ],
+        "token_count": 45,
+        "raw_token_count": 53,
+        "runtime_seconds": 0.1821
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.04465501715058742,
+        "defocus_blur": 0.005661818693561359,
+        "motion_blur": 0.037627210949557136,
+        "fog_filter": 0.006027483845524115,
+        "pixelate": 0.01286139377416684,
+        "jpeg_filter": 0.04736865648420363
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.05875292721630676,
+        "synonym": 0.062456406879123065,
+        "ata_saliency": 0.17716310378706973,
+        "fragmentation": 0.01355721131287756,
+        "character_noise": 0.013458846615037563
+    }
+}

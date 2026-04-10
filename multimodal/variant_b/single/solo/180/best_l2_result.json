@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/180",
+        "folder_id": "180",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00029118.JPEG"
+    },
+    "pareto_index": 6,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.117531,
+            "defocus_blur": 0.209066,
+            "motion_blur": 0.046559,
+            "fog_filter": 0.159577,
+            "pixelate": 0.227285,
+            "jpeg_filter": 0.005051
+        },
+        "text_corruptions": {
+            "homophone": 0.166584,
+            "synonym": 0.103311,
+            "ata_saliency": 0.036237,
+            "fragmentation": 0.075589,
+            "character_noise": 0.002608
+        },
+        "img_budget_used": 0.765069,
+        "txt_budget_used": 0.38433,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.41749,
+        "img_dist": 0.1082,
+        "txt_dist": 0.0831,
+        "txt_sim": 0.9169
+    },
+    "swad_metrics": {
+        "iou_0": 0.89911,
+        "delta_m_plus": 0.53566,
+        "phi": 0.81769,
+        "swad": 0.43801
+    },
+    "l2_distance": 0.43922,
+    "original_prompt": "Identify the objects \"lizard\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "lizard": {
+            "xmin": 106,
+            "ymin": 66,
+            "xmax": 286,
+            "ymax": 405
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"lizzard\u200d\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [112, 127, 700, 998], \"label\": \"lizzard\u200d\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    112,
+                    127,
+                    700,
+                    998
+                ],
+                "label": "lizzard\u200d"
+            }
+        ],
+        "token_count": 42,
+        "raw_token_count": 50,
+        "runtime_seconds": 0.1654
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.11753149014610063,
+        "defocus_blur": 0.20906596452788834,
+        "motion_blur": 0.0465588766772453,
+        "fog_filter": 0.15957668821009707,
+        "pixelate": 0.2272851630664282,
+        "jpeg_filter": 0.0050509192449465405
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.16658430210099995,
+        "synonym": 0.10331093134038816,
+        "ata_saliency": 0.03623661833725016,
+        "fragmentation": 0.07558945337017907,
+        "character_noise": 0.002608420889378742
+    }
+}

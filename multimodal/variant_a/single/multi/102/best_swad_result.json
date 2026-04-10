@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/102",
+        "folder_id": "102",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00042778.JPEG"
+    },
+    "pareto_index": 9,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.956810286327587,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.5919188485823369
+    },
+    "objectives": {
+        "iou": 0.2621,
+        "img_dist": 0.0674,
+        "txt_dist": 0.22843,
+        "txt_sim": 0.77157
+    },
+    "swad_metrics": {
+        "iou_0": 0.95184,
+        "delta_m_plus": 0.72464,
+        "phi": 0.71957,
+        "swad": 0.52143
+    },
+    "l2_distance": 0.35415,
+    "original_prompt": "Identify the objects \"soccer ball\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "soccer ball": {
+            "xmin": 42,
+            "ymin": 42,
+            "xmax": 178,
+            "ymax": 185
+        },
+        "soccer ball_1": {
+            "xmin": 30,
+            "ymin": 33,
+            "xmax": 638,
+            "ymax": 560
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"s\u200do\u200dc\u200dc\u0435\u200dr\u200b b\u200d\u0430\u200bll\u200d\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 333, 383], \"label\": \"s\u200do\u200dc\u200dc\u0435\u200dr\u200b b\u200d\u0430\u200bll\u200d\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    333,
+                    383
+                ],
+                "label": "s\u200do\u200dc\u200dc\u0435\u200dr\u200b b\u200d\u0430\u200bll\u200d"
+            }
+        ],
+        "token_count": 57,
+        "raw_token_count": 82,
+        "runtime_seconds": 0.2918
+    }
+}

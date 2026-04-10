@@ -1,0 +1,76 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/173",
+        "folder_id": "173",
+        "category": "single/multi",
+        "filename": "ILSVRC2013_val_00004407.JPEG"
+    },
+    "pareto_index": 7,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 45,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.024015558958335292,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.7257834178993225
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.03999,
+        "txt_dist": 0.24887,
+        "txt_sim": 0.75113
+    },
+    "swad_metrics": {
+        "iou_0": 0.91026,
+        "delta_m_plus": 1.0,
+        "phi": 0.72109,
+        "swad": 0.72109
+    },
+    "l2_distance": 0.25206,
+    "original_prompt": "Identify the objects \"person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 121,
+            "ymin": 50,
+            "xmax": 498,
+            "ymax": 498
+        },
+        "person_1": {
+            "xmin": 61,
+            "ymin": 212,
+            "xmax": 213,
+            "ymax": 497
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"\u0440\u200be\u200brs\u200don\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [125, 432, 422, 944], \"label\": \"\u0440\u200b\u0435\u200brs\u200d\u043e\u043d\"},\n\t{\"bbox_2d\": [272, 99, 1000, 999], \"label\": \"\u0440\u200b\u0435\u200brs\u200d\u043e\u043d\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    125,
+                    432,
+                    422,
+                    944
+                ],
+                "label": "\u0440\u200b\u0435\u200brs\u200d\u043e\u043d"
+            },
+            {
+                "bbox_2d": [
+                    272,
+                    99,
+                    1000,
+                    999
+                ],
+                "label": "\u0440\u200b\u0435\u200brs\u200d\u043e\u043d"
+            }
+        ],
+        "token_count": 86,
+        "raw_token_count": 94,
+        "runtime_seconds": 0.3342
+    }
+}

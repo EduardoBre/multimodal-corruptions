@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/106",
+        "folder_id": "106",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00014679.JPEG"
+    },
+    "pareto_index": 0,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 13,
+    "total_evaluations": 390,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.35097,
+            "defocus_blur": 0.002709,
+            "motion_blur": 0.083258,
+            "fog_filter": 0.139127,
+            "pixelate": 0.008048,
+            "jpeg_filter": 0.05997
+        },
+        "text_corruptions": {
+            "homophone": 0.008857,
+            "synonym": 0.032757,
+            "ata_saliency": 0.031333,
+            "fragmentation": 0.035046,
+            "character_noise": 0.051482
+        },
+        "img_budget_used": 0.644082,
+        "txt_budget_used": 0.159476,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.00889,
+        "img_dist": 0.11717,
+        "txt_dist": 0.27553,
+        "txt_sim": 0.72447
+    },
+    "swad_metrics": {
+        "iou_0": 0.89596,
+        "delta_m_plus": 0.99008,
+        "phi": 0.63958,
+        "swad": 0.63324
+    },
+    "l2_distance": 0.29954,
+    "original_prompt": "Identify the objects \"chair\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "chair": {
+            "xmin": 266,
+            "ymin": 52,
+            "xmax": 388,
+            "ymax": 271
+        },
+        "chair_1": {
+            "xmin": 156,
+            "ymin": 54,
+            "xmax": 264,
+            "ymax": 256
+        },
+        "chair_2": {
+            "xmin": 0,
+            "ymin": 79,
+            "xmax": 160,
+            "ymax": 323
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"cha\u200br\u200bi\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [758, 348, 1000, 832], \"label\": \"cha\u200br\u200bi\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    758,
+                    348,
+                    1000,
+                    832
+                ],
+                "label": "cha\u200br\u200bi"
+            }
+        ],
+        "token_count": 44,
+        "raw_token_count": 125,
+        "runtime_seconds": 0.3884
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.35097027587684176,
+        "defocus_blur": 0.00270876092399615,
+        "motion_blur": 0.08325751166367758,
+        "fog_filter": 0.13912734473410548,
+        "pixelate": 0.008048019239226573,
+        "jpeg_filter": 0.0599704867514163
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.008857145663891862,
+        "synonym": 0.032757484782830165,
+        "ata_saliency": 0.03133280155856515,
+        "fragmentation": 0.03504599503985502,
+        "character_noise": 0.051482478288331926
+    }
+}

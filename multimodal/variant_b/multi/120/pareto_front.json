@@ -1,0 +1,548 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/120",
+        "folder_id": "120",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00032722.JPEG"
+    },
+    "original_prompt": "Identify the objects \"backpack, hat with a wide brim, person, sunglasses\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 143,
+            "ymin": 113,
+            "xmax": 488,
+            "ymax": 457
+        },
+        "person_1": {
+            "xmin": 0,
+            "ymin": 247,
+            "xmax": 48,
+            "ymax": 394
+        },
+        "person_2": {
+            "xmin": 12,
+            "ymin": 119,
+            "xmax": 463,
+            "ymax": 457
+        },
+        "sunglasses": {
+            "xmin": 228,
+            "ymin": 126,
+            "xmax": 314,
+            "ymax": 164
+        },
+        "sunglasses_1": {
+            "xmin": 435,
+            "ymin": 245,
+            "xmax": 467,
+            "ymax": 258
+        },
+        "sunglasses_2": {
+            "xmin": 2,
+            "ymin": 255,
+            "xmax": 31,
+            "ymax": 277
+        },
+        "sunglasses_3": {
+            "xmin": 27,
+            "ymin": 240,
+            "xmax": 54,
+            "ymax": 250
+        },
+        "hat with a wide brim": {
+            "xmin": 160,
+            "ymin": 25,
+            "xmax": 459,
+            "ymax": 192
+        },
+        "hat with a wide brim_1": {
+            "xmin": 22,
+            "ymin": 224,
+            "xmax": 65,
+            "ymax": 257
+        },
+        "backpack": {
+            "xmin": 212,
+            "ymin": 269,
+            "xmax": 342,
+            "ymax": 457
+        }
+    },
+    "baseline_iou": 0.56081,
+    "swad_star": 0.59603,
+    "swad_star_index": 2,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 4,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.243313,
+                    "defocus_blur": 0.170546,
+                    "motion_blur": 0.093712,
+                    "fog_filter": 0.200491,
+                    "pixelate": 0.070065,
+                    "jpeg_filter": 0.218433
+                },
+                "text_corruptions": {
+                    "homophone": 0.035186,
+                    "synonym": 0.018584,
+                    "ata_saliency": 0.06224,
+                    "fragmentation": 0.043942,
+                    "character_noise": 0.110182
+                },
+                "img_budget_used": 0.99656,
+                "txt_budget_used": 0.270134,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.40998,
+                "img_dist": 0.12656,
+                "txt_dist": 0.19838,
+                "txt_sim": 0.80162
+            },
+            "swad_metrics": {
+                "iou_0": 0.56081,
+                "delta_m_plus": 0.26895,
+                "phi": 0.70017,
+                "swad": 0.18831
+            },
+            "l2_distance": 0.47271,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"ba\u200bckpa\u200dck, \u0430h\u200dt with a wid\u0435 br\u0456\u200dm\u200d, per son, sun\u200dgl\u0430s\u200bses\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [444, 588, 720, 1000], \"label\": \"ba\u200bckpa\u200dck\"},\n\t{\"bbox_2d\": [324, 58, 918, 392], \"label\": \"\u0430h\u200dt with a wid\u0435 br\u0456\u200dm\u200d\"},\n\t{\"bbox_2d\": [462, 288, 648, 350], \"label\": \"sun\u200dgl\u0430s\u200bses\"},\n\t{\"bbox_2d\": [28, 278, 480, 1000], \"label\": \"per son\"},\n\t{\"bbox_2d\": [278, 238, 980, 1000], \"label\": \"per son\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            444,
+                            588,
+                            720,
+                            1000
+                        ],
+                        "label": "ba\u200bckpa\u200dck"
+                    },
+                    {
+                        "bbox_2d": [
+                            324,
+                            58,
+                            918,
+                            392
+                        ],
+                        "label": "\u0430h\u200dt with a wid\u0435 br\u0456\u200dm\u200d"
+                    },
+                    {
+                        "bbox_2d": [
+                            462,
+                            288,
+                            648,
+                            350
+                        ],
+                        "label": "sun\u200dgl\u0430s\u200bses"
+                    },
+                    {
+                        "bbox_2d": [
+                            28,
+                            278,
+                            480,
+                            1000
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            278,
+                            238,
+                            980,
+                            1000
+                        ],
+                        "label": "per son"
+                    }
+                ],
+                "token_count": 202,
+                "raw_token_count": 494,
+                "runtime_seconds": 1.5406
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.24331344227272944,
+                "defocus_blur": 0.17054649929411592,
+                "motion_blur": 0.09371167741307464,
+                "fog_filter": 0.20049070147405693,
+                "pixelate": 0.07006539280510561,
+                "jpeg_filter": 0.2184326296593123
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.03518550517896803,
+                "synonym": 0.01858371429278614,
+                "ata_saliency": 0.06224037316911716,
+                "fragmentation": 0.043942464256523345,
+                "character_noise": 0.11018192965141642
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.056421,
+                    "defocus_blur": 0.031087,
+                    "motion_blur": 0.0177,
+                    "fog_filter": 0.006072,
+                    "pixelate": 0.020615,
+                    "jpeg_filter": 0.026816
+                },
+                "text_corruptions": {
+                    "homophone": 0.000701,
+                    "synonym": 0.001807,
+                    "ata_saliency": 0.001746,
+                    "fragmentation": 0.001379,
+                    "character_noise": 0.005943
+                },
+                "img_budget_used": 0.158712,
+                "txt_budget_used": 0.011576,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.51296,
+                "img_dist": 0.09206,
+                "txt_dist": 0.04559,
+                "txt_sim": 0.95441
+            },
+            "swad_metrics": {
+                "iou_0": 0.56081,
+                "delta_m_plus": 0.08532,
+                "phi": 0.86655,
+                "swad": 0.07394
+            },
+            "l2_distance": 0.52315,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"back\u200dpack, sun hat, person, sungl\u0430sses\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [420, 588, 700, 1000], \"label\": \"back\u200dpack\"},\n\t{\"bbox_2d\": [322, 52, 918, 398], \"label\": \"sun hat\"},\n\t{\"bbox_2d\": [50, 268, 478, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [278, 234, 988, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [0, 542, 78, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [858, 500, 998, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [918, 472, 1000, 620], \"label\": \"person\"},\n\t{\"bbox_2d\": [868, 508, 938, 588], \"label\": \"person\"},\n\t{\"bbox_2d\": [148, 478, 238, 568], \"label\": \"person\"},\n\t{\"bbox_2d\": [468, 284, 648, 348], \"label\": \"sungl\u0430sses\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            420,
+                            588,
+                            700,
+                            1000
+                        ],
+                        "label": "back\u200dpack"
+                    },
+                    {
+                        "bbox_2d": [
+                            322,
+                            52,
+                            918,
+                            398
+                        ],
+                        "label": "sun hat"
+                    },
+                    {
+                        "bbox_2d": [
+                            50,
+                            268,
+                            478,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            278,
+                            234,
+                            988,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            542,
+                            78,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            858,
+                            500,
+                            998,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            918,
+                            472,
+                            1000,
+                            620
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            868,
+                            508,
+                            938,
+                            588
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            148,
+                            478,
+                            238,
+                            568
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            468,
+                            284,
+                            648,
+                            348
+                        ],
+                        "label": "sungl\u0430sses"
+                    }
+                ],
+                "token_count": 344,
+                "raw_token_count": 494,
+                "runtime_seconds": 1.5406
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.05642134148966562,
+                "defocus_blur": 0.03108656194131765,
+                "motion_blur": 0.01770005393534881,
+                "fog_filter": 0.0060719983104155235,
+                "pixelate": 0.020615428339905335,
+                "jpeg_filter": 0.026816213168134387
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.0007005885960445663,
+                "synonym": 0.0018072535802471368,
+                "ata_saliency": 0.0017461653683160019,
+                "fragmentation": 0.0013789740436818956,
+                "character_noise": 0.005943379809450166
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.008998,
+                    "defocus_blur": 0.027404,
+                    "motion_blur": 0.012242,
+                    "fog_filter": 0.006287,
+                    "pixelate": 0.044286,
+                    "jpeg_filter": 0.086568
+                },
+                "text_corruptions": {
+                    "homophone": 0.040445,
+                    "synonym": 0.1437,
+                    "ata_saliency": 0.616666,
+                    "fragmentation": 0.023858,
+                    "character_noise": 0.011974
+                },
+                "img_budget_used": 0.185783,
+                "txt_budget_used": 0.836644,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.08846,
+                "img_dist": 0.09245,
+                "txt_dist": 0.22026,
+                "txt_sim": 0.77974
+            },
+            "swad_metrics": {
+                "iou_0": 0.56081,
+                "delta_m_plus": 0.84226,
+                "phi": 0.70765,
+                "swad": 0.59603
+            },
+            "l2_distance": 0.25473,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"back\u200d a\u200b\u0440ck, han wi\u200bth a wije brim, perbon\u200b, sugnlasses\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [322, 54, 918, 398], \"label\": \"back\u200d a\u200b\u0440ck, han wi\u200bth a wije brim, perbon\u200b, sugnlasses\"},\n\t{\"bbox_2d\": [458, 276, 650, 348], \"label\": \"sugnlasses\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            322,
+                            54,
+                            918,
+                            398
+                        ],
+                        "label": "back\u200d a\u200b\u0440ck, han wi\u200bth a wije brim, perbon\u200b, sugnlasses"
+                    },
+                    {
+                        "bbox_2d": [
+                            458,
+                            276,
+                            650,
+                            348
+                        ],
+                        "label": "sugnlasses"
+                    }
+                ],
+                "token_count": 98,
+                "raw_token_count": 494,
+                "runtime_seconds": 1.5406
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.008997842424079382,
+                "defocus_blur": 0.027403780891827087,
+                "motion_blur": 0.01224181622489428,
+                "fog_filter": 0.006286776297294781,
+                "pixelate": 0.044285509139214835,
+                "jpeg_filter": 0.08656769209076808
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.04044517952541582,
+                "synonym": 0.14370004359575272,
+                "ata_saliency": 0.6166664197193316,
+                "fragmentation": 0.023858341332332392,
+                "character_noise": 0.01197431118964595
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.208191,
+                    "defocus_blur": 0.213085,
+                    "motion_blur": 0.170659,
+                    "fog_filter": 0.006764,
+                    "pixelate": 0.010867,
+                    "jpeg_filter": 0.205116
+                },
+                "text_corruptions": {
+                    "homophone": 0.04736,
+                    "synonym": 0.11368,
+                    "ata_saliency": 0.070649,
+                    "fragmentation": 0.574607,
+                    "character_noise": 0.185493
+                },
+                "img_budget_used": 0.814682,
+                "txt_budget_used": 0.991789,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.4582,
+                "img_dist": 0.10831,
+                "txt_dist": 0.09464,
+                "txt_sim": 0.90536
+            },
+            "swad_metrics": {
+                "iou_0": 0.56081,
+                "delta_m_plus": 0.18297,
+                "phi": 0.8073,
+                "swad": 0.14771
+            },
+            "l2_distance": 0.48024,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"b\u0430\u0441kapck, hat w\u200bith\u200b a\u200b wid\u200d\u0435 b\u200b r\u200bim, perso n, sunglass\u0435s\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [440, 580, 890, 1000], \"label\": \"b\u0430\u0441kapck\"},\n\t{\"bbox_2d\": [320, 58, 916, 392], \"label\": \"hat w\u200bith\u200b a\u200b wid\u200d\u0435 b\u200b r\u200bim\"},\n\t{\"bbox_2d\": [278, 228, 980, 1000], \"label\": \"perso n\"},\n\t{\"bbox_2d\": [38, 272, 500, 1000], \"label\": \"perso n\"},\n\t{\"bbox_2d\": [0, 538, 78, 1000], \"label\": \"perso n\"},\n\t{\"bbox_2d\": [858, 492, 998, 650], \"label\": \"perso n\"},\n\t{\"bbox_2d\": [930, 468, 1000, 580], \"label\": \"perso n\"},\n\t{\"bbox_2d\": [458, 280, 640, 348], \"label\": \"sunglass\u0435s\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            440,
+                            580,
+                            890,
+                            1000
+                        ],
+                        "label": "b\u0430\u0441kapck"
+                    },
+                    {
+                        "bbox_2d": [
+                            320,
+                            58,
+                            916,
+                            392
+                        ],
+                        "label": "hat w\u200bith\u200b a\u200b wid\u200d\u0435 b\u200b r\u200bim"
+                    },
+                    {
+                        "bbox_2d": [
+                            278,
+                            228,
+                            980,
+                            1000
+                        ],
+                        "label": "perso n"
+                    },
+                    {
+                        "bbox_2d": [
+                            38,
+                            272,
+                            500,
+                            1000
+                        ],
+                        "label": "perso n"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            538,
+                            78,
+                            1000
+                        ],
+                        "label": "perso n"
+                    },
+                    {
+                        "bbox_2d": [
+                            858,
+                            492,
+                            998,
+                            650
+                        ],
+                        "label": "perso n"
+                    },
+                    {
+                        "bbox_2d": [
+                            930,
+                            468,
+                            1000,
+                            580
+                        ],
+                        "label": "perso n"
+                    },
+                    {
+                        "bbox_2d": [
+                            458,
+                            280,
+                            640,
+                            348
+                        ],
+                        "label": "sunglass\u0435s"
+                    }
+                ],
+                "token_count": 302,
+                "raw_token_count": 494,
+                "runtime_seconds": 1.5406
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.2081912342754872,
+                "defocus_blur": 0.213085264775801,
+                "motion_blur": 0.17065877162513785,
+                "fog_filter": 0.006763800594841604,
+                "pixelate": 0.010866527344433842,
+                "jpeg_filter": 0.2051160696626809
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.0473602842467731,
+                "synonym": 0.11368026091741781,
+                "ata_saliency": 0.07064869379266375,
+                "fragmentation": 0.5746065023534536,
+                "character_noise": 0.18549314534252237
+            }
+        }
+    ]
+}

@@ -1,0 +1,112 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/25",
+        "folder_id": "25",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00003199.JPEG"
+    },
+    "pareto_index": 1,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.20005,
+            "defocus_blur": 0.110351,
+            "motion_blur": 0.081648,
+            "fog_filter": 0.056276,
+            "pixelate": 0.16416,
+            "jpeg_filter": 0.110747
+        },
+        "text_corruptions": {
+            "homophone": 0.208273,
+            "synonym": 0.083348,
+            "ata_saliency": 0.036632,
+            "fragmentation": 0.06017,
+            "character_noise": 0.027632
+        },
+        "img_budget_used": 0.723233,
+        "txt_budget_used": 0.416055,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.12011,
+        "txt_dist": 0.27714,
+        "txt_sim": 0.72286
+    },
+    "swad_metrics": {
+        "iou_0": 0.84339,
+        "delta_m_plus": 1.0,
+        "phi": 0.63604,
+        "swad": 0.63604
+    },
+    "l2_distance": 0.30205,
+    "original_prompt": "Identify the objects \"helmet, horse, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 89,
+            "ymin": 4,
+            "xmax": 246,
+            "ymax": 192
+        },
+        "helmet": {
+            "xmin": 164,
+            "ymin": 4,
+            "xmax": 203,
+            "ymax": 47
+        },
+        "horse": {
+            "xmin": 120,
+            "ymin": 58,
+            "xmax": 224,
+            "ymax": 294
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"hard aht, steed, per s\u200bi\u200bn\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [242, 148, 434, 770], \"label\": \"hard aht, steed, per s\u200bi\u200bn\"},\n\t{\"bbox_2d\": [184, 14, 478, 500], \"label\": \"hard aht, steed, per s\u200bi\u200bn\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    242,
+                    148,
+                    434,
+                    770
+                ],
+                "label": "hard aht, steed, per s\u200bi\u200bn"
+            },
+            {
+                "bbox_2d": [
+                    184,
+                    14,
+                    478,
+                    500
+                ],
+                "label": "hard aht, steed, per s\u200bi\u200bn"
+            }
+        ],
+        "token_count": 95,
+        "raw_token_count": 151,
+        "runtime_seconds": 0.6155
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.2000502583133558,
+        "defocus_blur": 0.11035131488962854,
+        "motion_blur": 0.081647906316168,
+        "fog_filter": 0.05627572592214345,
+        "pixelate": 0.16416039442283525,
+        "jpeg_filter": 0.11074691216436054
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.20827324476065942,
+        "synonym": 0.08334840306766597,
+        "ata_saliency": 0.03663206726001679,
+        "fragmentation": 0.06016954880450834,
+        "character_noise": 0.027631850341145178
+    }
+}

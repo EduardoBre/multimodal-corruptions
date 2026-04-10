@@ -1,0 +1,653 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/168",
+        "folder_id": "168",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00026817.JPEG"
+    },
+    "original_prompt": "Identify the objects \"person, saxophone, trombone\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "saxophone": {
+            "xmin": 241,
+            "ymin": 178,
+            "xmax": 339,
+            "ymax": 331
+        },
+        "person": {
+            "xmin": 280,
+            "ymin": 39,
+            "xmax": 420,
+            "ymax": 333
+        },
+        "person_1": {
+            "xmin": 141,
+            "ymin": 116,
+            "xmax": 319,
+            "ymax": 333
+        },
+        "trombone": {
+            "xmin": 345,
+            "ymin": 69,
+            "xmax": 463,
+            "ymax": 151
+        },
+        "person_2": {
+            "xmin": 0,
+            "ymin": 22,
+            "xmax": 165,
+            "ymax": 333
+        },
+        "person_3": {
+            "xmin": 206,
+            "ymin": 55,
+            "xmax": 276,
+            "ymax": 145
+        }
+    },
+    "baseline_iou": 0.77892,
+    "swad_star": 0.64827,
+    "swad_star_index": 4,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 6,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.010516,
+                    "defocus_blur": 0.013294,
+                    "motion_blur": 0.046226,
+                    "fog_filter": 0.016858,
+                    "pixelate": 0.019389,
+                    "jpeg_filter": 0.003062
+                },
+                "text_corruptions": {
+                    "homophone": 0.029597,
+                    "synonym": 0.078004,
+                    "ata_saliency": 0.089372,
+                    "fragmentation": 0.061681,
+                    "character_noise": 0.013985
+                },
+                "img_budget_used": 0.109344,
+                "txt_budget_used": 0.272638,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.76733,
+                "img_dist": 0.09126,
+                "txt_dist": 0.09934,
+                "txt_sim": 0.90066
+            },
+            "swad_metrics": {
+                "iou_0": 0.77892,
+                "delta_m_plus": 0.01488,
+                "phi": 0.81847,
+                "swad": 0.01218
+            },
+            "l2_distance": 0.7791,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"person, saxophone, t\u200brom b\u043ene\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 57, 357, 997], \"label\": \"person\"},\n\t{\"bbox_2d\": [280, 347, 657, 997], \"label\": \"person\"},\n\t{\"bbox_2d\": [560, 128, 842, 997], \"label\": \"person\"},\n\t{\"bbox_2d\": [430, 147, 530, 450], \"label\": \"person\"},\n\t{\"bbox_2d\": [540, 550, 600, 997], \"label\": \"saxophone\"},\n\t{\"bbox_2d\": [727, 200, 920, 450], \"label\": \"t\u200brom b\u043ene\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            57,
+                            357,
+                            997
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            280,
+                            347,
+                            657,
+                            997
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            560,
+                            128,
+                            842,
+                            997
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            430,
+                            147,
+                            530,
+                            450
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            540,
+                            550,
+                            600,
+                            997
+                        ],
+                        "label": "saxophone"
+                    },
+                    {
+                        "bbox_2d": [
+                            727,
+                            200,
+                            920,
+                            450
+                        ],
+                        "label": "t\u200brom b\u043ene"
+                    }
+                ],
+                "token_count": 208,
+                "raw_token_count": 292,
+                "runtime_seconds": 0.9297
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.010515862963616628,
+                "defocus_blur": 0.013294371660614122,
+                "motion_blur": 0.046225815682175715,
+                "fog_filter": 0.01685753677656939,
+                "pixelate": 0.019388935749117268,
+                "jpeg_filter": 0.00306181876826965
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.02959705387818855,
+                "synonym": 0.07800392265142783,
+                "ata_saliency": 0.08937154539566346,
+                "fragmentation": 0.061680569851563206,
+                "character_noise": 0.013984631157756739
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.052171,
+                    "defocus_blur": 0.332843,
+                    "motion_blur": 0.012012,
+                    "fog_filter": 0.043172,
+                    "pixelate": 0.17039,
+                    "jpeg_filter": 0.042282
+                },
+                "text_corruptions": {
+                    "homophone": 0.063333,
+                    "synonym": 0.075183,
+                    "ata_saliency": 0.225572,
+                    "fragmentation": 0.21444,
+                    "character_noise": 0.00468
+                },
+                "img_budget_used": 0.652871,
+                "txt_budget_used": 0.583208,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.11187,
+                "txt_dist": 0.28024,
+                "txt_sim": 0.71976
+            },
+            "swad_metrics": {
+                "iou_0": 0.77892,
+                "delta_m_plus": 1.0,
+                "phi": 0.63924,
+                "swad": 0.63924
+            },
+            "l2_distance": 0.30174,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"epr son, saxophon\u0435 , tronb\u200b o\u200bne\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [550, 117, 917, 997], \"label\": \"epr son, saxophon\u0435 , tronb\u200b o\u200bne\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            550,
+                            117,
+                            917,
+                            997
+                        ],
+                        "label": "epr son, saxophon\u0435 , tronb\u200b o\u200bne"
+                    }
+                ],
+                "token_count": 53,
+                "raw_token_count": 292,
+                "runtime_seconds": 0.9297
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.052171437081887755,
+                "defocus_blur": 0.3328430033336088,
+                "motion_blur": 0.012012136349116357,
+                "fog_filter": 0.043171732700642944,
+                "pixelate": 0.1703901850800694,
+                "jpeg_filter": 0.04228219200660362
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.06333347498252177,
+                "synonym": 0.07518273884034452,
+                "ata_saliency": 0.22557193097079545,
+                "fragmentation": 0.21443977593057875,
+                "character_noise": 0.004680050300786911
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.177024,
+                    "defocus_blur": 0.036388,
+                    "motion_blur": 0.005181,
+                    "fog_filter": 0.063564,
+                    "pixelate": 0.034641,
+                    "jpeg_filter": 0.429653
+                },
+                "text_corruptions": {
+                    "homophone": 0.060237,
+                    "synonym": 0.028081,
+                    "ata_saliency": 0.029252,
+                    "fragmentation": 0.069011,
+                    "character_noise": 0.039871
+                },
+                "img_budget_used": 0.746451,
+                "txt_budget_used": 0.226452,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.69015,
+                "img_dist": 0.10135,
+                "txt_dist": 0.11973,
+                "txt_sim": 0.88027
+            },
+            "swad_metrics": {
+                "iou_0": 0.77892,
+                "delta_m_plus": 0.11397,
+                "phi": 0.79105,
+                "swad": 0.09015
+            },
+            "l2_distance": 0.70775,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"perso n, saxophon\u200de, tr\u200dombone\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 54, 320, 997], \"label\": \"perso n\"},\n\t{\"bbox_2d\": [280, 340, 648, 997], \"label\": \"perso n\"},\n\t{\"bbox_2d\": [560, 117, 840, 997], \"label\": \"perso n\"},\n\t{\"bbox_2d\": [438, 147, 550, 577], \"label\": \"perso n\"},\n\t{\"bbox_2d\": [212, 450, 388, 997], \"label\": \"perso n\"},\n\t{\"bbox_2d\": [550, 307, 600, 707], \"label\": \"saxophon\u200de\"},\n\t{\"bbox_2d\": [810, 207, 912, 427], \"label\": \"tr\u200dombone\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            54,
+                            320,
+                            997
+                        ],
+                        "label": "perso n"
+                    },
+                    {
+                        "bbox_2d": [
+                            280,
+                            340,
+                            648,
+                            997
+                        ],
+                        "label": "perso n"
+                    },
+                    {
+                        "bbox_2d": [
+                            560,
+                            117,
+                            840,
+                            997
+                        ],
+                        "label": "perso n"
+                    },
+                    {
+                        "bbox_2d": [
+                            438,
+                            147,
+                            550,
+                            577
+                        ],
+                        "label": "perso n"
+                    },
+                    {
+                        "bbox_2d": [
+                            212,
+                            450,
+                            388,
+                            997
+                        ],
+                        "label": "perso n"
+                    },
+                    {
+                        "bbox_2d": [
+                            550,
+                            307,
+                            600,
+                            707
+                        ],
+                        "label": "saxophon\u200de"
+                    },
+                    {
+                        "bbox_2d": [
+                            810,
+                            207,
+                            912,
+                            427
+                        ],
+                        "label": "tr\u200dombone"
+                    }
+                ],
+                "token_count": 253,
+                "raw_token_count": 292,
+                "runtime_seconds": 0.9297
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.17702411926186445,
+                "defocus_blur": 0.0363878149148471,
+                "motion_blur": 0.005180576454219528,
+                "fog_filter": 0.06356438349810253,
+                "pixelate": 0.0346413924836678,
+                "jpeg_filter": 0.42965302905779656
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.060237385288070065,
+                "synonym": 0.02808078231422952,
+                "ata_saliency": 0.02925188416477128,
+                "fragmentation": 0.06901095012865968,
+                "character_noise": 0.03987125423832751
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.00344,
+                    "defocus_blur": 0.023043,
+                    "motion_blur": 0.091265,
+                    "fog_filter": 0.001017,
+                    "pixelate": 0.164861,
+                    "jpeg_filter": 0.023044
+                },
+                "text_corruptions": {
+                    "homophone": 0.14973,
+                    "synonym": 0.522401,
+                    "ata_saliency": 0.032763,
+                    "fragmentation": 0.162656,
+                    "character_noise": 0.043162
+                },
+                "img_budget_used": 0.306671,
+                "txt_budget_used": 0.910713,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.08929,
+                "txt_dist": 0.31912,
+                "txt_sim": 0.68088
+            },
+            "swad_metrics": {
+                "iou_0": 0.77892,
+                "delta_m_plus": 1.0,
+                "phi": 0.62008,
+                "swad": 0.62008
+            },
+            "l2_distance": 0.33138,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"per s\u200do n, t enor sax\u200d, trombo\u200bne\u200d\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 57, 347, 997], \"label\": \"per s\u200do n, t enor sax\u200d, trombo\u200bne\"},\n\t{\"bbox_2d\": [280, 347, 655, 997], \"label\": \"per s\u200do n, t enor sax\u200d, trombo\u200bne\"},\n\t{\"bbox_2d\": [557, 125, 917, 997], \"label\": \"per s\u200do n, t enor sax\u200d, trombo\u200bne\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            57,
+                            347,
+                            997
+                        ],
+                        "label": "per s\u200do n, t enor sax\u200d, trombo\u200bne"
+                    },
+                    {
+                        "bbox_2d": [
+                            280,
+                            347,
+                            655,
+                            997
+                        ],
+                        "label": "per s\u200do n, t enor sax\u200d, trombo\u200bne"
+                    },
+                    {
+                        "bbox_2d": [
+                            557,
+                            125,
+                            917,
+                            997
+                        ],
+                        "label": "per s\u200do n, t enor sax\u200d, trombo\u200bne"
+                    }
+                ],
+                "token_count": 153,
+                "raw_token_count": 292,
+                "runtime_seconds": 0.9297
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.0034404549811256602,
+                "defocus_blur": 0.023042919923337107,
+                "motion_blur": 0.09126504660054234,
+                "fog_filter": 0.0010173822023652808,
+                "pixelate": 0.1648612297937257,
+                "jpeg_filter": 0.0230438810875621
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.14973047568988623,
+                "synonym": 0.5224008059921194,
+                "ata_saliency": 0.03276319490577387,
+                "fragmentation": 0.16265599372939013,
+                "character_noise": 0.04316242044361151
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.001877,
+                    "defocus_blur": 0.004549,
+                    "motion_blur": 0.005819,
+                    "fog_filter": 0.012714,
+                    "pixelate": 0.043042,
+                    "jpeg_filter": 0.010851
+                },
+                "text_corruptions": {
+                    "homophone": 0.135109,
+                    "synonym": 0.043772,
+                    "ata_saliency": 0.085111,
+                    "fragmentation": 0.581847,
+                    "character_noise": 0.024226
+                },
+                "img_budget_used": 0.078853,
+                "txt_budget_used": 0.870065,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.09072,
+                "txt_dist": 0.28705,
+                "txt_sim": 0.71295
+            },
+            "swad_metrics": {
+                "iou_0": 0.77892,
+                "delta_m_plus": 1.0,
+                "phi": 0.64827,
+                "swad": 0.64827
+            },
+            "l2_distance": 0.30104,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"per\u200ds on, sao\u0445ph on\u0435, sli\u200dde trombon e\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 57, 338, 997], \"label\": \"per\u200ds on, sao\u0445ph on\u0435, sli\u200dde trombon e\"},\n\t{\"bbox_2d\": [278, 347, 655, 997], \"label\": \"per\u200ds on, sao\u0445ph on\u0435, sli\u200dde trombon e\"},\n\t{\"bbox_2d\": [557, 121, 840, 997], \"label\": \"per\u200ds on, sao\u0445ph on\u0435, sli\u200dde trombon e\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            57,
+                            338,
+                            997
+                        ],
+                        "label": "per\u200ds on, sao\u0445ph on\u0435, sli\u200dde trombon e"
+                    },
+                    {
+                        "bbox_2d": [
+                            278,
+                            347,
+                            655,
+                            997
+                        ],
+                        "label": "per\u200ds on, sao\u0445ph on\u0435, sli\u200dde trombon e"
+                    },
+                    {
+                        "bbox_2d": [
+                            557,
+                            121,
+                            840,
+                            997
+                        ],
+                        "label": "per\u200ds on, sao\u0445ph on\u0435, sli\u200dde trombon e"
+                    }
+                ],
+                "token_count": 162,
+                "raw_token_count": 292,
+                "runtime_seconds": 0.9297
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.0018769235799208184,
+                "defocus_blur": 0.004549048771686887,
+                "motion_blur": 0.0058194878783193104,
+                "fog_filter": 0.012714168685317247,
+                "pixelate": 0.043042430714189756,
+                "jpeg_filter": 0.010851343920226299
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.1351089316123106,
+                "synonym": 0.04377239870005191,
+                "ata_saliency": 0.08511133509455558,
+                "fragmentation": 0.5818465133334894,
+                "character_noise": 0.02422555718774845
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.005222,
+                    "defocus_blur": 0.062399,
+                    "motion_blur": 0.037193,
+                    "fog_filter": 0.05444,
+                    "pixelate": 0.044572,
+                    "jpeg_filter": 0.01574
+                },
+                "text_corruptions": {
+                    "homophone": 0.490507,
+                    "synonym": 0.029075,
+                    "ata_saliency": 0.030462,
+                    "fragmentation": 0.20099,
+                    "character_noise": 0.082768
+                },
+                "img_budget_used": 0.219567,
+                "txt_budget_used": 0.833803,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.75472,
+                "img_dist": 0.09789,
+                "txt_dist": 0.23864,
+                "txt_sim": 0.76136
+            },
+            "swad_metrics": {
+                "iou_0": 0.77892,
+                "delta_m_plus": 0.03107,
+                "phi": 0.68683,
+                "swad": 0.02134
+            },
+            "l2_distance": 0.79758,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"human, sax a p\u200bhone, trom bone\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 57, 333, 997], \"label\": \"human\"},\n\t{\"bbox_2d\": [283, 347, 655, 997], \"label\": \"human\"},\n\t{\"bbox_2d\": [557, 121, 840, 997], \"label\": \"human\"},\n\t{\"bbox_2d\": [438, 147, 533, 371], \"label\": \"human\"},\n\t{\"bbox_2d\": [548, 571, 605, 883], \"label\": \"sax a p\u200bhone\"},\n\t{\"bbox_2d\": [728, 207, 920, 457], \"label\": \"trom bone\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            57,
+                            333,
+                            997
+                        ],
+                        "label": "human"
+                    },
+                    {
+                        "bbox_2d": [
+                            283,
+                            347,
+                            655,
+                            997
+                        ],
+                        "label": "human"
+                    },
+                    {
+                        "bbox_2d": [
+                            557,
+                            121,
+                            840,
+                            997
+                        ],
+                        "label": "human"
+                    },
+                    {
+                        "bbox_2d": [
+                            438,
+                            147,
+                            533,
+                            371
+                        ],
+                        "label": "human"
+                    },
+                    {
+                        "bbox_2d": [
+                            548,
+                            571,
+                            605,
+                            883
+                        ],
+                        "label": "sax a p\u200bhone"
+                    },
+                    {
+                        "bbox_2d": [
+                            728,
+                            207,
+                            920,
+                            457
+                        ],
+                        "label": "trom bone"
+                    }
+                ],
+                "token_count": 208,
+                "raw_token_count": 292,
+                "runtime_seconds": 0.9297
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.005221992360243592,
+                "defocus_blur": 0.062399246251711324,
+                "motion_blur": 0.03719282740566214,
+                "fog_filter": 0.054440351631436394,
+                "pixelate": 0.04457235977972916,
+                "jpeg_filter": 0.01574008640122549
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.4905069521805509,
+                "synonym": 0.02907529586824121,
+                "ata_saliency": 0.030461891128065046,
+                "fragmentation": 0.2009901764226441,
+                "character_noise": 0.08276822872511644
+            }
+        }
+    ]
+}

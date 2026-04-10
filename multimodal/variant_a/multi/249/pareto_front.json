@@ -1,0 +1,1087 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/249",
+        "folder_id": "249",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00028118.JPEG"
+    },
+    "original_prompt": "Identify the objects \"dog, domestic cat, sofa\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "domestic cat": {
+            "xmin": 179,
+            "ymin": 0,
+            "xmax": 499,
+            "ymax": 232
+        },
+        "dog": {
+            "xmin": 0,
+            "ymin": 141,
+            "xmax": 233,
+            "ymax": 332
+        },
+        "sofa": {
+            "xmin": 0,
+            "ymin": 0,
+            "xmax": 499,
+            "ymax": 300
+        }
+    },
+    "baseline_iou": 0.9451,
+    "swad_star": 0.70111,
+    "swad_star_index": 18,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 5,
+    "total_evaluations": 150,
+    "skipped_evaluations": 30,
+    "n_solutions": 19,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "fog_filter",
+                "img_scale": 0.9380680776626459,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6630024765915488
+            },
+            "objectives": {
+                "iou": 0.76736,
+                "img_dist": 0.25188,
+                "txt_dist": 0.20126,
+                "txt_sim": 0.79874
+            },
+            "swad_metrics": {
+                "iou_0": 0.9451,
+                "delta_m_plus": 0.18806,
+                "phi": 0.59755,
+                "swad": 0.11238
+            },
+            "l2_distance": 0.83234,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"odg, dlmestic cot, sofa\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 438, 460, 1000], \"label\": \"odg\"},\n\t{\"bbox_2d\": [0, 0, 1000, 1000], \"label\": \"dlmestic cot\"},\n\t{\"bbox_2d\": [0, 0, 1000, 1000], \"label\": \"sofa\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            438,
+                            460,
+                            1000
+                        ],
+                        "label": "odg"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            1000
+                        ],
+                        "label": "dlmestic cot"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            1000
+                        ],
+                        "label": "sofa"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 112,
+                "runtime_seconds": 0.3418
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "fog_filter",
+                "img_scale": 0.22769552971138612,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.3819970636261538
+            },
+            "objectives": {
+                "iou": 0.76917,
+                "img_dist": 0.10569,
+                "txt_dist": 0.1574,
+                "txt_sim": 0.8426
+            },
+            "swad_metrics": {
+                "iou_0": 0.9451,
+                "delta_m_plus": 0.18615,
+                "phi": 0.75355,
+                "swad": 0.14027
+            },
+            "l2_distance": 0.79219,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, dometsic crt, sofa\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 436, 458, 989], \"label\": \"dog\"},\n\t{\"bbox_2d\": [0, 0, 1000, 989], \"label\": \"sofa\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            436,
+                            458,
+                            989
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            989
+                        ],
+                        "label": "sofa"
+                    }
+                ],
+                "token_count": 68,
+                "raw_token_count": 112,
+                "runtime_seconds": 0.3418
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.6213450499591809,
+                "txt_attack": "synonym",
+                "txt_scale": 0.7933036501430749
+            },
+            "objectives": {
+                "iou": 0.9397,
+                "img_dist": 0.14564,
+                "txt_dist": 0.0309,
+                "txt_sim": 0.9691
+            },
+            "swad_metrics": {
+                "iou_0": 0.9451,
+                "delta_m_plus": 0.00571,
+                "phi": 0.82796,
+                "swad": 0.00473
+            },
+            "l2_distance": 0.95142,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, feline, sofa\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 440, 462, 1000], \"label\": \"dog\"},\n\t{\"bbox_2d\": [338, 0, 1000, 700], \"label\": \"feline\"},\n\t{\"bbox_2d\": [0, 0, 1000, 1000], \"label\": \"sofa\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            440,
+                            462,
+                            1000
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            338,
+                            0,
+                            1000,
+                            700
+                        ],
+                        "label": "feline"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            1000
+                        ],
+                        "label": "sofa"
+                    }
+                ],
+                "token_count": 103,
+                "raw_token_count": 129,
+                "runtime_seconds": 0.4201
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.7935170263690926,
+                "txt_attack": "synonym",
+                "txt_scale": 0.7724979474714236
+            },
+            "objectives": {
+                "iou": 0.93215,
+                "img_dist": 0.17966,
+                "txt_dist": 0.04843,
+                "txt_sim": 0.95157
+            },
+            "swad_metrics": {
+                "iou_0": 0.9451,
+                "delta_m_plus": 0.0137,
+                "phi": 0.78061,
+                "swad": 0.0107
+            },
+            "l2_distance": 0.95054,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"puppy, domestic cat, sofa\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 440, 460, 1000], \"label\": \"puppy\"},\n\t{\"bbox_2d\": [325, 0, 1000, 700], \"label\": \"domestic cat\"},\n\t{\"bbox_2d\": [0, 0, 1000, 1000], \"label\": \"sofa\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            440,
+                            460,
+                            1000
+                        ],
+                        "label": "puppy"
+                    },
+                    {
+                        "bbox_2d": [
+                            325,
+                            0,
+                            1000,
+                            700
+                        ],
+                        "label": "domestic cat"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            1000
+                        ],
+                        "label": "sofa"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 111,
+                "runtime_seconds": 0.381
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.6196539707705219,
+                "txt_attack": "synonym",
+                "txt_scale": 0.7842584465402861
+            },
+            "objectives": {
+                "iou": 0.92442,
+                "img_dist": 0.14537,
+                "txt_dist": 0.06584,
+                "txt_sim": 0.93416
+            },
+            "swad_metrics": {
+                "iou_0": 0.9451,
+                "delta_m_plus": 0.02188,
+                "phi": 0.79836,
+                "swad": 0.01747
+            },
+            "l2_distance": 0.93809,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"canine, feline, sofa\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 440, 460, 1000], \"label\": \"canine\"},\n\t{\"bbox_2d\": [308, 0, 1000, 700], \"label\": \"feline\"},\n\t{\"bbox_2d\": [0, 0, 1000, 1000], \"label\": \"sofa\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            440,
+                            460,
+                            1000
+                        ],
+                        "label": "canine"
+                    },
+                    {
+                        "bbox_2d": [
+                            308,
+                            0,
+                            1000,
+                            700
+                        ],
+                        "label": "feline"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            1000
+                        ],
+                        "label": "sofa"
+                    }
+                ],
+                "token_count": 104,
+                "raw_token_count": 111,
+                "runtime_seconds": 0.381
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.22721494851787077,
+                "txt_attack": "homophone",
+                "txt_scale": 0.9948250792623392
+            },
+            "objectives": {
+                "iou": 0.81931,
+                "img_dist": 0.02745,
+                "txt_dist": 0.16798,
+                "txt_sim": 0.83202
+            },
+            "swad_metrics": {
+                "iou_0": 0.9451,
+                "delta_m_plus": 0.1331,
+                "phi": 0.80918,
+                "swad": 0.1077
+            },
+            "l2_distance": 0.8368,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dogg, duh mestic cat, sophia\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 430, 468, 1000], \"label\": \"dogg\"},\n\t{\"bbox_2d\": [343, 0, 1000, 700], \"label\": \"duh mestic cat\"},\n\t{\"bbox_2d\": [0, 760, 1000, 1000], \"label\": \"sophia\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            430,
+                            468,
+                            1000
+                        ],
+                        "label": "dogg"
+                    },
+                    {
+                        "bbox_2d": [
+                            343,
+                            0,
+                            1000,
+                            700
+                        ],
+                        "label": "duh mestic cat"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            760,
+                            1000,
+                            1000
+                        ],
+                        "label": "sophia"
+                    }
+                ],
+                "token_count": 110,
+                "raw_token_count": 112,
+                "runtime_seconds": 0.3418
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.8238959409939836,
+                "txt_attack": "synonym",
+                "txt_scale": 0.22071791171422245
+            },
+            "objectives": {
+                "iou": 0.93607,
+                "img_dist": 0.18381,
+                "txt_dist": 0.03494,
+                "txt_sim": 0.96506
+            },
+            "swad_metrics": {
+                "iou_0": 0.9451,
+                "delta_m_plus": 0.00955,
+                "phi": 0.78767,
+                "swad": 0.00753
+            },
+            "l2_distance": 0.95459,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"canine, domestic cat, sofa\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 440, 472, 1000], \"label\": \"canine\"},\n\t{\"bbox_2d\": [333, 0, 1000, 700], \"label\": \"domestic cat\"},\n\t{\"bbox_2d\": [0, 0, 1000, 1000], \"label\": \"sofa\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            440,
+                            472,
+                            1000
+                        ],
+                        "label": "canine"
+                    },
+                    {
+                        "bbox_2d": [
+                            333,
+                            0,
+                            1000,
+                            700
+                        ],
+                        "label": "domestic cat"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            1000
+                        ],
+                        "label": "sofa"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 111,
+                "runtime_seconds": 0.381
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.8644115431944192,
+                "txt_attack": "homophone",
+                "txt_scale": 0.7560515137896227
+            },
+            "objectives": {
+                "iou": 0.81743,
+                "img_dist": 0.04143,
+                "txt_dist": 0.11654,
+                "txt_sim": 0.88346
+            },
+            "swad_metrics": {
+                "iou_0": 0.9451,
+                "delta_m_plus": 0.13509,
+                "phi": 0.84686,
+                "swad": 0.1144
+            },
+            "l2_distance": 0.82673,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dogg, domestic cat, sophia\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 436, 464, 998], \"label\": \"dogg\"},\n\t{\"bbox_2d\": [345, 0, 1000, 700], \"label\": \"domestic cat\"},\n\t{\"bbox_2d\": [0, 436, 464, 998], \"label\": \"sophia\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            436,
+                            464,
+                            998
+                        ],
+                        "label": "dogg"
+                    },
+                    {
+                        "bbox_2d": [
+                            345,
+                            0,
+                            1000,
+                            700
+                        ],
+                        "label": "domestic cat"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            436,
+                            464,
+                            998
+                        ],
+                        "label": "sophia"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 112,
+                "runtime_seconds": 0.3381
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.0367933233295966,
+                "txt_attack": "homophone",
+                "txt_scale": 0.33757470950821394
+            },
+            "objectives": {
+                "iou": 0.81032,
+                "img_dist": 0.01572,
+                "txt_dist": 0.1717,
+                "txt_sim": 0.8283
+            },
+            "swad_metrics": {
+                "iou_0": 0.9451,
+                "delta_m_plus": 0.14261,
+                "phi": 0.81528,
+                "swad": 0.11627
+            },
+            "l2_distance": 0.82846,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dag, domestic cat, sophia\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 436, 458, 1000], \"label\": \"dag\"},\n\t{\"bbox_2d\": [348, 0, 1000, 692], \"label\": \"domestic cat\"},\n\t{\"bbox_2d\": [348, 0, 1000, 692], \"label\": \"sophia\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            436,
+                            458,
+                            1000
+                        ],
+                        "label": "dag"
+                    },
+                    {
+                        "bbox_2d": [
+                            348,
+                            0,
+                            1000,
+                            692
+                        ],
+                        "label": "domestic cat"
+                    },
+                    {
+                        "bbox_2d": [
+                            348,
+                            0,
+                            1000,
+                            692
+                        ],
+                        "label": "sophia"
+                    }
+                ],
+                "token_count": 106,
+                "raw_token_count": 111,
+                "runtime_seconds": 0.381
+            }
+        },
+        {
+            "index": 9,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.009954490520443726,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.11322495682581776
+            },
+            "objectives": {
+                "iou": 0.94046,
+                "img_dist": 0.02376,
+                "txt_dist": 0.10401,
+                "txt_sim": 0.89599
+            },
+            "swad_metrics": {
+                "iou_0": 0.9451,
+                "delta_m_plus": 0.00491,
+                "phi": 0.8747,
+                "swad": 0.00429
+            },
+            "l2_distance": 0.94649,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"d\u043eg, d\u200bome\u200bsti\u0441\u200b cat\u200b, sof\u0430\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 438, 460, 1000], \"label\": \"d\u043eg\"},\n\t{\"bbox_2d\": [345, 0, 1000, 688], \"label\": \"d\u200bome\u200bsti\u0441\u200b cat\u200b\"},\n\t{\"bbox_2d\": [0, 0, 1000, 1000], \"label\": \"sof\u0430\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            438,
+                            460,
+                            1000
+                        ],
+                        "label": "d\u043eg"
+                    },
+                    {
+                        "bbox_2d": [
+                            345,
+                            0,
+                            1000,
+                            688
+                        ],
+                        "label": "d\u200bome\u200bsti\u0441\u200b cat\u200b"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            1000
+                        ],
+                        "label": "sof\u0430"
+                    }
+                ],
+                "token_count": 113,
+                "raw_token_count": 114,
+                "runtime_seconds": 0.3678
+            }
+        },
+        {
+            "index": 10,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.7578772556594229,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6360821784877523
+            },
+            "objectives": {
+                "iou": 0.9402,
+                "img_dist": 0.0381,
+                "txt_dist": 0.15904,
+                "txt_sim": 0.84096
+            },
+            "swad_metrics": {
+                "iou_0": 0.9451,
+                "delta_m_plus": 0.00518,
+                "phi": 0.80892,
+                "swad": 0.00419
+            },
+            "l2_distance": 0.95432,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"odg, doemstic cat, soaf\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 432, 462, 1000], \"label\": \"odg\"},\n\t{\"bbox_2d\": [342, 0, 1000, 680], \"label\": \"doemstic cat\"},\n\t{\"bbox_2d\": [0, 0, 1000, 1000], \"label\": \"soaf\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            432,
+                            462,
+                            1000
+                        ],
+                        "label": "odg"
+                    },
+                    {
+                        "bbox_2d": [
+                            342,
+                            0,
+                            1000,
+                            680
+                        ],
+                        "label": "doemstic cat"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            1000
+                        ],
+                        "label": "soaf"
+                    }
+                ],
+                "token_count": 107,
+                "raw_token_count": 112,
+                "runtime_seconds": 0.3381
+            }
+        },
+        {
+            "index": 11,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.8631447102591852,
+                "txt_attack": "synonym",
+                "txt_scale": 0.16959814137908852
+            },
+            "objectives": {
+                "iou": 0.80142,
+                "img_dist": 0.18909,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.9451,
+                "delta_m_plus": 0.15203,
+                "phi": 0.81091,
+                "swad": 0.12328
+            },
+            "l2_distance": 0.82343,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, domestic cat, sofa\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [312, 0, 1000, 708], \"label\": \"domestic cat\"},\n\t{\"bbox_2d\": [0, 440, 458, 1000], \"label\": \"sofa\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            312,
+                            0,
+                            1000,
+                            708
+                        ],
+                        "label": "domestic cat"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            440,
+                            458,
+                            1000
+                        ],
+                        "label": "sofa"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 112,
+                "runtime_seconds": 0.3418
+            }
+        },
+        {
+            "index": 12,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.9316177058680379,
+                "txt_attack": "homophone",
+                "txt_scale": 0.5274482772241863
+            },
+            "objectives": {
+                "iou": 0.92465,
+                "img_dist": 0.04507,
+                "txt_dist": 0.06624,
+                "txt_sim": 0.93376
+            },
+            "swad_metrics": {
+                "iou_0": 0.9451,
+                "delta_m_plus": 0.02164,
+                "phi": 0.89168,
+                "swad": 0.01929
+            },
+            "l2_distance": 0.92811,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dawg, domestic cat, sofa\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 430, 422, 997], \"label\": \"dawg\"},\n\t{\"bbox_2d\": [348, 0, 1000, 700], \"label\": \"domestic cat\"},\n\t{\"bbox_2d\": [0, 0, 1000, 997], \"label\": \"sofa\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            430,
+                            422,
+                            997
+                        ],
+                        "label": "dawg"
+                    },
+                    {
+                        "bbox_2d": [
+                            348,
+                            0,
+                            1000,
+                            700
+                        ],
+                        "label": "domestic cat"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            997
+                        ],
+                        "label": "sofa"
+                    }
+                ],
+                "token_count": 104,
+                "raw_token_count": 112,
+                "runtime_seconds": 0.3381
+            }
+        },
+        {
+            "index": 13,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8181617493544074,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4169848860435096
+            },
+            "objectives": {
+                "iou": 0.94073,
+                "img_dist": 0.03985,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.9451,
+                "delta_m_plus": 0.00462,
+                "phi": 0.96015,
+                "swad": 0.00444
+            },
+            "l2_distance": 0.94157,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, domestic cat, sofa\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 436, 472, 1000], \"label\": \"dog\"},\n\t{\"bbox_2d\": [338, 0, 1000, 700], \"label\": \"domestic cat\"},\n\t{\"bbox_2d\": [0, 0, 1000, 1000], \"label\": \"sofa\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            436,
+                            472,
+                            1000
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            338,
+                            0,
+                            1000,
+                            700
+                        ],
+                        "label": "domestic cat"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            1000
+                        ],
+                        "label": "sofa"
+                    }
+                ],
+                "token_count": 104,
+                "raw_token_count": 114,
+                "runtime_seconds": 0.3678
+            }
+        },
+        {
+            "index": 14,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8908371265626456,
+                "txt_attack": "homophone",
+                "txt_scale": 0.3374056805300163
+            },
+            "objectives": {
+                "iou": 0.79124,
+                "img_dist": 0.04201,
+                "txt_dist": 0.08011,
+                "txt_sim": 0.91989
+            },
+            "swad_metrics": {
+                "iou_0": 0.9451,
+                "delta_m_plus": 0.1628,
+                "phi": 0.88125,
+                "swad": 0.14346
+            },
+            "l2_distance": 0.79639,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, domestic cat, sophia\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 430, 428, 999], \"label\": \"dog\"},\n\t{\"bbox_2d\": [328, 0, 1000, 700], \"label\": \"domestic cat\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            430,
+                            428,
+                            999
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            328,
+                            0,
+                            1000,
+                            700
+                        ],
+                        "label": "domestic cat"
+                    }
+                ],
+                "token_count": 71,
+                "raw_token_count": 109,
+                "runtime_seconds": 0.3515
+            }
+        },
+        {
+            "index": 15,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8632061743184387,
+                "txt_attack": "homophone",
+                "txt_scale": 0.42644854804403176
+            },
+            "objectives": {
+                "iou": 0.79114,
+                "img_dist": 0.04201,
+                "txt_dist": 0.13154,
+                "txt_sim": 0.86846
+            },
+            "swad_metrics": {
+                "iou_0": 0.9451,
+                "delta_m_plus": 0.1629,
+                "phi": 0.83198,
+                "swad": 0.13553
+            },
+            "l2_distance": 0.8031,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, duh mestic cat, sophia\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 432, 428, 997], \"label\": \"dog\"},\n\t{\"bbox_2d\": [328, 0, 1000, 700], \"label\": \"duh mestic cat\"},\n\t{\"bbox_2d\": [0, 432, 428, 997], \"label\": \"sophia\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            432,
+                            428,
+                            997
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            328,
+                            0,
+                            1000,
+                            700
+                        ],
+                        "label": "duh mestic cat"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            432,
+                            428,
+                            997
+                        ],
+                        "label": "sophia"
+                    }
+                ],
+                "token_count": 106,
+                "raw_token_count": 109,
+                "runtime_seconds": 0.3515
+            }
+        },
+        {
+            "index": 16,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.03300015899640739,
+                "txt_attack": "homophone",
+                "txt_scale": 0.35750861527299904
+            },
+            "objectives": {
+                "iou": 0.94099,
+                "img_dist": 0.0156,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.9451,
+                "delta_m_plus": 0.00435,
+                "phi": 0.9844,
+                "swad": 0.00428
+            },
+            "l2_distance": 0.94112,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, domestic cat, sofa\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 436, 450, 997], \"label\": \"dog\"},\n\t{\"bbox_2d\": [345, 0, 1000, 697], \"label\": \"domestic cat\"},\n\t{\"bbox_2d\": [0, 0, 1000, 997], \"label\": \"sofa\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            436,
+                            450,
+                            997
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            345,
+                            0,
+                            1000,
+                            697
+                        ],
+                        "label": "domestic cat"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            997
+                        ],
+                        "label": "sofa"
+                    }
+                ],
+                "token_count": 102,
+                "raw_token_count": 109,
+                "runtime_seconds": 0.3433
+            }
+        },
+        {
+            "index": 17,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.03131527403634967,
+                "txt_attack": "homophone",
+                "txt_scale": 0.33256416881729567
+            },
+            "objectives": {
+                "iou": 0.94529,
+                "img_dist": 0.01555,
+                "txt_dist": 0.05144,
+                "txt_sim": 0.94856
+            },
+            "swad_metrics": {
+                "iou_0": 0.9451,
+                "delta_m_plus": 0.0,
+                "phi": 0.93381,
+                "swad": 0.0
+            },
+            "l2_distance": 0.94682,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, duh mestic cat, sofa\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 436, 458, 999], \"label\": \"dog\"},\n\t{\"bbox_2d\": [348, 0, 1000, 694], \"label\": \"duh mestic cat\"},\n\t{\"bbox_2d\": [0, 0, 1000, 999], \"label\": \"sofa\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            436,
+                            458,
+                            999
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            348,
+                            0,
+                            1000,
+                            694
+                        ],
+                        "label": "duh mestic cat"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            999
+                        ],
+                        "label": "sofa"
+                    }
+                ],
+                "token_count": 104,
+                "raw_token_count": 109,
+                "runtime_seconds": 0.3433
+            }
+        },
+        {
+            "index": 18,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.9909644857089595,
+                "txt_attack": "homophone",
+                "txt_scale": 0.7560515137896227
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.04534,
+                "txt_dist": 0.26559,
+                "txt_sim": 0.73441
+            },
+            "swad_metrics": {
+                "iou_0": 0.9451,
+                "delta_m_plus": 1.0,
+                "phi": 0.70111,
+                "swad": 0.70111
+            },
+            "l2_distance": 0.26943,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"doug, domestic khat, sopher\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "There are no objects named \"doug\", \"domestic khat\", or \"sopher\" in the image. The image contains a cat and a dog, but no object matches the given names. Therefore, the bounding boxes cannot be provided.\n\n```json\n{\n  \"error\": \"No objects named 'doug', 'domestic khat', or 'sopher' found in the image.\"\n}\n```",
+                "parsed_predictions": [],
+                "token_count": 84,
+                "raw_token_count": 109,
+                "runtime_seconds": 0.3433
+            }
+        }
+    ]
+}

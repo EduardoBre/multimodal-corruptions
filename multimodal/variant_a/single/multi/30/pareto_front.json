@@ -1,0 +1,324 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/single/multi/30",
+        "folder_id": "30",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00015207.JPEG"
+    },
+    "original_prompt": "Identify the objects \"guitar\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "guitar": {
+            "xmin": 48,
+            "ymin": 20,
+            "xmax": 207,
+            "ymax": 498
+        },
+        "guitar_1": {
+            "xmin": 0,
+            "ymin": 211,
+            "xmax": 50,
+            "ymax": 498
+        },
+        "guitar_2": {
+            "xmin": 1,
+            "ymin": 107,
+            "xmax": 101,
+            "ymax": 499
+        }
+    },
+    "baseline_iou": 0.76492,
+    "swad_star": 0.95334,
+    "swad_star_index": 4,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 45,
+    "skipped_evaluations": 45,
+    "n_solutions": 6,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.76185,
+                "img_dist": 0.0338,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.76492,
+                "delta_m_plus": 0.00401,
+                "phi": 0.9662,
+                "swad": 0.00388
+            },
+            "l2_distance": 0.7626,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"guitar\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [150, 38, 630, 998], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [0, 222, 288, 998], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [0, 222, 288, 998], \"label\": \"guitar\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            150,
+                            38,
+                            630,
+                            998
+                        ],
+                        "label": "guitar"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            222,
+                            288,
+                            998
+                        ],
+                        "label": "guitar"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            222,
+                            288,
+                            998
+                        ],
+                        "label": "guitar"
+                    }
+                ],
+                "token_count": 103,
+                "raw_token_count": 116,
+                "runtime_seconds": 0.4847
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.307337327911573,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.7609,
+                "img_dist": 0.04274,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.76492,
+                "delta_m_plus": 0.00526,
+                "phi": 0.95726,
+                "swad": 0.00503
+            },
+            "l2_distance": 0.7621,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"guitar\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [157, 38, 625, 998], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [0, 217, 287, 998], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [0, 217, 287, 998], \"label\": \"guitar\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            157,
+                            38,
+                            625,
+                            998
+                        ],
+                        "label": "guitar"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            217,
+                            287,
+                            998
+                        ],
+                        "label": "guitar"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            217,
+                            287,
+                            998
+                        ],
+                        "label": "guitar"
+                    }
+                ],
+                "token_count": 103,
+                "raw_token_count": 116,
+                "runtime_seconds": 0.4847
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.38159,
+                "img_dist": 0.03792,
+                "txt_dist": 0.58802,
+                "txt_sim": 0.41198
+            },
+            "swad_metrics": {
+                "iou_0": 0.76492,
+                "delta_m_plus": 0.50114,
+                "phi": 0.39636,
+                "swad": 0.19863
+            },
+            "l2_distance": 0.70201,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"git tar\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [157, 38, 607, 998], \"label\": \"git tar\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            157,
+                            38,
+                            607,
+                            998
+                        ],
+                        "label": "git tar"
+                    }
+                ],
+                "token_count": 39,
+                "raw_token_count": 116,
+                "runtime_seconds": 0.4847
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.03732619454213726,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.33647038540361596
+            },
+            "objectives": {
+                "iou": 0.75979,
+                "img_dist": 0.03813,
+                "txt_dist": 0.19294,
+                "txt_sim": 0.80706
+            },
+            "swad_metrics": {
+                "iou_0": 0.76492,
+                "delta_m_plus": 0.00671,
+                "phi": 0.77629,
+                "swad": 0.00521
+            },
+            "l2_distance": 0.78483,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"guihar\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [157, 38, 627, 998], \"label\": \"guihar\"},\n\t{\"bbox_2d\": [0, 216, 287, 998], \"label\": \"guihar\"},\n\t{\"bbox_2d\": [0, 216, 287, 998], \"label\": \"guihar\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            157,
+                            38,
+                            627,
+                            998
+                        ],
+                        "label": "guihar"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            216,
+                            287,
+                            998
+                        ],
+                        "label": "guihar"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            216,
+                            287,
+                            998
+                        ],
+                        "label": "guihar"
+                    }
+                ],
+                "token_count": 103,
+                "raw_token_count": 800,
+                "runtime_seconds": 3.1937
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.548697450431123,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.04666,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.76492,
+                "delta_m_plus": 1.0,
+                "phi": 0.95334,
+                "swad": 0.95334
+            },
+            "l2_distance": 0.04666,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"guitar\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [158, 38, 620, 998], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [0, 218, 288, 998], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [0, 218, 288, 998], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [0, 218, 288, 998], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [0, 218, 288, 998], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [0, 218, 288, 998], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [0, 218, 288, 998], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [0, 218, 288, 998], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [0, 218, 288, 998], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [0, 218, 288, 998], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [0, 218, 288, 998], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [0, 218, 288, 998], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [0, 218, 288, 998], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [0, 218, 288, 998], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [0, 218, 288, 998], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [0, 218, 288, 998], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [0, 218, 288, 998], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [0, 218, 288, 998], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [0, 218, 288, 998], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [0, 218, 288, 998], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [0, 218, 288, 998], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [0, 218, 288, 998], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [0, 218, 288, 998], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [0, 218, 288, 998], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [0, 218, 288, 998], \"label",
+                "parsed_predictions": [],
+                "token_count": 800,
+                "raw_token_count": 800,
+                "runtime_seconds": 3.2033
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.34968622830312635,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.24927259019092207
+            },
+            "objectives": {
+                "iou": 0.4304,
+                "img_dist": 0.04389,
+                "txt_dist": 0.07377,
+                "txt_sim": 0.92623
+            },
+            "swad_metrics": {
+                "iou_0": 0.76492,
+                "delta_m_plus": 0.43733,
+                "phi": 0.88558,
+                "swad": 0.38729
+            },
+            "l2_distance": 0.43888,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"g\u200buit\u200bar\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 34, 627, 998], \"label\": \"g\u200buit\u200bar\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            34,
+                            627,
+                            998
+                        ],
+                        "label": "g\u200buit\u200bar"
+                    }
+                ],
+                "token_count": 40,
+                "raw_token_count": 800,
+                "runtime_seconds": 3.2033
+            }
+        }
+    ]
+}

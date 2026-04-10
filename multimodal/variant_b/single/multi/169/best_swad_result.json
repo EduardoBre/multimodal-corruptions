@@ -1,0 +1,106 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/169",
+        "folder_id": "169",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00014472.JPEG"
+    },
+    "pareto_index": 14,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 5,
+    "total_evaluations": 135,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.070713,
+            "defocus_blur": 0.017245,
+            "motion_blur": 0.061999,
+            "fog_filter": 0.192549,
+            "pixelate": 0.065578,
+            "jpeg_filter": 0.08287
+        },
+        "text_corruptions": {
+            "homophone": 0.160747,
+            "synonym": 0.093472,
+            "ata_saliency": 0.044003,
+            "fragmentation": 0.068234,
+            "character_noise": 0.022792
+        },
+        "img_budget_used": 0.490954,
+        "txt_budget_used": 0.389249,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.08317,
+        "txt_dist": 0.11284,
+        "txt_sim": 0.88716
+    },
+    "swad_metrics": {
+        "iou_0": 0.91272,
+        "delta_m_plus": 1.0,
+        "phi": 0.81337,
+        "swad": 0.81337
+    },
+    "l2_distance": 0.14018,
+    "original_prompt": "Identify the objects \"snake\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "snake": {
+            "xmin": 263,
+            "ymin": 247,
+            "xmax": 347,
+            "ymax": 492
+        },
+        "snake_1": {
+            "xmin": 347,
+            "ymin": 246,
+            "xmax": 422,
+            "ymax": 492
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"sn\u0430\u200bk\u0435\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [532, 502, 684, 999], \"label\": \"sn\u0101\u200bk\u0113\"},\n\t{\"bbox_2d\": [684, 506, 844, 999], \"label\": \"sn\u0101\u200bk\u0113\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    532,
+                    502,
+                    684,
+                    999
+                ],
+                "label": "sn\u0101\u200bk\u0113"
+            },
+            {
+                "bbox_2d": [
+                    684,
+                    506,
+                    844,
+                    999
+                ],
+                "label": "sn\u0101\u200bk\u0113"
+            }
+        ],
+        "token_count": 80,
+        "raw_token_count": 87,
+        "runtime_seconds": 0.2673
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0707130889341752,
+        "defocus_blur": 0.017244935510759368,
+        "motion_blur": 0.06199884337680895,
+        "fog_filter": 0.19254892651840838,
+        "pixelate": 0.06557826607705046,
+        "jpeg_filter": 0.08287039991158417
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.16074743852450096,
+        "synonym": 0.09347173182704988,
+        "ata_saliency": 0.044003405856784555,
+        "fragmentation": 0.06823373403112673,
+        "character_noise": 0.022792383053536786
+    }
+}

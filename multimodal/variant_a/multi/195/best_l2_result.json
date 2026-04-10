@@ -1,0 +1,109 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/195",
+        "folder_id": "195",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00026485.JPEG"
+    },
+    "pareto_index": 2,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "motion_blur",
+        "img_scale": 0.3997956906557353,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.647636093318414
+    },
+    "objectives": {
+        "iou": 0.15682,
+        "img_dist": 0.03898,
+        "txt_dist": 0.25071,
+        "txt_sim": 0.74929
+    },
+    "swad_metrics": {
+        "iou_0": 0.89534,
+        "delta_m_plus": 0.82485,
+        "phi": 0.72008,
+        "swad": 0.59396
+    },
+    "l2_distance": 0.29827,
+    "original_prompt": "Identify the objects \"bathing cap, maillot, person, swimming trunks\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 227,
+            "ymin": 80,
+            "xmax": 352,
+            "ymax": 498
+        },
+        "person_1": {
+            "xmin": 1,
+            "ymin": 0,
+            "xmax": 246,
+            "ymax": 498
+        },
+        "maillot": {
+            "xmin": 256,
+            "ymin": 180,
+            "xmax": 348,
+            "ymax": 400
+        },
+        "bathing cap": {
+            "xmin": 265,
+            "ymin": 82,
+            "xmax": 333,
+            "ymax": 151
+        },
+        "bathing cap_1": {
+            "xmin": 81,
+            "ymin": 0,
+            "xmax": 168,
+            "ymax": 83
+        },
+        "swimming trunks": {
+            "xmin": 31,
+            "ymin": 357,
+            "xmax": 183,
+            "ymax": 445
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bzthing cpa, maillto, eprson, swimmign trunks\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 700, 1000], \"label\": \"bzthing cpa, maillto, eprson\"},\n\t{\"bbox_2d\": [644, 166, 998, 1000], \"label\": \"bzthing cpa, maillto, eprson\"},\n\t{\"bbox_2d\": [100, 708, 516, 872], \"label\": \"swimmign trunks\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    700,
+                    1000
+                ],
+                "label": "bzthing cpa, maillto, eprson"
+            },
+            {
+                "bbox_2d": [
+                    644,
+                    166,
+                    998,
+                    1000
+                ],
+                "label": "bzthing cpa, maillto, eprson"
+            },
+            {
+                "bbox_2d": [
+                    100,
+                    708,
+                    516,
+                    872
+                ],
+                "label": "swimmign trunks"
+            }
+        ],
+        "token_count": 129,
+        "raw_token_count": 248,
+        "runtime_seconds": 0.8499
+    }
+}

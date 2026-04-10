@@ -1,0 +1,127 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/96",
+        "folder_id": "96",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00000659.JPEG"
+    },
+    "pareto_index": 7,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "gaussian_noise",
+        "img_scale": 0.08142031165696761,
+        "txt_attack": "homophone",
+        "txt_scale": 0.2228478256331735
+    },
+    "objectives": {
+        "iou": 0.31069,
+        "img_dist": 0.03966,
+        "txt_dist": 0.19253,
+        "txt_sim": 0.80747
+    },
+    "swad_metrics": {
+        "iou_0": 0.69154,
+        "delta_m_plus": 0.55073,
+        "phi": 0.77545,
+        "swad": 0.42706
+    },
+    "l2_distance": 0.36765,
+    "original_prompt": "Identify the objects \"car, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 399,
+            "ymin": 213,
+            "xmax": 426,
+            "ymax": 267
+        },
+        "person_1": {
+            "xmin": 346,
+            "ymin": 215,
+            "xmax": 363,
+            "ymax": 257
+        },
+        "car": {
+            "xmin": 177,
+            "ymin": 216,
+            "xmax": 280,
+            "ymax": 262
+        },
+        "car_1": {
+            "xmin": 105,
+            "ymin": 216,
+            "xmax": 155,
+            "ymax": 242
+        },
+        "car_2": {
+            "xmin": 16,
+            "ymin": 213,
+            "xmax": 58,
+            "ymax": 244
+        },
+        "car_3": {
+            "xmin": 402,
+            "ymin": 228,
+            "xmax": 499,
+            "ymax": 338
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"cah, person\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [855, 658, 998, 848], \"label\": \"cah\"},\n\t{\"bbox_2d\": [805, 576, 848, 690], \"label\": \"person\"},\n\t{\"bbox_2d\": [694, 576, 724, 672], \"label\": \"person\"},\n\t{\"bbox_2d\": [750, 576, 788, 672], \"label\": \"person\"},\n\t{\"bbox_2d\": [578, 576, 608, 664], \"label\": \"person\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    855,
+                    658,
+                    998,
+                    848
+                ],
+                "label": "cah"
+            },
+            {
+                "bbox_2d": [
+                    805,
+                    576,
+                    848,
+                    690
+                ],
+                "label": "person"
+            },
+            {
+                "bbox_2d": [
+                    694,
+                    576,
+                    724,
+                    672
+                ],
+                "label": "person"
+            },
+            {
+                "bbox_2d": [
+                    750,
+                    576,
+                    788,
+                    672
+                ],
+                "label": "person"
+            },
+            {
+                "bbox_2d": [
+                    578,
+                    576,
+                    608,
+                    664
+                ],
+                "label": "person"
+            }
+        ],
+        "token_count": 172,
+        "raw_token_count": 501,
+        "runtime_seconds": 1.8732
+    }
+}

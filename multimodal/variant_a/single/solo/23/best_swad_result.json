@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/23",
+        "folder_id": "23",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00043918.JPEG"
+    },
+    "pareto_index": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 13,
+    "total_evaluations": 375,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.18348259448620707,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.23006988834476405
+    },
+    "objectives": {
+        "iou": 0.27968,
+        "img_dist": 0.05033,
+        "txt_dist": 0.28407,
+        "txt_sim": 0.71593
+    },
+    "swad_metrics": {
+        "iou_0": 0.926,
+        "delta_m_plus": 0.69797,
+        "phi": 0.6799,
+        "swad": 0.47455
+    },
+    "l2_distance": 0.40181,
+    "original_prompt": "Identify the objects \"fox\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "fox": {
+            "xmin": 147,
+            "ymin": 104,
+            "xmax": 436,
+            "ymax": 330
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"fov\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 999, 999], \"label\": \"fov\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    999,
+                    999
+                ],
+                "label": "fov"
+            }
+        ],
+        "token_count": 35,
+        "raw_token_count": 42,
+        "runtime_seconds": 0.1622
+    }
+}

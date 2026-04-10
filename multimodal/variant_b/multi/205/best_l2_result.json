@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/205",
+        "folder_id": "205",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00002077.JPEG"
+    },
+    "pareto_index": 0,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 45,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.002629,
+            "defocus_blur": 0.227138,
+            "motion_blur": 0.109312,
+            "fog_filter": 0.15463,
+            "pixelate": 0.280841,
+            "jpeg_filter": 0.212112
+        },
+        "text_corruptions": {
+            "homophone": 0.027936,
+            "synonym": 0.442729,
+            "ata_saliency": 0.042982,
+            "fragmentation": 0.170803,
+            "character_noise": 0.134317
+        },
+        "img_budget_used": 0.986663,
+        "txt_budget_used": 0.818767,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.11605,
+        "txt_dist": 0.20961,
+        "txt_sim": 0.79039
+    },
+    "swad_metrics": {
+        "iou_0": 0.88408,
+        "delta_m_plus": 1.0,
+        "phi": 0.69867,
+        "swad": 0.69867
+    },
+    "l2_distance": 0.23959,
+    "original_prompt": "Identify the objects \"lizard, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 46,
+            "ymin": 95,
+            "xmax": 332,
+            "ymax": 498
+        },
+        "lizard": {
+            "xmin": 40,
+            "ymin": 201,
+            "xmax": 127,
+            "ymax": 306
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"lizazrd, pe\u200bs\u200dr\u043en\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [150, 180, 1000, 1000], \"label\": \"lizazrd, pe\u200bs\u200dr\u043en\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    150,
+                    180,
+                    1000,
+                    1000
+                ],
+                "label": "lizazrd, pe\u200bs\u200dr\u043en"
+            }
+        ],
+        "token_count": 53,
+        "raw_token_count": 86,
+        "runtime_seconds": 0.2644
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0026293038921670216,
+        "defocus_blur": 0.22713797452629003,
+        "motion_blur": 0.1093123956091199,
+        "fog_filter": 0.15463023865138495,
+        "pixelate": 0.2808408862562838,
+        "jpeg_filter": 0.21211211785239067
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.02793643527455082,
+        "synonym": 0.44272919384797566,
+        "ata_saliency": 0.04298172856388148,
+        "fragmentation": 0.17080325918113592,
+        "character_noise": 0.13431657498442026
+    }
+}

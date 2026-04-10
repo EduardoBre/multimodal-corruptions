@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/116",
+        "folder_id": "116",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00021104.JPEG"
+    },
+    "pareto_index": 27,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 5,
+    "total_evaluations": 150,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.022886001623299956,
+        "txt_attack": "synonym",
+        "txt_scale": 0.40420642672458146
+    },
+    "objectives": {
+        "iou": 0.03221,
+        "img_dist": 0.05673,
+        "txt_dist": 0.13147,
+        "txt_sim": 0.86853
+    },
+    "swad_metrics": {
+        "iou_0": 0.91678,
+        "delta_m_plus": 0.96487,
+        "phi": 0.81926,
+        "swad": 0.79047
+    },
+    "l2_distance": 0.14677,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 52,
+            "ymin": 73,
+            "xmax": 272,
+            "ymax": 192
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"songbird\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [478, 338, 548, 402], \"label\": \"songbird\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    478,
+                    338,
+                    548,
+                    402
+                ],
+                "label": "songbird"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 41,
+        "runtime_seconds": 0.2002
+    }
+}

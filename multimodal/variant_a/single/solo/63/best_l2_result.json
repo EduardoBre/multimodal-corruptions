@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/63",
+        "folder_id": "63",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00031888.JPEG"
+    },
+    "pareto_index": 5,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "motion_blur",
+        "img_scale": 0.018595721213425453,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.6130568625347235
+    },
+    "objectives": {
+        "iou": 0.00748,
+        "img_dist": 0.02503,
+        "txt_dist": 0.19351,
+        "txt_sim": 0.80649
+    },
+    "swad_metrics": {
+        "iou_0": 0.97583,
+        "delta_m_plus": 0.99233,
+        "phi": 0.7863,
+        "swad": 0.78028
+    },
+    "l2_distance": 0.19527,
+    "original_prompt": "Identify the objects \"binder\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "binder": {
+            "xmin": 61,
+            "ymin": 81,
+            "xmax": 356,
+            "ymax": 221
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bnider\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [310, 503, 388, 536], \"label\": \"bnider\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    310,
+                    503,
+                    388,
+                    536
+                ],
+                "label": "bnider"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 49,
+        "runtime_seconds": 0.1718
+    }
+}

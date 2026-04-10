@@ -1,0 +1,79 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/33",
+        "folder_id": "33",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00046898.JPEG"
+    },
+    "pareto_index": 17,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 3,
+    "total_evaluations": 90,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.8435087518943207,
+        "txt_attack": "homophone",
+        "txt_scale": 0.955904866265063
+    },
+    "objectives": {
+        "iou": 0.02635,
+        "img_dist": 0.09449,
+        "txt_dist": 0.16496,
+        "txt_sim": 0.83504
+    },
+    "swad_metrics": {
+        "iou_0": 0.84412,
+        "delta_m_plus": 0.96878,
+        "phi": 0.75614,
+        "swad": 0.73253
+    },
+    "l2_distance": 0.19192,
+    "original_prompt": "Identify the objects \"watercraft\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "watercraft": {
+            "xmin": 6,
+            "ymin": 342,
+            "xmax": 1509,
+            "ymax": 1194
+        },
+        "watercraft_1": {
+            "xmin": 177,
+            "ymin": 0,
+            "xmax": 537,
+            "ymax": 498
+        },
+        "watercraft_2": {
+            "xmin": 0,
+            "ymin": 18,
+            "xmax": 156,
+            "ymax": 513
+        },
+        "watercraft_3": {
+            "xmin": 3,
+            "ymin": 0,
+            "xmax": 1512,
+            "ymax": 1182
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"wader craft\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [412, 470, 722, 602], \"label\": \"wader craft\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    412,
+                    470,
+                    722,
+                    602
+                ],
+                "label": "wader craft"
+            }
+        ],
+        "token_count": 41,
+        "raw_token_count": 139,
+        "runtime_seconds": 0.6314
+    }
+}

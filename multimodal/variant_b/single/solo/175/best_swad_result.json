@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/175",
+        "folder_id": "175",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00021071.JPEG"
+    },
+    "pareto_index": 2,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.118039,
+            "defocus_blur": 0.04595,
+            "motion_blur": 0.221352,
+            "fog_filter": 0.272289,
+            "pixelate": 0.048553,
+            "jpeg_filter": 0.099099
+        },
+        "text_corruptions": {
+            "homophone": 0.054692,
+            "synonym": 0.152858,
+            "ata_saliency": 0.006207,
+            "fragmentation": 0.155015,
+            "character_noise": 0.062545
+        },
+        "img_budget_used": 0.805282,
+        "txt_budget_used": 0.431317,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.32711,
+        "img_dist": 0.10301,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.97855,
+        "delta_m_plus": 0.66572,
+        "phi": 0.89699,
+        "swad": 0.59714
+    },
+    "l2_distance": 0.34295,
+    "original_prompt": "Identify the objects \"red panda\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "red panda": {
+            "xmin": 227,
+            "ymin": 65,
+            "xmax": 665,
+            "ymax": 532
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"red panda\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [288, 138, 670, 548], \"label\": \"red panda\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    288,
+                    138,
+                    670,
+                    548
+                ],
+                "label": "red panda"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 53,
+        "runtime_seconds": 0.2006
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.11803935098053446,
+        "defocus_blur": 0.04595022663421554,
+        "motion_blur": 0.2213518065564744,
+        "fog_filter": 0.2722888412158373,
+        "pixelate": 0.048552823325956104,
+        "jpeg_filter": 0.09909932516510941
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.05469233547097136,
+        "synonym": 0.15285801106840716,
+        "ata_saliency": 0.0062071274712006685,
+        "fragmentation": 0.15501478012957187,
+        "character_noise": 0.06254505463292409
+    }
+}

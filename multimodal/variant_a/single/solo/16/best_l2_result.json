@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/16",
+        "folder_id": "16",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00007808.JPEG"
+    },
+    "pareto_index": 10,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 5,
+    "total_evaluations": 150,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.031064443365188876,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.88561028991192
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.02917,
+        "txt_dist": 0.1068,
+        "txt_sim": 0.8932
+    },
+    "swad_metrics": {
+        "iou_0": 0.89451,
+        "delta_m_plus": 1.0,
+        "phi": 0.86715,
+        "swad": 0.86715
+    },
+    "l2_distance": 0.11071,
+    "original_prompt": "Identify the objects \"domestic cat\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "domestic cat": {
+            "xmin": 50,
+            "ymin": 55,
+            "xmax": 391,
+            "ymax": 260
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"d\u200b\u043e\u200dm\u200b\u0435s\u200bt\u200bi\u200b\u0441 c\u200d\u0430\u200dt\u200b\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [100, 170, 830, 820], \"label\": \"d\u200b\u043e\u200d\u043c\u200b\u0435\u200b\u0441\u200b\u0442\u200b\u0438\u200b\u0441\u200b\u0441\u200b\u043a\u200b\u043e\u200b\u0435\u200b \u043a\u200b\u0430\u200b\u0442\u200b\u044c\u200b\u0435\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    100,
+                    170,
+                    830,
+                    820
+                ],
+                "label": "d\u200b\u043e\u200d\u043c\u200b\u0435\u200b\u0441\u200b\u0442\u200b\u0438\u200b\u0441\u200b\u0441\u200b\u043a\u200b\u043e\u200b\u0435\u200b \u043a\u200b\u0430\u200b\u0442\u200b\u044c\u200b\u0435"
+            }
+        ],
+        "token_count": 72,
+        "raw_token_count": 73,
+        "runtime_seconds": 0.2685
+    }
+}

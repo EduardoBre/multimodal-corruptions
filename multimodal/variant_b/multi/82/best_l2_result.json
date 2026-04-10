@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/82",
+        "folder_id": "82",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00021532.JPEG"
+    },
+    "pareto_index": 15,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 60,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.166754,
+            "defocus_blur": 0.082401,
+            "motion_blur": 0.001715,
+            "fog_filter": 0.01639,
+            "pixelate": 0.040947,
+            "jpeg_filter": 0.016747
+        },
+        "text_corruptions": {
+            "homophone": 0.242766,
+            "synonym": 0.165818,
+            "ata_saliency": 0.015925,
+            "fragmentation": 0.029173,
+            "character_noise": 0.002096
+        },
+        "img_budget_used": 0.324953,
+        "txt_budget_used": 0.455777,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.09812,
+        "txt_dist": 0.25507,
+        "txt_sim": 0.74493
+    },
+    "swad_metrics": {
+        "iou_0": 0.95128,
+        "delta_m_plus": 1.0,
+        "phi": 0.67184,
+        "swad": 0.67184
+    },
+    "l2_distance": 0.27329,
+    "original_prompt": "Identify the objects \"dog, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 71,
+            "ymin": 11,
+            "xmax": 206,
+            "ymax": 460
+        },
+        "dog": {
+            "xmin": 162,
+            "ymin": 192,
+            "xmax": 385,
+            "ymax": 471
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"dawg, per so\u200bn\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [337, 380, 812, 944], \"label\": \"dawg, per so\u200bn\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    337,
+                    380,
+                    812,
+                    944
+                ],
+                "label": "dawg, per so\u200bn"
+            }
+        ],
+        "token_count": 46,
+        "raw_token_count": 86,
+        "runtime_seconds": 0.2904
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.1667542324403806,
+        "defocus_blur": 0.08240056224386524,
+        "motion_blur": 0.0017153140411799057,
+        "fog_filter": 0.016389532108225455,
+        "pixelate": 0.04094692073053016,
+        "jpeg_filter": 0.016746813824209422
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.242765753873268,
+        "synonym": 0.16581811945575528,
+        "ata_saliency": 0.015924563167635117,
+        "fragmentation": 0.029173426719994337,
+        "character_noise": 0.0020956264534022885
+    }
+}

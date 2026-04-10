@@ -1,0 +1,76 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/180",
+        "folder_id": "180",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00010611.JPEG"
+    },
+    "pareto_index": 0,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.018153363333776373,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.24927259019092207
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.02297,
+        "txt_dist": 0.22816,
+        "txt_sim": 0.77184
+    },
+    "swad_metrics": {
+        "iou_0": 0.93535,
+        "delta_m_plus": 1.0,
+        "phi": 0.75411,
+        "swad": 0.75411
+    },
+    "l2_distance": 0.22931,
+    "original_prompt": "Identify the objects \"brassiere, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 48,
+            "ymin": 0,
+            "xmax": 290,
+            "ymax": 498
+        },
+        "brassiere": {
+            "xmin": 96,
+            "ymin": 123,
+            "xmax": 246,
+            "ymax": 266
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"br\u200das\u200bsi\u200ber\u0435\u200d, \u0440erson\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [296, 252, 740, 540], \"label\": \"br\u200das\u200bsi\u200ber\u0435\u200d, \u0440erson\"},\n\t{\"bbox_2d\": [240, 670, 700, 870], \"label\": \"br\u200das\u200bsi\u200ber\u0435\u200d, \u0440erson\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    296,
+                    252,
+                    740,
+                    540
+                ],
+                "label": "br\u200das\u200bsi\u200ber\u0435\u200d, \u0440erson"
+            },
+            {
+                "bbox_2d": [
+                    240,
+                    670,
+                    700,
+                    870
+                ],
+                "label": "br\u200das\u200bsi\u200ber\u0435\u200d, \u0440erson"
+            }
+        ],
+        "token_count": 98,
+        "raw_token_count": 99,
+        "runtime_seconds": 0.3424
+    }
+}

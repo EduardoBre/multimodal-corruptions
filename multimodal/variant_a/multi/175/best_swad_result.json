@@ -1,0 +1,82 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/175",
+        "folder_id": "175",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00001659.JPEG"
+    },
+    "pareto_index": 9,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 45,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.08646227720474076,
+        "txt_attack": "homophone",
+        "txt_scale": 0.685641565288714
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.0465,
+        "txt_dist": 0.25074,
+        "txt_sim": 0.74926
+    },
+    "swad_metrics": {
+        "iou_0": 0.60229,
+        "delta_m_plus": 1.0,
+        "phi": 0.71442,
+        "swad": 0.71442
+    },
+    "l2_distance": 0.25502,
+    "original_prompt": "Identify the objects \"chair, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 82,
+            "ymin": 26,
+            "xmax": 416,
+            "ymax": 453
+        },
+        "chair": {
+            "xmin": 32,
+            "ymin": 218,
+            "xmax": 155,
+            "ymax": 398
+        },
+        "chair_1": {
+            "xmin": 298,
+            "ymin": 190,
+            "xmax": 431,
+            "ymax": 342
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"cher, per son\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [168, 58, 812, 908], \"label\": \"cher, per son\"},\n\t{\"bbox_2d\": [948, 158, 1000, 558], \"label\": \"cher, per son\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    168,
+                    58,
+                    812,
+                    908
+                ],
+                "label": "cher, per son"
+            },
+            {
+                "bbox_2d": [
+                    948,
+                    158,
+                    1000,
+                    558
+                ],
+                "label": "cher, per son"
+            }
+        ],
+        "token_count": 78,
+        "raw_token_count": 172,
+        "runtime_seconds": 0.5923
+    }
+}

@@ -1,0 +1,215 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/single/multi/74",
+        "folder_id": "74",
+        "category": "single/multi",
+        "filename": "ILSVRC2013_val_00004386.JPEG"
+    },
+    "original_prompt": "Identify the objects \"person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 27,
+            "ymin": 18,
+            "xmax": 223,
+            "ymax": 271
+        },
+        "person_1": {
+            "xmin": 94,
+            "ymin": 285,
+            "xmax": 206,
+            "ymax": 451
+        }
+    },
+    "baseline_iou": 0.63914,
+    "swad_star": 0.96068,
+    "swad_star_index": 2,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 3,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.59582,
+                "img_dist": 0.0305,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.63914,
+                "delta_m_plus": 0.06778,
+                "phi": 0.9695,
+                "swad": 0.06571
+            },
+            "l2_distance": 0.5966,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [100, 34, 700, 500], \"label\": \"person\"},\n\t{\"bbox_2d\": [100, 500, 600, 997], \"label\": \"person\"},\n\t{\"bbox_2d\": [800, 467, 900, 580], \"label\": \"person\"},\n\t{\"bbox_2d\": [600, 467, 700, 580], \"label\": \"person\"},\n\t{\"bbox_2d\": [700, 467, 800, 580], \"label\": \"person\"},\n\t{\"bbox_2d\": [800, 500, 900, 617], \"label\": \"person\"},\n\t{\"bbox_2d\": [900, 467, 1000, 580], \"label\": \"person\"},\n\t{\"bbox_2d\": [900, 500, 1000, 617], \"label\": \"person\"},\n\t{\"bbox_2d\": [100, 500, 600, 997], \"label\": \"person\"},\n\t{\"bbox_2d\": [100, 34, 700, 500], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            100,
+                            34,
+                            700,
+                            500
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            100,
+                            500,
+                            600,
+                            997
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            800,
+                            467,
+                            900,
+                            580
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            600,
+                            467,
+                            700,
+                            580
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            700,
+                            467,
+                            800,
+                            580
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            800,
+                            500,
+                            900,
+                            617
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            900,
+                            467,
+                            1000,
+                            580
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            900,
+                            500,
+                            1000,
+                            617
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            100,
+                            500,
+                            600,
+                            997
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            100,
+                            34,
+                            700,
+                            500
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 336,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.5504
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.307337327911573,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.03693,
+                "txt_dist": 0.40414,
+                "txt_sim": 0.59586
+            },
+            "swad_metrics": {
+                "iou_0": 0.63914,
+                "delta_m_plus": 1.0,
+                "phi": 0.57385,
+                "swad": 0.57385
+            },
+            "l2_distance": 0.40582,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"purse on\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "There is no object labeled \"purse\" in the image. Therefore, there are no bounding boxes to return.",
+                "parsed_predictions": [],
+                "token_count": 23,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.5504
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.018595721213425453,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6130568625347235
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.03932,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.63914,
+                "delta_m_plus": 1.0,
+                "phi": 0.96068,
+                "swad": 0.96068
+            },
+            "l2_distance": 0.03932,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [100, 34, 720, 500], \"label\": \"person\"},\n\t{\"bbox_2d\": [150, 500, 570, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [500, 472, 570, 550], \"label\": \"person\"},\n\t{\"bbox_2d\": [570, 472, 630, 550], \"label\": \"person\"},\n\t{\"bbox_2d\": [630, 472, 700, 550], \"label\": \"person\"},\n\t{\"bbox_2d\": [700, 472, 770, 550], \"label\": \"person\"},\n\t{\"bbox_2d\": [770, 472, 840, 550], \"label\": \"person\"},\n\t{\"bbox_2d\": [840, 472, 910, 550], \"label\": \"person\"},\n\t{\"bbox_2d\": [910, 472, 980, 550], \"label\": \"person\"},\n\t{\"bbox_2d\": [980, 472, 1050, 550], \"label\": \"person\"},\n\t{\"bbox_2d\": [100, 500, 250, 700], \"label\": \"person\"},\n\t{\"bbox_2d\": [250, 500, 320, 700], \"label\": \"person\"},\n\t{\"bbox_2d\": [320, 500, 390, 700], \"label\": \"person\"},\n\t{\"bbox_2d\": [390, 500, 460, 700], \"label\": \"person\"},\n\t{\"bbox_2d\": [460, 500, 530, 700], \"label\": \"person\"},\n\t{\"bbox_2d\": [530, 500, 600, 700], \"label\": \"person\"},\n\t{\"bbox_2d\": [600, 500, 670, 700], \"label\": \"person\"},\n\t{\"bbox_2d\": [670, 500, 740, 700], \"label\": \"person\"},\n\t{\"bbox_2d\": [740, 500, 810, 700], \"label\": \"person\"},\n\t{\"bbox_2d\": [810, 500, 880, 700], \"label\": \"person\"},\n\t{\"bbox_2d\": [880, 500, 950, 700], \"label\": \"person\"},\n\t{\"bbox_2d\": [950, 500, 1020, 700], \"label\": \"person\"},\n\t{\"bbox_2d\": [1020, 500, 1090, 700], \"label\": \"person\"},\n\t{\"bbox_2d\": [1090, 500, 1160, 700], \"label\": \"person",
+                "parsed_predictions": [],
+                "token_count": 800,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.5504
+            }
+        }
+    ]
+}

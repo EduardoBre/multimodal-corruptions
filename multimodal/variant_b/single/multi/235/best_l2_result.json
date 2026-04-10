@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/235",
+        "folder_id": "235",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00028225.JPEG"
+    },
+    "pareto_index": 6,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.00533,
+            "defocus_blur": 0.000507,
+            "motion_blur": 0.007243,
+            "fog_filter": 0.001851,
+            "pixelate": 0.01027,
+            "jpeg_filter": 0.002443
+        },
+        "text_corruptions": {
+            "homophone": 0.029243,
+            "synonym": 0.191344,
+            "ata_saliency": 0.004061,
+            "fragmentation": 0.360201,
+            "character_noise": 0.241037
+        },
+        "img_budget_used": 0.027644,
+        "txt_budget_used": 0.825887,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.25108,
+        "img_dist": 0.051,
+        "txt_dist": 0.30563,
+        "txt_sim": 0.69437
+    },
+    "swad_metrics": {
+        "iou_0": 0.71015,
+        "delta_m_plus": 0.64644,
+        "phi": 0.65896,
+        "swad": 0.42598
+    },
+    "l2_distance": 0.39881,
+    "original_prompt": "Identify the objects \"frog\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "frog": {
+            "xmin": 78,
+            "ymin": 163,
+            "xmax": 278,
+            "ymax": 298
+        },
+        "frog_1": {
+            "xmin": 226,
+            "ymin": 64,
+            "xmax": 286,
+            "ymax": 184
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"peep\u200der\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [448, 152, 692, 468], \"label\": \"peep\u200der\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    448,
+                    152,
+                    692,
+                    468
+                ],
+                "label": "peep\u200der"
+            }
+        ],
+        "token_count": 43,
+        "raw_token_count": 79,
+        "runtime_seconds": 0.239
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.005330417025098649,
+        "defocus_blur": 0.0005069357421014341,
+        "motion_blur": 0.007243091926177454,
+        "fog_filter": 0.0018506622387613803,
+        "pixelate": 0.010269916353309018,
+        "jpeg_filter": 0.0024427180946812004
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.02924325094029367,
+        "synonym": 0.1913442849598462,
+        "ata_saliency": 0.004060788457309157,
+        "fragmentation": 0.3602011155131145,
+        "character_noise": 0.2410371277251109
+    }
+}

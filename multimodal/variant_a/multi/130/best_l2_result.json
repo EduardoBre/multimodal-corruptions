@@ -1,0 +1,63 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/130",
+        "folder_id": "130",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00019756.JPEG"
+    },
+    "pareto_index": 8,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "motion_blur",
+        "img_scale": 0.7585322514200842,
+        "txt_attack": "synonym",
+        "txt_scale": 0.8286080825406955
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.06607,
+        "txt_dist": 0.28949,
+        "txt_sim": 0.71051
+    },
+    "swad_metrics": {
+        "iou_0": 0.96083,
+        "delta_m_plus": 1.0,
+        "phi": 0.66357,
+        "swad": 0.66357
+    },
+    "l2_distance": 0.29693,
+    "original_prompt": "Identify the objects \"maraca, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 34,
+            "ymin": 29,
+            "xmax": 336,
+            "ymax": 504
+        },
+        "maraca": {
+            "xmin": 86,
+            "ymin": 251,
+            "xmax": 183,
+            "ymax": 406
+        },
+        "maraca_1": {
+            "xmin": 224,
+            "ymin": 335,
+            "xmax": 335,
+            "ymax": 402
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"shaker, woman\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "There is no object matching the description \"shaker\" or \"woman\" in the image. The image shows a man holding maracas, which are percussion instruments, not shakers. There is no woman in the image.\n\n```json\n{\n  \"shaker\": [],\n  \"woman\": []\n}\n```",
+        "parsed_predictions": [],
+        "token_count": 62,
+        "raw_token_count": 126,
+        "runtime_seconds": 0.4809
+    }
+}

@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/94",
+        "folder_id": "94",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00027989.JPEG"
+    },
+    "pareto_index": 2,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.9586325776208566,
+        "txt_attack": "synonym",
+        "txt_scale": 0.9948250792623392
+    },
+    "objectives": {
+        "iou": 0.63395,
+        "img_dist": 0.05976,
+        "txt_dist": 0.06452,
+        "txt_sim": 0.93548
+    },
+    "swad_metrics": {
+        "iou_0": 0.93995,
+        "delta_m_plus": 0.32555,
+        "phi": 0.87958,
+        "swad": 0.28635
+    },
+    "l2_distance": 0.64002,
+    "original_prompt": "Identify the objects \"dog\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 1,
+            "ymin": 40,
+            "xmax": 377,
+            "ymax": 271
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"hound\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [212, 160, 744, 712], \"label\": \"hound\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    212,
+                    160,
+                    744,
+                    712
+                ],
+                "label": "hound"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 46,
+        "runtime_seconds": 0.2093
+    }
+}

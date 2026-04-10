@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/67",
+        "folder_id": "67",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00039266.JPEG"
+    },
+    "pareto_index": 4,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 4,
+    "total_evaluations": 105,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.004247,
+            "defocus_blur": 0.005063,
+            "motion_blur": 0.002067,
+            "fog_filter": 0.005884,
+            "pixelate": 0.004769,
+            "jpeg_filter": 0.007433
+        },
+        "text_corruptions": {
+            "homophone": 0.012356,
+            "synonym": 0.006988,
+            "ata_saliency": 0.033309,
+            "fragmentation": 0.004708,
+            "character_noise": 0.002853
+        },
+        "img_budget_used": 0.029464,
+        "txt_budget_used": 0.060214,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.24531,
+        "img_dist": 0.09562,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.53589,
+        "delta_m_plus": 0.54224,
+        "phi": 0.90438,
+        "swad": 0.49039
+    },
+    "l2_distance": 0.26329,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 223,
+            "ymin": 197,
+            "xmax": 290,
+            "ymax": 282
+        },
+        "bird_1": {
+            "xmin": 148,
+            "ymin": 233,
+            "xmax": 222,
+            "ymax": 283
+        },
+        "bird_2": {
+            "xmin": 57,
+            "ymin": 240,
+            "xmax": 104,
+            "ymax": 280
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [304, 607, 580, 860], \"label\": \"bird\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    304,
+                    607,
+                    580,
+                    860
+                ],
+                "label": "bird"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 93,
+        "runtime_seconds": 0.2903
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0042473051503661065,
+        "defocus_blur": 0.005062774435843877,
+        "motion_blur": 0.0020673195661095305,
+        "fog_filter": 0.005884497665494539,
+        "pixelate": 0.004769105395594924,
+        "jpeg_filter": 0.007432897781720242
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.012355855673671506,
+        "synonym": 0.006987794495182527,
+        "ata_saliency": 0.03330892339613537,
+        "fragmentation": 0.00470837951967179,
+        "character_noise": 0.002852592684801602
+    }
+}

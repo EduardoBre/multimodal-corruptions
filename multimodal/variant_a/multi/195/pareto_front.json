@@ -1,0 +1,760 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/195",
+        "folder_id": "195",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00026485.JPEG"
+    },
+    "original_prompt": "Identify the objects \"bathing cap, maillot, person, swimming trunks\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 227,
+            "ymin": 80,
+            "xmax": 352,
+            "ymax": 498
+        },
+        "person_1": {
+            "xmin": 1,
+            "ymin": 0,
+            "xmax": 246,
+            "ymax": 498
+        },
+        "maillot": {
+            "xmin": 256,
+            "ymin": 180,
+            "xmax": 348,
+            "ymax": 400
+        },
+        "bathing cap": {
+            "xmin": 265,
+            "ymin": 82,
+            "xmax": 333,
+            "ymax": 151
+        },
+        "bathing cap_1": {
+            "xmin": 81,
+            "ymin": 0,
+            "xmax": 168,
+            "ymax": 83
+        },
+        "swimming trunks": {
+            "xmin": 31,
+            "ymin": 357,
+            "xmax": 183,
+            "ymax": 445
+        }
+    },
+    "baseline_iou": 0.90151,
+    "swad_star": 0.59482,
+    "swad_star_index": 2,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 9,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8181617493544074,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.41721849968957336
+            },
+            "objectives": {
+                "iou": 0.67415,
+                "img_dist": 0.04892,
+                "txt_dist": 0.07879,
+                "txt_sim": 0.92121
+            },
+            "swad_metrics": {
+                "iou_0": 0.90151,
+                "delta_m_plus": 0.2522,
+                "phi": 0.87614,
+                "swad": 0.22096
+            },
+            "l2_distance": 0.6805,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bathing cap, maillot, perskn, swimming trunks\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [218, 0, 468, 175], \"label\": \"bathing cap\"},\n\t{\"bbox_2d\": [738, 162, 938, 288], \"label\": \"bathing cap\"},\n\t{\"bbox_2d\": [728, 352, 992, 790], \"label\": \"maillot\"},\n\t{\"bbox_2d\": [100, 714, 508, 897], \"label\": \"swimming trunks\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            218,
+                            0,
+                            468,
+                            175
+                        ],
+                        "label": "bathing cap"
+                    },
+                    {
+                        "bbox_2d": [
+                            738,
+                            162,
+                            938,
+                            288
+                        ],
+                        "label": "bathing cap"
+                    },
+                    {
+                        "bbox_2d": [
+                            728,
+                            352,
+                            992,
+                            790
+                        ],
+                        "label": "maillot"
+                    },
+                    {
+                        "bbox_2d": [
+                            100,
+                            714,
+                            508,
+                            897
+                        ],
+                        "label": "swimming trunks"
+                    }
+                ],
+                "token_count": 145,
+                "raw_token_count": 248,
+                "runtime_seconds": 0.8499
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.018153363333776373,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.24927259019092207
+            },
+            "objectives": {
+                "iou": 0.64578,
+                "img_dist": 0.02811,
+                "txt_dist": 0.25514,
+                "txt_sim": 0.74486
+            },
+            "swad_metrics": {
+                "iou_0": 0.90151,
+                "delta_m_plus": 0.28367,
+                "phi": 0.72392,
+                "swad": 0.20535
+            },
+            "l2_distance": 0.69492,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bath\u0456\u200bng\u200b \u0441a\u200d\u0440, m\u0430\u200b\u0456llo\u200bt, p\u0435rs\u200bon, sw\u200bimm\u0456n\u200bg t\u200drunks\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [100, 710, 520, 875], \"label\": \"bath\u0456\u200bng\u200b \u0441a\u200d\u0440\"},\n\t{\"bbox_2d\": [730, 350, 990, 790], \"label\": \"bath\u0456\u200bng\u200b \u0441a\u200d\u0440\"},\n\t{\"bbox_2d\": [650, 165, 990, 1000], \"label\": \"p\u0435rs\u200bon\"},\n\t{\"bbox_2d\": [0, 10, 700, 1000], \"label\": \"p\u0435rs\u200bon\"},\n\t{\"bbox_2d\": [730, 165, 990, 1000], \"label\": \"p\u0435rs\u200bon\"},\n\t{\"bbox_2d\": [100, 710, 520, 875], \"label\": \"sw\u200bimm\u0456n\u200bg t\u200drunks\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            100,
+                            710,
+                            520,
+                            875
+                        ],
+                        "label": "bath\u0456\u200bng\u200b \u0441a\u200d\u0440"
+                    },
+                    {
+                        "bbox_2d": [
+                            730,
+                            350,
+                            990,
+                            790
+                        ],
+                        "label": "bath\u0456\u200bng\u200b \u0441a\u200d\u0440"
+                    },
+                    {
+                        "bbox_2d": [
+                            650,
+                            165,
+                            990,
+                            1000
+                        ],
+                        "label": "p\u0435rs\u200bon"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            10,
+                            700,
+                            1000
+                        ],
+                        "label": "p\u0435rs\u200bon"
+                    },
+                    {
+                        "bbox_2d": [
+                            730,
+                            165,
+                            990,
+                            1000
+                        ],
+                        "label": "p\u0435rs\u200bon"
+                    },
+                    {
+                        "bbox_2d": [
+                            100,
+                            710,
+                            520,
+                            875
+                        ],
+                        "label": "sw\u200bimm\u0456n\u200bg t\u200drunks"
+                    }
+                ],
+                "token_count": 247,
+                "raw_token_count": 248,
+                "runtime_seconds": 0.8499
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.3997956906557353,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.647636093318414
+            },
+            "objectives": {
+                "iou": 0.15682,
+                "img_dist": 0.03898,
+                "txt_dist": 0.25071,
+                "txt_sim": 0.74929
+            },
+            "swad_metrics": {
+                "iou_0": 0.90151,
+                "delta_m_plus": 0.82605,
+                "phi": 0.72008,
+                "swad": 0.59482
+            },
+            "l2_distance": 0.29827,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bzthing cpa, maillto, eprson, swimmign trunks\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 700, 1000], \"label\": \"bzthing cpa, maillto, eprson\"},\n\t{\"bbox_2d\": [644, 166, 998, 1000], \"label\": \"bzthing cpa, maillto, eprson\"},\n\t{\"bbox_2d\": [100, 708, 516, 872], \"label\": \"swimmign trunks\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            700,
+                            1000
+                        ],
+                        "label": "bzthing cpa, maillto, eprson"
+                    },
+                    {
+                        "bbox_2d": [
+                            644,
+                            166,
+                            998,
+                            1000
+                        ],
+                        "label": "bzthing cpa, maillto, eprson"
+                    },
+                    {
+                        "bbox_2d": [
+                            100,
+                            708,
+                            516,
+                            872
+                        ],
+                        "label": "swimmign trunks"
+                    }
+                ],
+                "token_count": 129,
+                "raw_token_count": 248,
+                "runtime_seconds": 0.8499
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.6669,
+                "img_dist": 0.02825,
+                "txt_dist": 0.10104,
+                "txt_sim": 0.89896
+            },
+            "swad_metrics": {
+                "iou_0": 0.90151,
+                "delta_m_plus": 0.26024,
+                "phi": 0.87356,
+                "swad": 0.22734
+            },
+            "l2_distance": 0.6751,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bathing cap, maillot, purse on, swimming trunks\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [216, 0, 472, 178], \"label\": \"bathing cap\"},\n\t{\"bbox_2d\": [744, 168, 936, 292], \"label\": \"bathing cap\"},\n\t{\"bbox_2d\": [722, 350, 992, 792], \"label\": \"maillot\"},\n\t{\"bbox_2d\": [102, 708, 516, 872], \"label\": \"swimming trunks\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            216,
+                            0,
+                            472,
+                            178
+                        ],
+                        "label": "bathing cap"
+                    },
+                    {
+                        "bbox_2d": [
+                            744,
+                            168,
+                            936,
+                            292
+                        ],
+                        "label": "bathing cap"
+                    },
+                    {
+                        "bbox_2d": [
+                            722,
+                            350,
+                            992,
+                            792
+                        ],
+                        "label": "maillot"
+                    },
+                    {
+                        "bbox_2d": [
+                            102,
+                            708,
+                            516,
+                            872
+                        ],
+                        "label": "swimming trunks"
+                    }
+                ],
+                "token_count": 145,
+                "raw_token_count": 248,
+                "runtime_seconds": 0.8499
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.89687,
+                "img_dist": 0.02811,
+                "txt_dist": 0.13065,
+                "txt_sim": 0.86935
+            },
+            "swad_metrics": {
+                "iou_0": 0.90151,
+                "delta_m_plus": 0.00515,
+                "phi": 0.84491,
+                "swad": 0.00435
+            },
+            "l2_distance": 0.90677,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bathing cap, maillot, preson, swikming rtunks\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [216, 0, 472, 187], \"label\": \"bathing cap\"},\n\t{\"bbox_2d\": [740, 167, 938, 287], \"label\": \"bathing cap\"},\n\t{\"bbox_2d\": [722, 350, 994, 790], \"label\": \"maillot\"},\n\t{\"bbox_2d\": [0, 0, 700, 1000], \"label\": \"preson\"},\n\t{\"bbox_2d\": [650, 167, 994, 1000], \"label\": \"preson\"},\n\t{\"bbox_2d\": [100, 710, 522, 875], \"label\": \"swikming rtunks\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            216,
+                            0,
+                            472,
+                            187
+                        ],
+                        "label": "bathing cap"
+                    },
+                    {
+                        "bbox_2d": [
+                            740,
+                            167,
+                            938,
+                            287
+                        ],
+                        "label": "bathing cap"
+                    },
+                    {
+                        "bbox_2d": [
+                            722,
+                            350,
+                            994,
+                            790
+                        ],
+                        "label": "maillot"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            700,
+                            1000
+                        ],
+                        "label": "preson"
+                    },
+                    {
+                        "bbox_2d": [
+                            650,
+                            167,
+                            994,
+                            1000
+                        ],
+                        "label": "preson"
+                    },
+                    {
+                        "bbox_2d": [
+                            100,
+                            710,
+                            522,
+                            875
+                        ],
+                        "label": "swikming rtunks"
+                    }
+                ],
+                "token_count": 212,
+                "raw_token_count": 248,
+                "runtime_seconds": 0.8499
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6124377601560459,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.89265,
+                "img_dist": 0.08306,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.90151,
+                "delta_m_plus": 0.00983,
+                "phi": 0.91694,
+                "swad": 0.00901
+            },
+            "l2_distance": 0.89651,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bathing cap, maillot, person, swimming trunks\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [222, 0, 488, 172], \"label\": \"bathing cap\"},\n\t{\"bbox_2d\": [738, 158, 938, 272], \"label\": \"bathing cap\"},\n\t{\"bbox_2d\": [712, 350, 988, 792], \"label\": \"maillot\"},\n\t{\"bbox_2d\": [0, 0, 692, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [642, 158, 996, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [100, 708, 512, 880], \"label\": \"swimming trunks\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            222,
+                            0,
+                            488,
+                            172
+                        ],
+                        "label": "bathing cap"
+                    },
+                    {
+                        "bbox_2d": [
+                            738,
+                            158,
+                            938,
+                            272
+                        ],
+                        "label": "bathing cap"
+                    },
+                    {
+                        "bbox_2d": [
+                            712,
+                            350,
+                            988,
+                            792
+                        ],
+                        "label": "maillot"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            692,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            642,
+                            158,
+                            996,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            100,
+                            708,
+                            512,
+                            880
+                        ],
+                        "label": "swimming trunks"
+                    }
+                ],
+                "token_count": 209,
+                "raw_token_count": 248,
+                "runtime_seconds": 0.8499
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.5656671100314771,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.039875089079669634
+            },
+            "objectives": {
+                "iou": 0.89066,
+                "img_dist": 0.07674,
+                "txt_dist": 0.04268,
+                "txt_sim": 0.95732
+            },
+            "swad_metrics": {
+                "iou_0": 0.90151,
+                "delta_m_plus": 0.01204,
+                "phi": 0.88386,
+                "swad": 0.01064
+            },
+            "l2_distance": 0.89498,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bathing cap, maillot\u200d, perso\u200dn\u200b, swimming trunks\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [220, 0, 488, 178], \"label\": \"bathing cap\"},\n\t{\"bbox_2d\": [738, 158, 938, 278], \"label\": \"bathing cap\"},\n\t{\"bbox_2d\": [716, 350, 992, 792], \"label\": \"maillot\"},\n\t{\"bbox_2d\": [104, 708, 512, 880], \"label\": \"swimming trunks\"},\n\t{\"bbox_2d\": [644, 158, 992, 1000], \"label\": \"perso\u200dn\"},\n\t{\"bbox_2d\": [0, 0, 696, 1000], \"label\": \"perso\u200dn\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            220,
+                            0,
+                            488,
+                            178
+                        ],
+                        "label": "bathing cap"
+                    },
+                    {
+                        "bbox_2d": [
+                            738,
+                            158,
+                            938,
+                            278
+                        ],
+                        "label": "bathing cap"
+                    },
+                    {
+                        "bbox_2d": [
+                            716,
+                            350,
+                            992,
+                            792
+                        ],
+                        "label": "maillot"
+                    },
+                    {
+                        "bbox_2d": [
+                            104,
+                            708,
+                            512,
+                            880
+                        ],
+                        "label": "swimming trunks"
+                    },
+                    {
+                        "bbox_2d": [
+                            644,
+                            158,
+                            992,
+                            1000
+                        ],
+                        "label": "perso\u200dn"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            696,
+                            1000
+                        ],
+                        "label": "perso\u200dn"
+                    }
+                ],
+                "token_count": 217,
+                "raw_token_count": 248,
+                "runtime_seconds": 0.8499
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.018595721213425453,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6130568625347235
+            },
+            "objectives": {
+                "iou": 0.901,
+                "img_dist": 0.03615,
+                "txt_dist": 0.09485,
+                "txt_sim": 0.90515
+            },
+            "swad_metrics": {
+                "iou_0": 0.90151,
+                "delta_m_plus": 0.00057,
+                "phi": 0.87243,
+                "swad": 0.00049
+            },
+            "l2_distance": 0.9067,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bathing cap, maillot, person, skimming trunks\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [216, 0, 472, 180], \"label\": \"bathing cap\"},\n\t{\"bbox_2d\": [740, 168, 936, 288], \"label\": \"bathing cap\"},\n\t{\"bbox_2d\": [722, 348, 992, 792], \"label\": \"maillot\"},\n\t{\"bbox_2d\": [100, 710, 516, 870], \"label\": \"skimming trunks\"},\n\t{\"bbox_2d\": [640, 168, 992, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [0, 0, 700, 1000], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            216,
+                            0,
+                            472,
+                            180
+                        ],
+                        "label": "bathing cap"
+                    },
+                    {
+                        "bbox_2d": [
+                            740,
+                            168,
+                            936,
+                            288
+                        ],
+                        "label": "bathing cap"
+                    },
+                    {
+                        "bbox_2d": [
+                            722,
+                            348,
+                            992,
+                            792
+                        ],
+                        "label": "maillot"
+                    },
+                    {
+                        "bbox_2d": [
+                            100,
+                            710,
+                            516,
+                            870
+                        ],
+                        "label": "skimming trunks"
+                    },
+                    {
+                        "bbox_2d": [
+                            640,
+                            168,
+                            992,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            700,
+                            1000
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 209,
+                "raw_token_count": 248,
+                "runtime_seconds": 0.8499
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.90628,
+                "img_dist": 0.03614,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.90151,
+                "delta_m_plus": 0.0,
+                "phi": 0.96386,
+                "swad": 0.0
+            },
+            "l2_distance": 0.907,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bathing cap, maillot, person, swimming trunks\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [216, 0, 472, 183], \"label\": \"bathing cap\"},\n\t{\"bbox_2d\": [744, 163, 936, 290], \"label\": \"bathing cap\"},\n\t{\"bbox_2d\": [722, 350, 992, 790], \"label\": \"maillot\"},\n\t{\"bbox_2d\": [0, 0, 700, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [648, 163, 998, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [100, 708, 512, 875], \"label\": \"swimming trunks\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            216,
+                            0,
+                            472,
+                            183
+                        ],
+                        "label": "bathing cap"
+                    },
+                    {
+                        "bbox_2d": [
+                            744,
+                            163,
+                            936,
+                            290
+                        ],
+                        "label": "bathing cap"
+                    },
+                    {
+                        "bbox_2d": [
+                            722,
+                            350,
+                            992,
+                            790
+                        ],
+                        "label": "maillot"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            700,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            648,
+                            163,
+                            998,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            100,
+                            708,
+                            512,
+                            875
+                        ],
+                        "label": "swimming trunks"
+                    }
+                ],
+                "token_count": 209,
+                "raw_token_count": 248,
+                "runtime_seconds": 0.8499
+            }
+        }
+    ]
+}

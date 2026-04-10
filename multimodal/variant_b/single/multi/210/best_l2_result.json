@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/210",
+        "folder_id": "210",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00014805.JPEG"
+    },
+    "pareto_index": 26,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.071188,
+            "defocus_blur": 0.54511,
+            "motion_blur": 0.020452,
+            "fog_filter": 0.001179,
+            "pixelate": 0.148617,
+            "jpeg_filter": 0.131584
+        },
+        "text_corruptions": {
+            "homophone": 0.120201,
+            "synonym": 0.17574,
+            "ata_saliency": 0.135555,
+            "fragmentation": 0.094589,
+            "character_noise": 0.065298
+        },
+        "img_budget_used": 0.91813,
+        "txt_budget_used": 0.591384,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.35532,
+        "img_dist": 0.05358,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.89528,
+        "delta_m_plus": 0.60312,
+        "phi": 0.94642,
+        "swad": 0.5708
+    },
+    "l2_distance": 0.35934,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 165,
+            "ymin": 92,
+            "xmax": 267,
+            "ymax": 159
+        },
+        "bird_1": {
+            "xmin": 101,
+            "ymin": 216,
+            "xmax": 267,
+            "ymax": 275
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [192, 560, 528, 772], \"label\": \"bird\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    192,
+                    560,
+                    528,
+                    772
+                ],
+                "label": "bird"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 87,
+        "runtime_seconds": 0.3585
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.07118840898746184,
+        "defocus_blur": 0.5451097091476637,
+        "motion_blur": 0.020451674683543947,
+        "fog_filter": 0.001179432480518897,
+        "pixelate": 0.14861666672196022,
+        "jpeg_filter": 0.1315843360485257
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.12020147524572654,
+        "synonym": 0.1757399648825138,
+        "ata_saliency": 0.135555348312335,
+        "fragmentation": 0.09458884453928795,
+        "character_noise": 0.06529829929473713
+    }
+}

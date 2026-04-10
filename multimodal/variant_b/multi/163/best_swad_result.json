@@ -1,0 +1,153 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/163",
+        "folder_id": "163",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00007438.JPEG"
+    },
+    "pareto_index": 2,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.038329,
+            "defocus_blur": 0.046344,
+            "motion_blur": 0.032712,
+            "fog_filter": 0.046355,
+            "pixelate": 0.025693,
+            "jpeg_filter": 0.078015
+        },
+        "text_corruptions": {
+            "homophone": 0.243275,
+            "synonym": 0.043108,
+            "ata_saliency": 0.145596,
+            "fragmentation": 0.104274,
+            "character_noise": 0.193139
+        },
+        "img_budget_used": 0.267448,
+        "txt_budget_used": 0.729391,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.08786,
+        "txt_dist": 0.09976,
+        "txt_sim": 0.90024
+    },
+    "swad_metrics": {
+        "iou_0": 0.62594,
+        "delta_m_plus": 1.0,
+        "phi": 0.82114,
+        "swad": 0.82114
+    },
+    "l2_distance": 0.13293,
+    "original_prompt": "Identify the objects \"helmet, person, watercraft\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 167,
+            "ymin": 152,
+            "xmax": 291,
+            "ymax": 249
+        },
+        "person_1": {
+            "xmin": 12,
+            "ymin": 151,
+            "xmax": 107,
+            "ymax": 241
+        },
+        "person_2": {
+            "xmin": 285,
+            "ymin": 157,
+            "xmax": 406,
+            "ymax": 259
+        },
+        "person_3": {
+            "xmin": 440,
+            "ymin": 161,
+            "xmax": 487,
+            "ymax": 221
+        },
+        "person_4": {
+            "xmin": 129,
+            "ymin": 150,
+            "xmax": 159,
+            "ymax": 200
+        },
+        "helmet": {
+            "xmin": 319,
+            "ymin": 157,
+            "xmax": 355,
+            "ymax": 189
+        },
+        "helmet_1": {
+            "xmin": 211,
+            "ymin": 154,
+            "xmax": 244,
+            "ymax": 193
+        },
+        "watercraft": {
+            "xmin": 0,
+            "ymin": 220,
+            "xmax": 324,
+            "ymax": 273
+        },
+        "watercraft_1": {
+            "xmin": 91,
+            "ymin": 170,
+            "xmax": 215,
+            "ymax": 206
+        },
+        "watercraft_2": {
+            "xmin": 450,
+            "ymin": 189,
+            "xmax": 498,
+            "ymax": 228
+        },
+        "watercraft_3": {
+            "xmin": 303,
+            "ymin": 237,
+            "xmax": 466,
+            "ymax": 273
+        },
+        "watercraft_4": {
+            "xmin": 374,
+            "ymin": 187,
+            "xmax": 451,
+            "ymax": 219
+        },
+        "watercraft_5": {
+            "xmin": 245,
+            "ymin": 187,
+            "xmax": 384,
+            "ymax": 214
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"h\u200be\u200blm\u0435t, per\u200bson, wa\u200bt\u200ber\u200dc ra\u200bft\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [420, 410, 488, 488], \"label\": \"h\u200be\u200blm\u0435t\"},\n\t{\"bbox_2d\": [640, 418, 708, 500], \"label\": \"h\u200be\u200blm\u200be\u200bt\"},\n\t{\"bbox_2d\": [338, 396, 372, 430], \"label\": \"h\u200be\u200blm\u200be\u200bt\"},\n\t{\"bbox_2d\": [254, 402, 288, 436], \"label\": \"h\u200be\u200blm\u200be\u200bt\"},\n\t{\"bbox_2d\": [588, 376, 622, 410], \"label\": \"h\u200be\u200blm\u200be\u200bt\"},\n\t{\"bbox_2d\": [910, 448, 948, 488], \"label\": \"h\u200be\u200blm\u200be\u200bt\"},\n\t{\"bbox_2d\": [72, 408, 138, 488], \"label\": \"h\u200be\u200blm\u200be\u200bt\"},\n\t{\"bbox_2d\": [568, 410, 628, 500], \"label\": \"per\u200bson\"},\n\t{\"bbox_2d\": [338, 410, 550, 648], \"label\": \"per\u200bson\"},\n\t{\"bbox_2d\": [588, 418, 800, 680], \"label\": \"per\u200bson\"},\n\t{\"bbox_2d\": [328, 396, 372, 500], \"label\": \"per\u200bson\"},\n\t{\"bbox_2d\": [254, 402, 328, 500], \"label\": \"per\u200bson\"},\n\t{\"bbox_2d\": [568, 376, 628, 500], \"label\": \"per\u200bson\"},\n\t{\"bbox_2d\": [910, 448, 948, 500], \"label\": \"per\u200bson\"},\n\t{\"bbox_2d\": [72, 408, 138, 500], \"label\": \"per\u200bson\"},\n\t{\"bbox_2d\": [0, 600, 650, 720], \"label\": \"wa\u200bt\u200ber\u200dc ra\u200bft\"},\n\t{\"bbox_2d\": [188, 470, 328, 548], \"label\": \"wa\u200bt\u200ber\u200dc ra\u200bft\"},\n\t{\"bbox_2d\": [740, 500, 998, 580], \"label\": \"wa\u200bt\u200ber\u200dc ra\u200bft\"},\n\t{\"bbox_2d\": [898, 500, 998, 580], \"label\": \"wa\u200bt\u200ber\u200dc ra\u200bft\"},\n\t{\"bbox_2d\": [588, 500, 800, 580], \"label\": \"wa\u200bt\u200ber\u200dc ra\u200bft\"},\n\t{\"bbox_2d\": [328, 470, 55",
+        "parsed_predictions": [],
+        "token_count": 800,
+        "raw_token_count": 800,
+        "runtime_seconds": 2.5297
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.03832875056622642,
+        "defocus_blur": 0.046343513522316436,
+        "motion_blur": 0.03271180817764226,
+        "fog_filter": 0.0463549475618832,
+        "pixelate": 0.025693446430611284,
+        "jpeg_filter": 0.07801541438789453
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.24327451125748203,
+        "synonym": 0.043108021470490365,
+        "ata_saliency": 0.14559599244686727,
+        "fragmentation": 0.1042741469849238,
+        "character_noise": 0.19313877201319846
+    }
+}

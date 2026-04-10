@@ -1,0 +1,425 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/6",
+        "folder_id": "6",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00013591.JPEG"
+    },
+    "original_prompt": "Identify the objects \"hair dryer, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 96,
+            "ymin": 82,
+            "xmax": 273,
+            "ymax": 498
+        },
+        "hair dryer": {
+            "xmin": 132,
+            "ymin": 153,
+            "xmax": 212,
+            "ymax": 327
+        }
+    },
+    "baseline_iou": 0.64876,
+    "swad_star": 0.48436,
+    "swad_star_index": 1,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 5,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.18488,
+                    "defocus_blur": 0.094048,
+                    "motion_blur": 0.067182,
+                    "fog_filter": 0.027773,
+                    "pixelate": 0.330585,
+                    "jpeg_filter": 0.171007
+                },
+                "text_corruptions": {
+                    "homophone": 0.019185,
+                    "synonym": 0.369051,
+                    "ata_saliency": 0.039647,
+                    "fragmentation": 0.23697,
+                    "character_noise": 0.025924
+                },
+                "img_budget_used": 0.875475,
+                "txt_budget_used": 0.690778,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.68011,
+                "img_dist": 0.09098,
+                "txt_dist": 0.06285,
+                "txt_sim": 0.93715
+            },
+            "swad_metrics": {
+                "iou_0": 0.64876,
+                "delta_m_plus": 0.0,
+                "phi": 0.85189,
+                "swad": 0.0
+            },
+            "l2_distance": 0.68904,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hair dry\u0435r\u200b, p\u200berson\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [352, 306, 560, 448], \"label\": \"hair dry\u0435r\u200b\"},\n\t{\"bbox_2d\": [260, 166, 740, 998], \"label\": \"p\u200berson\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            352,
+                            306,
+                            560,
+                            448
+                        ],
+                        "label": "hair dry\u0435r\u200b"
+                    },
+                    {
+                        "bbox_2d": [
+                            260,
+                            166,
+                            740,
+                            998
+                        ],
+                        "label": "p\u200berson"
+                    }
+                ],
+                "token_count": 78,
+                "raw_token_count": 88,
+                "runtime_seconds": 0.3313
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.1848797278827509,
+                "defocus_blur": 0.09404763846097465,
+                "motion_blur": 0.06718174774369826,
+                "fog_filter": 0.02777322501132847,
+                "pixelate": 0.3305848026794778,
+                "jpeg_filter": 0.17100745433135348
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.019185469115395447,
+                "synonym": 0.36905125811052647,
+                "ata_saliency": 0.03964692796864689,
+                "fragmentation": 0.2369704525251626,
+                "character_noise": 0.02592377777791651
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.045049,
+                    "defocus_blur": 0.048116,
+                    "motion_blur": 0.073482,
+                    "fog_filter": 0.028472,
+                    "pixelate": 0.157401,
+                    "jpeg_filter": 0.097259
+                },
+                "text_corruptions": {
+                    "homophone": 0.306654,
+                    "synonym": 0.125352,
+                    "ata_saliency": 0.09163,
+                    "fragmentation": 0.00289,
+                    "character_noise": 0.025726
+                },
+                "img_budget_used": 0.44978,
+                "txt_budget_used": 0.552253,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.22987,
+                "img_dist": 0.08558,
+                "txt_dist": 0.17963,
+                "txt_sim": 0.82037
+            },
+            "swad_metrics": {
+                "iou_0": 0.64876,
+                "delta_m_plus": 0.64568,
+                "phi": 0.75016,
+                "swad": 0.48436
+            },
+            "l2_distance": 0.30402,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hair dr\u0443re, p\u200d\u0435rson\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [352, 310, 560, 448], \"label\": \"hair dr\u0443re\"},\n\t{\"bbox_2d\": [260, 168, 738, 998], \"label\": \"p\u200d\u0435\u0440\u0441\u043e\u043d\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            352,
+                            310,
+                            560,
+                            448
+                        ],
+                        "label": "hair dr\u0443re"
+                    },
+                    {
+                        "bbox_2d": [
+                            260,
+                            168,
+                            738,
+                            998
+                        ],
+                        "label": "p\u200d\u0435\u0440\u0441\u043e\u043d"
+                    }
+                ],
+                "token_count": 79,
+                "raw_token_count": 88,
+                "runtime_seconds": 0.3313
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.04504893035097646,
+                "defocus_blur": 0.0481162945086099,
+                "motion_blur": 0.07348201247857102,
+                "fog_filter": 0.02847227607398126,
+                "pixelate": 0.15740146592334284,
+                "jpeg_filter": 0.09725852448101258
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.3066544362726465,
+                "synonym": 0.125352287170483,
+                "ata_saliency": 0.09162973247910253,
+                "fragmentation": 0.002889881180302778,
+                "character_noise": 0.025726410296687624
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.039846,
+                    "defocus_blur": 0.073278,
+                    "motion_blur": 0.014954,
+                    "fog_filter": 0.015811,
+                    "pixelate": 0.054054,
+                    "jpeg_filter": 0.010161
+                },
+                "text_corruptions": {
+                    "homophone": 0.253932,
+                    "synonym": 0.015991,
+                    "ata_saliency": 0.096091,
+                    "fragmentation": 0.094261,
+                    "character_noise": 0.120292
+                },
+                "img_budget_used": 0.208104,
+                "txt_budget_used": 0.580567,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.64791,
+                "img_dist": 0.0827,
+                "txt_dist": 0.11328,
+                "txt_sim": 0.88672
+            },
+            "swad_metrics": {
+                "iou_0": 0.64876,
+                "delta_m_plus": 0.00131,
+                "phi": 0.81339,
+                "swad": 0.00107
+            },
+            "l2_distance": 0.66292,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hair dryer, \u0440er\u200dson\u200b\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [352, 308, 560, 430], \"label\": \"hair dryer\"},\n\t{\"bbox_2d\": [266, 166, 738, 998], \"label\": \"\u0440er\u200dson\u200b\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            352,
+                            308,
+                            560,
+                            430
+                        ],
+                        "label": "hair dryer"
+                    },
+                    {
+                        "bbox_2d": [
+                            266,
+                            166,
+                            738,
+                            998
+                        ],
+                        "label": "\u0440er\u200dson\u200b"
+                    }
+                ],
+                "token_count": 78,
+                "raw_token_count": 88,
+                "runtime_seconds": 0.3313
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.03984575084086833,
+                "defocus_blur": 0.07327831281706994,
+                "motion_blur": 0.014954268914493009,
+                "fog_filter": 0.015810954945090314,
+                "pixelate": 0.054054480160551616,
+                "jpeg_filter": 0.010160591658711863
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.2539315240426006,
+                "synonym": 0.01599145240363584,
+                "ata_saliency": 0.09609080499670773,
+                "fragmentation": 0.09426078662989844,
+                "character_noise": 0.12029212049988965
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.003017,
+                    "defocus_blur": 0.039449,
+                    "motion_blur": 0.064796,
+                    "fog_filter": 0.021272,
+                    "pixelate": 0.149575,
+                    "jpeg_filter": 0.050804
+                },
+                "text_corruptions": {
+                    "homophone": 0.10894,
+                    "synonym": 0.264644,
+                    "ata_saliency": 0.349708,
+                    "fragmentation": 0.084802,
+                    "character_noise": 0.045155
+                },
+                "img_budget_used": 0.328913,
+                "txt_budget_used": 0.853251,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.63521,
+                "img_dist": 0.08388,
+                "txt_dist": 0.1662,
+                "txt_sim": 0.8338
+            },
+            "swad_metrics": {
+                "iou_0": 0.64876,
+                "delta_m_plus": 0.02089,
+                "phi": 0.76386,
+                "swad": 0.01595
+            },
+            "l2_distance": 0.66193,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"h\u0430ir drytr, per son\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [352, 308, 560, 418], \"label\": \"h\u0430ir drytr\"},\n\t{\"bbox_2d\": [262, 162, 738, 998], \"label\": \"per son\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            352,
+                            308,
+                            560,
+                            418
+                        ],
+                        "label": "h\u0430ir drytr"
+                    },
+                    {
+                        "bbox_2d": [
+                            262,
+                            162,
+                            738,
+                            998
+                        ],
+                        "label": "per son"
+                    }
+                ],
+                "token_count": 77,
+                "raw_token_count": 88,
+                "runtime_seconds": 0.3313
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.0030173492824319245,
+                "defocus_blur": 0.03944948969112267,
+                "motion_blur": 0.06479560515594865,
+                "fog_filter": 0.021271522236212672,
+                "pixelate": 0.149575139980073,
+                "jpeg_filter": 0.050804328612727365
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.10894006411894035,
+                "synonym": 0.2646442624226526,
+                "ata_saliency": 0.3497084597699555,
+                "fragmentation": 0.08480240184380888,
+                "character_noise": 0.045155438286454144
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.021066,
+                    "defocus_blur": 0.075975,
+                    "motion_blur": 0.001047,
+                    "fog_filter": 0.041286,
+                    "pixelate": 0.016952,
+                    "jpeg_filter": 0.425187
+                },
+                "text_corruptions": {
+                    "homophone": 0.430049,
+                    "synonym": 0.016491,
+                    "ata_saliency": 0.05554,
+                    "fragmentation": 0.314307,
+                    "character_noise": 0.060267
+                },
+                "img_budget_used": 0.581514,
+                "txt_budget_used": 0.876654,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.82283,
+                "img_dist": 0.08898,
+                "txt_dist": 0.05038,
+                "txt_sim": 0.94962
+            },
+            "swad_metrics": {
+                "iou_0": 0.64876,
+                "delta_m_plus": 0.0,
+                "phi": 0.86512,
+                "swad": 0.0
+            },
+            "l2_distance": 0.82916,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hair dryer\u200d, p erson\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [352, 302, 560, 552], \"label\": \"hair dryer\"},\n\t{\"bbox_2d\": [260, 168, 738, 998], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            352,
+                            302,
+                            560,
+                            552
+                        ],
+                        "label": "hair dryer"
+                    },
+                    {
+                        "bbox_2d": [
+                            260,
+                            168,
+                            738,
+                            998
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 88,
+                "runtime_seconds": 0.3313
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.02106604624773977,
+                "defocus_blur": 0.07597543575628837,
+                "motion_blur": 0.0010467008163330329,
+                "fog_filter": 0.04128631396999984,
+                "pixelate": 0.016952187698863697,
+                "jpeg_filter": 0.4251868157907972
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.4300486378119071,
+                "synonym": 0.016490668593529028,
+                "ata_saliency": 0.05554019464245716,
+                "fragmentation": 0.3143073823592192,
+                "character_noise": 0.06026695243019721
+            }
+        }
+    ]
+}

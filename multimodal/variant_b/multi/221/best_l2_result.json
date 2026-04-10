@@ -1,0 +1,112 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/221",
+        "folder_id": "221",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00018591.JPEG"
+    },
+    "pareto_index": 10,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 3,
+    "total_evaluations": 75,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.055856,
+            "defocus_blur": 0.554403,
+            "motion_blur": 0.111637,
+            "fog_filter": 0.149441,
+            "pixelate": 0.028922,
+            "jpeg_filter": 0.07711
+        },
+        "text_corruptions": {
+            "homophone": 0.057199,
+            "synonym": 0.08498,
+            "ata_saliency": 0.038831,
+            "fragmentation": 0.059426,
+            "character_noise": 0.202313
+        },
+        "img_budget_used": 0.977368,
+        "txt_budget_used": 0.442749,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.14109,
+        "txt_dist": 0.23683,
+        "txt_sim": 0.76317
+    },
+    "swad_metrics": {
+        "iou_0": 0.86595,
+        "delta_m_plus": 1.0,
+        "phi": 0.65549,
+        "swad": 0.65549
+    },
+    "l2_distance": 0.27567,
+    "original_prompt": "Identify the objects \"person, stethoscope\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 1,
+            "ymin": 76,
+            "xmax": 221,
+            "ymax": 497
+        },
+        "person_1": {
+            "xmin": 201,
+            "ymin": 172,
+            "xmax": 380,
+            "ymax": 498
+        },
+        "stethoscope": {
+            "xmin": 33,
+            "ymin": 273,
+            "xmax": 172,
+            "ymax": 498
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"p\u0435\u200drs\u200don\u200d, c\u200bh\u0435st pi\u0435c\u0435\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 196, 650, 998], \"label\": \"p\u0435\u200drs\u200don\u200d, c\u200bh\u0435st pi\u0435c\u0435\"},\n\t{\"bbox_2d\": [530, 350, 998, 998], \"label\": \"p\u0435\u200drs\u200don\u200d, c\u200bh\u0435st pi\u0435c\u0435\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    196,
+                    650,
+                    998
+                ],
+                "label": "p\u0435\u200drs\u200don\u200d, c\u200bh\u0435st pi\u0435c\u0435"
+            },
+            {
+                "bbox_2d": [
+                    530,
+                    350,
+                    998,
+                    998
+                ],
+                "label": "p\u0435\u200drs\u200don\u200d, c\u200bh\u0435st pi\u0435c\u0435"
+            }
+        ],
+        "token_count": 108,
+        "raw_token_count": 210,
+        "runtime_seconds": 0.659
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.05585567108388814,
+        "defocus_blur": 0.5544027961605151,
+        "motion_blur": 0.11163694289111455,
+        "fog_filter": 0.14944112276972368,
+        "pixelate": 0.028922142741634942,
+        "jpeg_filter": 0.07710964332918985
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.05719934843274142,
+        "synonym": 0.08498034693765008,
+        "ata_saliency": 0.03883061643624347,
+        "fragmentation": 0.05942562653482395,
+        "character_noise": 0.20231339872733695
+    }
+}

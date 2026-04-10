@@ -1,0 +1,82 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/211",
+        "folder_id": "211",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00003955.JPEG"
+    },
+    "pareto_index": 4,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.863144940280058,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6678992108124702
+    },
+    "objectives": {
+        "iou": 0.27669,
+        "img_dist": 0.04862,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.57568,
+        "delta_m_plus": 0.51937,
+        "phi": 0.95138,
+        "swad": 0.49412
+    },
+    "l2_distance": 0.28093,
+    "original_prompt": "Identify the objects \"jellyfish\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "jellyfish": {
+            "xmin": 288,
+            "ymin": 0,
+            "xmax": 410,
+            "ymax": 252
+        },
+        "jellyfish_1": {
+            "xmin": 0,
+            "ymin": 0,
+            "xmax": 265,
+            "ymax": 374
+        },
+        "jellyfish_2": {
+            "xmin": 385,
+            "ymin": 91,
+            "xmax": 471,
+            "ymax": 212
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"jellyfish\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 288, 398, 772], \"label\": \"jellyfish\"},\n\t{\"bbox_2d\": [618, 364, 818, 672], \"label\": \"jellyfish\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    288,
+                    398,
+                    772
+                ],
+                "label": "jellyfish"
+            },
+            {
+                "bbox_2d": [
+                    618,
+                    364,
+                    818,
+                    672
+                ],
+                "label": "jellyfish"
+            }
+        ],
+        "token_count": 74,
+        "raw_token_count": 143,
+        "runtime_seconds": 0.4983
+    }
+}

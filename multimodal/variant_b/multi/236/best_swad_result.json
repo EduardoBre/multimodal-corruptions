@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/236",
+        "folder_id": "236",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00043811.JPEG"
+    },
+    "pareto_index": 12,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 45,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.003327,
+            "defocus_blur": 0.001205,
+            "motion_blur": 0.005604,
+            "fog_filter": 0.000953,
+            "pixelate": 0.049166,
+            "jpeg_filter": 0.000111
+        },
+        "text_corruptions": {
+            "homophone": 0.164741,
+            "synonym": 0.034249,
+            "ata_saliency": 0.037744,
+            "fragmentation": 0.106117,
+            "character_noise": 0.008153
+        },
+        "img_budget_used": 0.060367,
+        "txt_budget_used": 0.351004,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.05577,
+        "txt_dist": 0.25664,
+        "txt_sim": 0.74336
+    },
+    "swad_metrics": {
+        "iou_0": 0.65879,
+        "delta_m_plus": 1.0,
+        "phi": 0.7019,
+        "swad": 0.7019
+    },
+    "l2_distance": 0.26263,
+    "original_prompt": "Identify the objects \"bow, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 183,
+            "ymin": 318,
+            "xmax": 421,
+            "ymax": 756
+        },
+        "bow": {
+            "xmin": 145,
+            "ymin": 315,
+            "xmax": 293,
+            "ymax": 575
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"beau, per son\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [252, 407, 388, 729], \"label\": \"beau, per son\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    252,
+                    407,
+                    388,
+                    729
+                ],
+                "label": "beau, per son"
+            }
+        ],
+        "token_count": 43,
+        "raw_token_count": 81,
+        "runtime_seconds": 0.2763
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.003327497784468869,
+        "defocus_blur": 0.001205156409767423,
+        "motion_blur": 0.005603551136970831,
+        "fog_filter": 0.0009533414334420565,
+        "pixelate": 0.04916618742775309,
+        "jpeg_filter": 0.00011147419906782328
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.16474123026522242,
+        "synonym": 0.03424922634406325,
+        "ata_saliency": 0.03774380727288339,
+        "fragmentation": 0.10611720982981412,
+        "character_noise": 0.008152676098407564
+    }
+}

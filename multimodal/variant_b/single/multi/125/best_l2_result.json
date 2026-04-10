@@ -1,0 +1,106 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/125",
+        "folder_id": "125",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00046083.JPEG"
+    },
+    "pareto_index": 3,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 6,
+    "total_evaluations": 165,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.016761,
+            "defocus_blur": 0.221778,
+            "motion_blur": 0.133843,
+            "fog_filter": 0.266015,
+            "pixelate": 0.039578,
+            "jpeg_filter": 0.111363
+        },
+        "text_corruptions": {
+            "homophone": 0.304929,
+            "synonym": 0.029032,
+            "ata_saliency": 0.003943,
+            "fragmentation": 0.00904,
+            "character_noise": 0.193957
+        },
+        "img_budget_used": 0.789337,
+        "txt_budget_used": 0.540902,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.14617,
+        "txt_dist": 0.16875,
+        "txt_sim": 0.83125
+    },
+    "swad_metrics": {
+        "iou_0": 0.94595,
+        "delta_m_plus": 1.0,
+        "phi": 0.70975,
+        "swad": 0.70975
+    },
+    "l2_distance": 0.22325,
+    "original_prompt": "Identify the objects \"ant\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "ant": {
+            "xmin": 16,
+            "ymin": 73,
+            "xmax": 323,
+            "ymax": 394
+        },
+        "ant_1": {
+            "xmin": 216,
+            "ymin": 80,
+            "xmax": 442,
+            "ymax": 327
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"\u0430\u200dn\u200dt\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [38, 150, 570, 848], \"label\": \"\u0430\u200d\u043d\u200d\u0442\"},\n\t{\"bbox_2d\": [570, 168, 880, 630], \"label\": \"\u0430\u200d\u043d\u200d\u0442\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    38,
+                    150,
+                    570,
+                    848
+                ],
+                "label": "\u0430\u200d\u043d\u200d\u0442"
+            },
+            {
+                "bbox_2d": [
+                    570,
+                    168,
+                    880,
+                    630
+                ],
+                "label": "\u0430\u200d\u043d\u200d\u0442"
+            }
+        ],
+        "token_count": 83,
+        "raw_token_count": 106,
+        "runtime_seconds": 0.3577
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.016761192237977812,
+        "defocus_blur": 0.22177772889887487,
+        "motion_blur": 0.13384289363867943,
+        "fog_filter": 0.26601483747830273,
+        "pixelate": 0.03957827561753813,
+        "jpeg_filter": 0.11136250468379831
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.304929019104507,
+        "synonym": 0.029032489839081254,
+        "ata_saliency": 0.0039432345748990775,
+        "fragmentation": 0.009040403244965828,
+        "character_noise": 0.1939573093883001
+    }
+}

@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/121",
+        "folder_id": "121",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00043920.JPEG"
+    },
+    "pareto_index": 2,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.8984875775222574,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.5293078093926774
+    },
+    "objectives": {
+        "iou": 0.47895,
+        "img_dist": 0.06469,
+        "txt_dist": 0.02032,
+        "txt_sim": 0.97968
+    },
+    "swad_metrics": {
+        "iou_0": 0.9743,
+        "delta_m_plus": 0.50842,
+        "phi": 0.9163,
+        "swad": 0.46587
+    },
+    "l2_distance": 0.48373,
+    "original_prompt": "Identify the objects \"strawberry\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "strawberry": {
+            "xmin": 280,
+            "ymin": 195,
+            "xmax": 439,
+            "ymax": 345
+        },
+        "strawberry_1": {
+            "xmin": 378,
+            "ymin": 140,
+            "xmax": 499,
+            "ymax": 311
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"strawberri\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [550, 370, 1000, 910], \"label\": \"strawberri\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    550,
+                    370,
+                    1000,
+                    910
+                ],
+                "label": "strawberri"
+            }
+        ],
+        "token_count": 43,
+        "raw_token_count": 82,
+        "runtime_seconds": 0.2716
+    }
+}

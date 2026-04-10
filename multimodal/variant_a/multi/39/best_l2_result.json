@@ -1,0 +1,100 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/39",
+        "folder_id": "39",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00015680.JPEG"
+    },
+    "pareto_index": 7,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.863144940280058,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6678992108124702
+    },
+    "objectives": {
+        "iou": 0.27957,
+        "img_dist": 0.09261,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.73213,
+        "delta_m_plus": 0.61814,
+        "phi": 0.90739,
+        "swad": 0.5609
+    },
+    "l2_distance": 0.29451,
+    "original_prompt": "Identify the objects \"balance beam, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 94,
+            "ymin": 12,
+            "xmax": 301,
+            "ymax": 504
+        },
+        "balance beam": {
+            "xmin": 1,
+            "ymin": 477,
+            "xmax": 347,
+            "ymax": 539
+        },
+        "balance beam_1": {
+            "xmin": 25,
+            "ymin": 373,
+            "xmax": 348,
+            "ymax": 401
+        },
+        "person_1": {
+            "xmin": 0,
+            "ymin": 291,
+            "xmax": 31,
+            "ymax": 358
+        },
+        "person_2": {
+            "xmin": 28,
+            "ymin": 276,
+            "xmax": 78,
+            "ymax": 371
+        },
+        "person_3": {
+            "xmin": 105,
+            "ymin": 241,
+            "xmax": 159,
+            "ymax": 332
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"balance beam, person\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 850, 999, 999], \"label\": \"balance beam\"},\n\t{\"bbox_2d\": [357, 17, 849, 933], \"label\": \"person\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    850,
+                    999,
+                    999
+                ],
+                "label": "balance beam"
+            },
+            {
+                "bbox_2d": [
+                    357,
+                    17,
+                    849,
+                    933
+                ],
+                "label": "person"
+            }
+        ],
+        "token_count": 70,
+        "raw_token_count": 268,
+        "runtime_seconds": 0.9106
+    }
+}

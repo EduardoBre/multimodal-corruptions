@@ -1,0 +1,76 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/77",
+        "folder_id": "77",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00003762.JPEG"
+    },
+    "pareto_index": 7,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.3166297345672937,
+        "txt_attack": "synonym",
+        "txt_scale": 0.8244955061768955
+    },
+    "objectives": {
+        "iou": 0.39369,
+        "img_dist": 0.0284,
+        "txt_dist": 0.10272,
+        "txt_sim": 0.89728
+    },
+    "swad_metrics": {
+        "iou_0": 0.80067,
+        "delta_m_plus": 0.5083,
+        "phi": 0.8718,
+        "swad": 0.44313
+    },
+    "l2_distance": 0.40786,
+    "original_prompt": "Identify the objects \"coffee maker, stove\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "coffee maker": {
+            "xmin": 246,
+            "ymin": 196,
+            "xmax": 343,
+            "ymax": 297
+        },
+        "stove": {
+            "xmin": 161,
+            "ymin": 237,
+            "xmax": 259,
+            "ymax": 275
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"coffee maker, oven\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [664, 408, 876, 595], \"label\": \"coffee maker\"},\n\t{\"bbox_2d\": [364, 14, 692, 208], \"label\": \"oven\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    664,
+                    408,
+                    876,
+                    595
+                ],
+                "label": "coffee maker"
+            },
+            {
+                "bbox_2d": [
+                    364,
+                    14,
+                    692,
+                    208
+                ],
+                "label": "oven"
+            }
+        ],
+        "token_count": 72,
+        "raw_token_count": 96,
+        "runtime_seconds": 0.3319
+    }
+}

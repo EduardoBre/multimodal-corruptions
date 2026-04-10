@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/104",
+        "folder_id": "104",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00015513.JPEG"
+    },
+    "pareto_index": 2,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "gaussian_noise",
+        "img_scale": 0.01555684270420181,
+        "txt_attack": "homophone",
+        "txt_scale": 0.3655606556345583
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.03187,
+        "txt_dist": 0.39563,
+        "txt_sim": 0.60437
+    },
+    "swad_metrics": {
+        "iou_0": 0.93602,
+        "delta_m_plus": 1.0,
+        "phi": 0.58511,
+        "swad": 0.58511
+    },
+    "l2_distance": 0.39691,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 189,
+            "ymin": 66,
+            "xmax": 304,
+            "ymax": 278
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"burred\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [143, 670, 252, 777], \"label\": \"burred\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    143,
+                    670,
+                    252,
+                    777
+                ],
+                "label": "burred"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 41,
+        "runtime_seconds": 0.1855
+    }
+}

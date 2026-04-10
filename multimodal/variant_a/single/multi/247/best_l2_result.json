@@ -1,0 +1,73 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/247",
+        "folder_id": "247",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00029087.JPEG"
+    },
+    "pareto_index": 9,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.03732619454213726,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.33647038540361596
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.09189,
+        "txt_dist": 0.27601,
+        "txt_sim": 0.72399
+    },
+    "swad_metrics": {
+        "iou_0": 0.87318,
+        "delta_m_plus": 1.0,
+        "phi": 0.65746,
+        "swad": 0.65746
+    },
+    "l2_distance": 0.2909,
+    "original_prompt": "Identify the objects \"nail\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "nail": {
+            "xmin": 346,
+            "ymin": 60,
+            "xmax": 385,
+            "ymax": 105
+        },
+        "nail_1": {
+            "xmin": 199,
+            "ymin": 65,
+            "xmax": 244,
+            "ymax": 107
+        },
+        "nail_2": {
+            "xmin": 59,
+            "ymin": 52,
+            "xmax": 93,
+            "ymax": 91
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"npil\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [558, 470, 808, 808], \"label\": \"npil\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    558,
+                    470,
+                    808,
+                    808
+                ],
+                "label": "npil"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 136,
+        "runtime_seconds": 0.4392
+    }
+}

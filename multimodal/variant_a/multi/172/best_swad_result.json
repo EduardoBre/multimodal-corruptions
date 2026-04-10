@@ -1,0 +1,82 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/172",
+        "folder_id": "172",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00034365.JPEG"
+    },
+    "pareto_index": 4,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "gaussian_noise",
+        "img_scale": 0.08142031165696761,
+        "txt_attack": "homophone",
+        "txt_scale": 0.2228478256331735
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.03957,
+        "txt_dist": 0.1641,
+        "txt_sim": 0.8359
+    },
+    "swad_metrics": {
+        "iou_0": 0.77715,
+        "delta_m_plus": 1.0,
+        "phi": 0.80282,
+        "swad": 0.80282
+    },
+    "l2_distance": 0.1688,
+    "original_prompt": "Identify the objects \"brassiere, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 126,
+            "ymin": 15,
+            "xmax": 332,
+            "ymax": 311
+        },
+        "person_1": {
+            "xmin": 0,
+            "ymin": 55,
+            "xmax": 146,
+            "ymax": 340
+        },
+        "brassiere": {
+            "xmin": 158,
+            "ymin": 155,
+            "xmax": 297,
+            "ymax": 318
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bra zeer, person\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 109, 497, 998], \"label\": \"bra zeer, person\"},\n\t{\"bbox_2d\": [367, 65, 1000, 625], \"label\": \"bra zeer, person\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    109,
+                    497,
+                    998
+                ],
+                "label": "bra zeer, person"
+            },
+            {
+                "bbox_2d": [
+                    367,
+                    65,
+                    1000,
+                    625
+                ],
+                "label": "bra zeer, person"
+            }
+        ],
+        "token_count": 78,
+        "raw_token_count": 160,
+        "runtime_seconds": 0.5155
+    }
+}

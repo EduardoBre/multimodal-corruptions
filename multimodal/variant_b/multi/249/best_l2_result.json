@@ -1,0 +1,121 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/249",
+        "folder_id": "249",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00028118.JPEG"
+    },
+    "pareto_index": 1,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 4,
+    "total_evaluations": 120,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.001823,
+            "defocus_blur": 0.024182,
+            "motion_blur": 0.084442,
+            "fog_filter": 0.268594,
+            "pixelate": 0.009994,
+            "jpeg_filter": 0.062595
+        },
+        "text_corruptions": {
+            "homophone": 0.127061,
+            "synonym": 0.020208,
+            "ata_saliency": 0.16292,
+            "fragmentation": 0.237048,
+            "character_noise": 0.240494
+        },
+        "img_budget_used": 0.45163,
+        "txt_budget_used": 0.787731,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.1064,
+        "txt_dist": 0.24106,
+        "txt_sim": 0.75894
+    },
+    "swad_metrics": {
+        "iou_0": 0.94462,
+        "delta_m_plus": 1.0,
+        "phi": 0.67819,
+        "swad": 0.67819
+    },
+    "l2_distance": 0.2635,
+    "original_prompt": "Identify the objects \"dog, domestic cat, sofa\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "domestic cat": {
+            "xmin": 179,
+            "ymin": 0,
+            "xmax": 499,
+            "ymax": 232
+        },
+        "dog": {
+            "xmin": 0,
+            "ymin": 141,
+            "xmax": 233,
+            "ymax": 332
+        },
+        "sofa": {
+            "xmin": 0,
+            "ymin": 0,
+            "xmax": 499,
+            "ymax": 300
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"o\u200bd\u200bg, d\u200b\u043e\u200bme\u200ds\u200dtic \u0441a\u200dt, s\u200do\u200d fa\u200d\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 436, 460, 997], \"label\": \"o\u200bd\u200bg, d\u200b\u043e\u200bme\u200ds\u200dtic \u0441a\u200dt, s\u200do\u200d fa\u200d\"},\n\t{\"bbox_2d\": [338, 0, 1000, 700], \"label\": \"o\u200bd\u200bg, d\u200b\u043e\u200bme\u200ds\u200dtic \u0441a\u200dt, s\u200do\u200d fa\u200d\"},\n\t{\"bbox_2d\": [0, 0, 1000, 997], \"label\": \"o\u200bd\u200bg, d\u200b\u043e\u200bme\u200ds\u200dtic \u0441a\u200dt, s\u200do\u200d fa\u200d\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    436,
+                    460,
+                    997
+                ],
+                "label": "o\u200bd\u200bg, d\u200b\u043e\u200bme\u200ds\u200dtic \u0441a\u200dt, s\u200do\u200d fa\u200d"
+            },
+            {
+                "bbox_2d": [
+                    338,
+                    0,
+                    1000,
+                    700
+                ],
+                "label": "o\u200bd\u200bg, d\u200b\u043e\u200bme\u200ds\u200dtic \u0441a\u200dt, s\u200do\u200d fa\u200d"
+            },
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    1000,
+                    997
+                ],
+                "label": "o\u200bd\u200bg, d\u200b\u043e\u200bme\u200ds\u200dtic \u0441a\u200dt, s\u200do\u200d fa\u200d"
+            }
+        ],
+        "token_count": 192,
+        "raw_token_count": 193,
+        "runtime_seconds": 0.7594
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0018233701016690071,
+        "defocus_blur": 0.02418205824280124,
+        "motion_blur": 0.08444163870079281,
+        "fog_filter": 0.2685942849539692,
+        "pixelate": 0.009994136489646418,
+        "jpeg_filter": 0.06259474614279582
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.12706108590419246,
+        "synonym": 0.020208330201443924,
+        "ata_saliency": 0.16292004184340722,
+        "fragmentation": 0.2370481487394558,
+        "character_noise": 0.24049360196517175
+    }
+}

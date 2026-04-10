@@ -1,0 +1,79 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/42",
+        "folder_id": "42",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00010967.JPEG"
+    },
+    "pareto_index": 8,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 45,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.9014415695141608,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.6424261740794441
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.06961,
+        "txt_dist": 0.26733,
+        "txt_sim": 0.73267
+    },
+    "swad_metrics": {
+        "iou_0": 0.95137,
+        "delta_m_plus": 1.0,
+        "phi": 0.68167,
+        "swad": 0.68167
+    },
+    "l2_distance": 0.27624,
+    "original_prompt": "Identify the objects \"bench, burrito, cup or mug, table\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bench": {
+            "xmin": 2,
+            "ymin": 0,
+            "xmax": 499,
+            "ymax": 162
+        },
+        "burrito": {
+            "xmin": 187,
+            "ymin": 131,
+            "xmax": 436,
+            "ymax": 214
+        },
+        "cup or mug": {
+            "xmin": 11,
+            "ymin": 182,
+            "xmax": 167,
+            "ymax": 374
+        },
+        "table": {
+            "xmin": 0,
+            "ymin": 139,
+            "xmax": 499,
+            "ymax": 374
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bnech, burirto, cep or mgu, tabne\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [230, 360, 995, 724], \"label\": \"bnech, burirto, cep or mgu, tabne\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    230,
+                    360,
+                    995,
+                    724
+                ],
+                "label": "bnech, burirto, cep or mgu, tabne"
+            }
+        ],
+        "token_count": 53,
+        "raw_token_count": 177,
+        "runtime_seconds": 0.629
+    }
+}

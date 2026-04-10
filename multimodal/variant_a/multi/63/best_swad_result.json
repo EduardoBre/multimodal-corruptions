@@ -1,0 +1,76 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/63",
+        "folder_id": "63",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00047962.JPEG"
+    },
+    "pareto_index": 18,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 5,
+    "total_evaluations": 150,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.9662109336868401,
+        "txt_attack": "synonym",
+        "txt_scale": 0.43414183761814906
+    },
+    "objectives": {
+        "iou": 0.33735,
+        "img_dist": 0.05264,
+        "txt_dist": 0.11952,
+        "txt_sim": 0.88048
+    },
+    "swad_metrics": {
+        "iou_0": 0.88802,
+        "delta_m_plus": 0.62011,
+        "phi": 0.83413,
+        "swad": 0.51725
+    },
+    "l2_distance": 0.36175,
+    "original_prompt": "Identify the objects \"bus, traffic light\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "traffic light": {
+            "xmin": 213,
+            "ymin": 5,
+            "xmax": 262,
+            "ymax": 126
+        },
+        "bus": {
+            "xmin": 285,
+            "ymin": 343,
+            "xmax": 393,
+            "ymax": 495
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"transit bus, stoplight\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [36, 619, 688, 998], \"label\": \"transit bus\"},\n\t{\"bbox_2d\": [528, 0, 692, 230], \"label\": \"stoplight\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    36,
+                    619,
+                    688,
+                    998
+                ],
+                "label": "transit bus"
+            },
+            {
+                "bbox_2d": [
+                    528,
+                    0,
+                    692,
+                    230
+                ],
+                "label": "stoplight"
+            }
+        ],
+        "token_count": 72,
+        "raw_token_count": 115,
+        "runtime_seconds": 0.3798
+    }
+}

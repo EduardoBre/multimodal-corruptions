@@ -1,0 +1,109 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/168",
+        "folder_id": "168",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00026817.JPEG"
+    },
+    "pareto_index": 6,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.863144940280058,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6678992108124702
+    },
+    "objectives": {
+        "iou": 0.06821,
+        "img_dist": 0.09084,
+        "txt_dist": 0.21051,
+        "txt_sim": 0.78949
+    },
+    "swad_metrics": {
+        "iou_0": 0.8109,
+        "delta_m_plus": 0.91588,
+        "phi": 0.71777,
+        "swad": 0.6574
+    },
+    "l2_distance": 0.2392,
+    "original_prompt": "Identify the objects \"person, saxophone, trombone\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "saxophone": {
+            "xmin": 241,
+            "ymin": 178,
+            "xmax": 339,
+            "ymax": 331
+        },
+        "person": {
+            "xmin": 280,
+            "ymin": 39,
+            "xmax": 420,
+            "ymax": 333
+        },
+        "person_1": {
+            "xmin": 141,
+            "ymin": 116,
+            "xmax": 319,
+            "ymax": 333
+        },
+        "trombone": {
+            "xmin": 345,
+            "ymin": 69,
+            "xmax": 463,
+            "ymax": 151
+        },
+        "person_2": {
+            "xmin": 0,
+            "ymin": 22,
+            "xmax": 165,
+            "ymax": 333
+        },
+        "person_3": {
+            "xmin": 206,
+            "ymin": 55,
+            "xmax": 276,
+            "ymax": 145
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"pursun, saxaphone, trom bone\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [708, 270, 828, 430], \"label\": \"pursun\"},\n\t{\"bbox_2d\": [708, 270, 828, 430], \"label\": \"saxaphone\"},\n\t{\"bbox_2d\": [708, 270, 828, 430], \"label\": \"trom bone\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    708,
+                    270,
+                    828,
+                    430
+                ],
+                "label": "pursun"
+            },
+            {
+                "bbox_2d": [
+                    708,
+                    270,
+                    828,
+                    430
+                ],
+                "label": "saxaphone"
+            },
+            {
+                "bbox_2d": [
+                    708,
+                    270,
+                    828,
+                    430
+                ],
+                "label": "trom bone"
+            }
+        ],
+        "token_count": 112,
+        "raw_token_count": 272,
+        "runtime_seconds": 0.9074
+    }
+}

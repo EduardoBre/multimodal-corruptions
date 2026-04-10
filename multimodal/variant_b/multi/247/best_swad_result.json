@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/247",
+        "folder_id": "247",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00024517.JPEG"
+    },
+    "pareto_index": 1,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.244975,
+            "defocus_blur": 0.274514,
+            "motion_blur": 0.104205,
+            "fog_filter": 0.089385,
+            "pixelate": 0.088339,
+            "jpeg_filter": 0.122059
+        },
+        "text_corruptions": {
+            "homophone": 0.004686,
+            "synonym": 0.004089,
+            "ata_saliency": 0.004179,
+            "fragmentation": 0.003117,
+            "character_noise": 0.005075
+        },
+        "img_budget_used": 0.923477,
+        "txt_budget_used": 0.021146,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.0997,
+        "txt_dist": 0.22881,
+        "txt_sim": 0.77119
+    },
+    "swad_metrics": {
+        "iou_0": 0.65129,
+        "delta_m_plus": 1.0,
+        "phi": 0.6943,
+        "swad": 0.6943
+    },
+    "l2_distance": 0.24959,
+    "original_prompt": "Identify the objects \"bicycle, person, sunglasses\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 182,
+            "ymin": 227,
+            "xmax": 264,
+            "ymax": 345
+        },
+        "sunglasses": {
+            "xmin": 230,
+            "ymin": 240,
+            "xmax": 245,
+            "ymax": 249
+        },
+        "bicycle": {
+            "xmin": 64,
+            "ymin": 238,
+            "xmax": 245,
+            "ymax": 346
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"by cycle, p\u0435r son, su\u200bngl\u0430s\u200dses\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [375, 612, 518, 920], \"label\": \"by cycle, p\u0435r son, su\u200bngl\u0430s\u200dses\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    375,
+                    612,
+                    518,
+                    920
+                ],
+                "label": "by cycle, p\u0435r son, su\u200bngl\u0430s\u200dses"
+            }
+        ],
+        "token_count": 55,
+        "raw_token_count": 132,
+        "runtime_seconds": 0.4526
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.24497524096600157,
+        "defocus_blur": 0.2745139797150762,
+        "motion_blur": 0.10420535098244654,
+        "fog_filter": 0.0893851276285397,
+        "pixelate": 0.08833856184961963,
+        "jpeg_filter": 0.12205920469641672
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.004686445845963774,
+        "synonym": 0.00408904584638712,
+        "ata_saliency": 0.0041793675942164285,
+        "fragmentation": 0.0031167461149164788,
+        "character_noise": 0.005074761612681702
+    }
+}

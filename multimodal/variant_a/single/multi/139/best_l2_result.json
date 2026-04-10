@@ -1,0 +1,73 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/139",
+        "folder_id": "139",
+        "category": "single/multi",
+        "filename": "ILSVRC2013_val_00002022.JPEG"
+    },
+    "pareto_index": 5,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 6,
+    "total_evaluations": 180,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.9335433001260752,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6678992108124702
+    },
+    "objectives": {
+        "iou": 0.33425,
+        "img_dist": 0.0969,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.82161,
+        "delta_m_plus": 0.59318,
+        "phi": 0.9031,
+        "swad": 0.5357
+    },
+    "l2_distance": 0.34801,
+    "original_prompt": "Identify the objects \"wine bottle\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "wine bottle": {
+            "xmin": 152,
+            "ymin": 13,
+            "xmax": 274,
+            "ymax": 498
+        },
+        "wine bottle_1": {
+            "xmin": 90,
+            "ymin": 6,
+            "xmax": 198,
+            "ymax": 458
+        },
+        "wine bottle_2": {
+            "xmin": 45,
+            "ymin": 8,
+            "xmax": 140,
+            "ymax": 421
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"wine bottle\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [500, 24, 825, 940], \"label\": \"wine bottle\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    500,
+                    24,
+                    825,
+                    940
+                ],
+                "label": "wine bottle"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 169,
+        "runtime_seconds": 0.5562
+    }
+}

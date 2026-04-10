@@ -1,0 +1,106 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/71",
+        "folder_id": "71",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00029347.JPEG"
+    },
+    "pareto_index": 15,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 4,
+    "total_evaluations": 105,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.001522,
+            "defocus_blur": 0.096532,
+            "motion_blur": 0.003748,
+            "fog_filter": 0.005992,
+            "pixelate": 0.003127,
+            "jpeg_filter": 0.003929
+        },
+        "text_corruptions": {
+            "homophone": 0.095823,
+            "synonym": 0.120713,
+            "ata_saliency": 0.090788,
+            "fragmentation": 0.112835,
+            "character_noise": 0.042199
+        },
+        "img_budget_used": 0.114849,
+        "txt_budget_used": 0.462358,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.06481,
+        "txt_dist": 0.2367,
+        "txt_sim": 0.7633
+    },
+    "swad_metrics": {
+        "iou_0": 0.94635,
+        "delta_m_plus": 1.0,
+        "phi": 0.71383,
+        "swad": 0.71383
+    },
+    "l2_distance": 0.24541,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 324,
+            "ymin": 311,
+            "xmax": 411,
+            "ymax": 483
+        },
+        "bird_1": {
+            "xmin": 105,
+            "ymin": 45,
+            "xmax": 267,
+            "ymax": 262
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"winged \u0430nim\u200dal\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [228, 107, 530, 523], \"label\": \"winged \u0430\u043d\u0438\u043c\u200d\u0430\u043b\"},\n\t{\"bbox_2d\": [650, 620, 828, 973], \"label\": \"winged \u0430\u043d\u0438\u043c\u200d\u0430\u043b\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    228,
+                    107,
+                    530,
+                    523
+                ],
+                "label": "winged \u0430\u043d\u0438\u043c\u200d\u0430\u043b"
+            },
+            {
+                "bbox_2d": [
+                    650,
+                    620,
+                    828,
+                    973
+                ],
+                "label": "winged \u0430\u043d\u0438\u043c\u200d\u0430\u043b"
+            }
+        ],
+        "token_count": 84,
+        "raw_token_count": 85,
+        "runtime_seconds": 0.2658
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.001521817570917534,
+        "defocus_blur": 0.09653205868529031,
+        "motion_blur": 0.0037475920155816723,
+        "fog_filter": 0.005991916712528061,
+        "pixelate": 0.003127191400433313,
+        "jpeg_filter": 0.003928614843259753
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.09582277555241656,
+        "synonym": 0.12071277446752089,
+        "ata_saliency": 0.0907877845532054,
+        "fragmentation": 0.11283514884297902,
+        "character_noise": 0.04219911330153051
+    }
+}

@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/49",
+        "folder_id": "49",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00002555.JPEG"
+    },
+    "pareto_index": 8,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 13,
+    "total_evaluations": 390,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.11343,
+            "defocus_blur": 0.077616,
+            "motion_blur": 0.001668,
+            "fog_filter": 0.150491,
+            "pixelate": 0.00176,
+            "jpeg_filter": 0.239685
+        },
+        "text_corruptions": {
+            "homophone": 0.038041,
+            "synonym": 0.003126,
+            "ata_saliency": 0.033924,
+            "fragmentation": 0.021474,
+            "character_noise": 0.037148
+        },
+        "img_budget_used": 0.58465,
+        "txt_budget_used": 0.133713,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.11931,
+        "txt_dist": 0.17866,
+        "txt_sim": 0.82134
+    },
+    "swad_metrics": {
+        "iou_0": 0.8972,
+        "delta_m_plus": 1.0,
+        "phi": 0.72335,
+        "swad": 0.72335
+    },
+    "l2_distance": 0.21484,
+    "original_prompt": "Identify the objects \"person, rugby ball\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 102,
+            "ymin": 58,
+            "xmax": 289,
+            "ymax": 426
+        },
+        "rugby ball": {
+            "xmin": 190,
+            "ymin": 151,
+            "xmax": 255,
+            "ymax": 215
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"p\u200der so\u200bn\u200d, rugby ball\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [528, 308, 700, 430], \"label\": \"p\u200der so\u200bn\u200d, rugby ball\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    528,
+                    308,
+                    700,
+                    430
+                ],
+                "label": "p\u200der so\u200bn\u200d, rugby ball"
+            }
+        ],
+        "token_count": 50,
+        "raw_token_count": 86,
+        "runtime_seconds": 0.2874
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.11342993005884773,
+        "defocus_blur": 0.07761551758314972,
+        "motion_blur": 0.0016681200429878792,
+        "fog_filter": 0.15049132201725954,
+        "pixelate": 0.001760208018513807,
+        "jpeg_filter": 0.23968512519734725
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.0380413455211495,
+        "synonym": 0.0031255583194468375,
+        "ata_saliency": 0.03392412885849799,
+        "fragmentation": 0.021473627467963583,
+        "character_noise": 0.037148285434401566
+    }
+}

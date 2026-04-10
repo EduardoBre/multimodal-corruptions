@@ -1,0 +1,376 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/single/multi/136",
+        "folder_id": "136",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00021630.JPEG"
+    },
+    "original_prompt": "Identify the objects \"traffic light\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "traffic light": {
+            "xmin": 195,
+            "ymin": 273,
+            "xmax": 217,
+            "ymax": 374
+        },
+        "traffic light_1": {
+            "xmin": 273,
+            "ymin": 139,
+            "xmax": 327,
+            "ymax": 243
+        },
+        "traffic light_2": {
+            "xmin": 195,
+            "ymin": 139,
+            "xmax": 225,
+            "ymax": 235
+        },
+        "traffic light_3": {
+            "xmin": 280,
+            "ymin": 151,
+            "xmax": 318,
+            "ymax": 189
+        }
+    },
+    "baseline_iou": 0.56492,
+    "swad_star": 0.49223,
+    "swad_star_index": 5,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 5,
+    "total_evaluations": 150,
+    "skipped_evaluations": 30,
+    "n_solutions": 6,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "fog_filter",
+                "img_scale": 0.8385192341896435,
+                "txt_attack": "synonym",
+                "txt_scale": 0.6724225651467969
+            },
+            "objectives": {
+                "iou": 0.29954,
+                "img_dist": 0.22306,
+                "txt_dist": 0.10742,
+                "txt_sim": 0.89258
+            },
+            "swad_metrics": {
+                "iou_0": 0.56492,
+                "delta_m_plus": 0.46977,
+                "phi": 0.69348,
+                "swad": 0.32577
+            },
+            "l2_distance": 0.38861,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"stoplight\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [398, 388, 448, 619], \"label\": \"stoplight\"},\n\t{\"bbox_2d\": [388, 730, 430, 862], \"label\": \"stoplight\"},\n\t{\"bbox_2d\": [472, 388, 548, 640], \"label\": \"stoplight\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            398,
+                            388,
+                            448,
+                            619
+                        ],
+                        "label": "stoplight"
+                    },
+                    {
+                        "bbox_2d": [
+                            388,
+                            730,
+                            430,
+                            862
+                        ],
+                        "label": "stoplight"
+                    },
+                    {
+                        "bbox_2d": [
+                            472,
+                            388,
+                            548,
+                            640
+                        ],
+                        "label": "stoplight"
+                    }
+                ],
+                "token_count": 108,
+                "raw_token_count": 166,
+                "runtime_seconds": 0.6954
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.022937022149611422,
+                "txt_attack": "synonym",
+                "txt_scale": 0.2614100563620838
+            },
+            "objectives": {
+                "iou": 0.50118,
+                "img_dist": 0.03185,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.56492,
+                "delta_m_plus": 0.11283,
+                "phi": 0.96815,
+                "swad": 0.10924
+            },
+            "l2_distance": 0.50219,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"traffic light\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [388, 300, 448, 620], \"label\": \"traffic light\"},\n\t{\"bbox_2d\": [390, 730, 430, 864], \"label\": \"traffic light\"},\n\t{\"bbox_2d\": [500, 380, 648, 640], \"label\": \"traffic light\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            388,
+                            300,
+                            448,
+                            620
+                        ],
+                        "label": "traffic light"
+                    },
+                    {
+                        "bbox_2d": [
+                            390,
+                            730,
+                            430,
+                            864
+                        ],
+                        "label": "traffic light"
+                    },
+                    {
+                        "bbox_2d": [
+                            500,
+                            380,
+                            648,
+                            640
+                        ],
+                        "label": "traffic light"
+                    }
+                ],
+                "token_count": 108,
+                "raw_token_count": 184,
+                "runtime_seconds": 0.6835
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.022937022149611422,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.1142095671537216
+            },
+            "objectives": {
+                "iou": 0.46142,
+                "img_dist": 0.03189,
+                "txt_dist": 0.10208,
+                "txt_sim": 0.89792
+            },
+            "swad_metrics": {
+                "iou_0": 0.56492,
+                "delta_m_plus": 0.18321,
+                "phi": 0.86929,
+                "swad": 0.15926
+            },
+            "l2_distance": 0.47365,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"traffic l\u0456g\u200dht\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [388, 730, 438, 872], \"label\": \"traffic l\u0456g\u200dht\"},\n\t{\"bbox_2d\": [388, 300, 444, 616], \"label\": \"traffic l\u0456g\u200dht\"},\n\t{\"bbox_2d\": [472, 380, 644, 652], \"label\": \"traffic l\u0456g\u200dht\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            388,
+                            730,
+                            438,
+                            872
+                        ],
+                        "label": "traffic l\u0456g\u200dht"
+                    },
+                    {
+                        "bbox_2d": [
+                            388,
+                            300,
+                            444,
+                            616
+                        ],
+                        "label": "traffic l\u0456g\u200dht"
+                    },
+                    {
+                        "bbox_2d": [
+                            472,
+                            380,
+                            644,
+                            652
+                        ],
+                        "label": "traffic l\u0456g\u200dht"
+                    }
+                ],
+                "token_count": 123,
+                "raw_token_count": 142,
+                "runtime_seconds": 0.4939
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.022937022149611422,
+                "txt_attack": "synonym",
+                "txt_scale": 0.22236788401725763
+            },
+            "objectives": {
+                "iou": 0.45882,
+                "img_dist": 0.0319,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.56492,
+                "delta_m_plus": 0.18781,
+                "phi": 0.9681,
+                "swad": 0.18182
+            },
+            "l2_distance": 0.45993,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"traffic light\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [387, 300, 444, 619], \"label\": \"traffic light\"},\n\t{\"bbox_2d\": [391, 730, 438, 872], \"label\": \"traffic light\"},\n\t{\"bbox_2d\": [470, 380, 644, 652], \"label\": \"traffic light\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            387,
+                            300,
+                            444,
+                            619
+                        ],
+                        "label": "traffic light"
+                    },
+                    {
+                        "bbox_2d": [
+                            391,
+                            730,
+                            438,
+                            872
+                        ],
+                        "label": "traffic light"
+                    },
+                    {
+                        "bbox_2d": [
+                            470,
+                            380,
+                            644,
+                            652
+                        ],
+                        "label": "traffic light"
+                    }
+                ],
+                "token_count": 108,
+                "raw_token_count": 160,
+                "runtime_seconds": 0.5403
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.12066424485520073,
+                "txt_attack": "synonym",
+                "txt_scale": 0.2614100563620838
+            },
+            "objectives": {
+                "iou": 0.30146,
+                "img_dist": 0.04322,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.56492,
+                "delta_m_plus": 0.46637,
+                "phi": 0.95678,
+                "swad": 0.44621
+            },
+            "l2_distance": 0.30454,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"traffic light\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [388, 300, 444, 620], \"label\": \"traffic light\"},\n\t{\"bbox_2d\": [475, 380, 558, 648], \"label\": \"traffic light\"},\n\t{\"bbox_2d\": [394, 728, 433, 868], \"label\": \"traffic light\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            388,
+                            300,
+                            444,
+                            620
+                        ],
+                        "label": "traffic light"
+                    },
+                    {
+                        "bbox_2d": [
+                            475,
+                            380,
+                            558,
+                            648
+                        ],
+                        "label": "traffic light"
+                    },
+                    {
+                        "bbox_2d": [
+                            394,
+                            728,
+                            433,
+                            868
+                        ],
+                        "label": "traffic light"
+                    }
+                ],
+                "token_count": 108,
+                "raw_token_count": 115,
+                "runtime_seconds": 0.4244
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.8430475022380112,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.5322174097322081
+            },
+            "objectives": {
+                "iou": 0.17385,
+                "img_dist": 0.12045,
+                "txt_dist": 0.19158,
+                "txt_sim": 0.80842
+            },
+            "swad_metrics": {
+                "iou_0": 0.56492,
+                "delta_m_plus": 0.69226,
+                "phi": 0.71105,
+                "swad": 0.49223
+            },
+            "l2_distance": 0.28537,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"t\u200bra\u200bf\u200bf\u200b\u0456\u0441 ligh\u200bt\u200d\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [468, 375, 648, 640], \"label\": \"t\u200bra\u200bf\u200bf\u200b\u0456\u0441 ligh\u200bt\u200d\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            468,
+                            375,
+                            648,
+                            640
+                        ],
+                        "label": "t\u200bra\u200bf\u200bf\u200b\u0456\u0441 ligh\u200bt\u200d"
+                    }
+                ],
+                "token_count": 54,
+                "raw_token_count": 115,
+                "runtime_seconds": 0.4244
+            }
+        }
+    ]
+}

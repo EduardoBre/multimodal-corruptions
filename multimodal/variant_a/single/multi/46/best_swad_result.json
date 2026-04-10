@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/46",
+        "folder_id": "46",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00043615.JPEG"
+    },
+    "pareto_index": 11,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 5,
+    "total_evaluations": 150,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.8925472134174764,
+        "txt_attack": "synonym",
+        "txt_scale": 0.5191703694816087
+    },
+    "objectives": {
+        "iou": 0.28623,
+        "img_dist": 0.07338,
+        "txt_dist": 0.09851,
+        "txt_sim": 0.90149
+    },
+    "swad_metrics": {
+        "iou_0": 0.8196,
+        "delta_m_plus": 0.65077,
+        "phi": 0.83534,
+        "swad": 0.54361
+    },
+    "l2_distance": 0.31147,
+    "original_prompt": "Identify the objects \"guitar\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "guitar": {
+            "xmin": 75,
+            "ymin": 12,
+            "xmax": 255,
+            "ymax": 321
+        },
+        "guitar_1": {
+            "xmin": 262,
+            "ymin": 17,
+            "xmax": 421,
+            "ymax": 332
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"acoustic guitar\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [298, 30, 506, 970], \"label\": \"acoustic guitar\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    298,
+                    30,
+                    506,
+                    970
+                ],
+                "label": "acoustic guitar"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 75,
+        "runtime_seconds": 0.3011
+    }
+}

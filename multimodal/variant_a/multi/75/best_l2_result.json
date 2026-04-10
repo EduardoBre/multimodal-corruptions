@@ -1,0 +1,76 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/75",
+        "folder_id": "75",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00026947.JPEG"
+    },
+    "pareto_index": 2,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.019479490436056013,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.4011167653317744
+    },
+    "objectives": {
+        "iou": 0.19917,
+        "img_dist": 0.02696,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.64636,
+        "delta_m_plus": 0.69186,
+        "phi": 0.97304,
+        "swad": 0.67321
+    },
+    "l2_distance": 0.20099,
+    "original_prompt": "Identify the objects \"car, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 84,
+            "ymin": 69,
+            "xmax": 167,
+            "ymax": 142
+        },
+        "car": {
+            "xmin": 0,
+            "ymin": 172,
+            "xmax": 188,
+            "ymax": 255
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"car, person\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 472, 100, 530], \"label\": \"car\"},\n\t{\"bbox_2d\": [188, 188, 278, 306], \"label\": \"person\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    472,
+                    100,
+                    530
+                ],
+                "label": "car"
+            },
+            {
+                "bbox_2d": [
+                    188,
+                    188,
+                    278,
+                    306
+                ],
+                "label": "person"
+            }
+        ],
+        "token_count": 70,
+        "raw_token_count": 104,
+        "runtime_seconds": 0.389
+    }
+}

@@ -1,0 +1,115 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/84",
+        "folder_id": "84",
+        "category": "single/multi",
+        "filename": "ILSVRC2013_val_00004224.JPEG"
+    },
+    "pareto_index": 5,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.267678,
+            "defocus_blur": 0.087257,
+            "motion_blur": 0.016454,
+            "fog_filter": 0.131448,
+            "pixelate": 0.03073,
+            "jpeg_filter": 0.106352
+        },
+        "text_corruptions": {
+            "homophone": 0.057224,
+            "synonym": 0.12237,
+            "ata_saliency": 0.013651,
+            "fragmentation": 0.087655,
+            "character_noise": 0.047918
+        },
+        "img_budget_used": 0.639919,
+        "txt_budget_used": 0.328819,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.23107,
+        "img_dist": 0.07042,
+        "txt_dist": 0.01998,
+        "txt_sim": 0.98002
+    },
+    "swad_metrics": {
+        "iou_0": 0.64773,
+        "delta_m_plus": 0.64326,
+        "phi": 0.91101,
+        "swad": 0.58602
+    },
+    "l2_distance": 0.24239,
+    "original_prompt": "Identify the objects \"person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 393,
+            "ymin": 155,
+            "xmax": 405,
+            "ymax": 187
+        },
+        "person_1": {
+            "xmin": 363,
+            "ymin": 162,
+            "xmax": 381,
+            "ymax": 189
+        },
+        "person_2": {
+            "xmin": 283,
+            "ymin": 163,
+            "xmax": 293,
+            "ymax": 186
+        },
+        "person_3": {
+            "xmin": 395,
+            "ymin": 153,
+            "xmax": 406,
+            "ymax": 188
+        },
+        "person_4": {
+            "xmin": 360,
+            "ymin": 161,
+            "xmax": 382,
+            "ymax": 195
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"person\u200b\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [788, 468, 808, 540], \"label\": \"person\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    788,
+                    468,
+                    808,
+                    540
+                ],
+                "label": "person"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 136,
+        "runtime_seconds": 0.4223
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.2676783046814887,
+        "defocus_blur": 0.08725736368484945,
+        "motion_blur": 0.016454078353928595,
+        "fog_filter": 0.13144778892686731,
+        "pixelate": 0.03072980458746128,
+        "jpeg_filter": 0.1063515290343536
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.05722433114259239,
+        "synonym": 0.12237004569752784,
+        "ata_saliency": 0.013651391957666296,
+        "fragmentation": 0.08765531494161843,
+        "character_noise": 0.04791838031327175
+    }
+}

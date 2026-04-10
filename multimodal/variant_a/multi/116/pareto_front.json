@@ -1,0 +1,774 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/116",
+        "folder_id": "116",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00016095.JPEG"
+    },
+    "original_prompt": "Identify the objects \"person, snake\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "snake": {
+            "xmin": 140,
+            "ymin": 105,
+            "xmax": 343,
+            "ymax": 258
+        },
+        "person": {
+            "xmin": 0,
+            "ymin": 0,
+            "xmax": 160,
+            "ymax": 368
+        }
+    },
+    "baseline_iou": 0.86875,
+    "swad_star": 0.61753,
+    "swad_star_index": 2,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 3,
+    "total_evaluations": 75,
+    "skipped_evaluations": 45,
+    "n_solutions": 14,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.5656671100314771,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.039875089079669634
+            },
+            "objectives": {
+                "iou": 0.84069,
+                "img_dist": 0.11854,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.86875,
+                "delta_m_plus": 0.0323,
+                "phi": 0.88146,
+                "swad": 0.02847
+            },
+            "l2_distance": 0.84901,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"person, snake\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 320, 999], \"label\": \"person\"},\n\t{\"bbox_2d\": [267, 267, 600, 667], \"label\": \"snake\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            320,
+                            999
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            267,
+                            267,
+                            600,
+                            667
+                        ],
+                        "label": "snake"
+                    }
+                ],
+                "token_count": 68,
+                "raw_token_count": 113,
+                "runtime_seconds": 0.4091
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.21300761893764208,
+                "txt_attack": "synonym",
+                "txt_scale": 0.11490566325799068
+            },
+            "objectives": {
+                "iou": 0.83475,
+                "img_dist": 0.05404,
+                "txt_dist": 0.09903,
+                "txt_sim": 0.90097
+            },
+            "swad_metrics": {
+                "iou_0": 0.86875,
+                "delta_m_plus": 0.03914,
+                "phi": 0.85228,
+                "swad": 0.03336
+            },
+            "l2_distance": 0.84234,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"human, snake\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 320, 997], \"label\": \"human\"},\n\t{\"bbox_2d\": [690, 0, 1000, 610], \"label\": \"human\"},\n\t{\"bbox_2d\": [240, 297, 620, 657], \"label\": \"snake\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            320,
+                            997
+                        ],
+                        "label": "human"
+                    },
+                    {
+                        "bbox_2d": [
+                            690,
+                            0,
+                            1000,
+                            610
+                        ],
+                        "label": "human"
+                    },
+                    {
+                        "bbox_2d": [
+                            240,
+                            297,
+                            620,
+                            657
+                        ],
+                        "label": "snake"
+                    }
+                ],
+                "token_count": 100,
+                "raw_token_count": 113,
+                "runtime_seconds": 0.4091
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.9316177058680379,
+                "txt_attack": "homophone",
+                "txt_scale": 0.9948250792623392
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.09828,
+                "txt_dist": 0.31516,
+                "txt_sim": 0.68484
+            },
+            "swad_metrics": {
+                "iou_0": 0.86875,
+                "delta_m_plus": 1.0,
+                "phi": 0.61753,
+                "swad": 0.61753
+            },
+            "l2_distance": 0.33013,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"pursun, sneak\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 322, 999], \"label\": \"pursun, sneak\"},\n\t{\"bbox_2d\": [712, 0, 1000, 610], \"label\": \"pursun, sneak\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            322,
+                            999
+                        ],
+                        "label": "pursun, sneak"
+                    },
+                    {
+                        "bbox_2d": [
+                            712,
+                            0,
+                            1000,
+                            610
+                        ],
+                        "label": "pursun, sneak"
+                    }
+                ],
+                "token_count": 75,
+                "raw_token_count": 130,
+                "runtime_seconds": 0.4534
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "fog_filter",
+                "img_scale": 0.8385192341896435,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6344837781138515
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.24097,
+                "txt_dist": 0.296,
+                "txt_sim": 0.704
+            },
+            "swad_metrics": {
+                "iou_0": 0.86875,
+                "delta_m_plus": 1.0,
+                "phi": 0.53436,
+                "swad": 0.53436
+            },
+            "l2_distance": 0.38168,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"pursun, s nake\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [268, 278, 625, 677], \"label\": \"pursun, s nake\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            268,
+                            278,
+                            625,
+                            677
+                        ],
+                        "label": "pursun, s nake"
+                    }
+                ],
+                "token_count": 45,
+                "raw_token_count": 130,
+                "runtime_seconds": 0.4534
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.29796640948487596
+            },
+            "objectives": {
+                "iou": 0.85288,
+                "img_dist": 0.03898,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.86875,
+                "delta_m_plus": 0.01827,
+                "phi": 0.96102,
+                "swad": 0.01756
+            },
+            "l2_distance": 0.85377,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"person, snake\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 320, 997], \"label\": \"person\"},\n\t{\"bbox_2d\": [694, 0, 1000, 607], \"label\": \"person\"},\n\t{\"bbox_2d\": [288, 297, 620, 655], \"label\": \"snake\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            320,
+                            997
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            694,
+                            0,
+                            1000,
+                            607
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            288,
+                            297,
+                            620,
+                            655
+                        ],
+                        "label": "snake"
+                    }
+                ],
+                "token_count": 100,
+                "raw_token_count": 117,
+                "runtime_seconds": 0.4177
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.06162428825182564,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.87026,
+                "img_dist": 0.03673,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.86875,
+                "delta_m_plus": 0.0,
+                "phi": 0.96327,
+                "swad": 0.0
+            },
+            "l2_distance": 0.87103,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"person, snake\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 319, 997], \"label\": \"person\"},\n\t{\"bbox_2d\": [692, 0, 1000, 610], \"label\": \"person\"},\n\t{\"bbox_2d\": [280, 294, 625, 657], \"label\": \"snake\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            319,
+                            997
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            692,
+                            0,
+                            1000,
+                            610
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            280,
+                            294,
+                            625,
+                            657
+                        ],
+                        "label": "snake"
+                    }
+                ],
+                "token_count": 100,
+                "raw_token_count": 117,
+                "runtime_seconds": 0.4177
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8656282404950908,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6151763279601394
+            },
+            "objectives": {
+                "iou": 0.73851,
+                "img_dist": 0.09369,
+                "txt_dist": 0.03751,
+                "txt_sim": 0.96249
+            },
+            "swad_metrics": {
+                "iou_0": 0.86875,
+                "delta_m_plus": 0.14992,
+                "phi": 0.87231,
+                "swad": 0.13077
+            },
+            "l2_distance": 0.74537,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"perosn, snake\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 319, 997], \"label\": \"perosn\"},\n\t{\"bbox_2d\": [730, 0, 1000, 630], \"label\": \"perosn\"},\n\t{\"bbox_2d\": [250, 0, 730, 730], \"label\": \"snake\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            319,
+                            997
+                        ],
+                        "label": "perosn"
+                    },
+                    {
+                        "bbox_2d": [
+                            730,
+                            0,
+                            1000,
+                            630
+                        ],
+                        "label": "perosn"
+                    },
+                    {
+                        "bbox_2d": [
+                            250,
+                            0,
+                            730,
+                            730
+                        ],
+                        "label": "snake"
+                    }
+                ],
+                "token_count": 102,
+                "raw_token_count": 117,
+                "runtime_seconds": 0.4177
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.486062019522153,
+                "txt_attack": "homophone",
+                "txt_scale": 0.8971524375333463
+            },
+            "objectives": {
+                "iou": 0.39519,
+                "img_dist": 0.09656,
+                "txt_dist": 0.29276,
+                "txt_sim": 0.70724
+            },
+            "swad_metrics": {
+                "iou_0": 0.86875,
+                "delta_m_plus": 0.54511,
+                "phi": 0.63895,
+                "swad": 0.34829
+            },
+            "l2_distance": 0.50121,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"pearson, sneak\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [270, 292, 620, 670], \"label\": \"pearson\"},\n\t{\"bbox_2d\": [270, 292, 620, 670], \"label\": \"sneak\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            270,
+                            292,
+                            620,
+                            670
+                        ],
+                        "label": "pearson"
+                    },
+                    {
+                        "bbox_2d": [
+                            270,
+                            292,
+                            620,
+                            670
+                        ],
+                        "label": "sneak"
+                    }
+                ],
+                "token_count": 75,
+                "raw_token_count": 117,
+                "runtime_seconds": 0.4177
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.20695928638860028,
+                "txt_attack": "homophone",
+                "txt_scale": 0.9429283752454761
+            },
+            "objectives": {
+                "iou": 0.48213,
+                "img_dist": 0.07211,
+                "txt_dist": 0.32108,
+                "txt_sim": 0.67892
+            },
+            "swad_metrics": {
+                "iou_0": 0.86875,
+                "delta_m_plus": 0.44503,
+                "phi": 0.62996,
+                "swad": 0.28035
+            },
+            "l2_distance": 0.58373,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"purse on, snaque\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 138, 357], \"label\": \"purse on\"},\n\t{\"bbox_2d\": [270, 288, 645, 670], \"label\": \"snaque\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            138,
+                            357
+                        ],
+                        "label": "purse on"
+                    },
+                    {
+                        "bbox_2d": [
+                            270,
+                            288,
+                            645,
+                            670
+                        ],
+                        "label": "snaque"
+                    }
+                ],
+                "token_count": 72,
+                "raw_token_count": 113,
+                "runtime_seconds": 0.3698
+            }
+        },
+        {
+            "index": 9,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.953218597912671,
+                "txt_attack": "homophone",
+                "txt_scale": 0.25579605771782093
+            },
+            "objectives": {
+                "iou": 0.8016,
+                "img_dist": 0.12024,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.86875,
+                "delta_m_plus": 0.07729,
+                "phi": 0.87976,
+                "swad": 0.068
+            },
+            "l2_distance": 0.81057,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"person, snake\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 320, 997], \"label\": \"person\"},\n\t{\"bbox_2d\": [410, 0, 1000, 607], \"label\": \"person\"},\n\t{\"bbox_2d\": [267, 250, 570, 667], \"label\": \"snake\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            320,
+                            997
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            410,
+                            0,
+                            1000,
+                            607
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            267,
+                            250,
+                            570,
+                            667
+                        ],
+                        "label": "snake"
+                    }
+                ],
+                "token_count": 100,
+                "raw_token_count": 113,
+                "runtime_seconds": 0.3698
+            }
+        },
+        {
+            "index": 10,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.21300761893764208,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.11333777673387921
+            },
+            "objectives": {
+                "iou": 0.84095,
+                "img_dist": 0.05403,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.86875,
+                "delta_m_plus": 0.032,
+                "phi": 0.94597,
+                "swad": 0.03027
+            },
+            "l2_distance": 0.84268,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"person, snake\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 320, 997], \"label\": \"person\"},\n\t{\"bbox_2d\": [694, 0, 1000, 610], \"label\": \"person\"},\n\t{\"bbox_2d\": [288, 297, 607, 657], \"label\": \"snake\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            320,
+                            997
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            694,
+                            0,
+                            1000,
+                            610
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            288,
+                            297,
+                            607,
+                            657
+                        ],
+                        "label": "snake"
+                    }
+                ],
+                "token_count": 100,
+                "raw_token_count": 113,
+                "runtime_seconds": 0.3698
+            }
+        },
+        {
+            "index": 11,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.8932877555217446,
+                "txt_attack": "homophone",
+                "txt_scale": 0.3249456406909506
+            },
+            "objectives": {
+                "iou": 0.6477,
+                "img_dist": 0.13147,
+                "txt_dist": 0.1199,
+                "txt_sim": 0.8801
+            },
+            "swad_metrics": {
+                "iou_0": 0.86875,
+                "delta_m_plus": 0.25445,
+                "phi": 0.76439,
+                "swad": 0.1945
+            },
+            "l2_distance": 0.6717,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"per son, snake\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 325, 999], \"label\": \"per son\"},\n\t{\"bbox_2d\": [265, 0, 999, 999], \"label\": \"per son\"},\n\t{\"bbox_2d\": [265, 265, 999, 999], \"label\": \"snake\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            325,
+                            999
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            265,
+                            0,
+                            999,
+                            999
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            265,
+                            265,
+                            999,
+                            999
+                        ],
+                        "label": "snake"
+                    }
+                ],
+                "token_count": 101,
+                "raw_token_count": 110,
+                "runtime_seconds": 0.3894
+            }
+        },
+        {
+            "index": 12,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.9316177058680379,
+                "txt_attack": "homophone",
+                "txt_scale": 0.8993961597460866
+            },
+            "objectives": {
+                "iou": 0.27424,
+                "img_dist": 0.09828,
+                "txt_dist": 0.20207,
+                "txt_sim": 0.79793
+            },
+            "swad_metrics": {
+                "iou_0": 0.86875,
+                "delta_m_plus": 0.68433,
+                "phi": 0.71951,
+                "swad": 0.49238
+            },
+            "l2_distance": 0.35454,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"purse on, snake\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [262, 0, 728, 670], \"label\": \"purse on\"},\n\t{\"bbox_2d\": [262, 0, 728, 670], \"label\": \"snake\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            262,
+                            0,
+                            728,
+                            670
+                        ],
+                        "label": "purse on"
+                    },
+                    {
+                        "bbox_2d": [
+                            262,
+                            0,
+                            728,
+                            670
+                        ],
+                        "label": "snake"
+                    }
+                ],
+                "token_count": 70,
+                "raw_token_count": 110,
+                "runtime_seconds": 0.3894
+            }
+        },
+        {
+            "index": 13,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.5678543558228929,
+                "txt_attack": "homophone",
+                "txt_scale": 0.3273709769105356
+            },
+            "objectives": {
+                "iou": 0.84069,
+                "img_dist": 0.11854,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.86875,
+                "delta_m_plus": 0.0323,
+                "phi": 0.88146,
+                "swad": 0.02847
+            },
+            "l2_distance": 0.84901,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"person, snake\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 320, 999], \"label\": \"person\"},\n\t{\"bbox_2d\": [267, 267, 600, 667], \"label\": \"snake\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            320,
+                            999
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            267,
+                            267,
+                            600,
+                            667
+                        ],
+                        "label": "snake"
+                    }
+                ],
+                "token_count": 68,
+                "raw_token_count": 110,
+                "runtime_seconds": 0.3894
+            }
+        }
+    ]
+}

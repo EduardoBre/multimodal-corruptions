@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/218",
+        "folder_id": "218",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00049268.JPEG"
+    },
+    "pareto_index": 25,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.075844,
+            "defocus_blur": 0.062268,
+            "motion_blur": 0.020737,
+            "fog_filter": 0.001283,
+            "pixelate": 0.017899,
+            "jpeg_filter": 0.021439
+        },
+        "text_corruptions": {
+            "homophone": 0.077503,
+            "synonym": 0.085036,
+            "ata_saliency": 0.482148,
+            "fragmentation": 0.123348,
+            "character_noise": 0.004139
+        },
+        "img_budget_used": 0.19947,
+        "txt_budget_used": 0.772174,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.30904,
+        "img_dist": 0.07426,
+        "txt_dist": 0.36699,
+        "txt_sim": 0.63301
+    },
+    "swad_metrics": {
+        "iou_0": 0.82109,
+        "delta_m_plus": 0.62362,
+        "phi": 0.586,
+        "swad": 0.36544
+    },
+    "l2_distance": 0.48549,
+    "original_prompt": "Identify the objects \"elephant\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "elephant": {
+            "xmin": 13,
+            "ymin": 96,
+            "xmax": 209,
+            "ymax": 283
+        },
+        "elephant_1": {
+            "xmin": 209,
+            "ymin": 107,
+            "xmax": 391,
+            "ymax": 281
+        },
+        "elephant_2": {
+            "xmin": 359,
+            "ymin": 102,
+            "xmax": 477,
+            "ymax": 291
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"elea\u200b ofnt\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [36, 290, 398, 840], \"label\": \"elea\u200b ofnt\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    36,
+                    290,
+                    398,
+                    840
+                ],
+                "label": "elea\u200b ofnt"
+            }
+        ],
+        "token_count": 42,
+        "raw_token_count": 135,
+        "runtime_seconds": 0.4837
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.07584441541546474,
+        "defocus_blur": 0.06226793210686875,
+        "motion_blur": 0.02073685550341503,
+        "fog_filter": 0.0012829263564957815,
+        "pixelate": 0.017899005733278725,
+        "jpeg_filter": 0.02143895685524501
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.0775028518381623,
+        "synonym": 0.08503595373705132,
+        "ata_saliency": 0.48214768809958974,
+        "fragmentation": 0.1233484847199853,
+        "character_noise": 0.004139406292413057
+    }
+}

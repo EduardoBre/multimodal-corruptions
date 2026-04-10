@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/86",
+        "folder_id": "86",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00006037.JPEG"
+    },
+    "pareto_index": 28,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 13,
+    "total_evaluations": 390,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.9295680638698455,
+        "txt_attack": "homophone",
+        "txt_scale": 0.36789821172593534
+    },
+    "objectives": {
+        "iou": 0.09007,
+        "img_dist": 0.06951,
+        "txt_dist": 0.2457,
+        "txt_sim": 0.7543
+    },
+    "swad_metrics": {
+        "iou_0": 0.88993,
+        "delta_m_plus": 0.89879,
+        "phi": 0.70187,
+        "swad": 0.63083
+    },
+    "l2_distance": 0.27076,
+    "original_prompt": "Identify the objects \"tape player\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "tape player": {
+            "xmin": 137,
+            "ymin": 47,
+            "xmax": 353,
+            "ymax": 318
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"tape playa\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [412, 300, 488, 670], \"label\": \"tape playa\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    412,
+                    300,
+                    488,
+                    670
+                ],
+                "label": "tape playa"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 44,
+        "runtime_seconds": 0.1575
+    }
+}

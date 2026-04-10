@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/39",
+        "folder_id": "39",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00007651.JPEG"
+    },
+    "pareto_index": 8,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.016213,
+            "defocus_blur": 0.156059,
+            "motion_blur": 0.011119,
+            "fog_filter": 0.000155,
+            "pixelate": 0.138938,
+            "jpeg_filter": 0.06975
+        },
+        "text_corruptions": {
+            "homophone": 0.137682,
+            "synonym": 0.006213,
+            "ata_saliency": 0.013265,
+            "fragmentation": 0.01254,
+            "character_noise": 0.062084
+        },
+        "img_budget_used": 0.392233,
+        "txt_budget_used": 0.231784,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.34086,
+        "img_dist": 0.08974,
+        "txt_dist": 0.30619,
+        "txt_sim": 0.69381
+    },
+    "swad_metrics": {
+        "iou_0": 0.81449,
+        "delta_m_plus": 0.5815,
+        "phi": 0.63155,
+        "swad": 0.36725
+    },
+    "l2_distance": 0.4669,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 50,
+            "ymin": 133,
+            "xmax": 420,
+            "ymax": 319
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bir\u200dk\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 999, 730], \"label\": \"bir\u200dk\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    999,
+                    730
+                ],
+                "label": "bir\u200dk"
+            }
+        ],
+        "token_count": 38,
+        "raw_token_count": 48,
+        "runtime_seconds": 0.1489
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.016212581600034137,
+        "defocus_blur": 0.15605918770041527,
+        "motion_blur": 0.011118827882587022,
+        "fog_filter": 0.00015457769193116984,
+        "pixelate": 0.13893767815051408,
+        "jpeg_filter": 0.06974991915488082
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.13768178442353846,
+        "synonym": 0.006213347412890209,
+        "ata_saliency": 0.013264804499626935,
+        "fragmentation": 0.012539947155249975,
+        "character_noise": 0.06208378920940163
+    }
+}

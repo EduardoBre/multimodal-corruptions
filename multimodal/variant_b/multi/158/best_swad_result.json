@@ -1,0 +1,112 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/158",
+        "folder_id": "158",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00036936.JPEG"
+    },
+    "pareto_index": 7,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.062198,
+            "defocus_blur": 0.061799,
+            "motion_blur": 0.100212,
+            "fog_filter": 0.072747,
+            "pixelate": 0.011296,
+            "jpeg_filter": 0.001082
+        },
+        "text_corruptions": {
+            "homophone": 0.040541,
+            "synonym": 0.007399,
+            "ata_saliency": 0.07561,
+            "fragmentation": 0.088778,
+            "character_noise": 0.050275
+        },
+        "img_budget_used": 0.309334,
+        "txt_budget_used": 0.262602,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.11578,
+        "txt_dist": 0.15517,
+        "txt_sim": 0.84483
+    },
+    "swad_metrics": {
+        "iou_0": 0.57592,
+        "delta_m_plus": 1.0,
+        "phi": 0.74702,
+        "swad": 0.74702
+    },
+    "l2_distance": 0.1936,
+    "original_prompt": "Identify the objects \"brassiere, person, sunglasses\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 100,
+            "ymin": 17,
+            "xmax": 344,
+            "ymax": 333
+        },
+        "sunglasses": {
+            "xmin": 219,
+            "ymin": 70,
+            "xmax": 272,
+            "ymax": 114
+        },
+        "brassiere": {
+            "xmin": 190,
+            "ymin": 117,
+            "xmax": 325,
+            "ymax": 244
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"brassier\u200de, p\u200ber son\u200d, sun\u200bglasses\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [400, 100, 567, 270], \"label\": \"brassier\u200de, p\u200ber son\u200d, sun\u200bglasses\"},\n\t{\"bbox_2d\": [400, 100, 567, 270], \"label\": \"brassier\u200de, p\u200ber son\u200d, sun\u200bglasses\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    400,
+                    100,
+                    567,
+                    270
+                ],
+                "label": "brassier\u200de, p\u200ber son\u200d, sun\u200bglasses"
+            },
+            {
+                "bbox_2d": [
+                    400,
+                    100,
+                    567,
+                    270
+                ],
+                "label": "brassier\u200de, p\u200ber son\u200d, sun\u200bglasses"
+            }
+        ],
+        "token_count": 106,
+        "raw_token_count": 174,
+        "runtime_seconds": 0.5497
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.06219796462762137,
+        "defocus_blur": 0.061798924452656445,
+        "motion_blur": 0.10021180849034975,
+        "fog_filter": 0.07274720066051617,
+        "pixelate": 0.011295778457940976,
+        "jpeg_filter": 0.001082100646813633
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.040540585452244246,
+        "synonym": 0.007399253388413671,
+        "ata_saliency": 0.07560963059476529,
+        "fragmentation": 0.08877766040916893,
+        "character_noise": 0.05027519515165242
+    }
+}

@@ -1,0 +1,109 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/216",
+        "folder_id": "216",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00043470.JPEG"
+    },
+    "pareto_index": 23,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.005788,
+            "defocus_blur": 0.059722,
+            "motion_blur": 0.003265,
+            "fog_filter": 0.000191,
+            "pixelate": 0.036404,
+            "jpeg_filter": 0.034824
+        },
+        "text_corruptions": {
+            "homophone": 0.040589,
+            "synonym": 0.004947,
+            "ata_saliency": 0.052938,
+            "fragmentation": 0.074429,
+            "character_noise": 0.021602
+        },
+        "img_budget_used": 0.140194,
+        "txt_budget_used": 0.194506,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.04498,
+        "img_dist": 0.12612,
+        "txt_dist": 0.37298,
+        "txt_sim": 0.62702
+    },
+    "swad_metrics": {
+        "iou_0": 0.90262,
+        "delta_m_plus": 0.95017,
+        "phi": 0.54794,
+        "swad": 0.52063
+    },
+    "l2_distance": 0.39629,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 40,
+            "ymin": 123,
+            "xmax": 113,
+            "ymax": 234
+        },
+        "bird_1": {
+            "xmin": 298,
+            "ymin": 119,
+            "xmax": 350,
+            "ymax": 234
+        },
+        "bird_2": {
+            "xmin": 151,
+            "ymin": 126,
+            "xmax": 214,
+            "ymax": 240
+        },
+        "bird_3": {
+            "xmin": 380,
+            "ymin": 118,
+            "xmax": 446,
+            "ymax": 236
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"brid\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 512, 999, 598], \"label\": \"brid\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    512,
+                    999,
+                    598
+                ],
+                "label": "brid"
+            }
+        ],
+        "token_count": 37,
+        "raw_token_count": 166,
+        "runtime_seconds": 0.5169
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0057876990079295185,
+        "defocus_blur": 0.05972215833563407,
+        "motion_blur": 0.003265182955292753,
+        "fog_filter": 0.00019086037758306177,
+        "pixelate": 0.0364044725717097,
+        "jpeg_filter": 0.03482368439792834
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.04058886790046723,
+        "synonym": 0.004947415000979649,
+        "ata_saliency": 0.05293803704154667,
+        "fragmentation": 0.07442937026935138,
+        "character_noise": 0.02160191042271984
+    }
+}

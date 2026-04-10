@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/114",
+        "folder_id": "114",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00044448.JPEG"
+    },
+    "pareto_index": 4,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.9316177058680379,
+        "txt_attack": "homophone",
+        "txt_scale": 0.9948250792623392
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.06729,
+        "txt_dist": 0.27926,
+        "txt_sim": 0.72074
+    },
+    "swad_metrics": {
+        "iou_0": 0.78301,
+        "delta_m_plus": 1.0,
+        "phi": 0.67224,
+        "swad": 0.67224
+    },
+    "l2_distance": 0.28725,
+    "original_prompt": "Identify the objects \"accordion, chair, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 146,
+            "ymin": 172,
+            "xmax": 321,
+            "ymax": 487
+        },
+        "accordion": {
+            "xmin": 201,
+            "ymin": 220,
+            "xmax": 314,
+            "ymax": 360
+        },
+        "chair": {
+            "xmin": 205,
+            "ymin": 276,
+            "xmax": 332,
+            "ymax": 476
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"a cordeon, chare, per son\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [180, 420, 400, 835], \"label\": \"a cordeon, chare, per son\"},\n\t{\"bbox_2d\": [572, 430, 912, 690], \"label\": \"a cordeon, chare, per son\"},\n\t{\"bbox_2d\": [128, 280, 528, 835], \"label\": \"a cordeon, chare, per son\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    180,
+                    420,
+                    400,
+                    835
+                ],
+                "label": "a cordeon, chare, per son"
+            },
+            {
+                "bbox_2d": [
+                    572,
+                    430,
+                    912,
+                    690
+                ],
+                "label": "a cordeon, chare, per son"
+            },
+            {
+                "bbox_2d": [
+                    128,
+                    280,
+                    528,
+                    835
+                ],
+                "label": "a cordeon, chare, per son"
+            }
+        ],
+        "token_count": 132,
+        "raw_token_count": 188,
+        "runtime_seconds": 0.7434
+    }
+}

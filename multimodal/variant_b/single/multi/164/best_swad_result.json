@@ -1,0 +1,109 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/164",
+        "folder_id": "164",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00036091.JPEG"
+    },
+    "pareto_index": 13,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 3,
+    "total_evaluations": 75,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.007223,
+            "defocus_blur": 0.092654,
+            "motion_blur": 0.055026,
+            "fog_filter": 0.007597,
+            "pixelate": 0.469904,
+            "jpeg_filter": 0.053307
+        },
+        "text_corruptions": {
+            "homophone": 0.031904,
+            "synonym": 0.142865,
+            "ata_saliency": 0.050121,
+            "fragmentation": 0.120085,
+            "character_noise": 0.028396
+        },
+        "img_budget_used": 0.685712,
+        "txt_budget_used": 0.373371,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.00279,
+        "img_dist": 0.09322,
+        "txt_dist": 0.35652,
+        "txt_sim": 0.64348
+    },
+    "swad_metrics": {
+        "iou_0": 0.75804,
+        "delta_m_plus": 0.99632,
+        "phi": 0.58349,
+        "swad": 0.58135
+    },
+    "l2_distance": 0.36852,
+    "original_prompt": "Identify the objects \"car\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "car": {
+            "xmin": 0,
+            "ymin": 37,
+            "xmax": 614,
+            "ymax": 421
+        },
+        "car_1": {
+            "xmin": 536,
+            "ymin": 16,
+            "xmax": 638,
+            "ymax": 100
+        },
+        "car_2": {
+            "xmin": 407,
+            "ymin": 7,
+            "xmax": 606,
+            "ymax": 72
+        },
+        "car_3": {
+            "xmin": 361,
+            "ymin": 14,
+            "xmax": 428,
+            "ymax": 46
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"ach\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [666, 188, 800, 252], \"label\": \"ach\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    666,
+                    188,
+                    800,
+                    252
+                ],
+                "label": "ach"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 197,
+        "runtime_seconds": 0.6191
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.007223278458466844,
+        "defocus_blur": 0.09265449222919259,
+        "motion_blur": 0.055025999594326906,
+        "fog_filter": 0.007597153974682746,
+        "pixelate": 0.46990424830981803,
+        "jpeg_filter": 0.053307038299602386
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.0319040760023744,
+        "synonym": 0.14286475285212735,
+        "ata_saliency": 0.05012070370605386,
+        "fragmentation": 0.1200852752502786,
+        "character_noise": 0.028395832584703656
+    }
+}

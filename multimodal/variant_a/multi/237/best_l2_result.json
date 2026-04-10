@@ -1,0 +1,118 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/237",
+        "folder_id": "237",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00012692.JPEG"
+    },
+    "pareto_index": 6,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "fog_filter",
+        "img_scale": 0.02226035255626979,
+        "txt_attack": "homophone",
+        "txt_scale": 0.4303904312548027
+    },
+    "objectives": {
+        "iou": 0.13126,
+        "img_dist": 0.07049,
+        "txt_dist": 0.20207,
+        "txt_sim": 0.79793
+    },
+    "swad_metrics": {
+        "iou_0": 0.77514,
+        "delta_m_plus": 0.83066,
+        "phi": 0.74168,
+        "swad": 0.61609
+    },
+    "l2_distance": 0.25106,
+    "original_prompt": "Identify the objects \"person, trombone\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 465,
+            "ymin": 247,
+            "xmax": 499,
+            "ymax": 367
+        },
+        "person_1": {
+            "xmin": 357,
+            "ymin": 87,
+            "xmax": 499,
+            "ymax": 374
+        },
+        "trombone": {
+            "xmin": 428,
+            "ymin": 89,
+            "xmax": 499,
+            "ymax": 143
+        },
+        "trombone_1": {
+            "xmin": 110,
+            "ymin": 84,
+            "xmax": 216,
+            "ymax": 183
+        },
+        "trombone_2": {
+            "xmin": 201,
+            "ymin": 93,
+            "xmax": 243,
+            "ymax": 156
+        },
+        "trombone_3": {
+            "xmin": 216,
+            "ymin": 114,
+            "xmax": 264,
+            "ymax": 169
+        },
+        "person_2": {
+            "xmin": 30,
+            "ymin": 96,
+            "xmax": 224,
+            "ymax": 374
+        },
+        "person_3": {
+            "xmin": 181,
+            "ymin": 146,
+            "xmax": 247,
+            "ymax": 374
+        },
+        "person_4": {
+            "xmin": 0,
+            "ymin": 97,
+            "xmax": 67,
+            "ymax": 344
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"purse on, trombone\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [925, 707, 998, 830], \"label\": \"purse on\"},\n\t{\"bbox_2d\": [875, 244, 1000, 404], \"label\": \"trombone\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    925,
+                    707,
+                    998,
+                    830
+                ],
+                "label": "purse on"
+            },
+            {
+                "bbox_2d": [
+                    875,
+                    244,
+                    1000,
+                    404
+                ],
+                "label": "trombone"
+            }
+        ],
+        "token_count": 77,
+        "raw_token_count": 375,
+        "runtime_seconds": 1.1958
+    }
+}

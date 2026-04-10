@@ -1,0 +1,76 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/231",
+        "folder_id": "231",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00048250.JPEG"
+    },
+    "pareto_index": 3,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.956810286327587,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.5919188485823369
+    },
+    "objectives": {
+        "iou": 0.19748,
+        "img_dist": 0.05819,
+        "txt_dist": 0.10631,
+        "txt_sim": 0.89369
+    },
+    "swad_metrics": {
+        "iou_0": 0.63162,
+        "delta_m_plus": 0.68734,
+        "phi": 0.84169,
+        "swad": 0.57853
+    },
+    "l2_distance": 0.2317,
+    "original_prompt": "Identify the objects \"snake\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "snake": {
+            "xmin": 85,
+            "ymin": 63,
+            "xmax": 375,
+            "ymax": 219
+        },
+        "snake_1": {
+            "xmin": 1,
+            "ymin": 74,
+            "xmax": 499,
+            "ymax": 332
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"s\u200bn\u200b\u0430ke\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 630, 512, 1000], \"label\": \"s\u200bn\u200b\u0430ke\"},\n\t{\"bbox_2d\": [672, 210, 1000, 1000], \"label\": \"s\u200bn\u200b\u0430ke\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    630,
+                    512,
+                    1000
+                ],
+                "label": "s\u200bn\u200b\u0430ke"
+            },
+            {
+                "bbox_2d": [
+                    672,
+                    210,
+                    1000,
+                    1000
+                ],
+                "label": "s\u200bn\u200b\u0430ke"
+            }
+        ],
+        "token_count": 83,
+        "raw_token_count": 84,
+        "runtime_seconds": 0.2663
+    }
+}

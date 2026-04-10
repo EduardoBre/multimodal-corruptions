@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/239",
+        "folder_id": "239",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00012309.JPEG"
+    },
+    "pareto_index": 20,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.000813,
+            "defocus_blur": 0.001542,
+            "motion_blur": 0.000317,
+            "fog_filter": 0.009454,
+            "pixelate": 8e-05,
+            "jpeg_filter": 0.000291
+        },
+        "text_corruptions": {
+            "homophone": 0.082219,
+            "synonym": 0.377084,
+            "ata_saliency": 0.069084,
+            "fragmentation": 0.007594,
+            "character_noise": 0.008872
+        },
+        "img_budget_used": 0.012496,
+        "txt_budget_used": 0.544852,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.01446,
+        "img_dist": 0.10589,
+        "txt_dist": 0.37298,
+        "txt_sim": 0.62702
+    },
+    "swad_metrics": {
+        "iou_0": 0.90215,
+        "delta_m_plus": 0.98397,
+        "phi": 0.56062,
+        "swad": 0.55164
+    },
+    "l2_distance": 0.38799,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 263,
+            "ymin": 179,
+            "xmax": 414,
+            "ymax": 250
+        },
+        "bird_1": {
+            "xmin": 50,
+            "ymin": 101,
+            "xmax": 260,
+            "ymax": 182
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"brid\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [480, 360, 740, 438], \"label\": \"brid\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    480,
+                    360,
+                    740,
+                    438
+                ],
+                "label": "brid"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 105,
+        "runtime_seconds": 0.3204
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0008129047995566324,
+        "defocus_blur": 0.0015418887589051522,
+        "motion_blur": 0.00031718910475952294,
+        "fog_filter": 0.009453847318245794,
+        "pixelate": 7.993452769090338e-05,
+        "jpeg_filter": 0.0002905255394497746
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.08221850040663838,
+        "synonym": 0.3770836347454742,
+        "ata_saliency": 0.06908350121148066,
+        "fragmentation": 0.007594104474475085,
+        "character_noise": 0.008872201078140305
+    }
+}

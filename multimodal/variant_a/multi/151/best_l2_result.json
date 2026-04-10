@@ -1,0 +1,121 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/151",
+        "folder_id": "151",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00006253.JPEG"
+    },
+    "pareto_index": 11,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.956810286327587,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.5919188485823369
+    },
+    "objectives": {
+        "iou": 0.23514,
+        "img_dist": 0.10861,
+        "txt_dist": 0.09426,
+        "txt_sim": 0.90574
+    },
+    "swad_metrics": {
+        "iou_0": 0.7366,
+        "delta_m_plus": 0.68078,
+        "phi": 0.80737,
+        "swad": 0.54964
+    },
+    "l2_distance": 0.27563,
+    "original_prompt": "Identify the objects \"person, whale\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 46,
+            "ymin": 209,
+            "xmax": 130,
+            "ymax": 284
+        },
+        "person_1": {
+            "xmin": 438,
+            "ymin": 186,
+            "xmax": 499,
+            "ymax": 283
+        },
+        "person_2": {
+            "xmin": 378,
+            "ymin": 253,
+            "xmax": 446,
+            "ymax": 326
+        },
+        "person_3": {
+            "xmin": 444,
+            "ymin": 278,
+            "xmax": 499,
+            "ymax": 374
+        },
+        "person_4": {
+            "xmin": 313,
+            "ymin": 284,
+            "xmax": 390,
+            "ymax": 373
+        },
+        "person_5": {
+            "xmin": 221,
+            "ymin": 327,
+            "xmax": 298,
+            "ymax": 374
+        },
+        "whale": {
+            "xmin": 263,
+            "ymin": 133,
+            "xmax": 441,
+            "ymax": 276
+        },
+        "whale_1": {
+            "xmin": 92,
+            "ymin": 141,
+            "xmax": 211,
+            "ymax": 271
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"pe\u200brs\u200do\u200dn\u200d, wh\u0430le\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 700, 999, 1000], \"label\": \"pe\u200brs\u200do\u200dn\u200d\"},\n\t{\"bbox_2d\": [538, 338, 812, 720], \"label\": \"wh\u0430le\"},\n\t{\"bbox_2d\": [100, 364, 356, 740], \"label\": \"wh\u0430le\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    700,
+                    999,
+                    1000
+                ],
+                "label": "pe\u200brs\u200do\u200dn\u200d"
+            },
+            {
+                "bbox_2d": [
+                    538,
+                    338,
+                    812,
+                    720
+                ],
+                "label": "wh\u0430le"
+            },
+            {
+                "bbox_2d": [
+                    100,
+                    364,
+                    356,
+                    740
+                ],
+                "label": "wh\u0430le"
+            }
+        ],
+        "token_count": 118,
+        "raw_token_count": 604,
+        "runtime_seconds": 1.9168
+    }
+}

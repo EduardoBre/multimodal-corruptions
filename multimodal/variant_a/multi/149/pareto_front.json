@@ -1,0 +1,181 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/149",
+        "folder_id": "149",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00025423.JPEG"
+    },
+    "original_prompt": "Identify the objects \"dog, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 1,
+            "ymin": 5,
+            "xmax": 270,
+            "ymax": 374
+        },
+        "dog": {
+            "xmin": 213,
+            "ymin": 97,
+            "xmax": 499,
+            "ymax": 374
+        }
+    },
+    "baseline_iou": 0.97087,
+    "swad_star": 0.69514,
+    "swad_star_index": 2,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 3,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.70894,
+                "img_dist": 0.0224,
+                "txt_dist": 0.20207,
+                "txt_sim": 0.79793
+            },
+            "swad_metrics": {
+                "iou_0": 0.97087,
+                "delta_m_plus": 0.26979,
+                "phi": 0.78006,
+                "swad": 0.21045
+            },
+            "l2_distance": 0.73752,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, purse on\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [433, 264, 1000, 989], \"label\": \"dog\"},\n\t{\"bbox_2d\": [0, 540, 550, 989], \"label\": \"purse on\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            433,
+                            264,
+                            1000,
+                            989
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            540,
+                            550,
+                            989
+                        ],
+                        "label": "purse on"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 77,
+                "runtime_seconds": 0.2904
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.018595721213425453,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6130568625347235
+            },
+            "objectives": {
+                "iou": 0.96344,
+                "img_dist": 0.02499,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.97087,
+                "delta_m_plus": 0.00765,
+                "phi": 0.97501,
+                "swad": 0.00746
+            },
+            "l2_distance": 0.96376,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [430, 264, 1000, 989], \"label\": \"dog\"},\n\t{\"bbox_2d\": [0, 2, 552, 989], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            430,
+                            264,
+                            1000,
+                            989
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            2,
+                            552,
+                            989
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 69,
+                "raw_token_count": 77,
+                "runtime_seconds": 0.2904
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.05491,
+                "txt_dist": 0.26447,
+                "txt_sim": 0.73553
+            },
+            "swad_metrics": {
+                "iou_0": 0.97087,
+                "delta_m_plus": 1.0,
+                "phi": 0.69514,
+                "swad": 0.69514
+            },
+            "l2_distance": 0.27011,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"doug, per son\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 2, 550, 999], \"label\": \"doug, per son\"},\n\t{\"bbox_2d\": [430, 256, 999, 999], \"label\": \"doug, per son\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            2,
+                            550,
+                            999
+                        ],
+                        "label": "doug, per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            430,
+                            256,
+                            999,
+                            999
+                        ],
+                        "label": "doug, per son"
+                    }
+                ],
+                "token_count": 76,
+                "raw_token_count": 77,
+                "runtime_seconds": 0.2904
+            }
+        }
+    ]
+}

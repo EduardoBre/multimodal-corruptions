@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/78",
+        "folder_id": "78",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00003731.JPEG"
+    },
+    "pareto_index": 0,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.070164,
+            "defocus_blur": 0.319924,
+            "motion_blur": 0.001418,
+            "fog_filter": 0.106163,
+            "pixelate": 0.064433,
+            "jpeg_filter": 0.071844
+        },
+        "text_corruptions": {
+            "homophone": 0.512655,
+            "synonym": 0.027998,
+            "ata_saliency": 0.121029,
+            "fragmentation": 0.31672,
+            "character_noise": 0.002368
+        },
+        "img_budget_used": 0.633947,
+        "txt_budget_used": 0.980769,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.14229,
+        "txt_dist": 0.22354,
+        "txt_sim": 0.77646
+    },
+    "swad_metrics": {
+        "iou_0": 0.66424,
+        "delta_m_plus": 1.0,
+        "phi": 0.66598,
+        "swad": 0.66598
+    },
+    "l2_distance": 0.26498,
+    "original_prompt": "Identify the objects \"golfcart, helmet, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 155,
+            "ymin": 105,
+            "xmax": 204,
+            "ymax": 144
+        },
+        "helmet": {
+            "xmin": 167,
+            "ymin": 104,
+            "xmax": 187,
+            "ymax": 124
+        },
+        "golfcart": {
+            "xmin": 109,
+            "ymin": 73,
+            "xmax": 289,
+            "ymax": 303
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"golfcart\u200d, hle\u200bl met, p\u0435r son\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [220, 218, 578, 920], \"label\": \"golfcart\u200d, hle\u200bl met, p\u0435r son\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    220,
+                    218,
+                    578,
+                    920
+                ],
+                "label": "golfcart\u200d, hle\u200bl met, p\u0435r son"
+            }
+        ],
+        "token_count": 54,
+        "raw_token_count": 123,
+        "runtime_seconds": 0.4083
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.07016356120319385,
+        "defocus_blur": 0.31992427787866556,
+        "motion_blur": 0.0014183654957843905,
+        "fog_filter": 0.10616333339641539,
+        "pixelate": 0.06443268950912517,
+        "jpeg_filter": 0.07184439367440425
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.5126549907031839,
+        "synonym": 0.027997676347122066,
+        "ata_saliency": 0.1210289333189871,
+        "fragmentation": 0.3167196095115163,
+        "character_noise": 0.002368239864310298
+    }
+}

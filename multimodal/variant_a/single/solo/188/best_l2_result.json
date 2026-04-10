@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/188",
+        "folder_id": "188",
+        "category": "single/solo",
+        "filename": "ILSVRC2013_val_00000071.JPEG"
+    },
+    "pareto_index": 6,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 60,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.30327805194949276,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.649321977729741
+    },
+    "objectives": {
+        "iou": 0.17844,
+        "img_dist": 0.03974,
+        "txt_dist": 0.27631,
+        "txt_sim": 0.72369
+    },
+    "swad_metrics": {
+        "iou_0": 0.92647,
+        "delta_m_plus": 0.8074,
+        "phi": 0.69493,
+        "swad": 0.56109
+    },
+    "l2_distance": 0.33131,
+    "original_prompt": "Identify the objects \"tape player\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "tape player": {
+            "xmin": 127,
+            "ymin": 26,
+            "xmax": 262,
+            "ymax": 205
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"t\u200b\u0430p\u0435\u200b p\u200dl\u0430\u200d\u0443\u0435r\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [308, 487, 438, 730], \"label\": \"t\u200b\u0430p\u0435\u200b p\u200dl\u0430\u200du\u0435r\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    308,
+                    487,
+                    438,
+                    730
+                ],
+                "label": "t\u200b\u0430p\u0435\u200b p\u200dl\u0430\u200du\u0435r"
+            }
+        ],
+        "token_count": 54,
+        "raw_token_count": 112,
+        "runtime_seconds": 0.395
+    }
+}

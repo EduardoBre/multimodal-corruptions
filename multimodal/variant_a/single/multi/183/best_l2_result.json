@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/183",
+        "folder_id": "183",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00001862.JPEG"
+    },
+    "pareto_index": 3,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.854443092002898,
+        "txt_attack": "homophone",
+        "txt_scale": 0.5776565445460519
+    },
+    "objectives": {
+        "iou": 0.65187,
+        "img_dist": 0.09929,
+        "txt_dist": 0.19871,
+        "txt_sim": 0.80129
+    },
+    "swad_metrics": {
+        "iou_0": 0.72114,
+        "delta_m_plus": 0.09606,
+        "phi": 0.72173,
+        "swad": 0.06933
+    },
+    "l2_distance": 0.68868,
+    "original_prompt": "Identify the objects \"dog\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 14,
+            "ymin": 63,
+            "xmax": 404,
+            "ymax": 300
+        },
+        "dog_1": {
+            "xmin": 0,
+            "ymin": 73,
+            "xmax": 245,
+            "ymax": 266
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"dawg\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 150, 875, 788], \"label\": \"dawg\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    150,
+                    875,
+                    788
+                ],
+                "label": "dawg"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 40,
+        "runtime_seconds": 0.1652
+    }
+}

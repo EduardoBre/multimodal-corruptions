@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/203",
+        "folder_id": "203",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00001106.JPEG"
+    },
+    "pareto_index": 6,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "fog_filter",
+        "img_scale": 0.02226035255626979,
+        "txt_attack": "homophone",
+        "txt_scale": 0.4303904312548027
+    },
+    "objectives": {
+        "iou": 0.02892,
+        "img_dist": 0.05458,
+        "txt_dist": 0.30078,
+        "txt_sim": 0.69922
+    },
+    "swad_metrics": {
+        "iou_0": 0.86259,
+        "delta_m_plus": 0.96647,
+        "phi": 0.66106,
+        "swad": 0.63889
+    },
+    "l2_distance": 0.30706,
+    "original_prompt": "Identify the objects \"watercraft\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "watercraft": {
+            "xmin": 112,
+            "ymin": 43,
+            "xmax": 499,
+            "ymax": 300
+        },
+        "watercraft_1": {
+            "xmin": 125,
+            "ymin": 237,
+            "xmax": 179,
+            "ymax": 295
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"water kraft\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 830, 998, 997], \"label\": \"water kraft\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    830,
+                    998,
+                    997
+                ],
+                "label": "water kraft"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 76,
+        "runtime_seconds": 0.2749
+    }
+}

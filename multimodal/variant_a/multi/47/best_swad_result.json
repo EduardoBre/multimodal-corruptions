@@ -1,0 +1,196 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/47",
+        "folder_id": "47",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00008427.JPEG"
+    },
+    "pareto_index": 11,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 3,
+    "total_evaluations": 75,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.8408567252572171,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.7947968694554343
+    },
+    "objectives": {
+        "iou": 0.08465,
+        "img_dist": 0.06573,
+        "txt_dist": 0.21977,
+        "txt_sim": 0.78023
+    },
+    "swad_metrics": {
+        "iou_0": 0.75369,
+        "delta_m_plus": 0.88769,
+        "phi": 0.72895,
+        "swad": 0.64707
+    },
+    "l2_distance": 0.24451,
+    "original_prompt": "Identify the objects \"chair, computer keyboard, computer mouse, domestic cat, table, tape player, tv or monitor\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "tape player": {
+            "xmin": 103,
+            "ymin": 109,
+            "xmax": 155,
+            "ymax": 153
+        },
+        "tv or monitor": {
+            "xmin": 21,
+            "ymin": 15,
+            "xmax": 155,
+            "ymax": 136
+        },
+        "tv or monitor_1": {
+            "xmin": 345,
+            "ymin": 29,
+            "xmax": 449,
+            "ymax": 146
+        },
+        "tv or monitor_2": {
+            "xmin": 211,
+            "ymin": 0,
+            "xmax": 342,
+            "ymax": 114
+        },
+        "tv or monitor_3": {
+            "xmin": 455,
+            "ymin": 58,
+            "xmax": 499,
+            "ymax": 205
+        },
+        "table": {
+            "xmin": 0,
+            "ymin": 66,
+            "xmax": 499,
+            "ymax": 328
+        },
+        "computer keyboard": {
+            "xmin": 185,
+            "ymin": 129,
+            "xmax": 312,
+            "ymax": 156
+        },
+        "computer mouse": {
+            "xmin": 404,
+            "ymin": 192,
+            "xmax": 437,
+            "ymax": 221
+        },
+        "chair": {
+            "xmin": 0,
+            "ymin": 263,
+            "xmax": 310,
+            "ymax": 374
+        },
+        "domestic cat": {
+            "xmin": 276,
+            "ymin": 171,
+            "xmax": 374,
+            "ymax": 222
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"\u0441\u200bh\u200d\u0430\u200d\u0456\u200br\u200b, \u0441\u200do\u200bm\u0440\u200dut\u200b\u0435\u200br\u200b k\u200de\u200dy\u200db\u200do\u200d\u0430\u200br\u200dd\u200d, c\u200b\u043e\u200dm\u200b\u0440\u200du\u200bt\u200d\u0435\u200br m\u200b\u043e\u200bu\u200ds\u200d\u0435, d\u043e\u200dm\u200be\u200ds\u200dt\u200b\u0456c\u200d \u0441\u0430\u200dt, t\u0430\u200bbl\u200de, t\u0430\u200dp\u200b\u0435 \u0440l\u0430\u200dyer\u200b, tv \u043e\u200dr\u200d m\u200b\u043e\u200bni\u200bt\u200b\u043e\u200br\u200b\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 767, 612, 1000], \"label\": \"\u0441\u200bh\u200d\u0430\u200d\u0456\u200br\u200b\"},\n\t{\"bbox_2d\": [370, 354, 620, 424], \"label\": \"\u0441\u200b\u043e\u200b\u043c\u200b\u0440\u200b\u0443\u200b\u0442\u200b\u0435\u200b\u0440\u200b \u043a\u200b\u0435\u200b\u0439\u200b\u0431\u200b\u043e\u200b\u0440\u200b\u0434\u200b\"},\n\t{\"bbox_2d\": [812, 517, 870, 584], \"label\": \"\u0441\u200b\u043e\u200b\u043c\u200b\u0440\u200b\u0443\u200b\u0442\u200b\u0435\u200b\u0440 \u043c\u200b\u043e\u200b\u0443\u200b\u0441\u200b\u0435\"},\n\t{\"bbox_2d\": [542, 456, 742, 592], \"label\": \"d\u043e\u200b\u043c\u200b\u0435\u200b\u0441\u200b\u0442\u200b\u0456\u200b\u0447\u200b\u043d\u200b\u0430 \u0441\u200b\u0430\u200b\u0442\"},\n\t{\"bbox_2d\": [0, 274, 1000, 872], \"label\": \"\u0442\u200b\u0430\u200b\u0431\u043b\u200b\u0435\"},\n\t{\"bbox_2d\": [88, 500, 202, 600], \"label\": \"\u0442\u200b\u0430\u200b\u043f\u200b\u0435 \u0440\u200b\u043b\u200b\u0430\u200b\u0439\u200b\u0435\u200b\u0440\"},\n\t{\"bbox_2d\": [43, 44, 312, 360], \"label\": \"tv \u043e\u200b\u0440\u200b \u043c\u200b\u043e\u200b\u043d\u200b\u0438\u200b\u0442\u200b\u043e\u200b\u0440\"},\n\t{\"bbox_2d\": [432, 0, 672, 324], \"label\": \"tv \u043e\u200b\u0440\u200b \u043c\u200b\u043e\u200b\u043d\u200b\u0438\u200b\u0442\u200b\u043e\u200b\u0440\"},\n\t{\"bbox_2d\": [678, 44, 932, 408], \"label\": \"tv \u043e\u200b\u0440\u200b \u043c\u200b\u043e\u200b\u043d\u200b\u0438\u200b\u0442\u200b\u043e\u200b\u0440\"},\n\t{\"bbox_2d\": [902, 188, 1000, 524], \"label\": \"tv \u043e\u200b\u0440\u200b \u043c\u200b\u043e\u200b\u043d\u200b\u0438\u200b\u0442\u200b\u043e\u200b\u0440\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    767,
+                    612,
+                    1000
+                ],
+                "label": "\u0441\u200bh\u200d\u0430\u200d\u0456\u200br\u200b"
+            },
+            {
+                "bbox_2d": [
+                    370,
+                    354,
+                    620,
+                    424
+                ],
+                "label": "\u0441\u200b\u043e\u200b\u043c\u200b\u0440\u200b\u0443\u200b\u0442\u200b\u0435\u200b\u0440\u200b \u043a\u200b\u0435\u200b\u0439\u200b\u0431\u200b\u043e\u200b\u0440\u200b\u0434\u200b"
+            },
+            {
+                "bbox_2d": [
+                    812,
+                    517,
+                    870,
+                    584
+                ],
+                "label": "\u0441\u200b\u043e\u200b\u043c\u200b\u0440\u200b\u0443\u200b\u0442\u200b\u0435\u200b\u0440 \u043c\u200b\u043e\u200b\u0443\u200b\u0441\u200b\u0435"
+            },
+            {
+                "bbox_2d": [
+                    542,
+                    456,
+                    742,
+                    592
+                ],
+                "label": "d\u043e\u200b\u043c\u200b\u0435\u200b\u0441\u200b\u0442\u200b\u0456\u200b\u0447\u200b\u043d\u200b\u0430 \u0441\u200b\u0430\u200b\u0442"
+            },
+            {
+                "bbox_2d": [
+                    0,
+                    274,
+                    1000,
+                    872
+                ],
+                "label": "\u0442\u200b\u0430\u200b\u0431\u043b\u200b\u0435"
+            },
+            {
+                "bbox_2d": [
+                    88,
+                    500,
+                    202,
+                    600
+                ],
+                "label": "\u0442\u200b\u0430\u200b\u043f\u200b\u0435 \u0440\u200b\u043b\u200b\u0430\u200b\u0439\u200b\u0435\u200b\u0440"
+            },
+            {
+                "bbox_2d": [
+                    43,
+                    44,
+                    312,
+                    360
+                ],
+                "label": "tv \u043e\u200b\u0440\u200b \u043c\u200b\u043e\u200b\u043d\u200b\u0438\u200b\u0442\u200b\u043e\u200b\u0440"
+            },
+            {
+                "bbox_2d": [
+                    432,
+                    0,
+                    672,
+                    324
+                ],
+                "label": "tv \u043e\u200b\u0440\u200b \u043c\u200b\u043e\u200b\u043d\u200b\u0438\u200b\u0442\u200b\u043e\u200b\u0440"
+            },
+            {
+                "bbox_2d": [
+                    678,
+                    44,
+                    932,
+                    408
+                ],
+                "label": "tv \u043e\u200b\u0440\u200b \u043c\u200b\u043e\u200b\u043d\u200b\u0438\u200b\u0442\u200b\u043e\u200b\u0440"
+            },
+            {
+                "bbox_2d": [
+                    902,
+                    188,
+                    1000,
+                    524
+                ],
+                "label": "tv \u043e\u200b\u0440\u200b \u043c\u200b\u043e\u200b\u043d\u200b\u0438\u200b\u0442\u200b\u043e\u200b\u0440"
+            }
+        ],
+        "token_count": 505,
+        "raw_token_count": 520,
+        "runtime_seconds": 2.0561
+    }
+}

@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/15",
+        "folder_id": "15",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00041932.JPEG"
+    },
+    "pareto_index": 9,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.094265,
+            "defocus_blur": 0.059487,
+            "motion_blur": 0.422186,
+            "fog_filter": 0.029496,
+            "pixelate": 0.026642,
+            "jpeg_filter": 0.209439
+        },
+        "text_corruptions": {
+            "homophone": 0.083564,
+            "synonym": 0.143569,
+            "ata_saliency": 0.034682,
+            "fragmentation": 0.533845,
+            "character_noise": 0.098102
+        },
+        "img_budget_used": 0.841514,
+        "txt_budget_used": 0.893761,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.01777,
+        "img_dist": 0.08734,
+        "txt_dist": 0.24152,
+        "txt_sim": 0.75848
+    },
+    "swad_metrics": {
+        "iou_0": 0.94734,
+        "delta_m_plus": 0.98124,
+        "phi": 0.69223,
+        "swad": 0.67925
+    },
+    "l2_distance": 0.25744,
+    "original_prompt": "Identify the objects \"face powder\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "face powder": {
+            "xmin": 5,
+            "ymin": 10,
+            "xmax": 347,
+            "ymax": 316
+        },
+        "face powder_1": {
+            "xmin": 279,
+            "ymin": 118,
+            "xmax": 618,
+            "ymax": 433
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"fa\u200b\u0441 e pow\u200bd\u0435r\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [550, 448, 860, 492], \"label\": \"fa\u200b\u0441 e pow\u200bd\u0435r\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    550,
+                    448,
+                    860,
+                    492
+                ],
+                "label": "fa\u200b\u0441 e pow\u200bd\u0435r"
+            }
+        ],
+        "token_count": 47,
+        "raw_token_count": 85,
+        "runtime_seconds": 0.3569
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.09426518365396251,
+        "defocus_blur": 0.059486669146393466,
+        "motion_blur": 0.42218566531592466,
+        "fog_filter": 0.029496330521180513,
+        "pixelate": 0.02664174013156938,
+        "jpeg_filter": 0.20943879382301825
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.0835639355414849,
+        "synonym": 0.14356860829050755,
+        "ata_saliency": 0.03468186497246635,
+        "fragmentation": 0.533844555117428,
+        "character_noise": 0.09810242684258927
+    }
+}

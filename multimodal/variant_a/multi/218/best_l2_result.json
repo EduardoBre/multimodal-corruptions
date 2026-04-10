@@ -1,0 +1,73 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/218",
+        "folder_id": "218",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00033272.JPEG"
+    },
+    "pareto_index": 0,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.8181617493544074,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.41721849968957336
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.05896,
+        "txt_dist": 0.27415,
+        "txt_sim": 0.72585
+    },
+    "swad_metrics": {
+        "iou_0": 0.83896,
+        "delta_m_plus": 1.0,
+        "phi": 0.68305,
+        "swad": 0.68305
+    },
+    "l2_distance": 0.28042,
+    "original_prompt": "Identify the objects \"diaper, table\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "diaper": {
+            "xmin": 160,
+            "ymin": 232,
+            "xmax": 292,
+            "ymax": 357
+        },
+        "diaper_1": {
+            "xmin": 98,
+            "ymin": 231,
+            "xmax": 162,
+            "ymax": 357
+        },
+        "table": {
+            "xmin": 0,
+            "ymin": 71,
+            "xmax": 85,
+            "ymax": 247
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"diaepr, tabne\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [432, 472, 778, 720], \"label\": \"diaepr, tabne\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    432,
+                    472,
+                    778,
+                    720
+                ],
+                "label": "diaepr, tabne"
+            }
+        ],
+        "token_count": 44,
+        "raw_token_count": 117,
+        "runtime_seconds": 0.4146
+    }
+}

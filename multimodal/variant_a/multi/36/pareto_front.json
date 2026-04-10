@@ -1,0 +1,339 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/36",
+        "folder_id": "36",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00037435.JPEG"
+    },
+    "original_prompt": "Identify the objects \"horse, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 335,
+            "ymin": 171,
+            "xmax": 423,
+            "ymax": 314
+        },
+        "person_1": {
+            "xmin": 202,
+            "ymin": 181,
+            "xmax": 221,
+            "ymax": 199
+        },
+        "horse": {
+            "xmin": 42,
+            "ymin": 160,
+            "xmax": 293,
+            "ymax": 341
+        },
+        "horse_1": {
+            "xmin": 265,
+            "ymin": 182,
+            "xmax": 305,
+            "ymax": 248
+        }
+    },
+    "baseline_iou": 0.72204,
+    "swad_star": 0.78915,
+    "swad_star_index": 4,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 6,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.018153363333776373,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.24927259019092207
+            },
+            "objectives": {
+                "iou": 0.46698,
+                "img_dist": 0.04758,
+                "txt_dist": 0.11673,
+                "txt_sim": 0.88327
+            },
+            "swad_metrics": {
+                "iou_0": 0.72204,
+                "delta_m_plus": 0.35325,
+                "phi": 0.84124,
+                "swad": 0.29717
+            },
+            "l2_distance": 0.48369,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"ho\u200drse, p\u200derso\u200dn\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [85, 458, 589, 976], \"label\": \"ho\u200drse\"},\n\t{\"bbox_2d\": [673, 497, 847, 857], \"label\": \"p\u200derso\u200dn\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            85,
+                            458,
+                            589,
+                            976
+                        ],
+                        "label": "ho\u200drse"
+                    },
+                    {
+                        "bbox_2d": [
+                            673,
+                            497,
+                            847,
+                            857
+                        ],
+                        "label": "p\u200derso\u200dn"
+                    }
+                ],
+                "token_count": 82,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.7223
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.45872,
+                "img_dist": 0.04758,
+                "txt_dist": 0.18278,
+                "txt_sim": 0.81722
+            },
+            "swad_metrics": {
+                "iou_0": 0.72204,
+                "delta_m_plus": 0.36469,
+                "phi": 0.77834,
+                "swad": 0.28385
+            },
+            "l2_distance": 0.49608,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"ohrse, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [85, 458, 589, 976], \"label\": \"ohrse\"},\n\t{\"bbox_2d\": [671, 498, 847, 840], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            85,
+                            458,
+                            589,
+                            976
+                        ],
+                        "label": "ohrse"
+                    },
+                    {
+                        "bbox_2d": [
+                            671,
+                            498,
+                            847,
+                            840
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.7223
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.5656671100314771,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.039875089079669634
+            },
+            "objectives": {
+                "iou": 0.4086,
+                "img_dist": 0.12377,
+                "txt_dist": 0.03364,
+                "txt_sim": 0.96636
+            },
+            "swad_metrics": {
+                "iou_0": 0.72204,
+                "delta_m_plus": 0.4341,
+                "phi": 0.84675,
+                "swad": 0.36758
+            },
+            "l2_distance": 0.42826,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"horse, pers\u200bon\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [80, 468, 598, 972], \"label\": \"horse\"},\n\t{\"bbox_2d\": [658, 500, 848, 780], \"label\": \"pers\u200bon\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            80,
+                            468,
+                            598,
+                            972
+                        ],
+                        "label": "horse"
+                    },
+                    {
+                        "bbox_2d": [
+                            658,
+                            500,
+                            848,
+                            780
+                        ],
+                        "label": "pers\u200bon"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.7223
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.307337327911573,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.44109,
+                "img_dist": 0.05842,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.72204,
+                "delta_m_plus": 0.38911,
+                "phi": 0.94158,
+                "swad": 0.36637
+            },
+            "l2_distance": 0.44494,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"horse, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [85, 458, 595, 972], \"label\": \"horse\"},\n\t{\"bbox_2d\": [635, 498, 845, 872], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            85,
+                            458,
+                            595,
+                            972
+                        ],
+                        "label": "horse"
+                    },
+                    {
+                        "bbox_2d": [
+                            635,
+                            498,
+                            845,
+                            872
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 71,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.7223
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.018595721213425453,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6130568625347235
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.07122,
+                "txt_dist": 0.15034,
+                "txt_sim": 0.84966
+            },
+            "swad_metrics": {
+                "iou_0": 0.72204,
+                "delta_m_plus": 1.0,
+                "phi": 0.78915,
+                "swad": 0.78915
+            },
+            "l2_distance": 0.16636,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"horse, pepson\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [85, 458, 595, 984], \"label\": \"horse\"},\n\t{\"bbox_2d\": [528, 530, 610, 610], \"label\": \"horse\"},\n\t{\"bbox_2d\": [675, 558, 744, 610], \"label\": \"horse\"},\n\t{\"bbox_2d\": [675, 558, 744, 610], \"label\": \"horse\"},\n\t{\"bbox_2d\": [528, 530, 610, 610], \"label\": \"horse\"},\n\t{\"bbox_2d\": [85, 458, 595, 984], \"label\": \"horse\"},\n\t{\"bbox_2d\": [675, 558, 744, 610], \"label\": \"horse\"},\n\t{\"bbox_2d\": [528, 530, 610, 610], \"label\": \"horse\"},\n\t{\"bbox_2d\": [85, 458, 595, 984], \"label\": \"horse\"},\n\t{\"bbox_2d\": [675, 558, 744, 610], \"label\": \"horse\"},\n\t{\"bbox_2d\": [528, 530, 610, 610], \"label\": \"horse\"},\n\t{\"bbox_2d\": [85, 458, 595, 984], \"label\": \"horse\"},\n\t{\"bbox_2d\": [675, 558, 744, 610], \"label\": \"horse\"},\n\t{\"bbox_2d\": [528, 530, 610, 610], \"label\": \"horse\"},\n\t{\"bbox_2d\": [85, 458, 595, 984], \"label\": \"horse\"},\n\t{\"bbox_2d\": [675, 558, 744, 610], \"label\": \"horse\"},\n\t{\"bbox_2d\": [528, 530, 610, 610], \"label\": \"horse\"},\n\t{\"bbox_2d\": [85, 458, 595, 984], \"label\": \"horse\"},\n\t{\"bbox_2d\": [675, 558, 744, 610], \"label\": \"horse\"},\n\t{\"bbox_2d\": [528, 530, 610, 610], \"label\": \"horse\"},\n\t{\"bbox_2d\": [85, 458, 595, 984], \"label\": \"horse\"},\n\t{\"bbox_2d\": [675, 558, 744, 610], \"label\": \"horse\"},\n\t{\"bbox_2d\": [528, 530, 610, 610], \"label\": \"horse\"},\n\t{\"bbox_2d\": [85, 458, 595, 984], \"label\": \"horse\"},\n\t{\"bbox_2d\": [675,",
+                "parsed_predictions": [],
+                "token_count": 800,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.7223
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.58678,
+                "img_dist": 0.03911,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.72204,
+                "delta_m_plus": 0.18733,
+                "phi": 0.96089,
+                "swad": 0.18
+            },
+            "l2_distance": 0.58808,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"horse, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [83, 458, 588, 980], \"label\": \"horse\"},\n\t{\"bbox_2d\": [655, 497, 844, 830], \"label\": \"person\"},\n\t{\"bbox_2d\": [405, 520, 438, 560], \"label\": \"person\"},\n\t{\"bbox_2d\": [967, 552, 1000, 750], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            83,
+                            458,
+                            588,
+                            980
+                        ],
+                        "label": "horse"
+                    },
+                    {
+                        "bbox_2d": [
+                            655,
+                            497,
+                            844,
+                            830
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            405,
+                            520,
+                            438,
+                            560
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            967,
+                            552,
+                            1000,
+                            750
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 138,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.7223
+            }
+        }
+    ]
+}

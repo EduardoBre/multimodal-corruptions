@@ -1,0 +1,100 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/64",
+        "folder_id": "64",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00035374.JPEG"
+    },
+    "pareto_index": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "motion_blur",
+        "img_scale": 0.23165185207671868,
+        "txt_attack": "homophone",
+        "txt_scale": 0.2847437692140504
+    },
+    "objectives": {
+        "iou": 0.18994,
+        "img_dist": 0.05079,
+        "txt_dist": 0.20207,
+        "txt_sim": 0.79793
+    },
+    "swad_metrics": {
+        "iou_0": 0.55383,
+        "delta_m_plus": 0.65704,
+        "phi": 0.7574,
+        "swad": 0.49765
+    },
+    "l2_distance": 0.28194,
+    "original_prompt": "Identify the objects \"person, watercraft\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 55,
+            "ymin": 211,
+            "xmax": 132,
+            "ymax": 365
+        },
+        "person_1": {
+            "xmin": 416,
+            "ymin": 235,
+            "xmax": 499,
+            "ymax": 374
+        },
+        "person_2": {
+            "xmin": 169,
+            "ymin": 43,
+            "xmax": 204,
+            "ymax": 105
+        },
+        "person_3": {
+            "xmin": 0,
+            "ymin": 282,
+            "xmax": 18,
+            "ymax": 366
+        },
+        "watercraft": {
+            "xmin": 167,
+            "ymin": 41,
+            "xmax": 274,
+            "ymax": 129
+        },
+        "watercraft_1": {
+            "xmin": 4,
+            "ymin": 201,
+            "xmax": 499,
+            "ymax": 374
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"purse on, watercraft\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [337, 116, 538, 336], \"label\": \"purse on\"},\n\t{\"bbox_2d\": [337, 116, 538, 336], \"label\": \"watercraft\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    337,
+                    116,
+                    538,
+                    336
+                ],
+                "label": "purse on"
+            },
+            {
+                "bbox_2d": [
+                    337,
+                    116,
+                    538,
+                    336
+                ],
+                "label": "watercraft"
+            }
+        ],
+        "token_count": 75,
+        "raw_token_count": 171,
+        "runtime_seconds": 0.5697
+    }
+}

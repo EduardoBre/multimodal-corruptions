@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/101",
+        "folder_id": "101",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00026793.JPEG"
+    },
+    "pareto_index": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.9715983234546878,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.6083066587788273
+    },
+    "objectives": {
+        "iou": 0.92029,
+        "img_dist": 0.06547,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.97379,
+        "delta_m_plus": 0.05494,
+        "phi": 0.93453,
+        "swad": 0.05134
+    },
+    "l2_distance": 0.92262,
+    "original_prompt": "Identify the objects \"lizard\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "lizard": {
+            "xmin": 42,
+            "ymin": 86,
+            "xmax": 255,
+            "ymax": 477
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"lizard\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [96, 160, 656, 968], \"label\": \"lizard\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    96,
+                    160,
+                    656,
+                    968
+                ],
+                "label": "lizard"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 43,
+        "runtime_seconds": 0.2097
+    }
+}

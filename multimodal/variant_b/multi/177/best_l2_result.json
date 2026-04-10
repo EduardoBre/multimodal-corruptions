@@ -1,0 +1,121 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/177",
+        "folder_id": "177",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00048300.JPEG"
+    },
+    "pareto_index": 11,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.113261,
+            "defocus_blur": 0.019595,
+            "motion_blur": 0.00636,
+            "fog_filter": 0.083387,
+            "pixelate": 0.016029,
+            "jpeg_filter": 0.022326
+        },
+        "text_corruptions": {
+            "homophone": 0.245651,
+            "synonym": 0.145167,
+            "ata_saliency": 0.308924,
+            "fragmentation": 0.024943,
+            "character_noise": 0.101774
+        },
+        "img_budget_used": 0.260959,
+        "txt_budget_used": 0.82646,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.05561,
+        "img_dist": 0.09625,
+        "txt_dist": 0.27456,
+        "txt_sim": 0.72544
+    },
+    "swad_metrics": {
+        "iou_0": 0.67869,
+        "delta_m_plus": 0.91806,
+        "phi": 0.65562,
+        "swad": 0.6019
+    },
+    "l2_distance": 0.29621,
+    "original_prompt": "Identify the objects \"bathing cap, maillot, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 86,
+            "ymin": 167,
+            "xmax": 326,
+            "ymax": 470
+        },
+        "maillot": {
+            "xmin": 67,
+            "ymin": 241,
+            "xmax": 170,
+            "ymax": 427
+        },
+        "bathing cap": {
+            "xmin": 146,
+            "ymin": 167,
+            "xmax": 224,
+            "ymax": 220
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"b\u0430thing cpa, m\u0430illot\u200d, epr s\u043en\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [264, 583, 400, 683], \"label\": \"b\u0430thing cpa\"},\n\t{\"bbox_2d\": [264, 583, 400, 683], \"label\": \"m\u0430illot\u200d\"},\n\t{\"bbox_2d\": [264, 583, 400, 683], \"label\": \"epr s\u043en\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    264,
+                    583,
+                    400,
+                    683
+                ],
+                "label": "b\u0430thing cpa"
+            },
+            {
+                "bbox_2d": [
+                    264,
+                    583,
+                    400,
+                    683
+                ],
+                "label": "m\u0430illot\u200d"
+            },
+            {
+                "bbox_2d": [
+                    264,
+                    583,
+                    400,
+                    683
+                ],
+                "label": "epr s\u043en"
+            }
+        ],
+        "token_count": 118,
+        "raw_token_count": 124,
+        "runtime_seconds": 0.3871
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.11326123374100312,
+        "defocus_blur": 0.019594958898733437,
+        "motion_blur": 0.006360497614848313,
+        "fog_filter": 0.0833870205240964,
+        "pixelate": 0.016029286231045752,
+        "jpeg_filter": 0.022326196456299522
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.24565148366668887,
+        "synonym": 0.14516716673881808,
+        "ata_saliency": 0.30892409694304035,
+        "fragmentation": 0.024943433662207085,
+        "character_noise": 0.10177427176005632
+    }
+}

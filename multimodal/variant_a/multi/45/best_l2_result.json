@@ -1,0 +1,82 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/45",
+        "folder_id": "45",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00004452.JPEG"
+    },
+    "pareto_index": 4,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 7,
+    "total_evaluations": 195,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "motion_blur",
+        "img_scale": 0.9149953844496553,
+        "txt_attack": "synonym",
+        "txt_scale": 0.8405517689837072
+    },
+    "objectives": {
+        "iou": 0.26764,
+        "img_dist": 0.09478,
+        "txt_dist": 0.19087,
+        "txt_sim": 0.80913
+    },
+    "swad_metrics": {
+        "iou_0": 0.70076,
+        "delta_m_plus": 0.61807,
+        "phi": 0.73244,
+        "swad": 0.4527
+    },
+    "l2_distance": 0.34212,
+    "original_prompt": "Identify the objects \"guitar, microphone, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 26,
+            "ymin": 7,
+            "xmax": 361,
+            "ymax": 374
+        },
+        "guitar": {
+            "xmin": 7,
+            "ymin": 184,
+            "xmax": 380,
+            "ymax": 372
+        },
+        "microphone": {
+            "xmin": 214,
+            "ymin": 49,
+            "xmax": 309,
+            "ymax": 76
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"axe, microphone, individual\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [470, 138, 1000, 352], \"label\": \"microphone\"},\n\t{\"bbox_2d\": [44, 16, 580, 700], \"label\": \"individual\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    470,
+                    138,
+                    1000,
+                    352
+                ],
+                "label": "microphone"
+            },
+            {
+                "bbox_2d": [
+                    44,
+                    16,
+                    580,
+                    700
+                ],
+                "label": "individual"
+            }
+        ],
+        "token_count": 72,
+        "raw_token_count": 110,
+        "runtime_seconds": 0.4634
+    }
+}

@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/177",
+        "folder_id": "177",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00045107.JPEG"
+    },
+    "pareto_index": 7,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.021482119525505713,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.2497388111603288
+    },
+    "objectives": {
+        "iou": 0.08413,
+        "img_dist": 0.03981,
+        "txt_dist": 0.34054,
+        "txt_sim": 0.65946
+    },
+    "swad_metrics": {
+        "iou_0": 0.96177,
+        "delta_m_plus": 0.91253,
+        "phi": 0.63321,
+        "swad": 0.57782
+    },
+    "l2_distance": 0.35303,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 327,
+            "ymin": 48,
+            "xmax": 407,
+            "ymax": 218
+        },
+        "bird_1": {
+            "xmin": 119,
+            "ymin": 108,
+            "xmax": 212,
+            "ymax": 301
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bild\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 1000, 1000], \"label\": \"bild\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    1000,
+                    1000
+                ],
+                "label": "bild"
+            }
+        ],
+        "token_count": 37,
+        "raw_token_count": 91,
+        "runtime_seconds": 0.3392
+    }
+}

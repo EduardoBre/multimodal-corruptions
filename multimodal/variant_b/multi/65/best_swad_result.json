@@ -1,0 +1,112 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/65",
+        "folder_id": "65",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00025619.JPEG"
+    },
+    "pareto_index": 0,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.030501,
+            "defocus_blur": 0.064184,
+            "motion_blur": 0.024134,
+            "fog_filter": 0.061457,
+            "pixelate": 0.048956,
+            "jpeg_filter": 0.116268
+        },
+        "text_corruptions": {
+            "homophone": 0.429857,
+            "synonym": 0.081586,
+            "ata_saliency": 0.080353,
+            "fragmentation": 0.208918,
+            "character_noise": 0.013621
+        },
+        "img_budget_used": 0.3455,
+        "txt_budget_used": 0.814335,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.09774,
+        "txt_dist": 0.28168,
+        "txt_sim": 0.71832
+    },
+    "swad_metrics": {
+        "iou_0": 0.55231,
+        "delta_m_plus": 1.0,
+        "phi": 0.64811,
+        "swad": 0.64811
+    },
+    "l2_distance": 0.29816,
+    "original_prompt": "Identify the objects \"axe, chair, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "axe": {
+            "xmin": 151,
+            "ymin": 252,
+            "xmax": 190,
+            "ymax": 321
+        },
+        "person": {
+            "xmin": 136,
+            "ymin": 33,
+            "xmax": 292,
+            "ymax": 457
+        },
+        "chair": {
+            "xmin": 297,
+            "ymin": 161,
+            "xmax": 318,
+            "ymax": 209
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"\u0430cts, se\u200bat , huma\u0445\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [372, 68, 772, 908], \"label\": \"\u0430cts, se\u200bat , huma\u0445\"},\n\t{\"bbox_2d\": [872, 308, 998, 472], \"label\": \"\u0430cts, se\u200bat , huma\u0445\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    372,
+                    68,
+                    772,
+                    908
+                ],
+                "label": "\u0430cts, se\u200bat , huma\u0445"
+            },
+            {
+                "bbox_2d": [
+                    872,
+                    308,
+                    998,
+                    472
+                ],
+                "label": "\u0430cts, se\u200bat , huma\u0445"
+            }
+        ],
+        "token_count": 89,
+        "raw_token_count": 143,
+        "runtime_seconds": 0.4689
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.03050072793750238,
+        "defocus_blur": 0.0641839644055742,
+        "motion_blur": 0.024134123817125742,
+        "fog_filter": 0.06145666097039378,
+        "pixelate": 0.048956208918878925,
+        "jpeg_filter": 0.11626816202349267
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.4298569542510038,
+        "synonym": 0.08158589218714195,
+        "ata_saliency": 0.08035293501994933,
+        "fragmentation": 0.2089183357321176,
+        "character_noise": 0.01362094071290535
+    }
+}

@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/76",
+        "folder_id": "76",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00003519.JPEG"
+    },
+    "pareto_index": 6,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "gaussian_noise",
+        "img_scale": 0.9662109336868401,
+        "txt_attack": "synonym",
+        "txt_scale": 0.43519445464759643
+    },
+    "objectives": {
+        "iou": 0.03208,
+        "img_dist": 0.18149,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.67007,
+        "delta_m_plus": 0.95212,
+        "phi": 0.81851,
+        "swad": 0.77932
+    },
+    "l2_distance": 0.1843,
+    "original_prompt": "Identify the objects \"chair, sofa\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "sofa": {
+            "xmin": 81,
+            "ymin": 371,
+            "xmax": 143,
+            "ymax": 443
+        },
+        "chair": {
+            "xmin": 176,
+            "ymin": 301,
+            "xmax": 253,
+            "ymax": 436
+        },
+        "chair_1": {
+            "xmin": 77,
+            "ymin": 301,
+            "xmax": 157,
+            "ymax": 448
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"chair, sofa\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [108, 875, 908, 1000], \"label\": \"chair\"},\n\t{\"bbox_2d\": [0, 750, 264, 975], \"label\": \"sofa\"},\n\t{\"bbox_2d\": [736, 750, 1000, 975], \"label\": \"sofa\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    108,
+                    875,
+                    908,
+                    1000
+                ],
+                "label": "chair"
+            },
+            {
+                "bbox_2d": [
+                    0,
+                    750,
+                    264,
+                    975
+                ],
+                "label": "sofa"
+            },
+            {
+                "bbox_2d": [
+                    736,
+                    750,
+                    1000,
+                    975
+                ],
+                "label": "sofa"
+            }
+        ],
+        "token_count": 107,
+        "raw_token_count": 143,
+        "runtime_seconds": 0.5054
+    }
+}

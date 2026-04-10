@@ -1,0 +1,76 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/233",
+        "folder_id": "233",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00003237.JPEG"
+    },
+    "pareto_index": 0,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 45,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "gaussian_noise",
+        "img_scale": 0.8632061743184387,
+        "txt_attack": "synonym",
+        "txt_scale": 0.7724979474714236
+    },
+    "objectives": {
+        "iou": 0.03342,
+        "img_dist": 0.15826,
+        "txt_dist": 0.24011,
+        "txt_sim": 0.75989
+    },
+    "swad_metrics": {
+        "iou_0": 0.55901,
+        "delta_m_plus": 0.94022,
+        "phi": 0.63963,
+        "swad": 0.60139
+    },
+    "l2_distance": 0.28951,
+    "original_prompt": "Identify the objects \"microphone, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 1,
+            "ymin": 273,
+            "xmax": 90,
+            "ymax": 342
+        },
+        "microphone": {
+            "xmin": 124,
+            "ymin": 101,
+            "xmax": 143,
+            "ymax": 137
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"recording device, woman\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [121, 286, 430, 997], \"label\": \"recording device\"},\n\t{\"bbox_2d\": [442, 840, 607, 1000], \"label\": \"woman\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    121,
+                    286,
+                    430,
+                    997
+                ],
+                "label": "recording device"
+            },
+            {
+                "bbox_2d": [
+                    442,
+                    840,
+                    607,
+                    1000
+                ],
+                "label": "woman"
+            }
+        ],
+        "token_count": 75,
+        "raw_token_count": 175,
+        "runtime_seconds": 0.5584
+    }
+}

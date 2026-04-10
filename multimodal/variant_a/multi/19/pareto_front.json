@@ -1,0 +1,452 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/19",
+        "folder_id": "19",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00023682.JPEG"
+    },
+    "original_prompt": "Identify the objects \"neck brace, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 83,
+            "ymin": 101,
+            "xmax": 152,
+            "ymax": 188
+        },
+        "person_1": {
+            "xmin": 0,
+            "ymin": 48,
+            "xmax": 274,
+            "ymax": 374
+        },
+        "person_2": {
+            "xmin": 268,
+            "ymin": 64,
+            "xmax": 499,
+            "ymax": 374
+        },
+        "neck brace": {
+            "xmin": 127,
+            "ymin": 134,
+            "xmax": 244,
+            "ymax": 252
+        }
+    },
+    "baseline_iou": 0.8087,
+    "swad_star": 0.45438,
+    "swad_star_index": 5,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 7,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.8632061743184387,
+                "txt_attack": "synonym",
+                "txt_scale": 0.7724979474714236
+            },
+            "objectives": {
+                "iou": 0.46468,
+                "img_dist": 0.17808,
+                "txt_dist": 0.20446,
+                "txt_sim": 0.79554
+            },
+            "swad_metrics": {
+                "iou_0": 0.8087,
+                "delta_m_plus": 0.4254,
+                "phi": 0.65387,
+                "swad": 0.27816
+            },
+            "l2_distance": 0.538,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cervical collar, woman\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [250, 372, 448, 672], \"label\": \"cervical collar\"},\n\t{\"bbox_2d\": [0, 130, 558, 1000], \"label\": \"woman\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            250,
+                            372,
+                            448,
+                            672
+                        ],
+                        "label": "cervical collar"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            130,
+                            558,
+                            1000
+                        ],
+                        "label": "woman"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 157,
+                "runtime_seconds": 0.6545
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.85416,
+                "img_dist": 0.02359,
+                "txt_dist": 0.13389,
+                "txt_sim": 0.86611
+            },
+            "swad_metrics": {
+                "iou_0": 0.8087,
+                "delta_m_plus": 0.0,
+                "phi": 0.84568,
+                "swad": 0.0
+            },
+            "l2_distance": 0.86491,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"neck braise, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [248, 398, 448, 660], \"label\": \"neck braise\"},\n\t{\"bbox_2d\": [0, 134, 562, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [500, 172, 1000, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [172, 286, 300, 500], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            248,
+                            398,
+                            448,
+                            660
+                        ],
+                        "label": "neck braise"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            134,
+                            562,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            500,
+                            172,
+                            1000,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            172,
+                            286,
+                            300,
+                            500
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 141,
+                "raw_token_count": 157,
+                "runtime_seconds": 0.6545
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.6126883641923373,
+                "txt_attack": "homophone",
+                "txt_scale": 0.10684452896191199
+            },
+            "objectives": {
+                "iou": 0.81751,
+                "img_dist": 0.03849,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.8087,
+                "delta_m_plus": 0.0,
+                "phi": 0.96151,
+                "swad": 0.0
+            },
+            "l2_distance": 0.81842,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"neck brace, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [250, 400, 444, 668], \"label\": \"neck brace\"},\n\t{\"bbox_2d\": [0, 132, 558, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [412, 172, 1000, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [172, 292, 300, 500], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            250,
+                            400,
+                            444,
+                            668
+                        ],
+                        "label": "neck brace"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            132,
+                            558,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            412,
+                            172,
+                            1000,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            172,
+                            292,
+                            300,
+                            500
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 140,
+                "raw_token_count": 157,
+                "runtime_seconds": 0.6545
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6124377601560459,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.62811,
+                "img_dist": 0.06917,
+                "txt_dist": 0.14613,
+                "txt_sim": 0.85387
+            },
+            "swad_metrics": {
+                "iou_0": 0.8087,
+                "delta_m_plus": 0.22331,
+                "phi": 0.79481,
+                "swad": 0.17749
+            },
+            "l2_distance": 0.64858,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"neck brace, ptrson\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [264, 375, 400, 675], \"label\": \"neck brace\"},\n\t{\"bbox_2d\": [0, 125, 558, 1000], \"label\": \"ptrson\"},\n\t{\"bbox_2d\": [500, 165, 999, 1000], \"label\": \"ptrson\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            264,
+                            375,
+                            400,
+                            675
+                        ],
+                        "label": "neck brace"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            125,
+                            558,
+                            1000
+                        ],
+                        "label": "ptrson"
+                    },
+                    {
+                        "bbox_2d": [
+                            500,
+                            165,
+                            999,
+                            1000
+                        ],
+                        "label": "ptrson"
+                    }
+                ],
+                "token_count": 108,
+                "raw_token_count": 157,
+                "runtime_seconds": 0.6545
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.5656671100314771,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.039875089079669634
+            },
+            "objectives": {
+                "iou": 0.63376,
+                "img_dist": 0.06448,
+                "txt_dist": 0.13767,
+                "txt_sim": 0.86233
+            },
+            "swad_metrics": {
+                "iou_0": 0.8087,
+                "delta_m_plus": 0.21632,
+                "phi": 0.80673,
+                "swad": 0.17451
+            },
+            "l2_distance": 0.65174,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"neck brace\u200b, \u0440e\u200brson\u200d\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [260, 375, 400, 675], \"label\": \"neck brace\u200b\"},\n\t{\"bbox_2d\": [0, 125, 558, 1000], \"label\": \"\u0440e\u200brson\u200d\"},\n\t{\"bbox_2d\": [500, 165, 999, 1000], \"label\": \"\u0440e\u200brson\u200d\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            260,
+                            375,
+                            400,
+                            675
+                        ],
+                        "label": "neck brace\u200b"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            125,
+                            558,
+                            1000
+                        ],
+                        "label": "\u0440e\u200brson\u200d"
+                    },
+                    {
+                        "bbox_2d": [
+                            500,
+                            165,
+                            999,
+                            1000
+                        ],
+                        "label": "\u0440e\u200brson\u200d"
+                    }
+                ],
+                "token_count": 119,
+                "raw_token_count": 157,
+                "runtime_seconds": 0.6545
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.307337327911573,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.27041,
+                "img_dist": 0.03246,
+                "txt_dist": 0.29446,
+                "txt_sim": 0.70554
+            },
+            "swad_metrics": {
+                "iou_0": 0.8087,
+                "delta_m_plus": 0.66562,
+                "phi": 0.68264,
+                "swad": 0.45438
+            },
+            "l2_distance": 0.4011,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"neck base, purse on\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [252, 380, 448, 670], \"label\": \"neck base\"},\n\t{\"bbox_2d\": [222, 494, 492, 930], \"label\": \"purse on\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            252,
+                            380,
+                            448,
+                            670
+                        ],
+                        "label": "neck base"
+                    },
+                    {
+                        "bbox_2d": [
+                            222,
+                            494,
+                            492,
+                            930
+                        ],
+                        "label": "purse on"
+                    }
+                ],
+                "token_count": 75,
+                "raw_token_count": 157,
+                "runtime_seconds": 0.6545
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.018595721213425453,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6130568625347235
+            },
+            "objectives": {
+                "iou": 0.6393,
+                "img_dist": 0.03027,
+                "txt_dist": 0.2544,
+                "txt_sim": 0.7456
+            },
+            "swad_metrics": {
+                "iou_0": 0.8087,
+                "delta_m_plus": 0.20947,
+                "phi": 0.72303,
+                "swad": 0.15145
+            },
+            "l2_distance": 0.68872,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"neck bgace, persno\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [248, 420, 448, 657], \"label\": \"neck bgace\"},\n\t{\"bbox_2d\": [0, 138, 562, 997], \"label\": \"persno\"},\n\t{\"bbox_2d\": [498, 176, 1000, 997], \"label\": \"persno\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            248,
+                            420,
+                            448,
+                            657
+                        ],
+                        "label": "neck bgace"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            138,
+                            562,
+                            997
+                        ],
+                        "label": "persno"
+                    },
+                    {
+                        "bbox_2d": [
+                            498,
+                            176,
+                            1000,
+                            997
+                        ],
+                        "label": "persno"
+                    }
+                ],
+                "token_count": 108,
+                "raw_token_count": 157,
+                "runtime_seconds": 0.6545
+            }
+        }
+    ]
+}

@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/214",
+        "folder_id": "214",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00035698.JPEG"
+    },
+    "pareto_index": 5,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.115991,
+            "defocus_blur": 0.173336,
+            "motion_blur": 0.06633,
+            "fog_filter": 0.107267,
+            "pixelate": 0.507788,
+            "jpeg_filter": 0.029288
+        },
+        "text_corruptions": {
+            "homophone": 0.007729,
+            "synonym": 0.074538,
+            "ata_saliency": 0.011802,
+            "fragmentation": 0.022822,
+            "character_noise": 0.037768
+        },
+        "img_budget_used": 1.0,
+        "txt_budget_used": 0.154659,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.02314,
+        "img_dist": 0.15595,
+        "txt_dist": 0.29489,
+        "txt_sim": 0.70511
+    },
+    "swad_metrics": {
+        "iou_0": 0.40727,
+        "delta_m_plus": 0.94318,
+        "phi": 0.59515,
+        "swad": 0.56133
+    },
+    "l2_distance": 0.33439,
+    "original_prompt": "Identify the objects \"cucumber\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "cucumber": {
+            "xmin": 210,
+            "ymin": 171,
+            "xmax": 344,
+            "ymax": 314
+        },
+        "cucumber_1": {
+            "xmin": 161,
+            "ymin": 167,
+            "xmax": 265,
+            "ymax": 293
+        },
+        "cucumber_2": {
+            "xmin": 150,
+            "ymin": 246,
+            "xmax": 259,
+            "ymax": 343
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"qu\u200deue cumber\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [298, 448, 678, 918], \"label\": \"qu\u200deue cumber\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    298,
+                    448,
+                    678,
+                    918
+                ],
+                "label": "qu\u200deue cumber"
+            }
+        ],
+        "token_count": 45,
+        "raw_token_count": 203,
+        "runtime_seconds": 0.6062
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.1159914213399345,
+        "defocus_blur": 0.17333603760372526,
+        "motion_blur": 0.06632982507180187,
+        "fog_filter": 0.10726690359034581,
+        "pixelate": 0.5077876763435037,
+        "jpeg_filter": 0.029288136050688734
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.007729103676973688,
+        "synonym": 0.07453844257058805,
+        "ata_saliency": 0.011801633358185896,
+        "fragmentation": 0.022822401389151557,
+        "character_noise": 0.03776783847169469
+    }
+}

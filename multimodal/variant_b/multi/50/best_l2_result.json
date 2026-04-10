@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/50",
+        "folder_id": "50",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00034039.JPEG"
+    },
+    "pareto_index": 0,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.153206,
+            "defocus_blur": 0.033929,
+            "motion_blur": 0.063254,
+            "fog_filter": 0.009444,
+            "pixelate": 0.049545,
+            "jpeg_filter": 0.066891
+        },
+        "text_corruptions": {
+            "homophone": 0.036883,
+            "synonym": 0.050415,
+            "ata_saliency": 0.009964,
+            "fragmentation": 0.012227,
+            "character_noise": 0.016177
+        },
+        "img_budget_used": 0.37627,
+        "txt_budget_used": 0.125666,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.06824,
+        "txt_dist": 0.18169,
+        "txt_sim": 0.81831
+    },
+    "swad_metrics": {
+        "iou_0": 0.84725,
+        "delta_m_plus": 1.0,
+        "phi": 0.76247,
+        "swad": 0.76247
+    },
+    "l2_distance": 0.19408,
+    "original_prompt": "Identify the objects \"bathing cap, person, swimming trunks\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 0,
+            "ymin": 0,
+            "xmax": 499,
+            "ymax": 374
+        },
+        "bathing cap": {
+            "xmin": 155,
+            "ymin": 0,
+            "xmax": 471,
+            "ymax": 215
+        },
+        "swimming trunks": {
+            "xmin": 125,
+            "ymin": 0,
+            "xmax": 449,
+            "ymax": 374
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"b\u200dath\u200bing cx\u200dp\u200b, p\u0435rs\u200b\u043en, swimming trunks\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 1000, 1000], \"label\": \"b\u200dath\u200bing cx\u200dp\u200b, p\u0435rs\u200b\u043en, swimming trunks\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    1000,
+                    1000
+                ],
+                "label": "b\u200dath\u200bing cx\u200dp\u200b, p\u0435rs\u200b\u043en, swimming trunks"
+            }
+        ],
+        "token_count": 58,
+        "raw_token_count": 121,
+        "runtime_seconds": 0.3897
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.153206206352143,
+        "defocus_blur": 0.03392913311897037,
+        "motion_blur": 0.06325361772183345,
+        "fog_filter": 0.009444272362299503,
+        "pixelate": 0.04954514708981718,
+        "jpeg_filter": 0.06689119018934273
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.03688334078471577,
+        "synonym": 0.05041450219034034,
+        "ata_saliency": 0.009964068805936,
+        "fragmentation": 0.012226769843505842,
+        "character_noise": 0.016177053815188795
+    }
+}

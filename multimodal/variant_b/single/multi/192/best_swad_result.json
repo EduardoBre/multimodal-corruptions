@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/192",
+        "folder_id": "192",
+        "category": "single/multi",
+        "filename": "ILSVRC2013_val_00003304.JPEG"
+    },
+    "pareto_index": 19,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.00655,
+            "defocus_blur": 0.239356,
+            "motion_blur": 0.035013,
+            "fog_filter": 0.005073,
+            "pixelate": 0.01558,
+            "jpeg_filter": 0.003866
+        },
+        "text_corruptions": {
+            "homophone": 0.043949,
+            "synonym": 0.073452,
+            "ata_saliency": 0.16572,
+            "fragmentation": 0.096596,
+            "character_noise": 0.145267
+        },
+        "img_budget_used": 0.305437,
+        "txt_budget_used": 0.524984,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.00098,
+        "img_dist": 0.10823,
+        "txt_dist": 0.28663,
+        "txt_sim": 0.71337
+    },
+    "swad_metrics": {
+        "iou_0": 0.76467,
+        "delta_m_plus": 0.99872,
+        "phi": 0.63616,
+        "swad": 0.63535
+    },
+    "l2_distance": 0.30638,
+    "original_prompt": "Identify the objects \"person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 322,
+            "ymin": 103,
+            "xmax": 377,
+            "ymax": 163
+        },
+        "person_1": {
+            "xmin": 173,
+            "ymin": 69,
+            "xmax": 380,
+            "ymax": 332
+        },
+        "person_2": {
+            "xmin": 357,
+            "ymin": 115,
+            "xmax": 477,
+            "ymax": 303
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"per san\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [740, 925, 999, 975], \"label\": \"per san\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    740,
+                    925,
+                    999,
+                    975
+                ],
+                "label": "per san"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 124,
+        "runtime_seconds": 0.3651
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0065500587287900145,
+        "defocus_blur": 0.23935629634783967,
+        "motion_blur": 0.0350125251843643,
+        "fog_filter": 0.005073079472872222,
+        "pixelate": 0.015579591810864364,
+        "jpeg_filter": 0.0038658428855246375
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.043949398827353436,
+        "synonym": 0.07345164138408386,
+        "ata_saliency": 0.16571987976789698,
+        "fragmentation": 0.09659566917481426,
+        "character_noise": 0.1452670843778425
+    }
+}

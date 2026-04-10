@@ -1,0 +1,88 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/199",
+        "folder_id": "199",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00008234.JPEG"
+    },
+    "pareto_index": 6,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.9316177058680379,
+        "txt_attack": "homophone",
+        "txt_scale": 0.9948250792623392
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.08603,
+        "txt_dist": 0.24157,
+        "txt_sim": 0.75843
+    },
+    "swad_metrics": {
+        "iou_0": 0.87118,
+        "delta_m_plus": 1.0,
+        "phi": 0.69318,
+        "swad": 0.69318
+    },
+    "l2_distance": 0.25643,
+    "original_prompt": "Identify the objects \"helmet, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 115,
+            "ymin": 83,
+            "xmax": 472,
+            "ymax": 335
+        },
+        "person_1": {
+            "xmin": 106,
+            "ymin": 74,
+            "xmax": 315,
+            "ymax": 329
+        },
+        "helmet": {
+            "xmin": 171,
+            "ymin": 75,
+            "xmax": 216,
+            "ymax": 141
+        },
+        "helmet_1": {
+            "xmin": 223,
+            "ymin": 84,
+            "xmax": 280,
+            "ymax": 130
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"hellmit, per son\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [212, 188, 628, 819], \"label\": \"hellmit, per son\"},\n\t{\"bbox_2d\": [432, 200, 952, 836], \"label\": \"hellmit, per son\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    212,
+                    188,
+                    628,
+                    819
+                ],
+                "label": "hellmit, per son"
+            },
+            {
+                "bbox_2d": [
+                    432,
+                    200,
+                    952,
+                    836
+                ],
+                "label": "hellmit, per son"
+            }
+        ],
+        "token_count": 80,
+        "raw_token_count": 185,
+        "runtime_seconds": 0.6296
+    }
+}

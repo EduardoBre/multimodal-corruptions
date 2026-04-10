@@ -1,0 +1,106 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/6",
+        "folder_id": "6",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00013591.JPEG"
+    },
+    "pareto_index": 1,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.045049,
+            "defocus_blur": 0.048116,
+            "motion_blur": 0.073482,
+            "fog_filter": 0.028472,
+            "pixelate": 0.157401,
+            "jpeg_filter": 0.097259
+        },
+        "text_corruptions": {
+            "homophone": 0.306654,
+            "synonym": 0.125352,
+            "ata_saliency": 0.09163,
+            "fragmentation": 0.00289,
+            "character_noise": 0.025726
+        },
+        "img_budget_used": 0.44978,
+        "txt_budget_used": 0.552253,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.22987,
+        "img_dist": 0.08558,
+        "txt_dist": 0.17963,
+        "txt_sim": 0.82037
+    },
+    "swad_metrics": {
+        "iou_0": 0.66504,
+        "delta_m_plus": 0.65435,
+        "phi": 0.75016,
+        "swad": 0.49087
+    },
+    "l2_distance": 0.30402,
+    "original_prompt": "Identify the objects \"hair dryer, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 96,
+            "ymin": 82,
+            "xmax": 273,
+            "ymax": 498
+        },
+        "hair dryer": {
+            "xmin": 132,
+            "ymin": 153,
+            "xmax": 212,
+            "ymax": 327
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"hair dr\u0443re, p\u200d\u0435rson\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [352, 310, 560, 448], \"label\": \"hair dr\u0443re\"},\n\t{\"bbox_2d\": [260, 168, 738, 998], \"label\": \"p\u200d\u0435\u0440\u0441\u043e\u043d\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    352,
+                    310,
+                    560,
+                    448
+                ],
+                "label": "hair dr\u0443re"
+            },
+            {
+                "bbox_2d": [
+                    260,
+                    168,
+                    738,
+                    998
+                ],
+                "label": "p\u200d\u0435\u0440\u0441\u043e\u043d"
+            }
+        ],
+        "token_count": 79,
+        "raw_token_count": 88,
+        "runtime_seconds": 0.3313
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.04504893035097646,
+        "defocus_blur": 0.0481162945086099,
+        "motion_blur": 0.07348201247857102,
+        "fog_filter": 0.02847227607398126,
+        "pixelate": 0.15740146592334284,
+        "jpeg_filter": 0.09725852448101258
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.3066544362726465,
+        "synonym": 0.125352287170483,
+        "ata_saliency": 0.09162973247910253,
+        "fragmentation": 0.002889881180302778,
+        "character_noise": 0.025726410296687624
+    }
+}

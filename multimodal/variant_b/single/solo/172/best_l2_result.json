@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/172",
+        "folder_id": "172",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00015927.JPEG"
+    },
+    "pareto_index": 12,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 60,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.276616,
+            "defocus_blur": 0.061193,
+            "motion_blur": 0.00112,
+            "fog_filter": 0.029611,
+            "pixelate": 0.290594,
+            "jpeg_filter": 0.097968
+        },
+        "text_corruptions": {
+            "homophone": 0.175494,
+            "synonym": 0.006385,
+            "ata_saliency": 0.144856,
+            "fragmentation": 0.001859,
+            "character_noise": 0.010353
+        },
+        "img_budget_used": 0.757103,
+        "txt_budget_used": 0.338948,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.07145,
+        "img_dist": 0.08457,
+        "txt_dist": 0.23242,
+        "txt_sim": 0.76758
+    },
+    "swad_metrics": {
+        "iou_0": 0.95537,
+        "delta_m_plus": 0.92521,
+        "phi": 0.70267,
+        "swad": 0.65011
+    },
+    "l2_distance": 0.25744,
+    "original_prompt": "Identify the objects \"otter\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "otter": {
+            "xmin": 129,
+            "ymin": 196,
+            "xmax": 681,
+            "ymax": 463
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"udder\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [357, 330, 573, 438], \"label\": \"udder\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    357,
+                    330,
+                    573,
+                    438
+                ],
+                "label": "udder"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 49,
+        "runtime_seconds": 0.1796
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.276616056761398,
+        "defocus_blur": 0.06119346346674061,
+        "motion_blur": 0.0011200332156148885,
+        "fog_filter": 0.02961107725903371,
+        "pixelate": 0.2905944541349829,
+        "jpeg_filter": 0.09796813646986291
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.1754939985750598,
+        "synonym": 0.006384821313443631,
+        "ata_saliency": 0.14485571042915724,
+        "fragmentation": 0.001859498181288173,
+        "character_noise": 0.010353485780977056
+    }
+}

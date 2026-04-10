@@ -1,0 +1,82 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/1",
+        "folder_id": "1",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00026174.JPEG"
+    },
+    "pareto_index": 7,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "motion_blur",
+        "img_scale": 0.018595721213425453,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.6130568625347235
+    },
+    "objectives": {
+        "iou": 0.31807,
+        "img_dist": 0.02705,
+        "txt_dist": 0.18668,
+        "txt_sim": 0.81332
+    },
+    "swad_metrics": {
+        "iou_0": 0.92092,
+        "delta_m_plus": 0.65462,
+        "phi": 0.79132,
+        "swad": 0.51801
+    },
+    "l2_distance": 0.3698,
+    "original_prompt": "Identify the objects \"cup or mug, pitcher, table\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "pitcher": {
+            "xmin": 173,
+            "ymin": 21,
+            "xmax": 393,
+            "ymax": 271
+        },
+        "table": {
+            "xmin": 3,
+            "ymin": 397,
+            "xmax": 498,
+            "ymax": 475
+        },
+        "cup or mug": {
+            "xmin": 111,
+            "ymin": 297,
+            "xmax": 264,
+            "ymax": 456
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"cup or umg, pitcher, taxle\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [220, 634, 528, 944], \"label\": \"cup\"},\n\t{\"bbox_2d\": [348, 54, 794, 571], \"label\": \"pitcher\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    220,
+                    634,
+                    528,
+                    944
+                ],
+                "label": "cup"
+            },
+            {
+                "bbox_2d": [
+                    348,
+                    54,
+                    794,
+                    571
+                ],
+                "label": "pitcher"
+            }
+        ],
+        "token_count": 72,
+        "raw_token_count": 130,
+        "runtime_seconds": 0.6588
+    }
+}

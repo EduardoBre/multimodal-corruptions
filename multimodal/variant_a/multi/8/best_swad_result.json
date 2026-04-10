@@ -1,0 +1,76 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/8",
+        "folder_id": "8",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00008328.JPEG"
+    },
+    "pareto_index": 11,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 60,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.9323704201329708,
+        "txt_attack": "homophone",
+        "txt_scale": 0.9948250792623392
+    },
+    "objectives": {
+        "iou": 0.33729,
+        "img_dist": 0.09723,
+        "txt_dist": 0.27082,
+        "txt_sim": 0.72918
+    },
+    "swad_metrics": {
+        "iou_0": 0.90057,
+        "delta_m_plus": 0.62547,
+        "phi": 0.65828,
+        "swad": 0.41174
+    },
+    "l2_distance": 0.44335,
+    "original_prompt": "Identify the objects \"harmonica, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 0,
+            "ymin": 10,
+            "xmax": 412,
+            "ymax": 332
+        },
+        "harmonica": {
+            "xmin": 102,
+            "ymin": 199,
+            "xmax": 375,
+            "ymax": 332
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"harmoniqa, purse on\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [210, 575, 672, 750], \"label\": \"harmoniqa\"},\n\t{\"bbox_2d\": [210, 747, 672, 997], \"label\": \"purse on\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    210,
+                    575,
+                    672,
+                    750
+                ],
+                "label": "harmoniqa"
+            },
+            {
+                "bbox_2d": [
+                    210,
+                    747,
+                    672,
+                    997
+                ],
+                "label": "purse on"
+            }
+        ],
+        "token_count": 77,
+        "raw_token_count": 78,
+        "runtime_seconds": 0.3005
+    }
+}

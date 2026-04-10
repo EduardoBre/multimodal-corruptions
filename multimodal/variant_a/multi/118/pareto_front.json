@@ -1,0 +1,1452 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/118",
+        "folder_id": "118",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00007359.JPEG"
+    },
+    "original_prompt": "Identify the objects \"person, trombone, trumpet\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 0,
+            "ymin": 93,
+            "xmax": 309,
+            "ymax": 374
+        },
+        "person_1": {
+            "xmin": 458,
+            "ymin": 100,
+            "xmax": 498,
+            "ymax": 373
+        },
+        "person_2": {
+            "xmin": 243,
+            "ymin": 149,
+            "xmax": 406,
+            "ymax": 374
+        },
+        "trombone": {
+            "xmin": 135,
+            "ymin": 223,
+            "xmax": 307,
+            "ymax": 355
+        },
+        "trumpet": {
+            "xmin": 180,
+            "ymin": 218,
+            "xmax": 308,
+            "ymax": 358
+        }
+    },
+    "baseline_iou": 0.78171,
+    "swad_star": 0.44717,
+    "swad_star_index": 14,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 60,
+    "skipped_evaluations": 30,
+    "n_solutions": 17,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.77381,
+                "img_dist": 0.03929,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.78171,
+                "delta_m_plus": 0.01011,
+                "phi": 0.96071,
+                "swad": 0.00971
+            },
+            "l2_distance": 0.77481,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"person, trombone, trumpet\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 250, 616, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [498, 400, 778, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [798, 268, 1000, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [798, 398, 978, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [0, 498, 100, 650], \"label\": \"person\"},\n\t{\"bbox_2d\": [328, 508, 400, 600], \"label\": \"person\"},\n\t{\"bbox_2d\": [258, 588, 616, 950], \"label\": \"trombone\"},\n\t{\"bbox_2d\": [258, 588, 616, 950], \"label\": \"trumpet\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            250,
+                            616,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            498,
+                            400,
+                            778,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            798,
+                            268,
+                            1000,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            798,
+                            398,
+                            978,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            498,
+                            100,
+                            650
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            328,
+                            508,
+                            400,
+                            600
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            258,
+                            588,
+                            616,
+                            950
+                        ],
+                        "label": "trombone"
+                    },
+                    {
+                        "bbox_2d": [
+                            258,
+                            588,
+                            616,
+                            950
+                        ],
+                        "label": "trumpet"
+                    }
+                ],
+                "token_count": 275,
+                "raw_token_count": 369,
+                "runtime_seconds": 1.2124
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.79005,
+                "img_dist": 0.03399,
+                "txt_dist": 0.16214,
+                "txt_sim": 0.83786
+            },
+            "swad_metrics": {
+                "iou_0": 0.78171,
+                "delta_m_plus": 0.0,
+                "phi": 0.80938,
+                "swad": 0.0
+            },
+            "l2_distance": 0.80723,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"person, trom bone, trumpit\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 248, 615, 997], \"label\": \"person\"},\n\t{\"bbox_2d\": [498, 404, 788, 997], \"label\": \"person\"},\n\t{\"bbox_2d\": [798, 272, 998, 997], \"label\": \"person\"},\n\t{\"bbox_2d\": [800, 392, 960, 997], \"label\": \"person\"},\n\t{\"bbox_2d\": [0, 588, 615, 997], \"label\": \"trom bone\"},\n\t{\"bbox_2d\": [345, 588, 615, 955], \"label\": \"trumpit\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            248,
+                            615,
+                            997
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            498,
+                            404,
+                            788,
+                            997
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            798,
+                            272,
+                            998,
+                            997
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            800,
+                            392,
+                            960,
+                            997
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            588,
+                            615,
+                            997
+                        ],
+                        "label": "trom bone"
+                    },
+                    {
+                        "bbox_2d": [
+                            345,
+                            588,
+                            615,
+                            955
+                        ],
+                        "label": "trumpit"
+                    }
+                ],
+                "token_count": 204,
+                "raw_token_count": 369,
+                "runtime_seconds": 1.2124
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.9662109336868401,
+                "txt_attack": "synonym",
+                "txt_scale": 0.43519445464759643
+            },
+            "objectives": {
+                "iou": 0.62027,
+                "img_dist": 0.16518,
+                "txt_dist": 0.04047,
+                "txt_sim": 0.95953
+            },
+            "swad_metrics": {
+                "iou_0": 0.78171,
+                "delta_m_plus": 0.20652,
+                "phi": 0.80103,
+                "swad": 0.16543
+            },
+            "l2_distance": 0.64316,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"person, brass instrument, trumpet\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 248, 619, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [788, 272, 1000, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [498, 400, 788, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [0, 588, 619, 998], \"label\": \"brass instrument\"},\n\t{\"bbox_2d\": [0, 588, 619, 998], \"label\": \"trumpet\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            248,
+                            619,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            788,
+                            272,
+                            1000,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            498,
+                            400,
+                            788,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            588,
+                            619,
+                            998
+                        ],
+                        "label": "brass instrument"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            588,
+                            619,
+                            998
+                        ],
+                        "label": "trumpet"
+                    }
+                ],
+                "token_count": 170,
+                "raw_token_count": 340,
+                "runtime_seconds": 1.0583
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.486062019522153,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.8971524375333463
+            },
+            "objectives": {
+                "iou": 0.30022,
+                "img_dist": 0.06696,
+                "txt_dist": 0.31464,
+                "txt_sim": 0.68536
+            },
+            "swad_metrics": {
+                "iou_0": 0.78171,
+                "delta_m_plus": 0.61594,
+                "phi": 0.63947,
+                "swad": 0.39388
+            },
+            "l2_distance": 0.44002,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"perlon, tromobne, trumpst\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 595, 612, 1000], \"label\": \"perlon\"},\n\t{\"bbox_2d\": [0, 595, 612, 1000], \"label\": \"tromobne\"},\n\t{\"bbox_2d\": [0, 595, 612, 1000], \"label\": \"trumpst\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            595,
+                            612,
+                            1000
+                        ],
+                        "label": "perlon"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            595,
+                            612,
+                            1000
+                        ],
+                        "label": "tromobne"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            595,
+                            612,
+                            1000
+                        ],
+                        "label": "trumpst"
+                    }
+                ],
+                "token_count": 108,
+                "raw_token_count": 340,
+                "runtime_seconds": 1.0583
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.6213450499591809,
+                "txt_attack": "synonym",
+                "txt_scale": 0.7933036501430749
+            },
+            "objectives": {
+                "iou": 0.59888,
+                "img_dist": 0.11807,
+                "txt_dist": 0.09652,
+                "txt_sim": 0.90348
+            },
+            "swad_metrics": {
+                "iou_0": 0.78171,
+                "delta_m_plus": 0.23388,
+                "phi": 0.79681,
+                "swad": 0.18636
+            },
+            "l2_distance": 0.61799,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"person, horn, trumpet\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 244, 619, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [498, 404, 750, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [798, 268, 1000, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [800, 398, 998, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [0, 588, 619, 998], \"label\": \"horn\"},\n\t{\"bbox_2d\": [0, 588, 619, 998], \"label\": \"trumpet\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            244,
+                            619,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            498,
+                            404,
+                            750,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            798,
+                            268,
+                            1000,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            800,
+                            398,
+                            998,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            588,
+                            619,
+                            998
+                        ],
+                        "label": "horn"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            588,
+                            619,
+                            998
+                        ],
+                        "label": "trumpet"
+                    }
+                ],
+                "token_count": 201,
+                "raw_token_count": 340,
+                "runtime_seconds": 1.0583
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.6142442256074252,
+                "txt_attack": "homophone",
+                "txt_scale": 0.07249232805757189
+            },
+            "objectives": {
+                "iou": 0.75994,
+                "img_dist": 0.05132,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.78171,
+                "delta_m_plus": 0.02785,
+                "phi": 0.94868,
+                "swad": 0.02642
+            },
+            "l2_distance": 0.76167,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"person, trombone, trumpet\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 244, 612, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [498, 404, 750, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [798, 268, 1000, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [800, 428, 998, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [0, 500, 100, 672], \"label\": \"person\"},\n\t{\"bbox_2d\": [330, 500, 408, 580], \"label\": \"person\"},\n\t{\"bbox_2d\": [0, 592, 612, 998], \"label\": \"trombone\"},\n\t{\"bbox_2d\": [268, 588, 612, 956], \"label\": \"trumpet\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            244,
+                            612,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            498,
+                            404,
+                            750,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            798,
+                            268,
+                            1000,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            800,
+                            428,
+                            998,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            500,
+                            100,
+                            672
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            330,
+                            500,
+                            408,
+                            580
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            592,
+                            612,
+                            998
+                        ],
+                        "label": "trombone"
+                    },
+                    {
+                        "bbox_2d": [
+                            268,
+                            588,
+                            612,
+                            956
+                        ],
+                        "label": "trumpet"
+                    }
+                ],
+                "token_count": 269,
+                "raw_token_count": 396,
+                "runtime_seconds": 1.3443
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.486062019522153,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.8971524375333463
+            },
+            "objectives": {
+                "iou": 0.53063,
+                "img_dist": 0.04783,
+                "txt_dist": 0.3302,
+                "txt_sim": 0.6698
+            },
+            "swad_metrics": {
+                "iou_0": 0.78171,
+                "delta_m_plus": 0.32119,
+                "phi": 0.63776,
+                "swad": 0.20485
+            },
+            "l2_distance": 0.62681,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"perton, rtombone, trumxet\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 248, 612, 997], \"label\": \"perton\"},\n\t{\"bbox_2d\": [498, 404, 758, 997], \"label\": \"rtombone\"},\n\t{\"bbox_2d\": [800, 267, 1000, 997], \"label\": \"trumxet\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            248,
+                            612,
+                            997
+                        ],
+                        "label": "perton"
+                    },
+                    {
+                        "bbox_2d": [
+                            498,
+                            404,
+                            758,
+                            997
+                        ],
+                        "label": "rtombone"
+                    },
+                    {
+                        "bbox_2d": [
+                            800,
+                            267,
+                            1000,
+                            997
+                        ],
+                        "label": "trumxet"
+                    }
+                ],
+                "token_count": 110,
+                "raw_token_count": 396,
+                "runtime_seconds": 1.3443
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.17733430660768873,
+                "txt_attack": "homophone",
+                "txt_scale": 0.7724979474714236
+            },
+            "objectives": {
+                "iou": 0.57455,
+                "img_dist": 0.04324,
+                "txt_dist": 0.23021,
+                "txt_sim": 0.76979
+            },
+            "swad_metrics": {
+                "iou_0": 0.78171,
+                "delta_m_plus": 0.26501,
+                "phi": 0.7365,
+                "swad": 0.19518
+            },
+            "l2_distance": 0.62046,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"pursun, tram bone, trumpet\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 244, 615, 997], \"label\": \"pursun\"},\n\t{\"bbox_2d\": [0, 244, 615, 997], \"label\": \"tram bone\"},\n\t{\"bbox_2d\": [357, 588, 615, 954], \"label\": \"trumpet\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            244,
+                            615,
+                            997
+                        ],
+                        "label": "pursun"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            244,
+                            615,
+                            997
+                        ],
+                        "label": "tram bone"
+                    },
+                    {
+                        "bbox_2d": [
+                            357,
+                            588,
+                            615,
+                            954
+                        ],
+                        "label": "trumpet"
+                    }
+                ],
+                "token_count": 106,
+                "raw_token_count": 396,
+                "runtime_seconds": 1.3443
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "img_attack": "fog_filter",
+                "img_scale": 0.837766518696178,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6344837781138515
+            },
+            "objectives": {
+                "iou": 0.47543,
+                "img_dist": 0.37057,
+                "txt_dist": 0.13471,
+                "txt_sim": 0.86529
+            },
+            "swad_metrics": {
+                "iou_0": 0.78171,
+                "delta_m_plus": 0.39181,
+                "phi": 0.54464,
+                "swad": 0.21339
+            },
+            "l2_distance": 0.61766,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"purse on, trombone, trumpet\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 624, 615, 1000], \"label\": \"purse on\"},\n\t{\"bbox_2d\": [357, 588, 615, 955], \"label\": \"trombone\"},\n\t{\"bbox_2d\": [357, 588, 615, 955], \"label\": \"trumpet\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            624,
+                            615,
+                            1000
+                        ],
+                        "label": "purse on"
+                    },
+                    {
+                        "bbox_2d": [
+                            357,
+                            588,
+                            615,
+                            955
+                        ],
+                        "label": "trombone"
+                    },
+                    {
+                        "bbox_2d": [
+                            357,
+                            588,
+                            615,
+                            955
+                        ],
+                        "label": "trumpet"
+                    }
+                ],
+                "token_count": 110,
+                "raw_token_count": 396,
+                "runtime_seconds": 1.3443
+            }
+        },
+        {
+            "index": 9,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.5656671100314771,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.04012198199862049
+            },
+            "objectives": {
+                "iou": 0.68691,
+                "img_dist": 0.09327,
+                "txt_dist": 0.07367,
+                "txt_sim": 0.92633
+            },
+            "swad_metrics": {
+                "iou_0": 0.78171,
+                "delta_m_plus": 0.12127,
+                "phi": 0.83993,
+                "swad": 0.10186
+            },
+            "l2_distance": 0.69712,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"pers\u043en\u200d, t\u200brombon\u0435, trumpet\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 248, 612, 1000], \"label\": \"pers\u043en\"},\n\t{\"bbox_2d\": [494, 398, 780, 1000], \"label\": \"pers\u043en\"},\n\t{\"bbox_2d\": [798, 260, 1000, 1000], \"label\": \"pers\u043en\"},\n\t{\"bbox_2d\": [0, 588, 612, 1000], \"label\": \"trombon\u0435\"},\n\t{\"bbox_2d\": [412, 632, 612, 956], \"label\": \"trumpet\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            248,
+                            612,
+                            1000
+                        ],
+                        "label": "pers\u043en"
+                    },
+                    {
+                        "bbox_2d": [
+                            494,
+                            398,
+                            780,
+                            1000
+                        ],
+                        "label": "pers\u043en"
+                    },
+                    {
+                        "bbox_2d": [
+                            798,
+                            260,
+                            1000,
+                            1000
+                        ],
+                        "label": "pers\u043en"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            588,
+                            612,
+                            1000
+                        ],
+                        "label": "trombon\u0435"
+                    },
+                    {
+                        "bbox_2d": [
+                            412,
+                            632,
+                            612,
+                            956
+                        ],
+                        "label": "trumpet"
+                    }
+                ],
+                "token_count": 183,
+                "raw_token_count": 396,
+                "runtime_seconds": 1.3443
+            }
+        },
+        {
+            "index": 10,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.015391010671470196,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.5952056528205818
+            },
+            "objectives": {
+                "iou": 0.76406,
+                "img_dist": 0.03929,
+                "txt_dist": 0.02501,
+                "txt_sim": 0.97499
+            },
+            "swad_metrics": {
+                "iou_0": 0.78171,
+                "delta_m_plus": 0.02258,
+                "phi": 0.93668,
+                "swad": 0.02115
+            },
+            "l2_distance": 0.76548,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"perosn, trombone, trumpet\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 250, 616, 1000], \"label\": \"perosn\"},\n\t{\"bbox_2d\": [498, 400, 778, 1000], \"label\": \"perosn\"},\n\t{\"bbox_2d\": [798, 268, 1000, 1000], \"label\": \"perosn\"},\n\t{\"bbox_2d\": [798, 398, 978, 1000], \"label\": \"perosn\"},\n\t{\"bbox_2d\": [0, 498, 100, 650], \"label\": \"perosn\"},\n\t{\"bbox_2d\": [250, 580, 616, 950], \"label\": \"trombone\"},\n\t{\"bbox_2d\": [250, 580, 616, 950], \"label\": \"trumpet\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            250,
+                            616,
+                            1000
+                        ],
+                        "label": "perosn"
+                    },
+                    {
+                        "bbox_2d": [
+                            498,
+                            400,
+                            778,
+                            1000
+                        ],
+                        "label": "perosn"
+                    },
+                    {
+                        "bbox_2d": [
+                            798,
+                            268,
+                            1000,
+                            1000
+                        ],
+                        "label": "perosn"
+                    },
+                    {
+                        "bbox_2d": [
+                            798,
+                            398,
+                            978,
+                            1000
+                        ],
+                        "label": "perosn"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            498,
+                            100,
+                            650
+                        ],
+                        "label": "perosn"
+                    },
+                    {
+                        "bbox_2d": [
+                            250,
+                            580,
+                            616,
+                            950
+                        ],
+                        "label": "trombone"
+                    },
+                    {
+                        "bbox_2d": [
+                            250,
+                            580,
+                            616,
+                            950
+                        ],
+                        "label": "trumpet"
+                    }
+                ],
+                "token_count": 252,
+                "raw_token_count": 396,
+                "runtime_seconds": 1.3443
+            }
+        },
+        {
+            "index": 11,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.007169600070453197,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.230571993989373
+            },
+            "objectives": {
+                "iou": 0.77932,
+                "img_dist": 0.03629,
+                "txt_dist": 0.04806,
+                "txt_sim": 0.95194
+            },
+            "swad_metrics": {
+                "iou_0": 0.78171,
+                "delta_m_plus": 0.00306,
+                "phi": 0.91739,
+                "swad": 0.0028
+            },
+            "l2_distance": 0.78164,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"p\u0435rs\u200bo\u200dn, trombone, trumpet\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 250, 619, 1000], \"label\": \"p\u0435rs\u200bo\u200dn\"},\n\t{\"bbox_2d\": [498, 398, 778, 1000], \"label\": \"p\u0435rs\u200bo\u200dn\"},\n\t{\"bbox_2d\": [800, 398, 999, 1000], \"label\": \"p\u0435rs\u200bo\u200dn\"},\n\t{\"bbox_2d\": [800, 264, 999, 1000], \"label\": \"p\u0435rs\u200bo\u200dn\"},\n\t{\"bbox_2d\": [0, 500, 125, 672], \"label\": \"p\u0435rs\u200bo\u200dn\"},\n\t{\"bbox_2d\": [325, 500, 400, 600], \"label\": \"p\u0435rs\u200bo\u200dn\"},\n\t{\"bbox_2d\": [498, 500, 548, 572], \"label\": \"p\u0435rs\u200bo\u200dn\"},\n\t{\"bbox_2d\": [700, 450, 800, 700], \"label\": \"p\u0435rs\u200bo\u200dn\"},\n\t{\"bbox_2d\": [0, 580, 619, 1000], \"label\": \"trombone\"},\n\t{\"bbox_2d\": [325, 580, 619, 950], \"label\": \"trumpet\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            250,
+                            619,
+                            1000
+                        ],
+                        "label": "p\u0435rs\u200bo\u200dn"
+                    },
+                    {
+                        "bbox_2d": [
+                            498,
+                            398,
+                            778,
+                            1000
+                        ],
+                        "label": "p\u0435rs\u200bo\u200dn"
+                    },
+                    {
+                        "bbox_2d": [
+                            800,
+                            398,
+                            999,
+                            1000
+                        ],
+                        "label": "p\u0435rs\u200bo\u200dn"
+                    },
+                    {
+                        "bbox_2d": [
+                            800,
+                            264,
+                            999,
+                            1000
+                        ],
+                        "label": "p\u0435rs\u200bo\u200dn"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            500,
+                            125,
+                            672
+                        ],
+                        "label": "p\u0435rs\u200bo\u200dn"
+                    },
+                    {
+                        "bbox_2d": [
+                            325,
+                            500,
+                            400,
+                            600
+                        ],
+                        "label": "p\u0435rs\u200bo\u200dn"
+                    },
+                    {
+                        "bbox_2d": [
+                            498,
+                            500,
+                            548,
+                            572
+                        ],
+                        "label": "p\u0435rs\u200bo\u200dn"
+                    },
+                    {
+                        "bbox_2d": [
+                            700,
+                            450,
+                            800,
+                            700
+                        ],
+                        "label": "p\u0435rs\u200bo\u200dn"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            580,
+                            619,
+                            1000
+                        ],
+                        "label": "trombone"
+                    },
+                    {
+                        "bbox_2d": [
+                            325,
+                            580,
+                            619,
+                            950
+                        ],
+                        "label": "trumpet"
+                    }
+                ],
+                "token_count": 395,
+                "raw_token_count": 396,
+                "runtime_seconds": 1.3443
+            }
+        },
+        {
+            "index": 12,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.30182350207052017,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.55894,
+                "img_dist": 0.04625,
+                "txt_dist": 0.13471,
+                "txt_sim": 0.86529
+            },
+            "swad_metrics": {
+                "iou_0": 0.78171,
+                "delta_m_plus": 0.28498,
+                "phi": 0.82527,
+                "swad": 0.23518
+            },
+            "l2_distance": 0.5768,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"purse on, trombone, trumpet\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 248, 619, 1000], \"label\": \"purse on\"},\n\t{\"bbox_2d\": [258, 588, 615, 952], \"label\": \"trombone\"},\n\t{\"bbox_2d\": [258, 588, 615, 952], \"label\": \"trumpet\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            248,
+                            619,
+                            1000
+                        ],
+                        "label": "purse on"
+                    },
+                    {
+                        "bbox_2d": [
+                            258,
+                            588,
+                            615,
+                            952
+                        ],
+                        "label": "trombone"
+                    },
+                    {
+                        "bbox_2d": [
+                            258,
+                            588,
+                            615,
+                            952
+                        ],
+                        "label": "trumpet"
+                    }
+                ],
+                "token_count": 110,
+                "raw_token_count": 336,
+                "runtime_seconds": 1.108
+            }
+        },
+        {
+            "index": 13,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08558978795258676,
+                "txt_attack": "synonym",
+                "txt_scale": 0.0873827135166444
+            },
+            "objectives": {
+                "iou": 0.79109,
+                "img_dist": 0.03438,
+                "txt_dist": 0.04617,
+                "txt_sim": 0.95383
+            },
+            "swad_metrics": {
+                "iou_0": 0.78171,
+                "delta_m_plus": 0.0,
+                "phi": 0.92104,
+                "swad": 0.0
+            },
+            "l2_distance": 0.79318,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"person, slide trombone, trumpet\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 248, 615, 997], \"label\": \"person\"},\n\t{\"bbox_2d\": [498, 404, 788, 997], \"label\": \"person\"},\n\t{\"bbox_2d\": [798, 274, 999, 997], \"label\": \"person\"},\n\t{\"bbox_2d\": [800, 392, 972, 997], \"label\": \"person\"},\n\t{\"bbox_2d\": [0, 588, 615, 997], \"label\": \"slide trombone\"},\n\t{\"bbox_2d\": [355, 588, 615, 955], \"label\": \"trumpet\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            248,
+                            615,
+                            997
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            498,
+                            404,
+                            788,
+                            997
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            798,
+                            274,
+                            999,
+                            997
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            800,
+                            392,
+                            972,
+                            997
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            588,
+                            615,
+                            997
+                        ],
+                        "label": "slide trombone"
+                    },
+                    {
+                        "bbox_2d": [
+                            355,
+                            588,
+                            615,
+                            955
+                        ],
+                        "label": "trumpet"
+                    }
+                ],
+                "token_count": 204,
+                "raw_token_count": 336,
+                "runtime_seconds": 1.108
+            }
+        },
+        {
+            "index": 14,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.0455218379984251,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6869572165224048
+            },
+            "objectives": {
+                "iou": 0.31932,
+                "img_dist": 0.05287,
+                "txt_dist": 0.20182,
+                "txt_sim": 0.79818
+            },
+            "swad_metrics": {
+                "iou_0": 0.78171,
+                "delta_m_plus": 0.59151,
+                "phi": 0.75598,
+                "swad": 0.44717
+            },
+            "l2_distance": 0.38143,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"pursun, trombone, trump it\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 250, 615, 997], \"label\": \"pursun\"},\n\t{\"bbox_2d\": [0, 250, 615, 997], \"label\": \"trombone\"},\n\t{\"bbox_2d\": [0, 250, 615, 997], \"label\": \"trump it\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            250,
+                            615,
+                            997
+                        ],
+                        "label": "pursun"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            250,
+                            615,
+                            997
+                        ],
+                        "label": "trombone"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            250,
+                            615,
+                            997
+                        ],
+                        "label": "trump it"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 336,
+                "runtime_seconds": 1.108
+            }
+        },
+        {
+            "index": 15,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.005360977587466786,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.08876400533728604
+            },
+            "objectives": {
+                "iou": 0.70261,
+                "img_dist": 0.05287,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.78171,
+                "delta_m_plus": 0.10119,
+                "phi": 0.94713,
+                "swad": 0.09584
+            },
+            "l2_distance": 0.7046,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"person, trombone, trumpet\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 250, 617, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [498, 404, 778, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [798, 388, 978, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [898, 272, 1000, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [712, 472, 800, 700], \"label\": \"person\"},\n\t{\"bbox_2d\": [328, 508, 408, 600], \"label\": \"person\"},\n\t{\"bbox_2d\": [0, 508, 100, 658], \"label\": \"person\"},\n\t{\"bbox_2d\": [32, 588, 617, 998], \"label\": \"trombone\"},\n\t{\"bbox_2d\": [328, 508, 408, 600], \"label\": \"trumpet\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            250,
+                            617,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            498,
+                            404,
+                            778,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            798,
+                            388,
+                            978,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            898,
+                            272,
+                            1000,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            712,
+                            472,
+                            800,
+                            700
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            328,
+                            508,
+                            408,
+                            600
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            508,
+                            100,
+                            658
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            32,
+                            588,
+                            617,
+                            998
+                        ],
+                        "label": "trombone"
+                    },
+                    {
+                        "bbox_2d": [
+                            328,
+                            508,
+                            408,
+                            600
+                        ],
+                        "label": "trumpet"
+                    }
+                ],
+                "token_count": 303,
+                "raw_token_count": 336,
+                "runtime_seconds": 1.108
+            }
+        },
+        {
+            "index": 16,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.21300761893764208,
+                "txt_attack": "synonym",
+                "txt_scale": 0.403299969375271
+            },
+            "objectives": {
+                "iou": 0.69662,
+                "img_dist": 0.04738,
+                "txt_dist": 0.10546,
+                "txt_sim": 0.89454
+            },
+            "swad_metrics": {
+                "iou_0": 0.78171,
+                "delta_m_plus": 0.10885,
+                "phi": 0.85216,
+                "swad": 0.09276
+            },
+            "l2_distance": 0.70615,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"individual, trombone, brass instrument\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 250, 612, 1000], \"label\": \"individual\"},\n\t{\"bbox_2d\": [494, 398, 778, 1000], \"label\": \"individual\"},\n\t{\"bbox_2d\": [800, 398, 978, 1000], \"label\": \"individual\"},\n\t{\"bbox_2d\": [900, 264, 1000, 1000], \"label\": \"individual\"},\n\t{\"bbox_2d\": [0, 500, 100, 650], \"label\": \"individual\"},\n\t{\"bbox_2d\": [320, 500, 400, 600], \"label\": \"individual\"},\n\t{\"bbox_2d\": [700, 472, 800, 700], \"label\": \"individual\"},\n\t{\"bbox_2d\": [0, 592, 612, 1000], \"label\": \"trombone\"},\n\t{\"bbox_2d\": [0, 592, 612, 1000], \"label\": \"brass instrument\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            250,
+                            612,
+                            1000
+                        ],
+                        "label": "individual"
+                    },
+                    {
+                        "bbox_2d": [
+                            494,
+                            398,
+                            778,
+                            1000
+                        ],
+                        "label": "individual"
+                    },
+                    {
+                        "bbox_2d": [
+                            800,
+                            398,
+                            978,
+                            1000
+                        ],
+                        "label": "individual"
+                    },
+                    {
+                        "bbox_2d": [
+                            900,
+                            264,
+                            1000,
+                            1000
+                        ],
+                        "label": "individual"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            500,
+                            100,
+                            650
+                        ],
+                        "label": "individual"
+                    },
+                    {
+                        "bbox_2d": [
+                            320,
+                            500,
+                            400,
+                            600
+                        ],
+                        "label": "individual"
+                    },
+                    {
+                        "bbox_2d": [
+                            700,
+                            472,
+                            800,
+                            700
+                        ],
+                        "label": "individual"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            592,
+                            612,
+                            1000
+                        ],
+                        "label": "trombone"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            592,
+                            612,
+                            1000
+                        ],
+                        "label": "brass instrument"
+                    }
+                ],
+                "token_count": 306,
+                "raw_token_count": 336,
+                "runtime_seconds": 1.108
+            }
+        }
+    ]
+}

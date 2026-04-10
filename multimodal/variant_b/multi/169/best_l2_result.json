@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/169",
+        "folder_id": "169",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00007591.JPEG"
+    },
+    "pareto_index": 0,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.001696,
+            "defocus_blur": 0.00835,
+            "motion_blur": 0.009851,
+            "fog_filter": 0.012306,
+            "pixelate": 0.016311,
+            "jpeg_filter": 0.029843
+        },
+        "text_corruptions": {
+            "homophone": 0.088963,
+            "synonym": 0.040483,
+            "ata_saliency": 0.029955,
+            "fragmentation": 0.045323,
+            "character_noise": 0.021986
+        },
+        "img_budget_used": 0.078357,
+        "txt_budget_used": 0.226711,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.0915,
+        "txt_dist": 0.23261,
+        "txt_sim": 0.76739
+    },
+    "swad_metrics": {
+        "iou_0": 0.97668,
+        "delta_m_plus": 1.0,
+        "phi": 0.69717,
+        "swad": 0.69717
+    },
+    "l2_distance": 0.24996,
+    "original_prompt": "Identify the objects \"bird, table\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 162,
+            "ymin": 11,
+            "xmax": 411,
+            "ymax": 373
+        },
+        "table": {
+            "xmin": 0,
+            "ymin": 42,
+            "xmax": 442,
+            "ymax": 498
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"b\u200durre\u200bd, tab\u200ble\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 100, 999, 999], \"label\": \"b\u200durre\u200bd, tab\u200ble\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    100,
+                    999,
+                    999
+                ],
+                "label": "b\u200durre\u200bd, tab\u200ble"
+            }
+        ],
+        "token_count": 46,
+        "raw_token_count": 95,
+        "runtime_seconds": 0.2966
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0016958506333754951,
+        "defocus_blur": 0.008350268733472565,
+        "motion_blur": 0.00985061641205007,
+        "fog_filter": 0.012306158824174096,
+        "pixelate": 0.016311008045921005,
+        "jpeg_filter": 0.029843215281846643
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.08896345038995677,
+        "synonym": 0.04048319200514897,
+        "ata_saliency": 0.029955277417945167,
+        "fragmentation": 0.045323112001124405,
+        "character_noise": 0.021985979657676156
+    }
+}

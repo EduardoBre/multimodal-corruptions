@@ -1,0 +1,112 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/1",
+        "folder_id": "1",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00026174.JPEG"
+    },
+    "pareto_index": 8,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.001733,
+            "defocus_blur": 0.005479,
+            "motion_blur": 0.018791,
+            "fog_filter": 0.075046,
+            "pixelate": 0.020852,
+            "jpeg_filter": 0.032634
+        },
+        "text_corruptions": {
+            "homophone": 0.280589,
+            "synonym": 0.006054,
+            "ata_saliency": 0.164646,
+            "fragmentation": 1e-06,
+            "character_noise": 0.001967
+        },
+        "img_budget_used": 0.154536,
+        "txt_budget_used": 0.453257,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.05187,
+        "txt_dist": 0.30842,
+        "txt_sim": 0.69158
+    },
+    "swad_metrics": {
+        "iou_0": 0.92092,
+        "delta_m_plus": 1.0,
+        "phi": 0.65571,
+        "swad": 0.65571
+    },
+    "l2_distance": 0.31275,
+    "original_prompt": "Identify the objects \"cup or mug, pitcher, table\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "pitcher": {
+            "xmin": 173,
+            "ymin": 21,
+            "xmax": 393,
+            "ymax": 271
+        },
+        "table": {
+            "xmin": 3,
+            "ymin": 397,
+            "xmax": 498,
+            "ymax": 475
+        },
+        "cup or mug": {
+            "xmin": 111,
+            "ymin": 297,
+            "xmax": 264,
+            "ymax": 456
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"cup or umg, pi\u0441ture, ta\u200by bull\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [218, 632, 522, 948], \"label\": \"cup or umg, pi\u0441ture, ta\u200by bull\"},\n\t{\"bbox_2d\": [345, 50, 794, 648], \"label\": \"cup or umg, pi\u0441ture, ta\u200by bull\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    218,
+                    632,
+                    522,
+                    948
+                ],
+                "label": "cup or umg, pi\u0441ture, ta\u200by bull"
+            },
+            {
+                "bbox_2d": [
+                    345,
+                    50,
+                    794,
+                    648
+                ],
+                "label": "cup or umg, pi\u0441ture, ta\u200by bull"
+            }
+        ],
+        "token_count": 95,
+        "raw_token_count": 116,
+        "runtime_seconds": 0.3922
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0017333751979033678,
+        "defocus_blur": 0.005478975543699187,
+        "motion_blur": 0.018791449043134647,
+        "fog_filter": 0.07504602108482375,
+        "pixelate": 0.020851854877002918,
+        "jpeg_filter": 0.032634022632904366
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.28058859098028216,
+        "synonym": 0.006053636888347115,
+        "ata_saliency": 0.16464647416100997,
+        "fragmentation": 1.4307081284362783e-06,
+        "character_noise": 0.00196728709319356
+    }
+}

@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/139",
+        "folder_id": "139",
+        "category": "single/multi",
+        "filename": "ILSVRC2013_val_00002022.JPEG"
+    },
+    "pareto_index": 3,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 45,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.040911,
+            "defocus_blur": 0.058628,
+            "motion_blur": 0.03312,
+            "fog_filter": 0.231817,
+            "pixelate": 0.184066,
+            "jpeg_filter": 0.229593
+        },
+        "text_corruptions": {
+            "homophone": 0.046713,
+            "synonym": 0.061625,
+            "ata_saliency": 0.281163,
+            "fragmentation": 0.008626,
+            "character_noise": 0.092108
+        },
+        "img_budget_used": 0.778135,
+        "txt_budget_used": 0.490235,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.27515,
+        "img_dist": 0.12066,
+        "txt_dist": 0.20014,
+        "txt_sim": 0.79986
+    },
+    "swad_metrics": {
+        "iou_0": 0.82161,
+        "delta_m_plus": 0.66511,
+        "phi": 0.70335,
+        "swad": 0.4678
+    },
+    "l2_distance": 0.361,
+    "original_prompt": "Identify the objects \"wine bottle\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "wine bottle": {
+            "xmin": 152,
+            "ymin": 13,
+            "xmax": 274,
+            "ymax": 498
+        },
+        "wine bottle_1": {
+            "xmin": 90,
+            "ymin": 6,
+            "xmax": 198,
+            "ymax": 458
+        },
+        "wine bottle_2": {
+            "xmin": 45,
+            "ymin": 8,
+            "xmax": 140,
+            "ymax": 421
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"w\u200bih\u200bne bottle\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [140, 22, 340, 837], \"label\": \"w\u200bih\u200bne bottle\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    140,
+                    22,
+                    340,
+                    837
+                ],
+                "label": "w\u200bih\u200bne bottle"
+            }
+        ],
+        "token_count": 43,
+        "raw_token_count": 136,
+        "runtime_seconds": 0.4284
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0409109095795085,
+        "defocus_blur": 0.05862844174287246,
+        "motion_blur": 0.033119508760139284,
+        "fog_filter": 0.23181653522595927,
+        "pixelate": 0.18406596144332818,
+        "jpeg_filter": 0.22959324918313342
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.046712747761375184,
+        "synonym": 0.06162477895206896,
+        "ata_saliency": 0.2811632704158498,
+        "fragmentation": 0.00862569750900131,
+        "character_noise": 0.09210801060939147
+    }
+}

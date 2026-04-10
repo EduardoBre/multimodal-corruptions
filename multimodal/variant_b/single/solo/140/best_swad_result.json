@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/140",
+        "folder_id": "140",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00008322.JPEG"
+    },
+    "pareto_index": 4,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.001199,
+            "defocus_blur": 0.004724,
+            "motion_blur": 0.009565,
+            "fog_filter": 0.000834,
+            "pixelate": 0.001042,
+            "jpeg_filter": 0.001502
+        },
+        "text_corruptions": {
+            "homophone": 0.186381,
+            "synonym": 0.012291,
+            "ata_saliency": 0.053957,
+            "fragmentation": 0.009368,
+            "character_noise": 0.019438
+        },
+        "img_budget_used": 0.018867,
+        "txt_budget_used": 0.281435,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.17187,
+        "txt_dist": 0.22308,
+        "txt_sim": 0.77692
+    },
+    "swad_metrics": {
+        "iou_0": 0.794,
+        "delta_m_plus": 1.0,
+        "phi": 0.64339,
+        "swad": 0.64339
+    },
+    "l2_distance": 0.28161,
+    "original_prompt": "Identify the objects \"bench\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bench": {
+            "xmin": 203,
+            "ymin": 429,
+            "xmax": 286,
+            "ymax": 474
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"ben\u200d\u0441h\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [378, 792, 612, 950], \"label\": \"ben\u200ds\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    378,
+                    792,
+                    612,
+                    950
+                ],
+                "label": "ben\u200ds"
+            }
+        ],
+        "token_count": 42,
+        "raw_token_count": 46,
+        "runtime_seconds": 0.1575
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0011993076084192925,
+        "defocus_blur": 0.0047242270689204155,
+        "motion_blur": 0.009564913801940259,
+        "fog_filter": 0.0008342728014149644,
+        "pixelate": 0.0010423967936296144,
+        "jpeg_filter": 0.0015022337413975306
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.1863805669655077,
+        "synonym": 0.012290534642170503,
+        "ata_saliency": 0.05395730963298116,
+        "fragmentation": 0.009368403357245245,
+        "character_noise": 0.019437737824561423
+    }
+}

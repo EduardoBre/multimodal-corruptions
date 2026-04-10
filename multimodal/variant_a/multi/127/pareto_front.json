@@ -1,0 +1,729 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/127",
+        "folder_id": "127",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00031730.JPEG"
+    },
+    "original_prompt": "Identify the objects \"chair, table\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "table": {
+            "xmin": 246,
+            "ymin": 209,
+            "xmax": 291,
+            "ymax": 261
+        },
+        "table_1": {
+            "xmin": 21,
+            "ymin": 223,
+            "xmax": 117,
+            "ymax": 284
+        },
+        "chair": {
+            "xmin": 328,
+            "ymin": 204,
+            "xmax": 390,
+            "ymax": 276
+        },
+        "chair_1": {
+            "xmin": 285,
+            "ymin": 203,
+            "xmax": 346,
+            "ymax": 268
+        }
+    },
+    "baseline_iou": 0.79266,
+    "swad_star": 0.59996,
+    "swad_star_index": 9,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 11,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.018153363333776373,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.24927259019092207
+            },
+            "objectives": {
+                "iou": 0.73199,
+                "img_dist": 0.0414,
+                "txt_dist": 0.07925,
+                "txt_sim": 0.92075
+            },
+            "swad_metrics": {
+                "iou_0": 0.79266,
+                "delta_m_plus": 0.07654,
+                "phi": 0.88263,
+                "swad": 0.06756
+            },
+            "l2_distance": 0.73743,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chair\u200d, tabl\u200be\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [577, 607, 683, 800], \"label\": \"chair\"},\n\t{\"bbox_2d\": [663, 610, 770, 800], \"label\": \"chair\"},\n\t{\"bbox_2d\": [490, 640, 577, 750], \"label\": \"table\"},\n\t{\"bbox_2d\": [66, 640, 222, 847], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            577,
+                            607,
+                            683,
+                            800
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            663,
+                            610,
+                            770,
+                            800
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            490,
+                            640,
+                            577,
+                            750
+                        ],
+                        "label": "table"
+                    },
+                    {
+                        "bbox_2d": [
+                            66,
+                            640,
+                            222,
+                            847
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 137,
+                "raw_token_count": 143,
+                "runtime_seconds": 0.4775
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.80755,
+                "img_dist": 0.03902,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.79266,
+                "delta_m_plus": 0.0,
+                "phi": 0.96098,
+                "swad": 0.0
+            },
+            "l2_distance": 0.80849,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chair, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [663, 618, 770, 820], \"label\": \"chair\"},\n\t{\"bbox_2d\": [573, 608, 680, 796], \"label\": \"chair\"},\n\t{\"bbox_2d\": [488, 640, 580, 772], \"label\": \"table\"},\n\t{\"bbox_2d\": [54, 650, 224, 850], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            663,
+                            618,
+                            770,
+                            820
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            573,
+                            608,
+                            680,
+                            796
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            488,
+                            640,
+                            580,
+                            772
+                        ],
+                        "label": "table"
+                    },
+                    {
+                        "bbox_2d": [
+                            54,
+                            650,
+                            224,
+                            850
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 137,
+                "raw_token_count": 143,
+                "runtime_seconds": 0.4775
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.79573,
+                "img_dist": 0.0414,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.79266,
+                "delta_m_plus": 0.0,
+                "phi": 0.9586,
+                "swad": 0.0
+            },
+            "l2_distance": 0.79681,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chair, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [660, 610, 775, 817], \"label\": \"chair\"},\n\t{\"bbox_2d\": [577, 607, 683, 797], \"label\": \"chair\"},\n\t{\"bbox_2d\": [488, 643, 577, 777], \"label\": \"table\"},\n\t{\"bbox_2d\": [67, 643, 222, 857], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            660,
+                            610,
+                            775,
+                            817
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            577,
+                            607,
+                            683,
+                            797
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            488,
+                            643,
+                            577,
+                            777
+                        ],
+                        "label": "table"
+                    },
+                    {
+                        "bbox_2d": [
+                            67,
+                            643,
+                            222,
+                            857
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 137,
+                "raw_token_count": 143,
+                "runtime_seconds": 0.4775
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.6126883641923373,
+                "txt_attack": "homophone",
+                "txt_scale": 0.10684452896191199
+            },
+            "objectives": {
+                "iou": 0.71796,
+                "img_dist": 0.05389,
+                "txt_dist": 0.03475,
+                "txt_sim": 0.96525
+            },
+            "swad_metrics": {
+                "iou_0": 0.79266,
+                "delta_m_plus": 0.09424,
+                "phi": 0.91323,
+                "swad": 0.08606
+            },
+            "l2_distance": 0.72082,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chair, tabel\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [578, 600, 683, 800], \"label\": \"chair\"},\n\t{\"bbox_2d\": [660, 600, 768, 800], \"label\": \"chair\"},\n\t{\"bbox_2d\": [498, 648, 578, 800], \"label\": \"tabel\"},\n\t{\"bbox_2d\": [76, 648, 220, 840], \"label\": \"tabel\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            578,
+                            600,
+                            683,
+                            800
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            660,
+                            600,
+                            768,
+                            800
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            498,
+                            648,
+                            578,
+                            800
+                        ],
+                        "label": "tabel"
+                    },
+                    {
+                        "bbox_2d": [
+                            76,
+                            648,
+                            220,
+                            840
+                        ],
+                        "label": "tabel"
+                    }
+                ],
+                "token_count": 139,
+                "raw_token_count": 143,
+                "runtime_seconds": 0.4775
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6124377601560459,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.28711,
+                "img_dist": 0.07978,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.79266,
+                "delta_m_plus": 0.63779,
+                "phi": 0.92022,
+                "swad": 0.58691
+            },
+            "l2_distance": 0.29799,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chair, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [588, 608, 678, 772], \"label\": \"chair\"},\n\t{\"bbox_2d\": [678, 608, 770, 772], \"label\": \"chair\"},\n\t{\"bbox_2d\": [268, 696, 358, 796], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            588,
+                            608,
+                            678,
+                            772
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            678,
+                            608,
+                            770,
+                            772
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            268,
+                            696,
+                            358,
+                            796
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 143,
+                "runtime_seconds": 0.4775
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.5656671100314771,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.039875089079669634
+            },
+            "objectives": {
+                "iou": 0.30137,
+                "img_dist": 0.07733,
+                "txt_dist": 0.05784,
+                "txt_sim": 0.94216
+            },
+            "swad_metrics": {
+                "iou_0": 0.79266,
+                "delta_m_plus": 0.6198,
+                "phi": 0.8693,
+                "swad": 0.53879
+            },
+            "l2_distance": 0.31646,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chair, t\u0430ble\u200b\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [588, 608, 678, 780], \"label\": \"chair\"},\n\t{\"bbox_2d\": [678, 608, 770, 780], \"label\": \"chair\"},\n\t{\"bbox_2d\": [268, 688, 352, 792], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            588,
+                            608,
+                            678,
+                            780
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            678,
+                            608,
+                            770,
+                            780
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            268,
+                            688,
+                            352,
+                            792
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 143,
+                "runtime_seconds": 0.4775
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.307337327911573,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.36099,
+                "img_dist": 0.04839,
+                "txt_dist": 0.13674,
+                "txt_sim": 0.86326
+            },
+            "swad_metrics": {
+                "iou_0": 0.79266,
+                "delta_m_plus": 0.54458,
+                "phi": 0.82149,
+                "swad": 0.44737
+            },
+            "l2_distance": 0.38904,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chare, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [272, 700, 348, 820], \"label\": \"chare\"},\n\t{\"bbox_2d\": [494, 650, 570, 800], \"label\": \"table\"},\n\t{\"bbox_2d\": [54, 650, 220, 850], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            272,
+                            700,
+                            348,
+                            820
+                        ],
+                        "label": "chare"
+                    },
+                    {
+                        "bbox_2d": [
+                            494,
+                            650,
+                            570,
+                            800
+                        ],
+                        "label": "table"
+                    },
+                    {
+                        "bbox_2d": [
+                            54,
+                            650,
+                            220,
+                            850
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 143,
+                "runtime_seconds": 0.4775
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.21300761893764208,
+                "txt_attack": "synonym",
+                "txt_scale": 0.11490566325799068
+            },
+            "objectives": {
+                "iou": 0.71729,
+                "img_dist": 0.05482,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.79266,
+                "delta_m_plus": 0.09508,
+                "phi": 0.94518,
+                "swad": 0.08987
+            },
+            "l2_distance": 0.71938,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chair, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [663, 617, 772, 810], \"label\": \"chair\"},\n\t{\"bbox_2d\": [577, 617, 681, 807], \"label\": \"chair\"},\n\t{\"bbox_2d\": [498, 643, 577, 730], \"label\": \"table\"},\n\t{\"bbox_2d\": [60, 657, 222, 857], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            663,
+                            617,
+                            772,
+                            810
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            577,
+                            617,
+                            681,
+                            807
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            498,
+                            643,
+                            577,
+                            730
+                        ],
+                        "label": "table"
+                    },
+                    {
+                        "bbox_2d": [
+                            60,
+                            657,
+                            222,
+                            857
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 137,
+                "raw_token_count": 143,
+                "runtime_seconds": 0.4775
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.018595721213425453,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6130568625347235
+            },
+            "objectives": {
+                "iou": 0.74903,
+                "img_dist": 0.04423,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.79266,
+                "delta_m_plus": 0.05504,
+                "phi": 0.95577,
+                "swad": 0.05261
+            },
+            "l2_distance": 0.75033,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chair, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [663, 620, 770, 820], \"label\": \"chair\"},\n\t{\"bbox_2d\": [575, 610, 681, 792], \"label\": \"chair\"},\n\t{\"bbox_2d\": [494, 646, 581, 740], \"label\": \"table\"},\n\t{\"bbox_2d\": [54, 650, 226, 856], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            663,
+                            620,
+                            770,
+                            820
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            575,
+                            610,
+                            681,
+                            792
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            494,
+                            646,
+                            581,
+                            740
+                        ],
+                        "label": "table"
+                    },
+                    {
+                        "bbox_2d": [
+                            54,
+                            650,
+                            226,
+                            856
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 137,
+                "raw_token_count": 143,
+                "runtime_seconds": 0.4775
+            }
+        },
+        {
+            "index": 9,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.08407,
+                "txt_dist": 0.34497,
+                "txt_sim": 0.65503
+            },
+            "swad_metrics": {
+                "iou_0": 0.79266,
+                "delta_m_plus": 1.0,
+                "phi": 0.59996,
+                "swad": 0.59996
+            },
+            "l2_distance": 0.35507,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cheer, tay bull\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [598, 600, 672, 800], \"label\": \"cheer, tay bull\"},\n\t{\"bbox_2d\": [672, 600, 772, 800], \"label\": \"cheer, tay bull\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            598,
+                            600,
+                            672,
+                            800
+                        ],
+                        "label": "cheer, tay bull"
+                    },
+                    {
+                        "bbox_2d": [
+                            672,
+                            600,
+                            772,
+                            800
+                        ],
+                        "label": "cheer, tay bull"
+                    }
+                ],
+                "token_count": 82,
+                "raw_token_count": 143,
+                "runtime_seconds": 0.4775
+            }
+        },
+        {
+            "index": 10,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.40214,
+                "img_dist": 0.03945,
+                "txt_dist": 0.13674,
+                "txt_sim": 0.86326
+            },
+            "swad_metrics": {
+                "iou_0": 0.79266,
+                "delta_m_plus": 0.49267,
+                "phi": 0.8292,
+                "swad": 0.40852
+            },
+            "l2_distance": 0.42658,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chare, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [276, 703, 345, 807], \"label\": \"chare\"},\n\t{\"bbox_2d\": [496, 643, 576, 776], \"label\": \"table\"},\n\t{\"bbox_2d\": [54, 657, 226, 857], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            276,
+                            703,
+                            345,
+                            807
+                        ],
+                        "label": "chare"
+                    },
+                    {
+                        "bbox_2d": [
+                            496,
+                            643,
+                            576,
+                            776
+                        ],
+                        "label": "table"
+                    },
+                    {
+                        "bbox_2d": [
+                            54,
+                            657,
+                            226,
+                            857
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 143,
+                "runtime_seconds": 0.4775
+            }
+        }
+    ]
+}

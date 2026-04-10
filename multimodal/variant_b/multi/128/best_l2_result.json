@@ -1,0 +1,133 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/128",
+        "folder_id": "128",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00000758.JPEG"
+    },
+    "pareto_index": 3,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.000453,
+            "defocus_blur": 0.02402,
+            "motion_blur": 0.055732,
+            "fog_filter": 0.099387,
+            "pixelate": 0.004864,
+            "jpeg_filter": 0.00448
+        },
+        "text_corruptions": {
+            "homophone": 0.110695,
+            "synonym": 0.189706,
+            "ata_saliency": 0.092082,
+            "fragmentation": 0.159424,
+            "character_noise": 0.099415
+        },
+        "img_budget_used": 0.188936,
+        "txt_budget_used": 0.651323,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.1043,
+        "txt_dist": 0.27144,
+        "txt_sim": 0.72856
+    },
+    "swad_metrics": {
+        "iou_0": 0.54524,
+        "delta_m_plus": 1.0,
+        "phi": 0.65257,
+        "swad": 0.65257
+    },
+    "l2_distance": 0.29079,
+    "original_prompt": "Identify the objects \"person, watercraft\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 291,
+            "ymin": 391,
+            "xmax": 310,
+            "ymax": 418
+        },
+        "watercraft": {
+            "xmin": 277,
+            "ymin": 122,
+            "xmax": 298,
+            "ymax": 171
+        },
+        "watercraft_1": {
+            "xmin": 75,
+            "ymin": 144,
+            "xmax": 92,
+            "ymax": 185
+        },
+        "watercraft_2": {
+            "xmin": 76,
+            "ymin": 15,
+            "xmax": 338,
+            "ymax": 438
+        },
+        "person_1": {
+            "xmin": 269,
+            "ymin": 401,
+            "xmax": 281,
+            "ymax": 411
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"per s\u200bon , w\u0430ter\u0441\u200bra\u200dtf\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [178, 48, 840, 898], \"label\": \"per s\u200bon , w\u0430ter\u0441\u200bra\u200dtf\"},\n\t{\"bbox_2d\": [692, 248, 730, 335], \"label\": \"per s\u200bon , w\u0430ter\u0441\u200bra\u200dtf\"},\n\t{\"bbox_2d\": [188, 278, 224, 365], \"label\": \"per s\u200bon , w\u0430ter\u0441\u200bra\u200dtf\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    178,
+                    48,
+                    840,
+                    898
+                ],
+                "label": "per s\u200bon , w\u0430ter\u0441\u200bra\u200dtf"
+            },
+            {
+                "bbox_2d": [
+                    692,
+                    248,
+                    730,
+                    335
+                ],
+                "label": "per s\u200bon , w\u0430ter\u0441\u200bra\u200dtf"
+            },
+            {
+                "bbox_2d": [
+                    188,
+                    278,
+                    224,
+                    365
+                ],
+                "label": "per s\u200bon , w\u0430ter\u0441\u200bra\u200dtf"
+            }
+        ],
+        "token_count": 143,
+        "raw_token_count": 290,
+        "runtime_seconds": 0.9465
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0004530421319615732,
+        "defocus_blur": 0.02402049419110511,
+        "motion_blur": 0.05573154678040236,
+        "fog_filter": 0.0993874312043786,
+        "pixelate": 0.004864120855200081,
+        "jpeg_filter": 0.004479667055945317
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.11069508539672485,
+        "synonym": 0.1897064939224301,
+        "ata_saliency": 0.09208229223668384,
+        "fragmentation": 0.15942373251070202,
+        "character_noise": 0.09941515329389494
+    }
+}

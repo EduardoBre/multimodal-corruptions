@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/150",
+        "folder_id": "150",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00038745.JPEG"
+    },
+    "pareto_index": 5,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.002109,
+            "defocus_blur": 0.046761,
+            "motion_blur": 0.023593,
+            "fog_filter": 0.002809,
+            "pixelate": 0.026814,
+            "jpeg_filter": 0.055223
+        },
+        "text_corruptions": {
+            "homophone": 0.058701,
+            "synonym": 0.100839,
+            "ata_saliency": 0.007229,
+            "fragmentation": 0.072775,
+            "character_noise": 0.183551
+        },
+        "img_budget_used": 0.157309,
+        "txt_budget_used": 0.423095,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.00208,
+        "img_dist": 0.1016,
+        "txt_dist": 0.34826,
+        "txt_sim": 0.65174
+    },
+    "swad_metrics": {
+        "iou_0": 0.93731,
+        "delta_m_plus": 0.99778,
+        "phi": 0.58552,
+        "swad": 0.58422
+    },
+    "l2_distance": 0.36278,
+    "original_prompt": "Identify the objects \"dog\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 32,
+            "ymin": 263,
+            "xmax": 293,
+            "ymax": 430
+        },
+        "dog_1": {
+            "xmin": 58,
+            "ymin": 13,
+            "xmax": 306,
+            "ymax": 390
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"can\u200dine\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [608, 377, 658, 420], \"label\": \"can\u200dine\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    608,
+                    377,
+                    658,
+                    420
+                ],
+                "label": "can\u200dine"
+            }
+        ],
+        "token_count": 42,
+        "raw_token_count": 83,
+        "runtime_seconds": 0.2591
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0021091058681871784,
+        "defocus_blur": 0.04676121484259966,
+        "motion_blur": 0.023593306252005813,
+        "fog_filter": 0.002808693282096167,
+        "pixelate": 0.02681358669845779,
+        "jpeg_filter": 0.05522329347711276
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.058700893765150114,
+        "synonym": 0.10083900674400184,
+        "ata_saliency": 0.007228904553971939,
+        "fragmentation": 0.07277531631163967,
+        "character_noise": 0.18355098569428516
+    }
+}

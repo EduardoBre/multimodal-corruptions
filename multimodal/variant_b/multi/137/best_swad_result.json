@@ -1,0 +1,124 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/137",
+        "folder_id": "137",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00000842.JPEG"
+    },
+    "pareto_index": 0,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.003839,
+            "defocus_blur": 0.006513,
+            "motion_blur": 0.002888,
+            "fog_filter": 0.001083,
+            "pixelate": 0.005082,
+            "jpeg_filter": 0.012147
+        },
+        "text_corruptions": {
+            "homophone": 0.130041,
+            "synonym": 0.13315,
+            "ata_saliency": 0.019204,
+            "fragmentation": 0.345614,
+            "character_noise": 0.012256
+        },
+        "img_budget_used": 0.031553,
+        "txt_budget_used": 0.640265,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.07286,
+        "txt_dist": 0.19419,
+        "txt_sim": 0.80581
+    },
+    "swad_metrics": {
+        "iou_0": 0.65853,
+        "delta_m_plus": 1.0,
+        "phi": 0.7471,
+        "swad": 0.7471
+    },
+    "l2_distance": 0.20741,
+    "original_prompt": "Identify the objects \"binder, purse\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "purse": {
+            "xmin": 232,
+            "ymin": 109,
+            "xmax": 498,
+            "ymax": 284
+        },
+        "binder": {
+            "xmin": 147,
+            "ymin": 17,
+            "xmax": 426,
+            "ymax": 132
+        },
+        "binder_1": {
+            "xmin": 43,
+            "ymin": 21,
+            "xmax": 233,
+            "ymax": 207
+        },
+        "binder_2": {
+            "xmin": 126,
+            "ymin": 256,
+            "xmax": 486,
+            "ymax": 486
+        },
+        "binder_3": {
+            "xmin": 187,
+            "ymin": 307,
+            "xmax": 498,
+            "ymax": 498
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bind\u200be\u200br, pur s\u0435\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [296, 42, 862, 277], \"label\": \"bind\u200be\u200br, pur s\u0435\"},\n\t{\"bbox_2d\": [84, 48, 308, 408], \"label\": \"bind\u200be\u200br, pur s\u0435\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    296,
+                    42,
+                    862,
+                    277
+                ],
+                "label": "bind\u200be\u200br, pur s\u0435"
+            },
+            {
+                "bbox_2d": [
+                    84,
+                    48,
+                    308,
+                    408
+                ],
+                "label": "bind\u200be\u200br, pur s\u0435"
+            }
+        ],
+        "token_count": 85,
+        "raw_token_count": 137,
+        "runtime_seconds": 0.4603
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.003839348069607471,
+        "defocus_blur": 0.006513463576978888,
+        "motion_blur": 0.0028880409236431578,
+        "fog_filter": 0.0010830959403553355,
+        "pixelate": 0.005082051500607646,
+        "jpeg_filter": 0.012146987872710206
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.1300412779345594,
+        "synonym": 0.13314983992921528,
+        "ata_saliency": 0.01920381095657501,
+        "fragmentation": 0.34561404060839246,
+        "character_noise": 0.012256087083735748
+    }
+}

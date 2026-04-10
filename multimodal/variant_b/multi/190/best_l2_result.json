@@ -1,0 +1,106 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/190",
+        "folder_id": "190",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00002547.JPEG"
+    },
+    "pareto_index": 4,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.006281,
+            "defocus_blur": 0.040058,
+            "motion_blur": 0.077215,
+            "fog_filter": 0.005757,
+            "pixelate": 0.139217,
+            "jpeg_filter": 0.003754
+        },
+        "text_corruptions": {
+            "homophone": 0.104466,
+            "synonym": 0.082226,
+            "ata_saliency": 0.003593,
+            "fragmentation": 0.046141,
+            "character_noise": 0.054271
+        },
+        "img_budget_used": 0.272282,
+        "txt_budget_used": 0.290698,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.08237,
+        "txt_dist": 0.19338,
+        "txt_sim": 0.80662
+    },
+    "swad_metrics": {
+        "iou_0": 0.91804,
+        "delta_m_plus": 1.0,
+        "phi": 0.74018,
+        "swad": 0.74018
+    },
+    "l2_distance": 0.21019,
+    "original_prompt": "Identify the objects \"person, trumpet\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 13,
+            "ymin": 69,
+            "xmax": 217,
+            "ymax": 332
+        },
+        "trumpet": {
+            "xmin": 127,
+            "ymin": 174,
+            "xmax": 275,
+            "ymax": 294
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"\u0440er son\u200d, t\u200brumpet\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [25, 240, 420, 997], \"label\": \"\u0440er son\u200d, t\u200brumpet\"},\n\t{\"bbox_2d\": [250, 528, 548, 872], \"label\": \"\u0440er son\u200d, t\u200brumpet\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    25,
+                    240,
+                    420,
+                    997
+                ],
+                "label": "\u0440er son\u200d, t\u200brumpet"
+            },
+            {
+                "bbox_2d": [
+                    250,
+                    528,
+                    548,
+                    872
+                ],
+                "label": "\u0440er son\u200d, t\u200brumpet"
+            }
+        ],
+        "token_count": 91,
+        "raw_token_count": 92,
+        "runtime_seconds": 0.2828
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.006281453290588936,
+        "defocus_blur": 0.04005816074236268,
+        "motion_blur": 0.07721456761552506,
+        "fog_filter": 0.005756765985818045,
+        "pixelate": 0.1392167832709727,
+        "jpeg_filter": 0.0037544412844626248
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.10446647441884947,
+        "synonym": 0.08222647817055459,
+        "ata_saliency": 0.003593019972099887,
+        "fragmentation": 0.04614092590854298,
+        "character_noise": 0.05427100644217195
+    }
+}

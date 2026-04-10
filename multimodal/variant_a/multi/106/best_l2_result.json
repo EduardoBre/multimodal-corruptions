@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/106",
+        "folder_id": "106",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00042801.JPEG"
+    },
+    "pareto_index": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "motion_blur",
+        "img_scale": 0.23165185207671868,
+        "txt_attack": "homophone",
+        "txt_scale": 0.2847437692140504
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.02903,
+        "txt_dist": 0.21095,
+        "txt_sim": 0.78905
+    },
+    "swad_metrics": {
+        "iou_0": 0.84358,
+        "delta_m_plus": 1.0,
+        "phi": 0.76614,
+        "swad": 0.76614
+    },
+    "l2_distance": 0.21294,
+    "original_prompt": "Identify the objects \"person, watercraft\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 271,
+            "ymin": 257,
+            "xmax": 291,
+            "ymax": 312
+        },
+        "watercraft": {
+            "xmin": 52,
+            "ymin": 52,
+            "xmax": 242,
+            "ymax": 306
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"purse on, water craft\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [113, 123, 472, 700], \"label\": \"purse on, water craft\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    113,
+                    123,
+                    472,
+                    700
+                ],
+                "label": "purse on, water craft"
+            }
+        ],
+        "token_count": 44,
+        "raw_token_count": 175,
+        "runtime_seconds": 0.598
+    }
+}

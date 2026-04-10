@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/119",
+        "folder_id": "119",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00025472.JPEG"
+    },
+    "pareto_index": 16,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 8,
+    "total_evaluations": 240,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.8468521421725954,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.33647038540361596
+    },
+    "objectives": {
+        "iou": 0.30607,
+        "img_dist": 0.03937,
+        "txt_dist": 0.12922,
+        "txt_sim": 0.87078
+    },
+    "swad_metrics": {
+        "iou_0": 0.97015,
+        "delta_m_plus": 0.68451,
+        "phi": 0.8365,
+        "swad": 0.57259
+    },
+    "l2_distance": 0.33455,
+    "original_prompt": "Identify the objects \"snake\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "snake": {
+            "xmin": 167,
+            "ymin": 137,
+            "xmax": 312,
+            "ymax": 380
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"snaek\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [380, 320, 608, 540], \"label\": \"snaek\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    380,
+                    320,
+                    608,
+                    540
+                ],
+                "label": "snaek"
+            }
+        ],
+        "token_count": 41,
+        "raw_token_count": 48,
+        "runtime_seconds": 0.1702
+    }
+}

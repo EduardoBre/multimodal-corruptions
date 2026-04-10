@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/96",
+        "folder_id": "96",
+        "category": "single/multi",
+        "filename": "ILSVRC2013_val_00001017.JPEG"
+    },
+    "pareto_index": 19,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 7,
+    "total_evaluations": 195,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.094181,
+            "defocus_blur": 0.026208,
+            "motion_blur": 0.175833,
+            "fog_filter": 0.001625,
+            "pixelate": 0.029145,
+            "jpeg_filter": 0.085743
+        },
+        "text_corruptions": {
+            "homophone": 0.28602,
+            "synonym": 0.003624,
+            "ata_saliency": 0.005384,
+            "fragmentation": 0.022946,
+            "character_noise": 0.045882
+        },
+        "img_budget_used": 0.412734,
+        "txt_budget_used": 0.363856,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.2219,
+        "img_dist": 0.09733,
+        "txt_dist": 0.28571,
+        "txt_sim": 0.71429
+    },
+    "swad_metrics": {
+        "iou_0": 0.90675,
+        "delta_m_plus": 0.75528,
+        "phi": 0.64477,
+        "swad": 0.48698
+    },
+    "l2_distance": 0.37462,
+    "original_prompt": "Identify the objects \"person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 365,
+            "ymin": 145,
+            "xmax": 480,
+            "ymax": 441
+        },
+        "person_1": {
+            "xmin": 12,
+            "ymin": 13,
+            "xmax": 431,
+            "ymax": 487
+        },
+        "person_2": {
+            "xmin": 15,
+            "ymin": 112,
+            "xmax": 67,
+            "ymax": 358
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"pereon\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [750, 288, 960, 688], \"label\": \"pereon\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    750,
+                    288,
+                    960,
+                    688
+                ],
+                "label": "pereon"
+            }
+        ],
+        "token_count": 41,
+        "raw_token_count": 124,
+        "runtime_seconds": 0.3882
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.09418078482399363,
+        "defocus_blur": 0.02620804736654326,
+        "motion_blur": 0.17583281323823793,
+        "fog_filter": 0.0016245898921712562,
+        "pixelate": 0.02914534405534354,
+        "jpeg_filter": 0.08574284952059547
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.2860197442476574,
+        "synonym": 0.003623923755014996,
+        "ata_saliency": 0.005383606482761958,
+        "fragmentation": 0.022946485166568317,
+        "character_noise": 0.04588249613477803
+    }
+}

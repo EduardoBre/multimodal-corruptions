@@ -1,0 +1,377 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/192",
+        "folder_id": "192",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00002075.JPEG"
+    },
+    "original_prompt": "Identify the objects \"diaper, table\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "diaper": {
+            "xmin": 184,
+            "ymin": 195,
+            "xmax": 254,
+            "ymax": 261
+        },
+        "table": {
+            "xmin": 0,
+            "ymin": 154,
+            "xmax": 127,
+            "ymax": 209
+        }
+    },
+    "baseline_iou": 0.72493,
+    "swad_star": 0.69696,
+    "swad_star_index": 6,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 7,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8181617493544074,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.41721849968957336
+            },
+            "objectives": {
+                "iou": 0.19575,
+                "img_dist": 0.04958,
+                "txt_dist": 0.06827,
+                "txt_sim": 0.93173
+            },
+            "swad_metrics": {
+                "iou_0": 0.72493,
+                "delta_m_plus": 0.72997,
+                "phi": 0.88553,
+                "swad": 0.64642
+            },
+            "l2_distance": 0.21316,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"diaper, atble\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [472, 638, 588, 788], \"label\": \"diaper\"},\n\t{\"bbox_2d\": [0, 408, 250, 838], \"label\": \"atble\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            472,
+                            638,
+                            588,
+                            788
+                        ],
+                        "label": "diaper"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            408,
+                            250,
+                            838
+                        ],
+                        "label": "atble"
+                    }
+                ],
+                "token_count": 72,
+                "raw_token_count": 81,
+                "runtime_seconds": 0.2826
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.018153363333776373,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.24927259019092207
+            },
+            "objectives": {
+                "iou": 0.172,
+                "img_dist": 0.03152,
+                "txt_dist": 0.19188,
+                "txt_sim": 0.80812
+            },
+            "swad_metrics": {
+                "iou_0": 0.72493,
+                "delta_m_plus": 0.76274,
+                "phi": 0.78265,
+                "swad": 0.59695
+            },
+            "l2_distance": 0.25961,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"d\u200bia\u0440er, t\u200bab\u200bl\u200be\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [740, 352, 860, 540], \"label\": \"d\u200bia\u0440er\"},\n\t{\"bbox_2d\": [0, 408, 250, 832], \"label\": \"t\u200bab\u200bl\u200be\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            740,
+                            352,
+                            860,
+                            540
+                        ],
+                        "label": "d\u200bia\u0440er"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            408,
+                            250,
+                            832
+                        ],
+                        "label": "t\u200bab\u200bl\u200be"
+                    }
+                ],
+                "token_count": 80,
+                "raw_token_count": 81,
+                "runtime_seconds": 0.2826
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.37501,
+                "img_dist": 0.03108,
+                "txt_dist": 0.19738,
+                "txt_sim": 0.80262
+            },
+            "swad_metrics": {
+                "iou_0": 0.72493,
+                "delta_m_plus": 0.48269,
+                "phi": 0.77767,
+                "swad": 0.37538
+            },
+            "l2_distance": 0.42492,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dye per, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 396, 248, 588], \"label\": \"dye per\"},\n\t{\"bbox_2d\": [0, 396, 248, 588], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            396,
+                            248,
+                            588
+                        ],
+                        "label": "dye per"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            396,
+                            248,
+                            588
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 70,
+                "raw_token_count": 81,
+                "runtime_seconds": 0.2826
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.43526,
+                "img_dist": 0.03152,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.72493,
+                "delta_m_plus": 0.39958,
+                "phi": 0.96848,
+                "swad": 0.38699
+            },
+            "l2_distance": 0.4364,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"diaper, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [365, 548, 458, 700], \"label\": \"diaper\"},\n\t{\"bbox_2d\": [0, 410, 250, 830], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            365,
+                            548,
+                            458,
+                            700
+                        ],
+                        "label": "diaper"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            410,
+                            250,
+                            830
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 71,
+                "raw_token_count": 81,
+                "runtime_seconds": 0.2826
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.307337327911573,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.42366,
+                "img_dist": 0.0377,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.72493,
+                "delta_m_plus": 0.41558,
+                "phi": 0.9623,
+                "swad": 0.39992
+            },
+            "l2_distance": 0.42533,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"diaper, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [357, 540, 500, 792], \"label\": \"diaper\"},\n\t{\"bbox_2d\": [0, 420, 250, 820], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            357,
+                            540,
+                            500,
+                            792
+                        ],
+                        "label": "diaper"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            420,
+                            250,
+                            820
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 71,
+                "raw_token_count": 81,
+                "runtime_seconds": 0.2826
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.018595721213425453,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6130568625347235
+            },
+            "objectives": {
+                "iou": 0.38526,
+                "img_dist": 0.035,
+                "txt_dist": 0.15235,
+                "txt_sim": 0.84765
+            },
+            "swad_metrics": {
+                "iou_0": 0.72493,
+                "delta_m_plus": 0.46856,
+                "phi": 0.81798,
+                "swad": 0.38327
+            },
+            "l2_distance": 0.41577,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dipaer, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 396, 250, 584], \"label\": \"dipaer\"},\n\t{\"bbox_2d\": [0, 396, 250, 584], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            396,
+                            250,
+                            584
+                        ],
+                        "label": "dipaer"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            396,
+                            250,
+                            584
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 70,
+                "raw_token_count": 81,
+                "runtime_seconds": 0.2826
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.18367,
+                "img_dist": 0.06654,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.72493,
+                "delta_m_plus": 0.74664,
+                "phi": 0.93346,
+                "swad": 0.69696
+            },
+            "l2_distance": 0.19535,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"diaper, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [488, 640, 550, 796], \"label\": \"diaper\"},\n\t{\"bbox_2d\": [0, 420, 250, 820], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            488,
+                            640,
+                            550,
+                            796
+                        ],
+                        "label": "diaper"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            420,
+                            250,
+                            820
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 71,
+                "raw_token_count": 81,
+                "runtime_seconds": 0.2826
+            }
+        }
+    ]
+}

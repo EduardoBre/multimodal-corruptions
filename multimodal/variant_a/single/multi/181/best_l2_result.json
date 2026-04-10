@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/181",
+        "folder_id": "181",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00028624.JPEG"
+    },
+    "pareto_index": 0,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.8181617493544074,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.41721849968957336
+    },
+    "objectives": {
+        "iou": 0.20897,
+        "img_dist": 0.05464,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.80921,
+        "delta_m_plus": 0.74176,
+        "phi": 0.94536,
+        "swad": 0.70123
+    },
+    "l2_distance": 0.216,
+    "original_prompt": "Identify the objects \"pretzel\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "pretzel": {
+            "xmin": 28,
+            "ymin": 192,
+            "xmax": 338,
+            "ymax": 374
+        },
+        "pretzel_1": {
+            "xmin": 299,
+            "ymin": 38,
+            "xmax": 499,
+            "ymax": 337
+        },
+        "pretzel_2": {
+            "xmin": 214,
+            "ymin": 1,
+            "xmax": 434,
+            "ymax": 133
+        },
+        "pretzel_3": {
+            "xmin": 0,
+            "ymin": 20,
+            "xmax": 199,
+            "ymax": 201
+        },
+        "pretzel_4": {
+            "xmin": 165,
+            "ymin": 109,
+            "xmax": 308,
+            "ymax": 232
+        },
+        "pretzel_5": {
+            "xmin": 9,
+            "ymin": 165,
+            "xmax": 180,
+            "ymax": 373
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"pretzel\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 1000, 997], \"label\": \"pretzel\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    1000,
+                    997
+                ],
+                "label": "pretzel"
+            }
+        ],
+        "token_count": 37,
+        "raw_token_count": 208,
+        "runtime_seconds": 0.7058
+    }
+}

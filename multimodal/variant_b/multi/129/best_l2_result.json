@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/129",
+        "folder_id": "129",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00038678.JPEG"
+    },
+    "pareto_index": 6,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.027666,
+            "defocus_blur": 0.36671,
+            "motion_blur": 0.009565,
+            "fog_filter": 0.013306,
+            "pixelate": 0.037509,
+            "jpeg_filter": 0.366827
+        },
+        "text_corruptions": {
+            "homophone": 0.036238,
+            "synonym": 0.019719,
+            "ata_saliency": 0.032821,
+            "fragmentation": 0.093223,
+            "character_noise": 0.125255
+        },
+        "img_budget_used": 0.821583,
+        "txt_budget_used": 0.307256,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.0928,
+        "txt_dist": 0.28049,
+        "txt_sim": 0.71951
+    },
+    "swad_metrics": {
+        "iou_0": 0.94718,
+        "delta_m_plus": 1.0,
+        "phi": 0.65274,
+        "swad": 0.65274
+    },
+    "l2_distance": 0.29544,
+    "original_prompt": "Identify the objects \"person, volleyball\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 364,
+            "ymin": 339,
+            "xmax": 627,
+            "ymax": 897
+        },
+        "person_1": {
+            "xmin": 0,
+            "ymin": 231,
+            "xmax": 276,
+            "ymax": 897
+        },
+        "volleyball": {
+            "xmin": 123,
+            "ymin": 0,
+            "xmax": 200,
+            "ymax": 67
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"per s\u043e n, ba\u200dll\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [197, 0, 318, 80], \"label\": \"per s\u043e n, ba\u200dll\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    197,
+                    0,
+                    318,
+                    80
+                ],
+                "label": "per s\u043e n, ba\u200dll"
+            }
+        ],
+        "token_count": 44,
+        "raw_token_count": 208,
+        "runtime_seconds": 0.7099
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.02766625142040324,
+        "defocus_blur": 0.36670981926301904,
+        "motion_blur": 0.009564761448597199,
+        "fog_filter": 0.01330621766740624,
+        "pixelate": 0.0375091443653941,
+        "jpeg_filter": 0.3668272698797108
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.03623758613972754,
+        "synonym": 0.019718939196519326,
+        "ata_saliency": 0.03282144455042854,
+        "fragmentation": 0.09322276892608684,
+        "character_noise": 0.12525541006567276
+    }
+}

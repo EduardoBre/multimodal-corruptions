@@ -1,0 +1,94 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/59",
+        "folder_id": "59",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00002355.JPEG"
+    },
+    "pareto_index": 22,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 3,
+    "total_evaluations": 90,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "fog_filter",
+        "img_scale": 0.012148587487921692,
+        "txt_attack": "homophone",
+        "txt_scale": 0.5755223554390052
+    },
+    "objectives": {
+        "iou": 0.0462,
+        "img_dist": 0.06654,
+        "txt_dist": 0.25713,
+        "txt_sim": 0.74287
+    },
+    "swad_metrics": {
+        "iou_0": 0.95946,
+        "delta_m_plus": 0.95185,
+        "phi": 0.69344,
+        "swad": 0.66005
+    },
+    "l2_distance": 0.26959,
+    "original_prompt": "Identify the objects \"bowl, turtle\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "turtle": {
+            "xmin": 178,
+            "ymin": 107,
+            "xmax": 499,
+            "ymax": 338
+        },
+        "bowl": {
+            "xmin": 191,
+            "ymin": 49,
+            "xmax": 457,
+            "ymax": 135
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"boll, turdl\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [361, 286, 488, 380], \"label\": \"boll\"},\n\t{\"bbox_2d\": [131, 352, 272, 460], \"label\": \"boll\"},\n\t{\"bbox_2d\": [361, 286, 488, 380], \"label\": \"turdl\"},\n\t{\"bbox_2d\": [131, 352, 272, 460], \"label\": \"turdl\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    361,
+                    286,
+                    488,
+                    380
+                ],
+                "label": "boll"
+            },
+            {
+                "bbox_2d": [
+                    131,
+                    352,
+                    272,
+                    460
+                ],
+                "label": "boll"
+            },
+            {
+                "bbox_2d": [
+                    361,
+                    286,
+                    488,
+                    380
+                ],
+                "label": "turdl"
+            },
+            {
+                "bbox_2d": [
+                    131,
+                    352,
+                    272,
+                    460
+                ],
+                "label": "turdl"
+            }
+        ],
+        "token_count": 142,
+        "raw_token_count": 143,
+        "runtime_seconds": 0.6602
+    }
+}

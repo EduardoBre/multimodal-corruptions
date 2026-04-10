@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/172",
+        "folder_id": "172",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00015927.JPEG"
+    },
+    "pareto_index": 2,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.9316177058680379,
+        "txt_attack": "homophone",
+        "txt_scale": 0.9948250792623392
+    },
+    "objectives": {
+        "iou": 0.07163,
+        "img_dist": 0.06592,
+        "txt_dist": 0.23242,
+        "txt_sim": 0.76758
+    },
+    "swad_metrics": {
+        "iou_0": 0.95877,
+        "delta_m_plus": 0.92529,
+        "phi": 0.71698,
+        "swad": 0.66342
+    },
+    "l2_distance": 0.25198,
+    "original_prompt": "Identify the objects \"otter\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "otter": {
+            "xmin": 129,
+            "ymin": 196,
+            "xmax": 681,
+            "ymax": 463
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"udder\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [360, 327, 577, 438], \"label\": \"udder\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    360,
+                    327,
+                    577,
+                    438
+                ],
+                "label": "udder"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 52,
+        "runtime_seconds": 0.2001
+    }
+}

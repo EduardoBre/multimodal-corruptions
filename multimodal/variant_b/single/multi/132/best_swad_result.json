@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/132",
+        "folder_id": "132",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00002791.JPEG"
+    },
+    "pareto_index": 13,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.07526,
+            "defocus_blur": 0.054736,
+            "motion_blur": 0.166864,
+            "fog_filter": 1.1e-05,
+            "pixelate": 0.195622,
+            "jpeg_filter": 0.224121
+        },
+        "text_corruptions": {
+            "homophone": 0.234827,
+            "synonym": 0.00737,
+            "ata_saliency": 0.130194,
+            "fragmentation": 0.090247,
+            "character_noise": 0.154255
+        },
+        "img_budget_used": 0.716613,
+        "txt_budget_used": 0.616893,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.03118,
+        "img_dist": 0.0664,
+        "txt_dist": 0.35074,
+        "txt_sim": 0.64926
+    },
+    "swad_metrics": {
+        "iou_0": 0.87885,
+        "delta_m_plus": 0.96452,
+        "phi": 0.60615,
+        "swad": 0.58464
+    },
+    "l2_distance": 0.35833,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 35,
+            "ymin": 344,
+            "xmax": 334,
+            "ymax": 477
+        },
+        "bird_1": {
+            "xmin": 75,
+            "ymin": 45,
+            "xmax": 349,
+            "ymax": 151
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bur\u200dre\u200bd\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 238, 367], \"label\": \"bur\u200dre\u200bd\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    238,
+                    367
+                ],
+                "label": "bur\u200dre\u200bd"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 98,
+        "runtime_seconds": 0.2848
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.07525966974780043,
+        "defocus_blur": 0.05473558119398504,
+        "motion_blur": 0.16686426236471524,
+        "fog_filter": 1.1163894959198561e-05,
+        "pixelate": 0.19562168260850854,
+        "jpeg_filter": 0.22412083486173875
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.23482703790708348,
+        "synonym": 0.007370499399337961,
+        "ata_saliency": 0.13019383134775273,
+        "fragmentation": 0.09024710331797514,
+        "character_noise": 0.15425497116925543
+    }
+}

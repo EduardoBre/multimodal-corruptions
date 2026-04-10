@@ -1,0 +1,553 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/1",
+        "folder_id": "1",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00026174.JPEG"
+    },
+    "original_prompt": "Identify the objects \"cup or mug, pitcher, table\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "pitcher": {
+            "xmin": 173,
+            "ymin": 21,
+            "xmax": 393,
+            "ymax": 271
+        },
+        "table": {
+            "xmin": 3,
+            "ymin": 397,
+            "xmax": 498,
+            "ymax": 475
+        },
+        "cup or mug": {
+            "xmin": 111,
+            "ymin": 297,
+            "xmax": 264,
+            "ymax": 456
+        }
+    },
+    "baseline_iou": 0.92092,
+    "swad_star": 0.51801,
+    "swad_star_index": 7,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 9,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8181617493544074,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.41721849968957336
+            },
+            "objectives": {
+                "iou": 0.89911,
+                "img_dist": 0.04088,
+                "txt_dist": 0.0726,
+                "txt_sim": 0.9274
+            },
+            "swad_metrics": {
+                "iou_0": 0.92092,
+                "delta_m_plus": 0.02368,
+                "phi": 0.88949,
+                "swad": 0.02107
+            },
+            "l2_distance": 0.90296,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"ucp or mug, pithcer, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [218, 632, 528, 944], \"label\": \"ucp or mug\"},\n\t{\"bbox_2d\": [344, 50, 792, 650], \"label\": \"pithcer\"},\n\t{\"bbox_2d\": [0, 838, 999, 1000], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            218,
+                            632,
+                            528,
+                            944
+                        ],
+                        "label": "ucp or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            344,
+                            50,
+                            792,
+                            650
+                        ],
+                        "label": "pithcer"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            838,
+                            999,
+                            1000
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 108,
+                "raw_token_count": 130,
+                "runtime_seconds": 0.6588
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.018153363333776373,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.24927259019092207
+            },
+            "objectives": {
+                "iou": 0.92643,
+                "img_dist": 0.02427,
+                "txt_dist": 0.1826,
+                "txt_sim": 0.8174
+            },
+            "swad_metrics": {
+                "iou_0": 0.92092,
+                "delta_m_plus": 0.0,
+                "phi": 0.79756,
+                "swad": 0.0
+            },
+            "l2_distance": 0.94457,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cup \u043e\u200dr\u200d mug, \u0440i\u200dtc\u200dh\u0435\u200dr, t\u200dab\u200bl\u200be\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [216, 632, 525, 944], \"label\": \"cup \u043e\u200dr\u200d mug\"},\n\t{\"bbox_2d\": [342, 48, 795, 570], \"label\": \"\u0440i\u200dtc\u200dh\u0435\u200dr\"},\n\t{\"bbox_2d\": [0, 842, 1000, 1000], \"label\": \"t\u200dab\u200bl\u200be\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            216,
+                            632,
+                            525,
+                            944
+                        ],
+                        "label": "cup \u043e\u200dr\u200d mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            342,
+                            48,
+                            795,
+                            570
+                        ],
+                        "label": "\u0440i\u200dtc\u200dh\u0435\u200dr"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            842,
+                            1000,
+                            1000
+                        ],
+                        "label": "t\u200dab\u200bl\u200be"
+                    }
+                ],
+                "token_count": 129,
+                "raw_token_count": 130,
+                "runtime_seconds": 0.6588
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.3997956906557353,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.647636093318414
+            },
+            "objectives": {
+                "iou": 0.88131,
+                "img_dist": 0.03172,
+                "txt_dist": 0.10925,
+                "txt_sim": 0.89075
+            },
+            "swad_metrics": {
+                "iou_0": 0.92092,
+                "delta_m_plus": 0.04301,
+                "phi": 0.8625,
+                "swad": 0.0371
+            },
+            "l2_distance": 0.88862,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cux or mgu, pitcher, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [220, 630, 528, 944], \"label\": \"cux or mgu\"},\n\t{\"bbox_2d\": [346, 52, 792, 672], \"label\": \"pitcher\"},\n\t{\"bbox_2d\": [0, 844, 1000, 1000], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            220,
+                            630,
+                            528,
+                            944
+                        ],
+                        "label": "cux or mgu"
+                    },
+                    {
+                        "bbox_2d": [
+                            346,
+                            52,
+                            792,
+                            672
+                        ],
+                        "label": "pitcher"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            844,
+                            1000,
+                            1000
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 130,
+                "runtime_seconds": 0.6588
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.9307,
+                "img_dist": 0.02305,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.92092,
+                "delta_m_plus": 0.0,
+                "phi": 0.97695,
+                "swad": 0.0
+            },
+            "l2_distance": 0.93099,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cup or mug, pitcher, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [220, 630, 528, 944], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [348, 52, 794, 566], \"label\": \"pitcher\"},\n\t{\"bbox_2d\": [0, 844, 1000, 1000], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            220,
+                            630,
+                            528,
+                            944
+                        ],
+                        "label": "cup or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            348,
+                            52,
+                            794,
+                            566
+                        ],
+                        "label": "pitcher"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            844,
+                            1000,
+                            1000
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 107,
+                "raw_token_count": 130,
+                "runtime_seconds": 0.6588
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.92889,
+                "img_dist": 0.02427,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.92092,
+                "delta_m_plus": 0.0,
+                "phi": 0.97573,
+                "swad": 0.0
+            },
+            "l2_distance": 0.92921,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cup or mug, pitcher, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [216, 632, 527, 944], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [342, 48, 795, 567], \"label\": \"pitcher\"},\n\t{\"bbox_2d\": [0, 842, 1000, 1000], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            216,
+                            632,
+                            527,
+                            944
+                        ],
+                        "label": "cup or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            342,
+                            48,
+                            795,
+                            567
+                        ],
+                        "label": "pitcher"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            842,
+                            1000,
+                            1000
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 107,
+                "raw_token_count": 130,
+                "runtime_seconds": 0.6588
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.6126883641923373,
+                "txt_attack": "homophone",
+                "txt_scale": 0.10684452896191199
+            },
+            "objectives": {
+                "iou": 0.92447,
+                "img_dist": 0.03426,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.92092,
+                "delta_m_plus": 0.0,
+                "phi": 0.96574,
+                "swad": 0.0
+            },
+            "l2_distance": 0.9251,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cup or mug, pitcher, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [216, 632, 525, 942], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [342, 50, 794, 567], \"label\": \"pitcher\"},\n\t{\"bbox_2d\": [0, 842, 1000, 1000], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            216,
+                            632,
+                            525,
+                            942
+                        ],
+                        "label": "cup or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            342,
+                            50,
+                            794,
+                            567
+                        ],
+                        "label": "pitcher"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            842,
+                            1000,
+                            1000
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 107,
+                "raw_token_count": 130,
+                "runtime_seconds": 0.6588
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.307337327911573,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.92568,
+                "img_dist": 0.02958,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.92092,
+                "delta_m_plus": 0.0,
+                "phi": 0.97042,
+                "swad": 0.0
+            },
+            "l2_distance": 0.92615,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cup or mug, pitcher, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [216, 632, 525, 944], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [342, 50, 795, 567], \"label\": \"pitcher\"},\n\t{\"bbox_2d\": [0, 842, 1000, 1000], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            216,
+                            632,
+                            525,
+                            944
+                        ],
+                        "label": "cup or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            342,
+                            50,
+                            795,
+                            567
+                        ],
+                        "label": "pitcher"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            842,
+                            1000,
+                            1000
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 107,
+                "raw_token_count": 130,
+                "runtime_seconds": 0.6588
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.018595721213425453,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6130568625347235
+            },
+            "objectives": {
+                "iou": 0.31807,
+                "img_dist": 0.02705,
+                "txt_dist": 0.18668,
+                "txt_sim": 0.81332
+            },
+            "swad_metrics": {
+                "iou_0": 0.92092,
+                "delta_m_plus": 0.65462,
+                "phi": 0.79132,
+                "swad": 0.51801
+            },
+            "l2_distance": 0.3698,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cup or umg, pitcher, taxle\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [220, 634, 528, 944], \"label\": \"cup\"},\n\t{\"bbox_2d\": [348, 54, 794, 571], \"label\": \"pitcher\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            220,
+                            634,
+                            528,
+                            944
+                        ],
+                        "label": "cup"
+                    },
+                    {
+                        "bbox_2d": [
+                            348,
+                            54,
+                            794,
+                            571
+                        ],
+                        "label": "pitcher"
+                    }
+                ],
+                "token_count": 72,
+                "raw_token_count": 130,
+                "runtime_seconds": 0.6588
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.9243,
+                "img_dist": 0.03913,
+                "txt_dist": 0.02316,
+                "txt_sim": 0.97684
+            },
+            "swad_metrics": {
+                "iou_0": 0.92092,
+                "delta_m_plus": 0.0,
+                "phi": 0.93862,
+                "swad": 0.0
+            },
+            "l2_distance": 0.92542,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cup or mug, pitcher, tabel\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [220, 634, 526, 944], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [348, 52, 794, 571], \"label\": \"pitcher\"},\n\t{\"bbox_2d\": [0, 844, 1000, 1000], \"label\": \"tabel\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            220,
+                            634,
+                            526,
+                            944
+                        ],
+                        "label": "cup or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            348,
+                            52,
+                            794,
+                            571
+                        ],
+                        "label": "pitcher"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            844,
+                            1000,
+                            1000
+                        ],
+                        "label": "tabel"
+                    }
+                ],
+                "token_count": 108,
+                "raw_token_count": 130,
+                "runtime_seconds": 0.6588
+            }
+        }
+    ]
+}

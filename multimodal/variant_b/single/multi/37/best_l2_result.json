@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/37",
+        "folder_id": "37",
+        "category": "single/multi",
+        "filename": "ILSVRC2013_val_00003398.JPEG"
+    },
+    "pareto_index": 8,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 45,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.000583,
+            "defocus_blur": 0.003002,
+            "motion_blur": 0.000163,
+            "fog_filter": 0.225063,
+            "pixelate": 0.000219,
+            "jpeg_filter": 0.009011
+        },
+        "text_corruptions": {
+            "homophone": 0.355879,
+            "synonym": 0.070195,
+            "ata_saliency": 0.281203,
+            "fragmentation": 0.045713,
+            "character_noise": 0.20101
+        },
+        "img_budget_used": 0.238042,
+        "txt_budget_used": 0.953999,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.0762,
+        "txt_dist": 0.15237,
+        "txt_sim": 0.84763
+    },
+    "swad_metrics": {
+        "iou_0": 0.694,
+        "delta_m_plus": 1.0,
+        "phi": 0.78304,
+        "swad": 0.78304
+    },
+    "l2_distance": 0.17036,
+    "original_prompt": "Identify the objects \"crutch\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "crutch": {
+            "xmin": 94,
+            "ymin": 72,
+            "xmax": 185,
+            "ymax": 399
+        },
+        "crutch_1": {
+            "xmin": 117,
+            "ymin": 84,
+            "xmax": 251,
+            "ymax": 399
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"\u0441rut\u200bch\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [192, 186, 492, 998], \"label\": \"\u0441\u0440\u0443\u0442\u200b\u0447\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    192,
+                    186,
+                    492,
+                    998
+                ],
+                "label": "\u0441\u0440\u0443\u0442\u200b\u0447"
+            }
+        ],
+        "token_count": 42,
+        "raw_token_count": 51,
+        "runtime_seconds": 0.1686
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.00058309866227895,
+        "defocus_blur": 0.0030018179865553577,
+        "motion_blur": 0.0001634398482111469,
+        "fog_filter": 0.22506335281660236,
+        "pixelate": 0.00021908043727418558,
+        "jpeg_filter": 0.009011196790885887
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.3558786153402545,
+        "synonym": 0.07019509147167241,
+        "ata_saliency": 0.28120250949469217,
+        "fragmentation": 0.045712749875380626,
+        "character_noise": 0.20101024518390131
+    }
+}

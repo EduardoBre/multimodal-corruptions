@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/161",
+        "folder_id": "161",
+        "category": "single/solo",
+        "filename": "ILSVRC2013_val_00002723.JPEG"
+    },
+    "pareto_index": 12,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 60,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "motion_blur",
+        "img_scale": 0.9747469880511187,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.5918715760451925
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.08028,
+        "txt_dist": 0.15706,
+        "txt_sim": 0.84294
+    },
+    "swad_metrics": {
+        "iou_0": 0.8976,
+        "delta_m_plus": 1.0,
+        "phi": 0.77527,
+        "swad": 0.77527
+    },
+    "l2_distance": 0.17639,
+    "original_prompt": "Identify the objects \"cup or mug\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "cup or mug": {
+            "xmin": 132,
+            "ymin": 70,
+            "xmax": 329,
+            "ymax": 239
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"cop or mug\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [270, 168, 648, 624], \"label\": \"mug\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    270,
+                    168,
+                    648,
+                    624
+                ],
+                "label": "mug"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 81,
+        "runtime_seconds": 0.3306
+    }
+}

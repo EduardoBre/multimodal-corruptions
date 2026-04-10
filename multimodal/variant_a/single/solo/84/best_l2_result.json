@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/84",
+        "folder_id": "84",
+        "category": "single/solo",
+        "filename": "ILSVRC2013_val_00001606.JPEG"
+    },
+    "pareto_index": 23,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 8,
+    "total_evaluations": 225,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.943357314941754,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.31818916519979645
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.06913,
+        "txt_dist": 0.09207,
+        "txt_sim": 0.90793
+    },
+    "swad_metrics": {
+        "iou_0": 0.93825,
+        "delta_m_plus": 1.0,
+        "phi": 0.84516,
+        "swad": 0.84516
+    },
+    "l2_distance": 0.11513,
+    "original_prompt": "Identify the objects \"domestic cat\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "domestic cat": {
+            "xmin": 352,
+            "ymin": 179,
+            "xmax": 499,
+            "ymax": 271
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"do\u200dm\u200destic\u200b c\u0430t\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [240, 618, 470, 856], \"label\": \"do\u200dm\u200destic\u200b c\u0430t\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    240,
+                    618,
+                    470,
+                    856
+                ],
+                "label": "do\u200dm\u200destic\u200b c\u0430t"
+            }
+        ],
+        "token_count": 49,
+        "raw_token_count": 50,
+        "runtime_seconds": 0.157
+    }
+}

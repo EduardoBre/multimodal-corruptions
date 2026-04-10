@@ -1,0 +1,73 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/70",
+        "folder_id": "70",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00000678.JPEG"
+    },
+    "pareto_index": 2,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.5656671100314771,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.039875089079669634
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.09563,
+        "txt_dist": 0.14121,
+        "txt_sim": 0.85879
+    },
+    "swad_metrics": {
+        "iou_0": 0.53866,
+        "delta_m_plus": 1.0,
+        "phi": 0.77666,
+        "swad": 0.77666
+    },
+    "l2_distance": 0.17054,
+    "original_prompt": "Identify the objects \"corkscrew, hammer\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "corkscrew": {
+            "xmin": 0,
+            "ymin": 68,
+            "xmax": 250,
+            "ymax": 273
+        },
+        "corkscrew_1": {
+            "xmin": 42,
+            "ymin": 37,
+            "xmax": 469,
+            "ymax": 252
+        },
+        "hammer": {
+            "xmin": 0,
+            "ymin": 69,
+            "xmax": 248,
+            "ymax": 262
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"\u0441\u200borksc\u200br\u200bew, ha\u200dmmer\u200d\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 222, 488, 722], \"label\": \"\u0441\u200borksc\u200br\u200bew, ha\u200dmmer\u200d\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    222,
+                    488,
+                    722
+                ],
+                "label": "\u0441\u200borksc\u200br\u200bew, ha\u200dmmer\u200d"
+            }
+        ],
+        "token_count": 52,
+        "raw_token_count": 77,
+        "runtime_seconds": 0.3007
+    }
+}

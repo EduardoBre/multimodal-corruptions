@@ -1,0 +1,430 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/32",
+        "folder_id": "32",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00017142.JPEG"
+    },
+    "original_prompt": "Identify the objects \"maillot, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 254,
+            "ymin": 137,
+            "xmax": 325,
+            "ymax": 372
+        },
+        "person_1": {
+            "xmin": 181,
+            "ymin": 153,
+            "xmax": 266,
+            "ymax": 374
+        },
+        "maillot": {
+            "xmin": 195,
+            "ymin": 197,
+            "xmax": 256,
+            "ymax": 302
+        },
+        "maillot_1": {
+            "xmin": 255,
+            "ymin": 191,
+            "xmax": 313,
+            "ymax": 298
+        }
+    },
+    "baseline_iou": 0.9161,
+    "swad_star": 0.75677,
+    "swad_star_index": 5,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 6,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.65003,
+                "img_dist": 0.04593,
+                "txt_dist": 0.19041,
+                "txt_sim": 0.80959
+            },
+            "swad_metrics": {
+                "iou_0": 0.9161,
+                "delta_m_plus": 0.29044,
+                "phi": 0.77241,
+                "swad": 0.22434
+            },
+            "l2_distance": 0.6789,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"mayo, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 880, 75, 1000], \"label\": \"mayo\"},\n\t{\"bbox_2d\": [359, 410, 520, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [508, 378, 648, 1000], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            880,
+                            75,
+                            1000
+                        ],
+                        "label": "mayo"
+                    },
+                    {
+                        "bbox_2d": [
+                            359,
+                            410,
+                            520,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            508,
+                            378,
+                            648,
+                            1000
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 106,
+                "raw_token_count": 176,
+                "runtime_seconds": 0.6109
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.91822,
+                "img_dist": 0.04008,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.9161,
+                "delta_m_plus": 0.0,
+                "phi": 0.95992,
+                "swad": 0.0
+            },
+            "l2_distance": 0.91909,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"maillot, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [385, 536, 512, 792], \"label\": \"maillot\"},\n\t{\"bbox_2d\": [508, 500, 625, 792], \"label\": \"maillot\"},\n\t{\"bbox_2d\": [355, 408, 520, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [508, 378, 650, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [0, 892, 80, 1000], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            385,
+                            536,
+                            512,
+                            792
+                        ],
+                        "label": "maillot"
+                    },
+                    {
+                        "bbox_2d": [
+                            508,
+                            500,
+                            625,
+                            792
+                        ],
+                        "label": "maillot"
+                    },
+                    {
+                        "bbox_2d": [
+                            355,
+                            408,
+                            520,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            508,
+                            378,
+                            650,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            892,
+                            80,
+                            1000
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 175,
+                "raw_token_count": 176,
+                "runtime_seconds": 0.6109
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6124377601560459,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.85678,
+                "img_dist": 0.08534,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.9161,
+                "delta_m_plus": 0.06475,
+                "phi": 0.91466,
+                "swad": 0.05923
+            },
+            "l2_distance": 0.86102,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"maillot, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [398, 527, 500, 797], \"label\": \"maillot\"},\n\t{\"bbox_2d\": [512, 517, 612, 797], \"label\": \"maillot\"},\n\t{\"bbox_2d\": [358, 417, 512, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [512, 377, 650, 1000], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            398,
+                            527,
+                            500,
+                            797
+                        ],
+                        "label": "maillot"
+                    },
+                    {
+                        "bbox_2d": [
+                            512,
+                            517,
+                            612,
+                            797
+                        ],
+                        "label": "maillot"
+                    },
+                    {
+                        "bbox_2d": [
+                            358,
+                            417,
+                            512,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            512,
+                            377,
+                            650,
+                            1000
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 144,
+                "raw_token_count": 176,
+                "runtime_seconds": 0.6109
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.5656671100314771,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.039875089079669634
+            },
+            "objectives": {
+                "iou": 0.86343,
+                "img_dist": 0.08167,
+                "txt_dist": 0.11551,
+                "txt_sim": 0.88449
+            },
+            "swad_metrics": {
+                "iou_0": 0.9161,
+                "delta_m_plus": 0.05749,
+                "phi": 0.81225,
+                "swad": 0.0467
+            },
+            "l2_distance": 0.87494,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"mai\u200bllot, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [394, 528, 500, 796], \"label\": \"mai\u200bllot\"},\n\t{\"bbox_2d\": [512, 508, 612, 796], \"label\": \"mai\u200bllot\"},\n\t{\"bbox_2d\": [358, 412, 508, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [512, 372, 652, 1000], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            394,
+                            528,
+                            500,
+                            796
+                        ],
+                        "label": "mai\u200bllot"
+                    },
+                    {
+                        "bbox_2d": [
+                            512,
+                            508,
+                            612,
+                            796
+                        ],
+                        "label": "mai\u200bllot"
+                    },
+                    {
+                        "bbox_2d": [
+                            358,
+                            412,
+                            508,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            512,
+                            372,
+                            652,
+                            1000
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 146,
+                "raw_token_count": 176,
+                "runtime_seconds": 0.6109
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.307337327911573,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.87375,
+                "img_dist": 0.04675,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.9161,
+                "delta_m_plus": 0.04623,
+                "phi": 0.95325,
+                "swad": 0.04407
+            },
+            "l2_distance": 0.875,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"maillot, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [375, 530, 508, 792], \"label\": \"maillot\"},\n\t{\"bbox_2d\": [508, 500, 625, 780], \"label\": \"maillot\"},\n\t{\"bbox_2d\": [355, 412, 520, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [500, 378, 648, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [0, 888, 75, 1000], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            375,
+                            530,
+                            508,
+                            792
+                        ],
+                        "label": "maillot"
+                    },
+                    {
+                        "bbox_2d": [
+                            508,
+                            500,
+                            625,
+                            780
+                        ],
+                        "label": "maillot"
+                    },
+                    {
+                        "bbox_2d": [
+                            355,
+                            412,
+                            520,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            500,
+                            378,
+                            648,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            888,
+                            75,
+                            1000
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 175,
+                "raw_token_count": 176,
+                "runtime_seconds": 0.6109
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.03811,
+                "txt_dist": 0.21325,
+                "txt_sim": 0.78675
+            },
+            "swad_metrics": {
+                "iou_0": 0.9161,
+                "delta_m_plus": 1.0,
+                "phi": 0.75677,
+                "swad": 0.75677
+            },
+            "l2_distance": 0.21663,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"my oh, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [357, 410, 528, 1000], \"label\": \"my oh, person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            357,
+                            410,
+                            528,
+                            1000
+                        ],
+                        "label": "my oh, person"
+                    }
+                ],
+                "token_count": 43,
+                "raw_token_count": 176,
+                "runtime_seconds": 0.6109
+            }
+        }
+    ]
+}

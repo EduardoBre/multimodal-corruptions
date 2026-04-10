@@ -1,0 +1,549 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/114",
+        "folder_id": "114",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00044448.JPEG"
+    },
+    "original_prompt": "Identify the objects \"accordion, chair, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 146,
+            "ymin": 172,
+            "xmax": 321,
+            "ymax": 487
+        },
+        "accordion": {
+            "xmin": 201,
+            "ymin": 220,
+            "xmax": 314,
+            "ymax": 360
+        },
+        "chair": {
+            "xmin": 205,
+            "ymin": 276,
+            "xmax": 332,
+            "ymax": 476
+        }
+    },
+    "baseline_iou": 0.78301,
+    "swad_star": 0.67224,
+    "swad_star_index": 4,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "n_solutions": 8,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8181617493544074,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.41721849968957336
+            },
+            "objectives": {
+                "iou": 0.70831,
+                "img_dist": 0.06175,
+                "txt_dist": 0.16127,
+                "txt_sim": 0.83873
+            },
+            "swad_metrics": {
+                "iou_0": 0.78301,
+                "delta_m_plus": 0.0954,
+                "phi": 0.78694,
+                "swad": 0.07507
+            },
+            "l2_distance": 0.72906,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"accordiog, chbir, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [588, 430, 908, 694], \"label\": \"accordiog\"},\n\t{\"bbox_2d\": [184, 180, 500, 838], \"label\": \"chbir\"},\n\t{\"bbox_2d\": [432, 350, 976, 970], \"label\": \"person\"},\n\t{\"bbox_2d\": [128, 257, 528, 894], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            588,
+                            430,
+                            908,
+                            694
+                        ],
+                        "label": "accordiog"
+                    },
+                    {
+                        "bbox_2d": [
+                            184,
+                            180,
+                            500,
+                            838
+                        ],
+                        "label": "chbir"
+                    },
+                    {
+                        "bbox_2d": [
+                            432,
+                            350,
+                            976,
+                            970
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            128,
+                            257,
+                            528,
+                            894
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 142,
+                "raw_token_count": 156,
+                "runtime_seconds": 0.6012
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6124377601560459,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.75389,
+                "img_dist": 0.09261,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.78301,
+                "delta_m_plus": 0.03719,
+                "phi": 0.90739,
+                "swad": 0.03375
+            },
+            "l2_distance": 0.75956,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"accordion, chair, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [588, 438, 938, 700], \"label\": \"accordion\"},\n\t{\"bbox_2d\": [772, 700, 999, 999], \"label\": \"chair\"},\n\t{\"bbox_2d\": [438, 348, 972, 972], \"label\": \"person\"},\n\t{\"bbox_2d\": [128, 228, 528, 838], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            588,
+                            438,
+                            938,
+                            700
+                        ],
+                        "label": "accordion"
+                    },
+                    {
+                        "bbox_2d": [
+                            772,
+                            700,
+                            999,
+                            999
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            438,
+                            348,
+                            972,
+                            972
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            128,
+                            228,
+                            528,
+                            838
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 138,
+                "raw_token_count": 156,
+                "runtime_seconds": 0.6012
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.21300761893764208,
+                "txt_attack": "synonym",
+                "txt_scale": 0.11490566325799068
+            },
+            "objectives": {
+                "iou": 0.78059,
+                "img_dist": 0.0515,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.78301,
+                "delta_m_plus": 0.00309,
+                "phi": 0.9485,
+                "swad": 0.00293
+            },
+            "l2_distance": 0.78229,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"accordion, chair, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [600, 430, 928, 700], \"label\": \"accordion\"},\n\t{\"bbox_2d\": [788, 555, 1000, 945], \"label\": \"chair\"},\n\t{\"bbox_2d\": [432, 345, 976, 972], \"label\": \"person\"},\n\t{\"bbox_2d\": [128, 258, 532, 830], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            600,
+                            430,
+                            928,
+                            700
+                        ],
+                        "label": "accordion"
+                    },
+                    {
+                        "bbox_2d": [
+                            788,
+                            555,
+                            1000,
+                            945
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            432,
+                            345,
+                            976,
+                            972
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            128,
+                            258,
+                            532,
+                            830
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 139,
+                "raw_token_count": 156,
+                "runtime_seconds": 0.6012
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.40207,
+                "img_dist": 0.09282,
+                "txt_dist": 0.23519,
+                "txt_sim": 0.76481
+            },
+            "swad_metrics": {
+                "iou_0": 0.78301,
+                "delta_m_plus": 0.48651,
+                "phi": 0.69382,
+                "swad": 0.33755
+            },
+            "l2_distance": 0.47496,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"accord ian, chair, purse on\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [188, 412, 500, 838], \"label\": \"accord ian\"},\n\t{\"bbox_2d\": [538, 750, 642, 900], \"label\": \"chair\"},\n\t{\"bbox_2d\": [600, 450, 938, 672], \"label\": \"purse on\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            188,
+                            412,
+                            500,
+                            838
+                        ],
+                        "label": "accord ian"
+                    },
+                    {
+                        "bbox_2d": [
+                            538,
+                            750,
+                            642,
+                            900
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            600,
+                            450,
+                            938,
+                            672
+                        ],
+                        "label": "purse on"
+                    }
+                ],
+                "token_count": 110,
+                "raw_token_count": 156,
+                "runtime_seconds": 0.6012
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.9316177058680379,
+                "txt_attack": "homophone",
+                "txt_scale": 0.9948250792623392
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.06729,
+                "txt_dist": 0.27926,
+                "txt_sim": 0.72074
+            },
+            "swad_metrics": {
+                "iou_0": 0.78301,
+                "delta_m_plus": 1.0,
+                "phi": 0.67224,
+                "swad": 0.67224
+            },
+            "l2_distance": 0.28725,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"a cordeon, chare, per son\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [180, 420, 400, 835], \"label\": \"a cordeon, chare, per son\"},\n\t{\"bbox_2d\": [572, 430, 912, 690], \"label\": \"a cordeon, chare, per son\"},\n\t{\"bbox_2d\": [128, 280, 528, 835], \"label\": \"a cordeon, chare, per son\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            180,
+                            420,
+                            400,
+                            835
+                        ],
+                        "label": "a cordeon, chare, per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            572,
+                            430,
+                            912,
+                            690
+                        ],
+                        "label": "a cordeon, chare, per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            128,
+                            280,
+                            528,
+                            835
+                        ],
+                        "label": "a cordeon, chare, per son"
+                    }
+                ],
+                "token_count": 132,
+                "raw_token_count": 188,
+                "runtime_seconds": 0.7434
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.03732619454213726,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.33647038540361596
+            },
+            "objectives": {
+                "iou": 0.74748,
+                "img_dist": 0.03645,
+                "txt_dist": 0.04562,
+                "txt_sim": 0.95438
+            },
+            "swad_metrics": {
+                "iou_0": 0.78301,
+                "delta_m_plus": 0.04538,
+                "phi": 0.91959,
+                "swad": 0.04173
+            },
+            "l2_distance": 0.74976,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"accoridon, chair, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [598, 444, 928, 675], \"label\": \"accoridon\"},\n\t{\"bbox_2d\": [800, 558, 998, 944], \"label\": \"chair\"},\n\t{\"bbox_2d\": [432, 344, 972, 970], \"label\": \"person\"},\n\t{\"bbox_2d\": [128, 258, 532, 835], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            598,
+                            444,
+                            928,
+                            675
+                        ],
+                        "label": "accoridon"
+                    },
+                    {
+                        "bbox_2d": [
+                            800,
+                            558,
+                            998,
+                            944
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            432,
+                            344,
+                            972,
+                            970
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            128,
+                            258,
+                            532,
+                            835
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 140,
+                "raw_token_count": 188,
+                "runtime_seconds": 0.7434
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.8004900574692112,
+                "txt_attack": "homophone",
+                "txt_scale": 0.3273709769105356
+            },
+            "objectives": {
+                "iou": 0.54343,
+                "img_dist": 0.10237,
+                "txt_dist": 0.22323,
+                "txt_sim": 0.77677
+            },
+            "swad_metrics": {
+                "iou_0": 0.78301,
+                "delta_m_plus": 0.30597,
+                "phi": 0.69725,
+                "swad": 0.21334
+            },
+            "l2_distance": 0.59635,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"a cord ion, cher, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [178, 412, 494, 836], \"label\": \"a cord ion, cher\"},\n\t{\"bbox_2d\": [116, 212, 528, 836], \"label\": \"cher\"},\n\t{\"bbox_2d\": [428, 344, 984, 972], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            178,
+                            412,
+                            494,
+                            836
+                        ],
+                        "label": "a cord ion, cher"
+                    },
+                    {
+                        "bbox_2d": [
+                            116,
+                            212,
+                            528,
+                            836
+                        ],
+                        "label": "cher"
+                    },
+                    {
+                        "bbox_2d": [
+                            428,
+                            344,
+                            984,
+                            972
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 188,
+                "runtime_seconds": 0.7434
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.6213450499591809,
+                "txt_attack": "synonym",
+                "txt_scale": 0.7933036501430749
+            },
+            "objectives": {
+                "iou": 0.73903,
+                "img_dist": 0.1247,
+                "txt_dist": 0.15558,
+                "txt_sim": 0.84442
+            },
+            "swad_metrics": {
+                "iou_0": 0.78301,
+                "delta_m_plus": 0.05617,
+                "phi": 0.73912,
+                "swad": 0.04151
+            },
+            "l2_distance": 0.76545,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"button accordion, side chair, individual\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [612, 430, 928, 698], \"label\": \"button accordion\"},\n\t{\"bbox_2d\": [800, 607, 998, 948], \"label\": \"side chair\"},\n\t{\"bbox_2d\": [430, 348, 978, 970], \"label\": \"individual\"},\n\t{\"bbox_2d\": [128, 270, 528, 838], \"label\": \"individual\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            612,
+                            430,
+                            928,
+                            698
+                        ],
+                        "label": "button accordion"
+                    },
+                    {
+                        "bbox_2d": [
+                            800,
+                            607,
+                            998,
+                            948
+                        ],
+                        "label": "side chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            430,
+                            348,
+                            978,
+                            970
+                        ],
+                        "label": "individual"
+                    },
+                    {
+                        "bbox_2d": [
+                            128,
+                            270,
+                            528,
+                            838
+                        ],
+                        "label": "individual"
+                    }
+                ],
+                "token_count": 140,
+                "raw_token_count": 188,
+                "runtime_seconds": 0.7434
+            }
+        }
+    ]
+}

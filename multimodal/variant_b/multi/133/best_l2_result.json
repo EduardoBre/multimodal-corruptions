@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/133",
+        "folder_id": "133",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00010890.JPEG"
+    },
+    "pareto_index": 21,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 60,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.012911,
+            "defocus_blur": 0.054443,
+            "motion_blur": 0.030475,
+            "fog_filter": 0.04627,
+            "pixelate": 0.027877,
+            "jpeg_filter": 0.010661
+        },
+        "text_corruptions": {
+            "homophone": 0.170142,
+            "synonym": 0.099059,
+            "ata_saliency": 0.180395,
+            "fragmentation": 0.070195,
+            "character_noise": 0.078538
+        },
+        "img_budget_used": 0.182636,
+        "txt_budget_used": 0.598328,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.0889,
+        "txt_dist": 0.20849,
+        "txt_sim": 0.79151
+    },
+    "swad_metrics": {
+        "iou_0": 0.97056,
+        "delta_m_plus": 1.0,
+        "phi": 0.72114,
+        "swad": 0.72114
+    },
+    "l2_distance": 0.22665,
+    "original_prompt": "Identify the objects \"person, table\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 1,
+            "ymin": 152,
+            "xmax": 461,
+            "ymax": 374
+        },
+        "table": {
+            "xmin": 155,
+            "ymin": 0,
+            "xmax": 499,
+            "ymax": 373
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"p\u0435r sno, tabl\u200be\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 488, 712, 998], \"label\": \"p\u0435r sno, tabl\u200be\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    488,
+                    712,
+                    998
+                ],
+                "label": "p\u0435r sno, tabl\u200be"
+            }
+        ],
+        "token_count": 45,
+        "raw_token_count": 77,
+        "runtime_seconds": 0.2387
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.012910610619870035,
+        "defocus_blur": 0.05444262792329884,
+        "motion_blur": 0.03047469037334409,
+        "fog_filter": 0.04627012163070077,
+        "pixelate": 0.02787660654584221,
+        "jpeg_filter": 0.010660951020381327
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.17014174957523456,
+        "synonym": 0.09905884800629704,
+        "ata_saliency": 0.18039486104267777,
+        "fragmentation": 0.07019504603341226,
+        "character_noise": 0.0785378595055203
+    }
+}

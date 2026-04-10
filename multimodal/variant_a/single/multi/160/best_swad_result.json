@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/160",
+        "folder_id": "160",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00015768.JPEG"
+    },
+    "pareto_index": 2,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.307337327911573,
+        "txt_attack": "homophone",
+        "txt_scale": 0.4186211600401869
+    },
+    "objectives": {
+        "iou": 0.03717,
+        "img_dist": 0.04606,
+        "txt_dist": 0.27328,
+        "txt_sim": 0.72672
+    },
+    "swad_metrics": {
+        "iou_0": 0.97598,
+        "delta_m_plus": 0.96192,
+        "phi": 0.69325,
+        "swad": 0.66685
+    },
+    "l2_distance": 0.27962,
+    "original_prompt": "Identify the objects \"harp\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "harp": {
+            "xmin": 0,
+            "ymin": 53,
+            "xmax": 165,
+            "ymax": 466
+        },
+        "harp_1": {
+            "xmin": 185,
+            "ymin": 70,
+            "xmax": 373,
+            "ymax": 480
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"tarp\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [372, 402, 572, 612], \"label\": \"tarp\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    372,
+                    402,
+                    572,
+                    612
+                ],
+                "label": "tarp"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 84,
+        "runtime_seconds": 0.3045
+    }
+}

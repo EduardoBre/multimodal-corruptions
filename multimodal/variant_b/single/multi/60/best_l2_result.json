@@ -1,0 +1,109 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/60",
+        "folder_id": "60",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00036108.JPEG"
+    },
+    "pareto_index": 6,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.068182,
+            "defocus_blur": 0.388221,
+            "motion_blur": 0.074759,
+            "fog_filter": 0.051731,
+            "pixelate": 0.200934,
+            "jpeg_filter": 0.012356
+        },
+        "text_corruptions": {
+            "homophone": 0.283238,
+            "synonym": 0.05938,
+            "ata_saliency": 0.006279,
+            "fragmentation": 0.054924,
+            "character_noise": 0.025196
+        },
+        "img_budget_used": 0.796183,
+        "txt_budget_used": 0.429016,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.22679,
+        "img_dist": 0.10921,
+        "txt_dist": 0.03172,
+        "txt_sim": 0.96828
+    },
+    "swad_metrics": {
+        "iou_0": 0.82585,
+        "delta_m_plus": 0.72539,
+        "phi": 0.86253,
+        "swad": 0.62567
+    },
+    "l2_distance": 0.25371,
+    "original_prompt": "Identify the objects \"antelope\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "antelope": {
+            "xmin": 283,
+            "ymin": 141,
+            "xmax": 374,
+            "ymax": 222
+        },
+        "antelope_1": {
+            "xmin": 102,
+            "ymin": 41,
+            "xmax": 141,
+            "ymax": 156
+        },
+        "antelope_2": {
+            "xmin": 380,
+            "ymin": 46,
+            "xmax": 405,
+            "ymax": 138
+        },
+        "antelope_3": {
+            "xmin": 43,
+            "ymin": 42,
+            "xmax": 79,
+            "ymax": 139
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"a\u200bntelope\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [567, 417, 748, 683], \"label\": \"a\u200bntelope\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    567,
+                    417,
+                    748,
+                    683
+                ],
+                "label": "a\u200bntelope"
+            }
+        ],
+        "token_count": 42,
+        "raw_token_count": 194,
+        "runtime_seconds": 0.5887
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0681820194738625,
+        "defocus_blur": 0.3882212506703955,
+        "motion_blur": 0.07475913070012516,
+        "fog_filter": 0.05173052015353549,
+        "pixelate": 0.20093370825795695,
+        "jpeg_filter": 0.01235592569391144
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.28323761685286647,
+        "synonym": 0.05937952150390111,
+        "ata_saliency": 0.0062787415232617265,
+        "fragmentation": 0.05492366055020861,
+        "character_noise": 0.025196434487434523
+    }
+}

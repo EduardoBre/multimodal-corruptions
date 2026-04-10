@@ -1,0 +1,800 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/129",
+        "folder_id": "129",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00038678.JPEG"
+    },
+    "original_prompt": "Identify the objects \"person, volleyball\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 364,
+            "ymin": 339,
+            "xmax": 627,
+            "ymax": 897
+        },
+        "person_1": {
+            "xmin": 0,
+            "ymin": 231,
+            "xmax": 276,
+            "ymax": 897
+        },
+        "volleyball": {
+            "xmin": 123,
+            "ymin": 0,
+            "xmax": 200,
+            "ymax": 67
+        }
+    },
+    "baseline_iou": 0.95118,
+    "swad_star": 0.61931,
+    "swad_star_index": 9,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 10,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.8632061743184387,
+                "txt_attack": "synonym",
+                "txt_scale": 0.7724979474714236
+            },
+            "objectives": {
+                "iou": 0.93238,
+                "img_dist": 0.1767,
+                "txt_dist": 0.09838,
+                "txt_sim": 0.90162
+            },
+            "swad_metrics": {
+                "iou_0": 0.95118,
+                "delta_m_plus": 0.01976,
+                "phi": 0.7423,
+                "swad": 0.01467
+            },
+            "l2_distance": 0.95406,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"individual, volleyball\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [270, 42, 782, 999], \"label\": \"individual\"},\n\t{\"bbox_2d\": [570, 375, 1000, 999], \"label\": \"individual\"},\n\t{\"bbox_2d\": [0, 262, 434, 999], \"label\": \"individual\"},\n\t{\"bbox_2d\": [578, 438, 700, 838], \"label\": \"individual\"},\n\t{\"bbox_2d\": [198, 0, 312, 82], \"label\": \"volleyball\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            270,
+                            42,
+                            782,
+                            999
+                        ],
+                        "label": "individual"
+                    },
+                    {
+                        "bbox_2d": [
+                            570,
+                            375,
+                            1000,
+                            999
+                        ],
+                        "label": "individual"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            262,
+                            434,
+                            999
+                        ],
+                        "label": "individual"
+                    },
+                    {
+                        "bbox_2d": [
+                            578,
+                            438,
+                            700,
+                            838
+                        ],
+                        "label": "individual"
+                    },
+                    {
+                        "bbox_2d": [
+                            198,
+                            0,
+                            312,
+                            82
+                        ],
+                        "label": "volleyball"
+                    }
+                ],
+                "token_count": 168,
+                "raw_token_count": 219,
+                "runtime_seconds": 0.7375
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8181617493544074,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.41721849968957336
+            },
+            "objectives": {
+                "iou": 0.94314,
+                "img_dist": 0.04365,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.95118,
+                "delta_m_plus": 0.00845,
+                "phi": 0.95635,
+                "swad": 0.00808
+            },
+            "l2_distance": 0.94415,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"person, volleyball\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [258, 30, 782, 940], \"label\": \"person\"},\n\t{\"bbox_2d\": [572, 372, 1000, 999], \"label\": \"person\"},\n\t{\"bbox_2d\": [0, 264, 432, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [0, 397, 198, 999], \"label\": \"person\"},\n\t{\"bbox_2d\": [572, 440, 712, 940], \"label\": \"person\"},\n\t{\"bbox_2d\": [198, 0, 312, 78], \"label\": \"volleyball\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            258,
+                            30,
+                            782,
+                            940
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            572,
+                            372,
+                            1000,
+                            999
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            264,
+                            432,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            397,
+                            198,
+                            999
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            572,
+                            440,
+                            712,
+                            940
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            198,
+                            0,
+                            312,
+                            78
+                        ],
+                        "label": "volleyball"
+                    }
+                ],
+                "token_count": 200,
+                "raw_token_count": 219,
+                "runtime_seconds": 0.7375
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.3997956906557353,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.647636093318414
+            },
+            "objectives": {
+                "iou": 0.94357,
+                "img_dist": 0.03998,
+                "txt_dist": 0.05562,
+                "txt_sim": 0.94438
+            },
+            "swad_metrics": {
+                "iou_0": 0.95118,
+                "delta_m_plus": 0.008,
+                "phi": 0.90662,
+                "swad": 0.00725
+            },
+            "l2_distance": 0.94605,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"perosn, volleyabll\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [220, 38, 782, 930], \"label\": \"perosn\"},\n\t{\"bbox_2d\": [578, 373, 1000, 999], \"label\": \"perosn\"},\n\t{\"bbox_2d\": [0, 258, 432, 1000], \"label\": \"perosn\"},\n\t{\"bbox_2d\": [448, 440, 770, 950], \"label\": \"perosn\"},\n\t{\"bbox_2d\": [198, 0, 312, 80], \"label\": \"volleyabll\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            220,
+                            38,
+                            782,
+                            930
+                        ],
+                        "label": "perosn"
+                    },
+                    {
+                        "bbox_2d": [
+                            578,
+                            373,
+                            1000,
+                            999
+                        ],
+                        "label": "perosn"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            258,
+                            432,
+                            1000
+                        ],
+                        "label": "perosn"
+                    },
+                    {
+                        "bbox_2d": [
+                            448,
+                            440,
+                            770,
+                            950
+                        ],
+                        "label": "perosn"
+                    },
+                    {
+                        "bbox_2d": [
+                            198,
+                            0,
+                            312,
+                            80
+                        ],
+                        "label": "volleyabll"
+                    }
+                ],
+                "token_count": 178,
+                "raw_token_count": 219,
+                "runtime_seconds": 0.7375
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.95061,
+                "img_dist": 0.02747,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.95118,
+                "delta_m_plus": 0.0006,
+                "phi": 0.97253,
+                "swad": 0.00058
+            },
+            "l2_distance": 0.95101,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"person, volleyball\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [222, 40, 782, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [578, 375, 1000, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [0, 258, 430, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [578, 440, 772, 952], \"label\": \"person\"},\n\t{\"bbox_2d\": [448, 440, 672, 952], \"label\": \"person\"},\n\t{\"bbox_2d\": [198, 0, 312, 78], \"label\": \"volleyball\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            222,
+                            40,
+                            782,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            578,
+                            375,
+                            1000,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            258,
+                            430,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            578,
+                            440,
+                            772,
+                            952
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            448,
+                            440,
+                            672,
+                            952
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            198,
+                            0,
+                            312,
+                            78
+                        ],
+                        "label": "volleyball"
+                    }
+                ],
+                "token_count": 202,
+                "raw_token_count": 219,
+                "runtime_seconds": 0.7375
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.94559,
+                "img_dist": 0.02304,
+                "txt_dist": 0.10033,
+                "txt_sim": 0.89967
+            },
+            "swad_metrics": {
+                "iou_0": 0.95118,
+                "delta_m_plus": 0.00588,
+                "phi": 0.87894,
+                "swad": 0.00517
+            },
+            "l2_distance": 0.95118,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"peuson, volleyball\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [228, 40, 784, 920], \"label\": \"peuson\"},\n\t{\"bbox_2d\": [578, 374, 1000, 999], \"label\": \"peuson\"},\n\t{\"bbox_2d\": [0, 262, 430, 1000], \"label\": \"peuson\"},\n\t{\"bbox_2d\": [444, 440, 768, 952], \"label\": \"peuson\"},\n\t{\"bbox_2d\": [196, 0, 312, 80], \"label\": \"volleyball\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            228,
+                            40,
+                            784,
+                            920
+                        ],
+                        "label": "peuson"
+                    },
+                    {
+                        "bbox_2d": [
+                            578,
+                            374,
+                            1000,
+                            999
+                        ],
+                        "label": "peuson"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            262,
+                            430,
+                            1000
+                        ],
+                        "label": "peuson"
+                    },
+                    {
+                        "bbox_2d": [
+                            444,
+                            440,
+                            768,
+                            952
+                        ],
+                        "label": "peuson"
+                    },
+                    {
+                        "bbox_2d": [
+                            196,
+                            0,
+                            312,
+                            80
+                        ],
+                        "label": "volleyball"
+                    }
+                ],
+                "token_count": 177,
+                "raw_token_count": 219,
+                "runtime_seconds": 0.7375
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.6126883641923373,
+                "txt_attack": "homophone",
+                "txt_scale": 0.10684452896191199
+            },
+            "objectives": {
+                "iou": 0.94341,
+                "img_dist": 0.03563,
+                "txt_dist": 0.1199,
+                "txt_sim": 0.8801
+            },
+            "swad_metrics": {
+                "iou_0": 0.95118,
+                "delta_m_plus": 0.00817,
+                "phi": 0.84874,
+                "swad": 0.00693
+            },
+            "l2_distance": 0.95167,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"per son, volleyball\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [222, 38, 780, 938], \"label\": \"per son\"},\n\t{\"bbox_2d\": [578, 372, 1000, 999], \"label\": \"per son\"},\n\t{\"bbox_2d\": [0, 264, 428, 1000], \"label\": \"per son\"},\n\t{\"bbox_2d\": [578, 440, 772, 940], \"label\": \"per son\"},\n\t{\"bbox_2d\": [442, 617, 588, 940], \"label\": \"per son\"},\n\t{\"bbox_2d\": [195, 0, 312, 80], \"label\": \"volleyball\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            222,
+                            38,
+                            780,
+                            938
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            578,
+                            372,
+                            1000,
+                            999
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            264,
+                            428,
+                            1000
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            578,
+                            440,
+                            772,
+                            940
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            442,
+                            617,
+                            588,
+                            940
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            195,
+                            0,
+                            312,
+                            80
+                        ],
+                        "label": "volleyball"
+                    }
+                ],
+                "token_count": 207,
+                "raw_token_count": 219,
+                "runtime_seconds": 0.7375
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6124377601560459,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.93657,
+                "img_dist": 0.07424,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.95118,
+                "delta_m_plus": 0.01536,
+                "phi": 0.92576,
+                "swad": 0.01422
+            },
+            "l2_distance": 0.93951,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"person, volleyball\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 260, 433, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [258, 38, 783, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [575, 375, 1000, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [575, 438, 767, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [196, 0, 312, 83], \"label\": \"volleyball\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            260,
+                            433,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            258,
+                            38,
+                            783,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            575,
+                            375,
+                            1000,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            575,
+                            438,
+                            767,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            196,
+                            0,
+                            312,
+                            83
+                        ],
+                        "label": "volleyball"
+                    }
+                ],
+                "token_count": 170,
+                "raw_token_count": 219,
+                "runtime_seconds": 0.7375
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.5656671100314771,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.039875089079669634
+            },
+            "objectives": {
+                "iou": 0.93347,
+                "img_dist": 0.0699,
+                "txt_dist": 0.18958,
+                "txt_sim": 0.81042
+            },
+            "swad_metrics": {
+                "iou_0": 0.95118,
+                "delta_m_plus": 0.01862,
+                "phi": 0.75377,
+                "swad": 0.01403
+            },
+            "l2_distance": 0.95509,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"\u0440\u200derson, vo\u200dlle\u200byb\u0430ll\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [258, 38, 784, 998], \"label\": \"\u0440\u200derson\"},\n\t{\"bbox_2d\": [578, 373, 999, 998], \"label\": \"\u0440\u200derson\"},\n\t{\"bbox_2d\": [0, 260, 430, 998], \"label\": \"\u0440\u200derson\"},\n\t{\"bbox_2d\": [578, 438, 764, 998], \"label\": \"\u0440\u200derson\"},\n\t{\"bbox_2d\": [0, 394, 192, 998], \"label\": \"\u0440\u200derson\"},\n\t{\"bbox_2d\": [198, 0, 312, 83], \"label\": \"vo\u200dlle\u200byb\u0430ll\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            258,
+                            38,
+                            784,
+                            998
+                        ],
+                        "label": "\u0440\u200derson"
+                    },
+                    {
+                        "bbox_2d": [
+                            578,
+                            373,
+                            999,
+                            998
+                        ],
+                        "label": "\u0440\u200derson"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            260,
+                            430,
+                            998
+                        ],
+                        "label": "\u0440\u200derson"
+                    },
+                    {
+                        "bbox_2d": [
+                            578,
+                            438,
+                            764,
+                            998
+                        ],
+                        "label": "\u0440\u200derson"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            394,
+                            192,
+                            998
+                        ],
+                        "label": "\u0440\u200derson"
+                    },
+                    {
+                        "bbox_2d": [
+                            198,
+                            0,
+                            312,
+                            83
+                        ],
+                        "label": "vo\u200dlle\u200byb\u0430ll"
+                    }
+                ],
+                "token_count": 218,
+                "raw_token_count": 219,
+                "runtime_seconds": 0.7375
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.307337327911573,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.29544,
+                "img_dist": 0.02951,
+                "txt_dist": 0.2205,
+                "txt_sim": 0.7795
+            },
+            "swad_metrics": {
+                "iou_0": 0.95118,
+                "delta_m_plus": 0.6894,
+                "phi": 0.7565,
+                "swad": 0.52153
+            },
+            "l2_distance": 0.36983,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"purse on, volley ball\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [196, 0, 312, 80], \"label\": \"volley ball\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            196,
+                            0,
+                            312,
+                            80
+                        ],
+                        "label": "volley ball"
+                    }
+                ],
+                "token_count": 38,
+                "raw_token_count": 219,
+                "runtime_seconds": 0.7375
+            }
+        },
+        {
+            "index": 9,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.17278,
+                "img_dist": 0.0745,
+                "txt_dist": 0.18231,
+                "txt_sim": 0.81769
+            },
+            "swad_metrics": {
+                "iou_0": 0.95118,
+                "delta_m_plus": 0.81835,
+                "phi": 0.75677,
+                "swad": 0.61931
+            },
+            "l2_distance": 0.26199,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"pursun, volleyball\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [200, 31, 320, 85], \"label\": \"volleyball\"},\n\t{\"bbox_2d\": [0, 260, 83, 350], \"label\": \"pursun\"},\n\t{\"bbox_2d\": [228, 320, 320, 430], \"label\": \"pursun\"},\n\t{\"bbox_2d\": [728, 310, 780, 370], \"label\": \"pursun\"},\n\t{\"bbox_2d\": [130, 300, 180, 330], \"label\": \"pursun\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            200,
+                            31,
+                            320,
+                            85
+                        ],
+                        "label": "volleyball"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            260,
+                            83,
+                            350
+                        ],
+                        "label": "pursun"
+                    },
+                    {
+                        "bbox_2d": [
+                            228,
+                            320,
+                            320,
+                            430
+                        ],
+                        "label": "pursun"
+                    },
+                    {
+                        "bbox_2d": [
+                            728,
+                            310,
+                            780,
+                            370
+                        ],
+                        "label": "pursun"
+                    },
+                    {
+                        "bbox_2d": [
+                            130,
+                            300,
+                            180,
+                            330
+                        ],
+                        "label": "pursun"
+                    }
+                ],
+                "token_count": 176,
+                "raw_token_count": 219,
+                "runtime_seconds": 0.7375
+            }
+        }
+    ]
+}

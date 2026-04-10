@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/29",
+        "folder_id": "29",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00019076.JPEG"
+    },
+    "pareto_index": 6,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.118186,
+            "defocus_blur": 0.374786,
+            "motion_blur": 0.010161,
+            "fog_filter": 0.213859,
+            "pixelate": 0.056242,
+            "jpeg_filter": 0.184899
+        },
+        "text_corruptions": {
+            "homophone": 0.148361,
+            "synonym": 0.000803,
+            "ata_saliency": 0.078511,
+            "fragmentation": 0.061343,
+            "character_noise": 0.139381
+        },
+        "img_budget_used": 0.958132,
+        "txt_budget_used": 0.428398,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.12169,
+        "txt_dist": 0.20555,
+        "txt_sim": 0.79445
+    },
+    "swad_metrics": {
+        "iou_0": 0.96309,
+        "delta_m_plus": 1.0,
+        "phi": 0.69777,
+        "swad": 0.69777
+    },
+    "l2_distance": 0.23887,
+    "original_prompt": "Identify the objects \"band aid, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 70,
+            "ymin": 84,
+            "xmax": 409,
+            "ymax": 374
+        },
+        "band aid": {
+            "xmin": 251,
+            "ymin": 86,
+            "xmax": 369,
+            "ymax": 249
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"band a\u200bi d, p\u0435r s\u200bon\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [147, 230, 820, 999], \"label\": \"band a\u200bi d, p\u0435r s\u200bon\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    147,
+                    230,
+                    820,
+                    999
+                ],
+                "label": "band a\u200bi d, p\u0435r s\u200bon"
+            }
+        ],
+        "token_count": 50,
+        "raw_token_count": 100,
+        "runtime_seconds": 0.41
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.11818617091886904,
+        "defocus_blur": 0.3747855389901227,
+        "motion_blur": 0.010160974643965773,
+        "fog_filter": 0.21385866658442354,
+        "pixelate": 0.056241828469816256,
+        "jpeg_filter": 0.18489893128723392
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.14836115192214752,
+        "synonym": 0.0008033601615208437,
+        "ata_saliency": 0.07851053746697322,
+        "fragmentation": 0.061342764533707295,
+        "character_noise": 0.13938063123138258
+    }
+}

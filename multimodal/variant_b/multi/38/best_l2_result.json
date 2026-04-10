@@ -1,0 +1,112 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/38",
+        "folder_id": "38",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00005426.JPEG"
+    },
+    "pareto_index": 2,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.003652,
+            "defocus_blur": 0.076189,
+            "motion_blur": 0.306522,
+            "fog_filter": 0.126422,
+            "pixelate": 0.067914,
+            "jpeg_filter": 0.091546
+        },
+        "text_corruptions": {
+            "homophone": 0.037457,
+            "synonym": 0.075771,
+            "ata_saliency": 0.040204,
+            "fragmentation": 0.121273,
+            "character_noise": 0.037301
+        },
+        "img_budget_used": 0.672245,
+        "txt_budget_used": 0.312005,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.09483,
+        "txt_dist": 0.15116,
+        "txt_sim": 0.84884
+    },
+    "swad_metrics": {
+        "iou_0": 0.79037,
+        "delta_m_plus": 1.0,
+        "phi": 0.76834,
+        "swad": 0.76834
+    },
+    "l2_distance": 0.17844,
+    "original_prompt": "Identify the objects \"hat with a wide brim, person, tie\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 66,
+            "ymin": 23,
+            "xmax": 260,
+            "ymax": 301
+        },
+        "tie": {
+            "xmin": 154,
+            "ymin": 115,
+            "xmax": 194,
+            "ymax": 277
+        },
+        "hat with a wide brim": {
+            "xmin": 115,
+            "ymin": 30,
+            "xmax": 226,
+            "ymax": 87
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"h\u200dat with a wide\u200b br\u200bim, p\u0435rs\u200don, tz\u200be\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [487, 67, 807, 163], \"label\": \"h\u200dat with a wide\u200b br\u200bim, p\u0435rs\u200don, tz\u200be\"},\n\t{\"bbox_2d\": [300, 67, 947, 595], \"label\": \"h\u200dat with a wide\u200b br\u200bim, p\u0435rs\u200don, tz\u200be\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    487,
+                    67,
+                    807,
+                    163
+                ],
+                "label": "h\u200dat with a wide\u200b br\u200bim, p\u0435rs\u200don, tz\u200be"
+            },
+            {
+                "bbox_2d": [
+                    300,
+                    67,
+                    947,
+                    595
+                ],
+                "label": "h\u200dat with a wide\u200b br\u200bim, p\u0435rs\u200don, tz\u200be"
+            }
+        ],
+        "token_count": 112,
+        "raw_token_count": 126,
+        "runtime_seconds": 0.391
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0036520080097252497,
+        "defocus_blur": 0.07618886511959042,
+        "motion_blur": 0.3065222427670818,
+        "fog_filter": 0.126421668522148,
+        "pixelate": 0.06791439569686405,
+        "jpeg_filter": 0.09154583578922929
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.03745694765853969,
+        "synonym": 0.07577072465289769,
+        "ata_saliency": 0.04020351900790438,
+        "fragmentation": 0.12127287415153455,
+        "character_noise": 0.03730123431471617
+    }
+}

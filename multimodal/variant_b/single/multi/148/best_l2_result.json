@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/148",
+        "folder_id": "148",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00034439.JPEG"
+    },
+    "pareto_index": 3,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.024784,
+            "defocus_blur": 0.008869,
+            "motion_blur": 0.038589,
+            "fog_filter": 0.113744,
+            "pixelate": 0.045455,
+            "jpeg_filter": 0.030352
+        },
+        "text_corruptions": {
+            "homophone": 0.1017,
+            "synonym": 0.026128,
+            "ata_saliency": 0.000952,
+            "fragmentation": 0.120783,
+            "character_noise": 0.038752
+        },
+        "img_budget_used": 0.261793,
+        "txt_budget_used": 0.288315,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.32386,
+        "img_dist": 0.10479,
+        "txt_dist": 0.16915,
+        "txt_sim": 0.83085
+    },
+    "swad_metrics": {
+        "iou_0": 0.57533,
+        "delta_m_plus": 0.43709,
+        "phi": 0.74379,
+        "swad": 0.3251
+    },
+    "l2_distance": 0.3801,
+    "original_prompt": "Identify the objects \"milk can\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "milk can": {
+            "xmin": 208,
+            "ymin": 10,
+            "xmax": 315,
+            "ymax": 160
+        },
+        "milk can_1": {
+            "xmin": 47,
+            "ymin": 17,
+            "xmax": 177,
+            "ymax": 153
+        },
+        "milk can_2": {
+            "xmin": 0,
+            "ymin": 235,
+            "xmax": 252,
+            "ymax": 470
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"milk ujg\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 480, 670, 938], \"label\": \"milk ujg\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    480,
+                    670,
+                    938
+                ],
+                "label": "milk ujg"
+            }
+        ],
+        "token_count": 41,
+        "raw_token_count": 120,
+        "runtime_seconds": 0.368
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.024783722424251996,
+        "defocus_blur": 0.00886915835340295,
+        "motion_blur": 0.038588500365928126,
+        "fog_filter": 0.11374438491593465,
+        "pixelate": 0.045455308086184885,
+        "jpeg_filter": 0.03035204349707741
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.10170018223330342,
+        "synonym": 0.02612779136764249,
+        "ata_saliency": 0.0009515756355068879,
+        "fragmentation": 0.12078325529309239,
+        "character_noise": 0.03875203609222272
+    }
+}

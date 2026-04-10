@@ -1,0 +1,82 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/66",
+        "folder_id": "66",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00024687.JPEG"
+    },
+    "pareto_index": 18,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 60,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "fog_filter",
+        "img_scale": 0.022330863890930575,
+        "txt_attack": "homophone",
+        "txt_scale": 0.42904425545999914
+    },
+    "objectives": {
+        "iou": 0.28561,
+        "img_dist": 0.06251,
+        "txt_dist": 0.2221,
+        "txt_sim": 0.7779
+    },
+    "swad_metrics": {
+        "iou_0": 0.88344,
+        "delta_m_plus": 0.67671,
+        "phi": 0.72927,
+        "swad": 0.4935
+    },
+    "l2_distance": 0.36716,
+    "original_prompt": "Identify the objects \"bathing cap, maillot, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 72,
+            "ymin": 161,
+            "xmax": 163,
+            "ymax": 410
+        },
+        "maillot": {
+            "xmin": 82,
+            "ymin": 193,
+            "xmax": 153,
+            "ymax": 300
+        },
+        "bathing cap": {
+            "xmin": 93,
+            "ymin": 158,
+            "xmax": 125,
+            "ymax": 190
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bathing cap, my oh, per son\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [262, 321, 348, 377], \"label\": \"bathing cap\"},\n\t{\"bbox_2d\": [202, 321, 472, 817], \"label\": \"my oh, per son\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    262,
+                    321,
+                    348,
+                    377
+                ],
+                "label": "bathing cap"
+            },
+            {
+                "bbox_2d": [
+                    202,
+                    321,
+                    472,
+                    817
+                ],
+                "label": "my oh, per son"
+            }
+        ],
+        "token_count": 78,
+        "raw_token_count": 127,
+        "runtime_seconds": 0.5045
+    }
+}

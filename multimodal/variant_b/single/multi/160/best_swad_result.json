@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/160",
+        "folder_id": "160",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00015768.JPEG"
+    },
+    "pareto_index": 8,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.001318,
+            "defocus_blur": 0.009828,
+            "motion_blur": 0.035268,
+            "fog_filter": 0.008081,
+            "pixelate": 0.007203,
+            "jpeg_filter": 0.028904
+        },
+        "text_corruptions": {
+            "homophone": 0.477911,
+            "synonym": 0.068776,
+            "ata_saliency": 0.128045,
+            "fragmentation": 0.069311,
+            "character_noise": 0.01399
+        },
+        "img_budget_used": 0.090602,
+        "txt_budget_used": 0.758034,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.03882,
+        "img_dist": 0.08067,
+        "txt_dist": 0.28919,
+        "txt_sim": 0.71081
+    },
+    "swad_metrics": {
+        "iou_0": 0.97598,
+        "delta_m_plus": 0.96022,
+        "phi": 0.65347,
+        "swad": 0.62748
+    },
+    "l2_distance": 0.30273,
+    "original_prompt": "Identify the objects \"harp\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "harp": {
+            "xmin": 0,
+            "ymin": 53,
+            "xmax": 165,
+            "ymax": 466
+        },
+        "harp_1": {
+            "xmin": 185,
+            "ymin": 70,
+            "xmax": 373,
+            "ymax": 480
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"t\u200barp\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [372, 400, 572, 620], \"label\": \"t\u200barp\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    372,
+                    400,
+                    572,
+                    620
+                ],
+                "label": "t\u200barp"
+            }
+        ],
+        "token_count": 41,
+        "raw_token_count": 86,
+        "runtime_seconds": 0.2574
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.001318178397355927,
+        "defocus_blur": 0.009828123263635734,
+        "motion_blur": 0.03526756162046555,
+        "fog_filter": 0.008080846960743883,
+        "pixelate": 0.007203196735020236,
+        "jpeg_filter": 0.028904212781159067
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.4779112463172565,
+        "synonym": 0.06877607226205701,
+        "ata_saliency": 0.12804541326410993,
+        "fragmentation": 0.06931144915771924,
+        "character_noise": 0.013989710190203087
+    }
+}

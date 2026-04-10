@@ -1,0 +1,342 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/137",
+        "folder_id": "137",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00000842.JPEG"
+    },
+    "original_prompt": "Identify the objects \"binder, purse\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "purse": {
+            "xmin": 232,
+            "ymin": 109,
+            "xmax": 498,
+            "ymax": 284
+        },
+        "binder": {
+            "xmin": 147,
+            "ymin": 17,
+            "xmax": 426,
+            "ymax": 132
+        },
+        "binder_1": {
+            "xmin": 43,
+            "ymin": 21,
+            "xmax": 233,
+            "ymax": 207
+        },
+        "binder_2": {
+            "xmin": 126,
+            "ymin": 256,
+            "xmax": 486,
+            "ymax": 486
+        },
+        "binder_3": {
+            "xmin": 187,
+            "ymin": 307,
+            "xmax": 498,
+            "ymax": 498
+        }
+    },
+    "baseline_iou": 0.65853,
+    "swad_star": 0.74101,
+    "swad_star_index": 4,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 5,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.68555,
+                "img_dist": 0.02681,
+                "txt_dist": 0.1679,
+                "txt_sim": 0.8321
+            },
+            "swad_metrics": {
+                "iou_0": 0.65853,
+                "delta_m_plus": 0.0,
+                "phi": 0.80979,
+                "swad": 0.0
+            },
+            "l2_distance": 0.70632,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"binder, perse\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [296, 38, 858, 278], \"label\": \"binder\"},\n\t{\"bbox_2d\": [88, 48, 308, 394], \"label\": \"binder\"},\n\t{\"bbox_2d\": [373, 625, 1000, 1000], \"label\": \"binder\"},\n\t{\"bbox_2d\": [244, 528, 972, 978], \"label\": \"perse\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            296,
+                            38,
+                            858,
+                            278
+                        ],
+                        "label": "binder"
+                    },
+                    {
+                        "bbox_2d": [
+                            88,
+                            48,
+                            308,
+                            394
+                        ],
+                        "label": "binder"
+                    },
+                    {
+                        "bbox_2d": [
+                            373,
+                            625,
+                            1000,
+                            1000
+                        ],
+                        "label": "binder"
+                    },
+                    {
+                        "bbox_2d": [
+                            244,
+                            528,
+                            972,
+                            978
+                        ],
+                        "label": "perse"
+                    }
+                ],
+                "token_count": 140,
+                "raw_token_count": 142,
+                "runtime_seconds": 0.4429
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.33397,
+                "img_dist": 0.0269,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.65853,
+                "delta_m_plus": 0.49286,
+                "phi": 0.9731,
+                "swad": 0.4796
+            },
+            "l2_distance": 0.33505,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"binder, purse\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [294, 40, 862, 270], \"label\": \"binder\"},\n\t{\"bbox_2d\": [84, 44, 320, 397], \"label\": \"binder\"},\n\t{\"bbox_2d\": [162, 248, 520, 637], \"label\": \"purse\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            294,
+                            40,
+                            862,
+                            270
+                        ],
+                        "label": "binder"
+                    },
+                    {
+                        "bbox_2d": [
+                            84,
+                            44,
+                            320,
+                            397
+                        ],
+                        "label": "binder"
+                    },
+                    {
+                        "bbox_2d": [
+                            162,
+                            248,
+                            520,
+                            637
+                        ],
+                        "label": "purse"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 142,
+                "runtime_seconds": 0.4429
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6124377601560459,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.32308,
+                "img_dist": 0.06621,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.65853,
+                "delta_m_plus": 0.50939,
+                "phi": 0.93379,
+                "swad": 0.47567
+            },
+            "l2_distance": 0.32979,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"binder, purse\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [80, 44, 300, 404], \"label\": \"binder\"},\n\t{\"bbox_2d\": [294, 38, 860, 272], \"label\": \"binder\"},\n\t{\"bbox_2d\": [164, 244, 472, 636], \"label\": \"purse\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            80,
+                            44,
+                            300,
+                            404
+                        ],
+                        "label": "binder"
+                    },
+                    {
+                        "bbox_2d": [
+                            294,
+                            38,
+                            860,
+                            272
+                        ],
+                        "label": "binder"
+                    },
+                    {
+                        "bbox_2d": [
+                            164,
+                            244,
+                            472,
+                            636
+                        ],
+                        "label": "purse"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 142,
+                "runtime_seconds": 0.4429
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.5656671100314771,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.039875089079669634
+            },
+            "objectives": {
+                "iou": 0.32513,
+                "img_dist": 0.06221,
+                "txt_dist": 0.22776,
+                "txt_sim": 0.77224
+            },
+            "swad_metrics": {
+                "iou_0": 0.65853,
+                "delta_m_plus": 0.50628,
+                "phi": 0.7242,
+                "swad": 0.36665
+            },
+            "l2_distance": 0.40181,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"b\u200binder\u200b, \u0440ur\u200dse\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [296, 38, 860, 272], \"label\": \"b\u200binder\u200b\"},\n\t{\"bbox_2d\": [80, 44, 304, 406], \"label\": \"b\u200binder\u200b\"},\n\t{\"bbox_2d\": [166, 248, 472, 636], \"label\": \"\u0440ur\u200dse\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            296,
+                            38,
+                            860,
+                            272
+                        ],
+                        "label": "b\u200binder\u200b"
+                    },
+                    {
+                        "bbox_2d": [
+                            80,
+                            44,
+                            304,
+                            406
+                        ],
+                        "label": "b\u200binder\u200b"
+                    },
+                    {
+                        "bbox_2d": [
+                            166,
+                            248,
+                            472,
+                            636
+                        ],
+                        "label": "\u0440ur\u200dse"
+                    }
+                ],
+                "token_count": 112,
+                "raw_token_count": 142,
+                "runtime_seconds": 0.4429
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.06528,
+                "txt_dist": 0.20724,
+                "txt_sim": 0.79276
+            },
+            "swad_metrics": {
+                "iou_0": 0.65853,
+                "delta_m_plus": 1.0,
+                "phi": 0.74101,
+                "swad": 0.74101
+            },
+            "l2_distance": 0.21728,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bind her, purs\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [164, 248, 632, 632], \"label\": \"bind her, purs\"},\n\t{\"bbox_2d\": [464, 216, 990, 572], \"label\": \"bind her, purs\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            164,
+                            248,
+                            632,
+                            632
+                        ],
+                        "label": "bind her, purs"
+                    },
+                    {
+                        "bbox_2d": [
+                            464,
+                            216,
+                            990,
+                            572
+                        ],
+                        "label": "bind her, purs"
+                    }
+                ],
+                "token_count": 78,
+                "raw_token_count": 142,
+                "runtime_seconds": 0.4429
+            }
+        }
+    ]
+}

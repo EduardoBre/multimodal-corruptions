@@ -1,0 +1,412 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/single/multi/224",
+        "folder_id": "224",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00015048.JPEG"
+    },
+    "original_prompt": "Identify the objects \"bus\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bus": {
+            "xmin": 0,
+            "ymin": 124,
+            "xmax": 227,
+            "ymax": 318
+        },
+        "bus_1": {
+            "xmin": 396,
+            "ymin": 167,
+            "xmax": 499,
+            "ymax": 269
+        },
+        "bus_2": {
+            "xmin": 286,
+            "ymin": 155,
+            "xmax": 450,
+            "ymax": 280
+        },
+        "bus_3": {
+            "xmin": 173,
+            "ymin": 133,
+            "xmax": 350,
+            "ymax": 293
+        }
+    },
+    "baseline_iou": 0.89964,
+    "swad_star": 0.6878,
+    "swad_star_index": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 6,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.018153363333776373,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.24927259019092207
+            },
+            "objectives": {
+                "iou": 0.84642,
+                "img_dist": 0.02841,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.89964,
+                "delta_m_plus": 0.05916,
+                "phi": 0.97159,
+                "swad": 0.05748
+            },
+            "l2_distance": 0.8469,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bus\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 324, 450, 808], \"label\": \"bus\"},\n\t{\"bbox_2d\": [355, 360, 700, 752], \"label\": \"bus\"},\n\t{\"bbox_2d\": [680, 416, 912, 718], \"label\": \"bus\"},\n\t{\"bbox_2d\": [792, 416, 1000, 672], \"label\": \"bus\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            324,
+                            450,
+                            808
+                        ],
+                        "label": "bus"
+                    },
+                    {
+                        "bbox_2d": [
+                            355,
+                            360,
+                            700,
+                            752
+                        ],
+                        "label": "bus"
+                    },
+                    {
+                        "bbox_2d": [
+                            680,
+                            416,
+                            912,
+                            718
+                        ],
+                        "label": "bus"
+                    },
+                    {
+                        "bbox_2d": [
+                            792,
+                            416,
+                            1000,
+                            672
+                        ],
+                        "label": "bus"
+                    }
+                ],
+                "token_count": 137,
+                "raw_token_count": 142,
+                "runtime_seconds": 0.4821
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.02368,
+                "img_dist": 0.02869,
+                "txt_dist": 0.27274,
+                "txt_sim": 0.72726
+            },
+            "swad_metrics": {
+                "iou_0": 0.89964,
+                "delta_m_plus": 0.97368,
+                "phi": 0.70639,
+                "swad": 0.6878
+            },
+            "l2_distance": 0.27527,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"buzz\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [677, 410, 788, 450], \"label\": \"buzz\"},\n\t{\"bbox_2d\": [466, 376, 552, 416], \"label\": \"buzz\"},\n\t{\"bbox_2d\": [167, 332, 292, 384], \"label\": \"buzz\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            677,
+                            410,
+                            788,
+                            450
+                        ],
+                        "label": "buzz"
+                    },
+                    {
+                        "bbox_2d": [
+                            466,
+                            376,
+                            552,
+                            416
+                        ],
+                        "label": "buzz"
+                    },
+                    {
+                        "bbox_2d": [
+                            167,
+                            332,
+                            292,
+                            384
+                        ],
+                        "label": "buzz"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 142,
+                "runtime_seconds": 0.4821
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.72931,
+                "img_dist": 0.02841,
+                "txt_dist": 0.3357,
+                "txt_sim": 0.6643
+            },
+            "swad_metrics": {
+                "iou_0": 0.89964,
+                "delta_m_plus": 0.18933,
+                "phi": 0.64543,
+                "swad": 0.1222
+            },
+            "l2_distance": 0.80336,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bsu\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 324, 450, 809], \"label\": \"bsu\"},\n\t{\"bbox_2d\": [357, 367, 700, 755], \"label\": \"bsu\"},\n\t{\"bbox_2d\": [683, 417, 999, 717], \"label\": \"bsu\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            324,
+                            450,
+                            809
+                        ],
+                        "label": "bsu"
+                    },
+                    {
+                        "bbox_2d": [
+                            357,
+                            367,
+                            700,
+                            755
+                        ],
+                        "label": "bsu"
+                    },
+                    {
+                        "bbox_2d": [
+                            683,
+                            417,
+                            999,
+                            717
+                        ],
+                        "label": "bsu"
+                    }
+                ],
+                "token_count": 106,
+                "raw_token_count": 142,
+                "runtime_seconds": 0.4821
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6124377601560459,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.69709,
+                "img_dist": 0.0709,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.89964,
+                "delta_m_plus": 0.22515,
+                "phi": 0.9291,
+                "swad": 0.20918
+            },
+            "l2_distance": 0.70069,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bus\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 230, 440, 812], \"label\": \"bus\"},\n\t{\"bbox_2d\": [350, 340, 680, 750], \"label\": \"bus\"},\n\t{\"bbox_2d\": [650, 390, 999, 720], \"label\": \"bus\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            230,
+                            440,
+                            812
+                        ],
+                        "label": "bus"
+                    },
+                    {
+                        "bbox_2d": [
+                            350,
+                            340,
+                            680,
+                            750
+                        ],
+                        "label": "bus"
+                    },
+                    {
+                        "bbox_2d": [
+                            650,
+                            390,
+                            999,
+                            720
+                        ],
+                        "label": "bus"
+                    }
+                ],
+                "token_count": 103,
+                "raw_token_count": 142,
+                "runtime_seconds": 0.4821
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.5656671100314771,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.039875089079669634
+            },
+            "objectives": {
+                "iou": 0.69719,
+                "img_dist": 0.06649,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.89964,
+                "delta_m_plus": 0.22503,
+                "phi": 0.93351,
+                "swad": 0.21007
+            },
+            "l2_distance": 0.70035,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bus\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 240, 440, 812], \"label\": \"bus\"},\n\t{\"bbox_2d\": [350, 350, 680, 760], \"label\": \"bus\"},\n\t{\"bbox_2d\": [630, 390, 999, 720], \"label\": \"bus\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            240,
+                            440,
+                            812
+                        ],
+                        "label": "bus"
+                    },
+                    {
+                        "bbox_2d": [
+                            350,
+                            350,
+                            680,
+                            760
+                        ],
+                        "label": "bus"
+                    },
+                    {
+                        "bbox_2d": [
+                            630,
+                            390,
+                            999,
+                            720
+                        ],
+                        "label": "bus"
+                    }
+                ],
+                "token_count": 103,
+                "raw_token_count": 142,
+                "runtime_seconds": 0.4821
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.018595721213425453,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6130568625347235
+            },
+            "objectives": {
+                "iou": 0.82721,
+                "img_dist": 0.0334,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.89964,
+                "delta_m_plus": 0.08051,
+                "phi": 0.9666,
+                "swad": 0.07782
+            },
+            "l2_distance": 0.82788,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bus\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 320, 450, 812], \"label\": \"bus\"},\n\t{\"bbox_2d\": [373, 368, 692, 762], \"label\": \"bus\"},\n\t{\"bbox_2d\": [677, 416, 908, 720], \"label\": \"bus\"},\n\t{\"bbox_2d\": [792, 416, 1000, 672], \"label\": \"bus\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            320,
+                            450,
+                            812
+                        ],
+                        "label": "bus"
+                    },
+                    {
+                        "bbox_2d": [
+                            373,
+                            368,
+                            692,
+                            762
+                        ],
+                        "label": "bus"
+                    },
+                    {
+                        "bbox_2d": [
+                            677,
+                            416,
+                            908,
+                            720
+                        ],
+                        "label": "bus"
+                    },
+                    {
+                        "bbox_2d": [
+                            792,
+                            416,
+                            1000,
+                            672
+                        ],
+                        "label": "bus"
+                    }
+                ],
+                "token_count": 137,
+                "raw_token_count": 142,
+                "runtime_seconds": 0.4821
+            }
+        }
+    ]
+}

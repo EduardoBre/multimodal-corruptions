@@ -1,0 +1,73 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/152",
+        "folder_id": "152",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00010956.JPEG"
+    },
+    "pareto_index": 13,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 60,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "gaussian_noise",
+        "img_scale": 0.4375463842604074,
+        "txt_attack": "synonym",
+        "txt_scale": 0.7992432406908331
+    },
+    "objectives": {
+        "iou": 0.32903,
+        "img_dist": 0.09723,
+        "txt_dist": 0.14528,
+        "txt_sim": 0.85472
+    },
+    "swad_metrics": {
+        "iou_0": 0.95043,
+        "delta_m_plus": 0.65381,
+        "phi": 0.77162,
+        "swad": 0.50449
+    },
+    "l2_distance": 0.37259,
+    "original_prompt": "Identify the objects \"dog\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 92,
+            "ymin": 161,
+            "xmax": 250,
+            "ymax": 458
+        },
+        "dog_1": {
+            "xmin": 140,
+            "ymin": 147,
+            "xmax": 368,
+            "ymax": 417
+        },
+        "dog_2": {
+            "xmin": 1,
+            "ymin": 288,
+            "xmax": 123,
+            "ymax": 456
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"puppy\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 585, 357, 907], \"label\": \"puppy\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    585,
+                    357,
+                    907
+                ],
+                "label": "puppy"
+            }
+        ],
+        "token_count": 38,
+        "raw_token_count": 110,
+        "runtime_seconds": 0.4008
+    }
+}

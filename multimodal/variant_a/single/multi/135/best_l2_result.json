@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/135",
+        "folder_id": "135",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00012251.JPEG"
+    },
+    "pareto_index": 12,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 3,
+    "total_evaluations": 90,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.6063118272892183,
+        "txt_attack": "synonym",
+        "txt_scale": 0.27009264602800487
+    },
+    "objectives": {
+        "iou": 0.11301,
+        "img_dist": 0.08302,
+        "txt_dist": 0.11853,
+        "txt_sim": 0.88147
+    },
+    "swad_metrics": {
+        "iou_0": 0.8496,
+        "delta_m_plus": 0.86699,
+        "phi": 0.80829,
+        "swad": 0.70078
+    },
+    "l2_distance": 0.18361,
+    "original_prompt": "Identify the objects \"fox\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "fox": {
+            "xmin": 209,
+            "ymin": 89,
+            "xmax": 464,
+            "ymax": 264
+        },
+        "fox_1": {
+            "xmin": 53,
+            "ymin": 43,
+            "xmax": 217,
+            "ymax": 198
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"red fox\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [218, 125, 383, 337], \"label\": \"red fox\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    218,
+                    125,
+                    383,
+                    337
+                ],
+                "label": "red fox"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 85,
+        "runtime_seconds": 0.3034
+    }
+}

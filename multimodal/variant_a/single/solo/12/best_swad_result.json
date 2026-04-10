@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/12",
+        "folder_id": "12",
+        "category": "single/solo",
+        "filename": "ILSVRC2013_val_00003490.JPEG"
+    },
+    "pareto_index": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.9605657890652852,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.4525549320416474
+    },
+    "objectives": {
+        "iou": 0.81991,
+        "img_dist": 0.13131,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.90434,
+        "delta_m_plus": 0.09336,
+        "phi": 0.86869,
+        "swad": 0.0811
+    },
+    "l2_distance": 0.83036,
+    "original_prompt": "Identify the objects \"horse\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "horse": {
+            "xmin": 89,
+            "ymin": 233,
+            "xmax": 282,
+            "ymax": 498
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"horse\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [292, 520, 828, 1000], \"label\": \"horse\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    292,
+                    520,
+                    828,
+                    1000
+                ],
+                "label": "horse"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 44,
+        "runtime_seconds": 0.1861
+    }
+}

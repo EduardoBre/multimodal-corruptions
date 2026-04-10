@@ -1,0 +1,154 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/224",
+        "folder_id": "224",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00003715.JPEG"
+    },
+    "pareto_index": 12,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 3,
+    "total_evaluations": 75,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.019195,
+            "defocus_blur": 0.173705,
+            "motion_blur": 0.061793,
+            "fog_filter": 0.007055,
+            "pixelate": 0.185896,
+            "jpeg_filter": 0.15342
+        },
+        "text_corruptions": {
+            "homophone": 0.048433,
+            "synonym": 0.11948,
+            "ata_saliency": 0.120658,
+            "fragmentation": 0.083369,
+            "character_noise": 0.09807
+        },
+        "img_budget_used": 0.601064,
+        "txt_budget_used": 0.470011,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.29979,
+        "img_dist": 0.09435,
+        "txt_dist": 0.27036,
+        "txt_sim": 0.72964
+    },
+    "swad_metrics": {
+        "iou_0": 0.76036,
+        "delta_m_plus": 0.60573,
+        "phi": 0.6608,
+        "swad": 0.40026
+    },
+    "l2_distance": 0.41457,
+    "original_prompt": "Identify the objects \"cello, microphone, oboe, person, saxophone\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "saxophone": {
+            "xmin": 177,
+            "ymin": 281,
+            "xmax": 234,
+            "ymax": 438
+        },
+        "saxophone_1": {
+            "xmin": 312,
+            "ymin": 341,
+            "xmax": 338,
+            "ymax": 490
+        },
+        "cello": {
+            "xmin": 0,
+            "ymin": 0,
+            "xmax": 203,
+            "ymax": 427
+        },
+        "oboe": {
+            "xmin": 301,
+            "ymin": 151,
+            "xmax": 358,
+            "ymax": 310
+        },
+        "microphone": {
+            "xmin": 126,
+            "ymin": 113,
+            "xmax": 166,
+            "ymax": 132
+        },
+        "microphone_1": {
+            "xmin": 225,
+            "ymin": 176,
+            "xmax": 241,
+            "ymax": 241
+        },
+        "person": {
+            "xmin": 223,
+            "ymin": 85,
+            "xmax": 367,
+            "ymax": 497
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"\u0441\u0435ll\u043e, mic\u200dr\u200b ophone\u200b, obo\u200b e, \u0440e\u200dr son, sa\u200b\u0445\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 558, 857], \"label\": \"\u0441\u0435ll\u043e\"},\n\t{\"bbox_2d\": [352, 227, 458, 530], \"label\": \"mic\u200dr\u200b ophone\u200b\"},\n\t{\"bbox_2d\": [816, 317, 952, 622], \"label\": \"oboe\"},\n\t{\"bbox_2d\": [828, 683, 900, 967], \"label\": \"sax\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    558,
+                    857
+                ],
+                "label": "\u0441\u0435ll\u043e"
+            },
+            {
+                "bbox_2d": [
+                    352,
+                    227,
+                    458,
+                    530
+                ],
+                "label": "mic\u200dr\u200b ophone\u200b"
+            },
+            {
+                "bbox_2d": [
+                    816,
+                    317,
+                    952,
+                    622
+                ],
+                "label": "oboe"
+            },
+            {
+                "bbox_2d": [
+                    828,
+                    683,
+                    900,
+                    967
+                ],
+                "label": "sax"
+            }
+        ],
+        "token_count": 145,
+        "raw_token_count": 221,
+        "runtime_seconds": 0.6796
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.019194704567929023,
+        "defocus_blur": 0.17370478182715082,
+        "motion_blur": 0.061792889561914324,
+        "fog_filter": 0.007055147189988537,
+        "pixelate": 0.1858961189696382,
+        "jpeg_filter": 0.15342015618603733
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.048432721215641676,
+        "synonym": 0.11948048314570572,
+        "ata_saliency": 0.12065802567220887,
+        "fragmentation": 0.0833691479590085,
+        "character_noise": 0.09807045128897043
+    }
+}

@@ -1,0 +1,276 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/203",
+        "folder_id": "203",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00009968.JPEG"
+    },
+    "original_prompt": "Identify the objects \"fig, mushroom, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 157,
+            "ymin": 0,
+            "xmax": 499,
+            "ymax": 373
+        },
+        "mushroom": {
+            "xmin": 140,
+            "ymin": 5,
+            "xmax": 396,
+            "ymax": 374
+        },
+        "fig": {
+            "xmin": 139,
+            "ymin": 194,
+            "xmax": 380,
+            "ymax": 374
+        },
+        "fig_1": {
+            "xmin": 156,
+            "ymin": 6,
+            "xmax": 395,
+            "ymax": 198
+        }
+    },
+    "baseline_iou": 0.67475,
+    "swad_star": 0.95557,
+    "swad_star_index": 2,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 4,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.018153363333776373,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.24927259019092207
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.03378,
+                "txt_dist": 0.11007,
+                "txt_sim": 0.88993
+            },
+            "swad_metrics": {
+                "iou_0": 0.67475,
+                "delta_m_plus": 1.0,
+                "phi": 0.85987,
+                "swad": 0.85987
+            },
+            "l2_distance": 0.11514,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"f\u0456g, mush\u200broo\u200bm, p\u200ber\u200bson\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "{\n  \"f\u0456g\": [\n    [\n      312,\n      16,\n      792,\n      530\n    ],\n    [\n      288,\n      498,\n      752,\n      998\n    ]\n  ],\n  \"mush\u200broo\u200bm\": [],\n  \"p\u200ber\u200bson\": [\n    [\n      312,\n      0,\n      1000,\n      1000\n    ]\n  ]\n}",
+                "parsed_predictions": [],
+                "token_count": 116,
+                "raw_token_count": 210,
+                "runtime_seconds": 0.7283
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.67049,
+                "img_dist": 0.02823,
+                "txt_dist": 0.05445,
+                "txt_sim": 0.94555
+            },
+            "swad_metrics": {
+                "iou_0": 0.67475,
+                "delta_m_plus": 0.00631,
+                "phi": 0.91886,
+                "swad": 0.0058
+            },
+            "l2_distance": 0.67329,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"figg, mushroom, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [314, 12, 792, 509], \"label\": \"figg\"},\n\t{\"bbox_2d\": [288, 492, 752, 997], \"label\": \"figg\"},\n\t{\"bbox_2d\": [314, 12, 792, 509], \"label\": \"mushroom\"},\n\t{\"bbox_2d\": [288, 492, 752, 997], \"label\": \"mushroom\"},\n\t{\"bbox_2d\": [314, 12, 792, 509], \"label\": \"person\"},\n\t{\"bbox_2d\": [288, 492, 752, 997], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            314,
+                            12,
+                            792,
+                            509
+                        ],
+                        "label": "figg"
+                    },
+                    {
+                        "bbox_2d": [
+                            288,
+                            492,
+                            752,
+                            997
+                        ],
+                        "label": "figg"
+                    },
+                    {
+                        "bbox_2d": [
+                            314,
+                            12,
+                            792,
+                            509
+                        ],
+                        "label": "mushroom"
+                    },
+                    {
+                        "bbox_2d": [
+                            288,
+                            492,
+                            752,
+                            997
+                        ],
+                        "label": "mushroom"
+                    },
+                    {
+                        "bbox_2d": [
+                            314,
+                            12,
+                            792,
+                            509
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            288,
+                            492,
+                            752,
+                            997
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 207,
+                "raw_token_count": 210,
+                "runtime_seconds": 0.7283
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.6126883641923373,
+                "txt_attack": "homophone",
+                "txt_scale": 0.10684452896191199
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.04443,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.67475,
+                "delta_m_plus": 1.0,
+                "phi": 0.95557,
+                "swad": 0.95557
+            },
+            "l2_distance": 0.04443,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fig, mushroom, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "{\n    \"fig\": [\n        \"310,12,792,530\",\n        \"282,490,752,998\"\n    ],\n    \"mushroom\": [],\n    \"person\": [\n        \"310,0,1000,1000\"\n    ]\n}",
+                "parsed_predictions": [],
+                "token_count": 76,
+                "raw_token_count": 210,
+                "runtime_seconds": 0.7283
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.6817,
+                "img_dist": 0.03889,
+                "txt_dist": 0.01484,
+                "txt_sim": 0.98516
+            },
+            "swad_metrics": {
+                "iou_0": 0.67475,
+                "delta_m_plus": 0.0,
+                "phi": 0.94685,
+                "swad": 0.0
+            },
+            "l2_distance": 0.68297,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fig, mush room, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [310, 16, 794, 520], \"label\": \"fig\"},\n\t{\"bbox_2d\": [286, 492, 752, 998], \"label\": \"fig\"},\n\t{\"bbox_2d\": [310, 16, 794, 520], \"label\": \"mush room\"},\n\t{\"bbox_2d\": [286, 492, 752, 998], \"label\": \"mush room\"},\n\t{\"bbox_2d\": [310, 16, 794, 520], \"label\": \"person\"},\n\t{\"bbox_2d\": [286, 492, 752, 998], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            310,
+                            16,
+                            794,
+                            520
+                        ],
+                        "label": "fig"
+                    },
+                    {
+                        "bbox_2d": [
+                            286,
+                            492,
+                            752,
+                            998
+                        ],
+                        "label": "fig"
+                    },
+                    {
+                        "bbox_2d": [
+                            310,
+                            16,
+                            794,
+                            520
+                        ],
+                        "label": "mush room"
+                    },
+                    {
+                        "bbox_2d": [
+                            286,
+                            492,
+                            752,
+                            998
+                        ],
+                        "label": "mush room"
+                    },
+                    {
+                        "bbox_2d": [
+                            310,
+                            16,
+                            794,
+                            520
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            286,
+                            492,
+                            752,
+                            998
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 205,
+                "raw_token_count": 210,
+                "runtime_seconds": 0.7283
+            }
+        }
+    ]
+}

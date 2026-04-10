@@ -1,0 +1,106 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/119",
+        "folder_id": "119",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00041978.JPEG"
+    },
+    "pareto_index": 2,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.055658,
+            "defocus_blur": 0.218071,
+            "motion_blur": 0.113869,
+            "fog_filter": 0.045753,
+            "pixelate": 0.028916,
+            "jpeg_filter": 0.417126
+        },
+        "text_corruptions": {
+            "homophone": 0.046872,
+            "synonym": 0.132686,
+            "ata_saliency": 0.004016,
+            "fragmentation": 0.064051,
+            "character_noise": 0.047476
+        },
+        "img_budget_used": 0.879393,
+        "txt_budget_used": 0.295102,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.07773,
+        "txt_dist": 0.24547,
+        "txt_sim": 0.75453
+    },
+    "swad_metrics": {
+        "iou_0": 0.95339,
+        "delta_m_plus": 1.0,
+        "phi": 0.69588,
+        "swad": 0.69588
+    },
+    "l2_distance": 0.25748,
+    "original_prompt": "Identify the objects \"lamp, sofa\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "lamp": {
+            "xmin": 0,
+            "ymin": 63,
+            "xmax": 52,
+            "ymax": 193
+        },
+        "sofa": {
+            "xmin": 66,
+            "ymin": 122,
+            "xmax": 489,
+            "ymax": 311
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"l\u200d ig\u200dht, s\u043eta\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 180, 110, 550], \"label\": \"l\u200d ig\u200dht, s\u043eta\"},\n\t{\"bbox_2d\": [130, 340, 972, 880], \"label\": \"l\u200d ig\u200dht, s\u043eta\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    180,
+                    110,
+                    550
+                ],
+                "label": "l\u200d ig\u200dht, s\u043eta"
+            },
+            {
+                "bbox_2d": [
+                    130,
+                    340,
+                    972,
+                    880
+                ],
+                "label": "l\u200d ig\u200dht, s\u043eta"
+            }
+        ],
+        "token_count": 90,
+        "raw_token_count": 110,
+        "runtime_seconds": 0.3374
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.05565817169114714,
+        "defocus_blur": 0.21807116745985658,
+        "motion_blur": 0.11386889835691846,
+        "fog_filter": 0.04575304191909874,
+        "pixelate": 0.02891576182749366,
+        "jpeg_filter": 0.417126226644475
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.04687205335592807,
+        "synonym": 0.13268646861734743,
+        "ata_saliency": 0.004016472035735543,
+        "fragmentation": 0.06405110786935592,
+        "character_noise": 0.047475507871665816
+    }
+}

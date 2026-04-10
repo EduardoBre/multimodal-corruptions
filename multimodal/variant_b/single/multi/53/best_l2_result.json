@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/53",
+        "folder_id": "53",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00047934.JPEG"
+    },
+    "pareto_index": 5,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.050836,
+            "defocus_blur": 0.062176,
+            "motion_blur": 0.078406,
+            "fog_filter": 0.003934,
+            "pixelate": 0.046241,
+            "jpeg_filter": 0.025607
+        },
+        "text_corruptions": {
+            "homophone": 0.037823,
+            "synonym": 0.015693,
+            "ata_saliency": 0.000674,
+            "fragmentation": 0.019725,
+            "character_noise": 0.002247
+        },
+        "img_budget_used": 0.267201,
+        "txt_budget_used": 0.076162,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.32395,
+        "img_dist": 0.06378,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.59429,
+        "delta_m_plus": 0.45489,
+        "phi": 0.93622,
+        "swad": 0.42588
+    },
+    "l2_distance": 0.33017,
+    "original_prompt": "Identify the objects \"watercraft\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "watercraft": {
+            "xmin": 89,
+            "ymin": 1,
+            "xmax": 514,
+            "ymax": 383
+        },
+        "watercraft_1": {
+            "xmin": 28,
+            "ymin": 249,
+            "xmax": 49,
+            "ymax": 270
+        },
+        "watercraft_2": {
+            "xmin": 261,
+            "ymin": 248,
+            "xmax": 276,
+            "ymax": 270
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"watercraft\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [154, 2, 830, 838], \"label\": \"watercraft\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    154,
+                    2,
+                    830,
+                    838
+                ],
+                "label": "watercraft"
+            }
+        ],
+        "token_count": 38,
+        "raw_token_count": 51,
+        "runtime_seconds": 0.187
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.05083646192431094,
+        "defocus_blur": 0.0621760261089002,
+        "motion_blur": 0.07840614038963939,
+        "fog_filter": 0.003934346399024937,
+        "pixelate": 0.04624066710720684,
+        "jpeg_filter": 0.02560724518786329
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.03782315669988182,
+        "synonym": 0.015693385109633744,
+        "ata_saliency": 0.0006738725823925216,
+        "fragmentation": 0.01972515001025144,
+        "character_noise": 0.0022465983236913227
+    }
+}

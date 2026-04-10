@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/122",
+        "folder_id": "122",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00024231.JPEG"
+    },
+    "pareto_index": 7,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.083229,
+            "defocus_blur": 0.001993,
+            "motion_blur": 0.027849,
+            "fog_filter": 0.005169,
+            "pixelate": 0.31782,
+            "jpeg_filter": 0.038556
+        },
+        "text_corruptions": {
+            "homophone": 0.216146,
+            "synonym": 0.225489,
+            "ata_saliency": 0.078807,
+            "fragmentation": 0.030525,
+            "character_noise": 0.119853
+        },
+        "img_budget_used": 0.474617,
+        "txt_budget_used": 0.670819,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.10727,
+        "txt_dist": 0.12166,
+        "txt_sim": 0.87834
+    },
+    "swad_metrics": {
+        "iou_0": 0.92013,
+        "delta_m_plus": 1.0,
+        "phi": 0.78412,
+        "swad": 0.78412
+    },
+    "l2_distance": 0.1622,
+    "original_prompt": "Identify the objects \"hair spray, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 315,
+            "ymin": 129,
+            "xmax": 499,
+            "ymax": 333
+        },
+        "hair spray": {
+            "xmin": 335,
+            "ymin": 140,
+            "xmax": 402,
+            "ymax": 333
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"hair spr\u0430y, p\u0435r s\u043en\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [660, 407, 803, 997], \"label\": \"hair spr\u0430y, p\u0435r s\u043en\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    660,
+                    407,
+                    803,
+                    997
+                ],
+                "label": "hair spr\u0430y, p\u0435r s\u043en"
+            }
+        ],
+        "token_count": 49,
+        "raw_token_count": 95,
+        "runtime_seconds": 0.3088
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.08322942901410207,
+        "defocus_blur": 0.0019925990861440895,
+        "motion_blur": 0.027849266965818464,
+        "fog_filter": 0.005169142712713587,
+        "pixelate": 0.31782033832547335,
+        "jpeg_filter": 0.03855618867438369
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.21614566716915162,
+        "synonym": 0.22548927382406375,
+        "ata_saliency": 0.07880654039907871,
+        "fragmentation": 0.030525306208180808,
+        "character_noise": 0.1198525740116047
+    }
+}

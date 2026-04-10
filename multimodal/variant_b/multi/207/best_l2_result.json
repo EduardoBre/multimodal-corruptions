@@ -1,0 +1,112 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/207",
+        "folder_id": "207",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00016648.JPEG"
+    },
+    "pareto_index": 4,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.009074,
+            "defocus_blur": 0.024535,
+            "motion_blur": 0.030172,
+            "fog_filter": 0.011121,
+            "pixelate": 0.000266,
+            "jpeg_filter": 0.001689
+        },
+        "text_corruptions": {
+            "homophone": 0.205609,
+            "synonym": 0.091256,
+            "ata_saliency": 0.135588,
+            "fragmentation": 0.261488,
+            "character_noise": 0.203798
+        },
+        "img_budget_used": 0.076857,
+        "txt_budget_used": 0.897739,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.08367,
+        "txt_dist": 0.24121,
+        "txt_sim": 0.75879
+    },
+    "swad_metrics": {
+        "iou_0": 0.74008,
+        "delta_m_plus": 1.0,
+        "phi": 0.6953,
+        "swad": 0.6953
+    },
+    "l2_distance": 0.25531,
+    "original_prompt": "Identify the objects \"remote control, tape player\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "tape player": {
+            "xmin": 164,
+            "ymin": 115,
+            "xmax": 364,
+            "ymax": 380
+        },
+        "tape player_1": {
+            "xmin": 0,
+            "ymin": 118,
+            "xmax": 534,
+            "ymax": 376
+        },
+        "remote control": {
+            "xmin": 556,
+            "ymin": 247,
+            "xmax": 599,
+            "ymax": 379
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"remote \u0441otnr\u043e\u200dl\u200d , t\u0430y\u200d p\u200bl\u0430ye\u200dr\u200d\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [920, 460, 999, 708], \"label\": \"remote \u0441otnr\u043e\u200dl\u200d , t\u0430y\u200d p\u200bl\u0430ye\u200dr\u200d\"},\n\t{\"bbox_2d\": [278, 216, 619, 708], \"label\": \"remote \u0441otnr\u043e\u200dl\u200d , t\u0430y\u200d p\u200bl\u0430ye\u200dr\u200d\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    920,
+                    460,
+                    999,
+                    708
+                ],
+                "label": "remote \u0441otnr\u043e\u200dl\u200d , t\u0430y\u200d p\u200bl\u0430ye\u200dr\u200d"
+            },
+            {
+                "bbox_2d": [
+                    278,
+                    216,
+                    619,
+                    708
+                ],
+                "label": "remote \u0441otnr\u043e\u200dl\u200d , t\u0430y\u200d p\u200bl\u0430ye\u200dr\u200d"
+            }
+        ],
+        "token_count": 122,
+        "raw_token_count": 123,
+        "runtime_seconds": 0.4115
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.00907429503351023,
+        "defocus_blur": 0.02453518762837752,
+        "motion_blur": 0.030171906642548253,
+        "fog_filter": 0.011120707426155015,
+        "pixelate": 0.000266195392424229,
+        "jpeg_filter": 0.0016888894131433711
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.20560853360008205,
+        "synonym": 0.09125635103481788,
+        "ata_saliency": 0.13558819908747213,
+        "fragmentation": 0.2614877322298142,
+        "character_noise": 0.20379832307815435
+    }
+}

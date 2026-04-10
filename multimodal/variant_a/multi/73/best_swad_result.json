@@ -1,0 +1,112 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/73",
+        "folder_id": "73",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00003054.JPEG"
+    },
+    "pareto_index": 0,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "gaussian_noise",
+        "img_scale": 0.8632061743184387,
+        "txt_attack": "synonym",
+        "txt_scale": 0.7724979474714236
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.18259,
+        "txt_dist": 0.22508,
+        "txt_sim": 0.77492
+    },
+    "swad_metrics": {
+        "iou_0": 0.76252,
+        "delta_m_plus": 1.0,
+        "phi": 0.63343,
+        "swad": 0.63343
+    },
+    "l2_distance": 0.28983,
+    "original_prompt": "Identify the objects \"helmet, motorcycle, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 303,
+            "ymin": 37,
+            "xmax": 456,
+            "ymax": 163
+        },
+        "person_1": {
+            "xmin": 163,
+            "ymin": 31,
+            "xmax": 283,
+            "ymax": 165
+        },
+        "person_2": {
+            "xmin": 299,
+            "ymin": 34,
+            "xmax": 424,
+            "ymax": 161
+        },
+        "motorcycle": {
+            "xmin": 344,
+            "ymin": 34,
+            "xmax": 474,
+            "ymax": 153
+        },
+        "motorcycle_1": {
+            "xmin": 187,
+            "ymin": 52,
+            "xmax": 329,
+            "ymax": 155
+        },
+        "motorcycle_2": {
+            "xmin": 103,
+            "ymin": 67,
+            "xmax": 195,
+            "ymax": 150
+        },
+        "motorcycle_3": {
+            "xmin": 0,
+            "ymin": 53,
+            "xmax": 72,
+            "ymax": 167
+        },
+        "helmet": {
+            "xmin": 303,
+            "ymin": 34,
+            "xmax": 342,
+            "ymax": 87
+        },
+        "helmet_1": {
+            "xmin": 169,
+            "ymin": 37,
+            "xmax": 207,
+            "ymax": 83
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"hard hat, chopper, woman\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "There are no objects that match the descriptions \"hard hat\", \"chopper\", or \"woman\" in the image. The image shows motorcycle racers wearing helmets, not hard hats, and the motorcycles are not choppers. There are no women visible.\n\n```json\n[\n  {\n    \"object\": \"hard hat\",\n    \"bbox\": []\n  },\n  {\n    \"object\": \"chopper\",\n    \"bbox\": []\n  },\n  {\n    \"object\": \"woman\",\n    \"bbox\": []\n  }\n]\n```",
+        "parsed_predictions": [
+            {
+                "object": "hard hat",
+                "bbox": []
+            },
+            {
+                "object": "chopper",
+                "bbox": []
+            },
+            {
+                "object": "woman",
+                "bbox": []
+            }
+        ],
+        "token_count": 107,
+        "raw_token_count": 451,
+        "runtime_seconds": 1.3953
+    }
+}

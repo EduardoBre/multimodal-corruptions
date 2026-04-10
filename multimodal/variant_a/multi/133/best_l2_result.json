@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/133",
+        "folder_id": "133",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00010890.JPEG"
+    },
+    "pareto_index": 13,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 5,
+    "total_evaluations": 135,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.07310547695612263,
+        "txt_attack": "homophone",
+        "txt_scale": 0.4009014850945186
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.01528,
+        "txt_dist": 0.23682,
+        "txt_sim": 0.76318
+    },
+    "swad_metrics": {
+        "iou_0": 0.97056,
+        "delta_m_plus": 1.0,
+        "phi": 0.75152,
+        "swad": 0.75152
+    },
+    "l2_distance": 0.23731,
+    "original_prompt": "Identify the objects \"person, table\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 1,
+            "ymin": 152,
+            "xmax": 461,
+            "ymax": 374
+        },
+        "table": {
+            "xmin": 155,
+            "ymin": 0,
+            "xmax": 499,
+            "ymax": 373
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"purse on, tabel\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 438, 570], \"label\": \"purse on, tabel\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    438,
+                    570
+                ],
+                "label": "purse on, tabel"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 84,
+        "runtime_seconds": 0.322
+    }
+}

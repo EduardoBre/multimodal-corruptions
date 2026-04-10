@@ -1,0 +1,138 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/single/solo/36",
+        "folder_id": "36",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00032509.JPEG"
+    },
+    "original_prompt": "Identify the objects \"printer\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "printer": {
+            "xmin": 134,
+            "ymin": 59,
+            "xmax": 481,
+            "ymax": 235
+        }
+    },
+    "baseline_iou": 0.87681,
+    "swad_star": 0.84287,
+    "swad_star_index": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 3,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.85127,
+                "img_dist": 0.06795,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.87681,
+                "delta_m_plus": 0.02913,
+                "phi": 0.93205,
+                "swad": 0.02715
+            },
+            "l2_distance": 0.85398,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"printer\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [280, 150, 948, 600], \"label\": \"printer\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            280,
+                            150,
+                            948,
+                            600
+                        ],
+                        "label": "printer"
+                    }
+                ],
+                "token_count": 39,
+                "raw_token_count": 45,
+                "runtime_seconds": 0.155
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.21300761893764208,
+                "txt_attack": "synonym",
+                "txt_scale": 0.11490566325799068
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.05102,
+                "txt_dist": 0.11182,
+                "txt_sim": 0.88818
+            },
+            "swad_metrics": {
+                "iou_0": 0.87681,
+                "delta_m_plus": 1.0,
+                "phi": 0.84287,
+                "swad": 0.84287
+            },
+            "l2_distance": 0.12291,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"inkjet printer\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "There is no object that matches the description \"inkjet printer\" in the image.",
+                "parsed_predictions": [],
+                "token_count": 17,
+                "raw_token_count": 45,
+                "runtime_seconds": 0.155
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.87853,
+                "img_dist": 0.03671,
+                "txt_dist": 0.30452,
+                "txt_sim": 0.69548
+            },
+            "swad_metrics": {
+                "iou_0": 0.87681,
+                "delta_m_plus": 0.0,
+                "phi": 0.66995,
+                "swad": 0.0
+            },
+            "l2_distance": 0.93053,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"prinner\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [278, 167, 948, 607], \"label\": \"prinner\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            278,
+                            167,
+                            948,
+                            607
+                        ],
+                        "label": "prinner"
+                    }
+                ],
+                "token_count": 40,
+                "raw_token_count": 45,
+                "runtime_seconds": 0.155
+            }
+        }
+    ]
+}

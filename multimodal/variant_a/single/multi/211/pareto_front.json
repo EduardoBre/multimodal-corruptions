@@ -1,0 +1,379 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/single/multi/211",
+        "folder_id": "211",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00003955.JPEG"
+    },
+    "original_prompt": "Identify the objects \"jellyfish\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "jellyfish": {
+            "xmin": 288,
+            "ymin": 0,
+            "xmax": 410,
+            "ymax": 252
+        },
+        "jellyfish_1": {
+            "xmin": 0,
+            "ymin": 0,
+            "xmax": 265,
+            "ymax": 374
+        },
+        "jellyfish_2": {
+            "xmin": 385,
+            "ymin": 91,
+            "xmax": 471,
+            "ymax": 212
+        }
+    },
+    "baseline_iou": 0.57568,
+    "swad_star": 0.49412,
+    "swad_star_index": 4,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 6,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.87206,
+                "img_dist": 0.02199,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.57568,
+                "delta_m_plus": 0.0,
+                "phi": 0.97801,
+                "swad": 0.0
+            },
+            "l2_distance": 0.87234,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"jellyfish\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [575, 0, 820, 670], \"label\": \"jellyfish\"},\n\t{\"bbox_2d\": [768, 240, 938, 558], \"label\": \"jellyfish\"},\n\t{\"bbox_2d\": [0, 296, 518, 997], \"label\": \"jellyfish\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            575,
+                            0,
+                            820,
+                            670
+                        ],
+                        "label": "jellyfish"
+                    },
+                    {
+                        "bbox_2d": [
+                            768,
+                            240,
+                            938,
+                            558
+                        ],
+                        "label": "jellyfish"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            296,
+                            518,
+                            997
+                        ],
+                        "label": "jellyfish"
+                    }
+                ],
+                "token_count": 107,
+                "raw_token_count": 143,
+                "runtime_seconds": 0.4983
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.6126883641923373,
+                "txt_attack": "homophone",
+                "txt_scale": 0.10684452896191199
+            },
+            "objectives": {
+                "iou": 0.56985,
+                "img_dist": 0.04512,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.57568,
+                "delta_m_plus": 0.01013,
+                "phi": 0.95488,
+                "swad": 0.00967
+            },
+            "l2_distance": 0.57163,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"jellyfish\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 296, 400, 770], \"label\": \"jellyfish\"},\n\t{\"bbox_2d\": [575, 360, 818, 668], \"label\": \"jellyfish\"},\n\t{\"bbox_2d\": [768, 236, 936, 552], \"label\": \"jellyfish\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            296,
+                            400,
+                            770
+                        ],
+                        "label": "jellyfish"
+                    },
+                    {
+                        "bbox_2d": [
+                            575,
+                            360,
+                            818,
+                            668
+                        ],
+                        "label": "jellyfish"
+                    },
+                    {
+                        "bbox_2d": [
+                            768,
+                            236,
+                            936,
+                            552
+                        ],
+                        "label": "jellyfish"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 143,
+                "runtime_seconds": 0.4983
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.5656671100314771,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.039875089079669634
+            },
+            "objectives": {
+                "iou": 0.52591,
+                "img_dist": 0.04789,
+                "txt_dist": 0.15155,
+                "txt_sim": 0.84845
+            },
+            "swad_metrics": {
+                "iou_0": 0.57568,
+                "delta_m_plus": 0.08645,
+                "phi": 0.80782,
+                "swad": 0.06984
+            },
+            "l2_distance": 0.5494,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"j\u0435\u200dlly\u200bfis\u200dh\u200d\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 290, 396, 770], \"label\": \"j\u0435\u200dlly\u200bfis\u200dh\u200d\"},\n\t{\"bbox_2d\": [616, 368, 816, 668], \"label\": \"j\u0435\u200dlly\u200bfis\u200dh\u200d\"},\n\t{\"bbox_2d\": [764, 228, 936, 550], \"label\": \"j\u0435\u200dlly\u200bfis\u200dh\u200d\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            290,
+                            396,
+                            770
+                        ],
+                        "label": "j\u0435\u200dlly\u200bfis\u200dh\u200d"
+                    },
+                    {
+                        "bbox_2d": [
+                            616,
+                            368,
+                            816,
+                            668
+                        ],
+                        "label": "j\u0435\u200dlly\u200bfis\u200dh\u200d"
+                    },
+                    {
+                        "bbox_2d": [
+                            764,
+                            228,
+                            936,
+                            550
+                        ],
+                        "label": "j\u0435\u200dlly\u200bfis\u200dh\u200d"
+                    }
+                ],
+                "token_count": 142,
+                "raw_token_count": 143,
+                "runtime_seconds": 0.4983
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.018595721213425453,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6130568625347235
+            },
+            "objectives": {
+                "iou": 0.5845,
+                "img_dist": 0.02314,
+                "txt_dist": 0.11909,
+                "txt_sim": 0.88091
+            },
+            "swad_metrics": {
+                "iou_0": 0.57568,
+                "delta_m_plus": 0.0,
+                "phi": 0.86053,
+                "swad": 0.0
+            },
+            "l2_distance": 0.59696,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"jellkfish\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [577, 368, 820, 672], \"label\": \"jellkfish\"},\n\t{\"bbox_2d\": [768, 244, 938, 560], \"label\": \"jellkfish\"},\n\t{\"bbox_2d\": [0, 300, 400, 772], \"label\": \"jellkfish\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            577,
+                            368,
+                            820,
+                            672
+                        ],
+                        "label": "jellkfish"
+                    },
+                    {
+                        "bbox_2d": [
+                            768,
+                            244,
+                            938,
+                            560
+                        ],
+                        "label": "jellkfish"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            300,
+                            400,
+                            772
+                        ],
+                        "label": "jellkfish"
+                    }
+                ],
+                "token_count": 112,
+                "raw_token_count": 143,
+                "runtime_seconds": 0.4983
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.27669,
+                "img_dist": 0.04862,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.57568,
+                "delta_m_plus": 0.51937,
+                "phi": 0.95138,
+                "swad": 0.49412
+            },
+            "l2_distance": 0.28093,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"jellyfish\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 288, 398, 772], \"label\": \"jellyfish\"},\n\t{\"bbox_2d\": [618, 364, 818, 672], \"label\": \"jellyfish\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            288,
+                            398,
+                            772
+                        ],
+                        "label": "jellyfish"
+                    },
+                    {
+                        "bbox_2d": [
+                            618,
+                            364,
+                            818,
+                            672
+                        ],
+                        "label": "jellyfish"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 143,
+                "runtime_seconds": 0.4983
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.57473,
+                "img_dist": 0.0364,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.57568,
+                "delta_m_plus": 0.00165,
+                "phi": 0.9636,
+                "swad": 0.00159
+            },
+            "l2_distance": 0.57588,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"jellyfish\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [577, 360, 817, 672], \"label\": \"jellyfish\"},\n\t{\"bbox_2d\": [767, 240, 935, 556], \"label\": \"jellyfish\"},\n\t{\"bbox_2d\": [0, 298, 400, 772], \"label\": \"jellyfish\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            577,
+                            360,
+                            817,
+                            672
+                        ],
+                        "label": "jellyfish"
+                    },
+                    {
+                        "bbox_2d": [
+                            767,
+                            240,
+                            935,
+                            556
+                        ],
+                        "label": "jellyfish"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            298,
+                            400,
+                            772
+                        ],
+                        "label": "jellyfish"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 143,
+                "runtime_seconds": 0.4983
+            }
+        }
+    ]
+}

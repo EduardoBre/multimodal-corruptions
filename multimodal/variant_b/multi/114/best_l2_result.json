@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/114",
+        "folder_id": "114",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00044448.JPEG"
+    },
+    "pareto_index": 8,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.016901,
+            "defocus_blur": 0.034754,
+            "motion_blur": 0.138149,
+            "fog_filter": 0.010024,
+            "pixelate": 0.121241,
+            "jpeg_filter": 0.050366
+        },
+        "text_corruptions": {
+            "homophone": 0.002568,
+            "synonym": 0.395775,
+            "ata_saliency": 0.184761,
+            "fragmentation": 0.019081,
+            "character_noise": 0.027851
+        },
+        "img_budget_used": 0.371434,
+        "txt_budget_used": 0.630037,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.10396,
+        "txt_dist": 0.22082,
+        "txt_sim": 0.77918
+    },
+    "swad_metrics": {
+        "iou_0": 0.78365,
+        "delta_m_plus": 1.0,
+        "phi": 0.69818,
+        "swad": 0.69818
+    },
+    "l2_distance": 0.24407,
+    "original_prompt": "Identify the objects \"accordion, chair, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 146,
+            "ymin": 172,
+            "xmax": 321,
+            "ymax": 487
+        },
+        "accordion": {
+            "xmin": 201,
+            "ymin": 220,
+            "xmax": 314,
+            "ymax": 360
+        },
+        "chair": {
+            "xmin": 205,
+            "ymin": 276,
+            "xmax": 332,
+            "ymax": 476
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"acoc\u200drd\u0456 on, esa\u200bt\u200di\u200dng, person\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [427, 350, 977, 980], \"label\": \"acoc\u200drd\u0456 on, esa\u200bt\u200di\u200dng, person\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    427,
+                    350,
+                    977,
+                    980
+                ],
+                "label": "acoc\u200drd\u0456 on, esa\u200bt\u200di\u200dng, person"
+            }
+        ],
+        "token_count": 57,
+        "raw_token_count": 195,
+        "runtime_seconds": 0.6154
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.01690124138855613,
+        "defocus_blur": 0.03475361979258192,
+        "motion_blur": 0.13814876826120354,
+        "fog_filter": 0.010023948537836369,
+        "pixelate": 0.12124088771285352,
+        "jpeg_filter": 0.05036589858309143
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.002568450799706839,
+        "synonym": 0.3957745116997198,
+        "ata_saliency": 0.18476141819741626,
+        "fragmentation": 0.019081115882509943,
+        "character_noise": 0.027851366410037277
+    }
+}

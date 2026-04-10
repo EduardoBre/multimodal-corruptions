@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/6",
+        "folder_id": "6",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00005307.JPEG"
+    },
+    "pareto_index": 8,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 60,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.9479212608075674,
+        "txt_attack": "synonym",
+        "txt_scale": 0.6673539890227386
+    },
+    "objectives": {
+        "iou": 0.32286,
+        "img_dist": 0.07073,
+        "txt_dist": 0.14153,
+        "txt_sim": 0.85847
+    },
+    "swad_metrics": {
+        "iou_0": 0.84892,
+        "delta_m_plus": 0.61968,
+        "phi": 0.79775,
+        "swad": 0.49435
+    },
+    "l2_distance": 0.35954,
+    "original_prompt": "Identify the objects \"lizard\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "lizard": {
+            "xmin": 172,
+            "ymin": 177,
+            "xmax": 426,
+            "ymax": 337
+        },
+        "lizard_1": {
+            "xmin": 0,
+            "ymin": 50,
+            "xmax": 290,
+            "ymax": 185
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"skink\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 598, 360], \"label\": \"skink\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    598,
+                    360
+                ],
+                "label": "skink"
+            }
+        ],
+        "token_count": 36,
+        "raw_token_count": 75,
+        "runtime_seconds": 0.2607
+    }
+}

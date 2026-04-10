@@ -1,0 +1,762 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/3",
+        "folder_id": "3",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00001445.JPEG"
+    },
+    "original_prompt": "Identify the objects \"basketball, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 43,
+            "ymin": 16,
+            "xmax": 216,
+            "ymax": 219
+        },
+        "person_1": {
+            "xmin": 283,
+            "ymin": 172,
+            "xmax": 498,
+            "ymax": 497
+        },
+        "person_2": {
+            "xmin": 282,
+            "ymin": 0,
+            "xmax": 458,
+            "ymax": 221
+        },
+        "person_3": {
+            "xmin": 2,
+            "ymin": 183,
+            "xmax": 271,
+            "ymax": 498
+        },
+        "person_4": {
+            "xmin": 195,
+            "ymin": 102,
+            "xmax": 356,
+            "ymax": 498
+        },
+        "basketball": {
+            "xmin": 258,
+            "ymin": 46,
+            "xmax": 325,
+            "ymax": 96
+        },
+        "basketball_1": {
+            "xmin": 0,
+            "ymin": 278,
+            "xmax": 30,
+            "ymax": 345
+        }
+    },
+    "baseline_iou": 0.84824,
+    "swad_star": 0.56502,
+    "swad_star_index": 0,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 8,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.21994,
+                "img_dist": 0.04402,
+                "txt_dist": 0.20207,
+                "txt_sim": 0.79793
+            },
+            "swad_metrics": {
+                "iou_0": 0.84824,
+                "delta_m_plus": 0.74071,
+                "phi": 0.76281,
+                "swad": 0.56502
+            },
+            "l2_distance": 0.3019,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"basketball, purse on\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [530, 95, 630, 192], \"label\": \"basketball\"},\n\t{\"bbox_2d\": [0, 567, 52, 673], \"label\": \"basketball\"},\n\t{\"bbox_2d\": [81, 804, 200, 950], \"label\": \"basketball\"},\n\t{\"bbox_2d\": [818, 904, 938, 1000], \"label\": \"purse on\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            530,
+                            95,
+                            630,
+                            192
+                        ],
+                        "label": "basketball"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            567,
+                            52,
+                            673
+                        ],
+                        "label": "basketball"
+                    },
+                    {
+                        "bbox_2d": [
+                            81,
+                            804,
+                            200,
+                            950
+                        ],
+                        "label": "basketball"
+                    },
+                    {
+                        "bbox_2d": [
+                            818,
+                            904,
+                            938,
+                            1000
+                        ],
+                        "label": "purse on"
+                    }
+                ],
+                "token_count": 139,
+                "raw_token_count": 356,
+                "runtime_seconds": 1.6318
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.83938,
+                "img_dist": 0.04468,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.84824,
+                "delta_m_plus": 0.01045,
+                "phi": 0.95532,
+                "swad": 0.00998
+            },
+            "l2_distance": 0.84057,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"basketball, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [532, 87, 620, 192], \"label\": \"basketball\"},\n\t{\"bbox_2d\": [0, 567, 50, 672], \"label\": \"basketball\"},\n\t{\"bbox_2d\": [81, 804, 270, 958], \"label\": \"basketball\"},\n\t{\"bbox_2d\": [812, 902, 932, 1000], \"label\": \"basketball\"},\n\t{\"bbox_2d\": [0, 372, 532, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [388, 200, 672, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [570, 342, 1000, 938], \"label\": \"person\"},\n\t{\"bbox_2d\": [570, 0, 920, 450], \"label\": \"person\"},\n\t{\"bbox_2d\": [85, 48, 438, 450], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            532,
+                            87,
+                            620,
+                            192
+                        ],
+                        "label": "basketball"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            567,
+                            50,
+                            672
+                        ],
+                        "label": "basketball"
+                    },
+                    {
+                        "bbox_2d": [
+                            81,
+                            804,
+                            270,
+                            958
+                        ],
+                        "label": "basketball"
+                    },
+                    {
+                        "bbox_2d": [
+                            812,
+                            902,
+                            932,
+                            1000
+                        ],
+                        "label": "basketball"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            372,
+                            532,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            388,
+                            200,
+                            672,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            570,
+                            342,
+                            1000,
+                            938
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            570,
+                            0,
+                            920,
+                            450
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            85,
+                            48,
+                            438,
+                            450
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 300,
+                "raw_token_count": 356,
+                "runtime_seconds": 1.6318
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.6126883641923373,
+                "txt_attack": "homophone",
+                "txt_scale": 0.10684452896191199
+            },
+            "objectives": {
+                "iou": 0.83037,
+                "img_dist": 0.06205,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.84824,
+                "delta_m_plus": 0.02107,
+                "phi": 0.93795,
+                "swad": 0.01976
+            },
+            "l2_distance": 0.83269,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"basketball, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [526, 87, 620, 187], \"label\": \"basketball\"},\n\t{\"bbox_2d\": [0, 567, 50, 687], \"label\": \"basketball\"},\n\t{\"bbox_2d\": [81, 802, 260, 952], \"label\": \"basketball\"},\n\t{\"bbox_2d\": [820, 908, 928, 1000], \"label\": \"basketball\"},\n\t{\"bbox_2d\": [0, 370, 538, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [388, 202, 720, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [588, 337, 1000, 937], \"label\": \"person\"},\n\t{\"bbox_2d\": [620, 0, 928, 500], \"label\": \"person\"},\n\t{\"bbox_2d\": [82, 48, 432, 458], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            526,
+                            87,
+                            620,
+                            187
+                        ],
+                        "label": "basketball"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            567,
+                            50,
+                            687
+                        ],
+                        "label": "basketball"
+                    },
+                    {
+                        "bbox_2d": [
+                            81,
+                            802,
+                            260,
+                            952
+                        ],
+                        "label": "basketball"
+                    },
+                    {
+                        "bbox_2d": [
+                            820,
+                            908,
+                            928,
+                            1000
+                        ],
+                        "label": "basketball"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            370,
+                            538,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            388,
+                            202,
+                            720,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            588,
+                            337,
+                            1000,
+                            937
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            620,
+                            0,
+                            928,
+                            500
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            82,
+                            48,
+                            432,
+                            458
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 300,
+                "raw_token_count": 356,
+                "runtime_seconds": 1.6318
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6124377601560459,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.32756,
+                "img_dist": 0.11963,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.84824,
+                "delta_m_plus": 0.61384,
+                "phi": 0.88037,
+                "swad": 0.5404
+            },
+            "l2_distance": 0.34872,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"basketball, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [78, 828, 258, 948], \"label\": \"basketball\"},\n\t{\"bbox_2d\": [81, 100, 430, 828], \"label\": \"person\"},\n\t{\"bbox_2d\": [430, 100, 678, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [678, 100, 928, 998], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            78,
+                            828,
+                            258,
+                            948
+                        ],
+                        "label": "basketball"
+                    },
+                    {
+                        "bbox_2d": [
+                            81,
+                            100,
+                            430,
+                            828
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            430,
+                            100,
+                            678,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            678,
+                            100,
+                            928,
+                            998
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 137,
+                "raw_token_count": 356,
+                "runtime_seconds": 1.6318
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.5656671100314771,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.039875089079669634
+            },
+            "objectives": {
+                "iou": 0.28892,
+                "img_dist": 0.11226,
+                "txt_dist": 0.0619,
+                "txt_sim": 0.9381
+            },
+            "swad_metrics": {
+                "iou_0": 0.84824,
+                "delta_m_plus": 0.65939,
+                "phi": 0.83279,
+                "swad": 0.54913
+            },
+            "l2_distance": 0.31608,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bask\u200be\u200dtball\u200d, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [628, 740, 728, 800], \"label\": \"bask\u200be\u200dtball\"},\n\t{\"bbox_2d\": [488, 188, 658, 997], \"label\": \"person\"},\n\t{\"bbox_2d\": [658, 100, 928, 997], \"label\": \"person\"},\n\t{\"bbox_2d\": [100, 100, 358, 997], \"label\": \"person\"},\n\t{\"bbox_2d\": [358, 100, 508, 997], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            628,
+                            740,
+                            728,
+                            800
+                        ],
+                        "label": "bask\u200be\u200dtball"
+                    },
+                    {
+                        "bbox_2d": [
+                            488,
+                            188,
+                            658,
+                            997
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            658,
+                            100,
+                            928,
+                            997
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            100,
+                            100,
+                            358,
+                            997
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            358,
+                            100,
+                            508,
+                            997
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 178,
+                "raw_token_count": 356,
+                "runtime_seconds": 1.6318
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.307337327911573,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.79275,
+                "img_dist": 0.05429,
+                "txt_dist": 0.01312,
+                "txt_sim": 0.98688
+            },
+            "swad_metrics": {
+                "iou_0": 0.84824,
+                "delta_m_plus": 0.06542,
+                "phi": 0.9333,
+                "swad": 0.06105
+            },
+            "l2_distance": 0.79472,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"basket ball, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [528, 95, 630, 190], \"label\": \"basket ball\"},\n\t{\"bbox_2d\": [0, 567, 48, 667], \"label\": \"basket ball\"},\n\t{\"bbox_2d\": [81, 48, 438, 458], \"label\": \"person\"},\n\t{\"bbox_2d\": [0, 373, 538, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [388, 202, 672, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [608, 348, 998, 938], \"label\": \"person\"},\n\t{\"bbox_2d\": [608, 0, 998, 458], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            528,
+                            95,
+                            630,
+                            190
+                        ],
+                        "label": "basket ball"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            567,
+                            48,
+                            667
+                        ],
+                        "label": "basket ball"
+                    },
+                    {
+                        "bbox_2d": [
+                            81,
+                            48,
+                            438,
+                            458
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            373,
+                            538,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            388,
+                            202,
+                            672,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            608,
+                            348,
+                            998,
+                            938
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            608,
+                            0,
+                            998,
+                            458
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 229,
+                "raw_token_count": 356,
+                "runtime_seconds": 1.6318
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.21652,
+                "img_dist": 0.11522,
+                "txt_dist": 0.21519,
+                "txt_sim": 0.78481
+            },
+            "swad_metrics": {
+                "iou_0": 0.84824,
+                "delta_m_plus": 0.74474,
+                "phi": 0.69438,
+                "swad": 0.51714
+            },
+            "l2_distance": 0.32629,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"basket ball, purse on\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [524, 87, 624, 187], \"label\": \"basket ball\"},\n\t{\"bbox_2d\": [0, 564, 54, 674], \"label\": \"basket ball\"},\n\t{\"bbox_2d\": [85, 814, 224, 950], \"label\": \"purse on\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            524,
+                            87,
+                            624,
+                            187
+                        ],
+                        "label": "basket ball"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            564,
+                            54,
+                            674
+                        ],
+                        "label": "basket ball"
+                    },
+                    {
+                        "bbox_2d": [
+                            85,
+                            814,
+                            224,
+                            950
+                        ],
+                        "label": "purse on"
+                    }
+                ],
+                "token_count": 104,
+                "raw_token_count": 356,
+                "runtime_seconds": 1.6318
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.85038,
+                "img_dist": 0.03943,
+                "txt_dist": 0.01312,
+                "txt_sim": 0.98688
+            },
+            "swad_metrics": {
+                "iou_0": 0.84824,
+                "delta_m_plus": 0.0,
+                "phi": 0.94797,
+                "swad": 0.0
+            },
+            "l2_distance": 0.85139,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"basket ball, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [530, 88, 620, 188], \"label\": \"basket ball\"},\n\t{\"bbox_2d\": [0, 567, 52, 678], \"label\": \"basket ball\"},\n\t{\"bbox_2d\": [97, 804, 262, 952], \"label\": \"basket ball\"},\n\t{\"bbox_2d\": [970, 528, 1000, 578], \"label\": \"basket ball\"},\n\t{\"bbox_2d\": [0, 370, 544, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [388, 200, 700, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [592, 342, 1000, 938], \"label\": \"person\"},\n\t{\"bbox_2d\": [592, 0, 920, 450], \"label\": \"person\"},\n\t{\"bbox_2d\": [88, 38, 438, 450], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            530,
+                            88,
+                            620,
+                            188
+                        ],
+                        "label": "basket ball"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            567,
+                            52,
+                            678
+                        ],
+                        "label": "basket ball"
+                    },
+                    {
+                        "bbox_2d": [
+                            97,
+                            804,
+                            262,
+                            952
+                        ],
+                        "label": "basket ball"
+                    },
+                    {
+                        "bbox_2d": [
+                            970,
+                            528,
+                            1000,
+                            578
+                        ],
+                        "label": "basket ball"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            370,
+                            544,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            388,
+                            200,
+                            700,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            592,
+                            342,
+                            1000,
+                            938
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            592,
+                            0,
+                            920,
+                            450
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            88,
+                            38,
+                            438,
+                            450
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 299,
+                "raw_token_count": 356,
+                "runtime_seconds": 1.6318
+            }
+        }
+    ]
+}

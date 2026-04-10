@@ -1,0 +1,82 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/207",
+        "folder_id": "207",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00016648.JPEG"
+    },
+    "pareto_index": 3,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.6124377601560459,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.05557257533910853
+    },
+    "objectives": {
+        "iou": 0.31642,
+        "img_dist": 0.09163,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.74008,
+        "delta_m_plus": 0.57245,
+        "phi": 0.90837,
+        "swad": 0.52
+    },
+    "l2_distance": 0.32942,
+    "original_prompt": "Identify the objects \"remote control, tape player\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "tape player": {
+            "xmin": 164,
+            "ymin": 115,
+            "xmax": 364,
+            "ymax": 380
+        },
+        "tape player_1": {
+            "xmin": 0,
+            "ymin": 118,
+            "xmax": 534,
+            "ymax": 376
+        },
+        "remote control": {
+            "xmin": 556,
+            "ymin": 247,
+            "xmax": 599,
+            "ymax": 379
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"remote control, tape player\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [918, 456, 999, 712], \"label\": \"remote control\"},\n\t{\"bbox_2d\": [338, 572, 540, 628], \"label\": \"tape player\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    918,
+                    456,
+                    999,
+                    712
+                ],
+                "label": "remote control"
+            },
+            {
+                "bbox_2d": [
+                    338,
+                    572,
+                    540,
+                    628
+                ],
+                "label": "tape player"
+            }
+        ],
+        "token_count": 74,
+        "raw_token_count": 88,
+        "runtime_seconds": 0.3141
+    }
+}

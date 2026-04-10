@@ -1,0 +1,121 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/111",
+        "folder_id": "111",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00003503.JPEG"
+    },
+    "pareto_index": 11,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.041064,
+            "defocus_blur": 0.060517,
+            "motion_blur": 0.001916,
+            "fog_filter": 0.022754,
+            "pixelate": 0.004321,
+            "jpeg_filter": 0.039838
+        },
+        "text_corruptions": {
+            "homophone": 0.030236,
+            "synonym": 0.023023,
+            "ata_saliency": 0.026445,
+            "fragmentation": 0.022693,
+            "character_noise": 0.189402
+        },
+        "img_budget_used": 0.17041,
+        "txt_budget_used": 0.291799,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.11357,
+        "txt_dist": 0.15479,
+        "txt_sim": 0.84521
+    },
+    "swad_metrics": {
+        "iou_0": 0.86908,
+        "delta_m_plus": 1.0,
+        "phi": 0.74922,
+        "swad": 0.74922
+    },
+    "l2_distance": 0.19198,
+    "original_prompt": "Identify the objects \"helmet, horse, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 196,
+            "ymin": 45,
+            "xmax": 355,
+            "ymax": 279
+        },
+        "helmet": {
+            "xmin": 215,
+            "ymin": 47,
+            "xmax": 253,
+            "ymax": 81
+        },
+        "horse": {
+            "xmin": 152,
+            "ymin": 84,
+            "xmax": 395,
+            "ymax": 450
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"helme\u200dl\u200b, hor\u200bs\u200be, p\u200de\u200dr\u200bs\u200b\u043en\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [430, 103, 508, 188], \"label\": \"helme\u200dl\u200b, hor\u200bs\u200be, p\u200de\u200dr\u200bs\u200b\u043en\"},\n\t{\"bbox_2d\": [325, 188, 782, 950], \"label\": \"helme\u200dl\u200b, hor\u200bs\u200be, p\u200de\u200dr\u200bs\u200b\u043en\"},\n\t{\"bbox_2d\": [392, 103, 692, 575], \"label\": \"helme\u200dl\u200b, hor\u200bs\u200be, p\u200de\u200dr\u200bs\u200b\u043en\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    430,
+                    103,
+                    508,
+                    188
+                ],
+                "label": "helme\u200dl\u200b, hor\u200bs\u200be, p\u200de\u200dr\u200bs\u200b\u043en"
+            },
+            {
+                "bbox_2d": [
+                    325,
+                    188,
+                    782,
+                    950
+                ],
+                "label": "helme\u200dl\u200b, hor\u200bs\u200be, p\u200de\u200dr\u200bs\u200b\u043en"
+            },
+            {
+                "bbox_2d": [
+                    392,
+                    103,
+                    692,
+                    575
+                ],
+                "label": "helme\u200dl\u200b, hor\u200bs\u200be, p\u200de\u200dr\u200bs\u200b\u043en"
+            }
+        ],
+        "token_count": 177,
+        "raw_token_count": 178,
+        "runtime_seconds": 0.5621
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.04106383925719062,
+        "defocus_blur": 0.060517495707148435,
+        "motion_blur": 0.0019155837123694536,
+        "fog_filter": 0.022753674666057523,
+        "pixelate": 0.004321136932178522,
+        "jpeg_filter": 0.039838220516739575
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.03023596735328765,
+        "synonym": 0.023022638988573745,
+        "ata_saliency": 0.0264447434035947,
+        "fragmentation": 0.02269296596121335,
+        "character_noise": 0.18940232498783216
+    }
+}

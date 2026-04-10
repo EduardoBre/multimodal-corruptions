@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/155",
+        "folder_id": "155",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00037053.JPEG"
+    },
+    "pareto_index": 19,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.9863386970780008,
+        "txt_attack": "homophone",
+        "txt_scale": 0.5971087462217437
+    },
+    "objectives": {
+        "iou": 0.50725,
+        "img_dist": 0.07435,
+        "txt_dist": 0.25677,
+        "txt_sim": 0.74323
+    },
+    "swad_metrics": {
+        "iou_0": 0.93193,
+        "delta_m_plus": 0.4557,
+        "phi": 0.68797,
+        "swad": 0.31351
+    },
+    "l2_distance": 0.57338,
+    "original_prompt": "Identify the objects \"butterfly\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "butterfly": {
+            "xmin": 264,
+            "ymin": 104,
+            "xmax": 464,
+            "ymax": 308
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"but her fly\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [418, 388, 920, 960], \"label\": \"but her fly\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    418,
+                    388,
+                    920,
+                    960
+                ],
+                "label": "but her fly"
+            }
+        ],
+        "token_count": 41,
+        "raw_token_count": 43,
+        "runtime_seconds": 0.1683
+    }
+}

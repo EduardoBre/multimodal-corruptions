@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/32",
+        "folder_id": "32",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00018701.JPEG"
+    },
+    "pareto_index": 15,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 3,
+    "total_evaluations": 75,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.028436,
+            "defocus_blur": 0.001009,
+            "motion_blur": 0.042042,
+            "fog_filter": 0.115561,
+            "pixelate": 0.07897,
+            "jpeg_filter": 0.259411
+        },
+        "text_corruptions": {
+            "homophone": 0.359158,
+            "synonym": 0.023482,
+            "ata_saliency": 0.112446,
+            "fragmentation": 0.031317,
+            "character_noise": 0.003458
+        },
+        "img_budget_used": 0.525429,
+        "txt_budget_used": 0.52986,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.02459,
+        "img_dist": 0.09805,
+        "txt_dist": 0.2748,
+        "txt_sim": 0.7252
+    },
+    "swad_metrics": {
+        "iou_0": 0.78446,
+        "delta_m_plus": 0.96865,
+        "phi": 0.65409,
+        "swad": 0.63359
+    },
+    "l2_distance": 0.2928,
+    "original_prompt": "Identify the objects \"dog\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 217,
+            "ymin": 3,
+            "xmax": 499,
+            "ymax": 356
+        },
+        "dog_1": {
+            "xmin": 8,
+            "ymin": 4,
+            "xmax": 358,
+            "ymax": 356
+        },
+        "dog_2": {
+            "xmin": 9,
+            "ymin": 74,
+            "xmax": 222,
+            "ymax": 353
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"dag\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [368, 900, 578, 1000], \"label\": \"dag\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    368,
+                    900,
+                    578,
+                    1000
+                ],
+                "label": "dag"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 86,
+        "runtime_seconds": 0.2892
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.028436355874164113,
+        "defocus_blur": 0.001008658383563274,
+        "motion_blur": 0.04204179041105727,
+        "fog_filter": 0.11556138480776289,
+        "pixelate": 0.07896979635030879,
+        "jpeg_filter": 0.2594112558323194
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.3591579351593378,
+        "synonym": 0.02348151645990028,
+        "ata_saliency": 0.11244555582714119,
+        "fragmentation": 0.0313172434548478,
+        "character_noise": 0.0034578140198664076
+    }
+}

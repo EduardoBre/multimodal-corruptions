@@ -1,0 +1,136 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/216",
+        "folder_id": "216",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00044215.JPEG"
+    },
+    "pareto_index": 2,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.035301,
+            "defocus_blur": 0.000564,
+            "motion_blur": 0.016613,
+            "fog_filter": 0.018049,
+            "pixelate": 0.001554,
+            "jpeg_filter": 0.000924
+        },
+        "text_corruptions": {
+            "homophone": 0.07322,
+            "synonym": 0.592004,
+            "ata_saliency": 0.088065,
+            "fragmentation": 0.039661,
+            "character_noise": 0.095979
+        },
+        "img_budget_used": 0.073004,
+        "txt_budget_used": 0.888929,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.27117,
+        "img_dist": 0.06657,
+        "txt_dist": 0.28225,
+        "txt_sim": 0.71775
+    },
+    "swad_metrics": {
+        "iou_0": 0.79345,
+        "delta_m_plus": 0.65824,
+        "phi": 0.66997,
+        "swad": 0.441
+    },
+    "l2_distance": 0.39703,
+    "original_prompt": "Identify the objects \"chair, dog, flower pot, table\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 109,
+            "ymin": 140,
+            "xmax": 301,
+            "ymax": 478
+        },
+        "flower pot": {
+            "xmin": 69,
+            "ymin": 75,
+            "xmax": 144,
+            "ymax": 129
+        },
+        "table": {
+            "xmin": 94,
+            "ymin": 193,
+            "xmax": 309,
+            "ymax": 314
+        },
+        "chair": {
+            "xmin": 96,
+            "ymin": 104,
+            "xmax": 259,
+            "ymax": 305
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"s\u0456de ch\u0430 \u0456r, \u0440up, flow\u0435r pot, des\u200dk\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 100, 538], \"label\": \"s\u0456de ch\u0430 \u0456r\"},\n\t{\"bbox_2d\": [18, 367, 100, 538], \"label\": \"\u0440up\"},\n\t{\"bbox_2d\": [198, 160, 400, 272], \"label\": \"flow\u0435r pot\"},\n\t{\"bbox_2d\": [128, 256, 338, 556], \"label\": \"des\u200dk\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    100,
+                    538
+                ],
+                "label": "s\u0456de ch\u0430 \u0456r"
+            },
+            {
+                "bbox_2d": [
+                    18,
+                    367,
+                    100,
+                    538
+                ],
+                "label": "\u0440up"
+            },
+            {
+                "bbox_2d": [
+                    198,
+                    160,
+                    400,
+                    272
+                ],
+                "label": "flow\u0435r pot"
+            },
+            {
+                "bbox_2d": [
+                    128,
+                    256,
+                    338,
+                    556
+                ],
+                "label": "des\u200dk"
+            }
+        ],
+        "token_count": 146,
+        "raw_token_count": 158,
+        "runtime_seconds": 0.4911
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.03530057685744934,
+        "defocus_blur": 0.0005643740985650906,
+        "motion_blur": 0.01661276513551693,
+        "fog_filter": 0.01804862705429772,
+        "pixelate": 0.001553798904278126,
+        "jpeg_filter": 0.0009241963516063881
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.0732203776376313,
+        "synonym": 0.5920042661448346,
+        "ata_saliency": 0.08806489301448078,
+        "fragmentation": 0.03966056751588864,
+        "character_noise": 0.09597880380233435
+    }
+}

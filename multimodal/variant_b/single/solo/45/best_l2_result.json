@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/45",
+        "folder_id": "45",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00037424.JPEG"
+    },
+    "pareto_index": 11,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.000412,
+            "defocus_blur": 0.00745,
+            "motion_blur": 0.085189,
+            "fog_filter": 0.000913,
+            "pixelate": 0.055093,
+            "jpeg_filter": 0.074023
+        },
+        "text_corruptions": {
+            "homophone": 0.165388,
+            "synonym": 0.102735,
+            "ata_saliency": 0.147727,
+            "fragmentation": 0.047432,
+            "character_noise": 0.032276
+        },
+        "img_budget_used": 0.223079,
+        "txt_budget_used": 0.495559,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.06468,
+        "txt_dist": 0.36682,
+        "txt_sim": 0.63318
+    },
+    "swad_metrics": {
+        "iou_0": 0.98447,
+        "delta_m_plus": 1.0,
+        "phi": 0.59223,
+        "swad": 0.59223
+    },
+    "l2_distance": 0.37248,
+    "original_prompt": "Identify the objects \"bell pepper\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bell pepper": {
+            "xmin": 91,
+            "ymin": 24,
+            "xmax": 417,
+            "ymax": 294
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bell \u0440ep\u200dp\u0435r\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [180, 67, 833, 783], \"label\": \"bell \u0440\u0435\u043f\u0440\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    180,
+                    67,
+                    833,
+                    783
+                ],
+                "label": "bell \u0440\u0435\u043f\u0440"
+            }
+        ],
+        "token_count": 41,
+        "raw_token_count": 52,
+        "runtime_seconds": 0.1806
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0004116083338962812,
+        "defocus_blur": 0.007450086844415144,
+        "motion_blur": 0.0851885505153539,
+        "fog_filter": 0.0009127172952077592,
+        "pixelate": 0.05509305552600045,
+        "jpeg_filter": 0.07402309756590761
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.1653882841667762,
+        "synonym": 0.1027347985133602,
+        "ata_saliency": 0.14772724772434218,
+        "fragmentation": 0.04743216334020994,
+        "character_noise": 0.032276274124207346
+    }
+}

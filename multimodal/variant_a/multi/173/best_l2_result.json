@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/173",
+        "folder_id": "173",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00036814.JPEG"
+    },
+    "pareto_index": 7,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.486062019522153,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.8971524375333463
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.01721,
+        "txt_dist": 0.20821,
+        "txt_sim": 0.79179
+    },
+    "swad_metrics": {
+        "iou_0": 0.9651,
+        "delta_m_plus": 1.0,
+        "phi": 0.77816,
+        "swad": 0.77816
+    },
+    "l2_distance": 0.20892,
+    "original_prompt": "Identify the objects \"band aid, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 0,
+            "ymin": 48,
+            "xmax": 442,
+            "ymax": 328
+        },
+        "band aid": {
+            "xmin": 83,
+            "ymin": 155,
+            "xmax": 236,
+            "ymax": 288
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bjnd adi, preson\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 147, 978, 990], \"label\": \"bjnd adi, preson\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    147,
+                    978,
+                    990
+                ],
+                "label": "bjnd adi, preson"
+            }
+        ],
+        "token_count": 43,
+        "raw_token_count": 96,
+        "runtime_seconds": 0.3242
+    }
+}

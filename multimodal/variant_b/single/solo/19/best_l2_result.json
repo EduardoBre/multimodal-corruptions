@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/19",
+        "folder_id": "19",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00021673.JPEG"
+    },
+    "pareto_index": 6,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.008616,
+            "defocus_blur": 0.010971,
+            "motion_blur": 0.003436,
+            "fog_filter": 0.021335,
+            "pixelate": 0.059992,
+            "jpeg_filter": 0.030982
+        },
+        "text_corruptions": {
+            "homophone": 0.191064,
+            "synonym": 0.303207,
+            "ata_saliency": 0.135956,
+            "fragmentation": 0.05391,
+            "character_noise": 0.15992
+        },
+        "img_budget_used": 0.135331,
+        "txt_budget_used": 0.844056,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.04979,
+        "txt_dist": 0.20569,
+        "txt_sim": 0.79431
+    },
+    "swad_metrics": {
+        "iou_0": 0.96016,
+        "delta_m_plus": 1.0,
+        "phi": 0.75476,
+        "swad": 0.75476
+    },
+    "l2_distance": 0.21163,
+    "original_prompt": "Identify the objects \"pencil sharpener\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "pencil sharpener": {
+            "xmin": 303,
+            "ymin": 150,
+            "xmax": 412,
+            "ymax": 216
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"p\u0435n\u0441\u200d\u0456l\u200d s\u200dha\u200drp ne\u200br\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 580, 528, 678], \"label\": \"p\u0435n\u0441\u200d\u0456l\u200d s\u200dha\u200drp ne\u200br\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    580,
+                    528,
+                    678
+                ],
+                "label": "p\u0435n\u0441\u200d\u0456l\u200d s\u200dha\u200drp ne\u200br"
+            }
+        ],
+        "token_count": 56,
+        "raw_token_count": 103,
+        "runtime_seconds": 0.3201
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.00861591878157037,
+        "defocus_blur": 0.01097068416011387,
+        "motion_blur": 0.003436174890123362,
+        "fog_filter": 0.021334753548533182,
+        "pixelate": 0.05999152241851175,
+        "jpeg_filter": 0.030982378091298734
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.19106436546491598,
+        "synonym": 0.3032069503160761,
+        "ata_saliency": 0.1359555305980525,
+        "fragmentation": 0.05390961172191216,
+        "character_noise": 0.15991978647093777
+    }
+}

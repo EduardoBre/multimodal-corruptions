@@ -1,0 +1,112 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/211",
+        "folder_id": "211",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00021517.JPEG"
+    },
+    "pareto_index": 5,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.008209,
+            "defocus_blur": 0.057731,
+            "motion_blur": 0.073316,
+            "fog_filter": 0.072823,
+            "pixelate": 0.013046,
+            "jpeg_filter": 0.004982
+        },
+        "text_corruptions": {
+            "homophone": 0.01443,
+            "synonym": 0.105729,
+            "ata_saliency": 0.373455,
+            "fragmentation": 0.245032,
+            "character_noise": 0.176206
+        },
+        "img_budget_used": 0.230107,
+        "txt_budget_used": 0.914852,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.09853,
+        "txt_dist": 0.27259,
+        "txt_sim": 0.72741
+    },
+    "swad_metrics": {
+        "iou_0": 0.95141,
+        "delta_m_plus": 1.0,
+        "phi": 0.65574,
+        "swad": 0.65574
+    },
+    "l2_distance": 0.28985,
+    "original_prompt": "Identify the objects \"brassiere, person, power drill\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "power drill": {
+            "xmin": 117,
+            "ymin": 207,
+            "xmax": 226,
+            "ymax": 498
+        },
+        "person": {
+            "xmin": 36,
+            "ymin": 0,
+            "xmax": 385,
+            "ymax": 498
+        },
+        "brassiere": {
+            "xmin": 102,
+            "ymin": 2,
+            "xmax": 317,
+            "ymax": 208
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"b\u0430\u200dr z\u200deey, pe\u200dros\u200dn, po\u200bwer dr\u0456ll\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [272, 20, 788, 420], \"label\": \"b\u0430\u200dr z\u200deey, pe\u200dros\u200dn, po\u200bwer dr\u0456ll\"},\n\t{\"bbox_2d\": [320, 420, 572, 998], \"label\": \"b\u0430\u200dr z\u200deey, pe\u200dros\u200dn, po\u200bwer dr\u0456ll\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    272,
+                    20,
+                    788,
+                    420
+                ],
+                "label": "b\u0430\u200dr z\u200deey, pe\u200dros\u200dn, po\u200bwer dr\u0456ll"
+            },
+            {
+                "bbox_2d": [
+                    320,
+                    420,
+                    572,
+                    998
+                ],
+                "label": "b\u0430\u200dr z\u200deey, pe\u200dros\u200dn, po\u200bwer dr\u0456ll"
+            }
+        ],
+        "token_count": 119,
+        "raw_token_count": 170,
+        "runtime_seconds": 0.5361
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.008208663883526507,
+        "defocus_blur": 0.05773148437597537,
+        "motion_blur": 0.07331612085465317,
+        "fog_filter": 0.07282289728619444,
+        "pixelate": 0.013046344174185563,
+        "jpeg_filter": 0.004981836693065134
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.014429983724508086,
+        "synonym": 0.10572908167970929,
+        "ata_saliency": 0.3734549067689066,
+        "fragmentation": 0.24503173016005872,
+        "character_noise": 0.17620598227885345
+    }
+}

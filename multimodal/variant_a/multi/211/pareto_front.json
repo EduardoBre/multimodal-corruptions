@@ -1,0 +1,1707 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/211",
+        "folder_id": "211",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00021517.JPEG"
+    },
+    "original_prompt": "Identify the objects \"brassiere, person, power drill\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "power drill": {
+            "xmin": 117,
+            "ymin": 207,
+            "xmax": 226,
+            "ymax": 498
+        },
+        "person": {
+            "xmin": 36,
+            "ymin": 0,
+            "xmax": 385,
+            "ymax": 498
+        },
+        "brassiere": {
+            "xmin": 102,
+            "ymin": 2,
+            "xmax": 317,
+            "ymax": 208
+        }
+    },
+    "baseline_iou": 0.95141,
+    "swad_star": 0.65405,
+    "swad_star_index": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 8,
+    "total_evaluations": 240,
+    "skipped_evaluations": 30,
+    "n_solutions": 30,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.004873583603228204,
+                "txt_attack": "synonym",
+                "txt_scale": 0.7724419231809895
+            },
+            "objectives": {
+                "iou": 0.94978,
+                "img_dist": 0.02536,
+                "txt_dist": 0.02765,
+                "txt_sim": 0.97235
+            },
+            "swad_metrics": {
+                "iou_0": 0.95141,
+                "delta_m_plus": 0.00171,
+                "phi": 0.94769,
+                "swad": 0.00162
+            },
+            "l2_distance": 0.95052,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"brassiere, person, power tool\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [258, 10, 788, 418], \"label\": \"brassiere\"},\n\t{\"bbox_2d\": [98, 0, 960, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [312, 418, 560, 1000], \"label\": \"power tool\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            258,
+                            10,
+                            788,
+                            418
+                        ],
+                        "label": "brassiere"
+                    },
+                    {
+                        "bbox_2d": [
+                            98,
+                            0,
+                            960,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            312,
+                            418,
+                            560,
+                            1000
+                        ],
+                        "label": "power tool"
+                    }
+                ],
+                "token_count": 106,
+                "raw_token_count": 150,
+                "runtime_seconds": 0.5352
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.956810286327587,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.5919188485823369
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.10927,
+                "txt_dist": 0.26571,
+                "txt_sim": 0.73429
+            },
+            "swad_metrics": {
+                "iou_0": 0.95141,
+                "delta_m_plus": 1.0,
+                "phi": 0.65405,
+                "swad": 0.65405
+            },
+            "l2_distance": 0.2873,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"b\u200drass\u200b\u0456er\u0435\u200b, p\u200b\u0435\u200dr\u200bs\u200bon\u200d, \u0440\u200d\u043e\u200bw\u200d\u0435\u200br\u200d dr\u0456\u200bll\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [240, 10, 800, 400], \"label\": \"b\u200drass\u200b\u0456er\u0435\u200b, p\u200b\u0435\u200dr\u200bs\u200bon\u200d, \u0440\u200d\u043e\u200bw\u200b\u0435\u200br\u200b dr\u0456\u200bll\"},\n\t{\"bbox_2d\": [240, 10, 800, 400], \"label\": \"b\u200drass\u200b\u0456er\u0435\u200b, p\u200b\u0435\u200dr\u200bs\u200bon\u200d, \u0440\u200d\u043e\u200bw\u200b\u0435\u200br\u200b dr\u0456\u200bll\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            240,
+                            10,
+                            800,
+                            400
+                        ],
+                        "label": "b\u200drass\u200b\u0456er\u0435\u200b, p\u200b\u0435\u200dr\u200bs\u200bon\u200d, \u0440\u200d\u043e\u200bw\u200b\u0435\u200br\u200b dr\u0456\u200bll"
+                    },
+                    {
+                        "bbox_2d": [
+                            240,
+                            10,
+                            800,
+                            400
+                        ],
+                        "label": "b\u200drass\u200b\u0456er\u0435\u200b, p\u200b\u0435\u200dr\u200bs\u200bon\u200d, \u0440\u200d\u043e\u200bw\u200b\u0435\u200br\u200b dr\u0456\u200bll"
+                    }
+                ],
+                "token_count": 146,
+                "raw_token_count": 148,
+                "runtime_seconds": 0.4932
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.79891,
+                "img_dist": 0.08901,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.95141,
+                "delta_m_plus": 0.16029,
+                "phi": 0.91099,
+                "swad": 0.14602
+            },
+            "l2_distance": 0.80385,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"brassiere, person, power drill\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [256, 12, 778, 412], \"label\": \"brassiere\"},\n\t{\"bbox_2d\": [100, 0, 956, 999], \"label\": \"person\"},\n\t{\"bbox_2d\": [288, 412, 856, 999], \"label\": \"power drill\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            256,
+                            12,
+                            778,
+                            412
+                        ],
+                        "label": "brassiere"
+                    },
+                    {
+                        "bbox_2d": [
+                            100,
+                            0,
+                            956,
+                            999
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            288,
+                            412,
+                            856,
+                            999
+                        ],
+                        "label": "power drill"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 119,
+                "runtime_seconds": 0.3775
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.005725472790594988,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6131517588342602
+            },
+            "objectives": {
+                "iou": 0.95312,
+                "img_dist": 0.02542,
+                "txt_dist": 0.0194,
+                "txt_sim": 0.9806
+            },
+            "swad_metrics": {
+                "iou_0": 0.95141,
+                "delta_m_plus": 0.0,
+                "phi": 0.95567,
+                "swad": 0.0
+            },
+            "l2_distance": 0.95366,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"brassiere, person, power dril\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [258, 10, 788, 416], \"label\": \"brassiere\"},\n\t{\"bbox_2d\": [96, 0, 960, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [312, 416, 560, 1000], \"label\": \"power dril\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            258,
+                            10,
+                            788,
+                            416
+                        ],
+                        "label": "brassiere"
+                    },
+                    {
+                        "bbox_2d": [
+                            96,
+                            0,
+                            960,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            312,
+                            416,
+                            560,
+                            1000
+                        ],
+                        "label": "power dril"
+                    }
+                ],
+                "token_count": 107,
+                "raw_token_count": 147,
+                "runtime_seconds": 0.466
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.050281745222094276,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6731302997788629
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.02673,
+                "txt_dist": 0.34147,
+                "txt_sim": 0.65853
+            },
+            "swad_metrics": {
+                "iou_0": 0.95141,
+                "delta_m_plus": 1.0,
+                "phi": 0.64093,
+                "swad": 0.64093
+            },
+            "l2_distance": 0.34251,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"brazier, per son, powder ill\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "There is no object matching the query in the image.",
+                "parsed_predictions": [],
+                "token_count": 11,
+                "raw_token_count": 118,
+                "runtime_seconds": 0.4572
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.8275821950808921,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.28499,
+                "img_dist": 0.08068,
+                "txt_dist": 0.20689,
+                "txt_sim": 0.79311
+            },
+            "swad_metrics": {
+                "iou_0": 0.95141,
+                "delta_m_plus": 0.70046,
+                "phi": 0.72912,
+                "swad": 0.51072
+            },
+            "l2_distance": 0.36129,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"brazier, per son, power dril\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [238, 412, 868, 999], \"label\": \"brazier\"},\n\t{\"bbox_2d\": [238, 412, 868, 999], \"label\": \"per son\"},\n\t{\"bbox_2d\": [238, 412, 868, 999], \"label\": \"power dril\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            238,
+                            412,
+                            868,
+                            999
+                        ],
+                        "label": "brazier"
+                    },
+                    {
+                        "bbox_2d": [
+                            238,
+                            412,
+                            868,
+                            999
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            238,
+                            412,
+                            868,
+                            999
+                        ],
+                        "label": "power dril"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 122,
+                "runtime_seconds": 0.4222
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.9330087833613759,
+                "txt_attack": "homophone",
+                "txt_scale": 0.5482099474699078
+            },
+            "objectives": {
+                "iou": 0.48135,
+                "img_dist": 0.05008,
+                "txt_dist": 0.22669,
+                "txt_sim": 0.77331
+            },
+            "swad_metrics": {
+                "iou_0": 0.95141,
+                "delta_m_plus": 0.49407,
+                "phi": 0.73458,
+                "swad": 0.36293
+            },
+            "l2_distance": 0.53441,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"brasseer, pursun, power dril\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [264, 10, 776, 420], \"label\": \"brasseer\"},\n\t{\"bbox_2d\": [312, 420, 552, 600], \"label\": \"pursun\"},\n\t{\"bbox_2d\": [312, 420, 552, 600], \"label\": \"power dril\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            264,
+                            10,
+                            776,
+                            420
+                        ],
+                        "label": "brasseer"
+                    },
+                    {
+                        "bbox_2d": [
+                            312,
+                            420,
+                            552,
+                            600
+                        ],
+                        "label": "pursun"
+                    },
+                    {
+                        "bbox_2d": [
+                            312,
+                            420,
+                            552,
+                            600
+                        ],
+                        "label": "power dril"
+                    }
+                ],
+                "token_count": 110,
+                "raw_token_count": 122,
+                "runtime_seconds": 0.4222
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.9401864820023584,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.68731,
+                "img_dist": 0.05008,
+                "txt_dist": 0.07993,
+                "txt_sim": 0.92007
+            },
+            "swad_metrics": {
+                "iou_0": 0.95141,
+                "delta_m_plus": 0.27759,
+                "phi": 0.87399,
+                "swad": 0.24261
+            },
+            "l2_distance": 0.69375,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"brassiere, per son, power drill\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [258, 10, 778, 420], \"label\": \"brassiere\"},\n\t{\"bbox_2d\": [372, 0, 632, 440], \"label\": \"per son\"},\n\t{\"bbox_2d\": [318, 420, 572, 998], \"label\": \"power drill\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            258,
+                            10,
+                            778,
+                            420
+                        ],
+                        "label": "brassiere"
+                    },
+                    {
+                        "bbox_2d": [
+                            372,
+                            0,
+                            632,
+                            440
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            318,
+                            420,
+                            572,
+                            998
+                        ],
+                        "label": "power drill"
+                    }
+                ],
+                "token_count": 106,
+                "raw_token_count": 124,
+                "runtime_seconds": 0.4224
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.7585322514200842,
+                "txt_attack": "synonym",
+                "txt_scale": 0.8402633355238248
+            },
+            "objectives": {
+                "iou": 0.91776,
+                "img_dist": 0.07292,
+                "txt_dist": 0.01331,
+                "txt_sim": 0.98669
+            },
+            "swad_metrics": {
+                "iou_0": 0.95141,
+                "delta_m_plus": 0.03537,
+                "phi": 0.91474,
+                "swad": 0.03235
+            },
+            "l2_distance": 0.92075,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"brassiere, person, electric drill\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [260, 14, 792, 425], \"label\": \"brassiere\"},\n\t{\"bbox_2d\": [100, 0, 960, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [328, 418, 556, 1000], \"label\": \"electric drill\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            260,
+                            14,
+                            792,
+                            425
+                        ],
+                        "label": "brassiere"
+                    },
+                    {
+                        "bbox_2d": [
+                            100,
+                            0,
+                            960,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            328,
+                            418,
+                            556,
+                            1000
+                        ],
+                        "label": "electric drill"
+                    }
+                ],
+                "token_count": 107,
+                "raw_token_count": 144,
+                "runtime_seconds": 0.5376
+            }
+        },
+        {
+            "index": 9,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.012001987074849924,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6851627368259884
+            },
+            "objectives": {
+                "iou": 0.3428,
+                "img_dist": 0.02541,
+                "txt_dist": 0.2291,
+                "txt_sim": 0.7709
+            },
+            "swad_metrics": {
+                "iou_0": 0.95141,
+                "delta_m_plus": 0.63969,
+                "phi": 0.75131,
+                "swad": 0.48061
+            },
+            "l2_distance": 0.41309,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"brazier, pursun, power drill\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [324, 418, 568, 998], \"label\": \"power drill\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            324,
+                            418,
+                            568,
+                            998
+                        ],
+                        "label": "power drill"
+                    }
+                ],
+                "token_count": 40,
+                "raw_token_count": 122,
+                "runtime_seconds": 0.4222
+            }
+        },
+        {
+            "index": 10,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.9780705826557392,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.49804,
+                "img_dist": 0.10464,
+                "txt_dist": 0.07993,
+                "txt_sim": 0.92007
+            },
+            "swad_metrics": {
+                "iou_0": 0.95141,
+                "delta_m_plus": 0.47652,
+                "phi": 0.82379,
+                "swad": 0.39256
+            },
+            "l2_distance": 0.51515,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"brassiere, per son, power drill\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [250, 10, 780, 400], \"label\": \"brassiere\"},\n\t{\"bbox_2d\": [340, 410, 530, 570], \"label\": \"per son\"},\n\t{\"bbox_2d\": [250, 490, 860, 830], \"label\": \"power drill\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            250,
+                            10,
+                            780,
+                            400
+                        ],
+                        "label": "brassiere"
+                    },
+                    {
+                        "bbox_2d": [
+                            340,
+                            410,
+                            530,
+                            570
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            250,
+                            490,
+                            860,
+                            830
+                        ],
+                        "label": "power drill"
+                    }
+                ],
+                "token_count": 108,
+                "raw_token_count": 150,
+                "runtime_seconds": 0.5352
+            }
+        },
+        {
+            "index": 11,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.11472592480074673,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6809073588535024
+            },
+            "objectives": {
+                "iou": 0.92082,
+                "img_dist": 0.02927,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.95141,
+                "delta_m_plus": 0.03215,
+                "phi": 0.97073,
+                "swad": 0.03121
+            },
+            "l2_distance": 0.92129,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"brassiere, person, power drill\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [262, 10, 800, 420], \"label\": \"brassiere\"},\n\t{\"bbox_2d\": [98, 0, 960, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [308, 420, 598, 1000], \"label\": \"power drill\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            262,
+                            10,
+                            800,
+                            420
+                        ],
+                        "label": "brassiere"
+                    },
+                    {
+                        "bbox_2d": [
+                            98,
+                            0,
+                            960,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            308,
+                            420,
+                            598,
+                            1000
+                        ],
+                        "label": "power drill"
+                    }
+                ],
+                "token_count": 106,
+                "raw_token_count": 118,
+                "runtime_seconds": 0.4572
+            }
+        },
+        {
+            "index": 12,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.956810286327587,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4818635888430647
+            },
+            "objectives": {
+                "iou": 0.50757,
+                "img_dist": 0.09012,
+                "txt_dist": 0.07993,
+                "txt_sim": 0.92007
+            },
+            "swad_metrics": {
+                "iou_0": 0.95141,
+                "delta_m_plus": 0.46651,
+                "phi": 0.83715,
+                "swad": 0.39054
+            },
+            "l2_distance": 0.52167,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"brassiere, per son, power drill\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [256, 18, 796, 407], \"label\": \"brassiere\"},\n\t{\"bbox_2d\": [228, 510, 872, 857], \"label\": \"per son\"},\n\t{\"bbox_2d\": [308, 807, 572, 1000], \"label\": \"power drill\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            256,
+                            18,
+                            796,
+                            407
+                        ],
+                        "label": "brassiere"
+                    },
+                    {
+                        "bbox_2d": [
+                            228,
+                            510,
+                            872,
+                            857
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            308,
+                            807,
+                            572,
+                            1000
+                        ],
+                        "label": "power drill"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 118,
+                "runtime_seconds": 0.4572
+            }
+        },
+        {
+            "index": 13,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.7576426542188995,
+                "txt_attack": "synonym",
+                "txt_scale": 0.8402633355238248
+            },
+            "objectives": {
+                "iou": 0.91202,
+                "img_dist": 0.07292,
+                "txt_dist": 0.07933,
+                "txt_sim": 0.92067
+            },
+            "swad_metrics": {
+                "iou_0": 0.95141,
+                "delta_m_plus": 0.0414,
+                "phi": 0.85353,
+                "swad": 0.03534
+            },
+            "l2_distance": 0.91836,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"brassiere, human, electric drill\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [260, 14, 792, 425], \"label\": \"brassiere\"},\n\t{\"bbox_2d\": [100, 0, 960, 1000], \"label\": \"human\"},\n\t{\"bbox_2d\": [328, 420, 552, 1000], \"label\": \"electric drill\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            260,
+                            14,
+                            792,
+                            425
+                        ],
+                        "label": "brassiere"
+                    },
+                    {
+                        "bbox_2d": [
+                            100,
+                            0,
+                            960,
+                            1000
+                        ],
+                        "label": "human"
+                    },
+                    {
+                        "bbox_2d": [
+                            328,
+                            420,
+                            552,
+                            1000
+                        ],
+                        "label": "electric drill"
+                    }
+                ],
+                "token_count": 107,
+                "raw_token_count": 122,
+                "runtime_seconds": 0.4222
+            }
+        },
+        {
+            "index": 14,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.925240823208328,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2707912079403831
+            },
+            "objectives": {
+                "iou": 0.74158,
+                "img_dist": 0.09273,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.95141,
+                "delta_m_plus": 0.22055,
+                "phi": 0.90727,
+                "swad": 0.2001
+            },
+            "l2_distance": 0.74736,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"brassiere, person, power drill\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [264, 12, 788, 400], \"label\": \"brassiere\"},\n\t{\"bbox_2d\": [78, 0, 964, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [300, 788, 550, 1000], \"label\": \"power drill\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            264,
+                            12,
+                            788,
+                            400
+                        ],
+                        "label": "brassiere"
+                    },
+                    {
+                        "bbox_2d": [
+                            78,
+                            0,
+                            964,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            300,
+                            788,
+                            550,
+                            1000
+                        ],
+                        "label": "power drill"
+                    }
+                ],
+                "token_count": 106,
+                "raw_token_count": 124,
+                "runtime_seconds": 0.4224
+            }
+        },
+        {
+            "index": 15,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.01271186230781507,
+                "txt_attack": "homophone",
+                "txt_scale": 0.621589817044014
+            },
+            "objectives": {
+                "iou": 0.70239,
+                "img_dist": 0.02548,
+                "txt_dist": 0.17591,
+                "txt_sim": 0.82409
+            },
+            "swad_metrics": {
+                "iou_0": 0.95141,
+                "delta_m_plus": 0.26174,
+                "phi": 0.80309,
+                "swad": 0.2102
+            },
+            "l2_distance": 0.72453,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"brassiere, pursun, pow her drill\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [258, 10, 792, 418], \"label\": \"brassiere\"},\n\t{\"bbox_2d\": [316, 418, 572, 998], \"label\": \"pow her drill\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            258,
+                            10,
+                            792,
+                            418
+                        ],
+                        "label": "brassiere"
+                    },
+                    {
+                        "bbox_2d": [
+                            316,
+                            418,
+                            572,
+                            998
+                        ],
+                        "label": "pow her drill"
+                    }
+                ],
+                "token_count": 75,
+                "raw_token_count": 134,
+                "runtime_seconds": 0.4837
+            }
+        },
+        {
+            "index": 16,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.5656671100314771,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.039875089079669634
+            },
+            "objectives": {
+                "iou": 0.71037,
+                "img_dist": 0.08325,
+                "txt_dist": 0.04301,
+                "txt_sim": 0.95699
+            },
+            "swad_metrics": {
+                "iou_0": 0.95141,
+                "delta_m_plus": 0.25335,
+                "phi": 0.87732,
+                "swad": 0.22227
+            },
+            "l2_distance": 0.71652,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"br\u200bassiere, p\u200d\u0435rson, power drill\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [256, 10, 792, 417], \"label\": \"br\u200bassiere\"},\n\t{\"bbox_2d\": [112, 0, 960, 1000], \"label\": \"p\u200d\u0435\u0440\u0441\u043e\u043d\"},\n\t{\"bbox_2d\": [308, 417, 556, 1000], \"label\": \"power drill\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            256,
+                            10,
+                            792,
+                            417
+                        ],
+                        "label": "br\u200bassiere"
+                    },
+                    {
+                        "bbox_2d": [
+                            112,
+                            0,
+                            960,
+                            1000
+                        ],
+                        "label": "p\u200d\u0435\u0440\u0441\u043e\u043d"
+                    },
+                    {
+                        "bbox_2d": [
+                            308,
+                            417,
+                            556,
+                            1000
+                        ],
+                        "label": "power drill"
+                    }
+                ],
+                "token_count": 112,
+                "raw_token_count": 119,
+                "runtime_seconds": 0.3775
+            }
+        },
+        {
+            "index": 17,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.029793769630833355,
+                "txt_attack": "homophone",
+                "txt_scale": 0.621589817044014
+            },
+            "objectives": {
+                "iou": 0.50113,
+                "img_dist": 0.02622,
+                "txt_dist": 0.12154,
+                "txt_sim": 0.87846
+            },
+            "swad_metrics": {
+                "iou_0": 0.95141,
+                "delta_m_plus": 0.47328,
+                "phi": 0.85543,
+                "swad": 0.40485
+            },
+            "l2_distance": 0.51632,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"brassiere, pursun, power drill\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [258, 10, 788, 420], \"label\": \"brassiere\"},\n\t{\"bbox_2d\": [312, 418, 560, 604], \"label\": \"pursun\"},\n\t{\"bbox_2d\": [312, 418, 560, 604], \"label\": \"power drill\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            258,
+                            10,
+                            788,
+                            420
+                        ],
+                        "label": "brassiere"
+                    },
+                    {
+                        "bbox_2d": [
+                            312,
+                            418,
+                            560,
+                            604
+                        ],
+                        "label": "pursun"
+                    },
+                    {
+                        "bbox_2d": [
+                            312,
+                            418,
+                            560,
+                            604
+                        ],
+                        "label": "power drill"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 141,
+                "runtime_seconds": 0.5072
+            }
+        },
+        {
+            "index": 18,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.9169616032858308,
+                "txt_attack": "homophone",
+                "txt_scale": 0.5481183045753253
+            },
+            "objectives": {
+                "iou": 0.48823,
+                "img_dist": 0.09175,
+                "txt_dist": 0.1343,
+                "txt_sim": 0.8657
+            },
+            "swad_metrics": {
+                "iou_0": 0.95141,
+                "delta_m_plus": 0.48684,
+                "phi": 0.78627,
+                "swad": 0.38278
+            },
+            "l2_distance": 0.51461,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"brassiere, per son, pow her drill\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [256, 14, 778, 428], \"label\": \"brassiere\"},\n\t{\"bbox_2d\": [348, 418, 556, 604], \"label\": \"per son\"},\n\t{\"bbox_2d\": [306, 808, 556, 1000], \"label\": \"pow her drill\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            256,
+                            14,
+                            778,
+                            428
+                        ],
+                        "label": "brassiere"
+                    },
+                    {
+                        "bbox_2d": [
+                            348,
+                            418,
+                            556,
+                            604
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            306,
+                            808,
+                            556,
+                            1000
+                        ],
+                        "label": "pow her drill"
+                    }
+                ],
+                "token_count": 110,
+                "raw_token_count": 124,
+                "runtime_seconds": 0.4224
+            }
+        },
+        {
+            "index": 19,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.5242010212050346
+            },
+            "objectives": {
+                "iou": 0.79891,
+                "img_dist": 0.08901,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.95141,
+                "delta_m_plus": 0.16029,
+                "phi": 0.91099,
+                "swad": 0.14602
+            },
+            "l2_distance": 0.80385,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"brassiere, person, power drill\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [256, 12, 778, 412], \"label\": \"brassiere\"},\n\t{\"bbox_2d\": [100, 0, 956, 999], \"label\": \"person\"},\n\t{\"bbox_2d\": [288, 412, 856, 999], \"label\": \"power drill\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            256,
+                            12,
+                            778,
+                            412
+                        ],
+                        "label": "brassiere"
+                    },
+                    {
+                        "bbox_2d": [
+                            100,
+                            0,
+                            956,
+                            999
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            288,
+                            412,
+                            856,
+                            999
+                        ],
+                        "label": "power drill"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 118,
+                "runtime_seconds": 0.4572
+            }
+        },
+        {
+            "index": 20,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.8556274908999736,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.72537,
+                "img_dist": 0.08829,
+                "txt_dist": 0.0194,
+                "txt_sim": 0.9806
+            },
+            "swad_metrics": {
+                "iou_0": 0.95141,
+                "delta_m_plus": 0.23758,
+                "phi": 0.89402,
+                "swad": 0.21241
+            },
+            "l2_distance": 0.73098,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"brassiere, person, power dril\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [256, 12, 772, 400], \"label\": \"brassiere\"},\n\t{\"bbox_2d\": [112, 0, 956, 999], \"label\": \"person\"},\n\t{\"bbox_2d\": [306, 800, 556, 999], \"label\": \"power dril\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            256,
+                            12,
+                            772,
+                            400
+                        ],
+                        "label": "brassiere"
+                    },
+                    {
+                        "bbox_2d": [
+                            112,
+                            0,
+                            956,
+                            999
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            306,
+                            800,
+                            556,
+                            999
+                        ],
+                        "label": "power dril"
+                    }
+                ],
+                "token_count": 106,
+                "raw_token_count": 145,
+                "runtime_seconds": 0.4749
+            }
+        },
+        {
+            "index": 21,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.0033871819143082155,
+                "txt_attack": "synonym",
+                "txt_scale": 0.29751264310819786
+            },
+            "objectives": {
+                "iou": 0.94345,
+                "img_dist": 0.02548,
+                "txt_dist": 0.06558,
+                "txt_sim": 0.93442
+            },
+            "swad_metrics": {
+                "iou_0": 0.95141,
+                "delta_m_plus": 0.00837,
+                "phi": 0.91061,
+                "swad": 0.00762
+            },
+            "l2_distance": 0.94607,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"brassiere, individual, power drill\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [258, 10, 788, 420], \"label\": \"brassiere\"},\n\t{\"bbox_2d\": [98, 0, 960, 1000], \"label\": \"individual\"},\n\t{\"bbox_2d\": [316, 418, 560, 1000], \"label\": \"power drill\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            258,
+                            10,
+                            788,
+                            420
+                        ],
+                        "label": "brassiere"
+                    },
+                    {
+                        "bbox_2d": [
+                            98,
+                            0,
+                            960,
+                            1000
+                        ],
+                        "label": "individual"
+                    },
+                    {
+                        "bbox_2d": [
+                            316,
+                            418,
+                            560,
+                            1000
+                        ],
+                        "label": "power drill"
+                    }
+                ],
+                "token_count": 106,
+                "raw_token_count": 122,
+                "runtime_seconds": 0.4222
+            }
+        },
+        {
+            "index": 22,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.014498319230295209,
+                "txt_attack": "homophone",
+                "txt_scale": 0.621589817044014
+            },
+            "objectives": {
+                "iou": 0.70196,
+                "img_dist": 0.02552,
+                "txt_dist": 0.20729,
+                "txt_sim": 0.79271
+            },
+            "swad_metrics": {
+                "iou_0": 0.95141,
+                "delta_m_plus": 0.26219,
+                "phi": 0.77248,
+                "swad": 0.20254
+            },
+            "l2_distance": 0.73237,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"brasseer, pursun, power drill\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [260, 10, 788, 420], \"label\": \"brasseer\"},\n\t{\"bbox_2d\": [312, 420, 560, 998], \"label\": \"power drill\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            260,
+                            10,
+                            788,
+                            420
+                        ],
+                        "label": "brasseer"
+                    },
+                    {
+                        "bbox_2d": [
+                            312,
+                            420,
+                            560,
+                            998
+                        ],
+                        "label": "power drill"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 145,
+                "runtime_seconds": 0.4749
+            }
+        },
+        {
+            "index": 23,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.8955914612898914,
+                "txt_attack": "synonym",
+                "txt_scale": 0.43519445464759643
+            },
+            "objectives": {
+                "iou": 0.71238,
+                "img_dist": 0.10516,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.95141,
+                "delta_m_plus": 0.25124,
+                "phi": 0.89484,
+                "swad": 0.22482
+            },
+            "l2_distance": 0.7201,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"brassiere, person, power drill\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [240, 18, 800, 400], \"label\": \"brassiere\"},\n\t{\"bbox_2d\": [100, 0, 970, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [330, 400, 570, 600], \"label\": \"power drill\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            240,
+                            18,
+                            800,
+                            400
+                        ],
+                        "label": "brassiere"
+                    },
+                    {
+                        "bbox_2d": [
+                            100,
+                            0,
+                            970,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            330,
+                            400,
+                            570,
+                            600
+                        ],
+                        "label": "power drill"
+                    }
+                ],
+                "token_count": 106,
+                "raw_token_count": 150,
+                "runtime_seconds": 0.5228
+            }
+        },
+        {
+            "index": 24,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.03732619454213726,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.33647038540361596
+            },
+            "objectives": {
+                "iou": 0.94145,
+                "img_dist": 0.02671,
+                "txt_dist": 0.07873,
+                "txt_sim": 0.92127
+            },
+            "swad_metrics": {
+                "iou_0": 0.95141,
+                "delta_m_plus": 0.01047,
+                "phi": 0.89666,
+                "swad": 0.00939
+            },
+            "l2_distance": 0.94511,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"brassieie, person, power drill\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [272, 14, 788, 416], \"label\": \"brassieie\"},\n\t{\"bbox_2d\": [96, 0, 960, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [312, 416, 560, 1000], \"label\": \"power drill\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            272,
+                            14,
+                            788,
+                            416
+                        ],
+                        "label": "brassieie"
+                    },
+                    {
+                        "bbox_2d": [
+                            96,
+                            0,
+                            960,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            312,
+                            416,
+                            560,
+                            1000
+                        ],
+                        "label": "power drill"
+                    }
+                ],
+                "token_count": 107,
+                "raw_token_count": 148,
+                "runtime_seconds": 0.4932
+            }
+        },
+        {
+            "index": 25,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.9273837244149883,
+                "txt_attack": "homophone",
+                "txt_scale": 0.5481183045753253
+            },
+            "objectives": {
+                "iou": 0.48731,
+                "img_dist": 0.09273,
+                "txt_dist": 0.1343,
+                "txt_sim": 0.8657
+            },
+            "swad_metrics": {
+                "iou_0": 0.95141,
+                "delta_m_plus": 0.4878,
+                "phi": 0.78542,
+                "swad": 0.38313
+            },
+            "l2_distance": 0.51391,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"brassiere, per son, pow her drill\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [264, 12, 788, 400], \"label\": \"brassiere\"},\n\t{\"bbox_2d\": [348, 400, 556, 600], \"label\": \"per son\"},\n\t{\"bbox_2d\": [314, 792, 556, 999], \"label\": \"pow her drill\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            264,
+                            12,
+                            788,
+                            400
+                        ],
+                        "label": "brassiere"
+                    },
+                    {
+                        "bbox_2d": [
+                            348,
+                            400,
+                            556,
+                            600
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            314,
+                            792,
+                            556,
+                            999
+                        ],
+                        "label": "pow her drill"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 134,
+                "runtime_seconds": 0.4837
+            }
+        },
+        {
+            "index": 26,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.024459296334953695,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.5270915709554707
+            },
+            "objectives": {
+                "iou": 0.92887,
+                "img_dist": 0.0277,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.95141,
+                "delta_m_plus": 0.02369,
+                "phi": 0.9723,
+                "swad": 0.02303
+            },
+            "l2_distance": 0.92928,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"brassiere, person, power drill\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [262, 10, 800, 425], \"label\": \"brassiere\"},\n\t{\"bbox_2d\": [98, 0, 960, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [312, 425, 580, 998], \"label\": \"power drill\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            262,
+                            10,
+                            800,
+                            425
+                        ],
+                        "label": "brassiere"
+                    },
+                    {
+                        "bbox_2d": [
+                            98,
+                            0,
+                            960,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            312,
+                            425,
+                            580,
+                            998
+                        ],
+                        "label": "power drill"
+                    }
+                ],
+                "token_count": 104,
+                "raw_token_count": 144,
+                "runtime_seconds": 0.5376
+            }
+        },
+        {
+            "index": 27,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.031097301445709213,
+                "txt_attack": "homophone",
+                "txt_scale": 0.310437666107914
+            },
+            "objectives": {
+                "iou": 0.95037,
+                "img_dist": 0.02636,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.95141,
+                "delta_m_plus": 0.00109,
+                "phi": 0.97364,
+                "swad": 0.00106
+            },
+            "l2_distance": 0.95074,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"brassiere, person, power drill\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [258, 10, 792, 420], \"label\": \"brassiere\"},\n\t{\"bbox_2d\": [96, 0, 960, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [312, 420, 560, 1000], \"label\": \"power drill\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            258,
+                            10,
+                            792,
+                            420
+                        ],
+                        "label": "brassiere"
+                    },
+                    {
+                        "bbox_2d": [
+                            96,
+                            0,
+                            960,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            312,
+                            420,
+                            560,
+                            1000
+                        ],
+                        "label": "power drill"
+                    }
+                ],
+                "token_count": 106,
+                "raw_token_count": 122,
+                "runtime_seconds": 0.4222
+            }
+        },
+        {
+            "index": 28,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.015053679893833993,
+                "txt_attack": "homophone",
+                "txt_scale": 0.5464092957270734
+            },
+            "objectives": {
+                "iou": 0.70385,
+                "img_dist": 0.0254,
+                "txt_dist": 0.07993,
+                "txt_sim": 0.92007
+            },
+            "swad_metrics": {
+                "iou_0": 0.95141,
+                "delta_m_plus": 0.2602,
+                "phi": 0.8967,
+                "swad": 0.23332
+            },
+            "l2_distance": 0.70883,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"brassiere, per son, power drill\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [258, 10, 792, 418], \"label\": \"brassiere\"},\n\t{\"bbox_2d\": [372, 0, 632, 438], \"label\": \"per son\"},\n\t{\"bbox_2d\": [316, 418, 560, 998], \"label\": \"power drill\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            258,
+                            10,
+                            792,
+                            418
+                        ],
+                        "label": "brassiere"
+                    },
+                    {
+                        "bbox_2d": [
+                            372,
+                            0,
+                            632,
+                            438
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            316,
+                            418,
+                            560,
+                            998
+                        ],
+                        "label": "power drill"
+                    }
+                ],
+                "token_count": 106,
+                "raw_token_count": 150,
+                "runtime_seconds": 0.5352
+            }
+        },
+        {
+            "index": 29,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.8641414100019178,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05365120216871283
+            },
+            "objectives": {
+                "iou": 0.71238,
+                "img_dist": 0.10516,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.95141,
+                "delta_m_plus": 0.25124,
+                "phi": 0.89484,
+                "swad": 0.22482
+            },
+            "l2_distance": 0.7201,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"brassiere, person, power drill\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [240, 18, 800, 400], \"label\": \"brassiere\"},\n\t{\"bbox_2d\": [100, 0, 970, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [330, 400, 570, 600], \"label\": \"power drill\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            240,
+                            18,
+                            800,
+                            400
+                        ],
+                        "label": "brassiere"
+                    },
+                    {
+                        "bbox_2d": [
+                            100,
+                            0,
+                            970,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            330,
+                            400,
+                            570,
+                            600
+                        ],
+                        "label": "power drill"
+                    }
+                ],
+                "token_count": 106,
+                "raw_token_count": 143,
+                "runtime_seconds": 0.4856
+            }
+        }
+    ]
+}

@@ -1,0 +1,1618 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/single/multi/115",
+        "folder_id": "115",
+        "category": "single/multi",
+        "filename": "ILSVRC2013_val_00004012.JPEG"
+    },
+    "original_prompt": "Identify the objects \"armadillo\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "armadillo": {
+            "xmin": 1,
+            "ymin": 242,
+            "xmax": 212,
+            "ymax": 317
+        },
+        "armadillo_1": {
+            "xmin": 230,
+            "ymin": 192,
+            "xmax": 333,
+            "ymax": 330
+        },
+        "armadillo_2": {
+            "xmin": 313,
+            "ymin": 232,
+            "xmax": 450,
+            "ymax": 376
+        }
+    },
+    "baseline_iou": 0.80808,
+    "swad_star": 0.59703,
+    "swad_star_index": 2,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "n_solutions": 30,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8938987190842741,
+                "txt_attack": "synonym",
+                "txt_scale": 0.39826647995081654
+            },
+            "objectives": {
+                "iou": 0.39747,
+                "img_dist": 0.09823,
+                "txt_dist": 0.32673,
+                "txt_sim": 0.67327
+            },
+            "swad_metrics": {
+                "iou_0": 0.80808,
+                "delta_m_plus": 0.50813,
+                "phi": 0.60713,
+                "swad": 0.3085
+            },
+            "l2_distance": 0.52382,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"shell animal\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [502, 412, 658, 575], \"label\": \"shell animal\"},\n\t{\"bbox_2d\": [648, 462, 872, 728], \"label\": \"shell animal\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            502,
+                            412,
+                            658,
+                            575
+                        ],
+                        "label": "shell animal"
+                    },
+                    {
+                        "bbox_2d": [
+                            648,
+                            462,
+                            872,
+                            728
+                        ],
+                        "label": "shell animal"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 110,
+                "runtime_seconds": 0.3679
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8938118964885492,
+                "txt_attack": "synonym",
+                "txt_scale": 0.39840880343097296
+            },
+            "objectives": {
+                "iou": 0.55135,
+                "img_dist": 0.09823,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.80808,
+                "delta_m_plus": 0.3177,
+                "phi": 0.90177,
+                "swad": 0.2865
+            },
+            "l2_distance": 0.56003,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"armadillo\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 488, 392, 642], \"label\": \"armadillo\"},\n\t{\"bbox_2d\": [504, 412, 872, 728], \"label\": \"armadillo\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            488,
+                            392,
+                            642
+                        ],
+                        "label": "armadillo"
+                    },
+                    {
+                        "bbox_2d": [
+                            504,
+                            412,
+                            872,
+                            728
+                        ],
+                        "label": "armadillo"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 113,
+                "runtime_seconds": 0.3399
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.9801192629762987,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.6116667772804226
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.19314,
+                "txt_dist": 0.26006,
+                "txt_sim": 0.73994
+            },
+            "swad_metrics": {
+                "iou_0": 0.80808,
+                "delta_m_plus": 1.0,
+                "phi": 0.59703,
+                "swad": 0.59703
+            },
+            "l2_distance": 0.32394,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"\u0430\u200br\u200bm\u200b\u0430\u200dd\u200b\u0456l\u200bl\u043e\u200d\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [492, 417, 892, 748], \"label\": \"\u0430\u200br\u200bm\u200b\u0430\u200d\u043c\u200b\u0434\u200b\u0456\u200b\u043b\u200b\u043b\u200b\u043e\u200b\"},\n\t{\"bbox_2d\": [0, 492, 408, 648], \"label\": \"\u0430\u200br\u200bm\u200b\u0430\u200d\u043c\u200b\u0434\u200b\u0456\u200b\u043b\u200b\u043b\u200b\u043e\u200b\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            492,
+                            417,
+                            892,
+                            748
+                        ],
+                        "label": "\u0430\u200br\u200bm\u200b\u0430\u200d\u043c\u200b\u0434\u200b\u0456\u200b\u043b\u200b\u043b\u200b\u043e\u200b"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            492,
+                            408,
+                            648
+                        ],
+                        "label": "\u0430\u200br\u200bm\u200b\u0430\u200d\u043c\u200b\u0434\u200b\u0456\u200b\u043b\u200b\u043b\u200b\u043e\u200b"
+                    }
+                ],
+                "token_count": 110,
+                "raw_token_count": 113,
+                "runtime_seconds": 0.3796
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.00011527172772457517,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.451728908404159
+            },
+            "objectives": {
+                "iou": 0.78957,
+                "img_dist": 0.02962,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.80808,
+                "delta_m_plus": 0.02291,
+                "phi": 0.97038,
+                "swad": 0.02223
+            },
+            "l2_distance": 0.79013,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"armadillo\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 492, 408, 651], \"label\": \"armadillo\"},\n\t{\"bbox_2d\": [625, 466, 885, 738], \"label\": \"armadillo\"},\n\t{\"bbox_2d\": [500, 416, 675, 651], \"label\": \"armadillo\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            492,
+                            408,
+                            651
+                        ],
+                        "label": "armadillo"
+                    },
+                    {
+                        "bbox_2d": [
+                            625,
+                            466,
+                            885,
+                            738
+                        ],
+                        "label": "armadillo"
+                    },
+                    {
+                        "bbox_2d": [
+                            500,
+                            416,
+                            675,
+                            651
+                        ],
+                        "label": "armadillo"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 113,
+                "runtime_seconds": 0.3399
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.8446837200435253,
+                "txt_attack": "homophone",
+                "txt_scale": 0.861338161636698
+            },
+            "objectives": {
+                "iou": 0.26913,
+                "img_dist": 0.13622,
+                "txt_dist": 0.18097,
+                "txt_sim": 0.81903
+            },
+            "swad_metrics": {
+                "iou_0": 0.80808,
+                "delta_m_plus": 0.66695,
+                "phi": 0.70746,
+                "swad": 0.47184
+            },
+            "l2_distance": 0.35176,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"arm a dillow\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 488, 388, 650], \"label\": \"arm a dillow\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            488,
+                            388,
+                            650
+                        ],
+                        "label": "arm a dillow"
+                    }
+                ],
+                "token_count": 40,
+                "raw_token_count": 110,
+                "runtime_seconds": 0.4217
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.8693365368227407,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.27526276560874496
+            },
+            "objectives": {
+                "iou": 0.50732,
+                "img_dist": 0.17933,
+                "txt_dist": 0.16724,
+                "txt_sim": 0.83276
+            },
+            "swad_metrics": {
+                "iou_0": 0.80808,
+                "delta_m_plus": 0.37219,
+                "phi": 0.68342,
+                "swad": 0.25436
+            },
+            "l2_distance": 0.56347,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"aramdillo\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 492, 398, 658], \"label\": \"aramdillo\"},\n\t{\"bbox_2d\": [498, 414, 880, 788], \"label\": \"aramdillo\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            492,
+                            398,
+                            658
+                        ],
+                        "label": "aramdillo"
+                    },
+                    {
+                        "bbox_2d": [
+                            498,
+                            414,
+                            880,
+                            788
+                        ],
+                        "label": "aramdillo"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 110,
+                "runtime_seconds": 0.3523
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8938987190842741,
+                "txt_attack": "synonym",
+                "txt_scale": 0.1233908933819828
+            },
+            "objectives": {
+                "iou": 0.39747,
+                "img_dist": 0.09823,
+                "txt_dist": 0.32673,
+                "txt_sim": 0.67327
+            },
+            "swad_metrics": {
+                "iou_0": 0.80808,
+                "delta_m_plus": 0.50813,
+                "phi": 0.60713,
+                "swad": 0.3085
+            },
+            "l2_distance": 0.52382,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"armadillo\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 488, 392, 642], \"label\": \"armadillo\"},\n\t{\"bbox_2d\": [504, 412, 872, 728], \"label\": \"armadillo\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            488,
+                            392,
+                            642
+                        ],
+                        "label": "armadillo"
+                    },
+                    {
+                        "bbox_2d": [
+                            504,
+                            412,
+                            872,
+                            728
+                        ],
+                        "label": "armadillo"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 146,
+                "runtime_seconds": 0.4675
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.5236853003705148,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6594059176044547
+            },
+            "objectives": {
+                "iou": 0.71347,
+                "img_dist": 0.0794,
+                "txt_dist": 0.20671,
+                "txt_sim": 0.79329
+            },
+            "swad_metrics": {
+                "iou_0": 0.80808,
+                "delta_m_plus": 0.11708,
+                "phi": 0.7303,
+                "swad": 0.0855
+            },
+            "l2_distance": 0.74704,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"armaidllo\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 492, 408, 648], \"label\": \"armaidllo\"},\n\t{\"bbox_2d\": [500, 418, 672, 648], \"label\": \"armaidllo\"},\n\t{\"bbox_2d\": [532, 468, 884, 730], \"label\": \"armaidllo\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            492,
+                            408,
+                            648
+                        ],
+                        "label": "armaidllo"
+                    },
+                    {
+                        "bbox_2d": [
+                            500,
+                            418,
+                            672,
+                            648
+                        ],
+                        "label": "armaidllo"
+                    },
+                    {
+                        "bbox_2d": [
+                            532,
+                            468,
+                            884,
+                            730
+                        ],
+                        "label": "armaidllo"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 110,
+                "runtime_seconds": 0.414
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.9548975826552438,
+                "txt_attack": "homophone",
+                "txt_scale": 0.9966699895998633
+            },
+            "objectives": {
+                "iou": 0.46262,
+                "img_dist": 0.11074,
+                "txt_dist": 0.18097,
+                "txt_sim": 0.81903
+            },
+            "swad_metrics": {
+                "iou_0": 0.80808,
+                "delta_m_plus": 0.42751,
+                "phi": 0.72833,
+                "swad": 0.31137
+            },
+            "l2_distance": 0.50895,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"arm a dillow\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [492, 412, 666, 620], \"label\": \"arm a dillow\"},\n\t{\"bbox_2d\": [658, 458, 908, 720], \"label\": \"arm a dillow\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            492,
+                            412,
+                            666,
+                            620
+                        ],
+                        "label": "arm a dillow"
+                    },
+                    {
+                        "bbox_2d": [
+                            658,
+                            458,
+                            908,
+                            720
+                        ],
+                        "label": "arm a dillow"
+                    }
+                ],
+                "token_count": 78,
+                "raw_token_count": 173,
+                "runtime_seconds": 0.6474
+            }
+        },
+        {
+            "index": 9,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.8004900574692112,
+                "txt_attack": "homophone",
+                "txt_scale": 0.3273709769105356
+            },
+            "objectives": {
+                "iou": 0.52644,
+                "img_dist": 0.13333,
+                "txt_dist": 0.04371,
+                "txt_sim": 0.95629
+            },
+            "swad_metrics": {
+                "iou_0": 0.80808,
+                "delta_m_plus": 0.34853,
+                "phi": 0.82879,
+                "swad": 0.28886
+            },
+            "l2_distance": 0.54482,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"armadilo\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 483, 400, 672], \"label\": \"armadilo\"},\n\t{\"bbox_2d\": [492, 417, 892, 717], \"label\": \"armadilo\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            483,
+                            400,
+                            672
+                        ],
+                        "label": "armadilo"
+                    },
+                    {
+                        "bbox_2d": [
+                            492,
+                            417,
+                            892,
+                            717
+                        ],
+                        "label": "armadilo"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 140,
+                "runtime_seconds": 0.4663
+            }
+        },
+        {
+            "index": 10,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.047689513268710904,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.49877444854701336
+            },
+            "objectives": {
+                "iou": 0.7455,
+                "img_dist": 0.064,
+                "txt_dist": 0.2488,
+                "txt_sim": 0.7512
+            },
+            "swad_metrics": {
+                "iou_0": 0.80808,
+                "delta_m_plus": 0.07744,
+                "phi": 0.70312,
+                "swad": 0.05445
+            },
+            "l2_distance": 0.78852,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"a\u200br\u200bma\u200dd\u0456l\u200dl\u200b\u043e\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 492, 412, 666], \"label\": \"a\u200br\u200bma\u200dd\u0456l\u200dl\u200b\u043e\"},\n\t{\"bbox_2d\": [498, 416, 684, 644], \"label\": \"a\u200br\u200bma\u200dd\u0456l\u200dl\u200b\u043e\"},\n\t{\"bbox_2d\": [630, 468, 884, 732], \"label\": \"a\u200br\u200bma\u200dd\u0456l\u200dl\u200b\u043e\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            492,
+                            412,
+                            666
+                        ],
+                        "label": "a\u200br\u200bma\u200dd\u0456l\u200dl\u200b\u043e"
+                    },
+                    {
+                        "bbox_2d": [
+                            498,
+                            416,
+                            684,
+                            644
+                        ],
+                        "label": "a\u200br\u200bma\u200dd\u0456l\u200dl\u200b\u043e"
+                    },
+                    {
+                        "bbox_2d": [
+                            630,
+                            468,
+                            884,
+                            732
+                        ],
+                        "label": "a\u200br\u200bma\u200dd\u0456l\u200dl\u200b\u043e"
+                    }
+                ],
+                "token_count": 145,
+                "raw_token_count": 146,
+                "runtime_seconds": 0.4675
+            }
+        },
+        {
+            "index": 11,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.18161073858160026,
+                "txt_attack": "homophone",
+                "txt_scale": 0.22681885233370944
+            },
+            "objectives": {
+                "iou": 0.78137,
+                "img_dist": 0.05074,
+                "txt_dist": 0.21778,
+                "txt_sim": 0.78222
+            },
+            "swad_metrics": {
+                "iou_0": 0.80808,
+                "delta_m_plus": 0.03305,
+                "phi": 0.74253,
+                "swad": 0.02454
+            },
+            "l2_distance": 0.81274,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"arma dillo\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [632, 466, 885, 738], \"label\": \"arma dillo\"},\n\t{\"bbox_2d\": [500, 416, 671, 655], \"label\": \"arma dillo\"},\n\t{\"bbox_2d\": [0, 492, 402, 655], \"label\": \"arma dillo\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            632,
+                            466,
+                            885,
+                            738
+                        ],
+                        "label": "arma dillo"
+                    },
+                    {
+                        "bbox_2d": [
+                            500,
+                            416,
+                            671,
+                            655
+                        ],
+                        "label": "arma dillo"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            492,
+                            402,
+                            655
+                        ],
+                        "label": "arma dillo"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 115,
+                "runtime_seconds": 0.4115
+            }
+        },
+        {
+            "index": 12,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8938117155551055,
+                "txt_attack": "synonym",
+                "txt_scale": 0.39840880343097296
+            },
+            "objectives": {
+                "iou": 0.55135,
+                "img_dist": 0.09823,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.80808,
+                "delta_m_plus": 0.3177,
+                "phi": 0.90177,
+                "swad": 0.2865
+            },
+            "l2_distance": 0.56003,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"armadillo\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 488, 392, 642], \"label\": \"armadillo\"},\n\t{\"bbox_2d\": [504, 412, 872, 728], \"label\": \"armadillo\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            488,
+                            392,
+                            642
+                        ],
+                        "label": "armadillo"
+                    },
+                    {
+                        "bbox_2d": [
+                            504,
+                            412,
+                            872,
+                            728
+                        ],
+                        "label": "armadillo"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 113,
+                "runtime_seconds": 0.3399
+            }
+        },
+        {
+            "index": 13,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.5041658157422859,
+                "txt_attack": "homophone",
+                "txt_scale": 0.8630890695203539
+            },
+            "objectives": {
+                "iou": 0.7157,
+                "img_dist": 0.0794,
+                "txt_dist": 0.11826,
+                "txt_sim": 0.88174
+            },
+            "swad_metrics": {
+                "iou_0": 0.80808,
+                "delta_m_plus": 0.11432,
+                "phi": 0.81173,
+                "swad": 0.0928
+            },
+            "l2_distance": 0.72974,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"armadillow\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 492, 408, 648], \"label\": \"armadillow\"},\n\t{\"bbox_2d\": [500, 418, 672, 648], \"label\": \"armadillow\"},\n\t{\"bbox_2d\": [536, 468, 884, 730], \"label\": \"armadillow\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            492,
+                            408,
+                            648
+                        ],
+                        "label": "armadillow"
+                    },
+                    {
+                        "bbox_2d": [
+                            500,
+                            418,
+                            672,
+                            648
+                        ],
+                        "label": "armadillow"
+                    },
+                    {
+                        "bbox_2d": [
+                            536,
+                            468,
+                            884,
+                            730
+                        ],
+                        "label": "armadillow"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 113,
+                "runtime_seconds": 0.3399
+            }
+        },
+        {
+            "index": 14,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.014957725097199503,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.47877644331768376
+            },
+            "objectives": {
+                "iou": 0.78203,
+                "img_dist": 0.03136,
+                "txt_dist": 0.07451,
+                "txt_sim": 0.92549
+            },
+            "swad_metrics": {
+                "iou_0": 0.80808,
+                "delta_m_plus": 0.03224,
+                "phi": 0.89647,
+                "swad": 0.0289
+            },
+            "l2_distance": 0.7862,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"armadilln\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 492, 408, 655], \"label\": \"armadilln\"},\n\t{\"bbox_2d\": [627, 468, 885, 738], \"label\": \"armadilln\"},\n\t{\"bbox_2d\": [500, 417, 677, 655], \"label\": \"armadilln\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            492,
+                            408,
+                            655
+                        ],
+                        "label": "armadilln"
+                    },
+                    {
+                        "bbox_2d": [
+                            627,
+                            468,
+                            885,
+                            738
+                        ],
+                        "label": "armadilln"
+                    },
+                    {
+                        "bbox_2d": [
+                            500,
+                            417,
+                            677,
+                            655
+                        ],
+                        "label": "armadilln"
+                    }
+                ],
+                "token_count": 112,
+                "raw_token_count": 113,
+                "runtime_seconds": 0.3439
+            }
+        },
+        {
+            "index": 15,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.9477792604664657,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.3959636088118761
+            },
+            "objectives": {
+                "iou": 0.53714,
+                "img_dist": 0.10406,
+                "txt_dist": 0.09265,
+                "txt_sim": 0.90735
+            },
+            "swad_metrics": {
+                "iou_0": 0.80808,
+                "delta_m_plus": 0.33529,
+                "phi": 0.81293,
+                "swad": 0.27257
+            },
+            "l2_distance": 0.55492,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"armadilko\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 484, 388, 652], \"label\": \"armadilko\"},\n\t{\"bbox_2d\": [502, 412, 870, 712], \"label\": \"armadilko\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            484,
+                            388,
+                            652
+                        ],
+                        "label": "armadilko"
+                    },
+                    {
+                        "bbox_2d": [
+                            502,
+                            412,
+                            870,
+                            712
+                        ],
+                        "label": "armadilko"
+                    }
+                ],
+                "token_count": 76,
+                "raw_token_count": 110,
+                "runtime_seconds": 0.3523
+            }
+        },
+        {
+            "index": 16,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.5133493312866612,
+                "txt_attack": "synonym",
+                "txt_scale": 0.6591963195485744
+            },
+            "objectives": {
+                "iou": 0.71884,
+                "img_dist": 0.0794,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.80808,
+                "delta_m_plus": 0.11043,
+                "phi": 0.9206,
+                "swad": 0.10167
+            },
+            "l2_distance": 0.72321,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"armadillo\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 492, 408, 648], \"label\": \"armadillo\"},\n\t{\"bbox_2d\": [500, 416, 672, 648], \"label\": \"armadillo\"},\n\t{\"bbox_2d\": [536, 466, 884, 730], \"label\": \"armadillo\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            492,
+                            408,
+                            648
+                        ],
+                        "label": "armadillo"
+                    },
+                    {
+                        "bbox_2d": [
+                            500,
+                            416,
+                            672,
+                            648
+                        ],
+                        "label": "armadillo"
+                    },
+                    {
+                        "bbox_2d": [
+                            536,
+                            466,
+                            884,
+                            730
+                        ],
+                        "label": "armadillo"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 113,
+                "runtime_seconds": 0.3399
+            }
+        },
+        {
+            "index": 17,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.8693365368227407,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.27323783688539194
+            },
+            "objectives": {
+                "iou": 0.44042,
+                "img_dist": 0.17954,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.80808,
+                "delta_m_plus": 0.45498,
+                "phi": 0.82046,
+                "swad": 0.37329
+            },
+            "l2_distance": 0.47561,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"armadillo\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 492, 240, 655], \"label\": \"armadillo\"},\n\t{\"bbox_2d\": [496, 412, 892, 732], \"label\": \"armadillo\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            492,
+                            240,
+                            655
+                        ],
+                        "label": "armadillo"
+                    },
+                    {
+                        "bbox_2d": [
+                            496,
+                            412,
+                            892,
+                            732
+                        ],
+                        "label": "armadillo"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 113,
+                "runtime_seconds": 0.3796
+            }
+        },
+        {
+            "index": 18,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.062423540204340544,
+                "txt_attack": "synonym",
+                "txt_scale": 0.2976788536013304
+            },
+            "objectives": {
+                "iou": 0.78712,
+                "img_dist": 0.0369,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.80808,
+                "delta_m_plus": 0.02594,
+                "phi": 0.9631,
+                "swad": 0.02498
+            },
+            "l2_distance": 0.78798,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"armadillo\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 492, 408, 655], \"label\": \"armadillo\"},\n\t{\"bbox_2d\": [632, 466, 888, 742], \"label\": \"armadillo\"},\n\t{\"bbox_2d\": [500, 416, 677, 655], \"label\": \"armadillo\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            492,
+                            408,
+                            655
+                        ],
+                        "label": "armadillo"
+                    },
+                    {
+                        "bbox_2d": [
+                            632,
+                            466,
+                            888,
+                            742
+                        ],
+                        "label": "armadillo"
+                    },
+                    {
+                        "bbox_2d": [
+                            500,
+                            416,
+                            677,
+                            655
+                        ],
+                        "label": "armadillo"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 110,
+                "runtime_seconds": 0.414
+            }
+        },
+        {
+            "index": 19,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.8004900574692112,
+                "txt_attack": "homophone",
+                "txt_scale": 0.3218816290191401
+            },
+            "objectives": {
+                "iou": 0.52644,
+                "img_dist": 0.13333,
+                "txt_dist": 0.04371,
+                "txt_sim": 0.95629
+            },
+            "swad_metrics": {
+                "iou_0": 0.80808,
+                "delta_m_plus": 0.34853,
+                "phi": 0.82879,
+                "swad": 0.28886
+            },
+            "l2_distance": 0.54482,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"armadilo\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 483, 400, 672], \"label\": \"armadilo\"},\n\t{\"bbox_2d\": [492, 417, 892, 717], \"label\": \"armadilo\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            483,
+                            400,
+                            672
+                        ],
+                        "label": "armadilo"
+                    },
+                    {
+                        "bbox_2d": [
+                            492,
+                            417,
+                            892,
+                            717
+                        ],
+                        "label": "armadilo"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 113,
+                "runtime_seconds": 0.3399
+            }
+        },
+        {
+            "index": 20,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.17913039274400833,
+                "txt_attack": "homophone",
+                "txt_scale": 0.17275930571695994
+            },
+            "objectives": {
+                "iou": 0.78286,
+                "img_dist": 0.05046,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.80808,
+                "delta_m_plus": 0.03121,
+                "phi": 0.94954,
+                "swad": 0.02963
+            },
+            "l2_distance": 0.78448,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"armadillo\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 492, 408, 655], \"label\": \"armadillo\"},\n\t{\"bbox_2d\": [630, 466, 884, 742], \"label\": \"armadillo\"},\n\t{\"bbox_2d\": [500, 416, 672, 648], \"label\": \"armadillo\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            492,
+                            408,
+                            655
+                        ],
+                        "label": "armadillo"
+                    },
+                    {
+                        "bbox_2d": [
+                            630,
+                            466,
+                            884,
+                            742
+                        ],
+                        "label": "armadillo"
+                    },
+                    {
+                        "bbox_2d": [
+                            500,
+                            416,
+                            672,
+                            648
+                        ],
+                        "label": "armadillo"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 113,
+                "runtime_seconds": 0.3483
+            }
+        },
+        {
+            "index": 21,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.047689513268710904,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.49877444854701336
+            },
+            "objectives": {
+                "iou": 0.74892,
+                "img_dist": 0.064,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.80808,
+                "delta_m_plus": 0.07321,
+                "phi": 0.936,
+                "swad": 0.06853
+            },
+            "l2_distance": 0.75165,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"armadillo\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 492, 412, 666], \"label\": \"armadillo\"},\n\t{\"bbox_2d\": [498, 416, 684, 648], \"label\": \"armadillo\"},\n\t{\"bbox_2d\": [630, 466, 884, 730], \"label\": \"armadillo\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            492,
+                            412,
+                            666
+                        ],
+                        "label": "armadillo"
+                    },
+                    {
+                        "bbox_2d": [
+                            498,
+                            416,
+                            684,
+                            648
+                        ],
+                        "label": "armadillo"
+                    },
+                    {
+                        "bbox_2d": [
+                            630,
+                            466,
+                            884,
+                            730
+                        ],
+                        "label": "armadillo"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 173,
+                "runtime_seconds": 0.6474
+            }
+        },
+        {
+            "index": 22,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8722861854983021,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.23712458855264185
+            },
+            "objectives": {
+                "iou": 0.55102,
+                "img_dist": 0.09823,
+                "txt_dist": 0.1746,
+                "txt_sim": 0.8254
+            },
+            "swad_metrics": {
+                "iou_0": 0.80808,
+                "delta_m_plus": 0.31811,
+                "phi": 0.74432,
+                "swad": 0.23678
+            },
+            "l2_distance": 0.58631,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"armadtllo\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 488, 392, 642], \"label\": \"armadtllo\"},\n\t{\"bbox_2d\": [506, 412, 872, 728], \"label\": \"armadtllo\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            488,
+                            392,
+                            642
+                        ],
+                        "label": "armadtllo"
+                    },
+                    {
+                        "bbox_2d": [
+                            506,
+                            412,
+                            872,
+                            728
+                        ],
+                        "label": "armadtllo"
+                    }
+                ],
+                "token_count": 76,
+                "raw_token_count": 140,
+                "runtime_seconds": 0.4429
+            }
+        },
+        {
+            "index": 23,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.9498963520008268,
+                "txt_attack": "homophone",
+                "txt_scale": 0.9966699895998633
+            },
+            "objectives": {
+                "iou": 0.53763,
+                "img_dist": 0.10406,
+                "txt_dist": 0.04371,
+                "txt_sim": 0.95629
+            },
+            "swad_metrics": {
+                "iou_0": 0.80808,
+                "delta_m_plus": 0.33468,
+                "phi": 0.85678,
+                "swad": 0.28675
+            },
+            "l2_distance": 0.54935,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"armadilo\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 484, 388, 652], \"label\": \"armadilo\"},\n\t{\"bbox_2d\": [500, 412, 870, 712], \"label\": \"armadilo\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            484,
+                            388,
+                            652
+                        ],
+                        "label": "armadilo"
+                    },
+                    {
+                        "bbox_2d": [
+                            500,
+                            412,
+                            870,
+                            712
+                        ],
+                        "label": "armadilo"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 155,
+                "runtime_seconds": 0.5298
+            }
+        },
+        {
+            "index": 24,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.8283964049547379,
+                "txt_attack": "synonym",
+                "txt_scale": 0.9278371859522008
+            },
+            "objectives": {
+                "iou": 0.51867,
+                "img_dist": 0.13531,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.80808,
+                "delta_m_plus": 0.35815,
+                "phi": 0.86469,
+                "swad": 0.30968
+            },
+            "l2_distance": 0.53603,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"armadillo\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 488, 372, 660], \"label\": \"armadillo\"},\n\t{\"bbox_2d\": [500, 418, 888, 718], \"label\": \"armadillo\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            488,
+                            372,
+                            660
+                        ],
+                        "label": "armadillo"
+                    },
+                    {
+                        "bbox_2d": [
+                            500,
+                            418,
+                            888,
+                            718
+                        ],
+                        "label": "armadillo"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 113,
+                "runtime_seconds": 0.3612
+            }
+        },
+        {
+            "index": 25,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.047689513268710904,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.49348713638321395
+            },
+            "objectives": {
+                "iou": 0.74892,
+                "img_dist": 0.064,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.80808,
+                "delta_m_plus": 0.07321,
+                "phi": 0.936,
+                "swad": 0.06853
+            },
+            "l2_distance": 0.75165,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"armadillo\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 492, 412, 666], \"label\": \"armadillo\"},\n\t{\"bbox_2d\": [498, 416, 684, 648], \"label\": \"armadillo\"},\n\t{\"bbox_2d\": [630, 466, 884, 730], \"label\": \"armadillo\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            492,
+                            412,
+                            666
+                        ],
+                        "label": "armadillo"
+                    },
+                    {
+                        "bbox_2d": [
+                            498,
+                            416,
+                            684,
+                            648
+                        ],
+                        "label": "armadillo"
+                    },
+                    {
+                        "bbox_2d": [
+                            630,
+                            466,
+                            884,
+                            730
+                        ],
+                        "label": "armadillo"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 110,
+                "runtime_seconds": 0.3679
+            }
+        },
+        {
+            "index": 26,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.5133493312866612,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6591963195485744
+            },
+            "objectives": {
+                "iou": 0.71347,
+                "img_dist": 0.0794,
+                "txt_dist": 0.20671,
+                "txt_sim": 0.79329
+            },
+            "swad_metrics": {
+                "iou_0": 0.80808,
+                "delta_m_plus": 0.11708,
+                "phi": 0.7303,
+                "swad": 0.0855
+            },
+            "l2_distance": 0.74704,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"armaidllo\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 492, 408, 648], \"label\": \"armaidllo\"},\n\t{\"bbox_2d\": [500, 418, 672, 648], \"label\": \"armaidllo\"},\n\t{\"bbox_2d\": [532, 468, 884, 730], \"label\": \"armaidllo\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            492,
+                            408,
+                            648
+                        ],
+                        "label": "armaidllo"
+                    },
+                    {
+                        "bbox_2d": [
+                            500,
+                            418,
+                            672,
+                            648
+                        ],
+                        "label": "armaidllo"
+                    },
+                    {
+                        "bbox_2d": [
+                            532,
+                            468,
+                            884,
+                            730
+                        ],
+                        "label": "armaidllo"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 149,
+                "runtime_seconds": 0.4768
+            }
+        },
+        {
+            "index": 27,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.8691500154459868,
+                "txt_attack": "synonym",
+                "txt_scale": 0.27526276560874496
+            },
+            "objectives": {
+                "iou": 0.44456,
+                "img_dist": 0.17937,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.80808,
+                "delta_m_plus": 0.44986,
+                "phi": 0.82063,
+                "swad": 0.36917
+            },
+            "l2_distance": 0.47938,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"armadillo\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 496, 244, 648], \"label\": \"armadillo\"},\n\t{\"bbox_2d\": [498, 412, 888, 750], \"label\": \"armadillo\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            496,
+                            244,
+                            648
+                        ],
+                        "label": "armadillo"
+                    },
+                    {
+                        "bbox_2d": [
+                            498,
+                            412,
+                            888,
+                            750
+                        ],
+                        "label": "armadillo"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 143,
+                "runtime_seconds": 0.4829
+            }
+        },
+        {
+            "index": 28,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.8073607917249832,
+                "txt_attack": "homophone",
+                "txt_scale": 0.38101360989120814
+            },
+            "objectives": {
+                "iou": 0.53295,
+                "img_dist": 0.13333,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.80808,
+                "delta_m_plus": 0.34047,
+                "phi": 0.86667,
+                "swad": 0.29508
+            },
+            "l2_distance": 0.54937,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"armadillo\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 483, 400, 667], \"label\": \"armadillo\"},\n\t{\"bbox_2d\": [492, 417, 892, 717], \"label\": \"armadillo\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            483,
+                            400,
+                            667
+                        ],
+                        "label": "armadillo"
+                    },
+                    {
+                        "bbox_2d": [
+                            492,
+                            417,
+                            892,
+                            717
+                        ],
+                        "label": "armadillo"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 155,
+                "runtime_seconds": 0.5298
+            }
+        },
+        {
+            "index": 29,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.5236853003705148,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6830292101140882
+            },
+            "objectives": {
+                "iou": 0.71884,
+                "img_dist": 0.0794,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.80808,
+                "delta_m_plus": 0.11043,
+                "phi": 0.9206,
+                "swad": 0.10167
+            },
+            "l2_distance": 0.72321,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"armadillo\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 492, 408, 648], \"label\": \"armadillo\"},\n\t{\"bbox_2d\": [500, 416, 672, 648], \"label\": \"armadillo\"},\n\t{\"bbox_2d\": [536, 466, 884, 730], \"label\": \"armadillo\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            492,
+                            408,
+                            648
+                        ],
+                        "label": "armadillo"
+                    },
+                    {
+                        "bbox_2d": [
+                            500,
+                            416,
+                            672,
+                            648
+                        ],
+                        "label": "armadillo"
+                    },
+                    {
+                        "bbox_2d": [
+                            536,
+                            466,
+                            884,
+                            730
+                        ],
+                        "label": "armadillo"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 173,
+                "runtime_seconds": 0.6474
+            }
+        }
+    ]
+}

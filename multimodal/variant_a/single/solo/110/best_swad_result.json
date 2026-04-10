@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/110",
+        "folder_id": "110",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00005667.JPEG"
+    },
+    "pareto_index": 0,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.018153363333776373,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.24927259019092207
+    },
+    "objectives": {
+        "iou": 0.10646,
+        "img_dist": 0.02304,
+        "txt_dist": 0.2183,
+        "txt_sim": 0.7817
+    },
+    "swad_metrics": {
+        "iou_0": 0.97125,
+        "delta_m_plus": 0.89039,
+        "phi": 0.76369,
+        "swad": 0.67998
+    },
+    "l2_distance": 0.24397,
+    "original_prompt": "Identify the objects \"filing cabinet\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "filing cabinet": {
+            "xmin": 135,
+            "ymin": 14,
+            "xmax": 365,
+            "ymax": 360
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"f\u0456l\u0456\u200dn\u200dg \u0441\u0430bin\u200bet\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [648, 0, 1000, 912], \"label\": \"f\u0456l\u0456\u200dn\u200dg \u0441\u0430bin\u200bet\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    648,
+                    0,
+                    1000,
+                    912
+                ],
+                "label": "f\u0456l\u0456\u200dn\u200dg \u0441\u0430bin\u200bet"
+            }
+        ],
+        "token_count": 52,
+        "raw_token_count": 53,
+        "runtime_seconds": 0.2813
+    }
+}

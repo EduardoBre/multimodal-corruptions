@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/69",
+        "folder_id": "69",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00024825.JPEG"
+    },
+    "pareto_index": 11,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 45,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.6159930331638789,
+        "txt_attack": "homophone",
+        "txt_scale": 0.4186211600401869
+    },
+    "objectives": {
+        "iou": 0.02595,
+        "img_dist": 0.0735,
+        "txt_dist": 0.18031,
+        "txt_sim": 0.81969
+    },
+    "swad_metrics": {
+        "iou_0": 0.69981,
+        "delta_m_plus": 0.96292,
+        "phi": 0.75944,
+        "swad": 0.73128
+    },
+    "l2_distance": 0.19644,
+    "original_prompt": "Identify the objects \"bear\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bear": {
+            "xmin": 20,
+            "ymin": 45,
+            "xmax": 169,
+            "ymax": 228
+        },
+        "bear_1": {
+            "xmin": 21,
+            "ymin": 139,
+            "xmax": 87,
+            "ymax": 227
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bare\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 1000, 250], \"label\": \"bare\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    1000,
+                    250
+                ],
+                "label": "bare"
+            }
+        ],
+        "token_count": 36,
+        "raw_token_count": 73,
+        "runtime_seconds": 0.2927
+    }
+}

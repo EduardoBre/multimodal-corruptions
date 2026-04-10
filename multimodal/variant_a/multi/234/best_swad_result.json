@@ -1,0 +1,82 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/234",
+        "folder_id": "234",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00040114.JPEG"
+    },
+    "pareto_index": 11,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 60,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.9568108544327153,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.41721849968957336
+    },
+    "objectives": {
+        "iou": 0.15731,
+        "img_dist": 0.06014,
+        "txt_dist": 0.18735,
+        "txt_sim": 0.81265
+    },
+    "swad_metrics": {
+        "iou_0": 0.51044,
+        "delta_m_plus": 0.69181,
+        "phi": 0.76378,
+        "swad": 0.52839
+    },
+    "l2_distance": 0.25192,
+    "original_prompt": "Identify the objects \"dog, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 51,
+            "ymin": 113,
+            "xmax": 185,
+            "ymax": 248
+        },
+        "person_1": {
+            "xmin": 130,
+            "ymin": 0,
+            "xmax": 390,
+            "ymax": 127
+        },
+        "dog": {
+            "xmin": 264,
+            "ymin": 101,
+            "xmax": 498,
+            "ymax": 361
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"doc, person\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 164, 528, 632], \"label\": \"doc\"},\n\t{\"bbox_2d\": [0, 164, 528, 632], \"label\": \"person\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    164,
+                    528,
+                    632
+                ],
+                "label": "doc"
+            },
+            {
+                "bbox_2d": [
+                    0,
+                    164,
+                    528,
+                    632
+                ],
+                "label": "person"
+            }
+        ],
+        "token_count": 68,
+        "raw_token_count": 88,
+        "runtime_seconds": 0.2708
+    }
+}

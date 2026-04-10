@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/229",
+        "folder_id": "229",
+        "category": "single/multi",
+        "filename": "ILSVRC2013_val_00001071.JPEG"
+    },
+    "pareto_index": 9,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 3,
+    "total_evaluations": 90,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.07733560909506804,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.3288158825916605
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.04757,
+        "txt_dist": 0.19456,
+        "txt_sim": 0.80544
+    },
+    "swad_metrics": {
+        "iou_0": 0.85286,
+        "delta_m_plus": 1.0,
+        "phi": 0.76713,
+        "swad": 0.76713
+    },
+    "l2_distance": 0.20029,
+    "original_prompt": "Identify the objects \"person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 133,
+            "ymin": 156,
+            "xmax": 215,
+            "ymax": 330
+        },
+        "person_1": {
+            "xmin": 250,
+            "ymin": 189,
+            "xmax": 311,
+            "ymax": 317
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"pesson\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [38, 500, 180, 556], \"label\": \"pesson\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    38,
+                    500,
+                    180,
+                    556
+                ],
+                "label": "pesson"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 85,
+        "runtime_seconds": 0.3691
+    }
+}

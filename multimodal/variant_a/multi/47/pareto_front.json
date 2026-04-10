@@ -1,0 +1,1538 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/47",
+        "folder_id": "47",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00008427.JPEG"
+    },
+    "original_prompt": "Identify the objects \"chair, computer keyboard, computer mouse, domestic cat, table, tape player, tv or monitor\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "tape player": {
+            "xmin": 103,
+            "ymin": 109,
+            "xmax": 155,
+            "ymax": 153
+        },
+        "tv or monitor": {
+            "xmin": 21,
+            "ymin": 15,
+            "xmax": 155,
+            "ymax": 136
+        },
+        "tv or monitor_1": {
+            "xmin": 345,
+            "ymin": 29,
+            "xmax": 449,
+            "ymax": 146
+        },
+        "tv or monitor_2": {
+            "xmin": 211,
+            "ymin": 0,
+            "xmax": 342,
+            "ymax": 114
+        },
+        "tv or monitor_3": {
+            "xmin": 455,
+            "ymin": 58,
+            "xmax": 499,
+            "ymax": 205
+        },
+        "table": {
+            "xmin": 0,
+            "ymin": 66,
+            "xmax": 499,
+            "ymax": 328
+        },
+        "computer keyboard": {
+            "xmin": 185,
+            "ymin": 129,
+            "xmax": 312,
+            "ymax": 156
+        },
+        "computer mouse": {
+            "xmin": 404,
+            "ymin": 192,
+            "xmax": 437,
+            "ymax": 221
+        },
+        "chair": {
+            "xmin": 0,
+            "ymin": 263,
+            "xmax": 310,
+            "ymax": 374
+        },
+        "domestic cat": {
+            "xmin": 276,
+            "ymin": 171,
+            "xmax": 374,
+            "ymax": 222
+        }
+    },
+    "baseline_iou": 0.75369,
+    "swad_star": 0.64707,
+    "swad_star_index": 11,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 3,
+    "total_evaluations": 75,
+    "skipped_evaluations": 45,
+    "n_solutions": 13,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6124377601560459,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.61681,
+                "img_dist": 0.0922,
+                "txt_dist": 0.07395,
+                "txt_sim": 0.92605
+            },
+            "swad_metrics": {
+                "iou_0": 0.75369,
+                "delta_m_plus": 0.18161,
+                "phi": 0.84067,
+                "swad": 0.15268
+            },
+            "l2_distance": 0.62803,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cahir, computer keyboard, computer moese, domestic cat, table, tape player, tv or monitor\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [368, 340, 616, 416], \"label\": \"computer keyboard\"},\n\t{\"bbox_2d\": [806, 512, 866, 584], \"label\": \"computer moese\"},\n\t{\"bbox_2d\": [67, 440, 136, 492], \"label\": \"computer moese\"},\n\t{\"bbox_2d\": [0, 256, 1000, 856], \"label\": \"table\"},\n\t{\"bbox_2d\": [34, 48, 308, 360], \"label\": \"tv or monitor\"},\n\t{\"bbox_2d\": [428, 0, 678, 316], \"label\": \"tv or monitor\"},\n\t{\"bbox_2d\": [672, 48, 936, 408], \"label\": \"tv or monitor\"},\n\t{\"bbox_2d\": [908, 172, 1000, 500], \"label\": \"tv or monitor\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            368,
+                            340,
+                            616,
+                            416
+                        ],
+                        "label": "computer keyboard"
+                    },
+                    {
+                        "bbox_2d": [
+                            806,
+                            512,
+                            866,
+                            584
+                        ],
+                        "label": "computer moese"
+                    },
+                    {
+                        "bbox_2d": [
+                            67,
+                            440,
+                            136,
+                            492
+                        ],
+                        "label": "computer moese"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            256,
+                            1000,
+                            856
+                        ],
+                        "label": "table"
+                    },
+                    {
+                        "bbox_2d": [
+                            34,
+                            48,
+                            308,
+                            360
+                        ],
+                        "label": "tv or monitor"
+                    },
+                    {
+                        "bbox_2d": [
+                            428,
+                            0,
+                            678,
+                            316
+                        ],
+                        "label": "tv or monitor"
+                    },
+                    {
+                        "bbox_2d": [
+                            672,
+                            48,
+                            936,
+                            408
+                        ],
+                        "label": "tv or monitor"
+                    },
+                    {
+                        "bbox_2d": [
+                            908,
+                            172,
+                            1000,
+                            500
+                        ],
+                        "label": "tv or monitor"
+                    }
+                ],
+                "token_count": 277,
+                "raw_token_count": 443,
+                "runtime_seconds": 1.7295
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.73824,
+                "img_dist": 0.03866,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.75369,
+                "delta_m_plus": 0.0205,
+                "phi": 0.96134,
+                "swad": 0.01971
+            },
+            "l2_distance": 0.73925,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chair, computer keyboard, computer mouse, domestic cat, table, tape player, tv or monitor\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 758, 612, 1000], \"label\": \"chair\"},\n\t{\"bbox_2d\": [371, 352, 620, 428], \"label\": \"computer keyboard\"},\n\t{\"bbox_2d\": [810, 520, 872, 584], \"label\": \"computer mouse\"},\n\t{\"bbox_2d\": [544, 460, 750, 598], \"label\": \"domestic cat\"},\n\t{\"bbox_2d\": [0, 286, 1000, 868], \"label\": \"table\"},\n\t{\"bbox_2d\": [0, 488, 42, 660], \"label\": \"tape player\"},\n\t{\"bbox_2d\": [41, 50, 298, 388], \"label\": \"tv or monitor\"},\n\t{\"bbox_2d\": [412, 0, 675, 352], \"label\": \"tv or monitor\"},\n\t{\"bbox_2d\": [680, 42, 925, 412], \"label\": \"tv or monitor\"},\n\t{\"bbox_2d\": [908, 166, 1000, 520], \"label\": \"tv or monitor\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            758,
+                            612,
+                            1000
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            371,
+                            352,
+                            620,
+                            428
+                        ],
+                        "label": "computer keyboard"
+                    },
+                    {
+                        "bbox_2d": [
+                            810,
+                            520,
+                            872,
+                            584
+                        ],
+                        "label": "computer mouse"
+                    },
+                    {
+                        "bbox_2d": [
+                            544,
+                            460,
+                            750,
+                            598
+                        ],
+                        "label": "domestic cat"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            286,
+                            1000,
+                            868
+                        ],
+                        "label": "table"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            488,
+                            42,
+                            660
+                        ],
+                        "label": "tape player"
+                    },
+                    {
+                        "bbox_2d": [
+                            41,
+                            50,
+                            298,
+                            388
+                        ],
+                        "label": "tv or monitor"
+                    },
+                    {
+                        "bbox_2d": [
+                            412,
+                            0,
+                            675,
+                            352
+                        ],
+                        "label": "tv or monitor"
+                    },
+                    {
+                        "bbox_2d": [
+                            680,
+                            42,
+                            925,
+                            412
+                        ],
+                        "label": "tv or monitor"
+                    },
+                    {
+                        "bbox_2d": [
+                            908,
+                            166,
+                            1000,
+                            520
+                        ],
+                        "label": "tv or monitor"
+                    }
+                ],
+                "token_count": 340,
+                "raw_token_count": 443,
+                "runtime_seconds": 1.7295
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.03732619454213726,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.33647038540361596
+            },
+            "objectives": {
+                "iou": 0.76418,
+                "img_dist": 0.03651,
+                "txt_dist": 0.06802,
+                "txt_sim": 0.93198
+            },
+            "swad_metrics": {
+                "iou_0": 0.75369,
+                "delta_m_plus": 0.0,
+                "phi": 0.89795,
+                "swad": 0.0
+            },
+            "l2_distance": 0.76807,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chair, computer keyboard, computer mouse, domestic cft, table, tape player, tv or monitof\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 756, 616, 1000], \"label\": \"chair\"},\n\t{\"bbox_2d\": [370, 350, 620, 428], \"label\": \"computer keyboard\"},\n\t{\"bbox_2d\": [810, 516, 872, 584], \"label\": \"computer mouse\"},\n\t{\"bbox_2d\": [544, 456, 744, 596], \"label\": \"domestic cft\"},\n\t{\"bbox_2d\": [0, 280, 1000, 872], \"label\": \"table\"},\n\t{\"bbox_2d\": [0, 500, 42, 666], \"label\": \"tape player\"},\n\t{\"bbox_2d\": [43, 50, 308, 372], \"label\": \"tv or monitof\"},\n\t{\"bbox_2d\": [430, 0, 678, 328], \"label\": \"tv or monitof\"},\n\t{\"bbox_2d\": [680, 40, 930, 416], \"label\": \"tv or monitof\"},\n\t{\"bbox_2d\": [908, 156, 1000, 516], \"label\": \"tv or monitof\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            756,
+                            616,
+                            1000
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            370,
+                            350,
+                            620,
+                            428
+                        ],
+                        "label": "computer keyboard"
+                    },
+                    {
+                        "bbox_2d": [
+                            810,
+                            516,
+                            872,
+                            584
+                        ],
+                        "label": "computer mouse"
+                    },
+                    {
+                        "bbox_2d": [
+                            544,
+                            456,
+                            744,
+                            596
+                        ],
+                        "label": "domestic cft"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            280,
+                            1000,
+                            872
+                        ],
+                        "label": "table"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            500,
+                            42,
+                            666
+                        ],
+                        "label": "tape player"
+                    },
+                    {
+                        "bbox_2d": [
+                            43,
+                            50,
+                            308,
+                            372
+                        ],
+                        "label": "tv or monitof"
+                    },
+                    {
+                        "bbox_2d": [
+                            430,
+                            0,
+                            678,
+                            328
+                        ],
+                        "label": "tv or monitof"
+                    },
+                    {
+                        "bbox_2d": [
+                            680,
+                            40,
+                            930,
+                            416
+                        ],
+                        "label": "tv or monitof"
+                    },
+                    {
+                        "bbox_2d": [
+                            908,
+                            156,
+                            1000,
+                            516
+                        ],
+                        "label": "tv or monitof"
+                    }
+                ],
+                "token_count": 349,
+                "raw_token_count": 515,
+                "runtime_seconds": 2.01
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.67137,
+                "img_dist": 0.03865,
+                "txt_dist": 0.1064,
+                "txt_sim": 0.8936
+            },
+            "swad_metrics": {
+                "iou_0": 0.75369,
+                "delta_m_plus": 0.10922,
+                "phi": 0.85906,
+                "swad": 0.09383
+            },
+            "l2_distance": 0.68085,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chair, comupter keyboard, computer mouse, domeatic crt, table, tate playre, tv or mointor\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 758, 615, 1000], \"label\": \"chair\"},\n\t{\"bbox_2d\": [373, 348, 623, 424], \"label\": \"comupter keyboard\"},\n\t{\"bbox_2d\": [812, 520, 875, 584], \"label\": \"computer mouse\"},\n\t{\"bbox_2d\": [683, 44, 927, 412], \"label\": \"domeatic crt\"},\n\t{\"bbox_2d\": [412, 0, 683, 348], \"label\": \"domeatic crt\"},\n\t{\"bbox_2d\": [908, 168, 1000, 520], \"label\": \"domeatic crt\"},\n\t{\"bbox_2d\": [44, 48, 308, 384], \"label\": \"domeatic crt\"},\n\t{\"bbox_2d\": [0, 286, 1000, 872], \"label\": \"table\"},\n\t{\"bbox_2d\": [88, 512, 208, 600], \"label\": \"tate playre\"},\n\t{\"bbox_2d\": [412, 0, 683, 348], \"label\": \"tv or mointor\"},\n\t{\"bbox_2d\": [683, 44, 927, 412], \"label\": \"tv or mointor\"},\n\t{\"bbox_2d\": [908, 168, 1000, 520], \"label\": \"tv or mointor\"},\n\t{\"bbox_2d\": [44, 48, 308, 384], \"label\": \"tv or mointor\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            758,
+                            615,
+                            1000
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            373,
+                            348,
+                            623,
+                            424
+                        ],
+                        "label": "comupter keyboard"
+                    },
+                    {
+                        "bbox_2d": [
+                            812,
+                            520,
+                            875,
+                            584
+                        ],
+                        "label": "computer mouse"
+                    },
+                    {
+                        "bbox_2d": [
+                            683,
+                            44,
+                            927,
+                            412
+                        ],
+                        "label": "domeatic crt"
+                    },
+                    {
+                        "bbox_2d": [
+                            412,
+                            0,
+                            683,
+                            348
+                        ],
+                        "label": "domeatic crt"
+                    },
+                    {
+                        "bbox_2d": [
+                            908,
+                            168,
+                            1000,
+                            520
+                        ],
+                        "label": "domeatic crt"
+                    },
+                    {
+                        "bbox_2d": [
+                            44,
+                            48,
+                            308,
+                            384
+                        ],
+                        "label": "domeatic crt"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            286,
+                            1000,
+                            872
+                        ],
+                        "label": "table"
+                    },
+                    {
+                        "bbox_2d": [
+                            88,
+                            512,
+                            208,
+                            600
+                        ],
+                        "label": "tate playre"
+                    },
+                    {
+                        "bbox_2d": [
+                            412,
+                            0,
+                            683,
+                            348
+                        ],
+                        "label": "tv or mointor"
+                    },
+                    {
+                        "bbox_2d": [
+                            683,
+                            44,
+                            927,
+                            412
+                        ],
+                        "label": "tv or mointor"
+                    },
+                    {
+                        "bbox_2d": [
+                            908,
+                            168,
+                            1000,
+                            520
+                        ],
+                        "label": "tv or mointor"
+                    },
+                    {
+                        "bbox_2d": [
+                            44,
+                            48,
+                            308,
+                            384
+                        ],
+                        "label": "tv or mointor"
+                    }
+                ],
+                "token_count": 459,
+                "raw_token_count": 516,
+                "runtime_seconds": 1.9954
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6124377601560459,
+                "txt_attack": "homophone",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.73003,
+                "img_dist": 0.0922,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.75369,
+                "delta_m_plus": 0.03139,
+                "phi": 0.9078,
+                "swad": 0.0285
+            },
+            "l2_distance": 0.73583,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chair, computer keyboard, computer mouse, domestic cat, table, tape player, tv or monitor\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 750, 612, 1000], \"label\": \"chair\"},\n\t{\"bbox_2d\": [372, 340, 612, 412], \"label\": \"computer keyboard\"},\n\t{\"bbox_2d\": [808, 512, 862, 580], \"label\": \"computer mouse\"},\n\t{\"bbox_2d\": [0, 520, 40, 650], \"label\": \"computer mouse\"},\n\t{\"bbox_2d\": [540, 440, 736, 570], \"label\": \"computer mouse\"},\n\t{\"bbox_2d\": [0, 250, 1000, 830], \"label\": \"table\"},\n\t{\"bbox_2d\": [34, 48, 308, 360], \"label\": \"tv or monitor\"},\n\t{\"bbox_2d\": [428, 0, 672, 312], \"label\": \"tv or monitor\"},\n\t{\"bbox_2d\": [672, 40, 936, 400], \"label\": \"tv or monitor\"},\n\t{\"bbox_2d\": [908, 170, 1000, 500], \"label\": \"tv or monitor\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            750,
+                            612,
+                            1000
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            372,
+                            340,
+                            612,
+                            412
+                        ],
+                        "label": "computer keyboard"
+                    },
+                    {
+                        "bbox_2d": [
+                            808,
+                            512,
+                            862,
+                            580
+                        ],
+                        "label": "computer mouse"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            520,
+                            40,
+                            650
+                        ],
+                        "label": "computer mouse"
+                    },
+                    {
+                        "bbox_2d": [
+                            540,
+                            440,
+                            736,
+                            570
+                        ],
+                        "label": "computer mouse"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            250,
+                            1000,
+                            830
+                        ],
+                        "label": "table"
+                    },
+                    {
+                        "bbox_2d": [
+                            34,
+                            48,
+                            308,
+                            360
+                        ],
+                        "label": "tv or monitor"
+                    },
+                    {
+                        "bbox_2d": [
+                            428,
+                            0,
+                            672,
+                            312
+                        ],
+                        "label": "tv or monitor"
+                    },
+                    {
+                        "bbox_2d": [
+                            672,
+                            40,
+                            936,
+                            400
+                        ],
+                        "label": "tv or monitor"
+                    },
+                    {
+                        "bbox_2d": [
+                            908,
+                            170,
+                            1000,
+                            500
+                        ],
+                        "label": "tv or monitor"
+                    }
+                ],
+                "token_count": 339,
+                "raw_token_count": 516,
+                "runtime_seconds": 1.9954
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.9302480857987099,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.64534,
+                "img_dist": 0.0917,
+                "txt_dist": 0.00993,
+                "txt_sim": 0.99007
+            },
+            "swad_metrics": {
+                "iou_0": 0.75369,
+                "delta_m_plus": 0.14376,
+                "phi": 0.89928,
+                "swad": 0.12928
+            },
+            "l2_distance": 0.6519,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chair, computer keyboard, computer mouse, domestic cat, tabel, tape player, tv or monitor\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 764, 612, 1000], \"label\": \"chair\"},\n\t{\"bbox_2d\": [367, 338, 618, 424], \"label\": \"computer keyboard\"},\n\t{\"bbox_2d\": [804, 500, 875, 580], \"label\": \"computer mouse\"},\n\t{\"bbox_2d\": [0, 272, 1000, 808], \"label\": \"tabel\"},\n\t{\"bbox_2d\": [43, 38, 312, 360], \"label\": \"tv or monitor\"},\n\t{\"bbox_2d\": [428, 12, 672, 316], \"label\": \"tv or monitor\"},\n\t{\"bbox_2d\": [678, 40, 938, 412], \"label\": \"tv or monitor\"},\n\t{\"bbox_2d\": [918, 168, 1000, 500], \"label\": \"tv or monitor\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            764,
+                            612,
+                            1000
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            367,
+                            338,
+                            618,
+                            424
+                        ],
+                        "label": "computer keyboard"
+                    },
+                    {
+                        "bbox_2d": [
+                            804,
+                            500,
+                            875,
+                            580
+                        ],
+                        "label": "computer mouse"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            272,
+                            1000,
+                            808
+                        ],
+                        "label": "tabel"
+                    },
+                    {
+                        "bbox_2d": [
+                            43,
+                            38,
+                            312,
+                            360
+                        ],
+                        "label": "tv or monitor"
+                    },
+                    {
+                        "bbox_2d": [
+                            428,
+                            12,
+                            672,
+                            316
+                        ],
+                        "label": "tv or monitor"
+                    },
+                    {
+                        "bbox_2d": [
+                            678,
+                            40,
+                            938,
+                            412
+                        ],
+                        "label": "tv or monitor"
+                    },
+                    {
+                        "bbox_2d": [
+                            918,
+                            168,
+                            1000,
+                            500
+                        ],
+                        "label": "tv or monitor"
+                    }
+                ],
+                "token_count": 276,
+                "raw_token_count": 516,
+                "runtime_seconds": 1.9954
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.9322346408226078,
+                "txt_attack": "homophone",
+                "txt_scale": 0.9948250792623392
+            },
+            "objectives": {
+                "iou": 0.55405,
+                "img_dist": 0.07158,
+                "txt_dist": 0.20969,
+                "txt_sim": 0.79031
+            },
+            "swad_metrics": {
+                "iou_0": 0.75369,
+                "delta_m_plus": 0.26488,
+                "phi": 0.73374,
+                "swad": 0.19436
+            },
+            "l2_distance": 0.59671,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cheer, computer key board, come pewter mouse, doe mestic cat, tay bul, tape prayer, teevee or moniter\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [370, 350, 620, 420], \"label\": \"computer key board\"},\n\t{\"bbox_2d\": [812, 520, 870, 580], \"label\": \"come pewter mouse\"},\n\t{\"bbox_2d\": [638, 450, 740, 590], \"label\": \"doe mestic cat\"},\n\t{\"bbox_2d\": [42, 48, 312, 360], \"label\": \"tay bul\"},\n\t{\"bbox_2d\": [418, 0, 670, 320], \"label\": \"tay bul\"},\n\t{\"bbox_2d\": [680, 40, 938, 410], \"label\": \"tay bul\"},\n\t{\"bbox_2d\": [908, 190, 1000, 520], \"label\": \"tay bul\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            370,
+                            350,
+                            620,
+                            420
+                        ],
+                        "label": "computer key board"
+                    },
+                    {
+                        "bbox_2d": [
+                            812,
+                            520,
+                            870,
+                            580
+                        ],
+                        "label": "come pewter mouse"
+                    },
+                    {
+                        "bbox_2d": [
+                            638,
+                            450,
+                            740,
+                            590
+                        ],
+                        "label": "doe mestic cat"
+                    },
+                    {
+                        "bbox_2d": [
+                            42,
+                            48,
+                            312,
+                            360
+                        ],
+                        "label": "tay bul"
+                    },
+                    {
+                        "bbox_2d": [
+                            418,
+                            0,
+                            670,
+                            320
+                        ],
+                        "label": "tay bul"
+                    },
+                    {
+                        "bbox_2d": [
+                            680,
+                            40,
+                            938,
+                            410
+                        ],
+                        "label": "tay bul"
+                    },
+                    {
+                        "bbox_2d": [
+                            908,
+                            190,
+                            1000,
+                            520
+                        ],
+                        "label": "tay bul"
+                    }
+                ],
+                "token_count": 250,
+                "raw_token_count": 452,
+                "runtime_seconds": 1.8017
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8902435981259067,
+                "txt_attack": "homophone",
+                "txt_scale": 0.9948250792623392
+            },
+            "objectives": {
+                "iou": 0.56495,
+                "img_dist": 0.06869,
+                "txt_dist": 0.19035,
+                "txt_sim": 0.80965
+            },
+            "swad_metrics": {
+                "iou_0": 0.75369,
+                "delta_m_plus": 0.25042,
+                "phi": 0.75404,
+                "swad": 0.18883
+            },
+            "l2_distance": 0.6001,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cher, computer keyboard, come pewter mouse, domestic kat, tay bull, tape playa, tv are monitor\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [367, 352, 620, 424], \"label\": \"computer keyboard\"},\n\t{\"bbox_2d\": [810, 516, 870, 584], \"label\": \"come pewter mouse\"},\n\t{\"bbox_2d\": [630, 452, 748, 596], \"label\": \"domestic kat\"},\n\t{\"bbox_2d\": [100, 500, 200, 596], \"label\": \"tape playa\"},\n\t{\"bbox_2d\": [42, 52, 308, 360], \"label\": \"tv are monitor\"},\n\t{\"bbox_2d\": [417, 0, 675, 324], \"label\": \"tv are monitor\"},\n\t{\"bbox_2d\": [675, 40, 938, 402], \"label\": \"tv are monitor\"},\n\t{\"bbox_2d\": [908, 188, 1000, 516], \"label\": \"tv are monitor\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            367,
+                            352,
+                            620,
+                            424
+                        ],
+                        "label": "computer keyboard"
+                    },
+                    {
+                        "bbox_2d": [
+                            810,
+                            516,
+                            870,
+                            584
+                        ],
+                        "label": "come pewter mouse"
+                    },
+                    {
+                        "bbox_2d": [
+                            630,
+                            452,
+                            748,
+                            596
+                        ],
+                        "label": "domestic kat"
+                    },
+                    {
+                        "bbox_2d": [
+                            100,
+                            500,
+                            200,
+                            596
+                        ],
+                        "label": "tape playa"
+                    },
+                    {
+                        "bbox_2d": [
+                            42,
+                            52,
+                            308,
+                            360
+                        ],
+                        "label": "tv are monitor"
+                    },
+                    {
+                        "bbox_2d": [
+                            417,
+                            0,
+                            675,
+                            324
+                        ],
+                        "label": "tv are monitor"
+                    },
+                    {
+                        "bbox_2d": [
+                            675,
+                            40,
+                            938,
+                            402
+                        ],
+                        "label": "tv are monitor"
+                    },
+                    {
+                        "bbox_2d": [
+                            908,
+                            188,
+                            1000,
+                            516
+                        ],
+                        "label": "tv are monitor"
+                    }
+                ],
+                "token_count": 281,
+                "raw_token_count": 452,
+                "runtime_seconds": 1.8017
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.9380942469506472,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6047511524514483
+            },
+            "objectives": {
+                "iou": 0.63655,
+                "img_dist": 0.0917,
+                "txt_dist": 0.1327,
+                "txt_sim": 0.8673
+            },
+            "swad_metrics": {
+                "iou_0": 0.75369,
+                "delta_m_plus": 0.15542,
+                "phi": 0.78777,
+                "swad": 0.12244
+            },
+            "l2_distance": 0.65667,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chair, comupter keyborad, computer mosue, dometsic cat, tdble, tabe palyer, tv or monitor\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 764, 612, 1000], \"label\": \"chair\"},\n\t{\"bbox_2d\": [367, 338, 618, 424], \"label\": \"comupter keyborad\"},\n\t{\"bbox_2d\": [804, 500, 875, 580], \"label\": \"computer mosue\"},\n\t{\"bbox_2d\": [60, 38, 308, 360], \"label\": \"tv or monitor\"},\n\t{\"bbox_2d\": [428, 12, 672, 316], \"label\": \"tv or monitor\"},\n\t{\"bbox_2d\": [678, 40, 938, 412], \"label\": \"tv or monitor\"},\n\t{\"bbox_2d\": [918, 172, 1000, 500], \"label\": \"tv or monitor\"},\n\t{\"bbox_2d\": [0, 280, 1000, 800], \"label\": \"tble\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            764,
+                            612,
+                            1000
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            367,
+                            338,
+                            618,
+                            424
+                        ],
+                        "label": "comupter keyborad"
+                    },
+                    {
+                        "bbox_2d": [
+                            804,
+                            500,
+                            875,
+                            580
+                        ],
+                        "label": "computer mosue"
+                    },
+                    {
+                        "bbox_2d": [
+                            60,
+                            38,
+                            308,
+                            360
+                        ],
+                        "label": "tv or monitor"
+                    },
+                    {
+                        "bbox_2d": [
+                            428,
+                            12,
+                            672,
+                            316
+                        ],
+                        "label": "tv or monitor"
+                    },
+                    {
+                        "bbox_2d": [
+                            678,
+                            40,
+                            938,
+                            412
+                        ],
+                        "label": "tv or monitor"
+                    },
+                    {
+                        "bbox_2d": [
+                            918,
+                            172,
+                            1000,
+                            500
+                        ],
+                        "label": "tv or monitor"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            280,
+                            1000,
+                            800
+                        ],
+                        "label": "tble"
+                    }
+                ],
+                "token_count": 281,
+                "raw_token_count": 520,
+                "runtime_seconds": 2.0561
+            }
+        },
+        {
+            "index": 9,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.8899082594141742,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.66466,
+                "img_dist": 0.08923,
+                "txt_dist": 0.01162,
+                "txt_sim": 0.98838
+            },
+            "swad_metrics": {
+                "iou_0": 0.75369,
+                "delta_m_plus": 0.11813,
+                "phi": 0.90019,
+                "swad": 0.10634
+            },
+            "l2_distance": 0.67072,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chair, compooter keyboard, computer mouse, domestic cat, table, tape player, tv or monitor\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 764, 612, 1000], \"label\": \"chair\"},\n\t{\"bbox_2d\": [367, 332, 620, 420], \"label\": \"compooter keyboard\"},\n\t{\"bbox_2d\": [808, 508, 872, 580], \"label\": \"computer mouse\"},\n\t{\"bbox_2d\": [0, 272, 1000, 836], \"label\": \"table\"},\n\t{\"bbox_2d\": [43, 38, 308, 360], \"label\": \"tv or monitor\"},\n\t{\"bbox_2d\": [438, 12, 672, 320], \"label\": \"tv or monitor\"},\n\t{\"bbox_2d\": [680, 40, 930, 408], \"label\": \"tv or monitor\"},\n\t{\"bbox_2d\": [908, 172, 1000, 512], \"label\": \"tv or monitor\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            764,
+                            612,
+                            1000
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            367,
+                            332,
+                            620,
+                            420
+                        ],
+                        "label": "compooter keyboard"
+                    },
+                    {
+                        "bbox_2d": [
+                            808,
+                            508,
+                            872,
+                            580
+                        ],
+                        "label": "computer mouse"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            272,
+                            1000,
+                            836
+                        ],
+                        "label": "table"
+                    },
+                    {
+                        "bbox_2d": [
+                            43,
+                            38,
+                            308,
+                            360
+                        ],
+                        "label": "tv or monitor"
+                    },
+                    {
+                        "bbox_2d": [
+                            438,
+                            12,
+                            672,
+                            320
+                        ],
+                        "label": "tv or monitor"
+                    },
+                    {
+                        "bbox_2d": [
+                            680,
+                            40,
+                            930,
+                            408
+                        ],
+                        "label": "tv or monitor"
+                    },
+                    {
+                        "bbox_2d": [
+                            908,
+                            172,
+                            1000,
+                            512
+                        ],
+                        "label": "tv or monitor"
+                    }
+                ],
+                "token_count": 276,
+                "raw_token_count": 520,
+                "runtime_seconds": 2.0561
+            }
+        },
+        {
+            "index": 10,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.893716411635056,
+                "txt_attack": "homophone",
+                "txt_scale": 0.07438546654745737
+            },
+            "objectives": {
+                "iou": 0.70644,
+                "img_dist": 0.06869,
+                "txt_dist": 0.02271,
+                "txt_sim": 0.97729
+            },
+            "swad_metrics": {
+                "iou_0": 0.75369,
+                "delta_m_plus": 0.06269,
+                "phi": 0.91016,
+                "swad": 0.05706
+            },
+            "l2_distance": 0.71013,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chair, computer keyboard, computer mouse, domestic kat, table, tape player, tv or monitor\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 767, 612, 1000], \"label\": \"chair\"},\n\t{\"bbox_2d\": [367, 352, 620, 420], \"label\": \"computer keyboard\"},\n\t{\"bbox_2d\": [812, 517, 870, 583], \"label\": \"computer mouse\"},\n\t{\"bbox_2d\": [630, 450, 748, 594], \"label\": \"domestic kat\"},\n\t{\"bbox_2d\": [0, 278, 1000, 800], \"label\": \"table\"},\n\t{\"bbox_2d\": [0, 500, 42, 670], \"label\": \"tape player\"},\n\t{\"bbox_2d\": [42, 50, 308, 352], \"label\": \"tv or monitor\"},\n\t{\"bbox_2d\": [417, 0, 675, 320], \"label\": \"tv or monitor\"},\n\t{\"bbox_2d\": [675, 44, 938, 400], \"label\": \"tv or monitor\"},\n\t{\"bbox_2d\": [908, 188, 1000, 517], \"label\": \"tv or monitor\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            767,
+                            612,
+                            1000
+                        ],
+                        "label": "chair"
+                    },
+                    {
+                        "bbox_2d": [
+                            367,
+                            352,
+                            620,
+                            420
+                        ],
+                        "label": "computer keyboard"
+                    },
+                    {
+                        "bbox_2d": [
+                            812,
+                            517,
+                            870,
+                            583
+                        ],
+                        "label": "computer mouse"
+                    },
+                    {
+                        "bbox_2d": [
+                            630,
+                            450,
+                            748,
+                            594
+                        ],
+                        "label": "domestic kat"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            278,
+                            1000,
+                            800
+                        ],
+                        "label": "table"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            500,
+                            42,
+                            670
+                        ],
+                        "label": "tape player"
+                    },
+                    {
+                        "bbox_2d": [
+                            42,
+                            50,
+                            308,
+                            352
+                        ],
+                        "label": "tv or monitor"
+                    },
+                    {
+                        "bbox_2d": [
+                            417,
+                            0,
+                            675,
+                            320
+                        ],
+                        "label": "tv or monitor"
+                    },
+                    {
+                        "bbox_2d": [
+                            675,
+                            44,
+                            938,
+                            400
+                        ],
+                        "label": "tv or monitor"
+                    },
+                    {
+                        "bbox_2d": [
+                            908,
+                            188,
+                            1000,
+                            517
+                        ],
+                        "label": "tv or monitor"
+                    }
+                ],
+                "token_count": 340,
+                "raw_token_count": 520,
+                "runtime_seconds": 2.0561
+            }
+        },
+        {
+            "index": 11,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8408567252572171,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.7947968694554343
+            },
+            "objectives": {
+                "iou": 0.08465,
+                "img_dist": 0.06573,
+                "txt_dist": 0.21977,
+                "txt_sim": 0.78023
+            },
+            "swad_metrics": {
+                "iou_0": 0.75369,
+                "delta_m_plus": 0.88769,
+                "phi": 0.72895,
+                "swad": 0.64707
+            },
+            "l2_distance": 0.24451,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"\u0441\u200bh\u200d\u0430\u200d\u0456\u200br\u200b, \u0441\u200do\u200bm\u0440\u200dut\u200b\u0435\u200br\u200b k\u200de\u200dy\u200db\u200do\u200d\u0430\u200br\u200dd\u200d, c\u200b\u043e\u200dm\u200b\u0440\u200du\u200bt\u200d\u0435\u200br m\u200b\u043e\u200bu\u200ds\u200d\u0435, d\u043e\u200dm\u200be\u200ds\u200dt\u200b\u0456c\u200d \u0441\u0430\u200dt, t\u0430\u200bbl\u200de, t\u0430\u200dp\u200b\u0435 \u0440l\u0430\u200dyer\u200b, tv \u043e\u200dr\u200d m\u200b\u043e\u200bni\u200bt\u200b\u043e\u200br\u200b\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 767, 612, 1000], \"label\": \"\u0441\u200bh\u200d\u0430\u200d\u0456\u200br\u200b\"},\n\t{\"bbox_2d\": [370, 354, 620, 424], \"label\": \"\u0441\u200b\u043e\u200b\u043c\u200b\u0440\u200b\u0443\u200b\u0442\u200b\u0435\u200b\u0440\u200b \u043a\u200b\u0435\u200b\u0439\u200b\u0431\u200b\u043e\u200b\u0440\u200b\u0434\u200b\"},\n\t{\"bbox_2d\": [812, 517, 870, 584], \"label\": \"\u0441\u200b\u043e\u200b\u043c\u200b\u0440\u200b\u0443\u200b\u0442\u200b\u0435\u200b\u0440 \u043c\u200b\u043e\u200b\u0443\u200b\u0441\u200b\u0435\"},\n\t{\"bbox_2d\": [542, 456, 742, 592], \"label\": \"d\u043e\u200b\u043c\u200b\u0435\u200b\u0441\u200b\u0442\u200b\u0456\u200b\u0447\u200b\u043d\u200b\u0430 \u0441\u200b\u0430\u200b\u0442\"},\n\t{\"bbox_2d\": [0, 274, 1000, 872], \"label\": \"\u0442\u200b\u0430\u200b\u0431\u043b\u200b\u0435\"},\n\t{\"bbox_2d\": [88, 500, 202, 600], \"label\": \"\u0442\u200b\u0430\u200b\u043f\u200b\u0435 \u0440\u200b\u043b\u200b\u0430\u200b\u0439\u200b\u0435\u200b\u0440\"},\n\t{\"bbox_2d\": [43, 44, 312, 360], \"label\": \"tv \u043e\u200b\u0440\u200b \u043c\u200b\u043e\u200b\u043d\u200b\u0438\u200b\u0442\u200b\u043e\u200b\u0440\"},\n\t{\"bbox_2d\": [432, 0, 672, 324], \"label\": \"tv \u043e\u200b\u0440\u200b \u043c\u200b\u043e\u200b\u043d\u200b\u0438\u200b\u0442\u200b\u043e\u200b\u0440\"},\n\t{\"bbox_2d\": [678, 44, 932, 408], \"label\": \"tv \u043e\u200b\u0440\u200b \u043c\u200b\u043e\u200b\u043d\u200b\u0438\u200b\u0442\u200b\u043e\u200b\u0440\"},\n\t{\"bbox_2d\": [902, 188, 1000, 524], \"label\": \"tv \u043e\u200b\u0440\u200b \u043c\u200b\u043e\u200b\u043d\u200b\u0438\u200b\u0442\u200b\u043e\u200b\u0440\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            767,
+                            612,
+                            1000
+                        ],
+                        "label": "\u0441\u200bh\u200d\u0430\u200d\u0456\u200br\u200b"
+                    },
+                    {
+                        "bbox_2d": [
+                            370,
+                            354,
+                            620,
+                            424
+                        ],
+                        "label": "\u0441\u200b\u043e\u200b\u043c\u200b\u0440\u200b\u0443\u200b\u0442\u200b\u0435\u200b\u0440\u200b \u043a\u200b\u0435\u200b\u0439\u200b\u0431\u200b\u043e\u200b\u0440\u200b\u0434\u200b"
+                    },
+                    {
+                        "bbox_2d": [
+                            812,
+                            517,
+                            870,
+                            584
+                        ],
+                        "label": "\u0441\u200b\u043e\u200b\u043c\u200b\u0440\u200b\u0443\u200b\u0442\u200b\u0435\u200b\u0440 \u043c\u200b\u043e\u200b\u0443\u200b\u0441\u200b\u0435"
+                    },
+                    {
+                        "bbox_2d": [
+                            542,
+                            456,
+                            742,
+                            592
+                        ],
+                        "label": "d\u043e\u200b\u043c\u200b\u0435\u200b\u0441\u200b\u0442\u200b\u0456\u200b\u0447\u200b\u043d\u200b\u0430 \u0441\u200b\u0430\u200b\u0442"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            274,
+                            1000,
+                            872
+                        ],
+                        "label": "\u0442\u200b\u0430\u200b\u0431\u043b\u200b\u0435"
+                    },
+                    {
+                        "bbox_2d": [
+                            88,
+                            500,
+                            202,
+                            600
+                        ],
+                        "label": "\u0442\u200b\u0430\u200b\u043f\u200b\u0435 \u0440\u200b\u043b\u200b\u0430\u200b\u0439\u200b\u0435\u200b\u0440"
+                    },
+                    {
+                        "bbox_2d": [
+                            43,
+                            44,
+                            312,
+                            360
+                        ],
+                        "label": "tv \u043e\u200b\u0440\u200b \u043c\u200b\u043e\u200b\u043d\u200b\u0438\u200b\u0442\u200b\u043e\u200b\u0440"
+                    },
+                    {
+                        "bbox_2d": [
+                            432,
+                            0,
+                            672,
+                            324
+                        ],
+                        "label": "tv \u043e\u200b\u0440\u200b \u043c\u200b\u043e\u200b\u043d\u200b\u0438\u200b\u0442\u200b\u043e\u200b\u0440"
+                    },
+                    {
+                        "bbox_2d": [
+                            678,
+                            44,
+                            932,
+                            408
+                        ],
+                        "label": "tv \u043e\u200b\u0440\u200b \u043c\u200b\u043e\u200b\u043d\u200b\u0438\u200b\u0442\u200b\u043e\u200b\u0440"
+                    },
+                    {
+                        "bbox_2d": [
+                            902,
+                            188,
+                            1000,
+                            524
+                        ],
+                        "label": "tv \u043e\u200b\u0440\u200b \u043c\u200b\u043e\u200b\u043d\u200b\u0438\u200b\u0442\u200b\u043e\u200b\u0440"
+                    }
+                ],
+                "token_count": 505,
+                "raw_token_count": 520,
+                "runtime_seconds": 2.0561
+            }
+        },
+        {
+            "index": 12,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.9924162889776341,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6086459009362185
+            },
+            "objectives": {
+                "iou": 0.57676,
+                "img_dist": 0.09507,
+                "txt_dist": 0.15138,
+                "txt_sim": 0.84862
+            },
+            "swad_metrics": {
+                "iou_0": 0.75369,
+                "delta_m_plus": 0.23475,
+                "phi": 0.76794,
+                "swad": 0.18028
+            },
+            "l2_distance": 0.60383,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"chare, compooter keyboard, computer mouse, domestic cat, tay bull, tay player, tv or monitor\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 764, 612, 1000], \"label\": \"chare\"},\n\t{\"bbox_2d\": [367, 338, 618, 420], \"label\": \"compooter keyboard\"},\n\t{\"bbox_2d\": [804, 500, 876, 580], \"label\": \"computer mouse\"},\n\t{\"bbox_2d\": [684, 44, 938, 412], \"label\": \"tv or monitor\"},\n\t{\"bbox_2d\": [428, 12, 672, 324], \"label\": \"tv or monitor\"},\n\t{\"bbox_2d\": [918, 168, 1000, 500], \"label\": \"tv or monitor\"},\n\t{\"bbox_2d\": [42, 40, 308, 360], \"label\": \"tv or monitor\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            764,
+                            612,
+                            1000
+                        ],
+                        "label": "chare"
+                    },
+                    {
+                        "bbox_2d": [
+                            367,
+                            338,
+                            618,
+                            420
+                        ],
+                        "label": "compooter keyboard"
+                    },
+                    {
+                        "bbox_2d": [
+                            804,
+                            500,
+                            876,
+                            580
+                        ],
+                        "label": "computer mouse"
+                    },
+                    {
+                        "bbox_2d": [
+                            684,
+                            44,
+                            938,
+                            412
+                        ],
+                        "label": "tv or monitor"
+                    },
+                    {
+                        "bbox_2d": [
+                            428,
+                            12,
+                            672,
+                            324
+                        ],
+                        "label": "tv or monitor"
+                    },
+                    {
+                        "bbox_2d": [
+                            918,
+                            168,
+                            1000,
+                            500
+                        ],
+                        "label": "tv or monitor"
+                    },
+                    {
+                        "bbox_2d": [
+                            42,
+                            40,
+                            308,
+                            360
+                        ],
+                        "label": "tv or monitor"
+                    }
+                ],
+                "token_count": 245,
+                "raw_token_count": 520,
+                "runtime_seconds": 2.0561
+            }
+        }
+    ]
+}

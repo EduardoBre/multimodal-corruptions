@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/229",
+        "folder_id": "229",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00027829.JPEG"
+    },
+    "pareto_index": 5,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.8004900574692112,
+        "txt_attack": "homophone",
+        "txt_scale": 0.3273709769105356
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.04921,
+        "txt_dist": 0.20207,
+        "txt_sim": 0.79793
+    },
+    "swad_metrics": {
+        "iou_0": 0.95602,
+        "delta_m_plus": 1.0,
+        "phi": 0.75866,
+        "swad": 0.75866
+    },
+    "l2_distance": 0.20798,
+    "original_prompt": "Identify the objects \"person, snake\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "snake": {
+            "xmin": 228,
+            "ymin": 106,
+            "xmax": 497,
+            "ymax": 337
+        },
+        "person": {
+            "xmin": 1,
+            "ymin": 147,
+            "xmax": 486,
+            "ymax": 368
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"purse on, snake\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [458, 264, 999, 888], \"label\": \"purse on, snake\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    458,
+                    264,
+                    999,
+                    888
+                ],
+                "label": "purse on, snake"
+            }
+        ],
+        "token_count": 43,
+        "raw_token_count": 90,
+        "runtime_seconds": 0.3413
+    }
+}

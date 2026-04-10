@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/155",
+        "folder_id": "155",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00005507.JPEG"
+    },
+    "pareto_index": 3,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.863144940280058,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6678992108124702
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.0866,
+        "txt_dist": 0.14458,
+        "txt_sim": 0.85542
+    },
+    "swad_metrics": {
+        "iou_0": 0.97586,
+        "delta_m_plus": 1.0,
+        "phi": 0.78134,
+        "swad": 0.78134
+    },
+    "l2_distance": 0.16853,
+    "original_prompt": "Identify the objects \"dog, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 0,
+            "ymin": 137,
+            "xmax": 298,
+            "ymax": 428
+        },
+        "dog": {
+            "xmin": 225,
+            "ymin": 131,
+            "xmax": 498,
+            "ymax": 428
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"doug, person\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 328, 588, 999], \"label\": \"doug, person\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    328,
+                    588,
+                    999
+                ],
+                "label": "doug, person"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 79,
+        "runtime_seconds": 0.2868
+    }
+}

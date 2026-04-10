@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/117",
+        "folder_id": "117",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00027572.JPEG"
+    },
+    "pareto_index": 4,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.03794,
+            "defocus_blur": 0.479238,
+            "motion_blur": 0.126171,
+            "fog_filter": 0.030385,
+            "pixelate": 0.007618,
+            "jpeg_filter": 0.057516
+        },
+        "text_corruptions": {
+            "homophone": 0.057475,
+            "synonym": 0.207845,
+            "ata_saliency": 0.33312,
+            "fragmentation": 0.022337,
+            "character_noise": 0.189328
+        },
+        "img_budget_used": 0.73887,
+        "txt_budget_used": 0.810105,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.09897,
+        "txt_dist": 0.27934,
+        "txt_sim": 0.72066
+    },
+    "swad_metrics": {
+        "iou_0": 0.92015,
+        "delta_m_plus": 1.0,
+        "phi": 0.64934,
+        "swad": 0.64934
+    },
+    "l2_distance": 0.29635,
+    "original_prompt": "Identify the objects \"neck brace, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 167,
+            "ymin": 0,
+            "xmax": 492,
+            "ymax": 373
+        },
+        "neck brace": {
+            "xmin": 229,
+            "ymin": 153,
+            "xmax": 412,
+            "ymax": 303
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"n\u0441\u200bek bra\u200bce, per sen\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [464, 424, 806, 798], \"label\": \"n\u0441\u200bek bra\u200bce, per sen\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    464,
+                    424,
+                    806,
+                    798
+                ],
+                "label": "n\u0441\u200bek bra\u200bce, per sen"
+            }
+        ],
+        "token_count": 48,
+        "raw_token_count": 88,
+        "runtime_seconds": 0.271
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.03794045911003259,
+        "defocus_blur": 0.4792384865434159,
+        "motion_blur": 0.12617093938194593,
+        "fog_filter": 0.03038521225694517,
+        "pixelate": 0.007618128740883127,
+        "jpeg_filter": 0.05751630100994814
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.05747484002617886,
+        "synonym": 0.20784548529714078,
+        "ata_saliency": 0.3331198942707723,
+        "fragmentation": 0.022336849368578906,
+        "character_noise": 0.18932751131830516
+    }
+}

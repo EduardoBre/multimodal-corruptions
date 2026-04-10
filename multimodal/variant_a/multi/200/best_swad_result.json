@@ -1,0 +1,73 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/200",
+        "folder_id": "200",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00002633.JPEG"
+    },
+    "pareto_index": 18,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 6,
+    "total_evaluations": 165,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.549811044241346,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.9959496321689257
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.11368,
+        "txt_dist": 0.16459,
+        "txt_sim": 0.83541
+    },
+    "swad_metrics": {
+        "iou_0": 0.77934,
+        "delta_m_plus": 1.0,
+        "phi": 0.74044,
+        "swad": 0.74044
+    },
+    "l2_distance": 0.20003,
+    "original_prompt": "Identify the objects \"hat with a wide brim, person, table\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 275,
+            "ymin": 93,
+            "xmax": 447,
+            "ymax": 335
+        },
+        "table": {
+            "xmin": 0,
+            "ymin": 211,
+            "xmax": 266,
+            "ymax": 335
+        },
+        "hat with a wide brim": {
+            "xmin": 313,
+            "ymin": 92,
+            "xmax": 386,
+            "ymax": 129
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"hta wtih a wide brmi, persom, tbale\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [550, 286, 892, 997], \"label\": \"hta wtih a wide brmi, persom, tbale\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    550,
+                    286,
+                    892,
+                    997
+                ],
+                "label": "hta wtih a wide brmi, persom, tbale"
+            }
+        ],
+        "token_count": 51,
+        "raw_token_count": 146,
+        "runtime_seconds": 0.5721
+    }
+}

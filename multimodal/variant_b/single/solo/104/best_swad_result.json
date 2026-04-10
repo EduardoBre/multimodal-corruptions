@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/104",
+        "folder_id": "104",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00015513.JPEG"
+    },
+    "pareto_index": 6,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.005212,
+            "defocus_blur": 0.000994,
+            "motion_blur": 0.007017,
+            "fog_filter": 0.066927,
+            "pixelate": 0.045672,
+            "jpeg_filter": 0.065579
+        },
+        "text_corruptions": {
+            "homophone": 0.002004,
+            "synonym": 0.00439,
+            "ata_saliency": 0.085116,
+            "fragmentation": 0.088664,
+            "character_noise": 0.142889
+        },
+        "img_budget_used": 0.191401,
+        "txt_budget_used": 0.323064,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.11209,
+        "img_dist": 0.11248,
+        "txt_dist": 0.35296,
+        "txt_sim": 0.64704
+    },
+    "swad_metrics": {
+        "iou_0": 0.93602,
+        "delta_m_plus": 0.88025,
+        "phi": 0.57426,
+        "swad": 0.50549
+    },
+    "l2_distance": 0.38704,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 189,
+            "ymin": 66,
+            "xmax": 304,
+            "ymax": 278
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bo\u200brd\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 590, 1000, 997], \"label\": \"bo\u200brd\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    590,
+                    1000,
+                    997
+                ],
+                "label": "bo\u200brd"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 49,
+        "runtime_seconds": 0.1571
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.005212417773209233,
+        "defocus_blur": 0.0009938087827536558,
+        "motion_blur": 0.007016637489471317,
+        "fog_filter": 0.06692700669576551,
+        "pixelate": 0.04567168861408427,
+        "jpeg_filter": 0.06557945582743054
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.0020038877890469244,
+        "synonym": 0.004390074536713803,
+        "ata_saliency": 0.0851160913053793,
+        "fragmentation": 0.08866411280711013,
+        "character_noise": 0.14288944969868633
+    }
+}

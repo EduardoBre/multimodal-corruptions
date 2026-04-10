@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/188",
+        "folder_id": "188",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00000520.JPEG"
+    },
+    "pareto_index": 9,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 60,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "fog_filter",
+        "img_scale": 0.0368684880458985,
+        "txt_attack": "homophone",
+        "txt_scale": 0.4303904312548027
+    },
+    "objectives": {
+        "iou": 0.25501,
+        "img_dist": 0.07968,
+        "txt_dist": 0.15685,
+        "txt_sim": 0.84315
+    },
+    "swad_metrics": {
+        "iou_0": 0.51017,
+        "delta_m_plus": 0.50015,
+        "phi": 0.77597,
+        "swad": 0.3881
+    },
+    "l2_distance": 0.30981,
+    "original_prompt": "Identify the objects \"guitar, microphone, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 0,
+            "ymin": 147,
+            "xmax": 110,
+            "ymax": 365
+        },
+        "person_1": {
+            "xmin": 110,
+            "ymin": 20,
+            "xmax": 313,
+            "ymax": 452
+        },
+        "person_2": {
+            "xmin": 308,
+            "ymin": 7,
+            "xmax": 427,
+            "ymax": 185
+        },
+        "guitar": {
+            "xmin": 137,
+            "ymin": 147,
+            "xmax": 346,
+            "ymax": 233
+        },
+        "microphone": {
+            "xmin": 223,
+            "ymin": 82,
+            "xmax": 268,
+            "ymax": 395
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"guitar, micro phone, purse on\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [278, 317, 538, 472], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [458, 183, 512, 222], \"label\": \"micro phone\"},\n\t{\"bbox_2d\": [0, 308, 208, 522], \"label\": \"purse on\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    278,
+                    317,
+                    538,
+                    472
+                ],
+                "label": "guitar"
+            },
+            {
+                "bbox_2d": [
+                    458,
+                    183,
+                    512,
+                    222
+                ],
+                "label": "micro phone"
+            },
+            {
+                "bbox_2d": [
+                    0,
+                    308,
+                    208,
+                    522
+                ],
+                "label": "purse on"
+            }
+        ],
+        "token_count": 107,
+        "raw_token_count": 233,
+        "runtime_seconds": 0.8165
+    }
+}

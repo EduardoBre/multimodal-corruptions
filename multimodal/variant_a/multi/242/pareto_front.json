@@ -1,0 +1,516 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/242",
+        "folder_id": "242",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00049750.JPEG"
+    },
+    "original_prompt": "Identify the objects \"bicycle, helmet, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 98,
+            "ymin": 32,
+            "xmax": 289,
+            "ymax": 425
+        },
+        "bicycle": {
+            "xmin": 117,
+            "ymin": 218,
+            "xmax": 274,
+            "ymax": 497
+        },
+        "helmet": {
+            "xmin": 140,
+            "ymin": 31,
+            "xmax": 205,
+            "ymax": 112
+        }
+    },
+    "baseline_iou": 0.78197,
+    "swad_star": 0.59275,
+    "swad_star_index": 0,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 3,
+    "total_evaluations": 90,
+    "skipped_evaluations": 30,
+    "n_solutions": 9,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.08646227720474076,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6881327596781619
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.08685,
+                "txt_dist": 0.35087,
+                "txt_sim": 0.64913
+            },
+            "swad_metrics": {
+                "iou_0": 0.78197,
+                "delta_m_plus": 1.0,
+                "phi": 0.59275,
+                "swad": 0.59275
+            },
+            "l2_distance": 0.36146,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bi sickle, hell met, purse on\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "There are no objects that match the descriptions \"bi sickle, hell met, purse on\" in the image. The image shows a person riding a mountain bike in a forested area, wearing a helmet and athletic clothing. No such objects are present.",
+                "parsed_predictions": [],
+                "token_count": 51,
+                "raw_token_count": 136,
+                "runtime_seconds": 0.4026
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.7891020538011279,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.33211478628965607
+            },
+            "objectives": {
+                "iou": 0.77786,
+                "img_dist": 0.07401,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.78197,
+                "delta_m_plus": 0.00526,
+                "phi": 0.92599,
+                "swad": 0.00487
+            },
+            "l2_distance": 0.78137,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bicycle, helmet, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [330, 437, 760, 994], \"label\": \"bicycle\"},\n\t{\"bbox_2d\": [392, 67, 552, 158], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [292, 67, 796, 770], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            330,
+                            437,
+                            760,
+                            994
+                        ],
+                        "label": "bicycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            392,
+                            67,
+                            552,
+                            158
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            292,
+                            67,
+                            796,
+                            770
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 142,
+                "runtime_seconds": 0.4669
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.134606369497409
+            },
+            "objectives": {
+                "iou": 0.55688,
+                "img_dist": 0.03942,
+                "txt_dist": 0.04479,
+                "txt_sim": 0.95521
+            },
+            "swad_metrics": {
+                "iou_0": 0.78197,
+                "delta_m_plus": 0.28785,
+                "phi": 0.91756,
+                "swad": 0.26412
+            },
+            "l2_distance": 0.56007,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"by cycle, helmet, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [330, 433, 756, 500], \"label\": \"by cycle\"},\n\t{\"bbox_2d\": [396, 67, 556, 155], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [280, 67, 796, 770], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            330,
+                            433,
+                            756,
+                            500
+                        ],
+                        "label": "by cycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            396,
+                            67,
+                            556,
+                            155
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            280,
+                            67,
+                            796,
+                            770
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 111,
+                "runtime_seconds": 0.3729
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.8815667057224319,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6344866412327694
+            },
+            "objectives": {
+                "iou": 0.1791,
+                "img_dist": 0.18798,
+                "txt_dist": 0.2399,
+                "txt_sim": 0.7601
+            },
+            "swad_metrics": {
+                "iou_0": 0.78197,
+                "delta_m_plus": 0.77096,
+                "phi": 0.61722,
+                "swad": 0.47585
+            },
+            "l2_distance": 0.3535,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bi sickle, helmet, pursun\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [398, 67, 552, 150], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [478, 473, 624, 577], \"label\": \"pursun\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            398,
+                            67,
+                            552,
+                            150
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            478,
+                            473,
+                            624,
+                            577
+                        ],
+                        "label": "pursun"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 111,
+                "runtime_seconds": 0.3729
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.0072697054861905475,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2901666749088403
+            },
+            "objectives": {
+                "iou": 0.77831,
+                "img_dist": 0.03069,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.78197,
+                "delta_m_plus": 0.00468,
+                "phi": 0.96931,
+                "swad": 0.00454
+            },
+            "l2_distance": 0.77891,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bicycle, helmet, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [332, 437, 756, 998], \"label\": \"bicycle\"},\n\t{\"bbox_2d\": [396, 67, 556, 155], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [272, 67, 796, 770], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            332,
+                            437,
+                            756,
+                            998
+                        ],
+                        "label": "bicycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            396,
+                            67,
+                            556,
+                            155
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            272,
+                            67,
+                            796,
+                            770
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 111,
+                "runtime_seconds": 0.3729
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.8008069719249078,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6479583891943591
+            },
+            "objectives": {
+                "iou": 0.77352,
+                "img_dist": 0.11899,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.78197,
+                "delta_m_plus": 0.01081,
+                "phi": 0.88101,
+                "swad": 0.00952
+            },
+            "l2_distance": 0.78262,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bicycle, helmet, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [328, 438, 764, 998], \"label\": \"bicycle\"},\n\t{\"bbox_2d\": [392, 64, 550, 150], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [280, 64, 800, 772], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            328,
+                            438,
+                            764,
+                            998
+                        ],
+                        "label": "bicycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            392,
+                            64,
+                            550,
+                            150
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            280,
+                            64,
+                            800,
+                            772
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 111,
+                "runtime_seconds": 0.3729
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.20346696598763236,
+                "txt_attack": "synonym",
+                "txt_scale": 0.11490566325799068
+            },
+            "objectives": {
+                "iou": 0.76624,
+                "img_dist": 0.05372,
+                "txt_dist": 0.01098,
+                "txt_sim": 0.98902
+            },
+            "swad_metrics": {
+                "iou_0": 0.78197,
+                "delta_m_plus": 0.02012,
+                "phi": 0.93589,
+                "swad": 0.01883
+            },
+            "l2_distance": 0.7682,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bike, helmet, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [330, 433, 756, 998], \"label\": \"bike\"},\n\t{\"bbox_2d\": [398, 67, 556, 155], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [288, 67, 792, 772], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            330,
+                            433,
+                            756,
+                            998
+                        ],
+                        "label": "bike"
+                    },
+                    {
+                        "bbox_2d": [
+                            398,
+                            67,
+                            556,
+                            155
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            288,
+                            67,
+                            792,
+                            772
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 104,
+                "raw_token_count": 111,
+                "runtime_seconds": 0.3729
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.020165567215984566,
+                "txt_attack": "homophone",
+                "txt_scale": 0.7357204217772441
+            },
+            "objectives": {
+                "iou": 0.23664,
+                "img_dist": 0.07274,
+                "txt_dist": 0.16633,
+                "txt_sim": 0.83367
+            },
+            "swad_metrics": {
+                "iou_0": 0.78197,
+                "delta_m_plus": 0.69738,
+                "phi": 0.77303,
+                "swad": 0.53909
+            },
+            "l2_distance": 0.29825,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"by cycle, helmet, pursun\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [328, 437, 756, 508], \"label\": \"by cycle\"},\n\t{\"bbox_2d\": [392, 67, 556, 158], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [428, 158, 536, 428], \"label\": \"pursun\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            328,
+                            437,
+                            756,
+                            508
+                        ],
+                        "label": "by cycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            392,
+                            67,
+                            556,
+                            158
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            428,
+                            158,
+                            536,
+                            428
+                        ],
+                        "label": "pursun"
+                    }
+                ],
+                "token_count": 108,
+                "raw_token_count": 111,
+                "runtime_seconds": 0.3641
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "img_attack": "fog_filter",
+                "img_scale": 0.8005614941771582,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6713493690004461
+            },
+            "objectives": {
+                "iou": 0.20063,
+                "img_dist": 0.18198,
+                "txt_dist": 0.25308,
+                "txt_sim": 0.74692
+            },
+            "swad_metrics": {
+                "iou_0": 0.78197,
+                "delta_m_plus": 0.74343,
+                "phi": 0.611,
+                "swad": 0.45423
+            },
+            "l2_distance": 0.3707,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bi sickle, helmet, purse on\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [398, 67, 556, 145], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [412, 175, 688, 440], \"label\": \"purse on\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            398,
+                            67,
+                            556,
+                            145
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            412,
+                            175,
+                            688,
+                            440
+                        ],
+                        "label": "purse on"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 111,
+                "runtime_seconds": 0.3641
+            }
+        }
+    ]
+}

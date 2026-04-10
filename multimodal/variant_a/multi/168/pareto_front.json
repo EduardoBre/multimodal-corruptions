@@ -1,0 +1,626 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/168",
+        "folder_id": "168",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00026817.JPEG"
+    },
+    "original_prompt": "Identify the objects \"person, saxophone, trombone\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "saxophone": {
+            "xmin": 241,
+            "ymin": 178,
+            "xmax": 339,
+            "ymax": 331
+        },
+        "person": {
+            "xmin": 280,
+            "ymin": 39,
+            "xmax": 420,
+            "ymax": 333
+        },
+        "person_1": {
+            "xmin": 141,
+            "ymin": 116,
+            "xmax": 319,
+            "ymax": 333
+        },
+        "trombone": {
+            "xmin": 345,
+            "ymin": 69,
+            "xmax": 463,
+            "ymax": 151
+        },
+        "person_2": {
+            "xmin": 0,
+            "ymin": 22,
+            "xmax": 165,
+            "ymax": 333
+        },
+        "person_3": {
+            "xmin": 206,
+            "ymin": 55,
+            "xmax": 276,
+            "ymax": 145
+        }
+    },
+    "baseline_iou": 0.77892,
+    "swad_star": 0.65492,
+    "swad_star_index": 6,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 7,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8181617493544074,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.41721849968957336
+            },
+            "objectives": {
+                "iou": 0.65449,
+                "img_dist": 0.05841,
+                "txt_dist": 0.03822,
+                "txt_sim": 0.96178
+            },
+            "swad_metrics": {
+                "iou_0": 0.77892,
+                "delta_m_plus": 0.15975,
+                "phi": 0.9056,
+                "swad": 0.14467
+            },
+            "l2_distance": 0.6582,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"perswn, saxophone, trombone\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [555, 120, 837, 997], \"label\": \"perswn\"},\n\t{\"bbox_2d\": [280, 340, 642, 997], \"label\": \"perswn\"},\n\t{\"bbox_2d\": [0, 57, 370, 997], \"label\": \"perswn\"},\n\t{\"bbox_2d\": [717, 200, 917, 433], \"label\": \"saxophone\"},\n\t{\"bbox_2d\": [717, 200, 917, 433], \"label\": \"trombone\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            555,
+                            120,
+                            837,
+                            997
+                        ],
+                        "label": "perswn"
+                    },
+                    {
+                        "bbox_2d": [
+                            280,
+                            340,
+                            642,
+                            997
+                        ],
+                        "label": "perswn"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            57,
+                            370,
+                            997
+                        ],
+                        "label": "perswn"
+                    },
+                    {
+                        "bbox_2d": [
+                            717,
+                            200,
+                            917,
+                            433
+                        ],
+                        "label": "saxophone"
+                    },
+                    {
+                        "bbox_2d": [
+                            717,
+                            200,
+                            917,
+                            433
+                        ],
+                        "label": "trombone"
+                    }
+                ],
+                "token_count": 175,
+                "raw_token_count": 272,
+                "runtime_seconds": 0.9074
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.3997956906557353,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.647636093318414
+            },
+            "objectives": {
+                "iou": 0.67217,
+                "img_dist": 0.05092,
+                "txt_dist": 0.23656,
+                "txt_sim": 0.76344
+            },
+            "swad_metrics": {
+                "iou_0": 0.77892,
+                "delta_m_plus": 0.13705,
+                "phi": 0.72457,
+                "swad": 0.0993
+            },
+            "l2_distance": 0.7144,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"peoson, saxophoen, trmobone\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 58, 333, 997], \"label\": \"peoson\"},\n\t{\"bbox_2d\": [283, 347, 651, 997], \"label\": \"peoson\"},\n\t{\"bbox_2d\": [562, 128, 838, 997], \"label\": \"peoson\"},\n\t{\"bbox_2d\": [430, 147, 538, 470], \"label\": \"peoson\"},\n\t{\"bbox_2d\": [545, 550, 600, 997], \"label\": \"saxophoen\"},\n\t{\"bbox_2d\": [353, 860, 675, 1000], \"label\": \"trmobone\"},\n\t{\"bbox_2d\": [0, 717, 120, 1000], \"label\": \"trmobone\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            58,
+                            333,
+                            997
+                        ],
+                        "label": "peoson"
+                    },
+                    {
+                        "bbox_2d": [
+                            283,
+                            347,
+                            651,
+                            997
+                        ],
+                        "label": "peoson"
+                    },
+                    {
+                        "bbox_2d": [
+                            562,
+                            128,
+                            838,
+                            997
+                        ],
+                        "label": "peoson"
+                    },
+                    {
+                        "bbox_2d": [
+                            430,
+                            147,
+                            538,
+                            470
+                        ],
+                        "label": "peoson"
+                    },
+                    {
+                        "bbox_2d": [
+                            545,
+                            550,
+                            600,
+                            997
+                        ],
+                        "label": "saxophoen"
+                    },
+                    {
+                        "bbox_2d": [
+                            353,
+                            860,
+                            675,
+                            1000
+                        ],
+                        "label": "trmobone"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            717,
+                            120,
+                            1000
+                        ],
+                        "label": "trmobone"
+                    }
+                ],
+                "token_count": 249,
+                "raw_token_count": 272,
+                "runtime_seconds": 0.9074
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.7558,
+                "img_dist": 0.03571,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.77892,
+                "delta_m_plus": 0.02968,
+                "phi": 0.96429,
+                "swad": 0.02862
+            },
+            "l2_distance": 0.75664,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"person, saxophone, trombone\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 57, 338, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [282, 343, 652, 997], \"label\": \"person\"},\n\t{\"bbox_2d\": [560, 125, 875, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [425, 143, 540, 500], \"label\": \"person\"},\n\t{\"bbox_2d\": [538, 570, 600, 867], \"label\": \"saxophone\"},\n\t{\"bbox_2d\": [730, 200, 920, 450], \"label\": \"trombone\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            57,
+                            338,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            282,
+                            343,
+                            652,
+                            997
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            560,
+                            125,
+                            875,
+                            1000
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            425,
+                            143,
+                            540,
+                            500
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            538,
+                            570,
+                            600,
+                            867
+                        ],
+                        "label": "saxophone"
+                    },
+                    {
+                        "bbox_2d": [
+                            730,
+                            200,
+                            920,
+                            450
+                        ],
+                        "label": "trombone"
+                    }
+                ],
+                "token_count": 207,
+                "raw_token_count": 272,
+                "runtime_seconds": 0.9074
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.5656671100314771,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.039875089079669634
+            },
+            "objectives": {
+                "iou": 0.64791,
+                "img_dist": 0.0873,
+                "txt_dist": 0.1287,
+                "txt_sim": 0.8713
+            },
+            "swad_metrics": {
+                "iou_0": 0.77892,
+                "delta_m_plus": 0.16819,
+                "phi": 0.79524,
+                "swad": 0.13375
+            },
+            "l2_distance": 0.66631,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"\u0440er\u200bs\u043en, saxopho\u200dn\u0435, t\u200brom\u200bbone\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 48, 330, 999], \"label\": \"\u0440er\u200bs\u043en\"},\n\t{\"bbox_2d\": [278, 348, 580, 999], \"label\": \"\u0440er\u200bs\u043en\"},\n\t{\"bbox_2d\": [558, 116, 840, 999], \"label\": \"\u0440er\u200bs\u043en\"},\n\t{\"bbox_2d\": [430, 138, 520, 356], \"label\": \"\u0440er\u200bs\u043en\"},\n\t{\"bbox_2d\": [780, 192, 920, 372], \"label\": \"saxopho\u200dn\u0435\"},\n\t{\"bbox_2d\": [540, 572, 600, 999], \"label\": \"t\u200brom\u200bbone\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            48,
+                            330,
+                            999
+                        ],
+                        "label": "\u0440er\u200bs\u043en"
+                    },
+                    {
+                        "bbox_2d": [
+                            278,
+                            348,
+                            580,
+                            999
+                        ],
+                        "label": "\u0440er\u200bs\u043en"
+                    },
+                    {
+                        "bbox_2d": [
+                            558,
+                            116,
+                            840,
+                            999
+                        ],
+                        "label": "\u0440er\u200bs\u043en"
+                    },
+                    {
+                        "bbox_2d": [
+                            430,
+                            138,
+                            520,
+                            356
+                        ],
+                        "label": "\u0440er\u200bs\u043en"
+                    },
+                    {
+                        "bbox_2d": [
+                            780,
+                            192,
+                            920,
+                            372
+                        ],
+                        "label": "saxopho\u200dn\u0435"
+                    },
+                    {
+                        "bbox_2d": [
+                            540,
+                            572,
+                            600,
+                            999
+                        ],
+                        "label": "t\u200brom\u200bbone"
+                    }
+                ],
+                "token_count": 232,
+                "raw_token_count": 272,
+                "runtime_seconds": 0.9074
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.307337327911573,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.75442,
+                "img_dist": 0.04354,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.77892,
+                "delta_m_plus": 0.03145,
+                "phi": 0.95646,
+                "swad": 0.03008
+            },
+            "l2_distance": 0.75568,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"person, saxophone, trombone\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 57, 350, 997], \"label\": \"person\"},\n\t{\"bbox_2d\": [280, 337, 657, 997], \"label\": \"person\"},\n\t{\"bbox_2d\": [560, 117, 838, 997], \"label\": \"person\"},\n\t{\"bbox_2d\": [438, 143, 540, 407], \"label\": \"person\"},\n\t{\"bbox_2d\": [540, 577, 600, 997], \"label\": \"saxophone\"},\n\t{\"bbox_2d\": [738, 207, 920, 443], \"label\": \"trombone\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            57,
+                            350,
+                            997
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            280,
+                            337,
+                            657,
+                            997
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            560,
+                            117,
+                            838,
+                            997
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            438,
+                            143,
+                            540,
+                            407
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            540,
+                            577,
+                            600,
+                            997
+                        ],
+                        "label": "saxophone"
+                    },
+                    {
+                        "bbox_2d": [
+                            738,
+                            207,
+                            920,
+                            443
+                        ],
+                        "label": "trombone"
+                    }
+                ],
+                "token_count": 205,
+                "raw_token_count": 272,
+                "runtime_seconds": 0.9074
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.018595721213425453,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6130568625347235
+            },
+            "objectives": {
+                "iou": 0.67739,
+                "img_dist": 0.04346,
+                "txt_dist": 0.1394,
+                "txt_sim": 0.8606
+            },
+            "swad_metrics": {
+                "iou_0": 0.77892,
+                "delta_m_plus": 0.13035,
+                "phi": 0.8232,
+                "swad": 0.1073
+            },
+            "l2_distance": 0.69295,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"preson, saxophone, trwmbone\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 60, 340, 997], \"label\": \"preson\"},\n\t{\"bbox_2d\": [280, 347, 650, 997], \"label\": \"preson\"},\n\t{\"bbox_2d\": [565, 124, 838, 997], \"label\": \"preson\"},\n\t{\"bbox_2d\": [428, 147, 540, 450], \"label\": \"preson\"},\n\t{\"bbox_2d\": [540, 550, 600, 874], \"label\": \"saxophone\"},\n\t{\"bbox_2d\": [352, 867, 672, 1000], \"label\": \"trwmbone\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            60,
+                            340,
+                            997
+                        ],
+                        "label": "preson"
+                    },
+                    {
+                        "bbox_2d": [
+                            280,
+                            347,
+                            650,
+                            997
+                        ],
+                        "label": "preson"
+                    },
+                    {
+                        "bbox_2d": [
+                            565,
+                            124,
+                            838,
+                            997
+                        ],
+                        "label": "preson"
+                    },
+                    {
+                        "bbox_2d": [
+                            428,
+                            147,
+                            540,
+                            450
+                        ],
+                        "label": "preson"
+                    },
+                    {
+                        "bbox_2d": [
+                            540,
+                            550,
+                            600,
+                            874
+                        ],
+                        "label": "saxophone"
+                    },
+                    {
+                        "bbox_2d": [
+                            352,
+                            867,
+                            672,
+                            1000
+                        ],
+                        "label": "trwmbone"
+                    }
+                ],
+                "token_count": 211,
+                "raw_token_count": 272,
+                "runtime_seconds": 0.9074
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.06821,
+                "img_dist": 0.09084,
+                "txt_dist": 0.21051,
+                "txt_sim": 0.78949
+            },
+            "swad_metrics": {
+                "iou_0": 0.77892,
+                "delta_m_plus": 0.91243,
+                "phi": 0.71777,
+                "swad": 0.65492
+            },
+            "l2_distance": 0.2392,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"pursun, saxaphone, trom bone\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [708, 270, 828, 430], \"label\": \"pursun\"},\n\t{\"bbox_2d\": [708, 270, 828, 430], \"label\": \"saxaphone\"},\n\t{\"bbox_2d\": [708, 270, 828, 430], \"label\": \"trom bone\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            708,
+                            270,
+                            828,
+                            430
+                        ],
+                        "label": "pursun"
+                    },
+                    {
+                        "bbox_2d": [
+                            708,
+                            270,
+                            828,
+                            430
+                        ],
+                        "label": "saxaphone"
+                    },
+                    {
+                        "bbox_2d": [
+                            708,
+                            270,
+                            828,
+                            430
+                        ],
+                        "label": "trom bone"
+                    }
+                ],
+                "token_count": 112,
+                "raw_token_count": 272,
+                "runtime_seconds": 0.9074
+            }
+        }
+    ]
+}

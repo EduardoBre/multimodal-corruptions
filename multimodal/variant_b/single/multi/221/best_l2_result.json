@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/221",
+        "folder_id": "221",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00037303.JPEG"
+    },
+    "pareto_index": 21,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 15,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.01197,
+            "defocus_blur": 0.043055,
+            "motion_blur": 0.245256,
+            "fog_filter": 0.001054,
+            "pixelate": 0.002984,
+            "jpeg_filter": 0.011134
+        },
+        "text_corruptions": {
+            "homophone": 0.000405,
+            "synonym": 0.064151,
+            "ata_saliency": 0.191702,
+            "fragmentation": 0.008345,
+            "character_noise": 0.061412
+        },
+        "img_budget_used": 0.315453,
+        "txt_budget_used": 0.326015,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.01169,
+        "img_dist": 0.09181,
+        "txt_dist": 0.29258,
+        "txt_sim": 0.70742
+    },
+    "swad_metrics": {
+        "iou_0": 0.88861,
+        "delta_m_plus": 0.98684,
+        "phi": 0.64247,
+        "swad": 0.63402
+    },
+    "l2_distance": 0.30687,
+    "original_prompt": "Identify the objects \"swine\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "swine": {
+            "xmin": 8,
+            "ymin": 35,
+            "xmax": 280,
+            "ymax": 332
+        },
+        "swine_1": {
+            "xmin": 261,
+            "ymin": 59,
+            "xmax": 495,
+            "ymax": 328
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"s\u200bwing\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [394, 590, 448, 800], \"label\": \"s\u200bwing\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    394,
+                    590,
+                    448,
+                    800
+                ],
+                "label": "s\u200bwing"
+            }
+        ],
+        "token_count": 41,
+        "raw_token_count": 82,
+        "runtime_seconds": 0.2869
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.01197032785847442,
+        "defocus_blur": 0.043054666036921874,
+        "motion_blur": 0.24525604703991016,
+        "fog_filter": 0.0010541424730010826,
+        "pixelate": 0.0029843972092805,
+        "jpeg_filter": 0.011133680051060572
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.00040516118384766736,
+        "synonym": 0.06415078332148595,
+        "ata_saliency": 0.1917018698731669,
+        "fragmentation": 0.008345147215830889,
+        "character_noise": 0.061412275244602674
+    }
+}

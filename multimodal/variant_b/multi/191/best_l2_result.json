@@ -1,0 +1,106 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/191",
+        "folder_id": "191",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00039812.JPEG"
+    },
+    "pareto_index": 25,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 7,
+    "total_evaluations": 195,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.088334,
+            "defocus_blur": 0.002431,
+            "motion_blur": 0.051615,
+            "fog_filter": 0.003186,
+            "pixelate": 0.021972,
+            "jpeg_filter": 0.104164
+        },
+        "text_corruptions": {
+            "homophone": 0.111515,
+            "synonym": 0.065401,
+            "ata_saliency": 0.023323,
+            "fragmentation": 0.118117,
+            "character_noise": 0.082169
+        },
+        "img_budget_used": 0.271702,
+        "txt_budget_used": 0.400524,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.09818,
+        "txt_dist": 0.28895,
+        "txt_sim": 0.71105
+    },
+    "swad_metrics": {
+        "iou_0": 0.97186,
+        "delta_m_plus": 1.0,
+        "phi": 0.64124,
+        "swad": 0.64124
+    },
+    "l2_distance": 0.30517,
+    "original_prompt": "Identify the objects \"dog, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 0,
+            "ymin": 0,
+            "xmax": 67,
+            "ymax": 321
+        },
+        "dog": {
+            "xmin": 196,
+            "ymin": 124,
+            "xmax": 280,
+            "ymax": 289
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"\u043e dg, hu\u200bma\u200bn\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 133, 857], \"label\": \"\u043e dg, hu\u200bma\u200bn\"},\n\t{\"bbox_2d\": [388, 328, 562, 772], \"label\": \"\u043e dg, hu\u200bma\u200bn\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    133,
+                    857
+                ],
+                "label": "\u043e dg, hu\u200bma\u200bn"
+            },
+            {
+                "bbox_2d": [
+                    388,
+                    328,
+                    562,
+                    772
+                ],
+                "label": "\u043e dg, hu\u200bma\u200bn"
+            }
+        ],
+        "token_count": 82,
+        "raw_token_count": 87,
+        "runtime_seconds": 0.3015
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.08833350084883071,
+        "defocus_blur": 0.0024310530401622185,
+        "motion_blur": 0.05161508521860983,
+        "fog_filter": 0.003186398537837971,
+        "pixelate": 0.021972353030590926,
+        "jpeg_filter": 0.10416388461577945
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.11151471469326785,
+        "synonym": 0.06540071638768423,
+        "ata_saliency": 0.02332295353522458,
+        "fragmentation": 0.11811652150785149,
+        "character_noise": 0.0821686139709944
+    }
+}

@@ -1,0 +1,76 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/167",
+        "folder_id": "167",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00002431.JPEG"
+    },
+    "pareto_index": 9,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.9316177058680379,
+        "txt_attack": "homophone",
+        "txt_scale": 0.9948250792623392
+    },
+    "objectives": {
+        "iou": 0.13358,
+        "img_dist": 0.07188,
+        "txt_dist": 0.21707,
+        "txt_sim": 0.78293
+    },
+    "swad_metrics": {
+        "iou_0": 0.91075,
+        "delta_m_plus": 0.85333,
+        "phi": 0.72665,
+        "swad": 0.62007
+    },
+    "l2_distance": 0.26482,
+    "original_prompt": "Identify the objects \"flower pot, sofa\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "sofa": {
+            "xmin": 171,
+            "ymin": 139,
+            "xmax": 398,
+            "ymax": 231
+        },
+        "flower pot": {
+            "xmin": 33,
+            "ymin": 180,
+            "xmax": 79,
+            "ymax": 225
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"flower pod, so fah\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [58, 380, 158, 680], \"label\": \"flower pod, so fah\"},\n\t{\"bbox_2d\": [142, 517, 188, 600], \"label\": \"flower pod, so fah\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    58,
+                    380,
+                    158,
+                    680
+                ],
+                "label": "flower pod, so fah"
+            },
+            {
+                "bbox_2d": [
+                    142,
+                    517,
+                    188,
+                    600
+                ],
+                "label": "flower pod, so fah"
+            }
+        ],
+        "token_count": 81,
+        "raw_token_count": 95,
+        "runtime_seconds": 0.2981
+    }
+}

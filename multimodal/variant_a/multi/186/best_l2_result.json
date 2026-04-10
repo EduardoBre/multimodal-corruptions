@@ -1,0 +1,82 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/186",
+        "folder_id": "186",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00023076.JPEG"
+    },
+    "pareto_index": 13,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 3,
+    "total_evaluations": 75,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.9316177058680379,
+        "txt_attack": "homophone",
+        "txt_scale": 0.644659667160958
+    },
+    "objectives": {
+        "iou": 0.32818,
+        "img_dist": 0.09509,
+        "txt_dist": 0.18231,
+        "txt_sim": 0.81769
+    },
+    "swad_metrics": {
+        "iou_0": 0.96461,
+        "delta_m_plus": 0.65978,
+        "phi": 0.73994,
+        "swad": 0.48819
+    },
+    "l2_distance": 0.38727,
+    "original_prompt": "Identify the objects \"dog, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 312,
+            "ymin": 0,
+            "xmax": 373,
+            "ymax": 217
+        },
+        "person_1": {
+            "xmin": 0,
+            "ymin": 181,
+            "xmax": 115,
+            "ymax": 480
+        },
+        "dog": {
+            "xmin": 117,
+            "ymin": 8,
+            "xmax": 276,
+            "ymax": 490
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"dog, pursun\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [308, 20, 736, 978], \"label\": \"dog\"},\n\t{\"bbox_2d\": [608, 498, 1000, 998], \"label\": \"pursun\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    308,
+                    20,
+                    736,
+                    978
+                ],
+                "label": "dog"
+            },
+            {
+                "bbox_2d": [
+                    608,
+                    498,
+                    1000,
+                    998
+                ],
+                "label": "pursun"
+            }
+        ],
+        "token_count": 74,
+        "raw_token_count": 128,
+        "runtime_seconds": 0.4982
+    }
+}

@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/217",
+        "folder_id": "217",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00017255.JPEG"
+    },
+    "pareto_index": 2,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.032044,
+            "defocus_blur": 0.071179,
+            "motion_blur": 0.116236,
+            "fog_filter": 0.010662,
+            "pixelate": 0.006798,
+            "jpeg_filter": 0.042091
+        },
+        "text_corruptions": {
+            "homophone": 0.028743,
+            "synonym": 0.003528,
+            "ata_saliency": 0.012008,
+            "fragmentation": 0.015207,
+            "character_noise": 0.01784
+        },
+        "img_budget_used": 0.27901,
+        "txt_budget_used": 0.077326,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.09208,
+        "txt_dist": 0.18871,
+        "txt_sim": 0.81129
+    },
+    "swad_metrics": {
+        "iou_0": 0.80254,
+        "delta_m_plus": 1.0,
+        "phi": 0.73659,
+        "swad": 0.73659
+    },
+    "l2_distance": 0.20998,
+    "original_prompt": "Identify the objects \"person, power drill\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "power drill": {
+            "xmin": 86,
+            "ymin": 36,
+            "xmax": 340,
+            "ymax": 312
+        },
+        "person": {
+            "xmin": 0,
+            "ymin": 2,
+            "xmax": 498,
+            "ymax": 335
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"per s\u043en, p\u043ewer drill\u200d\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 998, 1000], \"label\": \"per s\u043en, p\u043ewer drill\u200d\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    998,
+                    1000
+                ],
+                "label": "per s\u043en, p\u043ewer drill\u200d"
+            }
+        ],
+        "token_count": 46,
+        "raw_token_count": 99,
+        "runtime_seconds": 0.3165
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.03204388874360834,
+        "defocus_blur": 0.07117877318765932,
+        "motion_blur": 0.116235652107013,
+        "fog_filter": 0.010662255408490454,
+        "pixelate": 0.006798374717697577,
+        "jpeg_filter": 0.042090638185290324
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.028742962632505305,
+        "synonym": 0.0035282042031710894,
+        "ata_saliency": 0.012008181774335774,
+        "fragmentation": 0.015206601475191595,
+        "character_noise": 0.01784027185829858
+    }
+}

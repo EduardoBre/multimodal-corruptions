@@ -1,0 +1,685 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/188",
+        "folder_id": "188",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00000520.JPEG"
+    },
+    "original_prompt": "Identify the objects \"guitar, microphone, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 0,
+            "ymin": 147,
+            "xmax": 110,
+            "ymax": 365
+        },
+        "person_1": {
+            "xmin": 110,
+            "ymin": 20,
+            "xmax": 313,
+            "ymax": 452
+        },
+        "person_2": {
+            "xmin": 308,
+            "ymin": 7,
+            "xmax": 427,
+            "ymax": 185
+        },
+        "guitar": {
+            "xmin": 137,
+            "ymin": 147,
+            "xmax": 346,
+            "ymax": 233
+        },
+        "microphone": {
+            "xmin": 223,
+            "ymin": 82,
+            "xmax": 268,
+            "ymax": 395
+        }
+    },
+    "baseline_iou": 0.54756,
+    "swad_star": 0.49978,
+    "swad_star_index": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 60,
+    "skipped_evaluations": 30,
+    "n_solutions": 10,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6124377601560459,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.37134,
+                "img_dist": 0.14611,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.54756,
+                "delta_m_plus": 0.32183,
+                "phi": 0.85389,
+                "swad": 0.27481
+            },
+            "l2_distance": 0.39905,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"guitar, microphone, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [378, 300, 538, 450], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [428, 188, 500, 250], \"label\": \"microphone\"},\n\t{\"bbox_2d\": [250, 48, 630, 800], \"label\": \"person\"},\n\t{\"bbox_2d\": [592, 0, 998, 400], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            378,
+                            300,
+                            538,
+                            450
+                        ],
+                        "label": "guitar"
+                    },
+                    {
+                        "bbox_2d": [
+                            428,
+                            188,
+                            500,
+                            250
+                        ],
+                        "label": "microphone"
+                    },
+                    {
+                        "bbox_2d": [
+                            250,
+                            48,
+                            630,
+                            800
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            592,
+                            0,
+                            998,
+                            400
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 137,
+                "raw_token_count": 201,
+                "runtime_seconds": 0.7067
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.15096,
+                "txt_dist": 0.41136,
+                "txt_sim": 0.58864
+            },
+            "swad_metrics": {
+                "iou_0": 0.54756,
+                "delta_m_plus": 1.0,
+                "phi": 0.49978,
+                "swad": 0.49978
+            },
+            "l2_distance": 0.43818,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"get are, mike ra phone, pursun\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "There are none.",
+                "parsed_predictions": [],
+                "token_count": 4,
+                "raw_token_count": 201,
+                "runtime_seconds": 0.7067
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.61736,
+                "img_dist": 0.03825,
+                "txt_dist": 0.07993,
+                "txt_sim": 0.92007
+            },
+            "swad_metrics": {
+                "iou_0": 0.54756,
+                "delta_m_plus": 0.0,
+                "phi": 0.88488,
+                "swad": 0.0
+            },
+            "l2_distance": 0.62369,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"guitar, microphone, per son\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [278, 312, 500, 472], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [450, 178, 500, 218], \"label\": \"microphone\"},\n\t{\"bbox_2d\": [208, 42, 616, 788], \"label\": \"per son\"},\n\t{\"bbox_2d\": [0, 298, 208, 788], \"label\": \"per son\"},\n\t{\"bbox_2d\": [592, 0, 872, 352], \"label\": \"per son\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            278,
+                            312,
+                            500,
+                            472
+                        ],
+                        "label": "guitar"
+                    },
+                    {
+                        "bbox_2d": [
+                            450,
+                            178,
+                            500,
+                            218
+                        ],
+                        "label": "microphone"
+                    },
+                    {
+                        "bbox_2d": [
+                            208,
+                            42,
+                            616,
+                            788
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            298,
+                            208,
+                            788
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            592,
+                            0,
+                            872,
+                            352
+                        ],
+                        "label": "per son"
+                    }
+                ],
+                "token_count": 171,
+                "raw_token_count": 201,
+                "runtime_seconds": 0.7067
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.9316177058680379,
+                "txt_attack": "homophone",
+                "txt_scale": 0.9948250792623392
+            },
+            "objectives": {
+                "iou": 0.29276,
+                "img_dist": 0.10212,
+                "txt_dist": 0.13878,
+                "txt_sim": 0.86122
+            },
+            "swad_metrics": {
+                "iou_0": 0.54756,
+                "delta_m_plus": 0.46534,
+                "phi": 0.77327,
+                "swad": 0.35983
+            },
+            "l2_distance": 0.3397,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"gitar, micro phone, pearson\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [278, 317, 592, 478], \"label\": \"gitar\"},\n\t{\"bbox_2d\": [468, 180, 512, 220], \"label\": \"micro phone\"},\n\t{\"bbox_2d\": [592, 0, 998, 350], \"label\": \"pearson\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            278,
+                            317,
+                            592,
+                            478
+                        ],
+                        "label": "gitar"
+                    },
+                    {
+                        "bbox_2d": [
+                            468,
+                            180,
+                            512,
+                            220
+                        ],
+                        "label": "micro phone"
+                    },
+                    {
+                        "bbox_2d": [
+                            592,
+                            0,
+                            998,
+                            350
+                        ],
+                        "label": "pearson"
+                    }
+                ],
+                "token_count": 106,
+                "raw_token_count": 232,
+                "runtime_seconds": 0.852
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.8004900574692112,
+                "txt_attack": "homophone",
+                "txt_scale": 0.3273709769105356
+            },
+            "objectives": {
+                "iou": 0.36704,
+                "img_dist": 0.1577,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.54756,
+                "delta_m_plus": 0.32968,
+                "phi": 0.8423,
+                "swad": 0.27769
+            },
+            "l2_distance": 0.39948,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"guitar, microphone, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [388, 300, 520, 450], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [440, 172, 500, 236], \"label\": \"microphone\"},\n\t{\"bbox_2d\": [250, 40, 620, 800], \"label\": \"person\"},\n\t{\"bbox_2d\": [600, 0, 996, 350], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            388,
+                            300,
+                            520,
+                            450
+                        ],
+                        "label": "guitar"
+                    },
+                    {
+                        "bbox_2d": [
+                            440,
+                            172,
+                            500,
+                            236
+                        ],
+                        "label": "microphone"
+                    },
+                    {
+                        "bbox_2d": [
+                            250,
+                            40,
+                            620,
+                            800
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            600,
+                            0,
+                            996,
+                            350
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 137,
+                "raw_token_count": 232,
+                "runtime_seconds": 0.852
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.11586319738790885
+            },
+            "objectives": {
+                "iou": 0.51783,
+                "img_dist": 0.0382,
+                "txt_dist": 0.19601,
+                "txt_sim": 0.80399
+            },
+            "swad_metrics": {
+                "iou_0": 0.54756,
+                "delta_m_plus": 0.0543,
+                "phi": 0.77328,
+                "swad": 0.04199
+            },
+            "l2_distance": 0.555,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"git tar, microphone, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [288, 318, 500, 472], \"label\": \"git tar\"},\n\t{\"bbox_2d\": [458, 178, 512, 220], \"label\": \"microphone\"},\n\t{\"bbox_2d\": [212, 42, 616, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [0, 298, 212, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [592, 0, 998, 378], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            288,
+                            318,
+                            500,
+                            472
+                        ],
+                        "label": "git tar"
+                    },
+                    {
+                        "bbox_2d": [
+                            458,
+                            178,
+                            512,
+                            220
+                        ],
+                        "label": "microphone"
+                    },
+                    {
+                        "bbox_2d": [
+                            212,
+                            42,
+                            616,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            298,
+                            212,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            592,
+                            0,
+                            998,
+                            378
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 168,
+                "raw_token_count": 201,
+                "runtime_seconds": 0.7188
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.1439879629777976,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.49301,
+                "img_dist": 0.04528,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.54756,
+                "delta_m_plus": 0.09962,
+                "phi": 0.95472,
+                "swad": 0.09511
+            },
+            "l2_distance": 0.49508,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"guitar, microphone, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [288, 323, 500, 462], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [450, 178, 500, 216], \"label\": \"microphone\"},\n\t{\"bbox_2d\": [208, 42, 616, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [0, 298, 208, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [592, 0, 998, 450], \"label\": \"person\"},\n\t{\"bbox_2d\": [188, 0, 300, 350], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            288,
+                            323,
+                            500,
+                            462
+                        ],
+                        "label": "guitar"
+                    },
+                    {
+                        "bbox_2d": [
+                            450,
+                            178,
+                            500,
+                            216
+                        ],
+                        "label": "microphone"
+                    },
+                    {
+                        "bbox_2d": [
+                            208,
+                            42,
+                            616,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            298,
+                            208,
+                            998
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            592,
+                            0,
+                            998,
+                            450
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            188,
+                            0,
+                            300,
+                            350
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 199,
+                "raw_token_count": 201,
+                "runtime_seconds": 0.7188
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.8418178332406012,
+                "txt_attack": "synonym",
+                "txt_scale": 0.208196069087493
+            },
+            "objectives": {
+                "iou": 0.40759,
+                "img_dist": 0.13261,
+                "txt_dist": 0.05742,
+                "txt_sim": 0.94258
+            },
+            "swad_metrics": {
+                "iou_0": 0.54756,
+                "delta_m_plus": 0.25562,
+                "phi": 0.81758,
+                "swad": 0.20899
+            },
+            "l2_distance": 0.43245,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"guitar, mic, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [258, 208, 630, 500], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [472, 178, 536, 238], \"label\": \"mic\"},\n\t{\"bbox_2d\": [258, 42, 630, 800], \"label\": \"person\"},\n\t{\"bbox_2d\": [592, 0, 998, 342], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            258,
+                            208,
+                            630,
+                            500
+                        ],
+                        "label": "guitar"
+                    },
+                    {
+                        "bbox_2d": [
+                            472,
+                            178,
+                            536,
+                            238
+                        ],
+                        "label": "mic"
+                    },
+                    {
+                        "bbox_2d": [
+                            258,
+                            42,
+                            630,
+                            800
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            592,
+                            0,
+                            998,
+                            342
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 136,
+                "raw_token_count": 201,
+                "runtime_seconds": 0.7188
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.8943577508732576,
+                "txt_attack": "homophone",
+                "txt_scale": 0.668839480214524
+            },
+            "objectives": {
+                "iou": 0.0989,
+                "img_dist": 0.15587,
+                "txt_dist": 0.27762,
+                "txt_sim": 0.72238
+            },
+            "swad_metrics": {
+                "iou_0": 0.54756,
+                "delta_m_plus": 0.81938,
+                "phi": 0.60978,
+                "swad": 0.49964
+            },
+            "l2_distance": 0.33339,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"get are, microphone, pursun\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [488, 190, 548, 490], \"label\": \"microphone\"},\n\t{\"bbox_2d\": [258, 550, 448, 780], \"label\": \"pursun\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            488,
+                            190,
+                            548,
+                            490
+                        ],
+                        "label": "microphone"
+                    },
+                    {
+                        "bbox_2d": [
+                            258,
+                            550,
+                            448,
+                            780
+                        ],
+                        "label": "pursun"
+                    }
+                ],
+                "token_count": 75,
+                "raw_token_count": 233,
+                "runtime_seconds": 0.8165
+            }
+        },
+        {
+            "index": 9,
+            "genome": {
+                "img_attack": "fog_filter",
+                "img_scale": 0.0368684880458985,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4303904312548027
+            },
+            "objectives": {
+                "iou": 0.25501,
+                "img_dist": 0.07968,
+                "txt_dist": 0.15685,
+                "txt_sim": 0.84315
+            },
+            "swad_metrics": {
+                "iou_0": 0.54756,
+                "delta_m_plus": 0.53428,
+                "phi": 0.77597,
+                "swad": 0.41458
+            },
+            "l2_distance": 0.30981,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"guitar, micro phone, purse on\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [278, 317, 538, 472], \"label\": \"guitar\"},\n\t{\"bbox_2d\": [458, 183, 512, 222], \"label\": \"micro phone\"},\n\t{\"bbox_2d\": [0, 308, 208, 522], \"label\": \"purse on\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            278,
+                            317,
+                            538,
+                            472
+                        ],
+                        "label": "guitar"
+                    },
+                    {
+                        "bbox_2d": [
+                            458,
+                            183,
+                            512,
+                            222
+                        ],
+                        "label": "micro phone"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            308,
+                            208,
+                            522
+                        ],
+                        "label": "purse on"
+                    }
+                ],
+                "token_count": 107,
+                "raw_token_count": 233,
+                "runtime_seconds": 0.8165
+            }
+        }
+    ]
+}

@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/81",
+        "folder_id": "81",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00008747.JPEG"
+    },
+    "pareto_index": 8,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 3,
+    "total_evaluations": 75,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.015002906192539744,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.6130568625347235
+    },
+    "objectives": {
+        "iou": 0.0602,
+        "img_dist": 0.01515,
+        "txt_dist": 0.25627,
+        "txt_sim": 0.74373
+    },
+    "swad_metrics": {
+        "iou_0": 0.90595,
+        "delta_m_plus": 0.93355,
+        "phi": 0.73246,
+        "swad": 0.68379
+    },
+    "l2_distance": 0.26368,
+    "original_prompt": "Identify the objects \"snail\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "snail": {
+            "xmin": 74,
+            "ymin": 0,
+            "xmax": 378,
+            "ymax": 296
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"stail\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [148, 578, 288, 872], \"label\": \"stail\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    148,
+                    578,
+                    288,
+                    872
+                ],
+                "label": "stail"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 44,
+        "runtime_seconds": 0.1593
+    }
+}

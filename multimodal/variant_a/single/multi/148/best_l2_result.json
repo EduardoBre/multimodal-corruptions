@@ -1,0 +1,73 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/148",
+        "folder_id": "148",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00034439.JPEG"
+    },
+    "pareto_index": 2,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.6124377601560459,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.05557257533910853
+    },
+    "objectives": {
+        "iou": 0.32434,
+        "img_dist": 0.08158,
+        "txt_dist": 0.26657,
+        "txt_sim": 0.73343
+    },
+    "swad_metrics": {
+        "iou_0": 0.57533,
+        "delta_m_plus": 0.43625,
+        "phi": 0.6736,
+        "swad": 0.29386
+    },
+    "l2_distance": 0.42768,
+    "original_prompt": "Identify the objects \"milk can\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "milk can": {
+            "xmin": 208,
+            "ymin": 10,
+            "xmax": 315,
+            "ymax": 160
+        },
+        "milk can_1": {
+            "xmin": 47,
+            "ymin": 17,
+            "xmax": 177,
+            "ymax": 153
+        },
+        "milk can_2": {
+            "xmin": 0,
+            "ymin": 235,
+            "xmax": 252,
+            "ymax": 470
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"imlk can\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 468, 668, 932], \"label\": \"imlk can\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    468,
+                    668,
+                    932
+                ],
+                "label": "imlk can"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 111,
+        "runtime_seconds": 0.5157
+    }
+}

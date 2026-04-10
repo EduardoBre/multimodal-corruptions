@@ -1,0 +1,112 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/197",
+        "folder_id": "197",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00027816.JPEG"
+    },
+    "pareto_index": 4,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 60,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.032269,
+            "defocus_blur": 0.011928,
+            "motion_blur": 0.042321,
+            "fog_filter": 0.118694,
+            "pixelate": 0.055967,
+            "jpeg_filter": 0.006311
+        },
+        "text_corruptions": {
+            "homophone": 0.111541,
+            "synonym": 0.037364,
+            "ata_saliency": 0.090728,
+            "fragmentation": 0.009389,
+            "character_noise": 0.026791
+        },
+        "img_budget_used": 0.26749,
+        "txt_budget_used": 0.275813,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.01563,
+        "img_dist": 0.10198,
+        "txt_dist": 0.3748,
+        "txt_sim": 0.6252
+    },
+    "swad_metrics": {
+        "iou_0": 0.77574,
+        "delta_m_plus": 0.97985,
+        "phi": 0.56144,
+        "swad": 0.55013
+    },
+    "l2_distance": 0.38874,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 60,
+            "ymin": 144,
+            "xmax": 292,
+            "ymax": 279
+        },
+        "bird_1": {
+            "xmin": 333,
+            "ymin": 236,
+            "xmax": 429,
+            "ymax": 303
+        },
+        "bird_2": {
+            "xmin": 383,
+            "ymin": 188,
+            "xmax": 462,
+            "ymax": 275
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bur red\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [548, 368, 574, 398], \"label\": \"bur red\"},\n\t{\"bbox_2d\": [838, 624, 860, 658], \"label\": \"bur red\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    548,
+                    368,
+                    574,
+                    398
+                ],
+                "label": "bur red"
+            },
+            {
+                "bbox_2d": [
+                    838,
+                    624,
+                    860,
+                    658
+                ],
+                "label": "bur red"
+            }
+        ],
+        "token_count": 74,
+        "raw_token_count": 115,
+        "runtime_seconds": 0.349
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0322693711307514,
+        "defocus_blur": 0.011927548030451802,
+        "motion_blur": 0.042321193916266216,
+        "fog_filter": 0.11869354088719576,
+        "pixelate": 0.055967252647889855,
+        "jpeg_filter": 0.006310864607921514
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.11154116945341787,
+        "synonym": 0.03736416482184852,
+        "ata_saliency": 0.09072756596373692,
+        "fragmentation": 0.009389361065181236,
+        "character_noise": 0.026790500621701678
+    }
+}

@@ -1,0 +1,112 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/181",
+        "folder_id": "181",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00019000.JPEG"
+    },
+    "pareto_index": 14,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 45,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.057747,
+            "defocus_blur": 0.067619,
+            "motion_blur": 0.02545,
+            "fog_filter": 0.032787,
+            "pixelate": 0.278594,
+            "jpeg_filter": 0.353866
+        },
+        "text_corruptions": {
+            "homophone": 0.177285,
+            "synonym": 0.049016,
+            "ata_saliency": 0.105414,
+            "fragmentation": 0.2617,
+            "character_noise": 0.107421
+        },
+        "img_budget_used": 0.816063,
+        "txt_budget_used": 0.700836,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.17249,
+        "img_dist": 0.07583,
+        "txt_dist": 0.27683,
+        "txt_sim": 0.72317
+    },
+    "swad_metrics": {
+        "iou_0": 0.60684,
+        "delta_m_plus": 0.71576,
+        "phi": 0.66833,
+        "swad": 0.47836
+    },
+    "l2_distance": 0.33487,
+    "original_prompt": "Identify the objects \"person, racket, tennis ball\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "racket": {
+            "xmin": 186,
+            "ymin": 137,
+            "xmax": 245,
+            "ymax": 226
+        },
+        "person": {
+            "xmin": 104,
+            "ymin": 131,
+            "xmax": 246,
+            "ymax": 486
+        },
+        "tennis ball": {
+            "xmin": 129,
+            "ymin": 3,
+            "xmax": 139,
+            "ymax": 21
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"pe\u200br sno, ra\u200d c\u200bqeut, tenn\u0456s ball\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [312, 280, 608, 972], \"label\": \"pe\u200br sno, ra\u200d c\u200bqeut\"},\n\t{\"bbox_2d\": [316, 14, 344, 38], \"label\": \"tenn\u0456s ball\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    312,
+                    280,
+                    608,
+                    972
+                ],
+                "label": "pe\u200br sno, ra\u200d c\u200bqeut"
+            },
+            {
+                "bbox_2d": [
+                    316,
+                    14,
+                    344,
+                    38
+                ],
+                "label": "tenn\u0456s ball"
+            }
+        ],
+        "token_count": 85,
+        "raw_token_count": 137,
+        "runtime_seconds": 0.4207
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.057746877113876244,
+        "defocus_blur": 0.0676190653182706,
+        "motion_blur": 0.025450409726596266,
+        "fog_filter": 0.03278737607289687,
+        "pixelate": 0.2785937498890046,
+        "jpeg_filter": 0.35386585655503794
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.17728468637997202,
+        "synonym": 0.04901589705473457,
+        "ata_saliency": 0.1054142217091611,
+        "fragmentation": 0.2617004255944541,
+        "character_noise": 0.1074210601878247
+    }
+}

@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/238",
+        "folder_id": "238",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00046990.JPEG"
+    },
+    "pareto_index": 7,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.863144940280058,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6678992108124702
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.04654,
+        "txt_dist": 0.28156,
+        "txt_sim": 0.71844
+    },
+    "swad_metrics": {
+        "iou_0": 0.84301,
+        "delta_m_plus": 1.0,
+        "phi": 0.685,
+        "swad": 0.685
+    },
+    "l2_distance": 0.28538,
+    "original_prompt": "Identify the objects \"person, violin\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 136,
+            "ymin": 102,
+            "xmax": 349,
+            "ymax": 374
+        },
+        "violin": {
+            "xmin": 203,
+            "ymin": 182,
+            "xmax": 391,
+            "ymax": 256
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"per son, vial in\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [270, 280, 700, 999], \"label\": \"per son, vial in\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    270,
+                    280,
+                    700,
+                    999
+                ],
+                "label": "per son, vial in"
+            }
+        ],
+        "token_count": 44,
+        "raw_token_count": 81,
+        "runtime_seconds": 0.2573
+    }
+}

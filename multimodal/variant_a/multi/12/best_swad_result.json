@@ -1,0 +1,88 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/12",
+        "folder_id": "12",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00026732.JPEG"
+    },
+    "pareto_index": 7,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 60,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.307337327911573,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.4250594765975527
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.0552,
+        "txt_dist": 0.30608,
+        "txt_sim": 0.69392
+    },
+    "swad_metrics": {
+        "iou_0": 0.6609,
+        "delta_m_plus": 1.0,
+        "phi": 0.65562,
+        "swad": 0.65562
+    },
+    "l2_distance": 0.31102,
+    "original_prompt": "Identify the objects \"cart, hat with a wide brim, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 503,
+            "ymin": 112,
+            "xmax": 550,
+            "ymax": 161
+        },
+        "person_1": {
+            "xmin": 502,
+            "ymin": 112,
+            "xmax": 546,
+            "ymax": 176
+        },
+        "hat with a wide brim": {
+            "xmin": 505,
+            "ymin": 116,
+            "xmax": 547,
+            "ymax": 143
+        },
+        "cart": {
+            "xmin": 232,
+            "ymin": 141,
+            "xmax": 607,
+            "ymax": 376
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"cjrt, het wpth a wied bris, preson\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [300, 284, 535, 752], \"label\": \"cjrt, het wpth a wied bris, preson\"},\n\t{\"bbox_2d\": [588, 292, 782, 744], \"label\": \"cjrt, het wpth a wied bris, preson\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    300,
+                    284,
+                    535,
+                    752
+                ],
+                "label": "cjrt, het wpth a wied bris, preson"
+            },
+            {
+                "bbox_2d": [
+                    588,
+                    292,
+                    782,
+                    744
+                ],
+                "label": "cjrt, het wpth a wied bris, preson"
+            }
+        ],
+        "token_count": 98,
+        "raw_token_count": 165,
+        "runtime_seconds": 0.7424
+    }
+}

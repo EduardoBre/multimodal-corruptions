@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/19",
+        "folder_id": "19",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00002006.JPEG"
+    },
+    "pareto_index": 4,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.019206,
+            "defocus_blur": 0.050366,
+            "motion_blur": 0.033994,
+            "fog_filter": 0.043008,
+            "pixelate": 0.515585,
+            "jpeg_filter": 0.152061
+        },
+        "text_corruptions": {
+            "homophone": 0.028925,
+            "synonym": 0.031573,
+            "ata_saliency": 0.100707,
+            "fragmentation": 0.04596,
+            "character_noise": 0.029077
+        },
+        "img_budget_used": 0.814221,
+        "txt_budget_used": 0.236241,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.06187,
+        "img_dist": 0.06115,
+        "txt_dist": 0.27869,
+        "txt_sim": 0.72131
+    },
+    "swad_metrics": {
+        "iou_0": 0.97521,
+        "delta_m_plus": 0.93656,
+        "phi": 0.6772,
+        "swad": 0.63424
+    },
+    "l2_distance": 0.29195,
+    "original_prompt": "Identify the objects \"swine\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "swine": {
+            "xmin": 151,
+            "ymin": 149,
+            "xmax": 219,
+            "ymax": 297
+        },
+        "swine_1": {
+            "xmin": 254,
+            "ymin": 147,
+            "xmax": 337,
+            "ymax": 273
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"swnie\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 999, 997], \"label\": \"swnie\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    999,
+                    997
+                ],
+                "label": "swnie"
+            }
+        ],
+        "token_count": 37,
+        "raw_token_count": 87,
+        "runtime_seconds": 0.2673
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.019206255949220954,
+        "defocus_blur": 0.05036609702895934,
+        "motion_blur": 0.03399443726099863,
+        "fog_filter": 0.043008442472461265,
+        "pixelate": 0.5155853126503316,
+        "jpeg_filter": 0.15206059494880192
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.028924715323687896,
+        "synonym": 0.03157275760975072,
+        "ata_saliency": 0.10070683250333162,
+        "fragmentation": 0.04596011790171905,
+        "character_noise": 0.029076908895306904
+    }
+}

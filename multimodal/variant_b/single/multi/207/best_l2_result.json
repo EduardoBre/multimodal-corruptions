@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/207",
+        "folder_id": "207",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00009690.JPEG"
+    },
+    "pareto_index": 19,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 3,
+    "total_evaluations": 90,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.031029,
+            "defocus_blur": 0.2584,
+            "motion_blur": 0.000152,
+            "fog_filter": 0.02855,
+            "pixelate": 0.500017,
+            "jpeg_filter": 0.037631
+        },
+        "text_corruptions": {
+            "homophone": 0.111019,
+            "synonym": 0.061368,
+            "ata_saliency": 0.055829,
+            "fragmentation": 0.068226,
+            "character_noise": 0.035738
+        },
+        "img_budget_used": 0.855779,
+        "txt_budget_used": 0.332179,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.0416,
+        "txt_dist": 0.19609,
+        "txt_sim": 0.80391
+    },
+    "swad_metrics": {
+        "iou_0": 0.56401,
+        "delta_m_plus": 1.0,
+        "phi": 0.77047,
+        "swad": 0.77047
+    },
+    "l2_distance": 0.20045,
+    "original_prompt": "Identify the objects \"maraca\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "maraca": {
+            "xmin": 444,
+            "ymin": 189,
+            "xmax": 1458,
+            "ymax": 870
+        },
+        "maraca_1": {
+            "xmin": 597,
+            "ymin": 57,
+            "xmax": 1065,
+            "ymax": 1074
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"mar\u200da\u0441ka\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [280, 49, 915, 900], \"label\": \"mar\u200da\u0441\u043a\u0430\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    280,
+                    49,
+                    915,
+                    900
+                ],
+                "label": "mar\u200da\u0441\u043a\u0430"
+            }
+        ],
+        "token_count": 42,
+        "raw_token_count": 48,
+        "runtime_seconds": 0.2072
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.031029227133994003,
+        "defocus_blur": 0.25839984630676877,
+        "motion_blur": 0.0001521145337264468,
+        "fog_filter": 0.028550033828480537,
+        "pixelate": 0.5000165245611965,
+        "jpeg_filter": 0.03763085305020803
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.11101883858052546,
+        "synonym": 0.06136757785464479,
+        "ata_saliency": 0.05582898814397714,
+        "fragmentation": 0.06822601938288031,
+        "character_noise": 0.035737944382818305
+    }
+}

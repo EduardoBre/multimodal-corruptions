@@ -1,0 +1,408 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/103",
+        "folder_id": "103",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00003673.JPEG"
+    },
+    "original_prompt": "Identify the objects \"iPod, purse\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "purse": {
+            "xmin": 104,
+            "ymin": 69,
+            "xmax": 408,
+            "ymax": 297
+        },
+        "iPod": {
+            "xmin": 223,
+            "ymin": 128,
+            "xmax": 402,
+            "ymax": 284
+        }
+    },
+    "baseline_iou": 0.87792,
+    "swad_star": 0.68496,
+    "swad_star_index": 5,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "n_solutions": 8,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8181617493544074,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.41721849968957336
+            },
+            "objectives": {
+                "iou": 0.85213,
+                "img_dist": 0.04781,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.87792,
+                "delta_m_plus": 0.02938,
+                "phi": 0.95219,
+                "swad": 0.02797
+            },
+            "l2_distance": 0.85347,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"iPod, purse\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [442, 338, 800, 728], \"label\": \"iPod\"},\n\t{\"bbox_2d\": [208, 188, 700, 794], \"label\": \"purse\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            442,
+                            338,
+                            800,
+                            728
+                        ],
+                        "label": "iPod"
+                    },
+                    {
+                        "bbox_2d": [
+                            208,
+                            188,
+                            700,
+                            794
+                        ],
+                        "label": "purse"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 77,
+                "runtime_seconds": 0.2707
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.018153363333776373,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.24927259019092207
+            },
+            "objectives": {
+                "iou": 0.87454,
+                "img_dist": 0.02864,
+                "txt_dist": 0.17699,
+                "txt_sim": 0.82301
+            },
+            "swad_metrics": {
+                "iou_0": 0.87792,
+                "delta_m_plus": 0.00385,
+                "phi": 0.79944,
+                "swad": 0.00308
+            },
+            "l2_distance": 0.89273,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"i\u200dPod, \u0440urse\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [444, 343, 800, 740], \"label\": \"i\u200dPod\"},\n\t{\"bbox_2d\": [210, 188, 708, 795], \"label\": \"\u0440urse\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            444,
+                            343,
+                            800,
+                            740
+                        ],
+                        "label": "i\u200dPod"
+                    },
+                    {
+                        "bbox_2d": [
+                            210,
+                            188,
+                            708,
+                            795
+                        ],
+                        "label": "\u0440urse"
+                    }
+                ],
+                "token_count": 76,
+                "raw_token_count": 77,
+                "runtime_seconds": 0.2707
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.02471,
+                "txt_dist": 0.34888,
+                "txt_sim": 0.65112
+            },
+            "swad_metrics": {
+                "iou_0": 0.87792,
+                "delta_m_plus": 1.0,
+                "phi": 0.63503,
+                "swad": 0.63503
+            },
+            "l2_distance": 0.34975,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"eye pod, perse\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [444, 340, 800, 750], \"label\": \"eye pod, perse\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            444,
+                            340,
+                            800,
+                            750
+                        ],
+                        "label": "eye pod, perse"
+                    }
+                ],
+                "token_count": 42,
+                "raw_token_count": 77,
+                "runtime_seconds": 0.2707
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.6126883641923373,
+                "txt_attack": "homophone",
+                "txt_scale": 0.10684452896191199
+            },
+            "objectives": {
+                "iou": 0.86679,
+                "img_dist": 0.04057,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.87792,
+                "delta_m_plus": 0.01268,
+                "phi": 0.95943,
+                "swad": 0.01216
+            },
+            "l2_distance": 0.86774,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"iPod, purse\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [440, 340, 800, 740], \"label\": \"iPod\"},\n\t{\"bbox_2d\": [208, 188, 700, 792], \"label\": \"purse\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            440,
+                            340,
+                            800,
+                            740
+                        ],
+                        "label": "iPod"
+                    },
+                    {
+                        "bbox_2d": [
+                            208,
+                            188,
+                            700,
+                            792
+                        ],
+                        "label": "purse"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 77,
+                "runtime_seconds": 0.2707
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.77367,
+                "img_dist": 0.05957,
+                "txt_dist": 0.1679,
+                "txt_sim": 0.8321
+            },
+            "swad_metrics": {
+                "iou_0": 0.87792,
+                "delta_m_plus": 0.11875,
+                "phi": 0.78253,
+                "swad": 0.09292
+            },
+            "l2_distance": 0.79392,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"iPod, perse\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [448, 338, 800, 750], \"label\": \"iPod\"},\n\t{\"bbox_2d\": [208, 180, 616, 720], \"label\": \"perse\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            448,
+                            338,
+                            800,
+                            750
+                        ],
+                        "label": "iPod"
+                    },
+                    {
+                        "bbox_2d": [
+                            208,
+                            180,
+                            616,
+                            720
+                        ],
+                        "label": "perse"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 77,
+                "runtime_seconds": 0.2707
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.9316177058680379,
+                "txt_attack": "homophone",
+                "txt_scale": 0.9948250792623392
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.05607,
+                "txt_dist": 0.27435,
+                "txt_sim": 0.72565
+            },
+            "swad_metrics": {
+                "iou_0": 0.87792,
+                "delta_m_plus": 1.0,
+                "phi": 0.68496,
+                "swad": 0.68496
+            },
+            "l2_distance": 0.28002,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"ipawed, purss\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [444, 338, 802, 740], \"label\": \"ipawed, purss\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            444,
+                            338,
+                            802,
+                            740
+                        ],
+                        "label": "ipawed, purss"
+                    }
+                ],
+                "token_count": 44,
+                "raw_token_count": 85,
+                "runtime_seconds": 0.3045
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.03732619454213726,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.33647038540361596
+            },
+            "objectives": {
+                "iou": 0.87951,
+                "img_dist": 0.01947,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.87792,
+                "delta_m_plus": 0.0,
+                "phi": 0.98053,
+                "swad": 0.0
+            },
+            "l2_distance": 0.87973,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"iPod, purse\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [444, 338, 800, 750], \"label\": \"iPod\"},\n\t{\"bbox_2d\": [212, 182, 700, 792], \"label\": \"purse\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            444,
+                            338,
+                            800,
+                            750
+                        ],
+                        "label": "iPod"
+                    },
+                    {
+                        "bbox_2d": [
+                            212,
+                            182,
+                            700,
+                            792
+                        ],
+                        "label": "purse"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 85,
+                "runtime_seconds": 0.3045
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "fog_filter",
+                "img_scale": 0.02226035255626979,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4303904312548027
+            },
+            "objectives": {
+                "iou": 0.76973,
+                "img_dist": 0.07804,
+                "txt_dist": 0.1679,
+                "txt_sim": 0.8321
+            },
+            "swad_metrics": {
+                "iou_0": 0.87792,
+                "delta_m_plus": 0.12323,
+                "phi": 0.76716,
+                "swad": 0.09454
+            },
+            "l2_distance": 0.79168,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"iPod, perse\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [444, 338, 800, 750], \"label\": \"iPod\"},\n\t{\"bbox_2d\": [212, 188, 625, 708], \"label\": \"perse\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            444,
+                            338,
+                            800,
+                            750
+                        ],
+                        "label": "iPod"
+                    },
+                    {
+                        "bbox_2d": [
+                            212,
+                            188,
+                            625,
+                            708
+                        ],
+                        "label": "perse"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 85,
+                "runtime_seconds": 0.3045
+            }
+        }
+    ]
+}

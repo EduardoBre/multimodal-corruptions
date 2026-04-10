@@ -1,0 +1,79 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/28",
+        "folder_id": "28",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00002552.JPEG"
+    },
+    "pareto_index": 0,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.018153363333776373,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.24927259019092207
+    },
+    "objectives": {
+        "iou": 0.15514,
+        "img_dist": 0.06287,
+        "txt_dist": 0.11156,
+        "txt_sim": 0.88844
+    },
+    "swad_metrics": {
+        "iou_0": 0.51543,
+        "delta_m_plus": 0.69901,
+        "phi": 0.83258,
+        "swad": 0.58198
+    },
+    "l2_distance": 0.20116,
+    "original_prompt": "Identify the objects \"hat with a wide brim, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 165,
+            "ymin": 0,
+            "xmax": 258,
+            "ymax": 85
+        },
+        "person_1": {
+            "xmin": 454,
+            "ymin": 7,
+            "xmax": 499,
+            "ymax": 68
+        },
+        "person_2": {
+            "xmin": 156,
+            "ymin": 240,
+            "xmax": 280,
+            "ymax": 332
+        },
+        "hat with a wide brim": {
+            "xmin": 174,
+            "ymin": 0,
+            "xmax": 212,
+            "ymax": 19
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"h\u0430t\u200b wi\u200dth a w\u200bi\u200bde\u200d brim, p\u0435rs\u200don\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [333, 0, 472, 130], \"label\": \"h\u0430t\u200b wi\u200dth a w\u200bi\u200bde\u200d brim, p\u0435rs\u200don\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    333,
+                    0,
+                    472,
+                    130
+                ],
+                "label": "h\u0430t\u200b wi\u200dth a w\u200bi\u200bde\u200d brim, p\u0435rs\u200don"
+            }
+        ],
+        "token_count": 61,
+        "raw_token_count": 108,
+        "runtime_seconds": 0.3959
+    }
+}

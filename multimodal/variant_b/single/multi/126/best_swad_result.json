@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/126",
+        "folder_id": "126",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00022566.JPEG"
+    },
+    "pareto_index": 22,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 14,
+    "total_evaluations": 420,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.003267,
+            "defocus_blur": 0.004992,
+            "motion_blur": 0.101135,
+            "fog_filter": 0.00549,
+            "pixelate": 0.017252,
+            "jpeg_filter": 0.001863
+        },
+        "text_corruptions": {
+            "homophone": 0.068277,
+            "synonym": 0.00494,
+            "ata_saliency": 0.21464,
+            "fragmentation": 0.169507,
+            "character_noise": 0.033008
+        },
+        "img_budget_used": 0.133998,
+        "txt_budget_used": 0.490372,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.09649,
+        "txt_dist": 0.29812,
+        "txt_sim": 0.70188
+    },
+    "swad_metrics": {
+        "iou_0": 0.89574,
+        "delta_m_plus": 1.0,
+        "phi": 0.63416,
+        "swad": 0.63416
+    },
+    "l2_distance": 0.31335,
+    "original_prompt": "Identify the objects \"dog\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 16,
+            "ymin": 84,
+            "xmax": 288,
+            "ymax": 301
+        },
+        "dog_1": {
+            "xmin": 142,
+            "ymin": 93,
+            "xmax": 194,
+            "ymax": 170
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"d\u043eo\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [388, 38, 498, 107], \"label\": \"d\u043eo\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    388,
+                    38,
+                    498,
+                    107
+                ],
+                "label": "d\u043eo"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 80,
+        "runtime_seconds": 0.2497
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0032668038548955775,
+        "defocus_blur": 0.004991693200571752,
+        "motion_blur": 0.10113492786582565,
+        "fog_filter": 0.005489549823190998,
+        "pixelate": 0.017252197527614452,
+        "jpeg_filter": 0.0018632695536241455
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.06827689051228994,
+        "synonym": 0.004939845767430233,
+        "ata_saliency": 0.21464047042359666,
+        "fragmentation": 0.1695072811265212,
+        "character_noise": 0.033007632781919496
+    }
+}

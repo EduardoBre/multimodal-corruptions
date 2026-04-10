@@ -1,0 +1,2459 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/178",
+        "folder_id": "178",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00047487.JPEG"
+    },
+    "original_prompt": "Identify the objects \"dog, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 108,
+            "ymin": 0,
+            "xmax": 344,
+            "ymax": 237
+        },
+        "person_1": {
+            "xmin": 317,
+            "ymin": 0,
+            "xmax": 366,
+            "ymax": 82
+        },
+        "person_2": {
+            "xmin": 367,
+            "ymin": 0,
+            "xmax": 399,
+            "ymax": 29
+        },
+        "dog": {
+            "xmin": 37,
+            "ymin": 65,
+            "xmax": 306,
+            "ymax": 266
+        }
+    },
+    "baseline_iou": 0.63578,
+    "swad_star": 0.67583,
+    "swad_star_index": 28,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 6,
+    "total_evaluations": 165,
+    "skipped_evaluations": 45,
+    "n_solutions": 30,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.083323,
+                    "defocus_blur": 0.035724,
+                    "motion_blur": 0.127195,
+                    "fog_filter": 0.009208,
+                    "pixelate": 0.021617,
+                    "jpeg_filter": 0.004856
+                },
+                "text_corruptions": {
+                    "homophone": 0.086644,
+                    "synonym": 0.037372,
+                    "ata_saliency": 0.032044,
+                    "fragmentation": 0.042895,
+                    "character_noise": 0.121638
+                },
+                "img_budget_used": 0.281921,
+                "txt_budget_used": 0.320593,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.08296,
+                "txt_dist": 0.32201,
+                "txt_sim": 0.67799
+            },
+            "swad_metrics": {
+                "iou_0": 0.63578,
+                "delta_m_plus": 1.0,
+                "phi": 0.62174,
+                "swad": 0.62174
+            },
+            "l2_distance": 0.33252,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"da wg, per sno\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [78, 237, 764, 917], \"label\": \"da wg, per sno\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            78,
+                            237,
+                            764,
+                            917
+                        ],
+                        "label": "da wg, per sno"
+                    }
+                ],
+                "token_count": 42,
+                "raw_token_count": 119,
+                "runtime_seconds": 0.3648
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.08332260116307155,
+                "defocus_blur": 0.03572380152237166,
+                "motion_blur": 0.12719462086197322,
+                "fog_filter": 0.009207772688777087,
+                "pixelate": 0.021616611057713876,
+                "jpeg_filter": 0.004855998964320067
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.08664397990026794,
+                "synonym": 0.03737159130210612,
+                "ata_saliency": 0.032044094273754,
+                "fragmentation": 0.042895272957020114,
+                "character_noise": 0.12163818119449771
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.000198,
+                    "defocus_blur": 0.003027,
+                    "motion_blur": 0.002724,
+                    "fog_filter": 0.001124,
+                    "pixelate": 0.008372,
+                    "jpeg_filter": 0.004134
+                },
+                "text_corruptions": {
+                    "homophone": 0.098813,
+                    "synonym": 0.311503,
+                    "ata_saliency": 0.030273,
+                    "fragmentation": 0.043408,
+                    "character_noise": 0.131021
+                },
+                "img_budget_used": 0.01958,
+                "txt_budget_used": 0.615018,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.6504,
+                "img_dist": 0.08275,
+                "txt_dist": 0.06398,
+                "txt_sim": 0.93602
+            },
+            "swad_metrics": {
+                "iou_0": 0.63578,
+                "delta_m_plus": 0.0,
+                "phi": 0.85856,
+                "swad": 0.0
+            },
+            "l2_distance": 0.65876,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, p\u200ders\u043en\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [72, 236, 760, 912], \"label\": \"dog\"},\n\t{\"bbox_2d\": [278, 0, 858, 872], \"label\": \"pers\u043en\"},\n\t{\"bbox_2d\": [812, 0, 940, 276], \"label\": \"pers\u043en\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            72,
+                            236,
+                            760,
+                            912
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            278,
+                            0,
+                            858,
+                            872
+                        ],
+                        "label": "pers\u043en"
+                    },
+                    {
+                        "bbox_2d": [
+                            812,
+                            0,
+                            940,
+                            276
+                        ],
+                        "label": "pers\u043en"
+                    }
+                ],
+                "token_count": 104,
+                "raw_token_count": 134,
+                "runtime_seconds": 0.4076
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.00019816247506277226,
+                "defocus_blur": 0.0030266421288726014,
+                "motion_blur": 0.002724138922782622,
+                "fog_filter": 0.0011242040624491307,
+                "pixelate": 0.00837238889801527,
+                "jpeg_filter": 0.00413404289990248
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.09881287757226198,
+                "synonym": 0.3115028362910237,
+                "ata_saliency": 0.030273230600991505,
+                "fragmentation": 0.04340817862377025,
+                "character_noise": 0.1310213255617497
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.033985,
+                    "defocus_blur": 0.031138,
+                    "motion_blur": 0.129009,
+                    "fog_filter": 0.003496,
+                    "pixelate": 0.018005,
+                    "jpeg_filter": 0.008681
+                },
+                "text_corruptions": {
+                    "homophone": 0.077855,
+                    "synonym": 0.057162,
+                    "ata_saliency": 0.053836,
+                    "fragmentation": 0.009472,
+                    "character_noise": 0.018023
+                },
+                "img_budget_used": 0.224314,
+                "txt_budget_used": 0.216348,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.64151,
+                "img_dist": 0.08225,
+                "txt_dist": 0.09774,
+                "txt_sim": 0.90226
+            },
+            "swad_metrics": {
+                "iou_0": 0.63578,
+                "delta_m_plus": 0.0,
+                "phi": 0.82805,
+                "swad": 0.0
+            },
+            "l2_distance": 0.6541,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"do\u200dg, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [77, 236, 758, 912], \"label\": \"do\u200dg\"},\n\t{\"bbox_2d\": [260, 0, 858, 800], \"label\": \"person\"},\n\t{\"bbox_2d\": [808, 0, 998, 286], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            77,
+                            236,
+                            758,
+                            912
+                        ],
+                        "label": "do\u200dg"
+                    },
+                    {
+                        "bbox_2d": [
+                            260,
+                            0,
+                            858,
+                            800
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            808,
+                            0,
+                            998,
+                            286
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 103,
+                "raw_token_count": 118,
+                "runtime_seconds": 0.3968
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.03398528289985553,
+                "defocus_blur": 0.031138157047551508,
+                "motion_blur": 0.12900923173414763,
+                "fog_filter": 0.0034959806453455267,
+                "pixelate": 0.0180048947399469,
+                "jpeg_filter": 0.008680824223331496
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.07785517393022609,
+                "synonym": 0.057162070750467496,
+                "ata_saliency": 0.05383631224438384,
+                "fragmentation": 0.0094717368978579,
+                "character_noise": 0.018023044829957133
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.083642,
+                    "defocus_blur": 0.014403,
+                    "motion_blur": 0.105299,
+                    "fog_filter": 0.009222,
+                    "pixelate": 0.022314,
+                    "jpeg_filter": 0.004856
+                },
+                "text_corruptions": {
+                    "homophone": 0.084195,
+                    "synonym": 0.037372,
+                    "ata_saliency": 0.032044,
+                    "fragmentation": 0.042895,
+                    "character_noise": 0.062799
+                },
+                "img_budget_used": 0.239737,
+                "txt_budget_used": 0.259305,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.63155,
+                "img_dist": 0.0837,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.63578,
+                "delta_m_plus": 0.00665,
+                "phi": 0.9163,
+                "swad": 0.0061
+            },
+            "l2_distance": 0.63707,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [78, 236, 758, 912], \"label\": \"dog\"},\n\t{\"bbox_2d\": [268, 0, 858, 872], \"label\": \"person\"},\n\t{\"bbox_2d\": [812, 0, 998, 276], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            78,
+                            236,
+                            758,
+                            912
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            268,
+                            0,
+                            858,
+                            872
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            812,
+                            0,
+                            998,
+                            276
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 100,
+                "raw_token_count": 134,
+                "runtime_seconds": 0.4076
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.08364232824292982,
+                "defocus_blur": 0.014402725704737458,
+                "motion_blur": 0.10529885289794493,
+                "fog_filter": 0.009222485370053993,
+                "pixelate": 0.022314212187380195,
+                "jpeg_filter": 0.004855998964320067
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.0841947340758254,
+                "synonym": 0.03737159130210612,
+                "ata_saliency": 0.032044094273754,
+                "fragmentation": 0.042895272957020114,
+                "character_noise": 0.06279914540929038
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.045828,
+                    "defocus_blur": 0.084897,
+                    "motion_blur": 0.064529,
+                    "fog_filter": 0.281297,
+                    "pixelate": 0.073767,
+                    "jpeg_filter": 0.139364
+                },
+                "text_corruptions": {
+                    "homophone": 0.118111,
+                    "synonym": 0.334679,
+                    "ata_saliency": 0.05002,
+                    "fragmentation": 0.138469,
+                    "character_noise": 0.358721
+                },
+                "img_budget_used": 0.689683,
+                "txt_budget_used": 1.0,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.44797,
+                "img_dist": 0.11306,
+                "txt_dist": 0.18312,
+                "txt_sim": 0.81688
+            },
+            "swad_metrics": {
+                "iou_0": 0.63578,
+                "delta_m_plus": 0.2954,
+                "phi": 0.72452,
+                "swad": 0.21402
+            },
+            "l2_distance": 0.49698,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"d\u043eg\u200d, p\u0435r son\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [82, 247, 760, 920], \"label\": \"d\u043eg\"},\n\t{\"bbox_2d\": [378, 0, 860, 833], \"label\": \"p\u0435r son\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            82,
+                            247,
+                            760,
+                            920
+                        ],
+                        "label": "d\u043eg"
+                    },
+                    {
+                        "bbox_2d": [
+                            378,
+                            0,
+                            860,
+                            833
+                        ],
+                        "label": "p\u0435r son"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 118,
+                "runtime_seconds": 0.3649
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.045827702802417936,
+                "defocus_blur": 0.0848972587955039,
+                "motion_blur": 0.06452940520896741,
+                "fog_filter": 0.28129692164161607,
+                "pixelate": 0.07376722024849,
+                "jpeg_filter": 0.13936414002291303
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.11811138981034032,
+                "synonym": 0.33467874159324923,
+                "ata_saliency": 0.05001966797180917,
+                "fragmentation": 0.13846930881079128,
+                "character_noise": 0.35872089181381006
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.094264,
+                    "defocus_blur": 0.037098,
+                    "motion_blur": 0.152931,
+                    "fog_filter": 0.003166,
+                    "pixelate": 0.555071,
+                    "jpeg_filter": 0.025646
+                },
+                "text_corruptions": {
+                    "homophone": 0.038491,
+                    "synonym": 0.316726,
+                    "ata_saliency": 0.025757,
+                    "fragmentation": 0.137349,
+                    "character_noise": 0.016403
+                },
+                "img_budget_used": 0.868176,
+                "txt_budget_used": 0.534726,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.45335,
+                "img_dist": 0.08937,
+                "txt_dist": 0.26083,
+                "txt_sim": 0.73917
+            },
+            "swad_metrics": {
+                "iou_0": 0.63578,
+                "delta_m_plus": 0.28694,
+                "phi": 0.67311,
+                "swad": 0.19314
+            },
+            "l2_distance": 0.53061,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"daw\u200bg, hu\u200dman\u200d\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [78, 238, 760, 900], \"label\": \"daw\u200bg\"},\n\t{\"bbox_2d\": [350, 0, 858, 838], \"label\": \"hu\u200dman\u200d\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            78,
+                            238,
+                            760,
+                            900
+                        ],
+                        "label": "daw\u200bg"
+                    },
+                    {
+                        "bbox_2d": [
+                            350,
+                            0,
+                            858,
+                            838
+                        ],
+                        "label": "hu\u200dman\u200d"
+                    }
+                ],
+                "token_count": 77,
+                "raw_token_count": 134,
+                "runtime_seconds": 0.4081
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.09426409336140835,
+                "defocus_blur": 0.03709820997470795,
+                "motion_blur": 0.1529311202416856,
+                "fog_filter": 0.0031664796947871677,
+                "pixelate": 0.5550709826297547,
+                "jpeg_filter": 0.02564554348021213
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.03849116851478701,
+                "synonym": 0.31672587697041327,
+                "ata_saliency": 0.025757312988689766,
+                "fragmentation": 0.13734862785698243,
+                "character_noise": 0.01640287122663208
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.031494,
+                    "defocus_blur": 0.120285,
+                    "motion_blur": 0.070335,
+                    "fog_filter": 0.087665,
+                    "pixelate": 0.62148,
+                    "jpeg_filter": 0.0457
+                },
+                "text_corruptions": {
+                    "homophone": 0.003295,
+                    "synonym": 0.016191,
+                    "ata_saliency": 0.002571,
+                    "fragmentation": 0.005945,
+                    "character_noise": 0.00319
+                },
+                "img_budget_used": 0.976958,
+                "txt_budget_used": 0.031192,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.45531,
+                "img_dist": 0.10144,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.63578,
+                "delta_m_plus": 0.28386,
+                "phi": 0.89856,
+                "swad": 0.25506
+            },
+            "l2_distance": 0.46647,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [80, 250, 758, 900], \"label\": \"dog\"},\n\t{\"bbox_2d\": [348, 0, 860, 820], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            80,
+                            250,
+                            758,
+                            900
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            348,
+                            0,
+                            860,
+                            820
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 69,
+                "raw_token_count": 118,
+                "runtime_seconds": 0.3649
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.03149406740161996,
+                "defocus_blur": 0.12028479473079609,
+                "motion_blur": 0.07033487112904613,
+                "fog_filter": 0.08766496048514008,
+                "pixelate": 0.6214800192724657,
+                "jpeg_filter": 0.045699573492128276
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.0032950264592472335,
+                "synonym": 0.016190933239194145,
+                "ata_saliency": 0.00257055501113459,
+                "fragmentation": 0.005945192837640366,
+                "character_noise": 0.003190187714237297
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.033985,
+                    "defocus_blur": 0.031138,
+                    "motion_blur": 0.012793,
+                    "fog_filter": 0.020104,
+                    "pixelate": 0.066538,
+                    "jpeg_filter": 0.028396
+                },
+                "text_corruptions": {
+                    "homophone": 0.07733,
+                    "synonym": 0.057162,
+                    "ata_saliency": 0.053836,
+                    "fragmentation": 0.005334,
+                    "character_noise": 0.014453
+                },
+                "img_budget_used": 0.192954,
+                "txt_budget_used": 0.208115,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.48071,
+                "img_dist": 0.08469,
+                "txt_dist": 0.19084,
+                "txt_sim": 0.80916
+            },
+            "swad_metrics": {
+                "iou_0": 0.63578,
+                "delta_m_plus": 0.24391,
+                "phi": 0.74063,
+                "swad": 0.18064
+            },
+            "l2_distance": 0.52409,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, \u0440e\u200drosn\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [77, 237, 758, 907], \"label\": \"dog\"},\n\t{\"bbox_2d\": [277, 0, 858, 847], \"label\": \"\u0440e\u200drosn\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            77,
+                            237,
+                            758,
+                            907
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            277,
+                            0,
+                            858,
+                            847
+                        ],
+                        "label": "\u0440e\u200drosn"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 118,
+                "runtime_seconds": 0.3649
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.03398528289985553,
+                "defocus_blur": 0.031138157047551508,
+                "motion_blur": 0.01279310111274079,
+                "fog_filter": 0.02010419095154795,
+                "pixelate": 0.06653768370812072,
+                "jpeg_filter": 0.028395699999334445
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.07733023346691052,
+                "synonym": 0.057162070750467496,
+                "ata_saliency": 0.05383631224438384,
+                "fragmentation": 0.005333843614129412,
+                "character_noise": 0.014452703915610564
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.050115,
+                    "defocus_blur": 0.171119,
+                    "motion_blur": 0.131832,
+                    "fog_filter": 0.00339,
+                    "pixelate": 0.000297,
+                    "jpeg_filter": 0.007815
+                },
+                "text_corruptions": {
+                    "homophone": 0.038688,
+                    "synonym": 0.060549,
+                    "ata_saliency": 0.143426,
+                    "fragmentation": 0.036154,
+                    "character_noise": 0.126647
+                },
+                "img_budget_used": 0.364568,
+                "txt_budget_used": 0.405464,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.46007,
+                "img_dist": 0.09547,
+                "txt_dist": 0.25644,
+                "txt_sim": 0.74356
+            },
+            "swad_metrics": {
+                "iou_0": 0.63578,
+                "delta_m_plus": 0.27637,
+                "phi": 0.67257,
+                "swad": 0.18588
+            },
+            "l2_distance": 0.53529,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"ca\u200bn\u200bine\u200d, hum\u0430n\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [87, 240, 756, 900], \"label\": \"ca\u200bn\u200bine\"},\n\t{\"bbox_2d\": [330, 0, 860, 850], \"label\": \"hum\u0430n\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            87,
+                            240,
+                            756,
+                            900
+                        ],
+                        "label": "ca\u200bn\u200bine"
+                    },
+                    {
+                        "bbox_2d": [
+                            330,
+                            0,
+                            860,
+                            850
+                        ],
+                        "label": "hum\u0430n"
+                    }
+                ],
+                "token_count": 75,
+                "raw_token_count": 117,
+                "runtime_seconds": 0.3571
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.05011535599424818,
+                "defocus_blur": 0.1711190050879693,
+                "motion_blur": 0.13183157979753699,
+                "fog_filter": 0.003390095885109268,
+                "pixelate": 0.0002973668509829164,
+                "jpeg_filter": 0.007814801981776719
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.038687524014405957,
+                "synonym": 0.060549185914324025,
+                "ata_saliency": 0.1434263044537657,
+                "fragmentation": 0.036153841750959356,
+                "character_noise": 0.12664695777668866
+            }
+        },
+        {
+            "index": 9,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.035576,
+                    "defocus_blur": 0.031121,
+                    "motion_blur": 0.111438,
+                    "fog_filter": 0.003394,
+                    "pixelate": 0.013918,
+                    "jpeg_filter": 0.00625
+                },
+                "text_corruptions": {
+                    "homophone": 0.097392,
+                    "synonym": 0.058711,
+                    "ata_saliency": 0.032786,
+                    "fragmentation": 0.042546,
+                    "character_noise": 0.111921
+                },
+                "img_budget_used": 0.201697,
+                "txt_budget_used": 0.343357,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.49128,
+                "img_dist": 0.0831,
+                "txt_dist": 0.177,
+                "txt_sim": 0.823
+            },
+            "swad_metrics": {
+                "iou_0": 0.63578,
+                "delta_m_plus": 0.22728,
+                "phi": 0.75461,
+                "swad": 0.17151
+            },
+            "l2_distance": 0.52876,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"d\u200do\u200dg\u200b, human\u200d\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [70, 230, 758, 912], \"label\": \"d\u200do\u200dg\u200b\"},\n\t{\"bbox_2d\": [270, 0, 860, 830], \"label\": \"human\u200d\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            70,
+                            230,
+                            758,
+                            912
+                        ],
+                        "label": "d\u200do\u200dg\u200b"
+                    },
+                    {
+                        "bbox_2d": [
+                            270,
+                            0,
+                            860,
+                            830
+                        ],
+                        "label": "human\u200d"
+                    }
+                ],
+                "token_count": 78,
+                "raw_token_count": 118,
+                "runtime_seconds": 0.3649
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.035576414376374835,
+                "defocus_blur": 0.03112086844808895,
+                "motion_blur": 0.11143780543106524,
+                "fog_filter": 0.003393666073377926,
+                "pixelate": 0.013917777324906015,
+                "jpeg_filter": 0.006249995553075222
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.09739220680177231,
+                "synonym": 0.0587114725150425,
+                "ata_saliency": 0.032786360947115366,
+                "fragmentation": 0.042545995116286886,
+                "character_noise": 0.11192104456067736
+            }
+        },
+        {
+            "index": 10,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.050115,
+                    "defocus_blur": 0.171119,
+                    "motion_blur": 0.059086,
+                    "fog_filter": 0.00339,
+                    "pixelate": 0.001213,
+                    "jpeg_filter": 0.000668
+                },
+                "text_corruptions": {
+                    "homophone": 0.038191,
+                    "synonym": 0.528205,
+                    "ata_saliency": 0.143426,
+                    "fragmentation": 0.036154,
+                    "character_noise": 0.048178
+                },
+                "img_budget_used": 0.285592,
+                "txt_budget_used": 0.794154,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.4636,
+                "img_dist": 0.09572,
+                "txt_dist": 0.21312,
+                "txt_sim": 0.78688
+            },
+            "swad_metrics": {
+                "iou_0": 0.63578,
+                "delta_m_plus": 0.27082,
+                "phi": 0.71156,
+                "swad": 0.1927
+            },
+            "l2_distance": 0.51914,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"do\u200dg, man\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [85, 250, 750, 910], \"label\": \"do\u200dg\"},\n\t{\"bbox_2d\": [320, 0, 860, 840], \"label\": \"man\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            85,
+                            250,
+                            750,
+                            910
+                        ],
+                        "label": "do\u200dg"
+                    },
+                    {
+                        "bbox_2d": [
+                            320,
+                            0,
+                            860,
+                            840
+                        ],
+                        "label": "man"
+                    }
+                ],
+                "token_count": 72,
+                "raw_token_count": 117,
+                "runtime_seconds": 0.3731
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.05011535599424818,
+                "defocus_blur": 0.1711190050879693,
+                "motion_blur": 0.059086138287074125,
+                "fog_filter": 0.003390095885109268,
+                "pixelate": 0.0012129980799522756,
+                "jpeg_filter": 0.0006680179071591307
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.03819120364991552,
+                "synonym": 0.5282050191393604,
+                "ata_saliency": 0.1434263044537657,
+                "fragmentation": 0.036153841750959356,
+                "character_noise": 0.04817801663041222
+            }
+        },
+        {
+            "index": 11,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.078722,
+                    "defocus_blur": 0.039157,
+                    "motion_blur": 0.121555,
+                    "fog_filter": 0.002731,
+                    "pixelate": 0.136159,
+                    "jpeg_filter": 0.068821
+                },
+                "text_corruptions": {
+                    "homophone": 0.012458,
+                    "synonym": 0.244769,
+                    "ata_saliency": 0.424056,
+                    "fragmentation": 0.08083,
+                    "character_noise": 0.05045
+                },
+                "img_budget_used": 0.447144,
+                "txt_budget_used": 0.812563,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.62238,
+                "img_dist": 0.08376,
+                "txt_dist": 0.03927,
+                "txt_sim": 0.96073
+            },
+            "swad_metrics": {
+                "iou_0": 0.63578,
+                "delta_m_plus": 0.02108,
+                "phi": 0.88026,
+                "swad": 0.01855
+            },
+            "l2_distance": 0.62922,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, p\u0435rson\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [78, 236, 758, 912], \"label\": \"dog\"},\n\t{\"bbox_2d\": [300, 0, 858, 840], \"label\": \"p\u0435rson\"},\n\t{\"bbox_2d\": [818, 0, 998, 286], \"label\": \"p\u0435rson\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            78,
+                            236,
+                            758,
+                            912
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            300,
+                            0,
+                            858,
+                            840
+                        ],
+                        "label": "p\u0435rson"
+                    },
+                    {
+                        "bbox_2d": [
+                            818,
+                            0,
+                            998,
+                            286
+                        ],
+                        "label": "p\u0435rson"
+                    }
+                ],
+                "token_count": 106,
+                "raw_token_count": 117,
+                "runtime_seconds": 0.3571
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.07872167389476006,
+                "defocus_blur": 0.03915662580232475,
+                "motion_blur": 0.12155505544595578,
+                "fog_filter": 0.002730623869837863,
+                "pixelate": 0.13615887479049504,
+                "jpeg_filter": 0.06882122093447314
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.012458231168797143,
+                "synonym": 0.2447687980609355,
+                "ata_saliency": 0.42405573596853746,
+                "fragmentation": 0.08083006790357042,
+                "character_noise": 0.050449746938185075
+            }
+        },
+        {
+            "index": 12,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.046486,
+                    "defocus_blur": 0.087225,
+                    "motion_blur": 0.326469,
+                    "fog_filter": 0.022331,
+                    "pixelate": 0.206052,
+                    "jpeg_filter": 0.005783
+                },
+                "text_corruptions": {
+                    "homophone": 0.065707,
+                    "synonym": 0.059799,
+                    "ata_saliency": 0.079993,
+                    "fragmentation": 0.080119,
+                    "character_noise": 0.0358
+                },
+                "img_budget_used": 0.694346,
+                "txt_budget_used": 0.321419,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.48839,
+                "img_dist": 0.09343,
+                "txt_dist": 0.07958,
+                "txt_sim": 0.92042
+            },
+            "swad_metrics": {
+                "iou_0": 0.63578,
+                "delta_m_plus": 0.23183,
+                "phi": 0.83443,
+                "swad": 0.19344
+            },
+            "l2_distance": 0.50357,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, p\u200berhon\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [78, 247, 760, 917], \"label\": \"dog\"},\n\t{\"bbox_2d\": [270, 0, 858, 800], \"label\": \"p\u200berhon\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            78,
+                            247,
+                            760,
+                            917
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            270,
+                            0,
+                            858,
+                            800
+                        ],
+                        "label": "p\u200berhon"
+                    }
+                ],
+                "token_count": 72,
+                "raw_token_count": 134,
+                "runtime_seconds": 0.4076
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.04648645996710984,
+                "defocus_blur": 0.0872249205562308,
+                "motion_blur": 0.3264686088999642,
+                "fog_filter": 0.022331087375542062,
+                "pixelate": 0.20605232902298784,
+                "jpeg_filter": 0.005782558871540491
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.06570675290671256,
+                "synonym": 0.05979947786870681,
+                "ata_saliency": 0.07999309576545706,
+                "fragmentation": 0.0801194827888935,
+                "character_noise": 0.035800089060333454
+            }
+        },
+        {
+            "index": 13,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.027103,
+                    "defocus_blur": 0.072921,
+                    "motion_blur": 0.278679,
+                    "fog_filter": 0.03398,
+                    "pixelate": 0.552054,
+                    "jpeg_filter": 0.035263
+                },
+                "text_corruptions": {
+                    "homophone": 0.013719,
+                    "synonym": 0.07009,
+                    "ata_saliency": 0.079754,
+                    "fragmentation": 0.026443,
+                    "character_noise": 0.008821
+                },
+                "img_budget_used": 1.0,
+                "txt_budget_used": 0.198827,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.48739,
+                "img_dist": 0.09367,
+                "txt_dist": 0.14814,
+                "txt_sim": 0.85186
+            },
+            "swad_metrics": {
+                "iou_0": 0.63578,
+                "delta_m_plus": 0.2334,
+                "phi": 0.77207,
+                "swad": 0.1802
+            },
+            "l2_distance": 0.51795,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dawg, perso\u200bn\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [78, 240, 758, 912], \"label\": \"dawg\"},\n\t{\"bbox_2d\": [278, 0, 860, 830], \"label\": \"perso\u200bn\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            78,
+                            240,
+                            758,
+                            912
+                        ],
+                        "label": "dawg"
+                    },
+                    {
+                        "bbox_2d": [
+                            278,
+                            0,
+                            860,
+                            830
+                        ],
+                        "label": "perso\u200bn"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 117,
+                "runtime_seconds": 0.3662
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.02710311055321246,
+                "defocus_blur": 0.07292087946422994,
+                "motion_blur": 0.27867886750534077,
+                "fog_filter": 0.033980198291630334,
+                "pixelate": 0.5520536669619067,
+                "jpeg_filter": 0.03526327722367989
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.01371914125994644,
+                "synonym": 0.07009005028884066,
+                "ata_saliency": 0.07975358871040854,
+                "fragmentation": 0.026443404595055547,
+                "character_noise": 0.008820904944247851
+            }
+        },
+        {
+            "index": 14,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.001169,
+                    "defocus_blur": 0.167537,
+                    "motion_blur": 0.11341,
+                    "fog_filter": 0.008072,
+                    "pixelate": 0.012471,
+                    "jpeg_filter": 0.032427
+                },
+                "text_corruptions": {
+                    "homophone": 0.022627,
+                    "synonym": 0.10831,
+                    "ata_saliency": 0.001844,
+                    "fragmentation": 0.07934,
+                    "character_noise": 0.006615
+                },
+                "img_budget_used": 0.335088,
+                "txt_budget_used": 0.218737,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.4527,
+                "img_dist": 0.09617,
+                "txt_dist": 0.05241,
+                "txt_sim": 0.94759
+            },
+            "swad_metrics": {
+                "iou_0": 0.63578,
+                "delta_m_plus": 0.28796,
+                "phi": 0.85646,
+                "swad": 0.24663
+            },
+            "l2_distance": 0.46576,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"canine, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [83, 250, 758, 910], \"label\": \"canine\"},\n\t{\"bbox_2d\": [348, 0, 860, 850], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            83,
+                            250,
+                            758,
+                            910
+                        ],
+                        "label": "canine"
+                    },
+                    {
+                        "bbox_2d": [
+                            348,
+                            0,
+                            860,
+                            850
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 70,
+                "raw_token_count": 134,
+                "runtime_seconds": 0.4081
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.0011694376417581663,
+                "defocus_blur": 0.167537407306515,
+                "motion_blur": 0.11341014490825353,
+                "fog_filter": 0.008072185735510542,
+                "pixelate": 0.012471339533690212,
+                "jpeg_filter": 0.032427223095553896
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.022627109714440367,
+                "synonym": 0.1083097948265853,
+                "ata_saliency": 0.001844470502002648,
+                "fragmentation": 0.07933999259445387,
+                "character_noise": 0.006615137342116974
+            }
+        },
+        {
+            "index": 15,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 4.9e-05,
+                    "defocus_blur": 0.171571,
+                    "motion_blur": 0.129679,
+                    "fog_filter": 0.003118,
+                    "pixelate": 0.062595,
+                    "jpeg_filter": 0.008604
+                },
+                "text_corruptions": {
+                    "homophone": 0.078008,
+                    "synonym": 0.108494,
+                    "ata_saliency": 0.066282,
+                    "fragmentation": 0.008452,
+                    "character_noise": 0.018357
+                },
+                "img_budget_used": 0.375617,
+                "txt_budget_used": 0.279593,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.62292,
+                "img_dist": 0.09548,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.63578,
+                "delta_m_plus": 0.02023,
+                "phi": 0.90452,
+                "swad": 0.0183
+            },
+            "l2_distance": 0.6302,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [82, 240, 758, 900], \"label\": \"dog\"},\n\t{\"bbox_2d\": [350, 0, 862, 830], \"label\": \"person\"},\n\t{\"bbox_2d\": [788, 0, 998, 276], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            82,
+                            240,
+                            758,
+                            900
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            350,
+                            0,
+                            862,
+                            830
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            788,
+                            0,
+                            998,
+                            276
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 100,
+                "raw_token_count": 117,
+                "runtime_seconds": 0.3731
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 4.8624887603904154e-05,
+                "defocus_blur": 0.17157144183550957,
+                "motion_blur": 0.12967937463577583,
+                "fog_filter": 0.00311813988447282,
+                "pixelate": 0.06259462200779234,
+                "jpeg_filter": 0.00860429850235171
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.07800840988477568,
+                "synonym": 0.1084942746124427,
+                "ata_saliency": 0.06628220473889657,
+                "fragmentation": 0.00845184169790103,
+                "character_noise": 0.01835654349365794
+            }
+        },
+        {
+            "index": 16,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.078818,
+                    "defocus_blur": 0.003015,
+                    "motion_blur": 0.069351,
+                    "fog_filter": 0.096687,
+                    "pixelate": 0.171616,
+                    "jpeg_filter": 0.004188
+                },
+                "text_corruptions": {
+                    "homophone": 0.01582,
+                    "synonym": 0.258793,
+                    "ata_saliency": 0.031066,
+                    "fragmentation": 0.080114,
+                    "character_noise": 0.009895
+                },
+                "img_budget_used": 0.423674,
+                "txt_budget_used": 0.395689,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.49076,
+                "img_dist": 0.09184,
+                "txt_dist": 0.16484,
+                "txt_sim": 0.83516
+            },
+            "swad_metrics": {
+                "iou_0": 0.63578,
+                "delta_m_plus": 0.2281,
+                "phi": 0.75846,
+                "swad": 0.173
+            },
+            "l2_distance": 0.52579,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"d og, person\u200d\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [80, 236, 758, 912], \"label\": \"d og\"},\n\t{\"bbox_2d\": [270, 0, 860, 836], \"label\": \"person\u200d\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            80,
+                            236,
+                            758,
+                            912
+                        ],
+                        "label": "d og"
+                    },
+                    {
+                        "bbox_2d": [
+                            270,
+                            0,
+                            860,
+                            836
+                        ],
+                        "label": "person\u200d"
+                    }
+                ],
+                "token_count": 72,
+                "raw_token_count": 118,
+                "runtime_seconds": 0.3968
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.07881822952437471,
+                "defocus_blur": 0.0030145288667848217,
+                "motion_blur": 0.06935087856182161,
+                "fog_filter": 0.09668688451406775,
+                "pixelate": 0.1716160316353463,
+                "jpeg_filter": 0.004187677409627677
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.015820337687087554,
+                "synonym": 0.2587933004550212,
+                "ata_saliency": 0.031066362829814398,
+                "fragmentation": 0.08011401797710394,
+                "character_noise": 0.009895236231564773
+            }
+        },
+        {
+            "index": 17,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.031509,
+                    "defocus_blur": 0.11891,
+                    "motion_blur": 0.070627,
+                    "fog_filter": 0.086693,
+                    "pixelate": 0.614379,
+                    "jpeg_filter": 0.020771
+                },
+                "text_corruptions": {
+                    "homophone": 0.085471,
+                    "synonym": 0.016191,
+                    "ata_saliency": 0.002557,
+                    "fragmentation": 0.005945,
+                    "character_noise": 0.032155
+                },
+                "img_budget_used": 0.94289,
+                "txt_budget_used": 0.142319,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.61337,
+                "img_dist": 0.10121,
+                "txt_dist": 0.04665,
+                "txt_sim": 0.95335
+            },
+            "swad_metrics": {
+                "iou_0": 0.63578,
+                "delta_m_plus": 0.03525,
+                "phi": 0.85686,
+                "swad": 0.0302
+            },
+            "l2_distance": 0.62341,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, \u0440erson\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [85, 247, 758, 917], \"label\": \"dog\"},\n\t{\"bbox_2d\": [350, 0, 860, 847], \"label\": \"person\"},\n\t{\"bbox_2d\": [808, 0, 998, 283], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            85,
+                            247,
+                            758,
+                            917
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            350,
+                            0,
+                            860,
+                            847
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            808,
+                            0,
+                            998,
+                            283
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 100,
+                "raw_token_count": 117,
+                "runtime_seconds": 0.3662
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.031509259928143143,
+                "defocus_blur": 0.11891038542744041,
+                "motion_blur": 0.07062726330287532,
+                "fog_filter": 0.08669319173603383,
+                "pixelate": 0.61437880650281,
+                "jpeg_filter": 0.020770932856705213
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.08547103084106182,
+                "synonym": 0.016190933239194145,
+                "ata_saliency": 0.0025566149032157635,
+                "fragmentation": 0.005945192837640366,
+                "character_noise": 0.032155284944633905
+            }
+        },
+        {
+            "index": 18,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.031496,
+                    "defocus_blur": 0.026749,
+                    "motion_blur": 0.069449,
+                    "fog_filter": 0.087422,
+                    "pixelate": 0.64696,
+                    "jpeg_filter": 0.015893
+                },
+                "text_corruptions": {
+                    "homophone": 0.01582,
+                    "synonym": 0.07009,
+                    "ata_saliency": 0.029185,
+                    "fragmentation": 0.026443,
+                    "character_noise": 0.008821
+                },
+                "img_budget_used": 0.877969,
+                "txt_budget_used": 0.15036,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.45178,
+                "img_dist": 0.09964,
+                "txt_dist": 0.13862,
+                "txt_sim": 0.86138
+            },
+            "swad_metrics": {
+                "iou_0": 0.63578,
+                "delta_m_plus": 0.28941,
+                "phi": 0.77555,
+                "swad": 0.22445
+            },
+            "l2_distance": 0.48296,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, pers\u200bnn\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [80, 250, 758, 916], \"label\": \"dog\"},\n\t{\"bbox_2d\": [340, 0, 860, 872], \"label\": \"pers\u200bnn\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            80,
+                            250,
+                            758,
+                            916
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            340,
+                            0,
+                            860,
+                            872
+                        ],
+                        "label": "pers\u200bnn"
+                    }
+                ],
+                "token_count": 71,
+                "raw_token_count": 134,
+                "runtime_seconds": 0.4076
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.0314964508822083,
+                "defocus_blur": 0.02674887410948685,
+                "motion_blur": 0.06944887023277567,
+                "fog_filter": 0.08742210787219952,
+                "pixelate": 0.6469602490185318,
+                "jpeg_filter": 0.015892888662896953
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.015820337687087554,
+                "synonym": 0.07009005028884066,
+                "ata_saliency": 0.02918507282049239,
+                "fragmentation": 0.026443404595055547,
+                "character_noise": 0.008820904944247851
+            }
+        },
+        {
+            "index": 19,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.068516,
+                    "defocus_blur": 0.117372,
+                    "motion_blur": 0.539239,
+                    "fog_filter": 0.070778,
+                    "pixelate": 0.091373,
+                    "jpeg_filter": 0.050193
+                },
+                "text_corruptions": {
+                    "homophone": 0.035719,
+                    "synonym": 0.01597,
+                    "ata_saliency": 0.020958,
+                    "fragmentation": 0.184908,
+                    "character_noise": 0.046395
+                },
+                "img_budget_used": 0.93747,
+                "txt_budget_used": 0.30395,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.61902,
+                "img_dist": 0.09948,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.63578,
+                "delta_m_plus": 0.02636,
+                "phi": 0.90052,
+                "swad": 0.02374
+            },
+            "l2_distance": 0.62696,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [83, 247, 758, 910], \"label\": \"dog\"},\n\t{\"bbox_2d\": [358, 0, 860, 833], \"label\": \"person\"},\n\t{\"bbox_2d\": [788, 0, 998, 288], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            83,
+                            247,
+                            758,
+                            910
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            358,
+                            0,
+                            860,
+                            833
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            788,
+                            0,
+                            998,
+                            288
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 100,
+                "raw_token_count": 134,
+                "runtime_seconds": 0.4081
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.06851566739533567,
+                "defocus_blur": 0.11737212315314233,
+                "motion_blur": 0.5392386318069821,
+                "fog_filter": 0.07077841414809524,
+                "pixelate": 0.09137299350563434,
+                "jpeg_filter": 0.05019251866248081
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.03571862531459538,
+                "synonym": 0.015969553021052494,
+                "ata_saliency": 0.02095801524263498,
+                "fragmentation": 0.18490848236769128,
+                "character_noise": 0.04639545155902195
+            }
+        },
+        {
+            "index": 20,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.035576,
+                    "defocus_blur": 0.000261,
+                    "motion_blur": 0.127204,
+                    "fog_filter": 0.003566,
+                    "pixelate": 0.000658,
+                    "jpeg_filter": 0.004792
+                },
+                "text_corruptions": {
+                    "homophone": 0.097392,
+                    "synonym": 0.057019,
+                    "ata_saliency": 0.032786,
+                    "fragmentation": 0.005777,
+                    "character_noise": 0.122155
+                },
+                "img_budget_used": 0.172058,
+                "txt_budget_used": 0.315129,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.62925,
+                "img_dist": 0.08229,
+                "txt_dist": 0.11695,
+                "txt_sim": 0.88305
+            },
+            "swad_metrics": {
+                "iou_0": 0.63578,
+                "delta_m_plus": 0.01027,
+                "phi": 0.81038,
+                "swad": 0.00832
+            },
+            "l2_distance": 0.64529,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"d\u0430wg, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [77, 237, 758, 907], \"label\": \"d\u0430wg\"},\n\t{\"bbox_2d\": [267, 0, 858, 877], \"label\": \"person\"},\n\t{\"bbox_2d\": [808, 0, 999, 287], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            77,
+                            237,
+                            758,
+                            907
+                        ],
+                        "label": "d\u0430wg"
+                    },
+                    {
+                        "bbox_2d": [
+                            267,
+                            0,
+                            858,
+                            877
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            808,
+                            0,
+                            999,
+                            287
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 102,
+                "raw_token_count": 119,
+                "runtime_seconds": 0.3648
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.035576414376374835,
+                "defocus_blur": 0.000261261683088352,
+                "motion_blur": 0.12720409891883833,
+                "fog_filter": 0.003566331919415313,
+                "pixelate": 0.0006576111219023023,
+                "jpeg_filter": 0.004791811119208858
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.09739220680177231,
+                "synonym": 0.05701896030500439,
+                "ata_saliency": 0.032786360947115366,
+                "fragmentation": 0.005776873962935258,
+                "character_noise": 0.12215490542708003
+            }
+        },
+        {
+            "index": 21,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.029729,
+                    "defocus_blur": 0.037098,
+                    "motion_blur": 0.024845,
+                    "fog_filter": 0.003166,
+                    "pixelate": 0.003218,
+                    "jpeg_filter": 0.025836
+                },
+                "text_corruptions": {
+                    "homophone": 0.038491,
+                    "synonym": 0.316726,
+                    "ata_saliency": 0.014252,
+                    "fragmentation": 0.137349,
+                    "character_noise": 0.017525
+                },
+                "img_budget_used": 0.123894,
+                "txt_budget_used": 0.524342,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.46881,
+                "img_dist": 0.08307,
+                "txt_dist": 0.19714,
+                "txt_sim": 0.80286
+            },
+            "swad_metrics": {
+                "iou_0": 0.63578,
+                "delta_m_plus": 0.26262,
+                "phi": 0.73617,
+                "swad": 0.19333
+            },
+            "l2_distance": 0.51531,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog\u200d, ind\u0456vddual\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [68, 240, 758, 908], \"label\": \"dog\u200d\"},\n\t{\"bbox_2d\": [258, 0, 860, 872], \"label\": \"ind\u0456vddual\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            68,
+                            240,
+                            758,
+                            908
+                        ],
+                        "label": "dog\u200d"
+                    },
+                    {
+                        "bbox_2d": [
+                            258,
+                            0,
+                            860,
+                            872
+                        ],
+                        "label": "ind\u0456vddual"
+                    }
+                ],
+                "token_count": 75,
+                "raw_token_count": 117,
+                "runtime_seconds": 0.3662
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.029729376463953107,
+                "defocus_blur": 0.03709820997470795,
+                "motion_blur": 0.024844865773518687,
+                "fog_filter": 0.0031664796947871677,
+                "pixelate": 0.003218302063050904,
+                "jpeg_filter": 0.025836271064960836
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.03849116851478701,
+                "synonym": 0.31672587697041327,
+                "ata_saliency": 0.014251566038482759,
+                "fragmentation": 0.13734862785698243,
+                "character_noise": 0.01752520284727509
+            }
+        },
+        {
+            "index": 22,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.050115,
+                    "defocus_blur": 0.171119,
+                    "motion_blur": 0.100723,
+                    "fog_filter": 0.003497,
+                    "pixelate": 0.000297,
+                    "jpeg_filter": 0.008679
+                },
+                "text_corruptions": {
+                    "homophone": 0.038284,
+                    "synonym": 0.157858,
+                    "ata_saliency": 0.143426,
+                    "fragmentation": 0.026871,
+                    "character_noise": 0.126647
+                },
+                "img_budget_used": 0.334431,
+                "txt_budget_used": 0.493086,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.45344,
+                "img_dist": 0.09592,
+                "txt_dist": 0.10202,
+                "txt_sim": 0.89798
+            },
+            "swad_metrics": {
+                "iou_0": 0.63578,
+                "delta_m_plus": 0.2868,
+                "phi": 0.81185,
+                "swad": 0.23284
+            },
+            "l2_distance": 0.47457,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"d\u200bog, p\u0435rson\u200b\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [80, 247, 758, 910], \"label\": \"d\u200bog\"},\n\t{\"bbox_2d\": [348, 0, 860, 847], \"label\": \"p\u0435rson\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            80,
+                            247,
+                            758,
+                            910
+                        ],
+                        "label": "d\u200bog"
+                    },
+                    {
+                        "bbox_2d": [
+                            348,
+                            0,
+                            860,
+                            847
+                        ],
+                        "label": "p\u0435rson"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 117,
+                "runtime_seconds": 0.3731
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.05011535599424818,
+                "defocus_blur": 0.1711190050879693,
+                "motion_blur": 0.10072320965327328,
+                "fog_filter": 0.0034971901431382776,
+                "pixelate": 0.0002973668509829164,
+                "jpeg_filter": 0.008678754737198341
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.03828411745455097,
+                "synonym": 0.1578578591836779,
+                "ata_saliency": 0.1434263044537657,
+                "fragmentation": 0.02687091749366096,
+                "character_noise": 0.12664695777668866
+            }
+        },
+        {
+            "index": 23,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.033985,
+                    "defocus_blur": 0.031138,
+                    "motion_blur": 0.129009,
+                    "fog_filter": 0.003389,
+                    "pixelate": 0.018005,
+                    "jpeg_filter": 0.007817
+                },
+                "text_corruptions": {
+                    "homophone": 0.078259,
+                    "synonym": 0.057162,
+                    "ata_saliency": 0.053836,
+                    "fragmentation": 0.008754,
+                    "character_noise": 0.018023
+                },
+                "img_budget_used": 0.223343,
+                "txt_budget_used": 0.216034,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.47595,
+                "img_dist": 0.0823,
+                "txt_dist": 0.19554,
+                "txt_sim": 0.80446
+            },
+            "swad_metrics": {
+                "iou_0": 0.63578,
+                "delta_m_plus": 0.25139,
+                "phi": 0.73825,
+                "swad": 0.18559
+            },
+            "l2_distance": 0.52109,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dawg, pe\u200brwon\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [72, 238, 760, 912], \"label\": \"dawg\"},\n\t{\"bbox_2d\": [272, 0, 858, 872], \"label\": \"pe\u200brwon\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            72,
+                            238,
+                            760,
+                            912
+                        ],
+                        "label": "dawg"
+                    },
+                    {
+                        "bbox_2d": [
+                            272,
+                            0,
+                            858,
+                            872
+                        ],
+                        "label": "pe\u200brwon"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 117,
+                "runtime_seconds": 0.3662
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.03398528289985553,
+                "defocus_blur": 0.031138157047551508,
+                "motion_blur": 0.12900923173414763,
+                "fog_filter": 0.0033888863873165168,
+                "pixelate": 0.0180048947399469,
+                "jpeg_filter": 0.007816871467909874
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.07825858051939125,
+                "synonym": 0.057162070750467496,
+                "ata_saliency": 0.05383631224438384,
+                "fragmentation": 0.00875357200949625,
+                "character_noise": 0.018023044829957133
+            }
+        },
+        {
+            "index": 24,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.082051,
+                    "defocus_blur": 0.01442,
+                    "motion_blur": 0.128921,
+                    "fog_filter": 0.009204,
+                    "pixelate": 0.056908,
+                    "jpeg_filter": 0.045474
+                },
+                "text_corruptions": {
+                    "homophone": 0.078008,
+                    "synonym": 0.042035,
+                    "ata_saliency": 0.053094,
+                    "fragmentation": 0.00569,
+                    "character_noise": 0.018023
+                },
+                "img_budget_used": 0.336979,
+                "txt_budget_used": 0.19685,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.48299,
+                "img_dist": 0.08334,
+                "txt_dist": 0.18294,
+                "txt_sim": 0.81706
+            },
+            "swad_metrics": {
+                "iou_0": 0.63578,
+                "delta_m_plus": 0.24032,
+                "phi": 0.74897,
+                "swad": 0.17999
+            },
+            "l2_distance": 0.52316,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"da\u200dwg, person\u200b\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [75, 236, 758, 912], \"label\": \"da\u200dwg\"},\n\t{\"bbox_2d\": [258, 0, 858, 836], \"label\": \"person\u200b\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            75,
+                            236,
+                            758,
+                            912
+                        ],
+                        "label": "da\u200dwg"
+                    },
+                    {
+                        "bbox_2d": [
+                            258,
+                            0,
+                            858,
+                            836
+                        ],
+                        "label": "person\u200b"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 117,
+                "runtime_seconds": 0.3571
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.0820511975053061,
+                "defocus_blur": 0.014420014333061998,
+                "motion_blur": 0.128921135798561,
+                "fog_filter": 0.009203910171237418,
+                "pixelate": 0.0569081850794369,
+                "jpeg_filter": 0.0454742710212324
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.07800840988477568,
+                "synonym": 0.04203450037559543,
+                "ata_saliency": 0.053094045571116216,
+                "fragmentation": 0.005689828432957851,
+                "character_noise": 0.018023044829957133
+            }
+        },
+        {
+            "index": 25,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.038664,
+                    "defocus_blur": 0.027126,
+                    "motion_blur": 0.112652,
+                    "fog_filter": 0.008329,
+                    "pixelate": 0.012471,
+                    "jpeg_filter": 0.032427
+                },
+                "text_corruptions": {
+                    "homophone": 0.022627,
+                    "synonym": 0.058676,
+                    "ata_saliency": 0.053299,
+                    "fragmentation": 0.076345,
+                    "character_noise": 0.006282
+                },
+                "img_budget_used": 0.23167,
+                "txt_budget_used": 0.21723,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.62134,
+                "img_dist": 0.08355,
+                "txt_dist": 0.06253,
+                "txt_sim": 0.93747
+            },
+            "swad_metrics": {
+                "iou_0": 0.63578,
+                "delta_m_plus": 0.02271,
+                "phi": 0.85914,
+                "swad": 0.01951
+            },
+            "l2_distance": 0.63004,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog, perso\u200dn\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [78, 237, 758, 912], \"label\": \"dog\"},\n\t{\"bbox_2d\": [278, 0, 864, 878], \"label\": \"perso\u200dn\"},\n\t{\"bbox_2d\": [816, 0, 998, 287], \"label\": \"perso\u200dn\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            78,
+                            237,
+                            758,
+                            912
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            278,
+                            0,
+                            864,
+                            878
+                        ],
+                        "label": "perso\u200dn"
+                    },
+                    {
+                        "bbox_2d": [
+                            816,
+                            0,
+                            998,
+                            287
+                        ],
+                        "label": "perso\u200dn"
+                    }
+                ],
+                "token_count": 108,
+                "raw_token_count": 117,
+                "runtime_seconds": 0.3662
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.03866378213921908,
+                "defocus_blur": 0.027126148272032552,
+                "motion_blur": 0.11265190607103871,
+                "fog_filter": 0.008329136805194173,
+                "pixelate": 0.012471339533690212,
+                "jpeg_filter": 0.032427223095553896
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.022627109714440367,
+                "synonym": 0.058675957297709025,
+                "ata_saliency": 0.053299284575674,
+                "fragmentation": 0.07634499959185956,
+                "character_noise": 0.006282356947111958
+            }
+        },
+        {
+            "index": 26,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.035222,
+                    "defocus_blur": 7.8e-05,
+                    "motion_blur": 0.002724,
+                    "fog_filter": 0.001124,
+                    "pixelate": 0.008566,
+                    "jpeg_filter": 0.009217
+                },
+                "text_corruptions": {
+                    "homophone": 0.098448,
+                    "synonym": 0.311503,
+                    "ata_saliency": 0.032932,
+                    "fragmentation": 0.043391,
+                    "character_noise": 0.131904
+                },
+                "img_budget_used": 0.05693,
+                "txt_budget_used": 0.618178,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.6294,
+                "img_dist": 0.08286,
+                "txt_dist": 0.05377,
+                "txt_sim": 0.94623
+            },
+            "swad_metrics": {
+                "iou_0": 0.63578,
+                "delta_m_plus": 0.01003,
+                "phi": 0.86783,
+                "swad": 0.00871
+            },
+            "l2_distance": 0.6371,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"do\u200bg, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [67, 240, 760, 900], \"label\": \"dog\"},\n\t{\"bbox_2d\": [260, 0, 860, 850], \"label\": \"person\"},\n\t{\"bbox_2d\": [810, 0, 998, 280], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            67,
+                            240,
+                            760,
+                            900
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            260,
+                            0,
+                            860,
+                            850
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            810,
+                            0,
+                            998,
+                            280
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 100,
+                "raw_token_count": 118,
+                "runtime_seconds": 0.3649
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.03522165555672556,
+                "defocus_blur": 7.755507970840154e-05,
+                "motion_blur": 0.002724138922782622,
+                "fog_filter": 0.0011242040624491307,
+                "pixelate": 0.008565652286700382,
+                "jpeg_filter": 0.00921696058319546
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.0984484057725587,
+                "synonym": 0.3115028362910237,
+                "ata_saliency": 0.03293160815041824,
+                "fragmentation": 0.043391323163083605,
+                "character_noise": 0.13190380740975707
+            }
+        },
+        {
+            "index": 27,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.083691,
+                    "defocus_blur": 0.037105,
+                    "motion_blur": 0.152669,
+                    "fog_filter": 0.009208,
+                    "pixelate": 0.030754,
+                    "jpeg_filter": 0.004796
+                },
+                "text_corruptions": {
+                    "homophone": 0.040183,
+                    "synonym": 0.328316,
+                    "ata_saliency": 0.025131,
+                    "fragmentation": 0.142219,
+                    "character_noise": 0.121638
+                },
+                "img_budget_used": 0.318222,
+                "txt_budget_used": 0.657486,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.08299,
+                "txt_dist": 0.27931,
+                "txt_sim": 0.72069
+            },
+            "swad_metrics": {
+                "iou_0": 0.63578,
+                "delta_m_plus": 1.0,
+                "phi": 0.66088,
+                "swad": 0.66088
+            },
+            "l2_distance": 0.29138,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"\u0441inine , p\u200de\u200drson\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [278, 0, 858, 830], \"label\": \"\u0441inine , p\u200de\u200drson\"},\n\t{\"bbox_2d\": [788, 0, 998, 280], \"label\": \"\u0441inine , p\u200de\u200drson\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            278,
+                            0,
+                            858,
+                            830
+                        ],
+                        "label": "\u0441inine , p\u200de\u200drson"
+                    },
+                    {
+                        "bbox_2d": [
+                            788,
+                            0,
+                            998,
+                            280
+                        ],
+                        "label": "\u0441inine , p\u200de\u200drson"
+                    }
+                ],
+                "token_count": 88,
+                "raw_token_count": 120,
+                "runtime_seconds": 0.3939
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.08369086653357247,
+                "defocus_blur": 0.03710457302250343,
+                "motion_blur": 0.15266914218317276,
+                "fog_filter": 0.009207772688777087,
+                "pixelate": 0.03075356907801946,
+                "jpeg_filter": 0.0047957431603428535
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.04018313091599752,
+                "synonym": 0.32831562714952944,
+                "ata_saliency": 0.025130533890723707,
+                "fragmentation": 0.1422187729860793,
+                "character_noise": 0.12163818119449771
+            }
+        },
+        {
+            "index": 28,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.031488,
+                    "defocus_blur": 0.172245,
+                    "motion_blur": 0.059086,
+                    "fog_filter": 0.091913,
+                    "pixelate": 0.001213,
+                    "jpeg_filter": 0.000668
+                },
+                "text_corruptions": {
+                    "homophone": 0.084561,
+                    "synonym": 0.528205,
+                    "ata_saliency": 0.000438,
+                    "fragmentation": 0.009422,
+                    "character_noise": 0.048178
+                },
+                "img_budget_used": 0.356613,
+                "txt_budget_used": 0.670803,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.10252,
+                "txt_dist": 0.24697,
+                "txt_sim": 0.75303
+            },
+            "swad_metrics": {
+                "iou_0": 0.63578,
+                "delta_m_plus": 1.0,
+                "phi": 0.67583,
+                "swad": 0.67583
+            },
+            "l2_distance": 0.2674,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"canin\u0435, per sop\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [87, 247, 755, 899], \"label\": \"canin\u0435, per sop\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            87,
+                            247,
+                            755,
+                            899
+                        ],
+                        "label": "canin\u0435, per sop"
+                    }
+                ],
+                "token_count": 43,
+                "raw_token_count": 120,
+                "runtime_seconds": 0.3939
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.03148823357266789,
+                "defocus_blur": 0.17224518005862602,
+                "motion_blur": 0.059086138287074125,
+                "fog_filter": 0.09191265664495152,
+                "pixelate": 0.0012129980799522756,
+                "jpeg_filter": 0.0006680179071591307
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.08456065289052085,
+                "synonym": 0.5282050191393604,
+                "ata_saliency": 0.00043789359348642143,
+                "fragmentation": 0.009421765106855114,
+                "character_noise": 0.04817801663041222
+            }
+        },
+        {
+            "index": 29,
+            "genome": {
+                "image_corruptions": {
+                    "gaussian_noise": 0.000198,
+                    "defocus_blur": 0.003027,
+                    "motion_blur": 0.002724,
+                    "fog_filter": 0.001124,
+                    "pixelate": 0.008372,
+                    "jpeg_filter": 0.004134
+                },
+                "text_corruptions": {
+                    "homophone": 0.098813,
+                    "synonym": 0.254089,
+                    "ata_saliency": 0.030273,
+                    "fragmentation": 0.043408,
+                    "character_noise": 0.14932
+                },
+                "img_budget_used": 0.01958,
+                "txt_budget_used": 0.575904,
+                "budget_max": 1
+            },
+            "objectives": {
+                "iou": 0.49298,
+                "img_dist": 0.08273,
+                "txt_dist": 0.11614,
+                "txt_sim": 0.88386
+            },
+            "swad_metrics": {
+                "iou_0": 0.63578,
+                "delta_m_plus": 0.22461,
+                "phi": 0.81074,
+                "swad": 0.1821
+            },
+            "l2_distance": 0.51319,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"dog\u200b, human\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [77, 236, 758, 912], \"label\": \"dog\"},\n\t{\"bbox_2d\": [270, 0, 866, 820], \"label\": \"human\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            77,
+                            236,
+                            758,
+                            912
+                        ],
+                        "label": "dog"
+                    },
+                    {
+                        "bbox_2d": [
+                            270,
+                            0,
+                            866,
+                            820
+                        ],
+                        "label": "human"
+                    }
+                ],
+                "token_count": 69,
+                "raw_token_count": 120,
+                "runtime_seconds": 0.3939
+            },
+            "applied_img_corruptions": {
+                "gaussian_noise": 0.00019816247506277226,
+                "defocus_blur": 0.0030266421288726014,
+                "motion_blur": 0.002724138922782622,
+                "fog_filter": 0.0011242040624491307,
+                "pixelate": 0.00837238889801527,
+                "jpeg_filter": 0.00413404289990248
+            },
+            "applied_txt_corruptions": {
+                "homophone": 0.09881287757226198,
+                "synonym": 0.2540894713019627,
+                "ata_saliency": 0.030273230600991505,
+                "fragmentation": 0.04340817862377025,
+                "character_noise": 0.14932003112683087
+            }
+        }
+    ]
+}

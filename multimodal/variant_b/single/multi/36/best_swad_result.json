@@ -1,0 +1,106 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/36",
+        "folder_id": "36",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00048055.JPEG"
+    },
+    "pareto_index": 3,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.065226,
+            "defocus_blur": 0.299658,
+            "motion_blur": 0.313143,
+            "fog_filter": 0.011346,
+            "pixelate": 0.062599,
+            "jpeg_filter": 0.034677
+        },
+        "text_corruptions": {
+            "homophone": 0.054017,
+            "synonym": 0.07306,
+            "ata_saliency": 0.073794,
+            "fragmentation": 0.059638,
+            "character_noise": 0.249675
+        },
+        "img_budget_used": 0.78665,
+        "txt_budget_used": 0.510184,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.1045,
+        "txt_dist": 0.18429,
+        "txt_sim": 0.81571
+    },
+    "swad_metrics": {
+        "iou_0": 0.94566,
+        "delta_m_plus": 1.0,
+        "phi": 0.73047,
+        "swad": 0.73047
+    },
+    "l2_distance": 0.21186,
+    "original_prompt": "Identify the objects \"maraca\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "maraca": {
+            "xmin": 149,
+            "ymin": 123,
+            "xmax": 377,
+            "ymax": 242
+        },
+        "maraca_1": {
+            "xmin": 23,
+            "ymin": 143,
+            "xmax": 263,
+            "ymax": 294
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"m\u0430ra\u200b\u0441a\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [67, 364, 647, 738], \"label\": \"m\u0430ra\u200bc\u0430\"},\n\t{\"bbox_2d\": [370, 300, 940, 614], \"label\": \"m\u0430ra\u200bc\u0430\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    67,
+                    364,
+                    647,
+                    738
+                ],
+                "label": "m\u0430ra\u200bc\u0430"
+            },
+            {
+                "bbox_2d": [
+                    370,
+                    300,
+                    940,
+                    614
+                ],
+                "label": "m\u0430ra\u200bc\u0430"
+            }
+        ],
+        "token_count": 81,
+        "raw_token_count": 98,
+        "runtime_seconds": 0.2973
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.06522557453438248,
+        "defocus_blur": 0.29965803154886683,
+        "motion_blur": 0.3131434327355089,
+        "fog_filter": 0.011345885781157174,
+        "pixelate": 0.06259937217804921,
+        "jpeg_filter": 0.034677398804775945
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.05401707552564644,
+        "synonym": 0.07305986240845239,
+        "ata_saliency": 0.07379442708774386,
+        "fragmentation": 0.05963775336459694,
+        "character_noise": 0.2496753623135799
+    }
+}

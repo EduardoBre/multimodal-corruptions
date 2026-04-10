@@ -1,0 +1,70 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/123",
+        "folder_id": "123",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00032891.JPEG"
+    },
+    "original_prompt": "Identify the objects \"computer keyboard, computer mouse, laptop\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "computer mouse": {
+            "xmin": 263,
+            "ymin": 263,
+            "xmax": 487,
+            "ymax": 398
+        },
+        "laptop": {
+            "xmin": 0,
+            "ymin": 0,
+            "xmax": 247,
+            "ymax": 332
+        },
+        "computer keyboard": {
+            "xmin": 0,
+            "ymin": 100,
+            "xmax": 197,
+            "ymax": 351
+        }
+    },
+    "baseline_iou": 0.69209,
+    "swad_star": 0.985,
+    "swad_star_index": 0,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 1,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.015,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.69209,
+                "delta_m_plus": 1.0,
+                "phi": 0.985,
+                "swad": 0.985
+            },
+            "l2_distance": 0.015,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"computer keyboard, computer mouse, laptop\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "{\n    \"computer keyboard\": [\n        [\n            0,\n            296,\n            250,\n            560\n        ]\n    ],\n    \"computer mouse\": [\n        [\n            438,\n            652,\n            812,\n            978\n        ]\n    ],\n    \"laptop\": [\n        [\n            0,\n            0,\n            333,\n            852\n        ]\n    ]\n}",
+                "parsed_predictions": [],
+                "token_count": 104,
+                "raw_token_count": 133,
+                "runtime_seconds": 0.4275
+            }
+        }
+    ]
+}

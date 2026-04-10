@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/85",
+        "folder_id": "85",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00024324.JPEG"
+    },
+    "pareto_index": 9,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.016887,
+            "defocus_blur": 0.024048,
+            "motion_blur": 0.00432,
+            "fog_filter": 0.151253,
+            "pixelate": 0.391004,
+            "jpeg_filter": 0.174539
+        },
+        "text_corruptions": {
+            "homophone": 0.027413,
+            "synonym": 0.014462,
+            "ata_saliency": 0.083174,
+            "fragmentation": 0.038311,
+            "character_noise": 0.00524
+        },
+        "img_budget_used": 0.762051,
+        "txt_budget_used": 0.1686,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.12107,
+        "txt_dist": 0.13368,
+        "txt_sim": 0.86632
+    },
+    "swad_metrics": {
+        "iou_0": 0.52484,
+        "delta_m_plus": 1.0,
+        "phi": 0.76143,
+        "swad": 0.76143
+    },
+    "l2_distance": 0.18036,
+    "original_prompt": "Identify the objects \"person, whale\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 150,
+            "ymin": 63,
+            "xmax": 199,
+            "ymax": 195
+        },
+        "person_1": {
+            "xmin": 55,
+            "ymin": 0,
+            "xmax": 148,
+            "ymax": 191
+        },
+        "whale": {
+            "xmin": 117,
+            "ymin": 195,
+            "xmax": 231,
+            "ymax": 427
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"per s\u043e n, whale\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [348, 157, 708, 860], \"label\": \"per s\u043e n, whale\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    348,
+                    157,
+                    708,
+                    860
+                ],
+                "label": "per s\u043e n, whale"
+            }
+        ],
+        "token_count": 44,
+        "raw_token_count": 81,
+        "runtime_seconds": 0.2546
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.01688705933128564,
+        "defocus_blur": 0.024047848092945957,
+        "motion_blur": 0.004319545313670193,
+        "fog_filter": 0.15125310310142862,
+        "pixelate": 0.39100393793462807,
+        "jpeg_filter": 0.17453915410012366
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.027412758349884613,
+        "synonym": 0.01446228025341308,
+        "ata_saliency": 0.08317375751468285,
+        "fragmentation": 0.038311189712397664,
+        "character_noise": 0.005239624969993811
+    }
+}

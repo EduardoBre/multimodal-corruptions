@@ -1,0 +1,124 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/51",
+        "folder_id": "51",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00004063.JPEG"
+    },
+    "pareto_index": 12,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 5,
+    "total_evaluations": 150,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.8628237008136362,
+        "txt_attack": "homophone",
+        "txt_scale": 0.621506487055572
+    },
+    "objectives": {
+        "iou": 0.1532,
+        "img_dist": 0.12245,
+        "txt_dist": 0.26531,
+        "txt_sim": 0.73469
+    },
+    "swad_metrics": {
+        "iou_0": 0.61787,
+        "delta_m_plus": 0.75205,
+        "phi": 0.64473,
+        "swad": 0.48487
+    },
+    "l2_distance": 0.32993,
+    "original_prompt": "Identify the objects \"guitar, microphone, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 13,
+            "ymin": 96,
+            "xmax": 52,
+            "ymax": 166
+        },
+        "person_1": {
+            "xmin": 207,
+            "ymin": 55,
+            "xmax": 466,
+            "ymax": 374
+        },
+        "person_2": {
+            "xmin": 405,
+            "ymin": 50,
+            "xmax": 499,
+            "ymax": 306
+        },
+        "person_3": {
+            "xmin": 22,
+            "ymin": 9,
+            "xmax": 258,
+            "ymax": 373
+        },
+        "guitar": {
+            "xmin": 68,
+            "ymin": 178,
+            "xmax": 313,
+            "ymax": 306
+        },
+        "guitar_1": {
+            "xmin": 239,
+            "ymin": 161,
+            "xmax": 499,
+            "ymax": 374
+        },
+        "microphone": {
+            "xmin": 198,
+            "ymin": 95,
+            "xmax": 289,
+            "ymax": 139
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"gitar, mike ra phone, pursun\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [130, 512, 380, 788], \"label\": \"gitar\"},\n\t{\"bbox_2d\": [480, 472, 620, 638], \"label\": \"gitar\"},\n\t{\"bbox_2d\": [380, 244, 500, 338], \"label\": \"mike ra phone\"},\n\t{\"bbox_2d\": [480, 650, 620, 844], \"label\": \"pursun\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    130,
+                    512,
+                    380,
+                    788
+                ],
+                "label": "gitar"
+            },
+            {
+                "bbox_2d": [
+                    480,
+                    472,
+                    620,
+                    638
+                ],
+                "label": "gitar"
+            },
+            {
+                "bbox_2d": [
+                    380,
+                    244,
+                    500,
+                    338
+                ],
+                "label": "mike ra phone"
+            },
+            {
+                "bbox_2d": [
+                    480,
+                    650,
+                    620,
+                    844
+                ],
+                "label": "pursun"
+            }
+        ],
+        "token_count": 145,
+        "raw_token_count": 311,
+        "runtime_seconds": 1.2222
+    }
+}

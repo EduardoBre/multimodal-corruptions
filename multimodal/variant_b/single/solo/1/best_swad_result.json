@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/1",
+        "folder_id": "1",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00035419.JPEG"
+    },
+    "pareto_index": 9,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.194249,
+            "defocus_blur": 0.466184,
+            "motion_blur": 0.009799,
+            "fog_filter": 0.036859,
+            "pixelate": 0.057651,
+            "jpeg_filter": 0.005903
+        },
+        "text_corruptions": {
+            "homophone": 0.015577,
+            "synonym": 0.0415,
+            "ata_saliency": 0.012762,
+            "fragmentation": 0.060886,
+            "character_noise": 0.047441
+        },
+        "img_budget_used": 0.770645,
+        "txt_budget_used": 0.178167,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.91007,
+        "img_dist": 0.10965,
+        "txt_dist": 0.2156,
+        "txt_sim": 0.7844
+    },
+    "swad_metrics": {
+        "iou_0": 0.9432,
+        "delta_m_plus": 0.03513,
+        "phi": 0.69839,
+        "swad": 0.02453
+    },
+    "l2_distance": 0.94167,
+    "original_prompt": "Identify the objects \"golf ball\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "golf ball": {
+            "xmin": 120,
+            "ymin": 147,
+            "xmax": 225,
+            "ymax": 249
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"golf ba wl\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [244, 368, 460, 632], \"label\": \"golf ba wl\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    244,
+                    368,
+                    460,
+                    632
+                ],
+                "label": "golf ba wl"
+            }
+        ],
+        "token_count": 42,
+        "raw_token_count": 50,
+        "runtime_seconds": 0.153
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.19424895298149591,
+        "defocus_blur": 0.4661835740923345,
+        "motion_blur": 0.009798732372668081,
+        "fog_filter": 0.03685945568473806,
+        "pixelate": 0.05765059667500205,
+        "jpeg_filter": 0.005903355600860992
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.015577343901952784,
+        "synonym": 0.04149991190845853,
+        "ata_saliency": 0.012762424770961745,
+        "fragmentation": 0.06088605900952668,
+        "character_noise": 0.047440929550070204
+    }
+}

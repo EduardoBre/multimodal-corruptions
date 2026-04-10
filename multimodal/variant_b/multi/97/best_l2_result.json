@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/97",
+        "folder_id": "97",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00046449.JPEG"
+    },
+    "pareto_index": 5,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.0233,
+            "defocus_blur": 0.001331,
+            "motion_blur": 0.033851,
+            "fog_filter": 0.021204,
+            "pixelate": 0.131263,
+            "jpeg_filter": 0.032676
+        },
+        "text_corruptions": {
+            "homophone": 0.036353,
+            "synonym": 0.029085,
+            "ata_saliency": 0.037573,
+            "fragmentation": 0.000252,
+            "character_noise": 0.028601
+        },
+        "img_budget_used": 0.243625,
+        "txt_budget_used": 0.131863,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.0568,
+        "txt_dist": 0.25543,
+        "txt_sim": 0.74457
+    },
+    "swad_metrics": {
+        "iou_0": 0.97385,
+        "delta_m_plus": 1.0,
+        "phi": 0.70228,
+        "swad": 0.70228
+    },
+    "l2_distance": 0.26167,
+    "original_prompt": "Identify the objects \"bathing cap, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 87,
+            "ymin": 59,
+            "xmax": 450,
+            "ymax": 374
+        },
+        "bathing cap": {
+            "xmin": 106,
+            "ymin": 61,
+            "xmax": 336,
+            "ymax": 253
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bat\u200bhing \u0441ap, \u0440e\u200dr son\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [222, 158, 670, 668], \"label\": \"bat\u200bhing \u0441ap, \u0440e\u200dr son\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    222,
+                    158,
+                    670,
+                    668
+                ],
+                "label": "bat\u200bhing \u0441ap, \u0440e\u200dr son"
+            }
+        ],
+        "token_count": 51,
+        "raw_token_count": 87,
+        "runtime_seconds": 0.2677
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.02330019520004676,
+        "defocus_blur": 0.001331344040104083,
+        "motion_blur": 0.03385050666633119,
+        "fog_filter": 0.02120366444990409,
+        "pixelate": 0.13126267607402464,
+        "jpeg_filter": 0.03267639322951448
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.0363525271234053,
+        "synonym": 0.029085025690613296,
+        "ata_saliency": 0.037572615842836485,
+        "fragmentation": 0.0002516263627402741,
+        "character_noise": 0.02860127051716329
+    }
+}

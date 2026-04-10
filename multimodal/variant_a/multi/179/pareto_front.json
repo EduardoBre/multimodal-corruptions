@@ -1,0 +1,793 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/179",
+        "folder_id": "179",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00001325.JPEG"
+    },
+    "original_prompt": "Identify the objects \"cup or mug, table\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "table": {
+            "xmin": 12,
+            "ymin": 85,
+            "xmax": 478,
+            "ymax": 334
+        },
+        "cup or mug": {
+            "xmin": 375,
+            "ymin": 199,
+            "xmax": 419,
+            "ymax": 251
+        },
+        "cup or mug_1": {
+            "xmin": 138,
+            "ymin": 101,
+            "xmax": 164,
+            "ymax": 136
+        },
+        "cup or mug_2": {
+            "xmin": 192,
+            "ymin": 191,
+            "xmax": 238,
+            "ymax": 238
+        }
+    },
+    "baseline_iou": 0.57656,
+    "swad_star": 0.73054,
+    "swad_star_index": 7,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "n_solutions": 9,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.307337327911573,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.32503,
+                "img_dist": 0.11022,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.57656,
+                "delta_m_plus": 0.43626,
+                "phi": 0.88978,
+                "swad": 0.38818
+            },
+            "l2_distance": 0.34321,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cup or mug, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [118, 503, 172, 597], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [780, 597, 832, 680], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [24, 250, 920, 997], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            118,
+                            503,
+                            172,
+                            597
+                        ],
+                        "label": "cup or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            780,
+                            597,
+                            832,
+                            680
+                        ],
+                        "label": "cup or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            24,
+                            250,
+                            920,
+                            997
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 108,
+                "raw_token_count": 214,
+                "runtime_seconds": 0.7285
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.21300761893764208,
+                "txt_attack": "synonym",
+                "txt_scale": 0.11490566325799068
+            },
+            "objectives": {
+                "iou": 0.53992,
+                "img_dist": 0.05287,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.57656,
+                "delta_m_plus": 0.06355,
+                "phi": 0.94713,
+                "swad": 0.06019
+            },
+            "l2_distance": 0.5425,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cup or mug, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [778, 600, 835, 700], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [117, 506, 175, 600], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [387, 572, 472, 688], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [764, 388, 796, 440], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [15, 264, 950, 997], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            778,
+                            600,
+                            835,
+                            700
+                        ],
+                        "label": "cup or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            117,
+                            506,
+                            175,
+                            600
+                        ],
+                        "label": "cup or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            387,
+                            572,
+                            472,
+                            688
+                        ],
+                        "label": "cup or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            764,
+                            388,
+                            796,
+                            440
+                        ],
+                        "label": "cup or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            15,
+                            264,
+                            950,
+                            997
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 178,
+                "raw_token_count": 214,
+                "runtime_seconds": 0.7285
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.25624,
+                "img_dist": 0.17015,
+                "txt_dist": 0.03475,
+                "txt_sim": 0.96525
+            },
+            "swad_metrics": {
+                "iou_0": 0.57656,
+                "delta_m_plus": 0.55557,
+                "phi": 0.80101,
+                "swad": 0.44502
+            },
+            "l2_distance": 0.30954,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cup or mug, tabel\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [400, 297, 620, 600], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [20, 247, 938, 997], \"label\": \"tabel\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            400,
+                            297,
+                            620,
+                            600
+                        ],
+                        "label": "cup or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            20,
+                            247,
+                            938,
+                            997
+                        ],
+                        "label": "tabel"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 214,
+                "runtime_seconds": 0.7285
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.5604,
+                "img_dist": 0.03808,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.57656,
+                "delta_m_plus": 0.02803,
+                "phi": 0.96192,
+                "swad": 0.02696
+            },
+            "l2_distance": 0.56169,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cup or mug, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [778, 600, 835, 720], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [115, 506, 175, 630], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [391, 576, 472, 696], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [766, 384, 798, 446], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [877, 490, 907, 562], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [24, 264, 950, 997], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            778,
+                            600,
+                            835,
+                            720
+                        ],
+                        "label": "cup or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            115,
+                            506,
+                            175,
+                            630
+                        ],
+                        "label": "cup or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            391,
+                            576,
+                            472,
+                            696
+                        ],
+                        "label": "cup or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            766,
+                            384,
+                            798,
+                            446
+                        ],
+                        "label": "cup or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            877,
+                            490,
+                            907,
+                            562
+                        ],
+                        "label": "cup or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            24,
+                            264,
+                            950,
+                            997
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 213,
+                "raw_token_count": 214,
+                "runtime_seconds": 0.7285
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.486062019522153,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.8971524375333463
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.12876,
+                "txt_dist": 0.19785,
+                "txt_sim": 0.80215
+            },
+            "swad_metrics": {
+                "iou_0": 0.57656,
+                "delta_m_plus": 1.0,
+                "phi": 0.69887,
+                "swad": 0.69887
+            },
+            "l2_distance": 0.23606,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cpu or umg, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [28, 260, 948, 999], \"label\": \"cpu or umg, table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            28,
+                            260,
+                            948,
+                            999
+                        ],
+                        "label": "cpu or umg, table"
+                    }
+                ],
+                "token_count": 43,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.8447
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.03732619454213726,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.33647038540361596
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.08156,
+                "txt_dist": 0.27271,
+                "txt_sim": 0.72729
+            },
+            "swad_metrics": {
+                "iou_0": 0.57656,
+                "delta_m_plus": 1.0,
+                "phi": 0.66797,
+                "swad": 0.66797
+            },
+            "l2_distance": 0.28465,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cuy or mug, tabee\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [117, 509, 175, 637], \"label\": \"cuy or mug, tabee\"},\n\t{\"bbox_2d\": [778, 600, 838, 720], \"label\": \"cuy or mug, tabee\"},\n\t{\"bbox_2d\": [388, 570, 472, 700], \"label\": \"cuy or mug, tabee\"},\n\t{\"bbox_2d\": [248, 290, 325, 375], \"label\": \"cuy or mug, tabee\"},\n\t{\"bbox_2d\": [700, 307, 778, 400], \"label\": \"cuy or mug, tabee\"},\n\t{\"bbox_2d\": [798, 470, 875, 600], \"label\": \"cuy or mug, tabee\"},\n\t{\"bbox_2d\": [798, 675, 888, 860], \"label\": \"cuy or mug, tabee\"},\n\t{\"bbox_2d\": [88, 643, 175, 820], \"label\": \"cuy or mug, tabee\"},\n\t{\"bbox_2d\": [117, 415, 212, 550], \"label\": \"cuy or mug, tabee\"},\n\t{\"bbox_2d\": [340, 740, 565, 1000], \"label\": \"cuy or mug, tabee\"},\n\t{\"bbox_2d\": [598, 720, 700, 970], \"label\": \"cuy or mug, tabee\"},\n\t{\"bbox_2d\": [698, 307, 778, 400], \"label\": \"cuy or mug, tabee\"},\n\t{\"bbox_2d\": [798, 470, 875, 600], \"label\": \"cuy or mug, tabee\"},\n\t{\"bbox_2d\": [798, 675, 888, 860], \"label\": \"cuy or mug, tabee\"},\n\t{\"bbox_2d\": [88, 643, 175, 820], \"label\": \"cuy or mug, tabee\"},\n\t{\"bbox_2d\": [117, 415, 212, 550], \"label\": \"cuy or mug, tabee\"},\n\t{\"bbox_2d\": [340, 740, 565, 1000], \"label\": \"cuy or mug, tabee\"},\n\t{\"bbox_2d\": [598, 720, 700, 970], \"label\": \"cuy or mug, tabee\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            117,
+                            509,
+                            175,
+                            637
+                        ],
+                        "label": "cuy or mug, tabee"
+                    },
+                    {
+                        "bbox_2d": [
+                            778,
+                            600,
+                            838,
+                            720
+                        ],
+                        "label": "cuy or mug, tabee"
+                    },
+                    {
+                        "bbox_2d": [
+                            388,
+                            570,
+                            472,
+                            700
+                        ],
+                        "label": "cuy or mug, tabee"
+                    },
+                    {
+                        "bbox_2d": [
+                            248,
+                            290,
+                            325,
+                            375
+                        ],
+                        "label": "cuy or mug, tabee"
+                    },
+                    {
+                        "bbox_2d": [
+                            700,
+                            307,
+                            778,
+                            400
+                        ],
+                        "label": "cuy or mug, tabee"
+                    },
+                    {
+                        "bbox_2d": [
+                            798,
+                            470,
+                            875,
+                            600
+                        ],
+                        "label": "cuy or mug, tabee"
+                    },
+                    {
+                        "bbox_2d": [
+                            798,
+                            675,
+                            888,
+                            860
+                        ],
+                        "label": "cuy or mug, tabee"
+                    },
+                    {
+                        "bbox_2d": [
+                            88,
+                            643,
+                            175,
+                            820
+                        ],
+                        "label": "cuy or mug, tabee"
+                    },
+                    {
+                        "bbox_2d": [
+                            117,
+                            415,
+                            212,
+                            550
+                        ],
+                        "label": "cuy or mug, tabee"
+                    },
+                    {
+                        "bbox_2d": [
+                            340,
+                            740,
+                            565,
+                            1000
+                        ],
+                        "label": "cuy or mug, tabee"
+                    },
+                    {
+                        "bbox_2d": [
+                            598,
+                            720,
+                            700,
+                            970
+                        ],
+                        "label": "cuy or mug, tabee"
+                    },
+                    {
+                        "bbox_2d": [
+                            698,
+                            307,
+                            778,
+                            400
+                        ],
+                        "label": "cuy or mug, tabee"
+                    },
+                    {
+                        "bbox_2d": [
+                            798,
+                            470,
+                            875,
+                            600
+                        ],
+                        "label": "cuy or mug, tabee"
+                    },
+                    {
+                        "bbox_2d": [
+                            798,
+                            675,
+                            888,
+                            860
+                        ],
+                        "label": "cuy or mug, tabee"
+                    },
+                    {
+                        "bbox_2d": [
+                            88,
+                            643,
+                            175,
+                            820
+                        ],
+                        "label": "cuy or mug, tabee"
+                    },
+                    {
+                        "bbox_2d": [
+                            117,
+                            415,
+                            212,
+                            550
+                        ],
+                        "label": "cuy or mug, tabee"
+                    },
+                    {
+                        "bbox_2d": [
+                            340,
+                            740,
+                            565,
+                            1000
+                        ],
+                        "label": "cuy or mug, tabee"
+                    },
+                    {
+                        "bbox_2d": [
+                            598,
+                            720,
+                            700,
+                            970
+                        ],
+                        "label": "cuy or mug, tabee"
+                    }
+                ],
+                "token_count": 708,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.8447
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "fog_filter",
+                "img_scale": 0.02226035255626979,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4303904312548027
+            },
+            "objectives": {
+                "iou": 0.32576,
+                "img_dist": 0.05719,
+                "txt_dist": 0.2085,
+                "txt_sim": 0.7915
+            },
+            "swad_metrics": {
+                "iou_0": 0.57656,
+                "delta_m_plus": 0.43499,
+                "phi": 0.74623,
+                "swad": 0.32461
+            },
+            "l2_distance": 0.39098,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cup or mugg, tay bull\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [113, 506, 175, 630], \"label\": \"cup or mugg\"},\n\t{\"bbox_2d\": [778, 604, 837, 710], \"label\": \"cup or mugg\"},\n\t{\"bbox_2d\": [387, 578, 472, 704], \"label\": \"cup or mugg\"},\n\t{\"bbox_2d\": [768, 388, 798, 440], \"label\": \"cup or mugg\"},\n\t{\"bbox_2d\": [877, 494, 907, 562], \"label\": \"cup or mugg\"},\n\t{\"bbox_2d\": [157, 582, 200, 646], \"label\": \"cup or mugg\"},\n\t{\"bbox_2d\": [387, 578, 472, 704], \"label\": \"tay bull\"},\n\t{\"bbox_2d\": [113, 506, 175, 630], \"label\": \"tay bull\"},\n\t{\"bbox_2d\": [778, 604, 837, 710], \"label\": \"tay bull\"},\n\t{\"bbox_2d\": [387, 578, 472, 704], \"label\": \"tay bull\"},\n\t{\"bbox_2d\": [768, 388, 798, 440], \"label\": \"tay bull\"},\n\t{\"bbox_2d\": [877, 494, 907, 562], \"label\": \"tay bull\"},\n\t{\"bbox_2d\": [157, 582, 200, 646], \"label\": \"tay bull\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            113,
+                            506,
+                            175,
+                            630
+                        ],
+                        "label": "cup or mugg"
+                    },
+                    {
+                        "bbox_2d": [
+                            778,
+                            604,
+                            837,
+                            710
+                        ],
+                        "label": "cup or mugg"
+                    },
+                    {
+                        "bbox_2d": [
+                            387,
+                            578,
+                            472,
+                            704
+                        ],
+                        "label": "cup or mugg"
+                    },
+                    {
+                        "bbox_2d": [
+                            768,
+                            388,
+                            798,
+                            440
+                        ],
+                        "label": "cup or mugg"
+                    },
+                    {
+                        "bbox_2d": [
+                            877,
+                            494,
+                            907,
+                            562
+                        ],
+                        "label": "cup or mugg"
+                    },
+                    {
+                        "bbox_2d": [
+                            157,
+                            582,
+                            200,
+                            646
+                        ],
+                        "label": "cup or mugg"
+                    },
+                    {
+                        "bbox_2d": [
+                            387,
+                            578,
+                            472,
+                            704
+                        ],
+                        "label": "tay bull"
+                    },
+                    {
+                        "bbox_2d": [
+                            113,
+                            506,
+                            175,
+                            630
+                        ],
+                        "label": "tay bull"
+                    },
+                    {
+                        "bbox_2d": [
+                            778,
+                            604,
+                            837,
+                            710
+                        ],
+                        "label": "tay bull"
+                    },
+                    {
+                        "bbox_2d": [
+                            387,
+                            578,
+                            472,
+                            704
+                        ],
+                        "label": "tay bull"
+                    },
+                    {
+                        "bbox_2d": [
+                            768,
+                            388,
+                            798,
+                            440
+                        ],
+                        "label": "tay bull"
+                    },
+                    {
+                        "bbox_2d": [
+                            877,
+                            494,
+                            907,
+                            562
+                        ],
+                        "label": "tay bull"
+                    },
+                    {
+                        "bbox_2d": [
+                            157,
+                            582,
+                            200,
+                            646
+                        ],
+                        "label": "tay bull"
+                    }
+                ],
+                "token_count": 467,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.8447
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.956810286327587,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.5919188485823369
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.18304,
+                "txt_dist": 0.10578,
+                "txt_sim": 0.89422
+            },
+            "swad_metrics": {
+                "iou_0": 0.57656,
+                "delta_m_plus": 1.0,
+                "phi": 0.73054,
+                "swad": 0.73054
+            },
+            "l2_distance": 0.21141,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"\u0441up\u200b \u043er mug\u200d, t\u0430\u200bbl\u200b\u0435\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 237, 999, 1000], \"label\": \"\u0441up\u200b \u043er mug\u200d, t\u0430\u200bbl\u200b\u0435\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            237,
+                            999,
+                            1000
+                        ],
+                        "label": "\u0441up\u200b \u043er mug\u200d, t\u0430\u200bbl\u200b\u0435"
+                    }
+                ],
+                "token_count": 52,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.8447
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.6213450499591809,
+                "txt_attack": "synonym",
+                "txt_scale": 0.7933036501430749
+            },
+            "objectives": {
+                "iou": 0.24835,
+                "img_dist": 0.13364,
+                "txt_dist": 0.05058,
+                "txt_sim": 0.94942
+            },
+            "swad_metrics": {
+                "iou_0": 0.57656,
+                "delta_m_plus": 0.56926,
+                "phi": 0.82254,
+                "swad": 0.46824
+            },
+            "l2_distance": 0.28652,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"drinking cup, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [115, 520, 175, 632], \"label\": \"drinking cup\"},\n\t{\"bbox_2d\": [615, 546, 647, 600], \"label\": \"drinking cup\"},\n\t{\"bbox_2d\": [37, 278, 947, 997], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            115,
+                            520,
+                            175,
+                            632
+                        ],
+                        "label": "drinking cup"
+                    },
+                    {
+                        "bbox_2d": [
+                            615,
+                            546,
+                            647,
+                            600
+                        ],
+                        "label": "drinking cup"
+                    },
+                    {
+                        "bbox_2d": [
+                            37,
+                            278,
+                            947,
+                            997
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 108,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.8447
+            }
+        }
+    ]
+}

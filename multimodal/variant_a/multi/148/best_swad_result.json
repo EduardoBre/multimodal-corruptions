@@ -1,0 +1,76 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/148",
+        "folder_id": "148",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00038813.JPEG"
+    },
+    "pareto_index": 5,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.863144940280058,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6678992108124702
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.07057,
+        "txt_dist": 0.24851,
+        "txt_sim": 0.75149
+    },
+    "swad_metrics": {
+        "iou_0": 0.78263,
+        "delta_m_plus": 1.0,
+        "phi": 0.69846,
+        "swad": 0.69846
+    },
+    "l2_distance": 0.25834,
+    "original_prompt": "Identify the objects \"brassiere, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 154,
+            "ymin": 70,
+            "xmax": 300,
+            "ymax": 470
+        },
+        "brassiere": {
+            "xmin": 188,
+            "ymin": 148,
+            "xmax": 255,
+            "ymax": 212
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"brasseer, per son\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [488, 458, 728, 572], \"label\": \"brasseer, per son\"},\n\t{\"bbox_2d\": [600, 312, 738, 408], \"label\": \"brasseer, per son\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    488,
+                    458,
+                    728,
+                    572
+                ],
+                "label": "brasseer, per son"
+            },
+            {
+                "bbox_2d": [
+                    600,
+                    312,
+                    738,
+                    408
+                ],
+                "label": "brasseer, per son"
+            }
+        ],
+        "token_count": 82,
+        "raw_token_count": 93,
+        "runtime_seconds": 0.3512
+    }
+}

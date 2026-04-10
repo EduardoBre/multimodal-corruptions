@@ -1,0 +1,106 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/135",
+        "folder_id": "135",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00012251.JPEG"
+    },
+    "pareto_index": 0,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.005418,
+            "defocus_blur": 0.191643,
+            "motion_blur": 0.059106,
+            "fog_filter": 0.017058,
+            "pixelate": 0.010584,
+            "jpeg_filter": 0.057962
+        },
+        "text_corruptions": {
+            "homophone": 0.000698,
+            "synonym": 0.00049,
+            "ata_saliency": 0.000252,
+            "fragmentation": 9.2e-05,
+            "character_noise": 0.00018
+        },
+        "img_budget_used": 0.34177,
+        "txt_budget_used": 0.001713,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.19794,
+        "img_dist": 0.13005,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.8994,
+        "delta_m_plus": 0.77992,
+        "phi": 0.86995,
+        "swad": 0.67849
+    },
+    "l2_distance": 0.23684,
+    "original_prompt": "Identify the objects \"fox\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "fox": {
+            "xmin": 209,
+            "ymin": 89,
+            "xmax": 464,
+            "ymax": 264
+        },
+        "fox_1": {
+            "xmin": 53,
+            "ymin": 43,
+            "xmax": 217,
+            "ymax": 198
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"fox\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [218, 128, 384, 350], \"label\": \"fox\"},\n\t{\"bbox_2d\": [428, 264, 572, 550], \"label\": \"fox\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    218,
+                    128,
+                    384,
+                    350
+                ],
+                "label": "fox"
+            },
+            {
+                "bbox_2d": [
+                    428,
+                    264,
+                    572,
+                    550
+                ],
+                "label": "fox"
+            }
+        ],
+        "token_count": 72,
+        "raw_token_count": 85,
+        "runtime_seconds": 0.2719
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.005418042662030315,
+        "defocus_blur": 0.19164299913834873,
+        "motion_blur": 0.05910632517522324,
+        "fog_filter": 0.017057684762396316,
+        "pixelate": 0.010583569221116366,
+        "jpeg_filter": 0.05796180249962319
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.0006980990340273655,
+        "synonym": 0.0004902159422359818,
+        "ata_saliency": 0.0002522657712261944,
+        "fragmentation": 9.187480451750793e-05,
+        "character_noise": 0.00018005295017669052
+    }
+}

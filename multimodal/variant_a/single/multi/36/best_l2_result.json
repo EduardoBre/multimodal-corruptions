@@ -1,0 +1,76 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/36",
+        "folder_id": "36",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00048055.JPEG"
+    },
+    "pareto_index": 8,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 5,
+    "total_evaluations": 135,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.8780373548703925,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.39817382664703643
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.03164,
+        "txt_dist": 0.19865,
+        "txt_sim": 0.80135
+    },
+    "swad_metrics": {
+        "iou_0": 0.95296,
+        "delta_m_plus": 1.0,
+        "phi": 0.776,
+        "swad": 0.776
+    },
+    "l2_distance": 0.20115,
+    "original_prompt": "Identify the objects \"maraca\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "maraca": {
+            "xmin": 149,
+            "ymin": 123,
+            "xmax": 377,
+            "ymax": 242
+        },
+        "maraca_1": {
+            "xmin": 23,
+            "ymin": 143,
+            "xmax": 263,
+            "ymax": 294
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"m\u200d\u0430rac\u200ba\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [62, 364, 650, 728], \"label\": \"m\u200d\u0430\u0440\u0430\u043a\u200b\u0430\"},\n\t{\"bbox_2d\": [372, 304, 938, 604], \"label\": \"m\u200d\u0430\u0440\u0430\u043a\u200b\u0430\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    62,
+                    364,
+                    650,
+                    728
+                ],
+                "label": "m\u200d\u0430\u0440\u0430\u043a\u200b\u0430"
+            },
+            {
+                "bbox_2d": [
+                    372,
+                    304,
+                    938,
+                    604
+                ],
+                "label": "m\u200d\u0430\u0440\u0430\u043a\u200b\u0430"
+            }
+        ],
+        "token_count": 83,
+        "raw_token_count": 84,
+        "runtime_seconds": 0.3298
+    }
+}

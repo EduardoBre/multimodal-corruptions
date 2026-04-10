@@ -1,0 +1,73 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/214",
+        "folder_id": "214",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00035698.JPEG"
+    },
+    "pareto_index": 7,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "gaussian_noise",
+        "img_scale": 0.024402814996016986,
+        "txt_attack": "homophone",
+        "txt_scale": 0.42349377582088504
+    },
+    "objectives": {
+        "iou": 0.40287,
+        "img_dist": 0.0326,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.40727,
+        "delta_m_plus": 0.0108,
+        "phi": 0.9674,
+        "swad": 0.01045
+    },
+    "l2_distance": 0.40419,
+    "original_prompt": "Identify the objects \"cucumber\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "cucumber": {
+            "xmin": 210,
+            "ymin": 171,
+            "xmax": 344,
+            "ymax": 314
+        },
+        "cucumber_1": {
+            "xmin": 161,
+            "ymin": 167,
+            "xmax": 265,
+            "ymax": 293
+        },
+        "cucumber_2": {
+            "xmin": 150,
+            "ymin": 246,
+            "xmax": 259,
+            "ymax": 343
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"cucumber\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [292, 460, 681, 925], \"label\": \"cucumber\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    292,
+                    460,
+                    681,
+                    925
+                ],
+                "label": "cucumber"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 75,
+        "runtime_seconds": 0.2528
+    }
+}

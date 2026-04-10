@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/71",
+        "folder_id": "71",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00045019.JPEG"
+    },
+    "pareto_index": 14,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 7,
+    "total_evaluations": 210,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.9324885830089891,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.6482806000476753
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.03174,
+        "txt_dist": 0.17808,
+        "txt_sim": 0.82192
+    },
+    "swad_metrics": {
+        "iou_0": 0.98186,
+        "delta_m_plus": 1.0,
+        "phi": 0.79583,
+        "swad": 0.79583
+    },
+    "l2_distance": 0.18089,
+    "original_prompt": "Identify the objects \"snake\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "snake": {
+            "xmin": 372,
+            "ymin": 122,
+            "xmax": 596,
+            "ymax": 384
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"sn\u0430k\u200b\u0435\u200b\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [527, 320, 853, 999], \"label\": \"sn\u0101k\u0113\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    527,
+                    320,
+                    853,
+                    999
+                ],
+                "label": "sn\u0101k\u0113"
+            }
+        ],
+        "token_count": 42,
+        "raw_token_count": 49,
+        "runtime_seconds": 0.1652
+    }
+}

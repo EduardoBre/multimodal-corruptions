@@ -1,0 +1,76 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/39",
+        "folder_id": "39",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00038199.JPEG"
+    },
+    "pareto_index": 25,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.12451179906950377,
+        "txt_attack": "homophone",
+        "txt_scale": 0.9991967959702586
+    },
+    "objectives": {
+        "iou": 0.00561,
+        "img_dist": 0.04341,
+        "txt_dist": 0.32387,
+        "txt_sim": 0.67613
+    },
+    "swad_metrics": {
+        "iou_0": 0.5773,
+        "delta_m_plus": 0.99028,
+        "phi": 0.64678,
+        "swad": 0.64049
+    },
+    "l2_distance": 0.32681,
+    "original_prompt": "Identify the objects \"skunk\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "skunk": {
+            "xmin": 247,
+            "ymin": 92,
+            "xmax": 487,
+            "ymax": 254
+        },
+        "skunk_1": {
+            "xmin": 195,
+            "ymin": 116,
+            "xmax": 360,
+            "ymax": 202
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"chunk\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 400, 266, 577], \"label\": \"chunk\"},\n\t{\"bbox_2d\": [357, 230, 500, 357], \"label\": \"chunk\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    400,
+                    266,
+                    577
+                ],
+                "label": "chunk"
+            },
+            {
+                "bbox_2d": [
+                    357,
+                    230,
+                    500,
+                    357
+                ],
+                "label": "chunk"
+            }
+        ],
+        "token_count": 70,
+        "raw_token_count": 113,
+        "runtime_seconds": 0.4827
+    }
+}

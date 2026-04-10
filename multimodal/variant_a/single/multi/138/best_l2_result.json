@@ -1,0 +1,82 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/138",
+        "folder_id": "138",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00017356.JPEG"
+    },
+    "pareto_index": 0,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "gaussian_noise",
+        "img_scale": 0.4347278203427927,
+        "txt_attack": "synonym",
+        "txt_scale": 0.649048174611749
+    },
+    "objectives": {
+        "iou": 0.44779,
+        "img_dist": 0.09244,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.77259,
+        "delta_m_plus": 0.4204,
+        "phi": 0.90756,
+        "swad": 0.38154
+    },
+    "l2_distance": 0.45723,
+    "original_prompt": "Identify the objects \"traffic light\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "traffic light": {
+            "xmin": 194,
+            "ymin": 72,
+            "xmax": 222,
+            "ymax": 123
+        },
+        "traffic light_1": {
+            "xmin": 61,
+            "ymin": 63,
+            "xmax": 91,
+            "ymax": 118
+        },
+        "traffic light_2": {
+            "xmin": 465,
+            "ymin": 209,
+            "xmax": 482,
+            "ymax": 248
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"traffic light\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [133, 184, 178, 308], \"label\": \"traffic light\"},\n\t{\"bbox_2d\": [385, 200, 433, 326], \"label\": \"traffic light\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    133,
+                    184,
+                    178,
+                    308
+                ],
+                "label": "traffic light"
+            },
+            {
+                "bbox_2d": [
+                    385,
+                    200,
+                    433,
+                    326
+                ],
+                "label": "traffic light"
+            }
+        ],
+        "token_count": 74,
+        "raw_token_count": 112,
+        "runtime_seconds": 0.4142
+    }
+}

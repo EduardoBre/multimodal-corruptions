@@ -1,0 +1,70 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/243",
+        "folder_id": "243",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00035107.JPEG"
+    },
+    "pareto_index": 11,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 3,
+    "total_evaluations": 90,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.0008800487372065957,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.18841442978985343
+    },
+    "objectives": {
+        "iou": 0.01285,
+        "img_dist": 0.03996,
+        "txt_dist": 0.21207,
+        "txt_sim": 0.78793
+    },
+    "swad_metrics": {
+        "iou_0": 0.96506,
+        "delta_m_plus": 0.98668,
+        "phi": 0.75644,
+        "swad": 0.74637
+    },
+    "l2_distance": 0.21618,
+    "original_prompt": "Identify the objects \"butterfly\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "butterfly": {
+            "xmin": 58,
+            "ymin": 128,
+            "xmax": 375,
+            "ymax": 294
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"b\u200dutter\u200dfl\u0443\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [512, 0, 708, 138], \"label\": \"b\u200dutter\u200dfl\u0443\"},\n\t{\"bbox_2d\": [438, 260, 512, 348], \"label\": \"b\u200dutter\u200dfl\u0443\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    512,
+                    0,
+                    708,
+                    138
+                ],
+                "label": "b\u200dutter\u200dfl\u0443"
+            },
+            {
+                "bbox_2d": [
+                    438,
+                    260,
+                    512,
+                    348
+                ],
+                "label": "b\u200dutter\u200dfl\u0443"
+            }
+        ],
+        "token_count": 84,
+        "raw_token_count": 85,
+        "runtime_seconds": 0.2931
+    }
+}

@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/151",
+        "folder_id": "151",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00010667.JPEG"
+    },
+    "pareto_index": 21,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 5,
+    "total_evaluations": 150,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.06070403228200504,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.7827204088624398
+    },
+    "objectives": {
+        "iou": 0.019,
+        "img_dist": 0.02195,
+        "txt_dist": 0.22362,
+        "txt_sim": 0.77638
+    },
+    "swad_metrics": {
+        "iou_0": 0.9943,
+        "delta_m_plus": 0.98089,
+        "phi": 0.75934,
+        "swad": 0.74483
+    },
+    "l2_distance": 0.2255,
+    "original_prompt": "Identify the objects \"baby bed\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "baby bed": {
+            "xmin": 131,
+            "ymin": 133,
+            "xmax": 499,
+            "ymax": 333
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"baby bud\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [883, 297, 1000, 473], \"label\": \"baby bud\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    883,
+                    297,
+                    1000,
+                    473
+                ],
+                "label": "baby bud"
+            }
+        ],
+        "token_count": 41,
+        "raw_token_count": 44,
+        "runtime_seconds": 0.2088
+    }
+}

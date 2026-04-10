@@ -1,0 +1,613 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/167",
+        "folder_id": "167",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00002431.JPEG"
+    },
+    "original_prompt": "Identify the objects \"flower pot, sofa\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "sofa": {
+            "xmin": 171,
+            "ymin": 139,
+            "xmax": 398,
+            "ymax": 231
+        },
+        "flower pot": {
+            "xmin": 33,
+            "ymin": 180,
+            "xmax": 79,
+            "ymax": 225
+        }
+    },
+    "baseline_iou": 0.92448,
+    "swad_star": 0.62166,
+    "swad_star_index": 9,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "n_solutions": 12,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8181617493544074,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.41721849968957336
+            },
+            "objectives": {
+                "iou": 0.77876,
+                "img_dist": 0.05935,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.92448,
+                "delta_m_plus": 0.15762,
+                "phi": 0.94065,
+                "swad": 0.14827
+            },
+            "l2_distance": 0.78102,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"flower pot, sofa\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [64, 597, 148, 700], \"label\": \"flower pot\"},\n\t{\"bbox_2d\": [335, 440, 800, 750], \"label\": \"sofa\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            64,
+                            597,
+                            148,
+                            700
+                        ],
+                        "label": "flower pot"
+                    },
+                    {
+                        "bbox_2d": [
+                            335,
+                            440,
+                            800,
+                            750
+                        ],
+                        "label": "sofa"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 82,
+                "runtime_seconds": 0.2563
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.018153363333776373,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.24927259019092207
+            },
+            "objectives": {
+                "iou": 0.90066,
+                "img_dist": 0.03824,
+                "txt_dist": 0.10262,
+                "txt_sim": 0.89738
+            },
+            "swad_metrics": {
+                "iou_0": 0.92448,
+                "delta_m_plus": 0.02577,
+                "phi": 0.86306,
+                "swad": 0.02224
+            },
+            "l2_distance": 0.90729,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"flo\u200dwe\u200br pot, so\u200bfa\u200d\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [64, 590, 155, 720], \"label\": \"flo\u200dwe\u200br pot\"},\n\t{\"bbox_2d\": [333, 450, 800, 750], \"label\": \"sofa\u200d\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            64,
+                            590,
+                            155,
+                            720
+                        ],
+                        "label": "flo\u200dwe\u200br pot"
+                    },
+                    {
+                        "bbox_2d": [
+                            333,
+                            450,
+                            800,
+                            750
+                        ],
+                        "label": "sofa\u200d"
+                    }
+                ],
+                "token_count": 80,
+                "raw_token_count": 82,
+                "runtime_seconds": 0.2563
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.3997956906557353,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.647636093318414
+            },
+            "objectives": {
+                "iou": 0.45752,
+                "img_dist": 0.05966,
+                "txt_dist": 0.1391,
+                "txt_sim": 0.8609
+            },
+            "swad_metrics": {
+                "iou_0": 0.92448,
+                "delta_m_plus": 0.50511,
+                "phi": 0.80954,
+                "swad": 0.4089
+            },
+            "l2_distance": 0.48191,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"fsower pot, sofg\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [64, 590, 158, 720], \"label\": \"fsower pot, sofg\"},\n\t{\"bbox_2d\": [375, 720, 972, 997], \"label\": \"fsower pot, sofg\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            64,
+                            590,
+                            158,
+                            720
+                        ],
+                        "label": "fsower pot, sofg"
+                    },
+                    {
+                        "bbox_2d": [
+                            375,
+                            720,
+                            972,
+                            997
+                        ],
+                        "label": "fsower pot, sofg"
+                    }
+                ],
+                "token_count": 81,
+                "raw_token_count": 82,
+                "runtime_seconds": 0.2563
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.61001,
+                "img_dist": 0.04564,
+                "txt_dist": 0.09951,
+                "txt_sim": 0.90049
+            },
+            "swad_metrics": {
+                "iou_0": 0.92448,
+                "delta_m_plus": 0.34016,
+                "phi": 0.85939,
+                "swad": 0.29233
+            },
+            "l2_distance": 0.61976,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"flower pod, sofa\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [54, 395, 158, 680], \"label\": \"flower pod\"},\n\t{\"bbox_2d\": [335, 445, 800, 750], \"label\": \"sofa\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            54,
+                            395,
+                            158,
+                            680
+                        ],
+                        "label": "flower pod"
+                    },
+                    {
+                        "bbox_2d": [
+                            335,
+                            445,
+                            800,
+                            750
+                        ],
+                        "label": "sofa"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 82,
+                "runtime_seconds": 0.2563
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.62258,
+                "img_dist": 0.03824,
+                "txt_dist": 0.10883,
+                "txt_sim": 0.89117
+            },
+            "swad_metrics": {
+                "iou_0": 0.92448,
+                "delta_m_plus": 0.32656,
+                "phi": 0.85709,
+                "swad": 0.27989
+            },
+            "l2_distance": 0.63318,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"flower opt, sofa\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [57, 397, 155, 687], \"label\": \"flower opt\"},\n\t{\"bbox_2d\": [333, 447, 800, 750], \"label\": \"sofa\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            57,
+                            397,
+                            155,
+                            687
+                        ],
+                        "label": "flower opt"
+                    },
+                    {
+                        "bbox_2d": [
+                            333,
+                            447,
+                            800,
+                            750
+                        ],
+                        "label": "sofa"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 82,
+                "runtime_seconds": 0.2563
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6124377601560459,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.59643,
+                "img_dist": 0.08932,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.92448,
+                "delta_m_plus": 0.35485,
+                "phi": 0.91068,
+                "swad": 0.32315
+            },
+            "l2_distance": 0.60308,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"flower pot, sofa\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [58, 400, 150, 700], \"label\": \"flower pot\"},\n\t{\"bbox_2d\": [330, 430, 800, 760], \"label\": \"sofa\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            58,
+                            400,
+                            150,
+                            700
+                        ],
+                        "label": "flower pot"
+                    },
+                    {
+                        "bbox_2d": [
+                            330,
+                            430,
+                            800,
+                            760
+                        ],
+                        "label": "sofa"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 82,
+                "runtime_seconds": 0.2563
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.307337327911573,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.59658,
+                "img_dist": 0.04625,
+                "txt_dist": 0.09951,
+                "txt_sim": 0.90049
+            },
+            "swad_metrics": {
+                "iou_0": 0.92448,
+                "delta_m_plus": 0.35469,
+                "phi": 0.85884,
+                "swad": 0.30462
+            },
+            "l2_distance": 0.60659,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"flower pod, sofa\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [57, 395, 157, 677], \"label\": \"flower pod\"},\n\t{\"bbox_2d\": [335, 437, 800, 750], \"label\": \"sofa\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            57,
+                            395,
+                            157,
+                            677
+                        ],
+                        "label": "flower pod"
+                    },
+                    {
+                        "bbox_2d": [
+                            335,
+                            437,
+                            800,
+                            750
+                        ],
+                        "label": "sofa"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 82,
+                "runtime_seconds": 0.2563
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.3683,
+                "img_dist": 0.09795,
+                "txt_dist": 0.11756,
+                "txt_sim": 0.88244
+            },
+            "swad_metrics": {
+                "iou_0": 0.92448,
+                "delta_m_plus": 0.60161,
+                "phi": 0.79601,
+                "swad": 0.47889
+            },
+            "l2_distance": 0.39882,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"flower pot, so fah\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [62, 587, 156, 700], \"label\": \"flower pot\"},\n\t{\"bbox_2d\": [800, 437, 916, 677], \"label\": \"so fah\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            62,
+                            587,
+                            156,
+                            700
+                        ],
+                        "label": "flower pot"
+                    },
+                    {
+                        "bbox_2d": [
+                            800,
+                            437,
+                            916,
+                            677
+                        ],
+                        "label": "so fah"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 82,
+                "runtime_seconds": 0.2563
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.8975,
+                "img_dist": 0.03933,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.92448,
+                "delta_m_plus": 0.02918,
+                "phi": 0.96067,
+                "swad": 0.02804
+            },
+            "l2_distance": 0.89836,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"flower pot, sofa\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [67, 587, 159, 710], \"label\": \"flower pot\"},\n\t{\"bbox_2d\": [342, 445, 800, 750], \"label\": \"sofa\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            67,
+                            587,
+                            159,
+                            710
+                        ],
+                        "label": "flower pot"
+                    },
+                    {
+                        "bbox_2d": [
+                            342,
+                            445,
+                            800,
+                            750
+                        ],
+                        "label": "sofa"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 82,
+                "runtime_seconds": 0.2563
+            }
+        },
+        {
+            "index": 9,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.9316177058680379,
+                "txt_attack": "homophone",
+                "txt_scale": 0.9948250792623392
+            },
+            "objectives": {
+                "iou": 0.13358,
+                "img_dist": 0.07188,
+                "txt_dist": 0.21707,
+                "txt_sim": 0.78293
+            },
+            "swad_metrics": {
+                "iou_0": 0.92448,
+                "delta_m_plus": 0.85551,
+                "phi": 0.72665,
+                "swad": 0.62166
+            },
+            "l2_distance": 0.26482,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"flower pod, so fah\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [58, 380, 158, 680], \"label\": \"flower pod, so fah\"},\n\t{\"bbox_2d\": [142, 517, 188, 600], \"label\": \"flower pod, so fah\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            58,
+                            380,
+                            158,
+                            680
+                        ],
+                        "label": "flower pod, so fah"
+                    },
+                    {
+                        "bbox_2d": [
+                            142,
+                            517,
+                            188,
+                            600
+                        ],
+                        "label": "flower pod, so fah"
+                    }
+                ],
+                "token_count": 81,
+                "raw_token_count": 95,
+                "runtime_seconds": 0.2981
+            }
+        },
+        {
+            "index": 10,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.03732619454213726,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.33647038540361596
+            },
+            "objectives": {
+                "iou": 0.15861,
+                "img_dist": 0.03649,
+                "txt_dist": 0.30037,
+                "txt_sim": 0.69963
+            },
+            "swad_metrics": {
+                "iou_0": 0.92448,
+                "delta_m_plus": 0.82843,
+                "phi": 0.6741,
+                "swad": 0.55845
+            },
+            "l2_distance": 0.34163,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"flower pzt, osfa\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [54, 390, 158, 700], \"label\": \"flower pzt, osfa\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            54,
+                            390,
+                            158,
+                            700
+                        ],
+                        "label": "flower pzt, osfa"
+                    }
+                ],
+                "token_count": 43,
+                "raw_token_count": 95,
+                "runtime_seconds": 0.2981
+            }
+        },
+        {
+            "index": 11,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.8004900574692112,
+                "txt_attack": "homophone",
+                "txt_scale": 0.3273709769105356
+            },
+            "objectives": {
+                "iou": 0.44531,
+                "img_dist": 0.09762,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.92448,
+                "delta_m_plus": 0.51831,
+                "phi": 0.90238,
+                "swad": 0.46772
+            },
+            "l2_distance": 0.45588,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"flower pot, sofa\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [188, 214, 260, 614], \"label\": \"flower pot\"},\n\t{\"bbox_2d\": [330, 428, 792, 750], \"label\": \"sofa\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            188,
+                            214,
+                            260,
+                            614
+                        ],
+                        "label": "flower pot"
+                    },
+                    {
+                        "bbox_2d": [
+                            330,
+                            428,
+                            792,
+                            750
+                        ],
+                        "label": "sofa"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 95,
+                "runtime_seconds": 0.2981
+            }
+        }
+    ]
+}

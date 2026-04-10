@@ -1,0 +1,106 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/57",
+        "folder_id": "57",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00019128.JPEG"
+    },
+    "pareto_index": 0,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.021505,
+            "defocus_blur": 0.001943,
+            "motion_blur": 0.014149,
+            "fog_filter": 0.010684,
+            "pixelate": 0.012057,
+            "jpeg_filter": 0.0218
+        },
+        "text_corruptions": {
+            "homophone": 0.174252,
+            "synonym": 0.25043,
+            "ata_saliency": 0.031431,
+            "fragmentation": 0.125314,
+            "character_noise": 0.210109
+        },
+        "img_budget_used": 0.082138,
+        "txt_budget_used": 0.791536,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.06658,
+        "txt_dist": 0.31848,
+        "txt_sim": 0.68152
+    },
+    "swad_metrics": {
+        "iou_0": 0.97766,
+        "delta_m_plus": 1.0,
+        "phi": 0.63614,
+        "swad": 0.63614
+    },
+    "l2_distance": 0.32537,
+    "original_prompt": "Identify the objects \"dog, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 75,
+            "ymin": 54,
+            "xmax": 499,
+            "ymax": 374
+        },
+        "dog": {
+            "xmin": 75,
+            "ymin": 1,
+            "xmax": 351,
+            "ymax": 289
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"canif\u200d\u0435, per son\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [150, 16, 700, 784], \"label\": \"canif\u200d\u0435, per son\"},\n\t{\"bbox_2d\": [148, 450, 1000, 998], \"label\": \"canif\u200d\u0435, per son\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    150,
+                    16,
+                    700,
+                    784
+                ],
+                "label": "canif\u200d\u0435, per son"
+            },
+            {
+                "bbox_2d": [
+                    148,
+                    450,
+                    1000,
+                    998
+                ],
+                "label": "canif\u200d\u0435, per son"
+            }
+        ],
+        "token_count": 86,
+        "raw_token_count": 91,
+        "runtime_seconds": 0.2943
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.021505113077769394,
+        "defocus_blur": 0.001942880190957443,
+        "motion_blur": 0.014148807970849553,
+        "fog_filter": 0.010684417653027151,
+        "pixelate": 0.012056813803063247,
+        "jpeg_filter": 0.021799873657729774
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.17425220451357576,
+        "synonym": 0.250430140797841,
+        "ata_saliency": 0.031430619385835516,
+        "fragmentation": 0.1253143479754277,
+        "character_noise": 0.21010878547766093
+    }
+}

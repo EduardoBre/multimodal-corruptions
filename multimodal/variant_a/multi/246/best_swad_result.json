@@ -1,0 +1,76 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/246",
+        "folder_id": "246",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00006073.JPEG"
+    },
+    "pareto_index": 11,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "gaussian_noise",
+        "img_scale": 0.002799755954171624,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.03772287129078247
+    },
+    "objectives": {
+        "iou": 0.46976,
+        "img_dist": 0.02874,
+        "txt_dist": 0.13734,
+        "txt_sim": 0.86266
+    },
+    "swad_metrics": {
+        "iou_0": 0.91841,
+        "delta_m_plus": 0.48851,
+        "phi": 0.83787,
+        "swad": 0.4093
+    },
+    "l2_distance": 0.49027,
+    "original_prompt": "Identify the objects \"baseball, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "baseball": {
+            "xmin": 73,
+            "ymin": 137,
+            "xmax": 211,
+            "ymax": 276
+        },
+        "person": {
+            "xmin": 293,
+            "ymin": 41,
+            "xmax": 392,
+            "ymax": 235
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"baseball, peryon\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [143, 390, 430, 796], \"label\": \"baseball\"},\n\t{\"bbox_2d\": [14, 370, 623, 984], \"label\": \"peryon\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    143,
+                    390,
+                    430,
+                    796
+                ],
+                "label": "baseball"
+            },
+            {
+                "bbox_2d": [
+                    14,
+                    370,
+                    623,
+                    984
+                ],
+                "label": "peryon"
+            }
+        ],
+        "token_count": 73,
+        "raw_token_count": 98,
+        "runtime_seconds": 0.308
+    }
+}

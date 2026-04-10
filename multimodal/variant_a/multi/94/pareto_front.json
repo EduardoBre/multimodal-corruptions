@@ -1,0 +1,975 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/94",
+        "folder_id": "94",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00015877.JPEG"
+    },
+    "original_prompt": "Identify the objects \"person, swimming trunks\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 276,
+            "ymin": 68,
+            "xmax": 380,
+            "ymax": 142
+        },
+        "person_1": {
+            "xmin": 388,
+            "ymin": 45,
+            "xmax": 491,
+            "ymax": 371
+        },
+        "person_2": {
+            "xmin": 315,
+            "ymin": 68,
+            "xmax": 328,
+            "ymax": 97
+        },
+        "swimming trunks": {
+            "xmin": 79,
+            "ymin": 41,
+            "xmax": 127,
+            "ymax": 110
+        },
+        "swimming trunks_1": {
+            "xmin": 237,
+            "ymin": 55,
+            "xmax": 262,
+            "ymax": 77
+        },
+        "swimming trunks_2": {
+            "xmin": 113,
+            "ymin": 56,
+            "xmax": 140,
+            "ymax": 82
+        },
+        "swimming trunks_3": {
+            "xmin": 291,
+            "ymin": 197,
+            "xmax": 379,
+            "ymax": 258
+        }
+    },
+    "baseline_iou": 0.688,
+    "swad_star": 0.80193,
+    "swad_star_index": 6,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 10,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8181617493544074,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.41721849968957336
+            },
+            "objectives": {
+                "iou": 0.36769,
+                "img_dist": 0.07989,
+                "txt_dist": 0.12754,
+                "txt_sim": 0.87246
+            },
+            "swad_metrics": {
+                "iou_0": 0.688,
+                "delta_m_plus": 0.46557,
+                "phi": 0.80276,
+                "swad": 0.37374
+            },
+            "l2_distance": 0.3973,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"perosn, swmiming trunks\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [528, 412, 842, 958], \"label\": \"perosn\"},\n\t{\"bbox_2d\": [148, 22, 330, 398], \"label\": \"perosn\"},\n\t{\"bbox_2d\": [462, 28, 530, 266], \"label\": \"perosn\"},\n\t{\"bbox_2d\": [556, 178, 758, 372], \"label\": \"perosn\"},\n\t{\"bbox_2d\": [148, 100, 250, 288], \"label\": \"swmiming trunks\"},\n\t{\"bbox_2d\": [562, 288, 672, 372], \"label\": \"swmiming trunks\"},\n\t{\"bbox_2d\": [540, 512, 758, 848], \"label\": \"swmiming trunks\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            528,
+                            412,
+                            842,
+                            958
+                        ],
+                        "label": "perosn"
+                    },
+                    {
+                        "bbox_2d": [
+                            148,
+                            22,
+                            330,
+                            398
+                        ],
+                        "label": "perosn"
+                    },
+                    {
+                        "bbox_2d": [
+                            462,
+                            28,
+                            530,
+                            266
+                        ],
+                        "label": "perosn"
+                    },
+                    {
+                        "bbox_2d": [
+                            556,
+                            178,
+                            758,
+                            372
+                        ],
+                        "label": "perosn"
+                    },
+                    {
+                        "bbox_2d": [
+                            148,
+                            100,
+                            250,
+                            288
+                        ],
+                        "label": "swmiming trunks"
+                    },
+                    {
+                        "bbox_2d": [
+                            562,
+                            288,
+                            672,
+                            372
+                        ],
+                        "label": "swmiming trunks"
+                    },
+                    {
+                        "bbox_2d": [
+                            540,
+                            512,
+                            758,
+                            848
+                        ],
+                        "label": "swmiming trunks"
+                    }
+                ],
+                "token_count": 255,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.7472
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.018153363333776373,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.24927259019092207
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.0557,
+                "txt_dist": 0.15909,
+                "txt_sim": 0.84091
+            },
+            "swad_metrics": {
+                "iou_0": 0.688,
+                "delta_m_plus": 1.0,
+                "phi": 0.79407,
+                "swad": 0.79407
+            },
+            "l2_distance": 0.16856,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"pe\u200brs\u043en, swimmin\u200bg\u200b tr\u200du\u200dnks\u200d\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [524, 488, 772, 960], \"label\": \"pe\u200brs\u043en\"},\n\t{\"bbox_2d\": [558, 178, 758, 380], \"label\": \"pe\u200brs\u043en\"},\n\t{\"bbox_2d\": [462, 30, 532, 270], \"label\": \"pe\u200brs\u043en\"},\n\t{\"bbox_2d\": [152, 0, 332, 400], \"label\": \"pe\u200brs\u043en\"},\n\t{\"bbox_2d\": [772, 112, 984, 960], \"label\": \"pe\u200brs\u043en\"},\n\t{\"bbox_2d\": [15, 148, 40, 238], \"label\": \"pe\u200brs\u043en\"},\n\t{\"bbox_2d\": [36, 148, 68, 238], \"label\": \"pe\u200brs\u043en\"},\n\t{\"bbox_2d\": [68, 148, 98, 238], \"label\": \"pe\u200brs\u043en\"},\n\t{\"bbox_2d\": [98, 148, 128, 238], \"label\": \"pe\u200brs\u043en\"},\n\t{\"bbox_2d\": [128, 148, 158, 238], \"label\": \"pe\u200brs\u043en\"},\n\t{\"bbox_2d\": [158, 148, 188, 238], \"label\": \"pe\u200brs\u043en\"},\n\t{\"bbox_2d\": [188, 148, 218, 238], \"label\": \"pe\u200brs\u043en\"},\n\t{\"bbox_2d\": [218, 148, 248, 238], \"label\": \"pe\u200brs\u043en\"},\n\t{\"bbox_2d\": [248, 148, 278, 238], \"label\": \"pe\u200brs\u043en\"},\n\t{\"bbox_2d\": [278, 148, 308, 238], \"label\": \"pe\u200brs\u043en\"},\n\t{\"bbox_2d\": [308, 148, 338, 238], \"label\": \"pe\u200brs\u043en\"},\n\t{\"bbox_2d\": [338, 148, 368, 238], \"label\": \"pe\u200brs\u043en\"},\n\t{\"bbox_2d\": [368, 148, 398, 238], \"label\": \"pe\u200brs\u043en\"},\n\t{\"bbox_2d\": [758, 220, 772, 256], \"label\": \"pe\u200brs\u043en\"},\n\t{\"bbox_2d\": [772, 220, 786, 256], \"label\": \"pe\u200brs\u043en\"},\n\t{\"bbox_2d\": [786, 220, 800, 256], \"label\": \"pe\u200brs\u043en\"},\n\t{\"bbox_2d\": [800, 220, 814, 256], \"label",
+                "parsed_predictions": [],
+                "token_count": 800,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.7472
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.3997956906557353,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.647636093318414
+            },
+            "objectives": {
+                "iou": 0.59091,
+                "img_dist": 0.08859,
+                "txt_dist": 0.0606,
+                "txt_sim": 0.9394
+            },
+            "swad_metrics": {
+                "iou_0": 0.688,
+                "delta_m_plus": 0.14112,
+                "phi": 0.85618,
+                "swad": 0.12082
+            },
+            "l2_distance": 0.60058,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"preson, swimmnig trunks\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [532, 497, 760, 967], \"label\": \"preson\"},\n\t{\"bbox_2d\": [772, 117, 984, 973], \"label\": \"preson\"},\n\t{\"bbox_2d\": [552, 184, 752, 380], \"label\": \"preson\"},\n\t{\"bbox_2d\": [462, 30, 530, 264], \"label\": \"preson\"},\n\t{\"bbox_2d\": [135, 17, 330, 400], \"label\": \"preson\"},\n\t{\"bbox_2d\": [216, 30, 328, 380], \"label\": \"preson\"},\n\t{\"bbox_2d\": [158, 107, 242, 280], \"label\": \"swimmnig trunks\"},\n\t{\"bbox_2d\": [560, 327, 672, 377], \"label\": \"swimmnig trunks\"},\n\t{\"bbox_2d\": [476, 157, 512, 230], \"label\": \"swimmnig trunks\"},\n\t{\"bbox_2d\": [580, 520, 752, 700], \"label\": \"swimmnig trunks\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            532,
+                            497,
+                            760,
+                            967
+                        ],
+                        "label": "preson"
+                    },
+                    {
+                        "bbox_2d": [
+                            772,
+                            117,
+                            984,
+                            973
+                        ],
+                        "label": "preson"
+                    },
+                    {
+                        "bbox_2d": [
+                            552,
+                            184,
+                            752,
+                            380
+                        ],
+                        "label": "preson"
+                    },
+                    {
+                        "bbox_2d": [
+                            462,
+                            30,
+                            530,
+                            264
+                        ],
+                        "label": "preson"
+                    },
+                    {
+                        "bbox_2d": [
+                            135,
+                            17,
+                            330,
+                            400
+                        ],
+                        "label": "preson"
+                    },
+                    {
+                        "bbox_2d": [
+                            216,
+                            30,
+                            328,
+                            380
+                        ],
+                        "label": "preson"
+                    },
+                    {
+                        "bbox_2d": [
+                            158,
+                            107,
+                            242,
+                            280
+                        ],
+                        "label": "swimmnig trunks"
+                    },
+                    {
+                        "bbox_2d": [
+                            560,
+                            327,
+                            672,
+                            377
+                        ],
+                        "label": "swimmnig trunks"
+                    },
+                    {
+                        "bbox_2d": [
+                            476,
+                            157,
+                            512,
+                            230
+                        ],
+                        "label": "swimmnig trunks"
+                    },
+                    {
+                        "bbox_2d": [
+                            580,
+                            520,
+                            752,
+                            700
+                        ],
+                        "label": "swimmnig trunks"
+                    }
+                ],
+                "token_count": 359,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.7472
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6124377601560459,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.38426,
+                "img_dist": 0.12641,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.688,
+                "delta_m_plus": 0.44148,
+                "phi": 0.87359,
+                "swad": 0.38567
+            },
+            "l2_distance": 0.40452,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"person, swimming trunks\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [768, 107, 998, 677], \"label\": \"person\"},\n\t{\"bbox_2d\": [518, 407, 848, 957], \"label\": \"person\"},\n\t{\"bbox_2d\": [550, 177, 750, 383], \"label\": \"person\"},\n\t{\"bbox_2d\": [448, 33, 530, 277], \"label\": \"person\"},\n\t{\"bbox_2d\": [158, 33, 250, 396], \"label\": \"person\"},\n\t{\"bbox_2d\": [248, 33, 330, 396], \"label\": \"person\"},\n\t{\"bbox_2d\": [550, 507, 750, 807], \"label\": \"swimming trunks\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            768,
+                            107,
+                            998,
+                            677
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            518,
+                            407,
+                            848,
+                            957
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            550,
+                            177,
+                            750,
+                            383
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            448,
+                            33,
+                            530,
+                            277
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            158,
+                            33,
+                            250,
+                            396
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            248,
+                            33,
+                            330,
+                            396
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            550,
+                            507,
+                            750,
+                            807
+                        ],
+                        "label": "swimming trunks"
+                    }
+                ],
+                "token_count": 237,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.7472
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.5656671100314771,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.039875089079669634
+            },
+            "objectives": {
+                "iou": 0.37943,
+                "img_dist": 0.12299,
+                "txt_dist": 0.12037,
+                "txt_sim": 0.87963
+            },
+            "swad_metrics": {
+                "iou_0": 0.688,
+                "delta_m_plus": 0.4485,
+                "phi": 0.77144,
+                "swad": 0.346
+            },
+            "l2_distance": 0.41663,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"person, swimm\u0456ng tru\u200bnks\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [518, 125, 988, 955], \"label\": \"person\"},\n\t{\"bbox_2d\": [558, 175, 758, 375], \"label\": \"person\"},\n\t{\"bbox_2d\": [458, 35, 530, 275], \"label\": \"person\"},\n\t{\"bbox_2d\": [162, 35, 250, 395], \"label\": \"person\"},\n\t{\"bbox_2d\": [238, 35, 320, 395], \"label\": \"person\"},\n\t{\"bbox_2d\": [578, 525, 748, 825], \"label\": \"swimm\u0456ng tru\u200bnks\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            518,
+                            125,
+                            988,
+                            955
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            558,
+                            175,
+                            758,
+                            375
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            458,
+                            35,
+                            530,
+                            275
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            162,
+                            35,
+                            250,
+                            395
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            238,
+                            35,
+                            320,
+                            395
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            578,
+                            525,
+                            748,
+                            825
+                        ],
+                        "label": "swimm\u0456ng tru\u200bnks"
+                    }
+                ],
+                "token_count": 209,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.7472
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.21300761893764208,
+                "txt_attack": "synonym",
+                "txt_scale": 0.11490566325799068
+            },
+            "objectives": {
+                "iou": 0.60557,
+                "img_dist": 0.05404,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.688,
+                "delta_m_plus": 0.11981,
+                "phi": 0.94596,
+                "swad": 0.11334
+            },
+            "l2_distance": 0.60798,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"person, swimming trunks\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [530, 488, 762, 962], \"label\": \"person\"},\n\t{\"bbox_2d\": [556, 180, 752, 378], \"label\": \"person\"},\n\t{\"bbox_2d\": [462, 30, 530, 266], \"label\": \"person\"},\n\t{\"bbox_2d\": [145, 12, 248, 396], \"label\": \"person\"},\n\t{\"bbox_2d\": [212, 22, 330, 388], \"label\": \"person\"},\n\t{\"bbox_2d\": [772, 122, 984, 678], \"label\": \"person\"},\n\t{\"bbox_2d\": [155, 122, 242, 280], \"label\": \"swimming trunks\"},\n\t{\"bbox_2d\": [220, 138, 288, 222], \"label\": \"swimming trunks\"},\n\t{\"bbox_2d\": [476, 150, 512, 216], \"label\": \"swimming trunks\"},\n\t{\"bbox_2d\": [612, 328, 678, 378], \"label\": \"swimming trunks\"},\n\t{\"bbox_2d\": [578, 572, 758, 680], \"label\": \"swimming trunks\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            530,
+                            488,
+                            762,
+                            962
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            556,
+                            180,
+                            752,
+                            378
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            462,
+                            30,
+                            530,
+                            266
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            145,
+                            12,
+                            248,
+                            396
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            212,
+                            22,
+                            330,
+                            388
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            772,
+                            122,
+                            984,
+                            678
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            155,
+                            122,
+                            242,
+                            280
+                        ],
+                        "label": "swimming trunks"
+                    },
+                    {
+                        "bbox_2d": [
+                            220,
+                            138,
+                            288,
+                            222
+                        ],
+                        "label": "swimming trunks"
+                    },
+                    {
+                        "bbox_2d": [
+                            476,
+                            150,
+                            512,
+                            216
+                        ],
+                        "label": "swimming trunks"
+                    },
+                    {
+                        "bbox_2d": [
+                            612,
+                            328,
+                            678,
+                            378
+                        ],
+                        "label": "swimming trunks"
+                    },
+                    {
+                        "bbox_2d": [
+                            578,
+                            572,
+                            758,
+                            680
+                        ],
+                        "label": "swimming trunks"
+                    }
+                ],
+                "token_count": 381,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.7472
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.018595721213425453,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6130568625347235
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.07257,
+                "txt_dist": 0.13532,
+                "txt_sim": 0.86468
+            },
+            "swad_metrics": {
+                "iou_0": 0.688,
+                "delta_m_plus": 1.0,
+                "phi": 0.80193,
+                "swad": 0.80193
+            },
+            "l2_distance": 0.15355,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"person, swimimng rtunks\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [532, 128, 984, 972], \"label\": \"person\"},\n\t{\"bbox_2d\": [556, 184, 758, 380], \"label\": \"person\"},\n\t{\"bbox_2d\": [466, 32, 532, 272], \"label\": \"person\"},\n\t{\"bbox_2d\": [216, 24, 332, 396], \"label\": \"person\"},\n\t{\"bbox_2d\": [128, 16, 248, 402], \"label\": \"person\"},\n\t{\"bbox_2d\": [758, 224, 772, 264], \"label\": \"person\"},\n\t{\"bbox_2d\": [772, 224, 786, 264], \"label\": \"person\"},\n\t{\"bbox_2d\": [786, 224, 800, 264], \"label\": \"person\"},\n\t{\"bbox_2d\": [708, 224, 722, 252], \"label\": \"person\"},\n\t{\"bbox_2d\": [634, 190, 652, 252], \"label\": \"person\"},\n\t{\"bbox_2d\": [372, 184, 392, 240], \"label\": \"person\"},\n\t{\"bbox_2d\": [356, 162, 372, 208], \"label\": \"person\"},\n\t{\"bbox_2d\": [332, 162, 350, 208], \"label\": \"person\"},\n\t{\"bbox_2d\": [308, 162, 328, 208], \"label\": \"person\"},\n\t{\"bbox_2d\": [288, 162, 308, 208], \"label\": \"person\"},\n\t{\"bbox_2d\": [268, 162, 288, 208], \"label\": \"person\"},\n\t{\"bbox_2d\": [248, 162, 268, 208], \"label\": \"person\"},\n\t{\"bbox_2d\": [228, 162, 248, 208], \"label\": \"person\"},\n\t{\"bbox_2d\": [208, 162, 228, 208], \"label\": \"person\"},\n\t{\"bbox_2d\": [188, 162, 208, 208], \"label\": \"person\"},\n\t{\"bbox_2d\": [168, 162, 188, 208], \"label\": \"person\"},\n\t{\"bbox_2d\": [148, 162, 168, 208], \"label\": \"person\"},\n\t{\"bbox_2d\": [128, 162, 148, 208], \"label\": \"person\"},\n\t{\"bbox_2d\": [108, 162, 128, 208], \"label\": \"person\"},\n\t{\"bbox_2d\":",
+                "parsed_predictions": [],
+                "token_count": 800,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.7472
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "fog_filter",
+                "img_scale": 0.35190791434280455,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.020329096070927366
+            },
+            "objectives": {
+                "iou": 0.57072,
+                "img_dist": 0.1228,
+                "txt_dist": 0.0787,
+                "txt_sim": 0.9213
+            },
+            "swad_metrics": {
+                "iou_0": 0.688,
+                "delta_m_plus": 0.17047,
+                "phi": 0.80816,
+                "swad": 0.13776
+            },
+            "l2_distance": 0.58906,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"eprson, swimming trunks\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [532, 488, 762, 967], \"label\": \"eprson\"},\n\t{\"bbox_2d\": [558, 180, 752, 380], \"label\": \"eprson\"},\n\t{\"bbox_2d\": [462, 30, 530, 268], \"label\": \"eprson\"},\n\t{\"bbox_2d\": [135, 10, 250, 398], \"label\": \"eprson\"},\n\t{\"bbox_2d\": [216, 10, 325, 388], \"label\": \"eprson\"},\n\t{\"bbox_2d\": [776, 128, 984, 672], \"label\": \"eprson\"},\n\t{\"bbox_2d\": [158, 118, 248, 278], \"label\": \"swimming trunks\"},\n\t{\"bbox_2d\": [228, 130, 288, 220], \"label\": \"swimming trunks\"},\n\t{\"bbox_2d\": [578, 330, 672, 376], \"label\": \"swimming trunks\"},\n\t{\"bbox_2d\": [582, 550, 758, 672], \"label\": \"swimming trunks\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            532,
+                            488,
+                            762,
+                            967
+                        ],
+                        "label": "eprson"
+                    },
+                    {
+                        "bbox_2d": [
+                            558,
+                            180,
+                            752,
+                            380
+                        ],
+                        "label": "eprson"
+                    },
+                    {
+                        "bbox_2d": [
+                            462,
+                            30,
+                            530,
+                            268
+                        ],
+                        "label": "eprson"
+                    },
+                    {
+                        "bbox_2d": [
+                            135,
+                            10,
+                            250,
+                            398
+                        ],
+                        "label": "eprson"
+                    },
+                    {
+                        "bbox_2d": [
+                            216,
+                            10,
+                            325,
+                            388
+                        ],
+                        "label": "eprson"
+                    },
+                    {
+                        "bbox_2d": [
+                            776,
+                            128,
+                            984,
+                            672
+                        ],
+                        "label": "eprson"
+                    },
+                    {
+                        "bbox_2d": [
+                            158,
+                            118,
+                            248,
+                            278
+                        ],
+                        "label": "swimming trunks"
+                    },
+                    {
+                        "bbox_2d": [
+                            228,
+                            130,
+                            288,
+                            220
+                        ],
+                        "label": "swimming trunks"
+                    },
+                    {
+                        "bbox_2d": [
+                            578,
+                            330,
+                            672,
+                            376
+                        ],
+                        "label": "swimming trunks"
+                    },
+                    {
+                        "bbox_2d": [
+                            582,
+                            550,
+                            758,
+                            672
+                        ],
+                        "label": "swimming trunks"
+                    }
+                ],
+                "token_count": 357,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.7472
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.23905,
+                "img_dist": 0.12871,
+                "txt_dist": 0.13044,
+                "txt_sim": 0.86956
+            },
+            "swad_metrics": {
+                "iou_0": 0.688,
+                "delta_m_plus": 0.65254,
+                "phi": 0.75764,
+                "swad": 0.49439
+            },
+            "l2_distance": 0.30121,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"per son, swimmin trunks\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [168, 100, 250, 390], \"label\": \"per son\"},\n\t{\"bbox_2d\": [240, 100, 312, 380], \"label\": \"per son\"},\n\t{\"bbox_2d\": [440, 30, 520, 260], \"label\": \"per son\"},\n\t{\"bbox_2d\": [550, 150, 640, 370], \"label\": \"per son\"},\n\t{\"bbox_2d\": [550, 510, 740, 820], \"label\": \"swimmin trunks\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            168,
+                            100,
+                            250,
+                            390
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            240,
+                            100,
+                            312,
+                            380
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            440,
+                            30,
+                            520,
+                            260
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            550,
+                            150,
+                            640,
+                            370
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            550,
+                            510,
+                            740,
+                            820
+                        ],
+                        "label": "swimmin trunks"
+                    }
+                ],
+                "token_count": 178,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.7472
+            }
+        },
+        {
+            "index": 9,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.59342,
+                "img_dist": 0.03891,
+                "txt_dist": 0.1199,
+                "txt_sim": 0.8801
+            },
+            "swad_metrics": {
+                "iou_0": 0.688,
+                "delta_m_plus": 0.13747,
+                "phi": 0.84586,
+                "swad": 0.11628
+            },
+            "l2_distance": 0.60666,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"per son, swimming trunks\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [530, 497, 760, 960], \"label\": \"per son\"},\n\t{\"bbox_2d\": [558, 200, 752, 378], \"label\": \"per son\"},\n\t{\"bbox_2d\": [464, 32, 528, 267], \"label\": \"per son\"},\n\t{\"bbox_2d\": [135, 10, 248, 398], \"label\": \"per son\"},\n\t{\"bbox_2d\": [220, 10, 330, 387], \"label\": \"per son\"},\n\t{\"bbox_2d\": [772, 120, 988, 680], \"label\": \"per son\"},\n\t{\"bbox_2d\": [155, 115, 244, 280], \"label\": \"swimming trunks\"},\n\t{\"bbox_2d\": [228, 120, 288, 220], \"label\": \"swimming trunks\"},\n\t{\"bbox_2d\": [478, 150, 512, 215], \"label\": \"swimming trunks\"},\n\t{\"bbox_2d\": [578, 325, 672, 378], \"label\": \"swimming trunks\"},\n\t{\"bbox_2d\": [588, 550, 758, 672], \"label\": \"swimming trunks\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            530,
+                            497,
+                            760,
+                            960
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            558,
+                            200,
+                            752,
+                            378
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            464,
+                            32,
+                            528,
+                            267
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            135,
+                            10,
+                            248,
+                            398
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            220,
+                            10,
+                            330,
+                            387
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            772,
+                            120,
+                            988,
+                            680
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            155,
+                            115,
+                            244,
+                            280
+                        ],
+                        "label": "swimming trunks"
+                    },
+                    {
+                        "bbox_2d": [
+                            228,
+                            120,
+                            288,
+                            220
+                        ],
+                        "label": "swimming trunks"
+                    },
+                    {
+                        "bbox_2d": [
+                            478,
+                            150,
+                            512,
+                            215
+                        ],
+                        "label": "swimming trunks"
+                    },
+                    {
+                        "bbox_2d": [
+                            578,
+                            325,
+                            672,
+                            378
+                        ],
+                        "label": "swimming trunks"
+                    },
+                    {
+                        "bbox_2d": [
+                            588,
+                            550,
+                            758,
+                            672
+                        ],
+                        "label": "swimming trunks"
+                    }
+                ],
+                "token_count": 387,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.7472
+            }
+        }
+    ]
+}

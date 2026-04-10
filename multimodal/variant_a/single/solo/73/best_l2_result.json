@@ -1,0 +1,70 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/73",
+        "folder_id": "73",
+        "category": "single/solo",
+        "filename": "ILSVRC2013_val_00004263.JPEG"
+    },
+    "pareto_index": 7,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.06326164545287372,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.13164251095195528
+    },
+    "objectives": {
+        "iou": 0.01947,
+        "img_dist": 0.04827,
+        "txt_dist": 0.34564,
+        "txt_sim": 0.65436
+    },
+    "swad_metrics": {
+        "iou_0": 0.88523,
+        "delta_m_plus": 0.97801,
+        "phi": 0.62277,
+        "swad": 0.60908
+    },
+    "l2_distance": 0.34954,
+    "original_prompt": "Identify the objects \"car\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "car": {
+            "xmin": 55,
+            "ymin": 177,
+            "xmax": 301,
+            "ymax": 317
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"cor\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [557, 683, 587, 810], \"label\": \"cor\"},\n\t{\"bbox_2d\": [447, 700, 477, 810], \"label\": \"cor\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    557,
+                    683,
+                    587,
+                    810
+                ],
+                "label": "cor"
+            },
+            {
+                "bbox_2d": [
+                    447,
+                    700,
+                    477,
+                    810
+                ],
+                "label": "cor"
+            }
+        ],
+        "token_count": 72,
+        "raw_token_count": 73,
+        "runtime_seconds": 0.2385
+    }
+}

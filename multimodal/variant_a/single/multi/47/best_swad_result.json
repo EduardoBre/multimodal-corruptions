@@ -1,0 +1,73 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/47",
+        "folder_id": "47",
+        "category": "single/multi",
+        "filename": "ILSVRC2013_val_00000715.JPEG"
+    },
+    "pareto_index": 22,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 11,
+    "total_evaluations": 330,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "gaussian_noise",
+        "img_scale": 0.018595721213425453,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.4325004896278651
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.03198,
+        "txt_dist": 0.28015,
+        "txt_sim": 0.71985
+    },
+    "swad_metrics": {
+        "iou_0": 0.81746,
+        "delta_m_plus": 1.0,
+        "phi": 0.69683,
+        "swad": 0.69683
+    },
+    "l2_distance": 0.28197,
+    "original_prompt": "Identify the objects \"car\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "car": {
+            "xmin": 330,
+            "ymin": 182,
+            "xmax": 371,
+            "ymax": 213
+        },
+        "car_1": {
+            "xmin": 231,
+            "ymin": 181,
+            "xmax": 268,
+            "ymax": 209
+        },
+        "car_2": {
+            "xmin": 281,
+            "ymin": 178,
+            "xmax": 319,
+            "ymax": 209
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"cam\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [788, 247, 827, 413], \"label\": \"cam\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    788,
+                    247,
+                    827,
+                    413
+                ],
+                "label": "cam"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 275,
+        "runtime_seconds": 0.889
+    }
+}

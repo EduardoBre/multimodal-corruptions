@@ -1,0 +1,69 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/214",
+        "folder_id": "214",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00036621.JPEG"
+    },
+    "pareto_index": 0,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.8181617493544074,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.41721849968957336
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.05938,
+        "txt_dist": 0.02578,
+        "txt_sim": 0.97422
+    },
+    "swad_metrics": {
+        "iou_0": 0.79093,
+        "delta_m_plus": 1.0,
+        "phi": 0.91637,
+        "swad": 0.91637
+    },
+    "l2_distance": 0.06473,
+    "original_prompt": "Identify the objects \"person, ping-pong ball, racket, tennis ball\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "racket": {
+            "xmin": 279,
+            "ymin": 295,
+            "xmax": 355,
+            "ymax": 393
+        },
+        "person": {
+            "xmin": 0,
+            "ymin": 78,
+            "xmax": 431,
+            "ymax": 498
+        },
+        "tennis ball": {
+            "xmin": 321,
+            "ymin": 311,
+            "xmax": 349,
+            "ymax": 340
+        },
+        "ping-pong ball": {
+            "xmin": 316,
+            "ymin": 304,
+            "xmax": 354,
+            "ymax": 345
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"person, ping-pong ball, racket, tenniw ball\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "{\n    \"person\": [\n        {\n            \"bbox_2d\": [0, 150, 970, 999]\n        }\n    ],\n    \"ping-pong ball\": [\n        {\n            \"bbox_2d\": [714, 618, 792, 678]\n        }\n    ],\n    \"racket\": [\n        {\n            \"bbox_2d\": [352, 920, 452, 1000]\n        }\n    ],\n    \"tenniw ball\": []\n}",
+        "parsed_predictions": [],
+        "token_count": 127,
+        "raw_token_count": 152,
+        "runtime_seconds": 0.5526
+    }
+}

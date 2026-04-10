@@ -1,0 +1,106 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/79",
+        "folder_id": "79",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00019181.JPEG"
+    },
+    "pareto_index": 2,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.218133,
+            "defocus_blur": 0.065145,
+            "motion_blur": 0.011013,
+            "fog_filter": 0.027568,
+            "pixelate": 0.26682,
+            "jpeg_filter": 0.101385
+        },
+        "text_corruptions": {
+            "homophone": 0.028825,
+            "synonym": 0.078972,
+            "ata_saliency": 0.044725,
+            "fragmentation": 0.504855,
+            "character_noise": 0.052073
+        },
+        "img_budget_used": 0.690065,
+        "txt_budget_used": 0.70945,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.06549,
+        "txt_dist": 0.29029,
+        "txt_sim": 0.70971
+    },
+    "swad_metrics": {
+        "iou_0": 0.89068,
+        "delta_m_plus": 1.0,
+        "phi": 0.66323,
+        "swad": 0.66323
+    },
+    "l2_distance": 0.29759,
+    "original_prompt": "Identify the objects \"cocktail shaker, cup or mug\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "cocktail shaker": {
+            "xmin": 7,
+            "ymin": 7,
+            "xmax": 115,
+            "ymax": 250
+        },
+        "cup or mug": {
+            "xmin": 113,
+            "ymin": 99,
+            "xmax": 284,
+            "ymax": 284
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"co\u0441\u200d kt\u200da\u200bil sh\u0430 ekr, c\u200dup \u043ear\u200d mug\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [30, 30, 350, 840], \"label\": \"co\u0441\u200d kt\u200da\u200bil sh\u0430 ekr, c\u200dup \u043ear\u200d mug\"},\n\t{\"bbox_2d\": [330, 300, 980, 960], \"label\": \"co\u0441\u200d kt\u200da\u200bil sh\u0430 ekr, c\u200dup \u043ear\u200d mug\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    30,
+                    30,
+                    350,
+                    840
+                ],
+                "label": "co\u0441\u200d kt\u200da\u200bil sh\u0430 ekr, c\u200dup \u043ear\u200d mug"
+            },
+            {
+                "bbox_2d": [
+                    330,
+                    300,
+                    980,
+                    960
+                ],
+                "label": "co\u0441\u200d kt\u200da\u200bil sh\u0430 ekr, c\u200dup \u043ear\u200d mug"
+            }
+        ],
+        "token_count": 116,
+        "raw_token_count": 117,
+        "runtime_seconds": 0.3462
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.218133479942417,
+        "defocus_blur": 0.06514508997421009,
+        "motion_blur": 0.01101272302011003,
+        "fog_filter": 0.027567977554433923,
+        "pixelate": 0.2668202177221338,
+        "jpeg_filter": 0.10138540057266242
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.028825222706336116,
+        "synonym": 0.0789721595452902,
+        "ata_saliency": 0.044724628565393394,
+        "fragmentation": 0.504855052661516,
+        "character_noise": 0.05207319945236228
+    }
+}

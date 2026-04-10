@@ -1,0 +1,112 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/46",
+        "folder_id": "46",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00000435.JPEG"
+    },
+    "pareto_index": 2,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.000148,
+            "defocus_blur": 0.055814,
+            "motion_blur": 0.042316,
+            "fog_filter": 0.006578,
+            "pixelate": 0.059137,
+            "jpeg_filter": 0.303332
+        },
+        "text_corruptions": {
+            "homophone": 0.044461,
+            "synonym": 0.026703,
+            "ata_saliency": 0.06984,
+            "fragmentation": 0.465675,
+            "character_noise": 0.252084
+        },
+        "img_budget_used": 0.467324,
+        "txt_budget_used": 0.858763,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.0968,
+        "txt_dist": 0.26786,
+        "txt_sim": 0.73214
+    },
+    "swad_metrics": {
+        "iou_0": 0.71278,
+        "delta_m_plus": 1.0,
+        "phi": 0.66127,
+        "swad": 0.66127
+    },
+    "l2_distance": 0.28481,
+    "original_prompt": "Identify the objects \"chair, table\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "table": {
+            "xmin": 360,
+            "ymin": 191,
+            "xmax": 498,
+            "ymax": 295
+        },
+        "table_1": {
+            "xmin": 0,
+            "ymin": 182,
+            "xmax": 115,
+            "ymax": 317
+        },
+        "chair": {
+            "xmin": 102,
+            "ymin": 166,
+            "xmax": 198,
+            "ymax": 310
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"chan\u200dr, tab\u200bl \u0435\u200b\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 500, 220, 830], \"label\": \"chan\u200dr, tab\u200bl \u0435\u200b\"},\n\t{\"bbox_2d\": [730, 416, 999, 999], \"label\": \"chan\u200dr, tab\u200bl \u0435\u200b\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    500,
+                    220,
+                    830
+                ],
+                "label": "chan\u200dr, tab\u200bl \u0435\u200b"
+            },
+            {
+                "bbox_2d": [
+                    730,
+                    416,
+                    999,
+                    999
+                ],
+                "label": "chan\u200dr, tab\u200bl \u0435\u200b"
+            }
+        ],
+        "token_count": 88,
+        "raw_token_count": 213,
+        "runtime_seconds": 0.6554
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0001481036660985704,
+        "defocus_blur": 0.055813596018295455,
+        "motion_blur": 0.04231556546623174,
+        "fog_filter": 0.006577857489164485,
+        "pixelate": 0.05913725232504576,
+        "jpeg_filter": 0.3033319739238713
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.044460571841090285,
+        "synonym": 0.02670318010896347,
+        "ata_saliency": 0.0698402881409764,
+        "fragmentation": 0.46567520102717763,
+        "character_noise": 0.2520836498621507
+    }
+}

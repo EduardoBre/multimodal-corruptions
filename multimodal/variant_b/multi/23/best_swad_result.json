@@ -1,0 +1,109 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/23",
+        "folder_id": "23",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00043500.JPEG"
+    },
+    "pareto_index": 11,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 3,
+    "total_evaluations": 75,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.024562,
+            "defocus_blur": 0.024692,
+            "motion_blur": 0.348348,
+            "fog_filter": 0.000325,
+            "pixelate": 0.032202,
+            "jpeg_filter": 0.041938
+        },
+        "text_corruptions": {
+            "homophone": 0.170995,
+            "synonym": 0.303438,
+            "ata_saliency": 0.003358,
+            "fragmentation": 0.066422,
+            "character_noise": 0.314972
+        },
+        "img_budget_used": 0.472067,
+        "txt_budget_used": 0.859185,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.09848,
+        "txt_dist": 0.17158,
+        "txt_sim": 0.82842
+    },
+    "swad_metrics": {
+        "iou_0": 0.70239,
+        "delta_m_plus": 1.0,
+        "phi": 0.74684,
+        "swad": 0.74684
+    },
+    "l2_distance": 0.19783,
+    "original_prompt": "Identify the objects \"hair spray, perfume, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 184,
+            "ymin": 34,
+            "xmax": 499,
+            "ymax": 333
+        },
+        "person_1": {
+            "xmin": 50,
+            "ymin": 50,
+            "xmax": 203,
+            "ymax": 327
+        },
+        "hair spray": {
+            "xmin": 369,
+            "ymin": 102,
+            "xmax": 464,
+            "ymax": 294
+        },
+        "perfume": {
+            "xmin": 357,
+            "ymin": 97,
+            "xmax": 485,
+            "ymax": 296
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"hai\u200br sp\u200br\u0430y, perfu\u200dm\u0435, per s\u043e\u200bn\u200b\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [738, 300, 938, 890], \"label\": \"hai\u200br sp\u200br\u0430y, perfu\u200dm\u0435, per s\u014dn\u200b\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    738,
+                    300,
+                    938,
+                    890
+                ],
+                "label": "hai\u200br sp\u200br\u0430y, perfu\u200dm\u0435, per s\u014dn\u200b"
+            }
+        ],
+        "token_count": 59,
+        "raw_token_count": 174,
+        "runtime_seconds": 0.7086
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.024562424145893755,
+        "defocus_blur": 0.0246919899991531,
+        "motion_blur": 0.34834841016345774,
+        "fog_filter": 0.0003250727264738877,
+        "pixelate": 0.03220185362403665,
+        "jpeg_filter": 0.041937627861188674
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.17099506510162493,
+        "synonym": 0.303438267568002,
+        "ata_saliency": 0.0033581652503171817,
+        "fragmentation": 0.06642158153563418,
+        "character_noise": 0.31497203436668275
+    }
+}

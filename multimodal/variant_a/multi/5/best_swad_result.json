@@ -1,0 +1,76 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/5",
+        "folder_id": "5",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00045126.JPEG"
+    },
+    "pareto_index": 4,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.863144940280058,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6678992108124702
+    },
+    "objectives": {
+        "iou": 0.18321,
+        "img_dist": 0.12846,
+        "txt_dist": 0.30481,
+        "txt_sim": 0.69519
+    },
+    "swad_metrics": {
+        "iou_0": 0.72696,
+        "delta_m_plus": 0.74798,
+        "phi": 0.60589,
+        "swad": 0.45319
+    },
+    "l2_distance": 0.37812,
+    "original_prompt": "Identify the objects \"person, pineapple\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 221,
+            "ymin": 45,
+            "xmax": 365,
+            "ymax": 405
+        },
+        "pineapple": {
+            "xmin": 67,
+            "ymin": 127,
+            "xmax": 123,
+            "ymax": 228
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"purse on, pyne apple\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [625, 285, 945, 570], \"label\": \"purse on\"},\n\t{\"bbox_2d\": [0, 0, 825, 1000], \"label\": \"pyne apple\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    625,
+                    285,
+                    945,
+                    570
+                ],
+                "label": "purse on"
+            },
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    825,
+                    1000
+                ],
+                "label": "pyne apple"
+            }
+        ],
+        "token_count": 73,
+        "raw_token_count": 82,
+        "runtime_seconds": 0.3392
+    }
+}

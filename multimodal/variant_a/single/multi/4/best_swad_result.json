@@ -1,0 +1,85 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/4",
+        "folder_id": "4",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00001919.JPEG"
+    },
+    "pareto_index": 5,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "motion_blur",
+        "img_scale": 0.018595721213425453,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.6130568625347235
+    },
+    "objectives": {
+        "iou": 0.0593,
+        "img_dist": 0.04218,
+        "txt_dist": 0.21766,
+        "txt_sim": 0.78234
+    },
+    "swad_metrics": {
+        "iou_0": 0.75274,
+        "delta_m_plus": 0.92122,
+        "phi": 0.74934,
+        "swad": 0.69031
+    },
+    "l2_distance": 0.2295,
+    "original_prompt": "Identify the objects \"flower pot\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "flower pot": {
+            "xmin": 221,
+            "ymin": 336,
+            "xmax": 320,
+            "ymax": 448
+        },
+        "flower pot_1": {
+            "xmin": 293,
+            "ymin": 117,
+            "xmax": 373,
+            "ymax": 222
+        },
+        "flower pot_2": {
+            "xmin": 71,
+            "ymin": 261,
+            "xmax": 198,
+            "ymax": 425
+        },
+        "flower pot_3": {
+            "xmin": 0,
+            "ymin": 333,
+            "xmax": 67,
+            "ymax": 446
+        },
+        "flower pot_4": {
+            "xmin": 2,
+            "ymin": 422,
+            "xmax": 102,
+            "ymax": 498
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"flower opt\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 999, 999], \"label\": \"flower opt\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    999,
+                    999
+                ],
+                "label": "flower opt"
+            }
+        ],
+        "token_count": 36,
+        "raw_token_count": 143,
+        "runtime_seconds": 0.4434
+    }
+}

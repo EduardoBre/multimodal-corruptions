@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/193",
+        "folder_id": "193",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00027527.JPEG"
+    },
+    "pareto_index": 4,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.19108001983455553,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.9935882361347728
+    },
+    "objectives": {
+        "iou": 0.21974,
+        "img_dist": 0.05981,
+        "txt_dist": 0.30768,
+        "txt_sim": 0.69232
+    },
+    "swad_metrics": {
+        "iou_0": 0.6301,
+        "delta_m_plus": 0.65126,
+        "phi": 0.65091,
+        "swad": 0.42392
+    },
+    "l2_distance": 0.38279,
+    "original_prompt": "Identify the objects \"watercraft\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "watercraft": {
+            "xmin": 63,
+            "ymin": 92,
+            "xmax": 453,
+            "ymax": 248
+        },
+        "watercraft_1": {
+            "xmin": 338,
+            "ymin": 115,
+            "xmax": 482,
+            "ymax": 212
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"watercoaft\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 340, 999, 999], \"label\": \"watercoaft\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    340,
+                    999,
+                    999
+                ],
+                "label": "watercoaft"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 162,
+        "runtime_seconds": 0.5405
+    }
+}

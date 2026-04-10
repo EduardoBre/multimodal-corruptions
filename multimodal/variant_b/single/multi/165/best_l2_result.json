@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/165",
+        "folder_id": "165",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00008014.JPEG"
+    },
+    "pareto_index": 7,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.049682,
+            "defocus_blur": 0.011582,
+            "motion_blur": 0.183035,
+            "fog_filter": 0.021197,
+            "pixelate": 0.143432,
+            "jpeg_filter": 0.025299
+        },
+        "text_corruptions": {
+            "homophone": 0.031942,
+            "synonym": 0.114157,
+            "ata_saliency": 0.094378,
+            "fragmentation": 0.066284,
+            "character_noise": 0.007452
+        },
+        "img_budget_used": 0.434227,
+        "txt_budget_used": 0.314213,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0125,
+        "img_dist": 0.06695,
+        "txt_dist": 0.31175,
+        "txt_sim": 0.68825
+    },
+    "swad_metrics": {
+        "iou_0": 0.89508,
+        "delta_m_plus": 0.98603,
+        "phi": 0.64217,
+        "swad": 0.6332
+    },
+    "l2_distance": 0.3191,
+    "original_prompt": "Identify the objects \"monkey\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "monkey": {
+            "xmin": 62,
+            "ymin": 352,
+            "xmax": 420,
+            "ymax": 798
+        },
+        "monkey_1": {
+            "xmin": 130,
+            "ymin": 24,
+            "xmax": 588,
+            "ymax": 788
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"moni\u0435y\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 738, 138, 1000], \"label\": \"moni\u0435y\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    738,
+                    138,
+                    1000
+                ],
+                "label": "moni\u0435y"
+            }
+        ],
+        "token_count": 41,
+        "raw_token_count": 90,
+        "runtime_seconds": 0.3166
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.04968201937538732,
+        "defocus_blur": 0.011582181810337662,
+        "motion_blur": 0.18303544045585157,
+        "fog_filter": 0.021197390627227496,
+        "pixelate": 0.14343171283072614,
+        "jpeg_filter": 0.025298664551544822
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.031941983523431666,
+        "synonym": 0.1141569373099197,
+        "ata_saliency": 0.0943778924729814,
+        "fragmentation": 0.06628421344817217,
+        "character_noise": 0.007451830607744764
+    }
+}

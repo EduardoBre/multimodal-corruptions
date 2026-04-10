@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/66",
+        "folder_id": "66",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00024687.JPEG"
+    },
+    "pareto_index": 5,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.012598,
+            "defocus_blur": 0.016584,
+            "motion_blur": 0.165893,
+            "fog_filter": 0.000787,
+            "pixelate": 0.000581,
+            "jpeg_filter": 0.1601
+        },
+        "text_corruptions": {
+            "homophone": 0.098997,
+            "synonym": 0.095872,
+            "ata_saliency": 0.039063,
+            "fragmentation": 0.041439,
+            "character_noise": 0.05915
+        },
+        "img_budget_used": 0.356542,
+        "txt_budget_used": 0.334521,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.10835,
+        "txt_dist": 0.27979,
+        "txt_sim": 0.72021
+    },
+    "swad_metrics": {
+        "iou_0": 0.88344,
+        "delta_m_plus": 1.0,
+        "phi": 0.64218,
+        "swad": 0.64218
+    },
+    "l2_distance": 0.30004,
+    "original_prompt": "Identify the objects \"bathing cap, maillot, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 72,
+            "ymin": 161,
+            "xmax": 163,
+            "ymax": 410
+        },
+        "maillot": {
+            "xmin": 82,
+            "ymin": 193,
+            "xmax": 153,
+            "ymax": 300
+        },
+        "bathing cap": {
+            "xmin": 93,
+            "ymin": 158,
+            "xmax": 125,
+            "ymax": 190
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bathing cap\u200b, my \u043eh, per s\u200bo\u200dn\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [258, 317, 352, 387], \"label\": \"bathing cap\u200b, my \u043eh, per s\u200bo\u200dn\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    258,
+                    317,
+                    352,
+                    387
+                ],
+                "label": "bathing cap\u200b, my \u043eh, per s\u200bo\u200dn"
+            }
+        ],
+        "token_count": 54,
+        "raw_token_count": 153,
+        "runtime_seconds": 0.481
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.01259753698625114,
+        "defocus_blur": 0.016583680375867948,
+        "motion_blur": 0.1658926070717716,
+        "fog_filter": 0.0007873432052516332,
+        "pixelate": 0.0005808514718435732,
+        "jpeg_filter": 0.16010042949174264
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.09899697907153465,
+        "synonym": 0.09587163470759894,
+        "ata_saliency": 0.03906268011055401,
+        "fragmentation": 0.04143928615333986,
+        "character_noise": 0.05915014600620774
+    }
+}

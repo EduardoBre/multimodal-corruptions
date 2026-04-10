@@ -1,0 +1,68 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/single/solo/99",
+        "folder_id": "99",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00005430.JPEG"
+    },
+    "original_prompt": "Identify the objects \"can opener\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "can opener": {
+            "xmin": 192,
+            "ymin": 99,
+            "xmax": 529,
+            "ymax": 337
+        }
+    },
+    "baseline_iou": 0.9724,
+    "swad_star": 0.83566,
+    "swad_star_index": 0,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 1,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.14594,
+                "img_dist": 0.01677,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.9724,
+                "delta_m_plus": 0.84992,
+                "phi": 0.98323,
+                "swad": 0.83566
+            },
+            "l2_distance": 0.1469,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"can opener\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [270, 308, 380, 648], \"label\": \"can opener\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            270,
+                            308,
+                            380,
+                            648
+                        ],
+                        "label": "can opener"
+                    }
+                ],
+                "token_count": 40,
+                "raw_token_count": 49,
+                "runtime_seconds": 0.2437
+            }
+        }
+    ]
+}

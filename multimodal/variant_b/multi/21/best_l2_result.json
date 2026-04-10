@@ -1,0 +1,109 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/21",
+        "folder_id": "21",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00030001.JPEG"
+    },
+    "pareto_index": 10,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.310943,
+            "defocus_blur": 0.037984,
+            "motion_blur": 0.083663,
+            "fog_filter": 0.120206,
+            "pixelate": 0.068854,
+            "jpeg_filter": 0.08195
+        },
+        "text_corruptions": {
+            "homophone": 0.190772,
+            "synonym": 0.101033,
+            "ata_saliency": 0.015307,
+            "fragmentation": 0.013,
+            "character_noise": 0.126968
+        },
+        "img_budget_used": 0.703602,
+        "txt_budget_used": 0.447079,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.06618,
+        "txt_dist": 0.23185,
+        "txt_sim": 0.76815
+    },
+    "swad_metrics": {
+        "iou_0": 0.7961,
+        "delta_m_plus": 1.0,
+        "phi": 0.71731,
+        "swad": 0.71731
+    },
+    "l2_distance": 0.24111,
+    "original_prompt": "Identify the objects \"hat with a wide brim, person, watercraft\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "hat with a wide brim": {
+            "xmin": 300,
+            "ymin": 171,
+            "xmax": 343,
+            "ymax": 205
+        },
+        "watercraft": {
+            "xmin": 123,
+            "ymin": 247,
+            "xmax": 227,
+            "ymax": 304
+        },
+        "person": {
+            "xmin": 285,
+            "ymin": 179,
+            "xmax": 357,
+            "ymax": 399
+        },
+        "person_1": {
+            "xmin": 155,
+            "ymin": 222,
+            "xmax": 198,
+            "ymax": 284
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"hat w\u0456t\u200bh a wyd\u0435 b\u0456rm, p\u0435r s\u043en, water k\u200draft\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [573, 438, 714, 998], \"label\": \"hat w\u0456t\u200bh a wyd\u0435 b\u0456rm, p\u0435r s\u043en, water k\u200draft\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    573,
+                    438,
+                    714,
+                    998
+                ],
+                "label": "hat w\u0456t\u200bh a wyd\u0435 b\u0456rm, p\u0435r s\u043en, water k\u200draft"
+            }
+        ],
+        "token_count": 64,
+        "raw_token_count": 186,
+        "runtime_seconds": 0.7488
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.3109431346994237,
+        "defocus_blur": 0.037984195567119676,
+        "motion_blur": 0.08366338492800067,
+        "fog_filter": 0.12020610138572675,
+        "pixelate": 0.06885434420762118,
+        "jpeg_filter": 0.08195034319308209
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.1907717545173097,
+        "synonym": 0.10103258160047256,
+        "ata_saliency": 0.015306525971794943,
+        "fragmentation": 0.012999504110205833,
+        "character_noise": 0.12696846751786722
+    }
+}

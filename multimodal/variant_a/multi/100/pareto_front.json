@@ -1,0 +1,1387 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/100",
+        "folder_id": "100",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00022024.JPEG"
+    },
+    "original_prompt": "Identify the objects \"helmet, motorcycle, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 170,
+            "ymin": 31,
+            "xmax": 324,
+            "ymax": 266
+        },
+        "motorcycle": {
+            "xmin": 96,
+            "ymin": 125,
+            "xmax": 385,
+            "ymax": 299
+        },
+        "helmet": {
+            "xmin": 244,
+            "ymin": 29,
+            "xmax": 298,
+            "ymax": 62
+        }
+    },
+    "baseline_iou": 0.8866,
+    "swad_star": 0.58649,
+    "swad_star_index": 12,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 3,
+    "total_evaluations": 90,
+    "skipped_evaluations": 30,
+    "n_solutions": 24,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.86189,
+                "img_dist": 0.05358,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.8866,
+                "delta_m_plus": 0.02787,
+                "phi": 0.94642,
+                "swad": 0.02638
+            },
+            "l2_distance": 0.86355,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"helmet, motorcycle, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [492, 93, 592, 200], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [183, 360, 783, 917], \"label\": \"motorcycle\"},\n\t{\"bbox_2d\": [367, 93, 648, 800], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            492,
+                            93,
+                            592,
+                            200
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            183,
+                            360,
+                            783,
+                            917
+                        ],
+                        "label": "motorcycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            367,
+                            93,
+                            648,
+                            800
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 127,
+                "runtime_seconds": 0.4755
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6124377601560459,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.81747,
+                "img_dist": 0.10217,
+                "txt_dist": 0.04096,
+                "txt_sim": 0.95904
+            },
+            "swad_metrics": {
+                "iou_0": 0.8866,
+                "delta_m_plus": 0.07797,
+                "phi": 0.86105,
+                "swad": 0.06714
+            },
+            "l2_distance": 0.82485,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"helemt, motorcycle, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [488, 80, 592, 220], \"label\": \"helemt\"},\n\t{\"bbox_2d\": [178, 400, 778, 920], \"label\": \"motorcycle\"},\n\t{\"bbox_2d\": [368, 80, 652, 800], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            488,
+                            80,
+                            592,
+                            220
+                        ],
+                        "label": "helemt"
+                    },
+                    {
+                        "bbox_2d": [
+                            178,
+                            400,
+                            778,
+                            920
+                        ],
+                        "label": "motorcycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            368,
+                            80,
+                            652,
+                            800
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 106,
+                "raw_token_count": 127,
+                "runtime_seconds": 0.4755
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.5656671100314771,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.039875089079669634
+            },
+            "objectives": {
+                "iou": 0.81324,
+                "img_dist": 0.0984,
+                "txt_dist": 0.05022,
+                "txt_sim": 0.94978
+            },
+            "swad_metrics": {
+                "iou_0": 0.8866,
+                "delta_m_plus": 0.08274,
+                "phi": 0.85632,
+                "swad": 0.07085
+            },
+            "l2_distance": 0.82071,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"helmet, mot\u200dorcycle, per\u200bs\u200bon\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [492, 80, 588, 208], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [182, 392, 776, 916], \"label\": \"motorcycle\"},\n\t{\"bbox_2d\": [388, 80, 650, 796], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            492,
+                            80,
+                            588,
+                            208
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            182,
+                            392,
+                            776,
+                            916
+                        ],
+                        "label": "motorcycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            388,
+                            80,
+                            650,
+                            796
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 127,
+                "runtime_seconds": 0.4755
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.58753,
+                "img_dist": 0.10492,
+                "txt_dist": 0.2708,
+                "txt_sim": 0.7292
+            },
+            "swad_metrics": {
+                "iou_0": 0.8866,
+                "delta_m_plus": 0.33732,
+                "phi": 0.65269,
+                "swad": 0.22017
+            },
+            "l2_distance": 0.65539,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hell met, motor sickle, per son\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [488, 88, 590, 244], \"label\": \"hell met\"},\n\t{\"bbox_2d\": [378, 88, 652, 796], \"label\": \"per son\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            488,
+                            88,
+                            590,
+                            244
+                        ],
+                        "label": "hell met"
+                    },
+                    {
+                        "bbox_2d": [
+                            378,
+                            88,
+                            652,
+                            796
+                        ],
+                        "label": "per son"
+                    }
+                ],
+                "token_count": 72,
+                "raw_token_count": 127,
+                "runtime_seconds": 0.4755
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.9034372814783611,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.6482806000476753
+            },
+            "objectives": {
+                "iou": 0.58732,
+                "img_dist": 0.1865,
+                "txt_dist": 0.21927,
+                "txt_sim": 0.78073
+            },
+            "swad_metrics": {
+                "iou_0": 0.8866,
+                "delta_m_plus": 0.33756,
+                "phi": 0.63512,
+                "swad": 0.21439
+            },
+            "l2_distance": 0.65407,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"h\u200be\u200bl\u200bm\u200b\u0435\u200dt, m\u200bot\u200bo\u200dr\u200b\u0441\u0443\u200dc\u200dl\u200b\u0435, \u0440\u200de\u200br\u200ds\u200b\u043en\u200d\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [490, 96, 595, 200], \"label\": \"h\u200be\u200bl\u200bm\u200b\u0435\u200dt\"},\n\t{\"bbox_2d\": [187, 368, 778, 916], \"label\": \"m\u200bot\u200bo\u200br\u200bc\u200by\u200bc\u200bl\u200be\"},\n\t{\"bbox_2d\": [365, 96, 648, 808], \"label\": \"\u0440\u200b\u0435\u200b\u0440\u200b\u0441\u200b\u043e\u200b\u043d\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            490,
+                            96,
+                            595,
+                            200
+                        ],
+                        "label": "h\u200be\u200bl\u200bm\u200b\u0435\u200dt"
+                    },
+                    {
+                        "bbox_2d": [
+                            187,
+                            368,
+                            778,
+                            916
+                        ],
+                        "label": "m\u200bot\u200bo\u200br\u200bc\u200by\u200bc\u200bl\u200be"
+                    },
+                    {
+                        "bbox_2d": [
+                            365,
+                            96,
+                            648,
+                            808
+                        ],
+                        "label": "\u0440\u200b\u0435\u200b\u0440\u200b\u0441\u200b\u043e\u200b\u043d"
+                    }
+                ],
+                "token_count": 140,
+                "raw_token_count": 141,
+                "runtime_seconds": 0.4919
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.8004900574692112,
+                "txt_attack": "homophone",
+                "txt_scale": 0.3273709769105356
+            },
+            "objectives": {
+                "iou": 0.60108,
+                "img_dist": 0.10979,
+                "txt_dist": 0.2278,
+                "txt_sim": 0.7722
+            },
+            "swad_metrics": {
+                "iou_0": 0.8866,
+                "delta_m_plus": 0.32204,
+                "phi": 0.68742,
+                "swad": 0.22138
+            },
+            "l2_distance": 0.65211,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"helmet, motor sickle, purse on\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [484, 80, 592, 220], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [176, 420, 776, 920], \"label\": \"motor sickle\"},\n\t{\"bbox_2d\": [592, 530, 726, 720], \"label\": \"purse on\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            484,
+                            80,
+                            592,
+                            220
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            176,
+                            420,
+                            776,
+                            920
+                        ],
+                        "label": "motor sickle"
+                    },
+                    {
+                        "bbox_2d": [
+                            592,
+                            530,
+                            726,
+                            720
+                        ],
+                        "label": "purse on"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 141,
+                "runtime_seconds": 0.4919
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.7936353295471219,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.60471,
+                "img_dist": 0.09893,
+                "txt_dist": 0.17772,
+                "txt_sim": 0.82228
+            },
+            "swad_metrics": {
+                "iou_0": 0.8866,
+                "delta_m_plus": 0.31794,
+                "phi": 0.74093,
+                "swad": 0.23558
+            },
+            "l2_distance": 0.638,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hell met, motorcycle, per son\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [184, 416, 772, 916], \"label\": \"hell met\"},\n\t{\"bbox_2d\": [372, 88, 650, 800], \"label\": \"per son\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            184,
+                            416,
+                            772,
+                            916
+                        ],
+                        "label": "hell met"
+                    },
+                    {
+                        "bbox_2d": [
+                            372,
+                            88,
+                            650,
+                            800
+                        ],
+                        "label": "per son"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 130,
+                "runtime_seconds": 0.4367
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.0663562758984999,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.87374,
+                "img_dist": 0.03757,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.8866,
+                "delta_m_plus": 0.0145,
+                "phi": 0.96243,
+                "swad": 0.01396
+            },
+            "l2_distance": 0.87455,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"helmet, motorcycle, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [492, 90, 592, 200], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [183, 357, 780, 912], \"label\": \"motorcycle\"},\n\t{\"bbox_2d\": [365, 90, 648, 800], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            492,
+                            90,
+                            592,
+                            200
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            183,
+                            357,
+                            780,
+                            912
+                        ],
+                        "label": "motorcycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            365,
+                            90,
+                            648,
+                            800
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 130,
+                "runtime_seconds": 0.4367
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.005835488545101075,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.5960688897697375
+            },
+            "objectives": {
+                "iou": 0.85361,
+                "img_dist": 0.05358,
+                "txt_dist": 0.13727,
+                "txt_sim": 0.86273
+            },
+            "swad_metrics": {
+                "iou_0": 0.8866,
+                "delta_m_plus": 0.03721,
+                "phi": 0.8165,
+                "swad": 0.03038
+            },
+            "l2_distance": 0.86624,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hemlet, motoryccle, perjon\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [490, 96, 592, 200], \"label\": \"hemlet\"},\n\t{\"bbox_2d\": [183, 360, 784, 916], \"label\": \"motoryccle\"},\n\t{\"bbox_2d\": [370, 96, 648, 800], \"label\": \"perjon\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            490,
+                            96,
+                            592,
+                            200
+                        ],
+                        "label": "hemlet"
+                    },
+                    {
+                        "bbox_2d": [
+                            183,
+                            360,
+                            784,
+                            916
+                        ],
+                        "label": "motoryccle"
+                    },
+                    {
+                        "bbox_2d": [
+                            370,
+                            96,
+                            648,
+                            800
+                        ],
+                        "label": "perjon"
+                    }
+                ],
+                "token_count": 108,
+                "raw_token_count": 130,
+                "runtime_seconds": 0.4367
+            }
+        },
+        {
+            "index": 9,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.47673823159757656,
+                "txt_attack": "homophone",
+                "txt_scale": 0.8971524375333463
+            },
+            "objectives": {
+                "iou": 0.6524,
+                "img_dist": 0.07248,
+                "txt_dist": 0.09308,
+                "txt_sim": 0.90692
+            },
+            "swad_metrics": {
+                "iou_0": 0.8866,
+                "delta_m_plus": 0.26416,
+                "phi": 0.84119,
+                "swad": 0.2222
+            },
+            "l2_distance": 0.66298,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"helmet, motor sickle, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [492, 80, 592, 208], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [342, 430, 452, 600], \"label\": \"motor sickle\"},\n\t{\"bbox_2d\": [358, 80, 648, 792], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            492,
+                            80,
+                            592,
+                            208
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            342,
+                            430,
+                            452,
+                            600
+                        ],
+                        "label": "motor sickle"
+                    },
+                    {
+                        "bbox_2d": [
+                            358,
+                            80,
+                            648,
+                            792
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 106,
+                "raw_token_count": 144,
+                "runtime_seconds": 0.5242
+            }
+        },
+        {
+            "index": 10,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.10805560329345026
+            },
+            "objectives": {
+                "iou": 0.80315,
+                "img_dist": 0.10492,
+                "txt_dist": 0.07993,
+                "txt_sim": 0.92007
+            },
+            "swad_metrics": {
+                "iou_0": 0.8866,
+                "delta_m_plus": 0.09412,
+                "phi": 0.82354,
+                "swad": 0.07751
+            },
+            "l2_distance": 0.81391,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"helmet, motorcycle, per son\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [488, 88, 590, 228], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [184, 388, 780, 916], \"label\": \"motorcycle\"},\n\t{\"bbox_2d\": [388, 88, 652, 796], \"label\": \"per son\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            488,
+                            88,
+                            590,
+                            228
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            184,
+                            388,
+                            780,
+                            916
+                        ],
+                        "label": "motorcycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            388,
+                            88,
+                            652,
+                            796
+                        ],
+                        "label": "per son"
+                    }
+                ],
+                "token_count": 106,
+                "raw_token_count": 144,
+                "runtime_seconds": 0.5242
+            }
+        },
+        {
+            "index": 11,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.03732619454213726,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.04197645561909963
+            },
+            "objectives": {
+                "iou": 0.86125,
+                "img_dist": 0.05405,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.8866,
+                "delta_m_plus": 0.02859,
+                "phi": 0.94595,
+                "swad": 0.02705
+            },
+            "l2_distance": 0.86294,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"helmet, motorcycle, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [488, 93, 588, 200], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [183, 360, 788, 917], \"label\": \"motorcycle\"},\n\t{\"bbox_2d\": [365, 93, 648, 797], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            488,
+                            93,
+                            588,
+                            200
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            183,
+                            360,
+                            788,
+                            917
+                        ],
+                        "label": "motorcycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            365,
+                            93,
+                            648,
+                            797
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 144,
+                "runtime_seconds": 0.5242
+            }
+        },
+        {
+            "index": 12,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.4569583051840945,
+                "txt_attack": "homophone",
+                "txt_scale": 0.8971524375333463
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.07049,
+                "txt_dist": 0.36903,
+                "txt_sim": 0.63097
+            },
+            "swad_metrics": {
+                "iou_0": 0.8866,
+                "delta_m_plus": 1.0,
+                "phi": 0.58649,
+                "swad": 0.58649
+            },
+            "l2_distance": 0.3757,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hell met, motor psychol, purse on\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [182, 370, 780, 912], \"label\": \"hell met, motor psychol, purse on\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            182,
+                            370,
+                            780,
+                            912
+                        ],
+                        "label": "hell met, motor psychol, purse on"
+                    }
+                ],
+                "token_count": 47,
+                "raw_token_count": 130,
+                "runtime_seconds": 0.4536
+            }
+        },
+        {
+            "index": 13,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.23271499524944209,
+                "txt_attack": "homophone",
+                "txt_scale": 0.28871916582946056
+            },
+            "objectives": {
+                "iou": 0.71024,
+                "img_dist": 0.05692,
+                "txt_dist": 0.09308,
+                "txt_sim": 0.90692
+            },
+            "swad_metrics": {
+                "iou_0": 0.8866,
+                "delta_m_plus": 0.19892,
+                "phi": 0.8553,
+                "swad": 0.17013
+            },
+            "l2_distance": 0.71857,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"helmet, motor sickle, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [492, 90, 590, 188], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [347, 400, 427, 472], \"label\": \"motor sickle\"},\n\t{\"bbox_2d\": [355, 90, 647, 800], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            492,
+                            90,
+                            590,
+                            188
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            347,
+                            400,
+                            427,
+                            472
+                        ],
+                        "label": "motor sickle"
+                    },
+                    {
+                        "bbox_2d": [
+                            355,
+                            90,
+                            647,
+                            800
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 106,
+                "raw_token_count": 130,
+                "runtime_seconds": 0.4536
+            }
+        },
+        {
+            "index": 14,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6535723135270998
+            },
+            "objectives": {
+                "iou": 0.80315,
+                "img_dist": 0.10492,
+                "txt_dist": 0.07993,
+                "txt_sim": 0.92007
+            },
+            "swad_metrics": {
+                "iou_0": 0.8866,
+                "delta_m_plus": 0.09412,
+                "phi": 0.82354,
+                "swad": 0.07751
+            },
+            "l2_distance": 0.81391,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"helmet, motorcycle, per son\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [488, 88, 590, 228], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [184, 388, 780, 916], \"label\": \"motorcycle\"},\n\t{\"bbox_2d\": [388, 88, 652, 796], \"label\": \"per son\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            488,
+                            88,
+                            590,
+                            228
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            184,
+                            388,
+                            780,
+                            916
+                        ],
+                        "label": "motorcycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            388,
+                            88,
+                            652,
+                            796
+                        ],
+                        "label": "per son"
+                    }
+                ],
+                "token_count": 106,
+                "raw_token_count": 130,
+                "runtime_seconds": 0.4536
+            }
+        },
+        {
+            "index": 15,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.00401949007196567,
+                "txt_attack": "homophone",
+                "txt_scale": 0.5557453971872341
+            },
+            "objectives": {
+                "iou": 0.86189,
+                "img_dist": 0.05358,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.8866,
+                "delta_m_plus": 0.02787,
+                "phi": 0.94642,
+                "swad": 0.02638
+            },
+            "l2_distance": 0.86355,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"helmet, motorcycle, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [492, 93, 592, 200], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [183, 360, 783, 917], \"label\": \"motorcycle\"},\n\t{\"bbox_2d\": [367, 93, 648, 800], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            492,
+                            93,
+                            592,
+                            200
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            183,
+                            360,
+                            783,
+                            917
+                        ],
+                        "label": "motorcycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            367,
+                            93,
+                            648,
+                            800
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 130,
+                "runtime_seconds": 0.4536
+            }
+        },
+        {
+            "index": 16,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.004618575661072932,
+                "txt_attack": "homophone",
+                "txt_scale": 0.08706259782932957
+            },
+            "objectives": {
+                "iou": 0.86189,
+                "img_dist": 0.05358,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.8866,
+                "delta_m_plus": 0.02787,
+                "phi": 0.94642,
+                "swad": 0.02638
+            },
+            "l2_distance": 0.86355,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"helmet, motorcycle, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [492, 93, 592, 200], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [183, 360, 783, 917], \"label\": \"motorcycle\"},\n\t{\"bbox_2d\": [367, 93, 648, 800], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            492,
+                            93,
+                            592,
+                            200
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            183,
+                            360,
+                            783,
+                            917
+                        ],
+                        "label": "motorcycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            367,
+                            93,
+                            648,
+                            800
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 130,
+                "runtime_seconds": 0.4536
+            }
+        },
+        {
+            "index": 17,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.5747696114095979,
+                "txt_attack": "homophone",
+                "txt_scale": 0.10684452896191199
+            },
+            "objectives": {
+                "iou": 0.8436,
+                "img_dist": 0.07947,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.8866,
+                "delta_m_plus": 0.0485,
+                "phi": 0.92053,
+                "swad": 0.04465
+            },
+            "l2_distance": 0.84733,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"helmet, motorcycle, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [496, 84, 592, 208], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [184, 384, 776, 916], \"label\": \"motorcycle\"},\n\t{\"bbox_2d\": [372, 84, 648, 808], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            496,
+                            84,
+                            592,
+                            208
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            184,
+                            384,
+                            776,
+                            916
+                        ],
+                        "label": "motorcycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            372,
+                            84,
+                            648,
+                            808
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 130,
+                "runtime_seconds": 0.4536
+            }
+        },
+        {
+            "index": 18,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.023753143673448093,
+                "txt_attack": "homophone",
+                "txt_scale": 0.1647705684285085
+            },
+            "objectives": {
+                "iou": 0.84394,
+                "img_dist": 0.05405,
+                "txt_dist": 0.09779,
+                "txt_sim": 0.90221
+            },
+            "swad_metrics": {
+                "iou_0": 0.8866,
+                "delta_m_plus": 0.04812,
+                "phi": 0.85345,
+                "swad": 0.04106
+            },
+            "l2_distance": 0.8513,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hell met, motorcycle, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [488, 96, 588, 200], \"label\": \"hell met\"},\n\t{\"bbox_2d\": [182, 350, 788, 916], \"label\": \"motorcycle\"},\n\t{\"bbox_2d\": [367, 96, 648, 796], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            488,
+                            96,
+                            588,
+                            200
+                        ],
+                        "label": "hell met"
+                    },
+                    {
+                        "bbox_2d": [
+                            182,
+                            350,
+                            788,
+                            916
+                        ],
+                        "label": "motorcycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            367,
+                            96,
+                            648,
+                            796
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 126,
+                "runtime_seconds": 0.4179
+            }
+        },
+        {
+            "index": 19,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.178833282189036,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6833060984155486
+            },
+            "objectives": {
+                "iou": 0.32901,
+                "img_dist": 0.05541,
+                "txt_dist": 0.29515,
+                "txt_sim": 0.70485
+            },
+            "swad_metrics": {
+                "iou_0": 0.8866,
+                "delta_m_plus": 0.62891,
+                "phi": 0.66579,
+                "swad": 0.41872
+            },
+            "l2_distance": 0.44546,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"helmit, motor sickle, purse on\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [490, 88, 591, 190], \"label\": \"helmit\"},\n\t{\"bbox_2d\": [353, 360, 410, 470], \"label\": \"motor sickle\"},\n\t{\"bbox_2d\": [607, 530, 738, 640], \"label\": \"purse on\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            490,
+                            88,
+                            591,
+                            190
+                        ],
+                        "label": "helmit"
+                    },
+                    {
+                        "bbox_2d": [
+                            353,
+                            360,
+                            410,
+                            470
+                        ],
+                        "label": "motor sickle"
+                    },
+                    {
+                        "bbox_2d": [
+                            607,
+                            530,
+                            738,
+                            640
+                        ],
+                        "label": "purse on"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 126,
+                "runtime_seconds": 0.4179
+            }
+        },
+        {
+            "index": 20,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.015457284393088709,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.22274156831417696
+            },
+            "objectives": {
+                "iou": 0.88508,
+                "img_dist": 0.03155,
+                "txt_dist": 0.18856,
+                "txt_sim": 0.81144
+            },
+            "swad_metrics": {
+                "iou_0": 0.8866,
+                "delta_m_plus": 0.00171,
+                "phi": 0.78584,
+                "swad": 0.00135
+            },
+            "l2_distance": 0.90549,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"he\u200blmet, mo\u200btor\u0441\u0443cle, \u0440er\u200ds\u043en\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [492, 90, 592, 200], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [185, 360, 780, 912], \"label\": \"motorcycle\"},\n\t{\"bbox_2d\": [355, 90, 650, 800], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            492,
+                            90,
+                            592,
+                            200
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            185,
+                            360,
+                            780,
+                            912
+                        ],
+                        "label": "motorcycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            355,
+                            90,
+                            650,
+                            800
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 126,
+                "runtime_seconds": 0.4179
+            }
+        },
+        {
+            "index": 21,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.8189283604363224,
+                "txt_attack": "homophone",
+                "txt_scale": 0.17371297895499999
+            },
+            "objectives": {
+                "iou": 0.77669,
+                "img_dist": 0.10979,
+                "txt_dist": 0.07993,
+                "txt_sim": 0.92007
+            },
+            "swad_metrics": {
+                "iou_0": 0.8866,
+                "delta_m_plus": 0.12397,
+                "phi": 0.81906,
+                "swad": 0.10154
+            },
+            "l2_distance": 0.78847,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"helmet, motorcycle, per son\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [480, 80, 590, 220], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [178, 420, 778, 920], \"label\": \"motorcycle\"},\n\t{\"bbox_2d\": [378, 80, 652, 800], \"label\": \"per son\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            480,
+                            80,
+                            590,
+                            220
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            178,
+                            420,
+                            778,
+                            920
+                        ],
+                        "label": "motorcycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            378,
+                            80,
+                            652,
+                            800
+                        ],
+                        "label": "per son"
+                    }
+                ],
+                "token_count": 106,
+                "raw_token_count": 126,
+                "runtime_seconds": 0.4179
+            }
+        },
+        {
+            "index": 22,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.6126883641923373,
+                "txt_attack": "homophone",
+                "txt_scale": 0.41797692145192744
+            },
+            "objectives": {
+                "iou": 0.63081,
+                "img_dist": 0.06872,
+                "txt_dist": 0.19087,
+                "txt_sim": 0.80913
+            },
+            "swad_metrics": {
+                "iou_0": 0.8866,
+                "delta_m_plus": 0.28851,
+                "phi": 0.75353,
+                "swad": 0.2174
+            },
+            "l2_distance": 0.66263,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hell met, motor sickle, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [181, 370, 778, 912], \"label\": \"hell met\"},\n\t{\"bbox_2d\": [363, 88, 645, 796], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            181,
+                            370,
+                            778,
+                            912
+                        ],
+                        "label": "hell met"
+                    },
+                    {
+                        "bbox_2d": [
+                            363,
+                            88,
+                            645,
+                            796
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 72,
+                "raw_token_count": 126,
+                "runtime_seconds": 0.4179
+            }
+        },
+        {
+            "index": 23,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.03759016319352326,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.68916,
+                "img_dist": 0.04199,
+                "txt_dist": 0.14117,
+                "txt_sim": 0.85883
+            },
+            "swad_metrics": {
+                "iou_0": 0.8866,
+                "delta_m_plus": 0.22269,
+                "phi": 0.82277,
+                "swad": 0.18322
+            },
+            "l2_distance": 0.70472,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"helmet, motor cycle, purse on\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [492, 88, 592, 200], \"label\": \"helmet\"},\n\t{\"bbox_2d\": [182, 378, 780, 912], \"label\": \"motor cycle\"},\n\t{\"bbox_2d\": [608, 530, 712, 630], \"label\": \"purse on\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            492,
+                            88,
+                            592,
+                            200
+                        ],
+                        "label": "helmet"
+                    },
+                    {
+                        "bbox_2d": [
+                            182,
+                            378,
+                            780,
+                            912
+                        ],
+                        "label": "motor cycle"
+                    },
+                    {
+                        "bbox_2d": [
+                            608,
+                            530,
+                            712,
+                            630
+                        ],
+                        "label": "purse on"
+                    }
+                ],
+                "token_count": 108,
+                "raw_token_count": 126,
+                "runtime_seconds": 0.4179
+            }
+        }
+    ]
+}

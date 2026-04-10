@@ -1,0 +1,106 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/155",
+        "folder_id": "155",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00005507.JPEG"
+    },
+    "pareto_index": 4,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.11816,
+            "defocus_blur": 0.005756,
+            "motion_blur": 0.345741,
+            "fog_filter": 0.001191,
+            "pixelate": 0.232235,
+            "jpeg_filter": 0.220311
+        },
+        "text_corruptions": {
+            "homophone": 0.312608,
+            "synonym": 0.201432,
+            "ata_saliency": 0.113202,
+            "fragmentation": 0.05949,
+            "character_noise": 0.003857
+        },
+        "img_budget_used": 0.923394,
+        "txt_budget_used": 0.690589,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.08555,
+        "txt_dist": 0.29509,
+        "txt_sim": 0.70491
+    },
+    "swad_metrics": {
+        "iou_0": 0.97586,
+        "delta_m_plus": 1.0,
+        "phi": 0.6446,
+        "swad": 0.6446
+    },
+    "l2_distance": 0.30724,
+    "original_prompt": "Identify the objects \"dog, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 0,
+            "ymin": 137,
+            "xmax": 298,
+            "ymax": 428
+        },
+        "dog": {
+            "xmin": 225,
+            "ymin": 131,
+            "xmax": 498,
+            "ymax": 428
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"dag, uhman\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [452, 300, 998, 998], \"label\": \"dag, uhman\"},\n\t{\"bbox_2d\": [0, 324, 598, 998], \"label\": \"dag, uhman\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    452,
+                    300,
+                    998,
+                    998
+                ],
+                "label": "dag, uhman"
+            },
+            {
+                "bbox_2d": [
+                    0,
+                    324,
+                    598,
+                    998
+                ],
+                "label": "dag, uhman"
+            }
+        ],
+        "token_count": 76,
+        "raw_token_count": 82,
+        "runtime_seconds": 0.2653
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.11816009376559017,
+        "defocus_blur": 0.005755744142175933,
+        "motion_blur": 0.3457412416295323,
+        "fog_filter": 0.0011911304642389106,
+        "pixelate": 0.23223467782746554,
+        "jpeg_filter": 0.22031078482966898
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.3126078226740716,
+        "synonym": 0.20143200485794296,
+        "ata_saliency": 0.11320216212381942,
+        "fragmentation": 0.05949000033932749,
+        "character_noise": 0.0038571071063944174
+    }
+}

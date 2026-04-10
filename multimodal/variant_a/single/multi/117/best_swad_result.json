@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/117",
+        "folder_id": "117",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00048412.JPEG"
+    },
+    "pareto_index": 3,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "gaussian_noise",
+        "img_scale": 0.08142031165696761,
+        "txt_attack": "homophone",
+        "txt_scale": 0.2228478256331735
+    },
+    "objectives": {
+        "iou": 0.00665,
+        "img_dist": 0.03313,
+        "txt_dist": 0.23509,
+        "txt_sim": 0.76491
+    },
+    "swad_metrics": {
+        "iou_0": 0.52371,
+        "delta_m_plus": 0.9873,
+        "phi": 0.73957,
+        "swad": 0.73018
+    },
+    "l2_distance": 0.23751,
+    "original_prompt": "Identify the objects \"perfume\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "perfume": {
+            "xmin": 35,
+            "ymin": 285,
+            "xmax": 247,
+            "ymax": 490
+        },
+        "perfume_1": {
+            "xmin": 150,
+            "ymin": 112,
+            "xmax": 435,
+            "ymax": 426
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"per fume\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [468, 724, 595, 750], \"label\": \"per fume\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    468,
+                    724,
+                    595,
+                    750
+                ],
+                "label": "per fume"
+            }
+        ],
+        "token_count": 41,
+        "raw_token_count": 45,
+        "runtime_seconds": 0.1668
+    }
+}

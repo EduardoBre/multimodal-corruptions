@@ -1,0 +1,106 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/53",
+        "folder_id": "53",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00036050.JPEG"
+    },
+    "pareto_index": 16,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 45,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.001327,
+            "defocus_blur": 0.008671,
+            "motion_blur": 0.002246,
+            "fog_filter": 0.001354,
+            "pixelate": 0.003189,
+            "jpeg_filter": 0.006027
+        },
+        "text_corruptions": {
+            "homophone": 0.157961,
+            "synonym": 0.036537,
+            "ata_saliency": 0.257871,
+            "fragmentation": 0.386004,
+            "character_noise": 0.099257
+        },
+        "img_budget_used": 0.022814,
+        "txt_budget_used": 0.937631,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.08261,
+        "txt_dist": 0.28563,
+        "txt_sim": 0.71437
+    },
+    "swad_metrics": {
+        "iou_0": 0.79825,
+        "delta_m_plus": 1.0,
+        "phi": 0.65536,
+        "swad": 0.65536
+    },
+    "l2_distance": 0.29734,
+    "original_prompt": "Identify the objects \"person, soccer ball\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "soccer ball": {
+            "xmin": 105,
+            "ymin": 117,
+            "xmax": 174,
+            "ymax": 182
+        },
+        "person": {
+            "xmin": 1,
+            "ymin": 0,
+            "xmax": 141,
+            "ymax": 119
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"p\u0435z son, soc\u0441e\u200dr\u200b b\u200da l\u200bl\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [168, 420, 288, 520], \"label\": \"p\u0435z son, soc\u0441e\u200dr\u200b b\u200da l\u200bl\"},\n\t{\"bbox_2d\": [568, 520, 688, 600], \"label\": \"p\u0435z son, soc\u0441e\u200dr\u200b b\u200da l\u200bl\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    168,
+                    420,
+                    288,
+                    520
+                ],
+                "label": "p\u0435z son, soc\u0441e\u200dr\u200b b\u200da l\u200bl"
+            },
+            {
+                "bbox_2d": [
+                    568,
+                    520,
+                    688,
+                    600
+                ],
+                "label": "p\u0435z son, soc\u0441e\u200dr\u200b b\u200da l\u200bl"
+            }
+        ],
+        "token_count": 108,
+        "raw_token_count": 121,
+        "runtime_seconds": 0.352
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0013267587304944084,
+        "defocus_blur": 0.0086710031197092,
+        "motion_blur": 0.002246287083750752,
+        "fog_filter": 0.0013538327063508453,
+        "pixelate": 0.0031888211698966884,
+        "jpeg_filter": 0.0060274543149070265
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.15796061508433942,
+        "synonym": 0.036537094719533314,
+        "ata_saliency": 0.2578714691798709,
+        "fragmentation": 0.3860043940643325,
+        "character_noise": 0.09925723150884541
+    }
+}

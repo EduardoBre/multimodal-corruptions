@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/86",
+        "folder_id": "86",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00024607.JPEG"
+    },
+    "pareto_index": 4,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.138035,
+            "defocus_blur": 0.003335,
+            "motion_blur": 0.04201,
+            "fog_filter": 0.004893,
+            "pixelate": 0.134209,
+            "jpeg_filter": 0.256145
+        },
+        "text_corruptions": {
+            "homophone": 0.066321,
+            "synonym": 0.129419,
+            "ata_saliency": 0.300564,
+            "fragmentation": 0.11193,
+            "character_noise": 0.137803
+        },
+        "img_budget_used": 0.578628,
+        "txt_budget_used": 0.746036,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.09469,
+        "txt_dist": 0.08639,
+        "txt_sim": 0.91361
+    },
+    "swad_metrics": {
+        "iou_0": 0.52668,
+        "delta_m_plus": 1.0,
+        "phi": 0.8271,
+        "swad": 0.8271
+    },
+    "l2_distance": 0.12818,
+    "original_prompt": "Identify the objects \"binder\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "binder": {
+            "xmin": 10,
+            "ymin": 33,
+            "xmax": 135,
+            "ymax": 173
+        },
+        "binder_1": {
+            "xmin": 76,
+            "ymin": 0,
+            "xmax": 236,
+            "ymax": 147
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bi\u200bnd\u200der\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [458, 300, 968, 700], \"label\": \"bi\u200bnd\u200der\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    458,
+                    300,
+                    968,
+                    700
+                ],
+                "label": "bi\u200bnd\u200der"
+            }
+        ],
+        "token_count": 44,
+        "raw_token_count": 139,
+        "runtime_seconds": 0.4197
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.13803515152753099,
+        "defocus_blur": 0.003334913228478799,
+        "motion_blur": 0.04201044926646083,
+        "fog_filter": 0.004893314172390953,
+        "pixelate": 0.13420876868238082,
+        "jpeg_filter": 0.2561452519643856
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.06632057631194142,
+        "synonym": 0.12941876342700037,
+        "ata_saliency": 0.3005638553178834,
+        "fragmentation": 0.11193031874193435,
+        "character_noise": 0.13780262683434577
+    }
+}

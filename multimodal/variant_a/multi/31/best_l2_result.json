@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/31",
+        "folder_id": "31",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00032382.JPEG"
+    },
+    "pareto_index": 2,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.6124377601560459,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.05557257533910853
+    },
+    "objectives": {
+        "iou": 0.31669,
+        "img_dist": 0.0749,
+        "txt_dist": 0.12206,
+        "txt_sim": 0.87794
+    },
+    "swad_metrics": {
+        "iou_0": 0.55224,
+        "delta_m_plus": 0.42654,
+        "phi": 0.81218,
+        "swad": 0.34643
+    },
+    "l2_distance": 0.34756,
+    "original_prompt": "Identify the objects \"bus, car, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 332,
+            "ymin": 203,
+            "xmax": 356,
+            "ymax": 226
+        },
+        "car": {
+            "xmin": 240,
+            "ymin": 222,
+            "xmax": 285,
+            "ymax": 241
+        },
+        "bus": {
+            "xmin": 316,
+            "ymin": 187,
+            "xmax": 421,
+            "ymax": 270
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bus, can, person\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [628, 492, 838, 708], \"label\": \"bus\"},\n\t{\"bbox_2d\": [864, 508, 892, 708], \"label\": \"can\"},\n\t{\"bbox_2d\": [892, 508, 928, 708], \"label\": \"person\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    628,
+                    492,
+                    838,
+                    708
+                ],
+                "label": "bus"
+            },
+            {
+                "bbox_2d": [
+                    864,
+                    508,
+                    892,
+                    708
+                ],
+                "label": "can"
+            },
+            {
+                "bbox_2d": [
+                    892,
+                    508,
+                    928,
+                    708
+                ],
+                "label": "person"
+            }
+        ],
+        "token_count": 105,
+        "raw_token_count": 286,
+        "runtime_seconds": 1.0073
+    }
+}

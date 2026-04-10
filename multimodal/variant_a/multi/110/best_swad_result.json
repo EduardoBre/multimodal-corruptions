@@ -1,0 +1,94 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/110",
+        "folder_id": "110",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00044795.JPEG"
+    },
+    "pareto_index": 18,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 45,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "motion_blur",
+        "img_scale": 0.2328257321686855,
+        "txt_attack": "homophone",
+        "txt_scale": 0.7174913440529346
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.06852,
+        "txt_dist": 0.2302,
+        "txt_sim": 0.7698
+    },
+    "swad_metrics": {
+        "iou_0": 0.82574,
+        "delta_m_plus": 1.0,
+        "phi": 0.71705,
+        "swad": 0.71705
+    },
+    "l2_distance": 0.24018,
+    "original_prompt": "Identify the objects \"chair, dog\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 185,
+            "ymin": 82,
+            "xmax": 387,
+            "ymax": 327
+        },
+        "dog_1": {
+            "xmin": 0,
+            "ymin": 160,
+            "xmax": 164,
+            "ymax": 307
+        },
+        "chair": {
+            "xmin": 381,
+            "ymin": 142,
+            "xmax": 499,
+            "ymax": 264
+        },
+        "chair_1": {
+            "xmin": 0,
+            "ymin": 128,
+            "xmax": 79,
+            "ymax": 220
+        },
+        "chair_2": {
+            "xmin": 70,
+            "ymin": 125,
+            "xmax": 151,
+            "ymax": 222
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"cher, dawg\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [375, 216, 774, 872], \"label\": \"cher, dawg\"},\n\t{\"bbox_2d\": [0, 429, 325, 816], \"label\": \"cher, dawg\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    375,
+                    216,
+                    774,
+                    872
+                ],
+                "label": "cher, dawg"
+            },
+            {
+                "bbox_2d": [
+                    0,
+                    429,
+                    325,
+                    816
+                ],
+                "label": "cher, dawg"
+            }
+        ],
+        "token_count": 78,
+        "raw_token_count": 204,
+        "runtime_seconds": 0.745
+    }
+}

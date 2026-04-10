@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/2",
+        "folder_id": "2",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00049130.JPEG"
+    },
+    "pareto_index": 4,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 6,
+    "total_evaluations": 180,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.08142031165696761,
+        "txt_attack": "homophone",
+        "txt_scale": 0.36317230802108746
+    },
+    "objectives": {
+        "iou": 0.05091,
+        "img_dist": 0.03047,
+        "txt_dist": 0.2748,
+        "txt_sim": 0.7252
+    },
+    "swad_metrics": {
+        "iou_0": 0.97897,
+        "delta_m_plus": 0.948,
+        "phi": 0.7031,
+        "swad": 0.66654
+    },
+    "l2_distance": 0.28113,
+    "original_prompt": "Identify the objects \"dog\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 13,
+            "ymin": 2,
+            "xmax": 192,
+            "ymax": 287
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"dag\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [197, 277, 275, 477], \"label\": \"dag\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    197,
+                    277,
+                    275,
+                    477
+                ],
+                "label": "dag"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 40,
+        "runtime_seconds": 0.1374
+    }
+}

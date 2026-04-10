@@ -1,0 +1,593 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/30",
+        "folder_id": "30",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00014511.JPEG"
+    },
+    "original_prompt": "Identify the objects \"bowl, cup or mug, dishwasher, microwave, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "microwave": {
+            "xmin": 47,
+            "ymin": 38,
+            "xmax": 218,
+            "ymax": 131
+        },
+        "bowl": {
+            "xmin": 117,
+            "ymin": 189,
+            "xmax": 169,
+            "ymax": 225
+        },
+        "bowl_1": {
+            "xmin": 199,
+            "ymin": 202,
+            "xmax": 284,
+            "ymax": 280
+        },
+        "person": {
+            "xmin": 166,
+            "ymin": 0,
+            "xmax": 490,
+            "ymax": 287
+        },
+        "cup or mug": {
+            "xmin": 96,
+            "ymin": 216,
+            "xmax": 151,
+            "ymax": 284
+        },
+        "dishwasher": {
+            "xmin": 20,
+            "ymin": 138,
+            "xmax": 297,
+            "ymax": 288
+        }
+    },
+    "baseline_iou": 0.59006,
+    "swad_star": 0.84265,
+    "swad_star_index": 6,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "n_solutions": 8,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.62207,
+                "img_dist": 0.06101,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.59006,
+                "delta_m_plus": 0.0,
+                "phi": 0.93899,
+                "swad": 0.0
+            },
+            "l2_distance": 0.62505,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bowl, cup or mug, dishwasher, microwave, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [218, 657, 335, 750], \"label\": \"bowl\"},\n\t{\"bbox_2d\": [218, 657, 335, 750], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [40, 512, 587, 997], \"label\": \"dishwasher\"},\n\t{\"bbox_2d\": [85, 125, 440, 440], \"label\": \"microwave\"},\n\t{\"bbox_2d\": [328, 0, 984, 997], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            218,
+                            657,
+                            335,
+                            750
+                        ],
+                        "label": "bowl"
+                    },
+                    {
+                        "bbox_2d": [
+                            218,
+                            657,
+                            335,
+                            750
+                        ],
+                        "label": "cup or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            40,
+                            512,
+                            587,
+                            997
+                        ],
+                        "label": "dishwasher"
+                    },
+                    {
+                        "bbox_2d": [
+                            85,
+                            125,
+                            440,
+                            440
+                        ],
+                        "label": "microwave"
+                    },
+                    {
+                        "bbox_2d": [
+                            328,
+                            0,
+                            984,
+                            997
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 172,
+                "raw_token_count": 215,
+                "runtime_seconds": 0.7395
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.51716,
+                "img_dist": 0.0481,
+                "txt_dist": 0.14447,
+                "txt_sim": 0.85553
+            },
+            "swad_metrics": {
+                "iou_0": 0.59006,
+                "delta_m_plus": 0.12355,
+                "phi": 0.81438,
+                "swad": 0.10061
+            },
+            "l2_distance": 0.53911,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"obwl, ucp or umg, dishwasher, microwave, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [40, 510, 585, 997], \"label\": \"dishwasher\"},\n\t{\"bbox_2d\": [83, 117, 444, 440], \"label\": \"microwave\"},\n\t{\"bbox_2d\": [335, 0, 980, 997], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            40,
+                            510,
+                            585,
+                            997
+                        ],
+                        "label": "dishwasher"
+                    },
+                    {
+                        "bbox_2d": [
+                            83,
+                            117,
+                            444,
+                            440
+                        ],
+                        "label": "microwave"
+                    },
+                    {
+                        "bbox_2d": [
+                            335,
+                            0,
+                            980,
+                            997
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 103,
+                "raw_token_count": 215,
+                "runtime_seconds": 0.7395
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.6126883641923373,
+                "txt_attack": "homophone",
+                "txt_scale": 0.10684452896191199
+            },
+            "objectives": {
+                "iou": 0.61581,
+                "img_dist": 0.06618,
+                "txt_dist": 0.04796,
+                "txt_sim": 0.95204
+            },
+            "swad_metrics": {
+                "iou_0": 0.59006,
+                "delta_m_plus": 0.0,
+                "phi": 0.88903,
+                "swad": 0.0
+            },
+            "l2_distance": 0.62121,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bowl, cup or mug, dishwasher, microwave, per son\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [200, 670, 338, 950], \"label\": \"bowl\"},\n\t{\"bbox_2d\": [200, 670, 338, 950], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [44, 520, 587, 997], \"label\": \"dishwasher\"},\n\t{\"bbox_2d\": [84, 113, 440, 443], \"label\": \"microwave\"},\n\t{\"bbox_2d\": [333, 0, 975, 997], \"label\": \"per son\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            200,
+                            670,
+                            338,
+                            950
+                        ],
+                        "label": "bowl"
+                    },
+                    {
+                        "bbox_2d": [
+                            200,
+                            670,
+                            338,
+                            950
+                        ],
+                        "label": "cup or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            44,
+                            520,
+                            587,
+                            997
+                        ],
+                        "label": "dishwasher"
+                    },
+                    {
+                        "bbox_2d": [
+                            84,
+                            113,
+                            440,
+                            443
+                        ],
+                        "label": "microwave"
+                    },
+                    {
+                        "bbox_2d": [
+                            333,
+                            0,
+                            975,
+                            997
+                        ],
+                        "label": "per son"
+                    }
+                ],
+                "token_count": 173,
+                "raw_token_count": 215,
+                "runtime_seconds": 0.7395
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.21300761893764208,
+                "txt_attack": "synonym",
+                "txt_scale": 0.11490566325799068
+            },
+            "objectives": {
+                "iou": 0.62516,
+                "img_dist": 0.05205,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.59006,
+                "delta_m_plus": 0.0,
+                "phi": 0.94795,
+                "swad": 0.0
+            },
+            "l2_distance": 0.62732,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bowl, cup or mug, dishwasher, microwave, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [200, 660, 337, 957], \"label\": \"bowl\"},\n\t{\"bbox_2d\": [200, 660, 337, 957], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [39, 510, 585, 997], \"label\": \"dishwasher\"},\n\t{\"bbox_2d\": [83, 120, 437, 443], \"label\": \"microwave\"},\n\t{\"bbox_2d\": [328, 0, 978, 997], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            200,
+                            660,
+                            337,
+                            957
+                        ],
+                        "label": "bowl"
+                    },
+                    {
+                        "bbox_2d": [
+                            200,
+                            660,
+                            337,
+                            957
+                        ],
+                        "label": "cup or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            39,
+                            510,
+                            585,
+                            997
+                        ],
+                        "label": "dishwasher"
+                    },
+                    {
+                        "bbox_2d": [
+                            83,
+                            120,
+                            437,
+                            443
+                        ],
+                        "label": "microwave"
+                    },
+                    {
+                        "bbox_2d": [
+                            328,
+                            0,
+                            978,
+                            997
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 172,
+                "raw_token_count": 215,
+                "runtime_seconds": 0.7395
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.61972,
+                "img_dist": 0.03762,
+                "txt_dist": 0.07736,
+                "txt_sim": 0.92264
+            },
+            "swad_metrics": {
+                "iou_0": 0.59006,
+                "delta_m_plus": 0.0,
+                "phi": 0.88793,
+                "swad": 0.0
+            },
+            "l2_distance": 0.62566,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bowl, cup oar mug, dishwasher, microwave, per son\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [220, 657, 335, 950], \"label\": \"bowl\"},\n\t{\"bbox_2d\": [220, 657, 335, 950], \"label\": \"cup oar mug\"},\n\t{\"bbox_2d\": [39, 517, 585, 997], \"label\": \"dishwasher\"},\n\t{\"bbox_2d\": [85, 117, 438, 443], \"label\": \"microwave\"},\n\t{\"bbox_2d\": [333, 0, 980, 997], \"label\": \"per son\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            220,
+                            657,
+                            335,
+                            950
+                        ],
+                        "label": "bowl"
+                    },
+                    {
+                        "bbox_2d": [
+                            220,
+                            657,
+                            335,
+                            950
+                        ],
+                        "label": "cup oar mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            39,
+                            517,
+                            585,
+                            997
+                        ],
+                        "label": "dishwasher"
+                    },
+                    {
+                        "bbox_2d": [
+                            85,
+                            117,
+                            438,
+                            443
+                        ],
+                        "label": "microwave"
+                    },
+                    {
+                        "bbox_2d": [
+                            333,
+                            0,
+                            980,
+                            997
+                        ],
+                        "label": "per son"
+                    }
+                ],
+                "token_count": 174,
+                "raw_token_count": 215,
+                "runtime_seconds": 0.7395
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.03732619454213726,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.33647038540361596
+            },
+            "objectives": {
+                "iou": 0.72402,
+                "img_dist": 0.05143,
+                "txt_dist": 0.04127,
+                "txt_sim": 0.95873
+            },
+            "swad_metrics": {
+                "iou_0": 0.59006,
+                "delta_m_plus": 0.0,
+                "phi": 0.90942,
+                "swad": 0.0
+            },
+            "l2_distance": 0.72702,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bolw, cup or mug, dishwasher, microwave, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [192, 657, 330, 937], \"label\": \"bolw\"},\n\t{\"bbox_2d\": [398, 720, 557, 945], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [39, 507, 583, 999], \"label\": \"dishwasher\"},\n\t{\"bbox_2d\": [83, 117, 440, 445], \"label\": \"microwave\"},\n\t{\"bbox_2d\": [327, 0, 977, 999], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            192,
+                            657,
+                            330,
+                            937
+                        ],
+                        "label": "bolw"
+                    },
+                    {
+                        "bbox_2d": [
+                            398,
+                            720,
+                            557,
+                            945
+                        ],
+                        "label": "cup or mug"
+                    },
+                    {
+                        "bbox_2d": [
+                            39,
+                            507,
+                            583,
+                            999
+                        ],
+                        "label": "dishwasher"
+                    },
+                    {
+                        "bbox_2d": [
+                            83,
+                            117,
+                            440,
+                            445
+                        ],
+                        "label": "microwave"
+                    },
+                    {
+                        "bbox_2d": [
+                            327,
+                            0,
+                            977,
+                            999
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 172,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.7679
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "fog_filter",
+                "img_scale": 0.02226035255626979,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4303904312548027
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.07974,
+                "txt_dist": 0.08433,
+                "txt_sim": 0.91567
+            },
+            "swad_metrics": {
+                "iou_0": 0.59006,
+                "delta_m_plus": 1.0,
+                "phi": 0.84265,
+                "swad": 0.84265
+            },
+            "l2_distance": 0.11606,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bowl, cup or mug, dish washer, microwave, purse on\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [220, 657, 333, 770], \"label\": \"bowl\"},\n\t{\"bbox_2d\": [196, 740, 320, 950], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [107, 677, 196, 800], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [107, 700, 196, 800], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [107, 677, 196, 800], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [107, 700, 196, 800], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [107, 677, 196, 800], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [107, 700, 196, 800], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [107, 677, 196, 800], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [107, 700, 196, 800], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [107, 677, 196, 800], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [107, 700, 196, 800], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [107, 677, 196, 800], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [107, 700, 196, 800], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [107, 677, 196, 800], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [107, 700, 196, 800], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [107, 677, 196, 800], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [107, 700, 196, 800], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [107, 677, 196, 800], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [107, 700, 196, 800], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [107, 677, 196, 800], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [107, 700, 196, 800], \"label\": \"cup or mug\"},\n\t{\"bbox_2d\": [107, 677, 196, 800],",
+                "parsed_predictions": [],
+                "token_count": 800,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.7679
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.8714249440824764,
+                "txt_attack": "synonym",
+                "txt_scale": 0.208196069087493
+            },
+            "objectives": {
+                "iou": 0.60444,
+                "img_dist": 0.10901,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.59006,
+                "delta_m_plus": 0.0,
+                "phi": 0.89099,
+                "swad": 0.0
+            },
+            "l2_distance": 0.61419,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bowl, cup or mug, dishwasher, microwave, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [216, 640, 344, 750], \"label\": \"bowl\"},\n\t{\"bbox_2d\": [34, 520, 587, 998], \"label\": \"dishwasher\"},\n\t{\"bbox_2d\": [83, 112, 440, 450], \"label\": \"microwave\"},\n\t{\"bbox_2d\": [338, 0, 984, 998], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            216,
+                            640,
+                            344,
+                            750
+                        ],
+                        "label": "bowl"
+                    },
+                    {
+                        "bbox_2d": [
+                            34,
+                            520,
+                            587,
+                            998
+                        ],
+                        "label": "dishwasher"
+                    },
+                    {
+                        "bbox_2d": [
+                            83,
+                            112,
+                            440,
+                            450
+                        ],
+                        "label": "microwave"
+                    },
+                    {
+                        "bbox_2d": [
+                            338,
+                            0,
+                            984,
+                            998
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 137,
+                "raw_token_count": 800,
+                "runtime_seconds": 2.7679
+            }
+        }
+    ]
+}

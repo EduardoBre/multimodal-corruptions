@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/115",
+        "folder_id": "115",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00028443.JPEG"
+    },
+    "pareto_index": 17,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 8,
+    "total_evaluations": 225,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.862782017446318,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6678992108124702
+    },
+    "objectives": {
+        "iou": 0.19958,
+        "img_dist": 0.11352,
+        "txt_dist": 0.10242,
+        "txt_sim": 0.89758
+    },
+    "swad_metrics": {
+        "iou_0": 0.77515,
+        "delta_m_plus": 0.74253,
+        "phi": 0.79569,
+        "swad": 0.59082
+    },
+    "l2_distance": 0.25141,
+    "original_prompt": "Identify the objects \"vacuum\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "vacuum": {
+            "xmin": 69,
+            "ymin": 84,
+            "xmax": 345,
+            "ymax": 267
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"vakume\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [125, 250, 275, 650], \"label\": \"vakume\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    125,
+                    250,
+                    275,
+                    650
+                ],
+                "label": "vakume"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 42,
+        "runtime_seconds": 0.1725
+    }
+}

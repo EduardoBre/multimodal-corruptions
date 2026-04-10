@@ -1,0 +1,118 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/187",
+        "folder_id": "187",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00007632.JPEG"
+    },
+    "pareto_index": 8,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 8,
+    "total_evaluations": 240,
+    "skipped_evaluations": 30,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.000775,
+            "defocus_blur": 0.015172,
+            "motion_blur": 0.02732,
+            "fog_filter": 0.068017,
+            "pixelate": 0.015893,
+            "jpeg_filter": 0.092493
+        },
+        "text_corruptions": {
+            "homophone": 0.002633,
+            "synonym": 0.00367,
+            "ata_saliency": 0.057734,
+            "fragmentation": 0.024543,
+            "character_noise": 0.027554
+        },
+        "img_budget_used": 0.21967,
+        "txt_budget_used": 0.116133,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.10451,
+        "txt_dist": 0.19833,
+        "txt_sim": 0.80167
+    },
+    "swad_metrics": {
+        "iou_0": 0.95403,
+        "delta_m_plus": 1.0,
+        "phi": 0.71789,
+        "swad": 0.71789
+    },
+    "l2_distance": 0.22418,
+    "original_prompt": "Identify the objects \"chair, dog\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 68,
+            "ymin": 181,
+            "xmax": 270,
+            "ymax": 374
+        },
+        "dog_1": {
+            "xmin": 247,
+            "ymin": 56,
+            "xmax": 469,
+            "ymax": 374
+        },
+        "chair": {
+            "xmin": 0,
+            "ymin": 1,
+            "xmax": 105,
+            "ymax": 340
+        },
+        "chair_1": {
+            "xmin": 428,
+            "ymin": 3,
+            "xmax": 499,
+            "ymax": 145
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"char\u0435, dog\u200d\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [498, 152, 940, 999], \"label\": \"char\u0435, dog\u200d\"},\n\t{\"bbox_2d\": [140, 478, 530, 999], \"label\": \"char\u0435, dog\u200d\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    498,
+                    152,
+                    940,
+                    999
+                ],
+                "label": "char\u0435, dog\u200d"
+            },
+            {
+                "bbox_2d": [
+                    140,
+                    478,
+                    530,
+                    999
+                ],
+                "label": "char\u0435, dog\u200d"
+            }
+        ],
+        "token_count": 82,
+        "raw_token_count": 150,
+        "runtime_seconds": 0.4758
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.0007746706004017013,
+        "defocus_blur": 0.01517180746323303,
+        "motion_blur": 0.027319871574214366,
+        "fog_filter": 0.06801733548218314,
+        "pixelate": 0.015893447326524278,
+        "jpeg_filter": 0.09249266007833594
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.0026332511532292987,
+        "synonym": 0.003669531589631893,
+        "ata_saliency": 0.05773363388787647,
+        "fragmentation": 0.024542676702331352,
+        "character_noise": 0.027553865995861987
+    }
+}

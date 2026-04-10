@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/103",
+        "folder_id": "103",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00022634.JPEG"
+    },
+    "pareto_index": 0,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "motion_blur",
+        "img_scale": 0.3997956906557353,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.647636093318414
+    },
+    "objectives": {
+        "iou": 0.05493,
+        "img_dist": 0.03173,
+        "txt_dist": 0.39429,
+        "txt_sim": 0.60571
+    },
+    "swad_metrics": {
+        "iou_0": 0.7837,
+        "delta_m_plus": 0.92991,
+        "phi": 0.58649,
+        "swad": 0.54538
+    },
+    "l2_distance": 0.39936,
+    "original_prompt": "Identify the objects \"bell pepper\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bell pepper": {
+            "xmin": 127,
+            "ymin": 197,
+            "xmax": 227,
+            "ymax": 300
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"belx eppper\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 1000, 1000], \"label\": \"belx eppper\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    1000,
+                    1000
+                ],
+                "label": "belx eppper"
+            }
+        ],
+        "token_count": 41,
+        "raw_token_count": 73,
+        "runtime_seconds": 0.3346
+    }
+}

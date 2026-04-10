@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/17",
+        "folder_id": "17",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00047378.JPEG"
+    },
+    "pareto_index": 12,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.022054,
+            "defocus_blur": 0.588904,
+            "motion_blur": 0.012666,
+            "fog_filter": 0.036055,
+            "pixelate": 0.190532,
+            "jpeg_filter": 0.135825
+        },
+        "text_corruptions": {
+            "homophone": 0.181453,
+            "synonym": 0.019928,
+            "ata_saliency": 0.046699,
+            "fragmentation": 0.15907,
+            "character_noise": 0.2538
+        },
+        "img_budget_used": 0.986037,
+        "txt_budget_used": 0.66095,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.2553,
+        "img_dist": 0.12727,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.8599,
+        "delta_m_plus": 0.70311,
+        "phi": 0.87273,
+        "swad": 0.61362
+    },
+    "l2_distance": 0.28526,
+    "original_prompt": "Identify the objects \"monkey\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "monkey": {
+            "xmin": 259,
+            "ymin": 111,
+            "xmax": 321,
+            "ymax": 202
+        },
+        "monkey_1": {
+            "xmin": 147,
+            "ymin": 121,
+            "xmax": 192,
+            "ymax": 236
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"monkey\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [560, 294, 638, 494], \"label\": \"monkey\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    560,
+                    294,
+                    638,
+                    494
+                ],
+                "label": "monkey"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 83,
+        "runtime_seconds": 0.3169
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.022054204559399673,
+        "defocus_blur": 0.588903567696353,
+        "motion_blur": 0.012666431149988373,
+        "fog_filter": 0.036055470375023345,
+        "pixelate": 0.19053213763449076,
+        "jpeg_filter": 0.13582478544409665
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.18145344324468704,
+        "synonym": 0.019928084801108883,
+        "ata_saliency": 0.046698801781307676,
+        "fragmentation": 0.15906966967506786,
+        "character_noise": 0.2538001539739293
+    }
+}

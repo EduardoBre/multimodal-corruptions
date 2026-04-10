@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/80",
+        "folder_id": "80",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00005224.JPEG"
+    },
+    "pareto_index": 10,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.04764769852526407,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.359613135665044
+    },
+    "objectives": {
+        "iou": 0.01428,
+        "img_dist": 0.03783,
+        "txt_dist": 0.36056,
+        "txt_sim": 0.63944
+    },
+    "swad_metrics": {
+        "iou_0": 0.9236,
+        "delta_m_plus": 0.98454,
+        "phi": 0.61525,
+        "swad": 0.60574
+    },
+    "l2_distance": 0.36282,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 94,
+            "ymin": 0,
+            "xmax": 360,
+            "ymax": 113
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bigd\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [210, 228, 724, 998], \"label\": \"bigd\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    210,
+                    228,
+                    724,
+                    998
+                ],
+                "label": "bigd"
+            }
+        ],
+        "token_count": 40,
+        "raw_token_count": 44,
+        "runtime_seconds": 0.1439
+    }
+}

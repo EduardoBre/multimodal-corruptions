@@ -1,0 +1,82 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/232",
+        "folder_id": "232",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00027140.JPEG"
+    },
+    "pareto_index": 0,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "motion_blur",
+        "img_scale": 0.3997956906557353,
+        "txt_attack": "ata_saliency",
+        "txt_scale": 0.647636093318414
+    },
+    "objectives": {
+        "iou": 0.03657,
+        "img_dist": 0.03467,
+        "txt_dist": 0.14755,
+        "txt_sim": 0.85245
+    },
+    "swad_metrics": {
+        "iou_0": 0.69338,
+        "delta_m_plus": 0.94726,
+        "phi": 0.8229,
+        "swad": 0.77949
+    },
+    "l2_distance": 0.15592,
+    "original_prompt": "Identify the objects \"dog, table\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 134,
+            "ymin": 11,
+            "xmax": 285,
+            "ymax": 308
+        },
+        "dog_1": {
+            "xmin": 162,
+            "ymin": 284,
+            "xmax": 283,
+            "ymax": 405
+        },
+        "table": {
+            "xmin": 0,
+            "ymin": 1,
+            "xmax": 498,
+            "ymax": 426
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"odg, table\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 764, 347, 1000], \"label\": \"odg\"},\n\t{\"bbox_2d\": [0, 0, 137, 148], \"label\": \"table\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    764,
+                    347,
+                    1000
+                ],
+                "label": "odg"
+            },
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    137,
+                    148
+                ],
+                "label": "table"
+            }
+        ],
+        "token_count": 68,
+        "raw_token_count": 105,
+        "runtime_seconds": 0.3319
+    }
+}

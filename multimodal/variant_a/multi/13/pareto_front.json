@@ -1,0 +1,570 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/13",
+        "folder_id": "13",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00044999.JPEG"
+    },
+    "original_prompt": "Identify the objects \"antelope, bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 58,
+            "ymin": 88,
+            "xmax": 129,
+            "ymax": 202
+        },
+        "bird_1": {
+            "xmin": 302,
+            "ymin": 157,
+            "xmax": 346,
+            "ymax": 287
+        },
+        "bird_2": {
+            "xmin": 354,
+            "ymin": 179,
+            "xmax": 445,
+            "ymax": 276
+        },
+        "antelope": {
+            "xmin": 167,
+            "ymin": 121,
+            "xmax": 216,
+            "ymax": 167
+        },
+        "antelope_1": {
+            "xmin": 177,
+            "ymin": 146,
+            "xmax": 337,
+            "ymax": 205
+        }
+    },
+    "baseline_iou": 0.63501,
+    "swad_star": 0.44576,
+    "swad_star_index": 0,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 8,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8181617493544074,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.41721849968957336
+            },
+            "objectives": {
+                "iou": 0.27368,
+                "img_dist": 0.08059,
+                "txt_dist": 0.14794,
+                "txt_sim": 0.85206
+            },
+            "swad_metrics": {
+                "iou_0": 0.63501,
+                "delta_m_plus": 0.56901,
+                "phi": 0.78339,
+                "swad": 0.44576
+            },
+            "l2_distance": 0.32137,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"anteloce, bird\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [110, 240, 238, 510], \"label\": \"bird\"},\n\t{\"bbox_2d\": [602, 540, 692, 758], \"label\": \"bird\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            110,
+                            240,
+                            238,
+                            510
+                        ],
+                        "label": "bird"
+                    },
+                    {
+                        "bbox_2d": [
+                            602,
+                            540,
+                            692,
+                            758
+                        ],
+                        "label": "bird"
+                    }
+                ],
+                "token_count": 72,
+                "raw_token_count": 200,
+                "runtime_seconds": 0.8593
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.3997956906557353,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.647636093318414
+            },
+            "objectives": {
+                "iou": 0.15494,
+                "img_dist": 0.06895,
+                "txt_dist": 0.38083,
+                "txt_sim": 0.61917
+            },
+            "swad_metrics": {
+                "iou_0": 0.63501,
+                "delta_m_plus": 0.756,
+                "phi": 0.57648,
+                "swad": 0.43582
+            },
+            "l2_distance": 0.41688,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"antelbpe, bprd\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [306, 327, 667, 567], \"label\": \"antelbpe\"},\n\t{\"bbox_2d\": [603, 107, 687, 164], \"label\": \"bprd\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            306,
+                            327,
+                            667,
+                            567
+                        ],
+                        "label": "antelbpe"
+                    },
+                    {
+                        "bbox_2d": [
+                            603,
+                            107,
+                            687,
+                            164
+                        ],
+                        "label": "bprd"
+                    }
+                ],
+                "token_count": 76,
+                "raw_token_count": 200,
+                "runtime_seconds": 0.8593
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.6028,
+                "img_dist": 0.06569,
+                "txt_dist": 0.17594,
+                "txt_sim": 0.82406
+            },
+            "swad_metrics": {
+                "iou_0": 0.63501,
+                "delta_m_plus": 0.05072,
+                "phi": 0.76993,
+                "swad": 0.03905
+            },
+            "l2_distance": 0.63138,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"antelope, birm\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [328, 322, 666, 556], \"label\": \"antelope\"},\n\t{\"bbox_2d\": [602, 548, 694, 752], \"label\": \"birm\"},\n\t{\"bbox_2d\": [712, 476, 888, 712], \"label\": \"birm\"},\n\t{\"bbox_2d\": [112, 244, 244, 516], \"label\": \"birm\"},\n\t{\"bbox_2d\": [302, 458, 362, 556], \"label\": \"birm\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            328,
+                            322,
+                            666,
+                            556
+                        ],
+                        "label": "antelope"
+                    },
+                    {
+                        "bbox_2d": [
+                            602,
+                            548,
+                            694,
+                            752
+                        ],
+                        "label": "birm"
+                    },
+                    {
+                        "bbox_2d": [
+                            712,
+                            476,
+                            888,
+                            712
+                        ],
+                        "label": "birm"
+                    },
+                    {
+                        "bbox_2d": [
+                            112,
+                            244,
+                            244,
+                            516
+                        ],
+                        "label": "birm"
+                    },
+                    {
+                        "bbox_2d": [
+                            302,
+                            458,
+                            362,
+                            556
+                        ],
+                        "label": "birm"
+                    }
+                ],
+                "token_count": 176,
+                "raw_token_count": 200,
+                "runtime_seconds": 0.8593
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.5656671100314771,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.039875089079669634
+            },
+            "objectives": {
+                "iou": 0.58022,
+                "img_dist": 0.09123,
+                "txt_dist": 0.05583,
+                "txt_sim": 0.94417
+            },
+            "swad_metrics": {
+                "iou_0": 0.63501,
+                "delta_m_plus": 0.08628,
+                "phi": 0.85803,
+                "swad": 0.07403
+            },
+            "l2_distance": 0.59,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"a\u200bntel\u200dope, bird\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [312, 330, 662, 550], \"label\": \"antelope\"},\n\t{\"bbox_2d\": [112, 230, 238, 510], \"label\": \"bird\"},\n\t{\"bbox_2d\": [594, 500, 688, 750], \"label\": \"bird\"},\n\t{\"bbox_2d\": [700, 500, 880, 710], \"label\": \"bird\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            312,
+                            330,
+                            662,
+                            550
+                        ],
+                        "label": "antelope"
+                    },
+                    {
+                        "bbox_2d": [
+                            112,
+                            230,
+                            238,
+                            510
+                        ],
+                        "label": "bird"
+                    },
+                    {
+                        "bbox_2d": [
+                            594,
+                            500,
+                            688,
+                            750
+                        ],
+                        "label": "bird"
+                    },
+                    {
+                        "bbox_2d": [
+                            700,
+                            500,
+                            880,
+                            710
+                        ],
+                        "label": "bird"
+                    }
+                ],
+                "token_count": 139,
+                "raw_token_count": 200,
+                "runtime_seconds": 0.8593
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.307337327911573,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.58579,
+                "img_dist": 0.07088,
+                "txt_dist": 0.37584,
+                "txt_sim": 0.62416
+            },
+            "swad_metrics": {
+                "iou_0": 0.63501,
+                "delta_m_plus": 0.07751,
+                "phi": 0.57992,
+                "swad": 0.04495
+            },
+            "l2_distance": 0.69959,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"ant elope, burred\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [302, 320, 666, 556], \"label\": \"ant elope\"},\n\t{\"bbox_2d\": [112, 238, 242, 512], \"label\": \"burred\"},\n\t{\"bbox_2d\": [604, 548, 696, 750], \"label\": \"burred\"},\n\t{\"bbox_2d\": [712, 472, 884, 712], \"label\": \"burred\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            302,
+                            320,
+                            666,
+                            556
+                        ],
+                        "label": "ant elope"
+                    },
+                    {
+                        "bbox_2d": [
+                            112,
+                            238,
+                            242,
+                            512
+                        ],
+                        "label": "burred"
+                    },
+                    {
+                        "bbox_2d": [
+                            604,
+                            548,
+                            696,
+                            750
+                        ],
+                        "label": "burred"
+                    },
+                    {
+                        "bbox_2d": [
+                            712,
+                            472,
+                            884,
+                            712
+                        ],
+                        "label": "burred"
+                    }
+                ],
+                "token_count": 143,
+                "raw_token_count": 200,
+                "runtime_seconds": 0.8593
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.21300761893764208,
+                "txt_attack": "synonym",
+                "txt_scale": 0.11490566325799068
+            },
+            "objectives": {
+                "iou": 0.6252,
+                "img_dist": 0.05465,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.63501,
+                "delta_m_plus": 0.01545,
+                "phi": 0.94535,
+                "swad": 0.0146
+            },
+            "l2_distance": 0.62758,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"antelope, bird\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [308, 324, 667, 572], \"label\": \"antelope\"},\n\t{\"bbox_2d\": [115, 248, 244, 512], \"label\": \"bird\"},\n\t{\"bbox_2d\": [607, 472, 694, 752], \"label\": \"bird\"},\n\t{\"bbox_2d\": [708, 472, 885, 712], \"label\": \"bird\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            308,
+                            324,
+                            667,
+                            572
+                        ],
+                        "label": "antelope"
+                    },
+                    {
+                        "bbox_2d": [
+                            115,
+                            248,
+                            244,
+                            512
+                        ],
+                        "label": "bird"
+                    },
+                    {
+                        "bbox_2d": [
+                            607,
+                            472,
+                            694,
+                            752
+                        ],
+                        "label": "bird"
+                    },
+                    {
+                        "bbox_2d": [
+                            708,
+                            472,
+                            885,
+                            712
+                        ],
+                        "label": "bird"
+                    }
+                ],
+                "token_count": 139,
+                "raw_token_count": 200,
+                "runtime_seconds": 0.8593
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.40716,
+                "img_dist": 0.09199,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.63501,
+                "delta_m_plus": 0.35881,
+                "phi": 0.90801,
+                "swad": 0.32581
+            },
+            "l2_distance": 0.41742,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"antelope, bird\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [125, 214, 238, 500], \"label\": \"antelope\"},\n\t{\"bbox_2d\": [575, 400, 675, 750], \"label\": \"bird\"},\n\t{\"bbox_2d\": [725, 550, 850, 720], \"label\": \"bird\"},\n\t{\"bbox_2d\": [600, 380, 675, 500], \"label\": \"bird\"},\n\t{\"bbox_2d\": [300, 380, 375, 500], \"label\": \"bird\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            125,
+                            214,
+                            238,
+                            500
+                        ],
+                        "label": "antelope"
+                    },
+                    {
+                        "bbox_2d": [
+                            575,
+                            400,
+                            675,
+                            750
+                        ],
+                        "label": "bird"
+                    },
+                    {
+                        "bbox_2d": [
+                            725,
+                            550,
+                            850,
+                            720
+                        ],
+                        "label": "bird"
+                    },
+                    {
+                        "bbox_2d": [
+                            600,
+                            380,
+                            675,
+                            500
+                        ],
+                        "label": "bird"
+                    },
+                    {
+                        "bbox_2d": [
+                            300,
+                            380,
+                            375,
+                            500
+                        ],
+                        "label": "bird"
+                    }
+                ],
+                "token_count": 172,
+                "raw_token_count": 200,
+                "runtime_seconds": 0.8593
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.62861,
+                "img_dist": 0.03916,
+                "txt_dist": 0.19781,
+                "txt_sim": 0.80219
+            },
+            "swad_metrics": {
+                "iou_0": 0.63501,
+                "delta_m_plus": 0.01008,
+                "phi": 0.77078,
+                "swad": 0.00777
+            },
+            "l2_distance": 0.66016,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"antelope, burred\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [306, 324, 667, 567], \"label\": \"antelope\"},\n\t{\"bbox_2d\": [115, 247, 242, 512], \"label\": \"burred\"},\n\t{\"bbox_2d\": [603, 470, 692, 753], \"label\": \"burred\"},\n\t{\"bbox_2d\": [708, 470, 881, 712], \"label\": \"burred\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            306,
+                            324,
+                            667,
+                            567
+                        ],
+                        "label": "antelope"
+                    },
+                    {
+                        "bbox_2d": [
+                            115,
+                            247,
+                            242,
+                            512
+                        ],
+                        "label": "burred"
+                    },
+                    {
+                        "bbox_2d": [
+                            603,
+                            470,
+                            692,
+                            753
+                        ],
+                        "label": "burred"
+                    },
+                    {
+                        "bbox_2d": [
+                            708,
+                            470,
+                            881,
+                            712
+                        ],
+                        "label": "burred"
+                    }
+                ],
+                "token_count": 142,
+                "raw_token_count": 200,
+                "runtime_seconds": 0.8593
+            }
+        }
+    ]
+}

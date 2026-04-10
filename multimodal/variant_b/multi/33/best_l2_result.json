@@ -1,0 +1,106 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/33",
+        "folder_id": "33",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00002364.JPEG"
+    },
+    "pareto_index": 10,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.121095,
+            "defocus_blur": 0.225257,
+            "motion_blur": 0.010192,
+            "fog_filter": 0.095562,
+            "pixelate": 0.117848,
+            "jpeg_filter": 0.132244
+        },
+        "text_corruptions": {
+            "homophone": 0.054403,
+            "synonym": 0.19406,
+            "ata_saliency": 0.165823,
+            "fragmentation": 0.094332,
+            "character_noise": 0.098704
+        },
+        "img_budget_used": 0.702198,
+        "txt_budget_used": 0.607323,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.03391,
+        "img_dist": 0.13345,
+        "txt_dist": 0.19619,
+        "txt_sim": 0.80381
+    },
+    "swad_metrics": {
+        "iou_0": 0.86831,
+        "delta_m_plus": 0.96095,
+        "phi": 0.69654,
+        "swad": 0.66934
+    },
+    "l2_distance": 0.23969,
+    "original_prompt": "Identify the objects \"computer mouse, table\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "table": {
+            "xmin": 10,
+            "ymin": 78,
+            "xmax": 483,
+            "ymax": 331
+        },
+        "computer mouse": {
+            "xmin": 26,
+            "ymin": 236,
+            "xmax": 93,
+            "ymax": 297
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"c\u200bo\u200dmputer mtuse, t\u0430bl\u0435\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 360, 83, 650], \"label\": \"c\u200bo\u200dmputer mtuse, t\u0430bl\u0435\"},\n\t{\"bbox_2d\": [170, 788, 298, 950], \"label\": \"c\u200bo\u200dmputer mtuse, t\u0430bl\u0435\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    360,
+                    83,
+                    650
+                ],
+                "label": "c\u200bo\u200dmputer mtuse, t\u0430bl\u0435"
+            },
+            {
+                "bbox_2d": [
+                    170,
+                    788,
+                    298,
+                    950
+                ],
+                "label": "c\u200bo\u200dmputer mtuse, t\u0430bl\u0435"
+            }
+        ],
+        "token_count": 95,
+        "raw_token_count": 96,
+        "runtime_seconds": 0.4015
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.12109520713215996,
+        "defocus_blur": 0.225256910018869,
+        "motion_blur": 0.010192177003158068,
+        "fog_filter": 0.0955620127502045,
+        "pixelate": 0.11784767892315937,
+        "jpeg_filter": 0.13224446763469436
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.05440315187070281,
+        "synonym": 0.19405991052142993,
+        "ata_saliency": 0.16582296972191704,
+        "fragmentation": 0.09433239915117239,
+        "character_noise": 0.0987043538304199
+    }
+}

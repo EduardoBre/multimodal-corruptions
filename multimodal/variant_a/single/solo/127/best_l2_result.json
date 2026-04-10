@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/127",
+        "folder_id": "127",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00006923.JPEG"
+    },
+    "pareto_index": 7,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 45,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "fog_filter",
+        "img_scale": 0.02226035255626979,
+        "txt_attack": "synonym",
+        "txt_scale": 0.4303904312548027
+    },
+    "objectives": {
+        "iou": 0.00707,
+        "img_dist": 0.04644,
+        "txt_dist": 0.19903,
+        "txt_sim": 0.80097
+    },
+    "swad_metrics": {
+        "iou_0": 0.95064,
+        "delta_m_plus": 0.99256,
+        "phi": 0.76377,
+        "swad": 0.75809
+    },
+    "l2_distance": 0.2045,
+    "original_prompt": "Identify the objects \"chime\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "chime": {
+            "xmin": 112,
+            "ymin": 6,
+            "xmax": 301,
+            "ymax": 498
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"bell\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [484, 28, 532, 101], \"label\": \"bell\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    484,
+                    28,
+                    532,
+                    101
+                ],
+                "label": "bell"
+            }
+        ],
+        "token_count": 38,
+        "raw_token_count": 51,
+        "runtime_seconds": 0.1745
+    }
+}

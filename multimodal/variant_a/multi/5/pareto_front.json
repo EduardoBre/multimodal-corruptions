@@ -1,0 +1,328 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/5",
+        "folder_id": "5",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00045126.JPEG"
+    },
+    "original_prompt": "Identify the objects \"person, pineapple\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 221,
+            "ymin": 45,
+            "xmax": 365,
+            "ymax": 405
+        },
+        "pineapple": {
+            "xmin": 67,
+            "ymin": 127,
+            "xmax": 123,
+            "ymax": 228
+        }
+    },
+    "baseline_iou": 0.72696,
+    "swad_star": 0.45319,
+    "swad_star_index": 4,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 6,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.8632061743184387,
+                "txt_attack": "synonym",
+                "txt_scale": 0.7724979474714236
+            },
+            "objectives": {
+                "iou": 0.71839,
+                "img_dist": 0.17648,
+                "txt_dist": 0.08843,
+                "txt_sim": 0.91157
+            },
+            "swad_metrics": {
+                "iou_0": 0.72696,
+                "delta_m_plus": 0.01179,
+                "phi": 0.7507,
+                "swad": 0.00885
+            },
+            "l2_distance": 0.74502,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"person, pine\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [584, 95, 952, 821], \"label\": \"person\"},\n\t{\"bbox_2d\": [188, 175, 348, 500], \"label\": \"pine\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            584,
+                            95,
+                            952,
+                            821
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            188,
+                            175,
+                            348,
+                            500
+                        ],
+                        "label": "pine"
+                    }
+                ],
+                "token_count": 71,
+                "raw_token_count": 82,
+                "runtime_seconds": 0.3392
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.8181617493544074,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.41721849968957336
+            },
+            "objectives": {
+                "iou": 0.30749,
+                "img_dist": 0.09262,
+                "txt_dist": 0.14286,
+                "txt_sim": 0.85714
+            },
+            "swad_metrics": {
+                "iou_0": 0.72696,
+                "delta_m_plus": 0.57702,
+                "phi": 0.77775,
+                "swad": 0.44878
+            },
+            "l2_distance": 0.35148,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"pereon, pineapple\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [188, 178, 338, 472], \"label\": \"pineapple\"},\n\t{\"bbox_2d\": [208, 472, 408, 700], \"label\": \"pineapple\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            188,
+                            178,
+                            338,
+                            472
+                        ],
+                        "label": "pineapple"
+                    },
+                    {
+                        "bbox_2d": [
+                            208,
+                            472,
+                            408,
+                            700
+                        ],
+                        "label": "pineapple"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 82,
+                "runtime_seconds": 0.3392
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.307337327911573,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.72259,
+                "img_dist": 0.0759,
+                "txt_dist": 0.1199,
+                "txt_sim": 0.8801
+            },
+            "swad_metrics": {
+                "iou_0": 0.72696,
+                "delta_m_plus": 0.00601,
+                "phi": 0.8133,
+                "swad": 0.00489
+            },
+            "l2_distance": 0.73639,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"per son, pineapple\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [570, 93, 952, 825], \"label\": \"per son\"},\n\t{\"bbox_2d\": [188, 175, 348, 475], \"label\": \"pineapple\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            570,
+                            93,
+                            952,
+                            825
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            188,
+                            175,
+                            348,
+                            475
+                        ],
+                        "label": "pineapple"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 82,
+                "runtime_seconds": 0.3392
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "fog_filter",
+                "img_scale": 0.35190791434280455,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.020329096070927366
+            },
+            "objectives": {
+                "iou": 0.72802,
+                "img_dist": 0.153,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.72696,
+                "delta_m_plus": 0.0,
+                "phi": 0.847,
+                "swad": 0.0
+            },
+            "l2_distance": 0.74392,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"person, pineapple\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [578, 93, 952, 825], \"label\": \"person\"},\n\t{\"bbox_2d\": [192, 173, 344, 478], \"label\": \"pineapple\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            578,
+                            93,
+                            952,
+                            825
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            192,
+                            173,
+                            344,
+                            478
+                        ],
+                        "label": "pineapple"
+                    }
+                ],
+                "token_count": 72,
+                "raw_token_count": 82,
+                "runtime_seconds": 0.3392
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.18321,
+                "img_dist": 0.12846,
+                "txt_dist": 0.30481,
+                "txt_sim": 0.69519
+            },
+            "swad_metrics": {
+                "iou_0": 0.72696,
+                "delta_m_plus": 0.74798,
+                "phi": 0.60589,
+                "swad": 0.45319
+            },
+            "l2_distance": 0.37812,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"purse on, pyne apple\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [625, 285, 945, 570], \"label\": \"purse on\"},\n\t{\"bbox_2d\": [0, 0, 825, 1000], \"label\": \"pyne apple\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            625,
+                            285,
+                            945,
+                            570
+                        ],
+                        "label": "purse on"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            825,
+                            1000
+                        ],
+                        "label": "pyne apple"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 82,
+                "runtime_seconds": 0.3392
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.72855,
+                "img_dist": 0.03911,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.72696,
+                "delta_m_plus": 0.0,
+                "phi": 0.96089,
+                "swad": 0.0
+            },
+            "l2_distance": 0.7296,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"person, pineapple\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [578, 95, 952, 825], \"label\": \"person\"},\n\t{\"bbox_2d\": [192, 167, 344, 470], \"label\": \"pineapple\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            578,
+                            95,
+                            952,
+                            825
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            192,
+                            167,
+                            344,
+                            470
+                        ],
+                        "label": "pineapple"
+                    }
+                ],
+                "token_count": 72,
+                "raw_token_count": 82,
+                "runtime_seconds": 0.3392
+            }
+        }
+    ]
+}

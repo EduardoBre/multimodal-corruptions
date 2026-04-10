@@ -1,0 +1,723 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/134",
+        "folder_id": "134",
+        "category": "multi",
+        "filename": "ILSVRC2013_val_00000617.JPEG"
+    },
+    "original_prompt": "Identify the objects \"spatula, stove\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "spatula": {
+            "xmin": 187,
+            "ymin": 67,
+            "xmax": 286,
+            "ymax": 261
+        },
+        "stove": {
+            "xmin": 3,
+            "ymin": 142,
+            "xmax": 282,
+            "ymax": 450
+        },
+        "stove_1": {
+            "xmin": 11,
+            "ymin": 178,
+            "xmax": 498,
+            "ymax": 460
+        }
+    },
+    "baseline_iou": 0.74699,
+    "swad_star": 0.63777,
+    "swad_star_index": 10,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "n_solutions": 11,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.018153363333776373,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.24927259019092207
+            },
+            "objectives": {
+                "iou": 0.68519,
+                "img_dist": 0.03917,
+                "txt_dist": 0.20402,
+                "txt_sim": 0.79598
+            },
+            "swad_metrics": {
+                "iou_0": 0.74699,
+                "delta_m_plus": 0.08273,
+                "phi": 0.7648,
+                "swad": 0.06327
+            },
+            "l2_distance": 0.71599,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"spatul\u200da, st\u200do\u200dv\u200de\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [348, 137, 558, 500], \"label\": \"spatula\"},\n\t{\"bbox_2d\": [0, 327, 998, 998], \"label\": \"stove\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            348,
+                            137,
+                            558,
+                            500
+                        ],
+                        "label": "spatula"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            327,
+                            998,
+                            998
+                        ],
+                        "label": "stove"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 76,
+                "runtime_seconds": 0.2708
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.68599,
+                "img_dist": 0.03917,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.74699,
+                "delta_m_plus": 0.08166,
+                "phi": 0.96083,
+                "swad": 0.07846
+            },
+            "l2_distance": 0.68711,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"spatula, stove\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [348, 138, 558, 500], \"label\": \"spatula\"},\n\t{\"bbox_2d\": [0, 333, 998, 998], \"label\": \"stove\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            348,
+                            138,
+                            558,
+                            500
+                        ],
+                        "label": "spatula"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            333,
+                            998,
+                            998
+                        ],
+                        "label": "stove"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 76,
+                "runtime_seconds": 0.2708
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6124377601560459,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.5349,
+                "img_dist": 0.11297,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.74699,
+                "delta_m_plus": 0.28393,
+                "phi": 0.88703,
+                "swad": 0.25185
+            },
+            "l2_distance": 0.5467,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"spatula, stove\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [340, 138, 696, 512], \"label\": \"spatula\"},\n\t{\"bbox_2d\": [0, 150, 996, 996], \"label\": \"stove\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            340,
+                            138,
+                            696,
+                            512
+                        ],
+                        "label": "spatula"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            150,
+                            996,
+                            996
+                        ],
+                        "label": "stove"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 76,
+                "runtime_seconds": 0.2708
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.5656671100314771,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.039875089079669634
+            },
+            "objectives": {
+                "iou": 0.53245,
+                "img_dist": 0.10567,
+                "txt_dist": 0.0194,
+                "txt_sim": 0.9806
+            },
+            "swad_metrics": {
+                "iou_0": 0.74699,
+                "delta_m_plus": 0.28721,
+                "phi": 0.87698,
+                "swad": 0.25187
+            },
+            "l2_distance": 0.54318,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"s\u200bpatula, stove\u200b\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [338, 138, 698, 516], \"label\": \"s\u200bpatula\"},\n\t{\"bbox_2d\": [0, 150, 998, 998], \"label\": \"stove\u200b\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            338,
+                            138,
+                            698,
+                            516
+                        ],
+                        "label": "s\u200bpatula"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            150,
+                            998,
+                            998
+                        ],
+                        "label": "stove\u200b"
+                    }
+                ],
+                "token_count": 75,
+                "raw_token_count": 76,
+                "runtime_seconds": 0.2708
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.307337327911573,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.63518,
+                "img_dist": 0.04744,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.74699,
+                "delta_m_plus": 0.14968,
+                "phi": 0.95256,
+                "swad": 0.14258
+            },
+            "l2_distance": 0.63695,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"spatula, stove\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [369, 133, 561, 488], \"label\": \"spatula\"},\n\t{\"bbox_2d\": [0, 158, 998, 998], \"label\": \"stove\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            369,
+                            133,
+                            561,
+                            488
+                        ],
+                        "label": "spatula"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            158,
+                            998,
+                            998
+                        ],
+                        "label": "stove"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 76,
+                "runtime_seconds": 0.2708
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.72037,
+                "img_dist": 0.03682,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.74699,
+                "delta_m_plus": 0.03564,
+                "phi": 0.96318,
+                "swad": 0.03432
+            },
+            "l2_distance": 0.72131,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"spatula, stove\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [358, 137, 566, 508], \"label\": \"spatula\"},\n\t{\"bbox_2d\": [0, 327, 998, 988], \"label\": \"stove\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            358,
+                            137,
+                            566,
+                            508
+                        ],
+                        "label": "spatula"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            327,
+                            998,
+                            988
+                        ],
+                        "label": "stove"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 76,
+                "runtime_seconds": 0.2708
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.486062019522153,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.8971524375333463
+            },
+            "objectives": {
+                "iou": 0.41058,
+                "img_dist": 0.06848,
+                "txt_dist": 0.27202,
+                "txt_sim": 0.72798
+            },
+            "swad_metrics": {
+                "iou_0": 0.74699,
+                "delta_m_plus": 0.45035,
+                "phi": 0.67813,
+                "swad": 0.3054
+            },
+            "l2_distance": 0.49725,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"psatula, stoev\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [348, 132, 568, 509], \"label\": \"psatula\"},\n\t{\"bbox_2d\": [572, 112, 972, 788], \"label\": \"stoev\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            348,
+                            132,
+                            568,
+                            509
+                        ],
+                        "label": "psatula"
+                    },
+                    {
+                        "bbox_2d": [
+                            572,
+                            112,
+                            972,
+                            788
+                        ],
+                        "label": "stoev"
+                    }
+                ],
+                "token_count": 76,
+                "raw_token_count": 653,
+                "runtime_seconds": 2.1467
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.9316177058680379,
+                "txt_attack": "homophone",
+                "txt_scale": 0.9948250792623392
+            },
+            "objectives": {
+                "iou": 0.58133,
+                "img_dist": 0.06998,
+                "txt_dist": 0.16757,
+                "txt_sim": 0.83243
+            },
+            "swad_metrics": {
+                "iou_0": 0.74699,
+                "delta_m_plus": 0.22177,
+                "phi": 0.77418,
+                "swad": 0.17169
+            },
+            "l2_distance": 0.60903,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"spat you la, stove\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [357, 130, 688, 510], \"label\": \"spat you la\"},\n\t{\"bbox_2d\": [0, 150, 995, 918], \"label\": \"stove\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            357,
+                            130,
+                            688,
+                            510
+                        ],
+                        "label": "spat you la"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            150,
+                            995,
+                            918
+                        ],
+                        "label": "stove"
+                    }
+                ],
+                "token_count": 74,
+                "raw_token_count": 653,
+                "runtime_seconds": 2.1467
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.03732619454213726,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.33647038540361596
+            },
+            "objectives": {
+                "iou": 0.73573,
+                "img_dist": 0.03555,
+                "txt_dist": 0.14609,
+                "txt_sim": 0.85391
+            },
+            "swad_metrics": {
+                "iou_0": 0.74699,
+                "delta_m_plus": 0.01507,
+                "phi": 0.82355,
+                "swad": 0.01241
+            },
+            "l2_distance": 0.75094,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"psatula, stove\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [368, 135, 568, 512], \"label\": \"psatula\"},\n\t{\"bbox_2d\": [0, 333, 999, 999], \"label\": \"stove\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            368,
+                            135,
+                            568,
+                            512
+                        ],
+                        "label": "psatula"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            333,
+                            999,
+                            999
+                        ],
+                        "label": "stove"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 653,
+                "runtime_seconds": 2.1467
+            }
+        },
+        {
+            "index": 9,
+            "genome": {
+                "img_attack": "fog_filter",
+                "img_scale": 0.8385192341896435,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6344837781138515
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.28808,
+                "txt_dist": 0.27791,
+                "txt_sim": 0.72209
+            },
+            "swad_metrics": {
+                "iou_0": 0.74699,
+                "delta_m_plus": 1.0,
+                "phi": 0.51407,
+                "swad": 0.51407
+            },
+            "l2_distance": 0.40028,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"spat you la, stoave\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [338, 137, 562, 512], \"label\": \"spat you la, stoave\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            338,
+                            137,
+                            562,
+                            512
+                        ],
+                        "label": "spat you la, stoave"
+                    }
+                ],
+                "token_count": 45,
+                "raw_token_count": 653,
+                "runtime_seconds": 2.1467
+            }
+        },
+        {
+            "index": 10,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.7585322514200842,
+                "txt_attack": "synonym",
+                "txt_scale": 0.8286080825406955
+            },
+            "objectives": {
+                "iou": 0.00801,
+                "img_dist": 0.09608,
+                "txt_dist": 0.28679,
+                "txt_sim": 0.71321
+            },
+            "swad_metrics": {
+                "iou_0": 0.74699,
+                "delta_m_plus": 0.98928,
+                "phi": 0.64468,
+                "swad": 0.63777
+            },
+            "l2_distance": 0.30256,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"flipper, burner\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [652, 768, 772, 878], \"label\": \"flipper\"},\n\t{\"bbox_2d\": [772, 718, 860, 802], \"label\": \"flipper\"},\n\t{\"bbox_2d\": [652, 668, 736, 738], \"label\": \"flipper\"},\n\t{\"bbox_2d\": [870, 652, 956, 740], \"label\": \"flipper\"},\n\t{\"bbox_2d\": [908, 768, 992, 878], \"label\": \"flipper\"},\n\t{\"bbox_2d\": [572, 328, 638, 388], \"label\": \"burner\"},\n\t{\"bbox_2d\": [870, 472, 992, 552], \"label\": \"burner\"},\n\t{\"bbox_2d\": [652, 552, 736, 628], \"label\": \"burner\"},\n\t{\"bbox_2d\": [870, 552, 992, 628], \"label\": \"burner\"},\n\t{\"bbox_2d\": [652, 628, 736, 702], \"label\": \"burner\"},\n\t{\"bbox_2d\": [870, 628, 992, 702], \"label\": \"burner\"},\n\t{\"bbox_2d\": [652, 702, 736, 778], \"label\": \"burner\"},\n\t{\"bbox_2d\": [870, 702, 992, 778], \"label\": \"burner\"},\n\t{\"bbox_2d\": [652, 778, 736, 852], \"label\": \"burner\"},\n\t{\"bbox_2d\": [870, 778, 992, 852], \"label\": \"burner\"},\n\t{\"bbox_2d\": [652, 852, 736, 928], \"label\": \"burner\"},\n\t{\"bbox_2d\": [870, 852, 992, 928], \"label\": \"burner\"},\n\t{\"bbox_2d\": [652, 928, 736, 998], \"label\": \"burner\"},\n\t{\"bbox_2d\": [870, 928, 992, 998], \"label\": \"burner\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            652,
+                            768,
+                            772,
+                            878
+                        ],
+                        "label": "flipper"
+                    },
+                    {
+                        "bbox_2d": [
+                            772,
+                            718,
+                            860,
+                            802
+                        ],
+                        "label": "flipper"
+                    },
+                    {
+                        "bbox_2d": [
+                            652,
+                            668,
+                            736,
+                            738
+                        ],
+                        "label": "flipper"
+                    },
+                    {
+                        "bbox_2d": [
+                            870,
+                            652,
+                            956,
+                            740
+                        ],
+                        "label": "flipper"
+                    },
+                    {
+                        "bbox_2d": [
+                            908,
+                            768,
+                            992,
+                            878
+                        ],
+                        "label": "flipper"
+                    },
+                    {
+                        "bbox_2d": [
+                            572,
+                            328,
+                            638,
+                            388
+                        ],
+                        "label": "burner"
+                    },
+                    {
+                        "bbox_2d": [
+                            870,
+                            472,
+                            992,
+                            552
+                        ],
+                        "label": "burner"
+                    },
+                    {
+                        "bbox_2d": [
+                            652,
+                            552,
+                            736,
+                            628
+                        ],
+                        "label": "burner"
+                    },
+                    {
+                        "bbox_2d": [
+                            870,
+                            552,
+                            992,
+                            628
+                        ],
+                        "label": "burner"
+                    },
+                    {
+                        "bbox_2d": [
+                            652,
+                            628,
+                            736,
+                            702
+                        ],
+                        "label": "burner"
+                    },
+                    {
+                        "bbox_2d": [
+                            870,
+                            628,
+                            992,
+                            702
+                        ],
+                        "label": "burner"
+                    },
+                    {
+                        "bbox_2d": [
+                            652,
+                            702,
+                            736,
+                            778
+                        ],
+                        "label": "burner"
+                    },
+                    {
+                        "bbox_2d": [
+                            870,
+                            702,
+                            992,
+                            778
+                        ],
+                        "label": "burner"
+                    },
+                    {
+                        "bbox_2d": [
+                            652,
+                            778,
+                            736,
+                            852
+                        ],
+                        "label": "burner"
+                    },
+                    {
+                        "bbox_2d": [
+                            870,
+                            778,
+                            992,
+                            852
+                        ],
+                        "label": "burner"
+                    },
+                    {
+                        "bbox_2d": [
+                            652,
+                            852,
+                            736,
+                            928
+                        ],
+                        "label": "burner"
+                    },
+                    {
+                        "bbox_2d": [
+                            870,
+                            852,
+                            992,
+                            928
+                        ],
+                        "label": "burner"
+                    },
+                    {
+                        "bbox_2d": [
+                            652,
+                            928,
+                            736,
+                            998
+                        ],
+                        "label": "burner"
+                    },
+                    {
+                        "bbox_2d": [
+                            870,
+                            928,
+                            992,
+                            998
+                        ],
+                        "label": "burner"
+                    }
+                ],
+                "token_count": 652,
+                "raw_token_count": 653,
+                "runtime_seconds": 2.1467
+            }
+        }
+    ]
+}

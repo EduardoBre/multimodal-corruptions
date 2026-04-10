@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/154",
+        "folder_id": "154",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00049801.JPEG"
+    },
+    "pareto_index": 5,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.9316177058680379,
+        "txt_attack": "homophone",
+        "txt_scale": 0.9948250792623392
+    },
+    "objectives": {
+        "iou": 0.28017,
+        "img_dist": 0.05578,
+        "txt_dist": 0.0,
+        "txt_sim": 1.0
+    },
+    "swad_metrics": {
+        "iou_0": 0.87342,
+        "delta_m_plus": 0.67923,
+        "phi": 0.94422,
+        "swad": 0.64134
+    },
+    "l2_distance": 0.28567,
+    "original_prompt": "Identify the objects \"whale\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "whale": {
+            "xmin": 0,
+            "ymin": 169,
+            "xmax": 89,
+            "ymax": 225
+        },
+        "whale_1": {
+            "xmin": 135,
+            "ymin": 39,
+            "xmax": 410,
+            "ymax": 214
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"whale\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 98, 999, 604], \"label\": \"whale\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    98,
+                    999,
+                    604
+                ],
+                "label": "whale"
+            }
+        ],
+        "token_count": 37,
+        "raw_token_count": 81,
+        "runtime_seconds": 0.2998
+    }
+}

@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/152",
+        "folder_id": "152",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00008276.JPEG"
+    },
+    "pareto_index": 10,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 30,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "fog_filter",
+        "img_scale": 0.8385192341896435,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6344837781138515
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.31177,
+        "txt_dist": 0.22988,
+        "txt_sim": 0.77012
+    },
+    "swad_metrics": {
+        "iou_0": 0.86237,
+        "delta_m_plus": 1.0,
+        "phi": 0.53002,
+        "swad": 0.53002
+    },
+    "l2_distance": 0.38736,
+    "original_prompt": "Identify the objects \"person, punching bag\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 17,
+            "ymin": 93,
+            "xmax": 221,
+            "ymax": 382
+        },
+        "punching bag": {
+            "xmin": 293,
+            "ymin": 1,
+            "xmax": 481,
+            "ymax": 320
+        },
+        "punching bag_1": {
+            "xmin": 48,
+            "ymin": 86,
+            "xmax": 92,
+            "ymax": 158
+        },
+        "punching bag_2": {
+            "xmin": 180,
+            "ymin": 34,
+            "xmax": 233,
+            "ymax": 133
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"pursun, punch in bag\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [585, 0, 952, 807], \"label\": \"pursun, punch in bag\"},\n\t{\"bbox_2d\": [357, 92, 458, 777], \"label\": \"pursun, punch in bag\"},\n\t{\"bbox_2d\": [97, 170, 185, 410], \"label\": \"pursun, punch in bag\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    585,
+                    0,
+                    952,
+                    807
+                ],
+                "label": "pursun, punch in bag"
+            },
+            {
+                "bbox_2d": [
+                    357,
+                    92,
+                    458,
+                    777
+                ],
+                "label": "pursun, punch in bag"
+            },
+            {
+                "bbox_2d": [
+                    97,
+                    170,
+                    185,
+                    410
+                ],
+                "label": "pursun, punch in bag"
+            }
+        ],
+        "token_count": 119,
+        "raw_token_count": 187,
+        "runtime_seconds": 0.624
+    }
+}

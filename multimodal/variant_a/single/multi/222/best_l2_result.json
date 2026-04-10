@@ -1,0 +1,85 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/222",
+        "folder_id": "222",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00049056.JPEG"
+    },
+    "pareto_index": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.01848605721570944,
+        "txt_attack": "homophone",
+        "txt_scale": 0.2220803231522771
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.04572,
+        "txt_dist": 0.39563,
+        "txt_sim": 0.60437
+    },
+    "swad_metrics": {
+        "iou_0": 0.95165,
+        "delta_m_plus": 1.0,
+        "phi": 0.57674,
+        "swad": 0.57674
+    },
+    "l2_distance": 0.39826,
+    "original_prompt": "Identify the objects \"bird\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "bird": {
+            "xmin": 76,
+            "ymin": 308,
+            "xmax": 208,
+            "ymax": 431
+        },
+        "bird_1": {
+            "xmin": 86,
+            "ymin": 48,
+            "xmax": 287,
+            "ymax": 243
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"burred\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [468, 925, 598, 981], \"label\": \"burred\"},\n\t{\"bbox_2d\": [720, 857, 800, 917], \"label\": \"burred\"},\n\t{\"bbox_2d\": [720, 857, 800, 917], \"label\": \"burred\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    468,
+                    925,
+                    598,
+                    981
+                ],
+                "label": "burred"
+            },
+            {
+                "bbox_2d": [
+                    720,
+                    857,
+                    800,
+                    917
+                ],
+                "label": "burred"
+            },
+            {
+                "bbox_2d": [
+                    720,
+                    857,
+                    800,
+                    917
+                ],
+                "label": "burred"
+            }
+        ],
+        "token_count": 108,
+        "raw_token_count": 162,
+        "runtime_seconds": 0.575
+    }
+}

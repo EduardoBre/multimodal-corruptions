@@ -1,0 +1,664 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/14",
+        "folder_id": "14",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00014811.JPEG"
+    },
+    "original_prompt": "Identify the objects \"pomegranate, table\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "pomegranate": {
+            "xmin": 335,
+            "ymin": 286,
+            "xmax": 479,
+            "ymax": 436
+        },
+        "pomegranate_1": {
+            "xmin": 133,
+            "ymin": 321,
+            "xmax": 246,
+            "ymax": 428
+        },
+        "pomegranate_2": {
+            "xmin": 336,
+            "ymin": 64,
+            "xmax": 467,
+            "ymax": 197
+        },
+        "pomegranate_3": {
+            "xmin": 49,
+            "ymin": 53,
+            "xmax": 195,
+            "ymax": 174
+        },
+        "pomegranate_4": {
+            "xmin": 205,
+            "ymin": 50,
+            "xmax": 343,
+            "ymax": 177
+        },
+        "pomegranate_5": {
+            "xmin": 20,
+            "ymin": 178,
+            "xmax": 142,
+            "ymax": 329
+        },
+        "pomegranate_6": {
+            "xmin": 138,
+            "ymin": 156,
+            "xmax": 321,
+            "ymax": 325
+        },
+        "table": {
+            "xmin": 1,
+            "ymin": 0,
+            "xmax": 498,
+            "ymax": 449
+        }
+    },
+    "baseline_iou": 0.91761,
+    "swad_star": 0.74647,
+    "swad_star_index": 5,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 7,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.018153363333776373,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.24927259019092207
+            },
+            "objectives": {
+                "iou": 0.19909,
+                "img_dist": 0.04698,
+                "txt_dist": 0.25195,
+                "txt_sim": 0.74805
+            },
+            "swad_metrics": {
+                "iou_0": 0.91761,
+                "delta_m_plus": 0.78303,
+                "phi": 0.71291,
+                "swad": 0.55823
+            },
+            "l2_distance": 0.32453,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"\u0440\u200b\u043e\u200dmeg\u200dr\u0430na\u200bte\u200d, ta\u200db\u200dl\u0435\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 1000, 999], \"label\": \"\u0440\u200b\u043e\u200dmeg\u200dr\u0430na\u200bte\u200d, ta\u200db\u200dl\u0435\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            999
+                        ],
+                        "label": "\u0440\u200b\u043e\u200dmeg\u200dr\u0430na\u200bte\u200d, ta\u200db\u200dl\u0435"
+                    }
+                ],
+                "token_count": 59,
+                "raw_token_count": 378,
+                "runtime_seconds": 1.5438
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.3997956906557353,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.647636093318414
+            },
+            "objectives": {
+                "iou": 0.1989,
+                "img_dist": 0.04966,
+                "txt_dist": 0.12147,
+                "txt_sim": 0.87853
+            },
+            "swad_metrics": {
+                "iou_0": 0.91761,
+                "delta_m_plus": 0.78324,
+                "phi": 0.8349,
+                "swad": 0.65393
+            },
+            "l2_distance": 0.23829,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"pomegarnate, tabel\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 1000, 1000], \"label\": \"pomegarnate\"},\n\t{\"bbox_2d\": [0, 0, 1000, 1000], \"label\": \"tabel\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            1000
+                        ],
+                        "label": "pomegarnate"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            1000
+                        ],
+                        "label": "tabel"
+                    }
+                ],
+                "token_count": 73,
+                "raw_token_count": 378,
+                "runtime_seconds": 1.5438
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6124377601560459,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.89563,
+                "img_dist": 0.07214,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.91761,
+                "delta_m_plus": 0.02395,
+                "phi": 0.92786,
+                "swad": 0.02223
+            },
+            "l2_distance": 0.89853,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"pomegranate, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [30, 388, 264, 740], \"label\": \"pomegranate\"},\n\t{\"bbox_2d\": [300, 352, 638, 724], \"label\": \"pomegranate\"},\n\t{\"bbox_2d\": [638, 364, 912, 660], \"label\": \"pomegranate\"},\n\t{\"bbox_2d\": [656, 140, 938, 416], \"label\": \"pomegranate\"},\n\t{\"bbox_2d\": [408, 104, 688, 396], \"label\": \"pomegranate\"},\n\t{\"bbox_2d\": [92, 104, 400, 416], \"label\": \"pomegranate\"},\n\t{\"bbox_2d\": [656, 638, 964, 976], \"label\": \"pomegranate\"},\n\t{\"bbox_2d\": [464, 680, 656, 928], \"label\": \"pomegranate\"},\n\t{\"bbox_2d\": [264, 700, 492, 960], \"label\": \"pomegranate\"},\n\t{\"bbox_2d\": [0, 0, 1000, 1000], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            30,
+                            388,
+                            264,
+                            740
+                        ],
+                        "label": "pomegranate"
+                    },
+                    {
+                        "bbox_2d": [
+                            300,
+                            352,
+                            638,
+                            724
+                        ],
+                        "label": "pomegranate"
+                    },
+                    {
+                        "bbox_2d": [
+                            638,
+                            364,
+                            912,
+                            660
+                        ],
+                        "label": "pomegranate"
+                    },
+                    {
+                        "bbox_2d": [
+                            656,
+                            140,
+                            938,
+                            416
+                        ],
+                        "label": "pomegranate"
+                    },
+                    {
+                        "bbox_2d": [
+                            408,
+                            104,
+                            688,
+                            396
+                        ],
+                        "label": "pomegranate"
+                    },
+                    {
+                        "bbox_2d": [
+                            92,
+                            104,
+                            400,
+                            416
+                        ],
+                        "label": "pomegranate"
+                    },
+                    {
+                        "bbox_2d": [
+                            656,
+                            638,
+                            964,
+                            976
+                        ],
+                        "label": "pomegranate"
+                    },
+                    {
+                        "bbox_2d": [
+                            464,
+                            680,
+                            656,
+                            928
+                        ],
+                        "label": "pomegranate"
+                    },
+                    {
+                        "bbox_2d": [
+                            264,
+                            700,
+                            492,
+                            960
+                        ],
+                        "label": "pomegranate"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            1000
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 359,
+                "raw_token_count": 378,
+                "runtime_seconds": 1.5438
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.5656671100314771,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.039875089079669634
+            },
+            "objectives": {
+                "iou": 0.89702,
+                "img_dist": 0.06906,
+                "txt_dist": 0.07779,
+                "txt_sim": 0.92221
+            },
+            "swad_metrics": {
+                "iou_0": 0.91761,
+                "delta_m_plus": 0.02244,
+                "phi": 0.85852,
+                "swad": 0.01926
+            },
+            "l2_distance": 0.90303,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"pomegr\u0430nate, ta\u200bble\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [30, 384, 264, 738], \"label\": \"pomegr\u0430nate\"},\n\t{\"bbox_2d\": [296, 350, 640, 728], \"label\": \"pomegr\u0430nate\"},\n\t{\"bbox_2d\": [634, 368, 916, 672], \"label\": \"pomegr\u0430nate\"},\n\t{\"bbox_2d\": [652, 144, 936, 416], \"label\": \"pomegr\u0430nate\"},\n\t{\"bbox_2d\": [408, 104, 690, 400], \"label\": \"pomegr\u0430nate\"},\n\t{\"bbox_2d\": [96, 104, 408, 400], \"label\": \"pomegr\u0430nate\"},\n\t{\"bbox_2d\": [652, 636, 964, 980], \"label\": \"pomegr\u0430nate\"},\n\t{\"bbox_2d\": [464, 692, 658, 936], \"label\": \"pomegr\u0430nate\"},\n\t{\"bbox_2d\": [264, 708, 488, 960], \"label\": \"pomegr\u0430nate\"},\n\t{\"bbox_2d\": [0, 0, 1000, 1000], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            30,
+                            384,
+                            264,
+                            738
+                        ],
+                        "label": "pomegr\u0430nate"
+                    },
+                    {
+                        "bbox_2d": [
+                            296,
+                            350,
+                            640,
+                            728
+                        ],
+                        "label": "pomegr\u0430nate"
+                    },
+                    {
+                        "bbox_2d": [
+                            634,
+                            368,
+                            916,
+                            672
+                        ],
+                        "label": "pomegr\u0430nate"
+                    },
+                    {
+                        "bbox_2d": [
+                            652,
+                            144,
+                            936,
+                            416
+                        ],
+                        "label": "pomegr\u0430nate"
+                    },
+                    {
+                        "bbox_2d": [
+                            408,
+                            104,
+                            690,
+                            400
+                        ],
+                        "label": "pomegr\u0430nate"
+                    },
+                    {
+                        "bbox_2d": [
+                            96,
+                            104,
+                            408,
+                            400
+                        ],
+                        "label": "pomegr\u0430nate"
+                    },
+                    {
+                        "bbox_2d": [
+                            652,
+                            636,
+                            964,
+                            980
+                        ],
+                        "label": "pomegr\u0430nate"
+                    },
+                    {
+                        "bbox_2d": [
+                            464,
+                            692,
+                            658,
+                            936
+                        ],
+                        "label": "pomegr\u0430nate"
+                    },
+                    {
+                        "bbox_2d": [
+                            264,
+                            708,
+                            488,
+                            960
+                        ],
+                        "label": "pomegr\u0430nate"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            1000
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 377,
+                "raw_token_count": 378,
+                "runtime_seconds": 1.5438
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.018595721213425453,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.6130568625347235
+            },
+            "objectives": {
+                "iou": 0.80443,
+                "img_dist": 0.04086,
+                "txt_dist": 0.17462,
+                "txt_sim": 0.82538
+            },
+            "swad_metrics": {
+                "iou_0": 0.91761,
+                "delta_m_plus": 0.12334,
+                "phi": 0.79165,
+                "swad": 0.09764
+            },
+            "l2_distance": 0.82418,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"pomegranave, tamle\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [655, 638, 958, 972], \"label\": \"pomegranave\"},\n\t{\"bbox_2d\": [634, 370, 912, 658], \"label\": \"pomegranave\"},\n\t{\"bbox_2d\": [678, 148, 935, 412], \"label\": \"pomegranave\"},\n\t{\"bbox_2d\": [418, 112, 685, 408], \"label\": \"pomegranave\"},\n\t{\"bbox_2d\": [300, 350, 638, 728], \"label\": \"pomegranave\"},\n\t{\"bbox_2d\": [46, 398, 298, 734], \"label\": \"pomegranave\"},\n\t{\"bbox_2d\": [98, 112, 398, 412], \"label\": \"pomegranave\"},\n\t{\"bbox_2d\": [268, 708, 488, 958], \"label\": \"pomegranave\"},\n\t{\"bbox_2d\": [470, 692, 655, 928], \"label\": \"pomegranave\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            655,
+                            638,
+                            958,
+                            972
+                        ],
+                        "label": "pomegranave"
+                    },
+                    {
+                        "bbox_2d": [
+                            634,
+                            370,
+                            912,
+                            658
+                        ],
+                        "label": "pomegranave"
+                    },
+                    {
+                        "bbox_2d": [
+                            678,
+                            148,
+                            935,
+                            412
+                        ],
+                        "label": "pomegranave"
+                    },
+                    {
+                        "bbox_2d": [
+                            418,
+                            112,
+                            685,
+                            408
+                        ],
+                        "label": "pomegranave"
+                    },
+                    {
+                        "bbox_2d": [
+                            300,
+                            350,
+                            638,
+                            728
+                        ],
+                        "label": "pomegranave"
+                    },
+                    {
+                        "bbox_2d": [
+                            46,
+                            398,
+                            298,
+                            734
+                        ],
+                        "label": "pomegranave"
+                    },
+                    {
+                        "bbox_2d": [
+                            98,
+                            112,
+                            398,
+                            412
+                        ],
+                        "label": "pomegranave"
+                    },
+                    {
+                        "bbox_2d": [
+                            268,
+                            708,
+                            488,
+                            958
+                        ],
+                        "label": "pomegranave"
+                    },
+                    {
+                        "bbox_2d": [
+                            470,
+                            692,
+                            655,
+                            928
+                        ],
+                        "label": "pomegranave"
+                    }
+                ],
+                "token_count": 328,
+                "raw_token_count": 378,
+                "runtime_seconds": 1.5438
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.07201,
+                "txt_dist": 0.19561,
+                "txt_sim": 0.80439
+            },
+            "swad_metrics": {
+                "iou_0": 0.91761,
+                "delta_m_plus": 1.0,
+                "phi": 0.74647,
+                "swad": 0.74647
+            },
+            "l2_distance": 0.20844,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"palm a granite, tabel\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "There are none.",
+                "parsed_predictions": [],
+                "token_count": 4,
+                "raw_token_count": 378,
+                "runtime_seconds": 1.5438
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.92011,
+                "img_dist": 0.03925,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.91761,
+                "delta_m_plus": 0.0,
+                "phi": 0.96075,
+                "swad": 0.0
+            },
+            "l2_distance": 0.92095,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"pomegranate, table\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [42, 398, 280, 738], \"label\": \"pomegranate\"},\n\t{\"bbox_2d\": [675, 638, 958, 972], \"label\": \"pomegranate\"},\n\t{\"bbox_2d\": [634, 372, 912, 658], \"label\": \"pomegranate\"},\n\t{\"bbox_2d\": [420, 108, 688, 408], \"label\": \"pomegranate\"},\n\t{\"bbox_2d\": [675, 148, 934, 412], \"label\": \"pomegranate\"},\n\t{\"bbox_2d\": [300, 354, 640, 728], \"label\": \"pomegranate\"},\n\t{\"bbox_2d\": [470, 694, 654, 924], \"label\": \"pomegranate\"},\n\t{\"bbox_2d\": [268, 708, 490, 958], \"label\": \"pomegranate\"},\n\t{\"bbox_2d\": [95, 108, 398, 408], \"label\": \"pomegranate\"},\n\t{\"bbox_2d\": [0, 0, 1000, 1000], \"label\": \"table\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            42,
+                            398,
+                            280,
+                            738
+                        ],
+                        "label": "pomegranate"
+                    },
+                    {
+                        "bbox_2d": [
+                            675,
+                            638,
+                            958,
+                            972
+                        ],
+                        "label": "pomegranate"
+                    },
+                    {
+                        "bbox_2d": [
+                            634,
+                            372,
+                            912,
+                            658
+                        ],
+                        "label": "pomegranate"
+                    },
+                    {
+                        "bbox_2d": [
+                            420,
+                            108,
+                            688,
+                            408
+                        ],
+                        "label": "pomegranate"
+                    },
+                    {
+                        "bbox_2d": [
+                            675,
+                            148,
+                            934,
+                            412
+                        ],
+                        "label": "pomegranate"
+                    },
+                    {
+                        "bbox_2d": [
+                            300,
+                            354,
+                            640,
+                            728
+                        ],
+                        "label": "pomegranate"
+                    },
+                    {
+                        "bbox_2d": [
+                            470,
+                            694,
+                            654,
+                            924
+                        ],
+                        "label": "pomegranate"
+                    },
+                    {
+                        "bbox_2d": [
+                            268,
+                            708,
+                            490,
+                            958
+                        ],
+                        "label": "pomegranate"
+                    },
+                    {
+                        "bbox_2d": [
+                            95,
+                            108,
+                            398,
+                            408
+                        ],
+                        "label": "pomegranate"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            1000,
+                            1000
+                        ],
+                        "label": "table"
+                    }
+                ],
+                "token_count": 359,
+                "raw_token_count": 378,
+                "runtime_seconds": 1.5438
+            }
+        }
+    ]
+}

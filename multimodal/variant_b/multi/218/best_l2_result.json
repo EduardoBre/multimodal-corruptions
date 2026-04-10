@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/218",
+        "folder_id": "218",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00033272.JPEG"
+    },
+    "pareto_index": 5,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.033244,
+            "defocus_blur": 0.041641,
+            "motion_blur": 0.029453,
+            "fog_filter": 0.042328,
+            "pixelate": 0.022043,
+            "jpeg_filter": 0.079552
+        },
+        "text_corruptions": {
+            "homophone": 0.059871,
+            "synonym": 0.130567,
+            "ata_saliency": 0.278065,
+            "fragmentation": 0.005897,
+            "character_noise": 0.509156
+        },
+        "img_budget_used": 0.248262,
+        "txt_budget_used": 0.983555,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.09402,
+        "txt_dist": 0.25782,
+        "txt_sim": 0.74218
+    },
+    "swad_metrics": {
+        "iou_0": 0.83896,
+        "delta_m_plus": 1.0,
+        "phi": 0.6724,
+        "swad": 0.6724
+    },
+    "l2_distance": 0.27443,
+    "original_prompt": "Identify the objects \"diaper, table\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "diaper": {
+            "xmin": 160,
+            "ymin": 232,
+            "xmax": 292,
+            "ymax": 357
+        },
+        "diaper_1": {
+            "xmin": 98,
+            "ymin": 231,
+            "xmax": 162,
+            "ymax": 357
+        },
+        "table": {
+            "xmin": 0,
+            "ymin": 71,
+            "xmax": 85,
+            "ymax": 247
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"n\u200da\u200b\u0440p\u0443\u200b, tabl\u0435\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 147, 236, 500], \"label\": \"n\u200da\u200b\u0440p\u0443\u200b, tabl\u0435\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    147,
+                    236,
+                    500
+                ],
+                "label": "n\u200da\u200b\u0440p\u0443\u200b, tabl\u0435"
+            }
+        ],
+        "token_count": 49,
+        "raw_token_count": 136,
+        "runtime_seconds": 0.4535
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.033244184877543104,
+        "defocus_blur": 0.04164095555695317,
+        "motion_blur": 0.029452629095551852,
+        "fog_filter": 0.04232812940020189,
+        "pixelate": 0.02204310882374955,
+        "jpeg_filter": 0.07955249988794211
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.0598710833717249,
+        "synonym": 0.13056650743913703,
+        "ata_saliency": 0.2780647197207737,
+        "fragmentation": 0.005897118505865354,
+        "character_noise": 0.5091560118461013
+    }
+}

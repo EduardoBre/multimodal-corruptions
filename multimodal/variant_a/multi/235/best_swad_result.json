@@ -1,0 +1,67 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/235",
+        "folder_id": "235",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00043349.JPEG"
+    },
+    "pareto_index": 9,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 60,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "defocus_blur",
+        "img_scale": 0.027412130515424203,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6881327596781619
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.03283,
+        "txt_dist": 0.11369,
+        "txt_sim": 0.88631
+    },
+    "swad_metrics": {
+        "iou_0": 0.9734,
+        "delta_m_plus": 1.0,
+        "phi": 0.85721,
+        "swad": 0.85721
+    },
+    "l2_distance": 0.11834,
+    "original_prompt": "Identify the objects \"person, snake\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "snake": {
+            "xmin": 183,
+            "ymin": 62,
+            "xmax": 404,
+            "ymax": 309
+        },
+        "person": {
+            "xmin": 0,
+            "ymin": 6,
+            "xmax": 458,
+            "ymax": 374
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"person, s nake\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 890, 999], \"label\": \"person, s nake\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    890,
+                    999
+                ],
+                "label": "person, s nake"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 89,
+        "runtime_seconds": 0.2904
+    }
+}

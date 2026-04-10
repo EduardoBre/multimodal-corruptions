@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/42",
+        "folder_id": "42",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00045720.JPEG"
+    },
+    "pareto_index": 11,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.025212,
+            "defocus_blur": 0.000992,
+            "motion_blur": 0.019363,
+            "fog_filter": 0.001698,
+            "pixelate": 0.025277,
+            "jpeg_filter": 0.000915
+        },
+        "text_corruptions": {
+            "homophone": 0.54108,
+            "synonym": 0.033491,
+            "ata_saliency": 0.036687,
+            "fragmentation": 0.113572,
+            "character_noise": 0.043681
+        },
+        "img_budget_used": 0.073457,
+        "txt_budget_used": 0.768512,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.00892,
+        "img_dist": 0.10904,
+        "txt_dist": 0.2748,
+        "txt_sim": 0.7252
+    },
+    "swad_metrics": {
+        "iou_0": 0.97301,
+        "delta_m_plus": 0.99083,
+        "phi": 0.64612,
+        "swad": 0.6402
+    },
+    "l2_distance": 0.29578,
+    "original_prompt": "Identify the objects \"dog\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "dog": {
+            "xmin": 333,
+            "ymin": 57,
+            "xmax": 496,
+            "ymax": 245
+        },
+        "dog_1": {
+            "xmin": 124,
+            "ymin": 0,
+            "xmax": 332,
+            "ymax": 252
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"dag\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 734, 999, 1000], \"label\": \"dag\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    734,
+                    999,
+                    1000
+                ],
+                "label": "dag"
+            }
+        ],
+        "token_count": 38,
+        "raw_token_count": 81,
+        "runtime_seconds": 0.269
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.025212190178724742,
+        "defocus_blur": 0.0009920152777803393,
+        "motion_blur": 0.01936311694629423,
+        "fog_filter": 0.0016980660435179289,
+        "pixelate": 0.02527744773168701,
+        "jpeg_filter": 0.0009145201588335785
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.5410801349663142,
+        "synonym": 0.03349146853932133,
+        "ata_saliency": 0.0366872320345785,
+        "fragmentation": 0.11357249141958901,
+        "character_noise": 0.04368058154766969
+    }
+}

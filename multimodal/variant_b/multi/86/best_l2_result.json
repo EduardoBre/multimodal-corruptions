@@ -1,0 +1,109 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/86",
+        "folder_id": "86",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00039308.JPEG"
+    },
+    "pareto_index": 6,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 5,
+    "total_evaluations": 135,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.166345,
+            "defocus_blur": 0.055961,
+            "motion_blur": 0.071555,
+            "fog_filter": 0.052761,
+            "pixelate": 0.227956,
+            "jpeg_filter": 0.018983
+        },
+        "text_corruptions": {
+            "homophone": 0.127781,
+            "synonym": 0.069626,
+            "ata_saliency": 0.083191,
+            "fragmentation": 0.028377,
+            "character_noise": 0.114297
+        },
+        "img_budget_used": 0.593561,
+        "txt_budget_used": 0.423272,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.12435,
+        "img_dist": 0.10309,
+        "txt_dist": 0.15608,
+        "txt_sim": 0.84392
+    },
+    "swad_metrics": {
+        "iou_0": 0.59458,
+        "delta_m_plus": 0.79086,
+        "phi": 0.75692,
+        "swad": 0.59862
+    },
+    "l2_distance": 0.22461,
+    "original_prompt": "Identify the objects \"person, ray\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 408,
+            "ymin": 294,
+            "xmax": 499,
+            "ymax": 373
+        },
+        "ray": {
+            "xmin": 145,
+            "ymin": 82,
+            "xmax": 297,
+            "ymax": 162
+        },
+        "ray_1": {
+            "xmin": 152,
+            "ymin": 163,
+            "xmax": 499,
+            "ymax": 324
+        },
+        "ray_2": {
+            "xmin": 328,
+            "ymin": 73,
+            "xmax": 412,
+            "ymax": 115
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"\u0440\u0435rsot, ray\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [318, 480, 708, 872], \"label\": \"ray\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    318,
+                    480,
+                    708,
+                    872
+                ],
+                "label": "ray"
+            }
+        ],
+        "token_count": 39,
+        "raw_token_count": 88,
+        "runtime_seconds": 0.2984
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.16634467130860903,
+        "defocus_blur": 0.05596148348319803,
+        "motion_blur": 0.07155517172220473,
+        "fog_filter": 0.05276114209171102,
+        "pixelate": 0.22795556511684564,
+        "jpeg_filter": 0.01898305352069779
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.1277811030970605,
+        "synonym": 0.06962614511624836,
+        "ata_saliency": 0.08319070429375486,
+        "fragmentation": 0.028376681913604596,
+        "character_noise": 0.11429699781670374
+    }
+}

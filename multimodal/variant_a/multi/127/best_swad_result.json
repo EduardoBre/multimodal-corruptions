@@ -1,0 +1,88 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/127",
+        "folder_id": "127",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00031730.JPEG"
+    },
+    "pareto_index": 9,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "pixelate",
+        "img_scale": 0.863144940280058,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6678992108124702
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.08407,
+        "txt_dist": 0.34497,
+        "txt_sim": 0.65503
+    },
+    "swad_metrics": {
+        "iou_0": 0.79266,
+        "delta_m_plus": 1.0,
+        "phi": 0.59996,
+        "swad": 0.59996
+    },
+    "l2_distance": 0.35507,
+    "original_prompt": "Identify the objects \"chair, table\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "table": {
+            "xmin": 246,
+            "ymin": 209,
+            "xmax": 291,
+            "ymax": 261
+        },
+        "table_1": {
+            "xmin": 21,
+            "ymin": 223,
+            "xmax": 117,
+            "ymax": 284
+        },
+        "chair": {
+            "xmin": 328,
+            "ymin": 204,
+            "xmax": 390,
+            "ymax": 276
+        },
+        "chair_1": {
+            "xmin": 285,
+            "ymin": 203,
+            "xmax": 346,
+            "ymax": 268
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"cheer, tay bull\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [598, 600, 672, 800], \"label\": \"cheer, tay bull\"},\n\t{\"bbox_2d\": [672, 600, 772, 800], \"label\": \"cheer, tay bull\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    598,
+                    600,
+                    672,
+                    800
+                ],
+                "label": "cheer, tay bull"
+            },
+            {
+                "bbox_2d": [
+                    672,
+                    600,
+                    772,
+                    800
+                ],
+                "label": "cheer, tay bull"
+            }
+        ],
+        "token_count": 82,
+        "raw_token_count": 143,
+        "runtime_seconds": 0.4775
+    }
+}

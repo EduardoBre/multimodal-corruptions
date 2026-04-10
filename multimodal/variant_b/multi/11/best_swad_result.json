@@ -1,0 +1,133 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/11",
+        "folder_id": "11",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00021675.JPEG"
+    },
+    "pareto_index": 8,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 45,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.163845,
+            "defocus_blur": 0.003662,
+            "motion_blur": 0.224399,
+            "fog_filter": 0.007973,
+            "pixelate": 0.033493,
+            "jpeg_filter": 0.035268
+        },
+        "text_corruptions": {
+            "homophone": 0.013375,
+            "synonym": 0.083437,
+            "ata_saliency": 0.068632,
+            "fragmentation": 0.520097,
+            "character_noise": 0.1978
+        },
+        "img_budget_used": 0.468639,
+        "txt_budget_used": 0.883341,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.32502,
+        "img_dist": 0.07133,
+        "txt_dist": 0.28981,
+        "txt_sim": 0.71019
+    },
+    "swad_metrics": {
+        "iou_0": 0.8409,
+        "delta_m_plus": 0.61349,
+        "phi": 0.65953,
+        "swad": 0.40461
+    },
+    "l2_distance": 0.44127,
+    "original_prompt": "Identify the objects \"computer keyboard, domestic cat, iPod, laptop, tv or monitor\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "domestic cat": {
+            "xmin": 161,
+            "ymin": 47,
+            "xmax": 388,
+            "ymax": 267
+        },
+        "computer keyboard": {
+            "xmin": 66,
+            "ymin": 35,
+            "xmax": 223,
+            "ymax": 77
+        },
+        "laptop": {
+            "xmin": 8,
+            "ymin": 0,
+            "xmax": 305,
+            "ymax": 108
+        },
+        "iPod": {
+            "xmin": 79,
+            "ymin": 243,
+            "xmax": 281,
+            "ymax": 315
+        },
+        "tv or monitor": {
+            "xmin": 133,
+            "ymin": 0,
+            "xmax": 296,
+            "ymax": 50
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"c omp\u200bute\u200br keyb\u043ea\u200brd, do\u200dm\u200b e\u200bstc\u200b\u0456 \u0441 at, musi\u200dc play\u200ber , lap\u200dt\u043e\u0440\u200d, tv or m on\u200d\u0456t\u043er\u200b\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [107, 0, 600, 272], \"label\": \"laptop\"},\n\t{\"bbox_2d\": [167, 658, 560, 816], \"label\": \"music player\"},\n\t{\"bbox_2d\": [357, 120, 800, 700], \"label\": \"cat\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    107,
+                    0,
+                    600,
+                    272
+                ],
+                "label": "laptop"
+            },
+            {
+                "bbox_2d": [
+                    167,
+                    658,
+                    560,
+                    816
+                ],
+                "label": "music player"
+            },
+            {
+                "bbox_2d": [
+                    357,
+                    120,
+                    800,
+                    700
+                ],
+                "label": "cat"
+            }
+        ],
+        "token_count": 105,
+        "raw_token_count": 206,
+        "runtime_seconds": 0.7301
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.1638445766947751,
+        "defocus_blur": 0.003661770496254374,
+        "motion_blur": 0.22439913773142772,
+        "fog_filter": 0.007972686118566151,
+        "pixelate": 0.03349298639220101,
+        "jpeg_filter": 0.03526799125724375
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.013375193918538933,
+        "synonym": 0.08343690799839967,
+        "ata_saliency": 0.0686315471692249,
+        "fragmentation": 0.520096955266858,
+        "character_noise": 0.19779995129492595
+    }
+}

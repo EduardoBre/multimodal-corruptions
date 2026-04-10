@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/58",
+        "folder_id": "58",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00027328.JPEG"
+    },
+    "pareto_index": 1,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.031066,
+            "defocus_blur": 0.092269,
+            "motion_blur": 0.053111,
+            "fog_filter": 0.023283,
+            "pixelate": 0.122334,
+            "jpeg_filter": 0.048263
+        },
+        "text_corruptions": {
+            "homophone": 0.043764,
+            "synonym": 0.258463,
+            "ata_saliency": 0.475155,
+            "fragmentation": 0.044655,
+            "character_noise": 0.033241
+        },
+        "img_budget_used": 0.370326,
+        "txt_budget_used": 0.855278,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.08938,
+        "txt_dist": 0.22563,
+        "txt_sim": 0.77437
+    },
+    "swad_metrics": {
+        "iou_0": 0.90677,
+        "delta_m_plus": 1.0,
+        "phi": 0.70516,
+        "swad": 0.70516
+    },
+    "l2_distance": 0.24269,
+    "original_prompt": "Identify the objects \"banjo, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "banjo": {
+            "xmin": 0,
+            "ymin": 227,
+            "xmax": 414,
+            "ymax": 374
+        },
+        "person": {
+            "xmin": 1,
+            "ymin": 0,
+            "xmax": 499,
+            "ymax": 374
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"b\u0430c\u200bj o, per\u200bson\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 999, 999], \"label\": \"b\u0430c\u200bj o, per\u200bson\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    0,
+                    999,
+                    999
+                ],
+                "label": "b\u0430c\u200bj o, per\u200bson"
+            }
+        ],
+        "token_count": 44,
+        "raw_token_count": 93,
+        "runtime_seconds": 0.2903
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.031066129638793814,
+        "defocus_blur": 0.09226910129419715,
+        "motion_blur": 0.05311059501705389,
+        "fog_filter": 0.023282678213987693,
+        "pixelate": 0.12233439357626451,
+        "jpeg_filter": 0.04826291428650929
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.04376387394242006,
+        "synonym": 0.25846284939525954,
+        "ata_saliency": 0.47515537582256406,
+        "fragmentation": 0.04465547367645634,
+        "character_noise": 0.033240626126959834
+    }
+}

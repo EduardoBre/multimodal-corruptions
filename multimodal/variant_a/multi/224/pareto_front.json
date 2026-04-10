@@ -1,0 +1,690 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/224",
+        "folder_id": "224",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00003715.JPEG"
+    },
+    "original_prompt": "Identify the objects \"cello, microphone, oboe, person, saxophone\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "saxophone": {
+            "xmin": 177,
+            "ymin": 281,
+            "xmax": 234,
+            "ymax": 438
+        },
+        "saxophone_1": {
+            "xmin": 312,
+            "ymin": 341,
+            "xmax": 338,
+            "ymax": 490
+        },
+        "cello": {
+            "xmin": 0,
+            "ymin": 0,
+            "xmax": 203,
+            "ymax": 427
+        },
+        "oboe": {
+            "xmin": 301,
+            "ymin": 151,
+            "xmax": 358,
+            "ymax": 310
+        },
+        "microphone": {
+            "xmin": 126,
+            "ymin": 113,
+            "xmax": 166,
+            "ymax": 132
+        },
+        "microphone_1": {
+            "xmin": 225,
+            "ymin": 176,
+            "xmax": 241,
+            "ymax": 241
+        },
+        "person": {
+            "xmin": 223,
+            "ymin": 85,
+            "xmax": 367,
+            "ymax": 497
+        }
+    },
+    "baseline_iou": 0.76036,
+    "swad_star": 0.52751,
+    "swad_star_index": 7,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 8,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.78634,
+                "img_dist": 0.03802,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.76036,
+                "delta_m_plus": 0.0,
+                "phi": 0.96198,
+                "swad": 0.0
+            },
+            "l2_distance": 0.78726,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cello, microphone, oboe, person, saxophone\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 544, 857], \"label\": \"cello\"},\n\t{\"bbox_2d\": [344, 228, 436, 264], \"label\": \"microphone\"},\n\t{\"bbox_2d\": [600, 353, 640, 478], \"label\": \"microphone\"},\n\t{\"bbox_2d\": [816, 296, 952, 620], \"label\": \"oboe\"},\n\t{\"bbox_2d\": [588, 170, 972, 960], \"label\": \"person\"},\n\t{\"bbox_2d\": [832, 683, 900, 970], \"label\": \"saxophone\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            544,
+                            857
+                        ],
+                        "label": "cello"
+                    },
+                    {
+                        "bbox_2d": [
+                            344,
+                            228,
+                            436,
+                            264
+                        ],
+                        "label": "microphone"
+                    },
+                    {
+                        "bbox_2d": [
+                            600,
+                            353,
+                            640,
+                            478
+                        ],
+                        "label": "microphone"
+                    },
+                    {
+                        "bbox_2d": [
+                            816,
+                            296,
+                            952,
+                            620
+                        ],
+                        "label": "oboe"
+                    },
+                    {
+                        "bbox_2d": [
+                            588,
+                            170,
+                            972,
+                            960
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            832,
+                            683,
+                            900,
+                            970
+                        ],
+                        "label": "saxophone"
+                    }
+                ],
+                "token_count": 206,
+                "raw_token_count": 278,
+                "runtime_seconds": 0.9839
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.4402,
+                "img_dist": 0.03026,
+                "txt_dist": 0.19351,
+                "txt_sim": 0.80649
+            },
+            "swad_metrics": {
+                "iou_0": 0.76036,
+                "delta_m_plus": 0.42106,
+                "phi": 0.78209,
+                "swad": 0.32931
+            },
+            "l2_distance": 0.48181,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cella, microphone, obeo, persvn, saxophone\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 548, 860], \"label\": \"cella\"},\n\t{\"bbox_2d\": [342, 232, 430, 270], \"label\": \"microphone\"},\n\t{\"bbox_2d\": [598, 355, 642, 488], \"label\": \"microphone\"},\n\t{\"bbox_2d\": [248, 670, 312, 748], \"label\": \"obeo\"},\n\t{\"bbox_2d\": [828, 684, 872, 968], \"label\": \"saxophone\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            548,
+                            860
+                        ],
+                        "label": "cella"
+                    },
+                    {
+                        "bbox_2d": [
+                            342,
+                            232,
+                            430,
+                            270
+                        ],
+                        "label": "microphone"
+                    },
+                    {
+                        "bbox_2d": [
+                            598,
+                            355,
+                            642,
+                            488
+                        ],
+                        "label": "microphone"
+                    },
+                    {
+                        "bbox_2d": [
+                            248,
+                            670,
+                            312,
+                            748
+                        ],
+                        "label": "obeo"
+                    },
+                    {
+                        "bbox_2d": [
+                            828,
+                            684,
+                            872,
+                            968
+                        ],
+                        "label": "saxophone"
+                    }
+                ],
+                "token_count": 173,
+                "raw_token_count": 278,
+                "runtime_seconds": 0.9839
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.6126883641923373,
+                "txt_attack": "homophone",
+                "txt_scale": 0.10684452896191199
+            },
+            "objectives": {
+                "iou": 0.63762,
+                "img_dist": 0.04321,
+                "txt_dist": 0.1282,
+                "txt_sim": 0.8718
+            },
+            "swad_metrics": {
+                "iou_0": 0.76036,
+                "delta_m_plus": 0.16142,
+                "phi": 0.83413,
+                "swad": 0.13465
+            },
+            "l2_distance": 0.65181,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cello, mike ra phone, oboe, per son, saxophone\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 548, 857], \"label\": \"cello\"},\n\t{\"bbox_2d\": [344, 230, 440, 264], \"label\": \"mike ra phone\"},\n\t{\"bbox_2d\": [800, 307, 956, 622], \"label\": \"oboe\"},\n\t{\"bbox_2d\": [588, 170, 960, 960], \"label\": \"per son\"},\n\t{\"bbox_2d\": [832, 687, 888, 967], \"label\": \"saxophone\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            548,
+                            857
+                        ],
+                        "label": "cello"
+                    },
+                    {
+                        "bbox_2d": [
+                            344,
+                            230,
+                            440,
+                            264
+                        ],
+                        "label": "mike ra phone"
+                    },
+                    {
+                        "bbox_2d": [
+                            800,
+                            307,
+                            956,
+                            622
+                        ],
+                        "label": "oboe"
+                    },
+                    {
+                        "bbox_2d": [
+                            588,
+                            170,
+                            960,
+                            960
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            832,
+                            687,
+                            888,
+                            967
+                        ],
+                        "label": "saxophone"
+                    }
+                ],
+                "token_count": 175,
+                "raw_token_count": 278,
+                "runtime_seconds": 0.9839
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6124377601560459,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.50666,
+                "img_dist": 0.09251,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.76036,
+                "delta_m_plus": 0.33366,
+                "phi": 0.90749,
+                "swad": 0.30279
+            },
+            "l2_distance": 0.51504,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cello, microphone, oboe, person, saxophone\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 550, 850], \"label\": \"cello\"},\n\t{\"bbox_2d\": [348, 228, 450, 536], \"label\": \"microphone\"},\n\t{\"bbox_2d\": [820, 308, 950, 620], \"label\": \"oboe\"},\n\t{\"bbox_2d\": [580, 166, 972, 960], \"label\": \"person\"},\n\t{\"bbox_2d\": [812, 680, 892, 972], \"label\": \"saxophone\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            550,
+                            850
+                        ],
+                        "label": "cello"
+                    },
+                    {
+                        "bbox_2d": [
+                            348,
+                            228,
+                            450,
+                            536
+                        ],
+                        "label": "microphone"
+                    },
+                    {
+                        "bbox_2d": [
+                            820,
+                            308,
+                            950,
+                            620
+                        ],
+                        "label": "oboe"
+                    },
+                    {
+                        "bbox_2d": [
+                            580,
+                            166,
+                            972,
+                            960
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            812,
+                            680,
+                            892,
+                            972
+                        ],
+                        "label": "saxophone"
+                    }
+                ],
+                "token_count": 172,
+                "raw_token_count": 278,
+                "runtime_seconds": 0.9839
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.5656671100314771,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.039875089079669634
+            },
+            "objectives": {
+                "iou": 0.51859,
+                "img_dist": 0.08722,
+                "txt_dist": 0.19261,
+                "txt_sim": 0.80739
+            },
+            "swad_metrics": {
+                "iou_0": 0.76036,
+                "delta_m_plus": 0.31797,
+                "phi": 0.73697,
+                "swad": 0.23433
+            },
+            "l2_distance": 0.56004,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"c\u0435llo, m\u200di\u0441r\u043ephone, o\u200bb\u200boe, \u0440er\u200dson, s\u0430xop\u200dhone\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 550, 857], \"label\": \"c\u0435llo\"},\n\t{\"bbox_2d\": [348, 227, 450, 517], \"label\": \"m\u200di\u0441r\u043ephone\"},\n\t{\"bbox_2d\": [816, 317, 950, 620], \"label\": \"o\u200bb\u200boe\"},\n\t{\"bbox_2d\": [584, 167, 968, 957], \"label\": \"\u0440er\u200dson\"},\n\t{\"bbox_2d\": [820, 680, 892, 977], \"label\": \"s\u0430xop\u200dhone\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            550,
+                            857
+                        ],
+                        "label": "c\u0435llo"
+                    },
+                    {
+                        "bbox_2d": [
+                            348,
+                            227,
+                            450,
+                            517
+                        ],
+                        "label": "m\u200di\u0441r\u043ephone"
+                    },
+                    {
+                        "bbox_2d": [
+                            816,
+                            317,
+                            950,
+                            620
+                        ],
+                        "label": "o\u200bb\u200boe"
+                    },
+                    {
+                        "bbox_2d": [
+                            584,
+                            167,
+                            968,
+                            957
+                        ],
+                        "label": "\u0440er\u200dson"
+                    },
+                    {
+                        "bbox_2d": [
+                            820,
+                            680,
+                            892,
+                            977
+                        ],
+                        "label": "s\u0430xop\u200dhone"
+                    }
+                ],
+                "token_count": 191,
+                "raw_token_count": 278,
+                "runtime_seconds": 0.9839
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.307337327911573,
+                "txt_attack": "homophone",
+                "txt_scale": 0.4186211600401869
+            },
+            "objectives": {
+                "iou": 0.6833,
+                "img_dist": 0.03798,
+                "txt_dist": 0.04796,
+                "txt_sim": 0.95204
+            },
+            "swad_metrics": {
+                "iou_0": 0.76036,
+                "delta_m_plus": 0.10135,
+                "phi": 0.91588,
+                "swad": 0.09282
+            },
+            "l2_distance": 0.68603,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cello, microphone, oboe, per son, saxophone\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 550, 857], \"label\": \"cello\"},\n\t{\"bbox_2d\": [342, 233, 442, 270], \"label\": \"microphone\"},\n\t{\"bbox_2d\": [592, 360, 642, 500], \"label\": \"microphone\"},\n\t{\"bbox_2d\": [800, 685, 888, 967], \"label\": \"saxophone\"},\n\t{\"bbox_2d\": [800, 307, 952, 620], \"label\": \"oboe\"},\n\t{\"bbox_2d\": [600, 170, 964, 967], \"label\": \"per son\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            550,
+                            857
+                        ],
+                        "label": "cello"
+                    },
+                    {
+                        "bbox_2d": [
+                            342,
+                            233,
+                            442,
+                            270
+                        ],
+                        "label": "microphone"
+                    },
+                    {
+                        "bbox_2d": [
+                            592,
+                            360,
+                            642,
+                            500
+                        ],
+                        "label": "microphone"
+                    },
+                    {
+                        "bbox_2d": [
+                            800,
+                            685,
+                            888,
+                            967
+                        ],
+                        "label": "saxophone"
+                    },
+                    {
+                        "bbox_2d": [
+                            800,
+                            307,
+                            952,
+                            620
+                        ],
+                        "label": "oboe"
+                    },
+                    {
+                        "bbox_2d": [
+                            600,
+                            170,
+                            964,
+                            967
+                        ],
+                        "label": "per son"
+                    }
+                ],
+                "token_count": 207,
+                "raw_token_count": 278,
+                "runtime_seconds": 0.9839
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.21300761893764208,
+                "txt_attack": "synonym",
+                "txt_scale": 0.11490566325799068
+            },
+            "objectives": {
+                "iou": 0.7516,
+                "img_dist": 0.05085,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.76036,
+                "delta_m_plus": 0.01152,
+                "phi": 0.94915,
+                "swad": 0.01094
+            },
+            "l2_distance": 0.75332,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cello, microphone, oboe, person, saxophone\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 550, 857], \"label\": \"cello\"},\n\t{\"bbox_2d\": [348, 230, 440, 260], \"label\": \"microphone\"},\n\t{\"bbox_2d\": [598, 355, 640, 488], \"label\": \"microphone\"},\n\t{\"bbox_2d\": [800, 298, 952, 623], \"label\": \"oboe\"},\n\t{\"bbox_2d\": [600, 170, 988, 970], \"label\": \"person\"},\n\t{\"bbox_2d\": [836, 683, 896, 970], \"label\": \"saxophone\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            550,
+                            857
+                        ],
+                        "label": "cello"
+                    },
+                    {
+                        "bbox_2d": [
+                            348,
+                            230,
+                            440,
+                            260
+                        ],
+                        "label": "microphone"
+                    },
+                    {
+                        "bbox_2d": [
+                            598,
+                            355,
+                            640,
+                            488
+                        ],
+                        "label": "microphone"
+                    },
+                    {
+                        "bbox_2d": [
+                            800,
+                            298,
+                            952,
+                            623
+                        ],
+                        "label": "oboe"
+                    },
+                    {
+                        "bbox_2d": [
+                            600,
+                            170,
+                            988,
+                            970
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            836,
+                            683,
+                            896,
+                            970
+                        ],
+                        "label": "saxophone"
+                    }
+                ],
+                "token_count": 206,
+                "raw_token_count": 278,
+                "runtime_seconds": 0.9839
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.863144940280058,
+                "txt_attack": "homophone",
+                "txt_scale": 0.6678992108124702
+            },
+            "objectives": {
+                "iou": 0.25703,
+                "img_dist": 0.09058,
+                "txt_dist": 0.12374,
+                "txt_sim": 0.87626
+            },
+            "swad_metrics": {
+                "iou_0": 0.76036,
+                "delta_m_plus": 0.66196,
+                "phi": 0.79689,
+                "swad": 0.52751
+            },
+            "l2_distance": 0.2993,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"cello, microphone, o bo, pursun, saxophone\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 0, 550, 850], \"label\": \"cello\"},\n\t{\"bbox_2d\": [850, 380, 900, 450], \"label\": \"microphone\"},\n\t{\"bbox_2d\": [240, 670, 310, 770], \"label\": \"microphone\"},\n\t{\"bbox_2d\": [820, 420, 940, 960], \"label\": \"saxophone\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            0,
+                            0,
+                            550,
+                            850
+                        ],
+                        "label": "cello"
+                    },
+                    {
+                        "bbox_2d": [
+                            850,
+                            380,
+                            900,
+                            450
+                        ],
+                        "label": "microphone"
+                    },
+                    {
+                        "bbox_2d": [
+                            240,
+                            670,
+                            310,
+                            770
+                        ],
+                        "label": "microphone"
+                    },
+                    {
+                        "bbox_2d": [
+                            820,
+                            420,
+                            940,
+                            960
+                        ],
+                        "label": "saxophone"
+                    }
+                ],
+                "token_count": 139,
+                "raw_token_count": 278,
+                "runtime_seconds": 0.9839
+            }
+        }
+    ]
+}

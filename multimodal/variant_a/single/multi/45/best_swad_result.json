@@ -1,0 +1,82 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/45",
+        "folder_id": "45",
+        "category": "single/multi",
+        "filename": "ILSVRC2013_val_00003242.JPEG"
+    },
+    "pareto_index": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 4,
+    "total_evaluations": 105,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "motion_blur",
+        "img_scale": 0.9496503493870498,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.6504849811974094
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.07031,
+        "txt_dist": 0.27991,
+        "txt_sim": 0.72009
+    },
+    "swad_metrics": {
+        "iou_0": 0.65831,
+        "delta_m_plus": 1.0,
+        "phi": 0.66946,
+        "swad": 0.66946
+    },
+    "l2_distance": 0.28861,
+    "original_prompt": "Identify the objects \"pomegranate\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "pomegranate": {
+            "xmin": 148,
+            "ymin": 152,
+            "xmax": 187,
+            "ymax": 193
+        },
+        "pomegranate_1": {
+            "xmin": 152,
+            "ymin": 214,
+            "xmax": 462,
+            "ymax": 486
+        },
+        "pomegranate_2": {
+            "xmin": 11,
+            "ymin": 8,
+            "xmax": 302,
+            "ymax": 282
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"\u0440\u043e\u200dme\u200bg\u200dra\u200bn\u200bate\u200d\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [18, 10, 608, 574], \"label\": \"\u0440\u043e\u200d\u043c\u0435\u200b\u0433\u200d\u0440\u0430\u200b\u043d\u200b\u0430\u0442\u0435\u200d\"},\n\t{\"bbox_2d\": [300, 420, 930, 984], \"label\": \"\u0440\u043e\u200d\u043c\u0435\u200b\u0433\u200d\u0440\u0430\u200b\u043d\u200b\u0430\u0442\u0435\u200d\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    18,
+                    10,
+                    608,
+                    574
+                ],
+                "label": "\u0440\u043e\u200d\u043c\u0435\u200b\u0433\u200d\u0440\u0430\u200b\u043d\u200b\u0430\u0442\u0435\u200d"
+            },
+            {
+                "bbox_2d": [
+                    300,
+                    420,
+                    930,
+                    984
+                ],
+                "label": "\u0440\u043e\u200d\u043c\u0435\u200b\u0433\u200d\u0440\u0430\u200b\u043d\u200b\u0430\u0442\u0435\u200d"
+            }
+        ],
+        "token_count": 100,
+        "raw_token_count": 103,
+        "runtime_seconds": 0.4525
+    }
+}

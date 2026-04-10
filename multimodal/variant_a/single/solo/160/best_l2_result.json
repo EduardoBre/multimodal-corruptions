@@ -1,0 +1,61 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/160",
+        "folder_id": "160",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00017725.JPEG"
+    },
+    "pareto_index": 13,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 8,
+    "total_evaluations": 225,
+    "skipped_evaluations": 45,
+    "genome": {
+        "img_attack": "jpeg_filter",
+        "img_scale": 0.0012028577003159596,
+        "txt_attack": "character_noise",
+        "txt_scale": 0.6515156191166894
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.03979,
+        "txt_dist": 0.14327,
+        "txt_sim": 0.85673
+    },
+    "swad_metrics": {
+        "iou_0": 0.94098,
+        "delta_m_plus": 1.0,
+        "phi": 0.82264,
+        "swad": 0.82264
+    },
+    "l2_distance": 0.14869,
+    "original_prompt": "Identify the objects \"remote control\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "remote control": {
+            "xmin": 123,
+            "ymin": 2,
+            "xmax": 263,
+            "ymax": 487
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"r\u200d\u0435\u200dm\u043et\u200b\u0435\u200d \u0441\u200do\u200bn\u200bt\u200dr\u200b\u043e\u200dl\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [309, 18, 709, 987], \"label\": \"r\u200d\u0435\u200dm\u043e\u0442\u200b\u0435\u200d \u0441\u200d\u043e\u200b\u043d\u200b\u0442\u200b\u0440\u200b\u043e\u200b\u043b\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    309,
+                    18,
+                    709,
+                    987
+                ],
+                "label": "r\u200d\u0435\u200dm\u043e\u0442\u200b\u0435\u200d \u0441\u200d\u043e\u200b\u043d\u200b\u0442\u200b\u0440\u200b\u043e\u200b\u043b"
+            }
+        ],
+        "token_count": 63,
+        "raw_token_count": 67,
+        "runtime_seconds": 0.2557
+    }
+}

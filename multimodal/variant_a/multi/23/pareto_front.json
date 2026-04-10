@@ -1,0 +1,996 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/23",
+        "folder_id": "23",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00043500.JPEG"
+    },
+    "original_prompt": "Identify the objects \"hair spray, perfume, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 184,
+            "ymin": 34,
+            "xmax": 499,
+            "ymax": 333
+        },
+        "person_1": {
+            "xmin": 50,
+            "ymin": 50,
+            "xmax": 203,
+            "ymax": 327
+        },
+        "hair spray": {
+            "xmin": 369,
+            "ymin": 102,
+            "xmax": 464,
+            "ymax": 294
+        },
+        "perfume": {
+            "xmin": 357,
+            "ymin": 97,
+            "xmax": 485,
+            "ymax": 296
+        }
+    },
+    "baseline_iou": 0.70239,
+    "swad_star": 0.70741,
+    "swad_star_index": 8,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 3,
+    "total_evaluations": 90,
+    "skipped_evaluations": 30,
+    "n_solutions": 17,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.8632061743184387,
+                "txt_attack": "synonym",
+                "txt_scale": 0.7724979474714236
+            },
+            "objectives": {
+                "iou": 0.17378,
+                "img_dist": 0.15741,
+                "txt_dist": 0.16249,
+                "txt_sim": 0.83751
+            },
+            "swad_metrics": {
+                "iou_0": 0.70239,
+                "delta_m_plus": 0.75259,
+                "phi": 0.70568,
+                "swad": 0.53108
+            },
+            "l2_distance": 0.28527,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"holding spray, fragrance, man\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [740, 270, 998, 877], \"label\": \"holding spray, fragrance\"},\n\t{\"bbox_2d\": [367, 157, 770, 877], \"label\": \"man\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            740,
+                            270,
+                            998,
+                            877
+                        ],
+                        "label": "holding spray, fragrance"
+                    },
+                    {
+                        "bbox_2d": [
+                            367,
+                            157,
+                            770,
+                            877
+                        ],
+                        "label": "man"
+                    }
+                ],
+                "token_count": 75,
+                "raw_token_count": 191,
+                "runtime_seconds": 0.695
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "motion_blur",
+                "img_scale": 0.23165185207671868,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2847437692140504
+            },
+            "objectives": {
+                "iou": 0.47378,
+                "img_dist": 0.02866,
+                "txt_dist": 0.14492,
+                "txt_sim": 0.85508
+            },
+            "swad_metrics": {
+                "iou_0": 0.70239,
+                "delta_m_plus": 0.32547,
+                "phi": 0.83057,
+                "swad": 0.27033
+            },
+            "l2_distance": 0.49628,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hair sprey, perfume, purse on\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [734, 300, 938, 876], \"label\": \"hair sprey\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            734,
+                            300,
+                            938,
+                            876
+                        ],
+                        "label": "hair sprey"
+                    }
+                ],
+                "token_count": 41,
+                "raw_token_count": 191,
+                "runtime_seconds": 0.695
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.86341,
+                "img_dist": 0.0303,
+                "txt_dist": 0.12375,
+                "txt_sim": 0.87625
+            },
+            "swad_metrics": {
+                "iou_0": 0.70239,
+                "delta_m_plus": 0.0,
+                "phi": 0.8497,
+                "swad": 0.0
+            },
+            "l2_distance": 0.87276,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hair smray, perfuem, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [734, 277, 938, 877], \"label\": \"hair smray\"},\n\t{\"bbox_2d\": [87, 150, 450, 997], \"label\": \"person\"},\n\t{\"bbox_2d\": [373, 117, 998, 997], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            734,
+                            277,
+                            938,
+                            877
+                        ],
+                        "label": "hair smray"
+                    },
+                    {
+                        "bbox_2d": [
+                            87,
+                            150,
+                            450,
+                            997
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            373,
+                            117,
+                            998,
+                            997
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 106,
+                "raw_token_count": 191,
+                "runtime_seconds": 0.695
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.6124377601560459,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.54069,
+                "img_dist": 0.06662,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.70239,
+                "delta_m_plus": 0.23021,
+                "phi": 0.93338,
+                "swad": 0.21488
+            },
+            "l2_distance": 0.54478,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hair spray, perfume, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [728, 270, 950, 875], \"label\": \"hair spray, perfume\"},\n\t{\"bbox_2d\": [368, 115, 998, 999], \"label\": \"person\"},\n\t{\"bbox_2d\": [0, 135, 400, 999], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            728,
+                            270,
+                            950,
+                            875
+                        ],
+                        "label": "hair spray, perfume"
+                    },
+                    {
+                        "bbox_2d": [
+                            368,
+                            115,
+                            998,
+                            999
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            135,
+                            400,
+                            999
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 106,
+                "raw_token_count": 191,
+                "runtime_seconds": 0.695
+            }
+        },
+        {
+            "index": 4,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.8004900574692112,
+                "txt_attack": "homophone",
+                "txt_scale": 0.3273709769105356
+            },
+            "objectives": {
+                "iou": 0.35474,
+                "img_dist": 0.07511,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.70239,
+                "delta_m_plus": 0.49495,
+                "phi": 0.92489,
+                "swad": 0.45778
+            },
+            "l2_distance": 0.3626,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hair spray, perfume, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [728, 270, 999, 880], \"label\": \"hair spray, perfume\"},\n\t{\"bbox_2d\": [362, 120, 768, 999], \"label\": \"person\"},\n\t{\"bbox_2d\": [0, 120, 400, 999], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            728,
+                            270,
+                            999,
+                            880
+                        ],
+                        "label": "hair spray, perfume"
+                    },
+                    {
+                        "bbox_2d": [
+                            362,
+                            120,
+                            768,
+                            999
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            120,
+                            400,
+                            999
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 106,
+                "raw_token_count": 184,
+                "runtime_seconds": 0.684
+            }
+        },
+        {
+            "index": 5,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.6086094354026901,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.05557257533910853
+            },
+            "objectives": {
+                "iou": 0.40891,
+                "img_dist": 0.04704,
+                "txt_dist": 0.08725,
+                "txt_sim": 0.91275
+            },
+            "swad_metrics": {
+                "iou_0": 0.70239,
+                "delta_m_plus": 0.41783,
+                "phi": 0.86981,
+                "swad": 0.36343
+            },
+            "l2_distance": 0.42075,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hair sprly, prefume, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [734, 300, 936, 872], \"label\": \"hair sprly, prefume\"},\n\t{\"bbox_2d\": [372, 112, 772, 999], \"label\": \"person\"},\n\t{\"bbox_2d\": [78, 148, 400, 999], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            734,
+                            300,
+                            936,
+                            872
+                        ],
+                        "label": "hair sprly, prefume"
+                    },
+                    {
+                        "bbox_2d": [
+                            372,
+                            112,
+                            772,
+                            999
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            78,
+                            148,
+                            400,
+                            999
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 109,
+                "raw_token_count": 243,
+                "runtime_seconds": 0.8572
+            }
+        },
+        {
+            "index": 6,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.8309415266623522,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.8971524375333463
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.06261,
+                "txt_dist": 0.34021,
+                "txt_sim": 0.65979
+            },
+            "swad_metrics": {
+                "iou_0": 0.70239,
+                "delta_m_plus": 1.0,
+                "phi": 0.61848,
+                "swad": 0.61848
+            },
+            "l2_distance": 0.34592,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"h\u200d\u0430\u200d\u0456\u200dr\u200b s\u0440r\u200d\u0430\u0443\u200d, \u0440\u200b\u0435\u200drf\u200bu\u200dm\u200be\u200b, p\u200b\u0435\u200br\u200bs\u043e\u200dn\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [730, 264, 999, 878], \"label\": \"h\u200d\u0430\u200d\u0456\u200dr\u200b s\u0440r\u200d\u0430\u0443\u200d, \u0440\u200b\u0435\u200drf\u200bu\u200dm\u200be\u200b, p\u200b\u0435\u200br\u200bs\u043e\u200dn\"},\n\t{\"bbox_2d\": [360, 108, 768, 999], \"label\": \"h\u200d\u0430\u200d\u0456\u200dr\u200b s\u0440r\u200d\u0430\u0443\u200d, \u0440\u200b\u0435\u200drf\u200bu\u200dm\u200be\u200b, p\u200b\u0435\u200br\u200bs\u043e\u200dn\"},\n\t{\"bbox_2d\": [80, 138, 400, 999], \"label\": \"h\u200d\u0430\u200d\u0456\u200dr\u200b s\u0440r\u200d\u0430\u0443\u200d, \u0440\u200b\u0435\u200drf\u200bu\u200dm\u200be\u200b, p\u200b\u0435\u200br\u200bs\u043e\u200dn\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            730,
+                            264,
+                            999,
+                            878
+                        ],
+                        "label": "h\u200d\u0430\u200d\u0456\u200dr\u200b s\u0440r\u200d\u0430\u0443\u200d, \u0440\u200b\u0435\u200drf\u200bu\u200dm\u200be\u200b, p\u200b\u0435\u200br\u200bs\u043e\u200dn"
+                    },
+                    {
+                        "bbox_2d": [
+                            360,
+                            108,
+                            768,
+                            999
+                        ],
+                        "label": "h\u200d\u0430\u200d\u0456\u200dr\u200b s\u0440r\u200d\u0430\u0443\u200d, \u0440\u200b\u0435\u200drf\u200bu\u200dm\u200be\u200b, p\u200b\u0435\u200br\u200bs\u043e\u200dn"
+                    },
+                    {
+                        "bbox_2d": [
+                            80,
+                            138,
+                            400,
+                            999
+                        ],
+                        "label": "h\u200d\u0430\u200d\u0456\u200dr\u200b s\u0440r\u200d\u0430\u0443\u200d, \u0440\u200b\u0435\u200drf\u200bu\u200dm\u200be\u200b, p\u200b\u0435\u200br\u200bs\u043e\u200dn"
+                    }
+                ],
+                "token_count": 242,
+                "raw_token_count": 243,
+                "runtime_seconds": 0.8572
+            }
+        },
+        {
+            "index": 7,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.017671426693421227,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.01793595063538611
+            },
+            "objectives": {
+                "iou": 0.88047,
+                "img_dist": 0.02853,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.70239,
+                "delta_m_plus": 0.0,
+                "phi": 0.97147,
+                "swad": 0.0
+            },
+            "l2_distance": 0.88093,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hair spray, perfume, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [732, 300, 930, 877], \"label\": \"hair spray\"},\n\t{\"bbox_2d\": [375, 117, 1000, 997], \"label\": \"person\"},\n\t{\"bbox_2d\": [78, 155, 425, 997], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            732,
+                            300,
+                            930,
+                            877
+                        ],
+                        "label": "hair spray"
+                    },
+                    {
+                        "bbox_2d": [
+                            375,
+                            117,
+                            1000,
+                            997
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            78,
+                            155,
+                            425,
+                            997
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 106,
+                "raw_token_count": 198,
+                "runtime_seconds": 0.6844
+            }
+        },
+        {
+            "index": 8,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.593995869486395,
+                "txt_attack": "homophone",
+                "txt_scale": 0.8509325237978402
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.11596,
+                "txt_dist": 0.1998,
+                "txt_sim": 0.8002
+            },
+            "swad_metrics": {
+                "iou_0": 0.70239,
+                "delta_m_plus": 1.0,
+                "phi": 0.70741,
+                "swad": 0.70741
+            },
+            "l2_distance": 0.23101,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hare sprey, perfume, purse on\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [740, 300, 938, 877], \"label\": \"hare sprey, perfume, purse on\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            740,
+                            300,
+                            938,
+                            877
+                        ],
+                        "label": "hare sprey, perfume, purse on"
+                    }
+                ],
+                "token_count": 46,
+                "raw_token_count": 198,
+                "runtime_seconds": 0.6844
+            }
+        },
+        {
+            "index": 9,
+            "genome": {
+                "img_attack": "fog_filter",
+                "img_scale": 0.800623981000355,
+                "txt_attack": "homophone",
+                "txt_scale": 0.614218632242475
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.35086,
+                "txt_dist": 0.14492,
+                "txt_sim": 0.85508
+            },
+            "swad_metrics": {
+                "iou_0": 0.70239,
+                "delta_m_plus": 1.0,
+                "phi": 0.55507,
+                "swad": 0.55507
+            },
+            "l2_distance": 0.37961,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hair sprey, perfume, purse on\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [730, 306, 938, 880], \"label\": \"hair sprey, perfume, purse on\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            730,
+                            306,
+                            938,
+                            880
+                        ],
+                        "label": "hair sprey, perfume, purse on"
+                    }
+                ],
+                "token_count": 46,
+                "raw_token_count": 255,
+                "runtime_seconds": 0.8361
+            }
+        },
+        {
+            "index": 10,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.9663698091270142,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.7676725435451948
+            },
+            "objectives": {
+                "iou": 0.33476,
+                "img_dist": 0.0772,
+                "txt_dist": 0.30605,
+                "txt_sim": 0.69395
+            },
+            "swad_metrics": {
+                "iou_0": 0.70239,
+                "delta_m_plus": 0.5234,
+                "phi": 0.64038,
+                "swad": 0.33517
+            },
+            "l2_distance": 0.4601,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hari sprsy, perfuml, eprson\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [730, 250, 999, 875], \"label\": \"hari sprsy, perfuml\"},\n\t{\"bbox_2d\": [362, 100, 762, 875], \"label\": \"eprson\"},\n\t{\"bbox_2d\": [0, 130, 400, 999], \"label\": \"eprson\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            730,
+                            250,
+                            999,
+                            875
+                        ],
+                        "label": "hari sprsy, perfuml"
+                    },
+                    {
+                        "bbox_2d": [
+                            362,
+                            100,
+                            762,
+                            875
+                        ],
+                        "label": "eprson"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            130,
+                            400,
+                            999
+                        ],
+                        "label": "eprson"
+                    }
+                ],
+                "token_count": 112,
+                "raw_token_count": 255,
+                "runtime_seconds": 0.8361
+            }
+        },
+        {
+            "index": 11,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.01683394070914035,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.85445,
+                "img_dist": 0.0303,
+                "txt_dist": 0.13839,
+                "txt_sim": 0.86161
+            },
+            "swad_metrics": {
+                "iou_0": 0.70239,
+                "delta_m_plus": 0.0,
+                "phi": 0.8355,
+                "swad": 0.0
+            },
+            "l2_distance": 0.86611,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hair spyay, perfume, eprson\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [375, 117, 675, 500], \"label\": \"hair spyay\"},\n\t{\"bbox_2d\": [103, 150, 298, 420], \"label\": \"hair spyay\"},\n\t{\"bbox_2d\": [734, 277, 938, 877], \"label\": \"perfume\"},\n\t{\"bbox_2d\": [375, 117, 998, 997], \"label\": \"eprson\"},\n\t{\"bbox_2d\": [80, 150, 458, 997], \"label\": \"eprson\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            375,
+                            117,
+                            675,
+                            500
+                        ],
+                        "label": "hair spyay"
+                    },
+                    {
+                        "bbox_2d": [
+                            103,
+                            150,
+                            298,
+                            420
+                        ],
+                        "label": "hair spyay"
+                    },
+                    {
+                        "bbox_2d": [
+                            734,
+                            277,
+                            938,
+                            877
+                        ],
+                        "label": "perfume"
+                    },
+                    {
+                        "bbox_2d": [
+                            375,
+                            117,
+                            998,
+                            997
+                        ],
+                        "label": "eprson"
+                    },
+                    {
+                        "bbox_2d": [
+                            80,
+                            150,
+                            458,
+                            997
+                        ],
+                        "label": "eprson"
+                    }
+                ],
+                "token_count": 179,
+                "raw_token_count": 255,
+                "runtime_seconds": 0.8361
+            }
+        },
+        {
+            "index": 12,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.375796916747389,
+                "txt_attack": "synonym",
+                "txt_scale": 0.13237893345702173
+            },
+            "objectives": {
+                "iou": 0.58611,
+                "img_dist": 0.03717,
+                "txt_dist": 0.02007,
+                "txt_sim": 0.97993
+            },
+            "swad_metrics": {
+                "iou_0": 0.70239,
+                "delta_m_plus": 0.16555,
+                "phi": 0.94351,
+                "swad": 0.1562
+            },
+            "l2_distance": 0.58763,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hair spray, fragrance, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [734, 288, 938, 875], \"label\": \"hair spray, fragrance\"},\n\t{\"bbox_2d\": [370, 130, 998, 997], \"label\": \"person\"},\n\t{\"bbox_2d\": [80, 147, 400, 997], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            734,
+                            288,
+                            938,
+                            875
+                        ],
+                        "label": "hair spray, fragrance"
+                    },
+                    {
+                        "bbox_2d": [
+                            370,
+                            130,
+                            998,
+                            997
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            80,
+                            147,
+                            400,
+                            997
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 107,
+                "raw_token_count": 257,
+                "runtime_seconds": 0.8342
+            }
+        },
+        {
+            "index": 13,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.0011418402251624493,
+                "txt_attack": "homophone",
+                "txt_scale": 0.10684452896191199
+            },
+            "objectives": {
+                "iou": 0.86458,
+                "img_dist": 0.0303,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.70239,
+                "delta_m_plus": 0.0,
+                "phi": 0.9697,
+                "swad": 0.0
+            },
+            "l2_distance": 0.86511,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hair spray, perfume, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [734, 280, 938, 876], \"label\": \"hair spray\"},\n\t{\"bbox_2d\": [87, 150, 450, 997], \"label\": \"person\"},\n\t{\"bbox_2d\": [373, 117, 998, 997], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            734,
+                            280,
+                            938,
+                            876
+                        ],
+                        "label": "hair spray"
+                    },
+                    {
+                        "bbox_2d": [
+                            87,
+                            150,
+                            450,
+                            997
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            373,
+                            117,
+                            998,
+                            997
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 105,
+                "raw_token_count": 257,
+                "runtime_seconds": 0.8342
+            }
+        },
+        {
+            "index": 14,
+            "genome": {
+                "img_attack": "defocus_blur",
+                "img_scale": 0.8004900574692112,
+                "txt_attack": "homophone",
+                "txt_scale": 0.35905616066682644
+            },
+            "objectives": {
+                "iou": 0.34797,
+                "img_dist": 0.07511,
+                "txt_dist": 0.07015,
+                "txt_sim": 0.92985
+            },
+            "swad_metrics": {
+                "iou_0": 0.70239,
+                "delta_m_plus": 0.50459,
+                "phi": 0.86001,
+                "swad": 0.43395
+            },
+            "l2_distance": 0.36283,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hare spray, perfume, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [728, 267, 999, 880], \"label\": \"hare spray, perfume\"},\n\t{\"bbox_2d\": [364, 125, 764, 999], \"label\": \"person\"},\n\t{\"bbox_2d\": [0, 130, 392, 999], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            728,
+                            267,
+                            999,
+                            880
+                        ],
+                        "label": "hare spray, perfume"
+                    },
+                    {
+                        "bbox_2d": [
+                            364,
+                            125,
+                            764,
+                            999
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            0,
+                            130,
+                            392,
+                            999
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 106,
+                "raw_token_count": 257,
+                "runtime_seconds": 0.8342
+            }
+        },
+        {
+            "index": 15,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.03732619454213726,
+                "txt_attack": "homophone",
+                "txt_scale": 0.31066374248420303
+            },
+            "objectives": {
+                "iou": 0.8923,
+                "img_dist": 0.02214,
+                "txt_dist": 0.07836,
+                "txt_sim": 0.92164
+            },
+            "swad_metrics": {
+                "iou_0": 0.70239,
+                "delta_m_plus": 0.0,
+                "phi": 0.90123,
+                "swad": 0.0
+            },
+            "l2_distance": 0.89601,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"hair spray, per fume, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [734, 300, 938, 878], \"label\": \"hair spray\"},\n\t{\"bbox_2d\": [734, 300, 938, 878], \"label\": \"per fume\"},\n\t{\"bbox_2d\": [375, 112, 998, 997], \"label\": \"person\"},\n\t{\"bbox_2d\": [75, 150, 408, 997], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            734,
+                            300,
+                            938,
+                            878
+                        ],
+                        "label": "hair spray"
+                    },
+                    {
+                        "bbox_2d": [
+                            734,
+                            300,
+                            938,
+                            878
+                        ],
+                        "label": "per fume"
+                    },
+                    {
+                        "bbox_2d": [
+                            375,
+                            112,
+                            998,
+                            997
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            75,
+                            150,
+                            408,
+                            997
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 140,
+                "raw_token_count": 257,
+                "runtime_seconds": 0.8342
+            }
+        },
+        {
+            "index": 16,
+            "genome": {
+                "img_attack": "pixelate",
+                "img_scale": 0.8142117463006222,
+                "txt_attack": "character_noise",
+                "txt_scale": 0.6522620413205447
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.06063,
+                "txt_dist": 0.3561,
+                "txt_sim": 0.6439
+            },
+            "swad_metrics": {
+                "iou_0": 0.70239,
+                "delta_m_plus": 1.0,
+                "phi": 0.60486,
+                "swad": 0.60486
+            },
+            "l2_distance": 0.36122,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"h\u0430\u200d\u0456\u200dr s\u200dp\u200br\u200da\u200b\u0443\u200b, \u0440\u200b\u0435\u200brfu\u200dme\u200d, \u0440\u0435\u200dr\u200dson\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [728, 280, 952, 875], \"label\": \"h\u0430\u200d\u0456\u200dr s\u200dp\u200br\u200da\u200b\u0443\u200b, \u0440\u200b\u0435\u200brfu\u200dme\u200d, \u0440\u0435\u200dr\u200dson\"},\n\t{\"bbox_2d\": [368, 115, 768, 999], \"label\": \"\u0440\u0435\u200br\u200bf\u200bu\u200bm\u200be\u200b, \u0440\u0435\u200br\u200bs\u200bo\u200bn\"},\n\t{\"bbox_2d\": [72, 135, 392, 999], \"label\": \"\u0440\u0435\u200br\u200bf\u200bu\u200bm\u200be\u200b, \u0440\u0435\u200br\u200bs\u200bo\u200bn\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            728,
+                            280,
+                            952,
+                            875
+                        ],
+                        "label": "h\u0430\u200d\u0456\u200dr s\u200dp\u200br\u200da\u200b\u0443\u200b, \u0440\u200b\u0435\u200brfu\u200dme\u200d, \u0440\u0435\u200dr\u200dson"
+                    },
+                    {
+                        "bbox_2d": [
+                            368,
+                            115,
+                            768,
+                            999
+                        ],
+                        "label": "\u0440\u0435\u200br\u200bf\u200bu\u200bm\u200be\u200b, \u0440\u0435\u200br\u200bs\u200bo\u200bn"
+                    },
+                    {
+                        "bbox_2d": [
+                            72,
+                            135,
+                            392,
+                            999
+                        ],
+                        "label": "\u0440\u0435\u200br\u200bf\u200bu\u200bm\u200be\u200b, \u0440\u0435\u200br\u200bs\u200bo\u200bn"
+                    }
+                ],
+                "token_count": 185,
+                "raw_token_count": 257,
+                "runtime_seconds": 0.8342
+            }
+        }
+    ]
+}

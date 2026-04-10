@@ -1,0 +1,97 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/multi/138",
+        "folder_id": "138",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00040891.JPEG"
+    },
+    "pareto_index": 15,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 4,
+    "total_evaluations": 105,
+    "skipped_evaluations": 45,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.001016,
+            "defocus_blur": 0.088789,
+            "motion_blur": 0.165464,
+            "fog_filter": 0.123432,
+            "pixelate": 0.11783,
+            "jpeg_filter": 0.080266
+        },
+        "text_corruptions": {
+            "homophone": 0.00788,
+            "synonym": 0.271095,
+            "ata_saliency": 0.038371,
+            "fragmentation": 0.013312,
+            "character_noise": 0.000801
+        },
+        "img_budget_used": 0.576797,
+        "txt_budget_used": 0.331459,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.09404,
+        "txt_dist": 0.26155,
+        "txt_sim": 0.73845
+    },
+    "swad_metrics": {
+        "iou_0": 0.91238,
+        "delta_m_plus": 1.0,
+        "phi": 0.66901,
+        "swad": 0.66901
+    },
+    "l2_distance": 0.27794,
+    "original_prompt": "Identify the objects \"filing cabinet, guitar\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "guitar": {
+            "xmin": 212,
+            "ymin": 26,
+            "xmax": 313,
+            "ymax": 331
+        },
+        "filing cabinet": {
+            "xmin": 3,
+            "ymin": 0,
+            "xmax": 256,
+            "ymax": 373
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"f\u0456l\u0456n\u200dg caminet , six-string\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [420, 74, 630, 888], \"label\": \"f\u0456l\u0456n\u200dg caminet , six-string\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    420,
+                    74,
+                    630,
+                    888
+                ],
+                "label": "f\u0456l\u0456n\u200dg caminet , six-string"
+            }
+        ],
+        "token_count": 50,
+        "raw_token_count": 93,
+        "runtime_seconds": 0.3263
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.001016467168016276,
+        "defocus_blur": 0.08878866047479961,
+        "motion_blur": 0.16546419932603518,
+        "fog_filter": 0.12343207799657259,
+        "pixelate": 0.11782965243826263,
+        "jpeg_filter": 0.08026590313253083
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.0078804338366021,
+        "synonym": 0.27109501423928,
+        "ata_saliency": 0.03837081580948622,
+        "fragmentation": 0.013311504091093631,
+        "character_noise": 0.0008009703679234537
+    }
+}

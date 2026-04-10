@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "L2",
+    "data_source": {
+        "folder_path": "results/selection/multi/118",
+        "folder_id": "118",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00007359.JPEG"
+    },
+    "pareto_index": 14,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 2,
+    "total_evaluations": 60,
+    "skipped_evaluations": 30,
+    "genome": {
+        "img_attack": "motion_blur",
+        "img_scale": 0.0455218379984251,
+        "txt_attack": "homophone",
+        "txt_scale": 0.6869572165224048
+    },
+    "objectives": {
+        "iou": 0.31932,
+        "img_dist": 0.05287,
+        "txt_dist": 0.20182,
+        "txt_sim": 0.79818
+    },
+    "swad_metrics": {
+        "iou_0": 0.67271,
+        "delta_m_plus": 0.52532,
+        "phi": 0.75598,
+        "swad": 0.39713
+    },
+    "l2_distance": 0.38143,
+    "original_prompt": "Identify the objects \"person, trombone, trumpet\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 0,
+            "ymin": 93,
+            "xmax": 309,
+            "ymax": 374
+        },
+        "person_1": {
+            "xmin": 458,
+            "ymin": 100,
+            "xmax": 498,
+            "ymax": 373
+        },
+        "person_2": {
+            "xmin": 243,
+            "ymin": 149,
+            "xmax": 406,
+            "ymax": 374
+        },
+        "trombone": {
+            "xmin": 135,
+            "ymin": 223,
+            "xmax": 307,
+            "ymax": 355
+        },
+        "trumpet": {
+            "xmin": 180,
+            "ymin": 218,
+            "xmax": 308,
+            "ymax": 358
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"pursun, trombone, trump it\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [0, 250, 615, 997], \"label\": \"pursun\"},\n\t{\"bbox_2d\": [0, 250, 615, 997], \"label\": \"trombone\"},\n\t{\"bbox_2d\": [0, 250, 615, 997], \"label\": \"trump it\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    0,
+                    250,
+                    615,
+                    997
+                ],
+                "label": "pursun"
+            },
+            {
+                "bbox_2d": [
+                    0,
+                    250,
+                    615,
+                    997
+                ],
+                "label": "trombone"
+            },
+            {
+                "bbox_2d": [
+                    0,
+                    250,
+                    615,
+                    997
+                ],
+                "label": "trump it"
+            }
+        ],
+        "token_count": 105,
+        "raw_token_count": 336,
+        "runtime_seconds": 1.108
+    }
+}

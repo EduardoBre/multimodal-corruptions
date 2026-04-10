@@ -1,0 +1,396 @@
+{
+    "data_source": {
+        "folder_path": "results/selection/multi/52",
+        "folder_id": "52",
+        "category": "multi",
+        "filename": "ILSVRC2012_val_00026651.JPEG"
+    },
+    "original_prompt": "Identify the objects \"bus, person\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "person": {
+            "xmin": 0,
+            "ymin": 238,
+            "xmax": 4,
+            "ymax": 259
+        },
+        "person_1": {
+            "xmin": 164,
+            "ymin": 217,
+            "xmax": 187,
+            "ymax": 241
+        },
+        "person_2": {
+            "xmin": 115,
+            "ymin": 216,
+            "xmax": 128,
+            "ymax": 237
+        },
+        "person_3": {
+            "xmin": 211,
+            "ymin": 125,
+            "xmax": 226,
+            "ymax": 141
+        },
+        "bus": {
+            "xmin": 22,
+            "ymin": 87,
+            "xmax": 339,
+            "ymax": 327
+        },
+        "bus_1": {
+            "xmin": 321,
+            "ymin": 129,
+            "xmax": 499,
+            "ymax": 296
+        }
+    },
+    "baseline_iou": 0.55424,
+    "swad_star": 0.94122,
+    "swad_star_index": 1,
+    "batch_size": 15,
+    "early_stopped": true,
+    "early_stop_generation": 1,
+    "total_evaluations": 15,
+    "skipped_evaluations": 45,
+    "n_solutions": 4,
+    "solutions": [
+        {
+            "index": 0,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.019479490436056013,
+                "txt_attack": "ata_saliency",
+                "txt_scale": 0.4011167653317744
+            },
+            "objectives": {
+                "iou": 0.32028,
+                "img_dist": 0.04258,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.55424,
+                "delta_m_plus": 0.42213,
+                "phi": 0.95742,
+                "swad": 0.40415
+            },
+            "l2_distance": 0.3231,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bus, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [52, 238, 675, 872], \"label\": \"bus\"},\n\t{\"bbox_2d\": [655, 344, 1000, 778], \"label\": \"bus\"},\n\t{\"bbox_2d\": [10, 628, 30, 688], \"label\": \"person\"},\n\t{\"bbox_2d\": [28, 628, 44, 688], \"label\": \"person\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            52,
+                            238,
+                            675,
+                            872
+                        ],
+                        "label": "bus"
+                    },
+                    {
+                        "bbox_2d": [
+                            655,
+                            344,
+                            1000,
+                            778
+                        ],
+                        "label": "bus"
+                    },
+                    {
+                        "bbox_2d": [
+                            10,
+                            628,
+                            30,
+                            688
+                        ],
+                        "label": "person"
+                    },
+                    {
+                        "bbox_2d": [
+                            28,
+                            628,
+                            44,
+                            688
+                        ],
+                        "label": "person"
+                    }
+                ],
+                "token_count": 134,
+                "raw_token_count": 800,
+                "runtime_seconds": 3.176
+            }
+        },
+        {
+            "index": 1,
+            "genome": {
+                "img_attack": "jpeg_filter",
+                "img_scale": 0.6126883641923373,
+                "txt_attack": "homophone",
+                "txt_scale": 0.10684452896191199
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.05878,
+                "txt_dist": 0.0,
+                "txt_sim": 1.0
+            },
+            "swad_metrics": {
+                "iou_0": 0.55424,
+                "delta_m_plus": 1.0,
+                "phi": 0.94122,
+                "swad": 0.94122
+            },
+            "l2_distance": 0.05878,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"bus, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [58, 238, 670, 868], \"label\": \"bus\"},\n\t{\"bbox_2d\": [648, 348, 1000, 788], \"label\": \"bus\"},\n\t{\"bbox_2d\": [618, 598, 658, 648], \"label\": \"person\"},\n\t{\"bbox_2d\": [325, 588, 370, 630], \"label\": \"person\"},\n\t{\"bbox_2d\": [370, 588, 398, 630], \"label\": \"person\"},\n\t{\"bbox_2d\": [618, 598, 658, 648], \"label\": \"person\"},\n\t{\"bbox_2d\": [325, 588, 370, 630], \"label\": \"person\"},\n\t{\"bbox_2d\": [370, 588, 398, 630], \"label\": \"person\"},\n\t{\"bbox_2d\": [618, 598, 658, 648], \"label\": \"person\"},\n\t{\"bbox_2d\": [325, 588, 370, 630], \"label\": \"person\"},\n\t{\"bbox_2d\": [370, 588, 398, 630], \"label\": \"person\"},\n\t{\"bbox_2d\": [618, 598, 658, 648], \"label\": \"person\"},\n\t{\"bbox_2d\": [325, 588, 370, 630], \"label\": \"person\"},\n\t{\"bbox_2d\": [370, 588, 398, 630], \"label\": \"person\"},\n\t{\"bbox_2d\": [618, 598, 658, 648], \"label\": \"person\"},\n\t{\"bbox_2d\": [325, 588, 370, 630], \"label\": \"person\"},\n\t{\"bbox_2d\": [370, 588, 398, 630], \"label\": \"person\"},\n\t{\"bbox_2d\": [618, 598, 658, 648], \"label\": \"person\"},\n\t{\"bbox_2d\": [325, 588, 370, 630], \"label\": \"person\"},\n\t{\"bbox_2d\": [370, 588, 398, 630], \"label\": \"person\"},\n\t{\"bbox_2d\": [618, 598, 658, 648], \"label\": \"person\"},\n\t{\"bbox_2d\": [325, 588, 370, 630], \"label\": \"person\"},\n\t{\"bbox_2d\": [370, 588, 398, 630], \"label\": \"person\"},\n\t{\"bbox_2d\": [618, 598, 658, 648], \"label\": \"person\"},\n\t{\"bbox_",
+                "parsed_predictions": [],
+                "token_count": 800,
+                "raw_token_count": 800,
+                "runtime_seconds": 3.176
+            }
+        },
+        {
+            "index": 2,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.21300761893764208,
+                "txt_attack": "synonym",
+                "txt_scale": 0.11490566325799068
+            },
+            "objectives": {
+                "iou": 0.0,
+                "img_dist": 0.05437,
+                "txt_dist": 0.19327,
+                "txt_sim": 0.80673
+            },
+            "swad_metrics": {
+                "iou_0": 0.55424,
+                "delta_m_plus": 1.0,
+                "phi": 0.76287,
+                "swad": 0.76287
+            },
+            "l2_distance": 0.20077,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"coach, person\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [64, 236, 673, 872], \"label\": \"coach\"},\n\t{\"bbox_2d\": [651, 348, 1000, 778], \"label\": \"coach\"},\n\t{\"bbox_2d\": [10, 624, 28, 688], \"label\": \"person\"},\n\t{\"bbox_2d\": [28, 624, 42, 688], \"label\": \"person\"},\n\t{\"bbox_2d\": [333, 330, 373, 378], \"label\": \"person\"},\n\t{\"bbox_2d\": [410, 324, 442, 366], \"label\": \"person\"},\n\t{\"bbox_2d\": [623, 596, 660, 648], \"label\": \"person\"},\n\t{\"bbox_2d\": [212, 588, 242, 636], \"label\": \"person\"},\n\t{\"bbox_2d\": [333, 588, 366, 636], \"label\": \"person\"},\n\t{\"bbox_2d\": [470, 588, 500, 652], \"label\": \"person\"},\n\t{\"bbox_2d\": [500, 588, 530, 652], \"label\": \"person\"},\n\t{\"bbox_2d\": [530, 588, 560, 652], \"label\": \"person\"},\n\t{\"bbox_2d\": [560, 588, 590, 652], \"label\": \"person\"},\n\t{\"bbox_2d\": [590, 588, 620, 652], \"label\": \"person\"},\n\t{\"bbox_2d\": [620, 588, 650, 652], \"label\": \"person\"},\n\t{\"bbox_2d\": [650, 588, 680, 652], \"label\": \"person\"},\n\t{\"bbox_2d\": [680, 588, 710, 652], \"label\": \"person\"},\n\t{\"bbox_2d\": [710, 588, 740, 652], \"label\": \"person\"},\n\t{\"bbox_2d\": [740, 588, 770, 652], \"label\": \"person\"},\n\t{\"bbox_2d\": [770, 588, 800, 652], \"label\": \"person\"},\n\t{\"bbox_2d\": [800, 588, 830, 652], \"label\": \"person\"},\n\t{\"bbox_2d\": [830, 588, 860, 652], \"label\": \"person\"},\n\t{\"bbox_2d\": [860, 588, 890, 652], \"label\": \"person\"},\n\t{\"bbox_2d\": [890, 588, 920, 652], \"label\": \"person\"},\n\t{\"bbox_2d\": [",
+                "parsed_predictions": [],
+                "token_count": 800,
+                "raw_token_count": 800,
+                "runtime_seconds": 3.176
+            }
+        },
+        {
+            "index": 3,
+            "genome": {
+                "img_attack": "gaussian_noise",
+                "img_scale": 0.08142031165696761,
+                "txt_attack": "homophone",
+                "txt_scale": 0.2228478256331735
+            },
+            "objectives": {
+                "iou": 0.4079,
+                "img_dist": 0.03922,
+                "txt_dist": 0.16304,
+                "txt_sim": 0.83696
+            },
+            "swad_metrics": {
+                "iou_0": 0.55424,
+                "delta_m_plus": 0.26404,
+                "phi": 0.80413,
+                "swad": 0.21232
+            },
+            "l2_distance": 0.44102,
+            "vlm_output": {
+                "corrupt_prompt": "Identify the objects \"buss, per son\" in the image and return their bounding boxes in JSON format:",
+                "raw_response": "```json\n[\n\t{\"bbox_2d\": [58, 236, 673, 872], \"label\": \"buss\"},\n\t{\"bbox_2d\": [655, 348, 1000, 778], \"label\": \"buss\"},\n\t{\"bbox_2d\": [18, 632, 34, 688], \"label\": \"per son\"},\n\t{\"bbox_2d\": [34, 632, 48, 688], \"label\": \"per son\"},\n\t{\"bbox_2d\": [334, 332, 373, 384], \"label\": \"per son\"},\n\t{\"bbox_2d\": [427, 340, 452, 368], \"label\": \"per son\"},\n\t{\"bbox_2d\": [623, 598, 662, 648], \"label\": \"per son\"},\n\t{\"bbox_2d\": [673, 432, 700, 466], \"label\": \"per son\"},\n\t{\"bbox_2d\": [700, 432, 725, 466], \"label\": \"per son\"},\n\t{\"bbox_2d\": [725, 432, 750, 466], \"label\": \"per son\"},\n\t{\"bbox_2d\": [750, 432, 775, 466], \"label\": \"per son\"},\n\t{\"bbox_2d\": [775, 432, 800, 466], \"label\": \"per son\"},\n\t{\"bbox_2d\": [800, 432, 825, 466], \"label\": \"per son\"},\n\t{\"bbox_2d\": [825, 432, 850, 466], \"label\": \"per son\"},\n\t{\"bbox_2d\": [850, 432, 875, 466], \"label\": \"per son\"},\n\t{\"bbox_2d\": [875, 432, 900, 466], \"label\": \"per son\"},\n\t{\"bbox_2d\": [900, 432, 925, 466], \"label\": \"per son\"},\n\t{\"bbox_2d\": [925, 432, 950, 466], \"label\": \"per son\"},\n\t{\"bbox_2d\": [950, 432, 975, 466], \"label\": \"per son\"},\n\t{\"bbox_2d\": [975, 432, 1000, 466], \"label\": \"per son\"}\n]\n```",
+                "parsed_predictions": [
+                    {
+                        "bbox_2d": [
+                            58,
+                            236,
+                            673,
+                            872
+                        ],
+                        "label": "buss"
+                    },
+                    {
+                        "bbox_2d": [
+                            655,
+                            348,
+                            1000,
+                            778
+                        ],
+                        "label": "buss"
+                    },
+                    {
+                        "bbox_2d": [
+                            18,
+                            632,
+                            34,
+                            688
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            34,
+                            632,
+                            48,
+                            688
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            334,
+                            332,
+                            373,
+                            384
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            427,
+                            340,
+                            452,
+                            368
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            623,
+                            598,
+                            662,
+                            648
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            673,
+                            432,
+                            700,
+                            466
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            700,
+                            432,
+                            725,
+                            466
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            725,
+                            432,
+                            750,
+                            466
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            750,
+                            432,
+                            775,
+                            466
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            775,
+                            432,
+                            800,
+                            466
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            800,
+                            432,
+                            825,
+                            466
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            825,
+                            432,
+                            850,
+                            466
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            850,
+                            432,
+                            875,
+                            466
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            875,
+                            432,
+                            900,
+                            466
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            900,
+                            432,
+                            925,
+                            466
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            925,
+                            432,
+                            950,
+                            466
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            950,
+                            432,
+                            975,
+                            466
+                        ],
+                        "label": "per son"
+                    },
+                    {
+                        "bbox_2d": [
+                            975,
+                            432,
+                            1000,
+                            466
+                        ],
+                        "label": "per son"
+                    }
+                ],
+                "token_count": 683,
+                "raw_token_count": 800,
+                "runtime_seconds": 3.176
+            }
+        }
+    ]
+}

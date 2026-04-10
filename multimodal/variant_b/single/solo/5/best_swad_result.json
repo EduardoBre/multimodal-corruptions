@@ -1,0 +1,91 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/solo/5",
+        "folder_id": "5",
+        "category": "single/solo",
+        "filename": "ILSVRC2012_val_00048078.JPEG"
+    },
+    "pareto_index": 19,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.029298,
+            "defocus_blur": 0.351998,
+            "motion_blur": 0.012028,
+            "fog_filter": 0.242345,
+            "pixelate": 0.004755,
+            "jpeg_filter": 0.193844
+        },
+        "text_corruptions": {
+            "homophone": 0.01358,
+            "synonym": 0.003138,
+            "ata_saliency": 0.040415,
+            "fragmentation": 0.020861,
+            "character_noise": 0.0012
+        },
+        "img_budget_used": 0.834267,
+        "txt_budget_used": 0.079195,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.0,
+        "img_dist": 0.13398,
+        "txt_dist": 0.18702,
+        "txt_sim": 0.81298
+    },
+    "swad_metrics": {
+        "iou_0": 0.95466,
+        "delta_m_plus": 1.0,
+        "phi": 0.70406,
+        "swad": 0.70406
+    },
+    "l2_distance": 0.23006,
+    "original_prompt": "Identify the objects \"salt or pepper shaker\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "salt or pepper shaker": {
+            "xmin": 99,
+            "ymin": 19,
+            "xmax": 261,
+            "ymax": 458
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"salt or \u0440eppe\u200br shake\u200br\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [284, 38, 716, 966], \"label\": \"salt or \u0440\u0435\u043f\u043f\u0435\u200b\u0440 shake\u200br\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    284,
+                    38,
+                    716,
+                    966
+                ],
+                "label": "salt or \u0440\u0435\u043f\u043f\u0435\u200b\u0440 shake\u200br"
+            }
+        ],
+        "token_count": 47,
+        "raw_token_count": 61,
+        "runtime_seconds": 0.1951
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.029297561363833338,
+        "defocus_blur": 0.3519978861852609,
+        "motion_blur": 0.012027946535857342,
+        "fog_filter": 0.24234457241804983,
+        "pixelate": 0.004754811074320202,
+        "jpeg_filter": 0.19384408261486905
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.013580343230612406,
+        "synonym": 0.003138073100440543,
+        "ata_saliency": 0.04041517424787439,
+        "fragmentation": 0.02086104690714774,
+        "character_noise": 0.001199928582634329
+    }
+}

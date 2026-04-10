@@ -1,0 +1,103 @@
+{
+    "selection_criterion": "SWAD",
+    "data_source": {
+        "folder_path": "results/selection/single/multi/171",
+        "folder_id": "171",
+        "category": "single/multi",
+        "filename": "ILSVRC2012_val_00045626.JPEG"
+    },
+    "pareto_index": 8,
+    "budget_max": 1,
+    "batch_size": 15,
+    "early_stopped": false,
+    "early_stop_generation": null,
+    "total_evaluations": 450,
+    "skipped_evaluations": 0,
+    "genome": {
+        "image_corruptions": {
+            "gaussian_noise": 0.119811,
+            "defocus_blur": 0.007334,
+            "motion_blur": 0.028404,
+            "fog_filter": 0.00403,
+            "pixelate": 0.190247,
+            "jpeg_filter": 0.051866
+        },
+        "text_corruptions": {
+            "homophone": 0.080554,
+            "synonym": 0.218218,
+            "ata_saliency": 0.090733,
+            "fragmentation": 0.286927,
+            "character_noise": 0.2178
+        },
+        "img_budget_used": 0.401692,
+        "txt_budget_used": 0.894232,
+        "budget_max": 1
+    },
+    "objectives": {
+        "iou": 0.27235,
+        "img_dist": 0.07734,
+        "txt_dist": 0.38981,
+        "txt_sim": 0.61019
+    },
+    "swad_metrics": {
+        "iou_0": 0.53477,
+        "delta_m_plus": 0.49072,
+        "phi": 0.563,
+        "swad": 0.27627
+    },
+    "l2_distance": 0.48178,
+    "original_prompt": "Identify the objects \"monkey\" in the image and return their bounding boxes in JSON format:",
+    "ground_truth_bboxes": {
+        "monkey": {
+            "xmin": 46,
+            "ymin": 67,
+            "xmax": 191,
+            "ymax": 309
+        },
+        "monkey_1": {
+            "xmin": 193,
+            "ymin": 59,
+            "xmax": 406,
+            "ymax": 224
+        },
+        "monkey_2": {
+            "xmin": 422,
+            "ymin": 115,
+            "xmax": 499,
+            "ymax": 236
+        }
+    },
+    "vlm_output": {
+        "adversarial_prompt": "Identify the objects \"om\u200bnke\u200b y\u200b\" in the image and return their bounding boxes in JSON format:",
+        "raw_response": "```json\n[\n\t{\"bbox_2d\": [355, 160, 827, 688], \"label\": \"om\u200bnke\u200b y\u200b\"}\n]\n```",
+        "parsed_predictions": [
+            {
+                "bbox_2d": [
+                    355,
+                    160,
+                    827,
+                    688
+                ],
+                "label": "om\u200bnke\u200b y\u200b"
+            }
+        ],
+        "token_count": 45,
+        "raw_token_count": 86,
+        "runtime_seconds": 0.2825
+    },
+    "applied_img_corruptions": {
+        "gaussian_noise": 0.11981072899131742,
+        "defocus_blur": 0.0073336241699664285,
+        "motion_blur": 0.028403917425334567,
+        "fog_filter": 0.0040303611702779685,
+        "pixelate": 0.190247406092004,
+        "jpeg_filter": 0.0518662264647429
+    },
+    "applied_txt_corruptions": {
+        "homophone": 0.08055375031730543,
+        "synonym": 0.21821847381087917,
+        "ata_saliency": 0.09073303142097257,
+        "fragmentation": 0.2869265297828177,
+        "character_noise": 0.21779996342471963
+    }
+}
